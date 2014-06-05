@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lan:PT_Locale xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/lan/1.0/2013-06-24 lan.xsd" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24">
+  <lan:language>
+    <!-- Codelist values for LanguageCode should be from the ISO 639-2 list. -->
+    <lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="anyValidURI">/lan:PT_Locale/lan:language/lan:LanguageCode</lan:LanguageCode>
+  </lan:language>
+  <lan:country>
+    <!-- Codelist values for CountryCode should be from the ISO 3166 Part 1 list -->
+    <lan:CountryCode codeList="codeListLocation#CountryCode" codeListValue="anyValidURI">/lan:PT_Locale/lan:country/lan:CountryCode</lan:CountryCode>
+  </lan:country>
+  <lan:characterEncoding>
+    <!-- Codelist values for CharacterSetCode should be from the IANA character set register (http://www.iana.org/assignments/character-sets) -->
+    <lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue="anyValidURI">/lan:PT_Locale/lan:characterEncoding/lan:MD_CharacterSetCode</lan:MD_CharacterSetCode>
+  </lan:characterEncoding>
+</lan:PT_Locale>

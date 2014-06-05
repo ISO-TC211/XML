@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cat="http://www.isotc211.org/2005/cat/1.0/2013-06-24" xmlns:mda="http://www.isotc211.org/2005/mda/1.0/2013-06-24" xmlns:mdt="http://www.isotc211.org/2005/mdt/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mdt/1.0/2013-06-24" version="1.0">
+  <include schemaLocation="metadataTransfer.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/cat/1.0/2013-06-24" schemaLocation="../../cat/1.0/cat.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mda/1.0/2013-06-24" schemaLocation="../../mda/1.0/mda.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

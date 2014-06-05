@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mpc="http://www.isotc211.org/2005/mpc/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mpc/1.0/2013-06-24" version="1.0">
+  <include schemaLocation="portrayalCatalogue.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" version="1.0">
+  <include schemaLocation="referenceSystem.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

@@ -1,0 +1,58 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Metadata for Resource Lineage (MRL) Version: 1.0</title>
+   </head>
+   <body>
+      <h1>Metadata for Resource Lineage (MRL) Version: 1.0</h1><img src="mrl.png"><h2>Description</h2>
+      <p>MRL 1.0 is an XML Schema implementation derived from ISO Geographic Information - Metadata - Part 1: Fundamentals.  It includes elements for identifying resources.  The XML schema was encoded using the encoding rules described in ISO/TS 19139:2007, Clause 8.</p>
+      <p><i>NOTE: The namespace URI of Metadata for Resource Lineage (MRL) Version: 1.0 doesn't reflect the version number of the XML Schema Implementation. The policy of
+            ISO/TC 211
+            has evolved in order to reflect the versioning of the XML Schema Implementation as
+            part of the namespace URI.</i></p>
+      <h2>XML Schema of mrl 1.0</h2>
+      <p><b>mrl.xsd</b> is the root XML Schema document, i.e., the XML Schema document to be referenced by
+         XML documents containing XML elements in the mrl 1.0 namespace or by XML Schema documents importing the mrl 1.0 namespace. This XML schema includes (indirectly) all the implemented concepts of
+         the mrl namespace, but it does not contain the declaration of any types.
+      </p>
+      <p><i>NOTE: The XML Schemca for mrl 1.0 are available <a href="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas.zip">here</a> as part of a zip
+            archive regrouping all the XML Schema Implementations defined in ISO/TS 19139:2007.
+            They are also available for remote access on the <a href="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas.zip">ISO ITTF Repository</a>.</i></p>
+      <h2>Related XML Schema for mrl 1.0</h2>
+      <p><b>lineage.xsd</b> implements the UML conceptual schema defined in ISO 19115-1, 6.5.5. It was created
+         using the encoding rules defined in ISO 19118 and extended in ISO 19139 and contains
+         the following classes: LI_Lineage, LI_ProcessStep, and LI_Source
+      </p>
+      <h2>Related XML Namespaces for mrl 1.0</h2> The mrl 1.0 namespace imports these other namespaces: 
+      <table border="1" cellpadding="3" cellspacing="3">
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Citation and responsible party information</td>
+            <td>cit</td>
+            <td>http://www.isotc211.org/2005/cit/1.0/2013-06-24</td>
+            <td>../../cit/1.0/cit.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Common Classes</td>
+            <td>mcc</td>
+            <td>http://www.isotc211.org/2005/mcc/1.0/2013-06-24</td>
+            <td>../../mcc/1.0/mcc.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Resource Identification</td>
+            <td>mri</td>
+            <td>http://www.isotc211.org/2005/mri/1.0/2013-06-24</td>
+            <td>../../mri/1.0/mri.xsd</td>
+         </tr>
+      </table>
+      <h2>Schematron Validation Rules for mrl 1.0</h2> Schematron rules for validating instance documents of the mrl 1.0 namespace are in
+      mrl.sch Other schematron rule sets that are required for a complete validation are: cit.sch, mcc.sch, and mri.sch
+      <hr>
+      <p><font size="small" face="italic">Written by writeHTMLFiles Version: 2014-03-10 at 2014-03-10T17:06:52.599-06:00</font></p>
+   </body>
+</html>

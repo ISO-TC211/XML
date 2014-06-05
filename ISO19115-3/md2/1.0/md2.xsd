@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24"
+  xmlns:gcx="http://www.isotc211.org/2005/gcx/1.0/2013-06-24"
+  xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24"
+  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"
+  xmlns:md1="http://www.isotc211.org/2005/md1/1.0/2013-06-24"
+  xmlns:md2="http://www.isotc211.org/2005/md2/1.0/2013-06-24"
+  xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2013-06-24"
+  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" elementFormDefault="qualified"
+  targetNamespace="http://www.isotc211.org/2005/md2/1.0/2013-06-24" version="1.0">
+  <annotation>
+    <documentation>XML schema to support MD_Metadata XML instances for the conformance class
+      http://www.isotc211.org/spec/19115-3/1.0/conf/extended-metadata-xml, defined in section A.2.2.6 of ISO19115-3</documentation>
+  </annotation>
+
+  <import namespace="http://www.isotc211.org/2005/md1/1.0/2013-06-24"
+    schemaLocation="../../md1/1.0/md1.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mex/1.0/2013-06-24"
+    schemaLocation="../../mex/1.0/mex.xsd"/>
+
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

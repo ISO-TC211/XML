@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:md2="http://www.isotc211.org/2005/md2/1.0/2013-06-24" 
+  xmlns:mda="http://www.isotc211.org/2005/mda/1.0/2013-06-24" 
+  elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mda/1.0/2013-06-24" version="1.0">
+  <annotation>
+    <documentation>Elements to represent resources that may be aggregated and described by metadata records</documentation>
+  </annotation>
+  <include schemaLocation="metadataApplication.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/md2/1.0/2013-06-24" schemaLocation="../../md2/1.0/md2.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

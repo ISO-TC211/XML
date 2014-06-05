@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" 
+  xmlns:gcx="http://www.isotc211.org/2005/gcx/1.0/2013-06-24" 
+  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" 
+  xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" 
+  xmlns:mas="http://www.isotc211.org/2005/mas/1.0/2013-06-24" 
+  xmlns:mco="http://www.isotc211.org/2005/mco/1.0/2013-06-24" 
+  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" 
+  xmlns:mda="http://www.isotc211.org/2005/mda/1.0/2013-06-24" 
+  xmlns:mdb="http://www.isotc211.org/2005/mdb/1.0/2013-06-24"
+  xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" 
+  xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2013-06-24" 
+  xmlns:mex="http://www.isotc211.org/2005/mex/1.0/2013-06-24" 
+  xmlns:mmi="http://www.isotc211.org/2005/mmi/1.0/2013-06-24" 
+  xmlns:mpc="http://www.isotc211.org/2005/mpc/1.0/2013-06-24" 
+  xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" 
+  xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" 
+  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" 
+  xmlns:mrl="http://www.isotc211.org/2005/mrl/1.0/2013-06-24" 
+  xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2013-06-24"
+  xmlns:msr="http://www.isotc211.org/2005/msr/1.0/2013-06-24" 
+  xmlns:srv="http://www.isotc211.org/2005/srv/2.0/2013-06-24" 
+  elementFormDefault="qualified" 
+  targetNamespace="http://www.isotc211.org/2005/complete/1.0/2013-06-24" version="1.0">
+  <annotation>
+    <documentation>Wrapper namespace to support complete 19115-1 implementations.</documentation>
+  </annotation>
+  <!-- The namespaces gcx, mda, mdq, and mex were added to mds to make this schema  -->
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gcx/1.0/2013-06-24" schemaLocation="../../gcx/1.0/gcx.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gex/1.0/2013-06-24" schemaLocation="../../gex/1.0/gex.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/lan/1.0/2013-06-24" schemaLocation="../../lan/1.0/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mas/1.0/2013-06-24" schemaLocation="../../mas/1.0/mas.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mco/1.0/2013-06-24" schemaLocation="../../mco/1.0/mco.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mda/1.0/2013-06-24" schemaLocation="../../mda/1.0/mda.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mdb/1.0/2013-06-24" schemaLocation="../../mdb/1.0/mdb.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" schemaLocation="../../../ISO19157-2/mdq/1.0/mdq.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mex/1.0/2013-06-24" schemaLocation="../../mex/1.0/mex.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mmi/1.0/2013-06-24" schemaLocation="../../mmi/1.0/mmi.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mpc/1.0/2013-06-24" schemaLocation="../../mpc/1.0/mpc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" schemaLocation="../../mrc/1.0/mrc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" schemaLocation="../../mrd/1.0/mrd.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../mri/1.0/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrl/1.0/2013-06-24" schemaLocation="../../mrl/1.0/mrl.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" schemaLocation="../../mrs/1.0/mrs.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/msr/1.0/2013-06-24" schemaLocation="../../msr/1.0/msr.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/srv/2.0/2013-06-24" schemaLocation="../../srv/2.0/srv.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

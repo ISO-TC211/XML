@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gcx="http://www.isotc211.org/2005/gcx/1.0/2013-06-24" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:md1="http://www.isotc211.org/2005/md1/1.0/2013-06-24" xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2013-06-24" xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/md1/1.0/2013-06-24" version="1.0">
+  <annotation>
+    <documentation>XML schema to support MD_Metadata XML instances that include optional properties as defined in ISO 19115-1 clause 6.5.2, except for those in the mex namespace, and including substitutions for gco:CharacterString from the gcx namespace</documentation>
+  </annotation>
+
+  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../cit/1.0/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gcx/1.0/2013-06-24" schemaLocation="../../gcx/1.0/gcx.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/lan/1.0/2013-06-24" schemaLocation="../../lan/1.0/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../mcc/1.0/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mds/1.0/2013-06-24" schemaLocation="../../mds/1.0/mds.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../mri/1.0/mri.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

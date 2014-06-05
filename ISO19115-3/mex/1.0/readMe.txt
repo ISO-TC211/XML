@@ -1,0 +1,1 @@
+This schema is the base schema for type 2 profiles to ISO19115-3. The mex namespace must be imported to get the metadata extension elements, but a valid extended metadata schema will also need to define a namespace for the custom elements and import the schema to validate those elements.
