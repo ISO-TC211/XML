@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco"
-  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gts="http://www.isotc211.org/2005/gts"
-  xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" xmlns:mdb="http://www.isotc211.org/2005/mdb/1.0/2013-06-24"
-  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"
-  xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0" xmlns:gco="http://www.isotc211.org/namespace/gco"
+  xmlns:gex="http://www.isotc211.org/namespace/gex/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/namespace/gmd" xmlns:gts="http://www.isotc211.org/namespace/gts"
+  xmlns:gsr="http://www.isotc211.org/namespace/gsr" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0" xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0"
+  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0" xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0"
+  xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0" xmlns:gss="http://www.isotc211.org/namespace/gss" xmlns:xlink="http://www.w3.org/1999/xlink">
   <mdb:defaultLocale>
     <lan:PT_Locale>
       <lan:language>
-        <lan:LanguageCode codeList="" codeListValue="ENG">ENG</lan:LanguageCode>
+        <lan:LanguageCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#LanguageCode" codeListValue="ENG">ENG</lan:LanguageCode>
       </lan:language>
       <lan:characterEncoding>
-        <lan:MD_CharacterSetCode codeList="" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+        <lan:MD_CharacterSetCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
       </lan:characterEncoding>
     </lan:PT_Locale>
   </mdb:defaultLocale>
   <mdb:contact>
     <cit:CI_Responsibility>
       <cit:role>
-        <cit:CI_RoleCode codeList="" codeListValue="originator">originator</cit:CI_RoleCode>
+        <cit:CI_RoleCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
       </cit:role>
       <cit:party>
         <cit:CI_Individual>
@@ -34,7 +34,8 @@
         <gco:DateTime>2014-05-06T00:00:00</gco:DateTime>
       </cit:date>
       <cit:dateType>
-        <cit:CI_DateTypeCode codeList="" codeListValue="">creation</cit:CI_DateTypeCode>
+        <cit:CI_DateTypeCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" 
+          codeListValue="creation">creation</cit:CI_DateTypeCode>
       </cit:dateType>
     </cit:CI_Date>
   </mdb:dateInfo>
@@ -57,7 +58,7 @@
       <mdq:scope>
         <mcc:MD_Scope>
           <mcc:level>
-            <mcc:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+            <mcc:MD_ScopeCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
           </mcc:level>
           <mcc:extent>
             <gex:EX_Extent>
@@ -104,14 +105,14 @@
                     <gco:DateTime>2012-03-01T00:00:00</gco:DateTime>
                   </cit:date>
                   <cit:dateType>
-                    <cit:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                    <cit:CI_DateTypeCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
                   </cit:dateType>
                 </cit:CI_Date>
               </cit:date>
               <cit:citedResponsibleParty>
                 <cit:CI_Responsibility>
                   <cit:role>
-                    <cit:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode>
+                    <cit:CI_RoleCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="author">author</cit:CI_RoleCode>
                   </cit:role>
                   <cit:party>
                     <cit:CI_Organisation>
@@ -140,7 +141,7 @@
                 </cit:CI_Responsibility>
               </cit:citedResponsibleParty>
               <cit:presentationForm>
-                <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="documentDigital"
+                <cit:CI_PresentationFormCode codeList="http://www.isotc211.org/namespace/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode" codeListValue="documentDigital"
                   >documentDigital</cit:CI_PresentationFormCode>
               </cit:presentationForm>
               <cit:onlineResource>
