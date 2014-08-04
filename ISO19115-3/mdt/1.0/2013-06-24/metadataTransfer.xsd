@@ -3,9 +3,9 @@
   <import namespace="http://www.isotc211.org/2005/cat/1.0/2013-06-24" schemaLocation="../../../cat/1.0/2013-06-24/cat.xsd"/>
   <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
   <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
+  <import namespace="http://www.isotc211.org/2005/mda/1.0/2013-06-24" schemaLocation="../../../mda/1.0/2013-06-24/mda.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gcx/1.0/2013-06-24" schemaLocation="../../../gcx/1.0/2013-06-24/gcx.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mda/1.0/2013-06-24" schemaLocation="../../../mda/1.0/2013-06-24/mda.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MX_Aggregate" substitutionGroup="mda:AbstractDS_Aggregate" type="mdt:MX_Aggregate_Type"/>
   <complexType name="MX_Aggregate_Type">
