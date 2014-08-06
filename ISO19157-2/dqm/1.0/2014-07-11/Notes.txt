@@ -1,0 +1,58 @@
+Creating a sample Data Quality Measure Catalog - Ted Habermann 2013-12-27
+
+The DataQualityMeasure.xsd schema definition of DQM_MeasureCatalogue is incomplete. It contains only the definitionSource element.
+
+ <element name="DQM_MeasureCatalogue" substitutionGroup="gco:AbstractObject" type="dqm:DQM_MeasureCatalogue_Type">
+    <annotation>
+      <documentation>name was originally DQM_MeasureCatalogue::CT_Catalogue, perhaps this is supposed to derive from CT_Catalogue?</documentation>
+    </annotation>
+  </element>
+  <complexType name="DQM_MeasureCatalogue_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="definitionSource" type="dqm:DQM_SourceReference_PropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  
+  I added the other attributes shown in Figure H.1:
+    <complexType name="DQM_MeasureCatalogue_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="1" name="qualityMeasure" type="dqm:DQM_Measure_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="parameter" type="dqm:DQM_Parameter_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="basicMeasure" type="dqm:DQM_BasicMeasure_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="definitionSource" type="dqm:DQM_SourceReference_PropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  
+  The DataQualityMeasure.xsd schema definition of DQM_Measure_Type is incomplete. I added three attributes from Figure H.1
+  <complexType name="DQM_Measure_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <element name="measureIdentifier" type="mcc:MD_Identifier_PropertyType"/>
+          <element name="name" type="gco:CharacterString_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="alias" type="gco:CharacterString_PropertyType"/>
+          <element maxOccurs="unbounded" name="elementName" type="gco:TypeName_PropertyType"/>
+          <element name="definition" type="gco:CharacterString_PropertyType"/>
+          <element minOccurs="0" name="description" type="dqm:DQM_Description_PropertyType"/>
+          <element maxOccurs="unbounded" name="valueType" type="gco:TypeName_PropertyType"/>
+          <element minOccurs="0" name="valueStructure" type="dqm:DQM_ValueStructure_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="example" type="dqm:DQM_Description_PropertyType"/>
+          <element minOccurs="0" name="registeredqualityMeasure" type="gco:ObjectReference_PropertyType"/>
+          <!-- Added basicMeasure, parameter, and sourceReference as in Figure H.1 Ted Habermann 2013-12-27 -->
+          <element minOccurs="0" maxOccurs="1" name="basicMeasure" type="dqm:DQM_BasicMeasure_PropertyType"/>
+          <element minOccurs="0" maxOccurs="unbounded" name="parameter" type="dqm:DQM_Parameter_PropertyType"/>
+          <element minOccurs="0" maxOccurs="unbounded" name="sourceReference" type="dqm:DQM_SourceReference_PropertyType"></element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+

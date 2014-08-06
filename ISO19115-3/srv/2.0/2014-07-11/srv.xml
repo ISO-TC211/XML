@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<srv:SV_ServiceIdentification id="OPeNDAP"
+    xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" 
+    xmlns:srv="http://www.isotc211.org/2005/srv/2.0/2013-06-24"
+    xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24"
+    xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" 
+    xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.isotc211.org/2005/srv/2.0/2013-06-24 srv.xsd">
+    <mri:citation>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+            </cit:title>
+            <cit:date gco:nilReason="missing"/>
+            <cit:identifier>
+                <mcc:MD_Identifier>
+                    <mcc:code>
+                        <gco:CharacterString>/*/gmd:dataSetURI/gco:CharacterString</gco:CharacterString>
+                    </mcc:code>
+                </mcc:MD_Identifier>
+            </cit:identifier>
+            <cit:citedResponsibleParty>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="anyValidURI">originator</cit:CI_RoleCode>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Organisation>
+                            <cit:name>
+                                <gco:CharacterString>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+                            </cit:name>
+                            <cit:contactInfo>
+                                <cit:CI_Contact>
+                                    <cit:address>
+                                        <cit:CI_Address>
+                                            <cit:electronicMailAddress>
+                                                <gco:CharacterString>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString</gco:CharacterString>
+                                            </cit:electronicMailAddress>
+                                        </cit:CI_Address>
+                                    </cit:address>
+                                </cit:CI_Contact>
+                            </cit:contactInfo>
+                            <cit:individual>
+                                <cit:CI_Individual>
+                                    <cit:name>
+                                        <gco:CharacterString>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+                                    </cit:name>
+                                </cit:CI_Individual>
+                            </cit:individual>
+                        </cit:CI_Organisation>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </cit:citedResponsibleParty>
+        </cit:CI_Citation>
+    </mri:citation>
+    <mri:abstract>
+        <gco:CharacterString>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:abstract/gco:CharacterString</gco:CharacterString>
+    </mri:abstract>
+    <mri:extent gco:nilReason="withheld">
+        <!-- optional property, have to use with schema that imports srv and gex -->
+<!--        <gex:EX_Extent>
+            <gex:geographicElement>
+                <gex:EX_GeographicBoundingBox>
+                    <gex:extentTypeCode>
+                        <gco:Boolean>1</gco:Boolean>
+                    </gex:extentTypeCode>
+                    <gex:westBoundLongitude>
+                        <gco:Decimal>-100.0</gco:Decimal>
+                    </gex:westBoundLongitude>
+                    <gex:eastBoundLongitude>
+                        <gco:Decimal>-50.0</gco:Decimal>
+                    </gex:eastBoundLongitude>
+                    <gex:southBoundLatitude>
+                        <gco:Decimal>20.0</gco:Decimal>
+                    </gex:southBoundLatitude>
+                    <gex:northBoundLatitude>
+                        <gco:Decimal>52.0</gco:Decimal>
+                    </gex:northBoundLatitude>
+                </gex:EX_GeographicBoundingBox>
+            </gex:geographicElement>
+            <gex:temporalElement>
+                <gex:EX_TemporalExtent>
+                    <gex:extent>
+                        <gml:TimePeriod gml:id="d161e35">
+                            <gml:beginPosition>2011-08-17T23:44:00Z</gml:beginPosition>
+                            <gml:endPosition>2012-10-03T07:44:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gex:extent>
+                </gex:EX_TemporalExtent>
+            </gex:temporalElement>
+        </gex:EX_Extent>-->
+    </mri:extent>
+    <srv:serviceType>
+        <gco:LocalName>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType/gco:LocalName</gco:LocalName>
+    </srv:serviceType>
+    
+    
+    <srv:serviceTypeVersion>
+        <gco:CharacterString>/*/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceTypeVersion/gco:CharacterString</gco:CharacterString>
+    </srv:serviceTypeVersion>
+    <srv:couplingType>
+        <srv:SV_CouplingType codeList="codeListLocation#SV_CouplingType" codeListValue="anyValidURI">tight</srv:SV_CouplingType>
+    </srv:couplingType>
+    <srv:coupledResource>
+        <srv:SV_CoupledResource>
+            <!-- toggle comment for testing resourceReference and resource may not both be present -->
+            <!--<srv:resourceReference xlink:href="http://links.org/linkToResource"/>-->
+            <srv:operation>
+                <srv:SV_OperationMetadata>
+                    <srv:operationName>ShowMeTheMoney</srv:operationName>
+                    <srv:distributedComputingPlatform>
+                        <srv:DCPList codeList="http://codelists.r.us/platforms" codeListValue="theWEB">The WWW</srv:DCPList>
+                    </srv:distributedComputingPlatform>
+                    <srv:connectPoint>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>http://links.org/theLinkage</gco:CharacterString>
+                            </cit:linkage>
+                        </cit:CI_OnlineResource>
+                    </srv:connectPoint>
+                </srv:SV_OperationMetadata>
+            </srv:operation>
+            <srv:resource xlink:href="http://links.org/MD_DataIdentification/theResource"/>
+        </srv:SV_CoupledResource>
+    </srv:coupledResource>
+    <srv:operatedDataset>
+        <cit:CI_Citation>
+            <cit:title>The name of the dataset used by the service</cit:title>
+        </cit:CI_Citation>
+    </srv:operatedDataset>
+    <srv:containsOperations>
+        <srv:SV_OperationMetadata>
+            <srv:operationName>
+                <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:operationName/gco:CharacterString</gco:CharacterString>
+            </srv:operationName>
+            <srv:distributedComputingPlatform>
+                <srv:DCPList codeList="codeListLocation#DCPList" codeListValue="anyValidURI">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:DCP/srv:DCPList</srv:DCPList>
+            </srv:distributedComputingPlatform>
+            <srv:invocationName>
+                <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:invocationName/gco:CharacterString</gco:CharacterString>
+            </srv:invocationName>
+            <srv:connectPoint>
+                <cit:CI_OnlineResource>
+                    <cit:linkage>
+                        <gco:CharacterString>http://www.example.com/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:linkage/gmd:URL</gco:CharacterString>
+                    </cit:linkage>
+                    <cit:name>
+                        <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:name/gco:CharacterString</gco:CharacterString>
+                    </cit:name>
+                    <cit:description>
+                        <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:description/gco:CharacterString</gco:CharacterString>
+                    </cit:description>
+                    <cit:function>
+                        <cit:CI_OnLineFunctionCode codeList="http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode"
+                            codeListValue="download">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:CI_OnLineFunctionCode>
+                    </cit:function>
+                </cit:CI_OnlineResource>
+            </srv:connectPoint>
+            <srv:parameter>
+                <srv:SV_Parameter>
+                    <srv:name>
+                        <gco:MemberName>
+                            <gco:aName>
+                                <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:name/gco:aName/gco:CharacterString</gco:CharacterString>
+                            </gco:aName>
+                            <gco:attributeType>
+                                <gco:TypeName>
+                                    <gco:aName>
+                                        <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:name/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterString</gco:CharacterString>
+                                    </gco:aName>
+                                </gco:TypeName>
+                            </gco:attributeType>
+                        </gco:MemberName>
+                    </srv:name>
+                    <srv:direction>
+                        <srv:SV_ParameterDirection>in</srv:SV_ParameterDirection>
+                    </srv:direction>
+                    <srv:description>
+                        <gco:CharacterString>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:description/gco:CharacterString</gco:CharacterString>
+                    </srv:description>
+                    <srv:optionality>
+                        <gco:Boolean>true</gco:Boolean>
+                    </srv:optionality>
+                    <srv:repeatability>
+                        <gco:Boolean>false</gco:Boolean>
+                    </srv:repeatability>
+                </srv:SV_Parameter>
+            </srv:parameter>
+        </srv:SV_OperationMetadata>
+    </srv:containsOperations>
+ <!-- to test rule that both operatesOn and operatedDataset MUST not be present -->
+    <!--   <srv:operatesOn xlink:href="#DataIdentification"/>-->
+    <!-- uncomment this to test rule:
+    "MUST have a value for either the containsChain or the containsOperations property."-->
+<!--    <srv:containsChain xlink:href="http://link.org/toSomeChainobject"/>-->
+        
+</srv:SV_ServiceIdentification>

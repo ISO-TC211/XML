@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mmd:MD_Metadata xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:gmd="http://www.isotc211.org/2005/gmd"
+ xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2012-12-10"
+ xmlns:gco="http://www.isotc211.org/2005/gco"
+ xmlns:gts="http://www.isotc211.org/2005/gts"
+ xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2012-12-10"
+ xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2012-12-10"
+ xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2012-12-10"
+ xmlns:mmd="http://www.isotc211.org/2005/mmd/1.0/2012-12-10"
+ xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2012-12-10"
+ xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:gss="http://www.isotc211.org/2005/gss"
+ xmlns:msr="http://www.isotc211.org/2005/msr/1.0/2012-12-10"
+ xmlns:gsr="http://www.isotc211.org/2005/gsr"
+ xmlns:mas="http://www.isotc211.org/2005/mas/1.0/2012-12-10"
+ xmlns:mco="http://www.isotc211.org/2005/mco/1.0/2012-12-10"
+ xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2012-12-10"
+ xmlns:mex="http://www.isotc211.org/2005/mex/1.0/2012-12-10"
+ xmlns:mpc="http://www.isotc211.org/2005/mpc/1.0/2012-12-10"
+ xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2012-12-10"
+ xmlns:mrl="http://www.isotc211.org/2005/mrl/1.0/2012-12-10"
+ xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2012-12-10"
+ xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2012-12-10"
+ xmlns:srv="http://www.isotc211.org/2005/srv/2.0/2012-12-10"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.isotc211.org/2005/mmd/1.0/2012-12-10 file:/C:/Workspace/Metadata/ISODocs/ShapeChange/output/xsd/ISO19115-3/mds/1.0/mds.xsd">
+    <mmd:contact/>
+    <mmd:contact/>
+    <mmd:dateInfo/>
+    <mmd:dateInfo/>
+    <mmd:identificationInfo/>
+    <mmd:identificationInfo/>
+</mmd:MD_Metadata>

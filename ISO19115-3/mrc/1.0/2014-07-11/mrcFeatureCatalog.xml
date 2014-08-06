@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mrc:MD_FeatureCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.isotc211.org/2005/mrc/1.0/2013-06-24 mrc.xsd http://www.isotc211.org/2005/gfc gfc" 
+  xmlns:gfc="http://www.isotc211.org/2005/gfc" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" 
+  xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2013-06-24">
+  <mrc:featureCatalogue>
+    <gfc:featureCatalog/>
+  </mrc:featureCatalogue>
+</mrc:MD_FeatureCatalogue>

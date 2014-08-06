@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpc:MD_PortrayalCatalogueReference xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.isotc211.org/2005/mpc/1.0/2013-06-24 mpc.xsd"
+ xmlns:gco="http://www.isotc211.org/2005/gco"
+ xmlns:mpc="http://www.isotc211.org/2005/mpc/1.0/2013-06-24"
+ xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24">
+  <mpc:portrayalCatalogueCitation>
+    <cit:CI_Citation>
+      <cit:title><gco:CharacterString>/mpc:MD_PortrayalCatalogueReference/mpc:portrayalCatalogueCitation/cit:CI_Citation/cit:title/gco:CharacterString</gco:CharacterString></cit:title>
+    </cit:CI_Citation>
+  </mpc:portrayalCatalogueCitation>
+</mpc:MD_PortrayalCatalogueReference>
