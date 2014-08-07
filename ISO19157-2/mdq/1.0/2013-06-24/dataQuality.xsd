@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" 
-  xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" 
+  xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2013-06-24" 
+  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2013-06-24" 
   xmlns:gco="http://www.isotc211.org/2005/gco"
-  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24"
-  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" 
+  xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2013-06-24"
+  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2013-06-24" 
   elementFormDefault="qualified" 
-  targetNamespace="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" version="">
+  targetNamespace="http://www.isotc211.org/namespace/mdq/1.0/2013-06-24" version="">
   <include schemaLocation="mdq.xsd"/>
   <!-- gex namespace was added to schema tag by Ted Habermann 2014-01-13 to address extent problem -->
   <!--<include schemaLocation="dataQualityMeasure.xsd"/>-->
@@ -14,9 +14,9 @@
   <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <!-- gex import added by Ted Habermann 20140106 to try to fix extent -->
-  <import namespace="http://www.isotc211.org/2005/gex/1.0/2013-06-24" schemaLocation="../../../../ISO19115-3/gex/1.0/2013-06-24/gex.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../../ISO19115-3/cit/1.0/2013-06-24/cit.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../../ISO19115-3/mcc/1.0/2013-06-24/mcc.xsd"/>  
+  <import namespace="http://www.isotc211.org/namespace/gex/1.0/2013-06-24" schemaLocation="../../../../ISO19115-3/gex/1.0/2013-06-24/gex.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/cit/1.0/2013-06-24" schemaLocation="../../../../ISO19115-3/cit/1.0/2013-06-24/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2013-06-24" schemaLocation="../../../../ISO19115-3/mcc/1.0/2013-06-24/mcc.xsd"/>  
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="CoverageResult" substitutionGroup="mdq:DQ_Result" type="mdq:CoverageResult_Type"/>
   <complexType name="CoverageResult_Type">

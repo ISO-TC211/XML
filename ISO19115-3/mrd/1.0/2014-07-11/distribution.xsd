@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11" version="1.0">
   <include schemaLocation="mrd.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../cit/1.0/2013-06-24/cit.xsd"/>
-  <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
-  <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gts" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../mcc/1.0/2013-06-24/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_DigitalTransferOptions" substitutionGroup="gco:AbstractObject" type="mrd:MD_DigitalTransferOptions_Type">
     <annotation>
@@ -26,7 +23,7 @@
               <documentation>estimated size of a unit in the specified transfer format, expressed in megabytes. The transfer size is &gt; 0.0</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="onLine" type="cit:CI_OnlineResource_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="onLine" type="mcc:Abstract_OnlineResource_PropertyType">
             <annotation>
               <documentation>information about online sources from which the resource can be obtained</documentation>
             </annotation>
@@ -90,12 +87,12 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="distributorContact" type="cit:CI_Responsibility_PropertyType">
+          <element name="distributorContact" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
               <documentation>party from whom the resource may be obtained. This list need not be exhaustive</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="distributionOrderProcess" type="mrd:MD_StandardOrderProcess_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="distributionOrderProcess" type="mcc:Abstract_StandardOrderProcess_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="distributorFormat" type="mcc:Abstract_Format_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="distributorTransferOptions" type="mrd:MD_DigitalTransferOptions_PropertyType"/>
         </sequence>
@@ -118,7 +115,7 @@
     <complexContent>
       <extension base="mcc:Abstract_Format_Type">
         <sequence>
-          <element name="formatSpecificationCitation" type="cit:CI_Citation_PropertyType">
+          <element name="formatSpecificationCitation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>citation/URL of the specification for the format</documentation>
             </annotation>
@@ -133,13 +130,12 @@
               <documentation>recommendations of algorithms or processes that can be applied to read or expand resources to which compression techniques have been applied</documentation>
             </annotation>
           </element>
-          <!-- The formatDistributor element was moved down by Ted Habermann 20140512 -->
-          <element maxOccurs="unbounded" minOccurs="0" name="formatDistributor" type="mrd:MD_Distributor_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="medium" type="mrd:MD_Medium_PropertyType">
             <annotation>
               <documentation>medium used by the format</documentation>
             </annotation>
           </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="formatDistributor" type="mrd:MD_Distributor_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -160,7 +156,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="name" type="cit:CI_Citation_PropertyType">
+          <element minOccurs="0" name="name" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>name of the medium on which the resource can be received</documentation>
             </annotation>
@@ -213,14 +209,14 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_StandardOrderProcess" substitutionGroup="gco:AbstractObject" type="mrd:MD_StandardOrderProcess_Type">
+  <element name="MD_StandardOrderProcess" substitutionGroup="mcc:Abstract_StandardOrderProcess" type="mrd:MD_StandardOrderProcess_Type">
     <annotation>
       <documentation>common ways in which the resource may be obtained or received, and related instructions and fee information</documentation>
     </annotation>
   </element>
   <complexType name="MD_StandardOrderProcess_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_StandardOrderProcess_Type">
         <sequence>
           <element minOccurs="0" name="fees" type="gco:CharacterString_PropertyType">
             <annotation>

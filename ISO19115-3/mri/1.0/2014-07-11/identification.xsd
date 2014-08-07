@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" version="1.0">
   <include schemaLocation="mri.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../cit/1.0/2013-06-24/cit.xsd"/>
-  <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
-  <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gts" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/lan/1.0/2013-06-24" schemaLocation="../../../lan/1.0/2013-06-24/lan.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../mcc/1.0/2013-06-24/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/lan/1.0/2014-07-11/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DS_AssociationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
@@ -40,7 +36,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="name" type="cit:CI_Citation_PropertyType">
+          <element minOccurs="0" name="name" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>citation information about the associated resource</documentation>
             </annotation>
@@ -55,7 +51,7 @@
               <documentation>type of initiative under which the associated resource was produced NOTE: the activity that resulted in the associated resource</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="metadataReference" type="cit:CI_Citation_PropertyType">
+          <element minOccurs="0" name="metadataReference" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>reference to the metadata of the associated resource</documentation>
             </annotation>
@@ -103,16 +99,16 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="AbstractMD_Identification" substitutionGroup="gco:AbstractObject" type="mri:AbstractMD_Identification_Type">
+  <element abstract="true" name="AbstractMD_Identification" substitutionGroup="mcc:Abstract_ResourceDescription" type="mri:AbstractMD_Identification_Type">
     <annotation>
       <documentation>basic information required to uniquely identify a resource or resources</documentation>
     </annotation>
   </element>
   <complexType abstract="true" name="AbstractMD_Identification_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_ResourceDescription_Type">
         <sequence>
-          <element name="citation" type="cit:CI_Citation_PropertyType">
+          <element name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>citation for the resource(s)</documentation>
             </annotation>
@@ -132,17 +128,17 @@
               <documentation>recognition of those who contributed to the resource(s)</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="status" type="mri:MD_ProgressCode_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="status" type="mcc:MD_ProgressCode_PropertyType">
             <annotation>
               <documentation>status of the resource(s)</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="pointOfContact" type="cit:CI_Responsibility_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="pointOfContact" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
               <documentation>identification of, and means of communication with, person(s) and organisation(s) associated with the resource(s)</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="spatialRepresentationType" type="mri:MD_SpatialRepresentationTypeCode_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="spatialRepresentationType" type="mcc:MD_SpatialRepresentationTypeCode_PropertyType">
             <annotation>
               <documentation>method used to spatially represent geographic information</documentation>
             </annotation>
@@ -167,7 +163,7 @@
               <documentation>spatial and temporal extent of the resource</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="cit:CI_Citation_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>other documentation associated with the resource</documentation>
             </annotation>
@@ -214,7 +210,7 @@
               <documentation>URI of concept in ontology specified by the ontology attribute; this concept is labeled by the className: CharacterString.</documentation>
             </annotation>
           </element>
-          <element name="ontology" type="cit:CI_Citation_PropertyType">
+          <element name="ontology" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>a reference that binds the keyword class to a formal conceptualization of a knowledge domain for use in semantic processingNOTE: Keywords in the associated MD_Keywords keyword list must be within the scope of this ontology</documentation>
             </annotation>
@@ -260,12 +256,11 @@
               <documentation>subject matter used to group similar keywords</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="thesaurusName" type="cit:CI_Citation_PropertyType">
+          <element minOccurs="0" name="thesaurusName" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>name of the formally registered thesaurus or a similar authoritative source of keywords</documentation>
             </annotation>
           </element>
-          <!-- SMR 20131103 move keywordClass property to end -->
           <element minOccurs="0" name="keywordClass" type="mri:MD_KeywordClass_PropertyType"/>
         </sequence>
       </extension>
@@ -276,17 +271,6 @@
       <element ref="mri:MD_Keywords"/>
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
-    <attribute ref="gco:nilReason"/>
-  </complexType>
-  <element name="MD_ProgressCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
-    <annotation>
-      <documentation>status of the resource</documentation>
-    </annotation>
-  </element>
-  <complexType name="MD_ProgressCode_PropertyType">
-    <sequence minOccurs="0">
-      <element ref="mri:MD_ProgressCode"/>
-    </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="MD_RepresentativeFraction" substitutionGroup="gco:AbstractObject" type="mri:MD_RepresentativeFraction_Type">
@@ -303,7 +287,6 @@
               <documentation>the number below the line in a vulgar fraction</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="equivalentScale" type="gco:Scale_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -315,14 +298,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_Resolution" substitutionGroup="gco:AbstractObject" type="mri:MD_Resolution_Type">
+  <element name="MD_Resolution" substitutionGroup="mcc:Abstract_SpatialResolution" type="mri:MD_Resolution_Type">
     <annotation>
       <documentation>level of detail expressed as a scale factor, a distance or an angle</documentation>
     </annotation>
   </element>
   <complexType name="MD_Resolution_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_SpatialResolution_Type">
         <choice>
           <element name="equivalentScale" type="mri:MD_RepresentativeFraction_PropertyType">
             <annotation>
@@ -358,17 +341,6 @@
       <element ref="mri:MD_Resolution"/>
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
-    <attribute ref="gco:nilReason"/>
-  </complexType>
-  <element name="MD_SpatialRepresentationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
-    <annotation>
-      <documentation>method used to represent geographic information in the resource</documentation>
-    </annotation>
-  </element>
-  <complexType name="MD_SpatialRepresentationTypeCode_PropertyType">
-    <sequence minOccurs="0">
-      <element ref="mri:MD_SpatialRepresentationTypeCode"/>
-    </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="MD_TopicCategoryCode" substitutionGroup="gco:CharacterString" type="mri:MD_TopicCategoryCode_Type">
@@ -514,7 +486,7 @@
               <documentation>applications, determined by the user for which the resource and/or resource series is not suitable</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="userContactInfo" type="cit:CI_Responsibility_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="userContactInfo" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
               <documentation>identification of and means of communicating with person(s) and organisation(s) using the resource(s)</documentation>
             </annotation>
@@ -524,8 +496,8 @@
               <documentation>response to the user-determined limitationsE.G.. 'this has been fixed in version x'</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="cit:CI_Citation_PropertyType"/>
-          <element minOccurs="0" name="identifiedIssues" type="cit:CI_Citation_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="mcc:Abstract_Citation_PropertyType"/>
+          <element minOccurs="0" name="identifiedIssues" type="mcc:Abstract_Citation_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>

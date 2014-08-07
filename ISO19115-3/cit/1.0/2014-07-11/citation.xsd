@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" xmlns:gco="http://www.isotc211.org/2005/gco"
+  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" elementFormDefault="qualified" 
+  targetNamespace="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" version="1.0">
   <include schemaLocation="cit.xsd"/>
-  <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
-  <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../mcc/1.0/2013-06-24/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="CI_Address" substitutionGroup="gco:AbstractObject" type="cit:CI_Address_Type">
     <annotation>
@@ -55,14 +57,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="CI_Citation" substitutionGroup="gco:AbstractObject" type="cit:CI_Citation_Type">
+  <element name="CI_Citation" substitutionGroup="mcc:Abstract_Citation" type="cit:CI_Citation_Type">
     <annotation>
       <documentation>standardized resource reference</documentation>
     </annotation>
   </element>
   <complexType name="CI_Citation_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_Citation_Type">
         <sequence>
           <element name="title" type="gco:CharacterString_PropertyType">
             <annotation>
@@ -191,14 +193,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="CI_Date" substitutionGroup="gco:AbstractObject" type="cit:CI_Date_Type">
+  <element name="CI_Date" substitutionGroup="mcc:Abstract_TypedDate" type="cit:CI_Date_Type">
     <annotation>
       <documentation>reference date and event used to describe it</documentation>
     </annotation>
   </element>
   <complexType name="CI_Date_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_TypedDate_Type">
         <sequence>
           <element name="date" type="gco:DateTime_PropertyType">
             <annotation>
@@ -268,14 +270,14 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="CI_OnlineResource" substitutionGroup="gco:AbstractObject" type="cit:CI_OnlineResource_Type">
+  <element name="CI_OnlineResource" substitutionGroup="mcc:Abstract_OnlineResource" type="cit:CI_OnlineResource_Type">
     <annotation>
       <documentation>information about on-line sources from which the resource, specification, or community profile name and extended metadata elements can be obtained</documentation>
     </annotation>
   </element>
   <complexType name="CI_OnlineResource_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_OnlineResource_Type">
         <sequence>
           <element name="linkage" type="gco:CharacterString_PropertyType">
             <annotation>
@@ -390,14 +392,14 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="CI_Responsibility" substitutionGroup="gco:AbstractObject" type="cit:CI_Responsibility_Type">
+  <element name="CI_Responsibility" substitutionGroup="mcc:Abstract_Responsibility" type="cit:CI_Responsibility_Type">
     <annotation>
       <documentation>information about the party and their role</documentation>
     </annotation>
   </element>
   <complexType name="CI_Responsibility_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_Responsibility_Type">
         <sequence>
           <element name="role" type="cit:CI_RoleCode_PropertyType">
             <annotation>

@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" 
-  xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" 
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" 
-  targetNamespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" version="1.0">
   <include schemaLocation="mcc.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../cit/1.0/2013-06-24/cit.xsd"/>
-  <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
-  <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_BrowseGraphic" substitutionGroup="gco:AbstractObject" type="mcc:MD_BrowseGraphic_Type">
@@ -34,7 +27,7 @@
               <documentation>restriction on access and/or use of browse graphic</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="linkage" type="cit:CI_OnlineResource_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="linkage" type="mcc:Abstract_OnlineResource_PropertyType">
             <annotation>
               <documentation>link to browse graphic</documentation>
             </annotation>
@@ -59,7 +52,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="authority" type="cit:CI_Citation_PropertyType">
+          <element minOccurs="0" name="authority" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>Citation for the code namespace and optionally the person or party responsible for maintenance of that namespace</documentation>
             </annotation>
@@ -95,9 +88,20 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
+  <element name="MD_ProgressCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <annotation>
+      <documentation>status of the resource</documentation>
+    </annotation>
+  </element>
+  <complexType name="MD_ProgressCode_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mcc:MD_ProgressCode"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
   <element name="MD_Scope" substitutionGroup="gco:AbstractObject" type="mcc:MD_Scope_Type">
     <annotation>
-      <documentation>information about the scope of the resource</documentation>
+      <documentation>new: information about the scope of the resource</documentation>
     </annotation>
   </element>
   <complexType name="MD_Scope_Type">
@@ -109,8 +113,6 @@
               <documentation>description of the scope</documentation>
             </annotation>
           </element>
-          <!-- Erling proposes -->
-          <!--<element maxOccurs="unbounded" minOccurs="0" name="extent" type="gex:EX_Extent_Type"/>-->
           <element maxOccurs="unbounded" minOccurs="0" name="extent" type="mcc:Abstract_Extent_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="levelDescription" type="mcc:MD_ScopeDescription_PropertyType"/>
         </sequence>
@@ -185,20 +187,29 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <!--  <element name="URI" substitutionGroup="gco:AbstractObject" type="mcc:URI_Type">-->
-  <element name="URI" type="xs:anyURI">
+  <element name="MD_SpatialRepresentationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <annotation>
+      <documentation>method used to represent geographic information in the resource</documentation>
+    </annotation>
+  </element>
+  <complexType name="MD_SpatialRepresentationTypeCode_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mcc:MD_SpatialRepresentationTypeCode"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <element name="URI" substitutionGroup="gco:AbstractObject" type="mcc:URI_Type">
     <annotation>
       <documentation>Uniform Resource Identifier (URI), is a compact string of characters used to identify or name a resource</documentation>
     </annotation>
   </element>
-  <!-- replace implementation of mcc:URI with xs:anyURI, so this type is not used SMR 20131104 -->
-  <!--  <complexType name="URI_Type">
-<complexContent>
+  <complexType name="URI_Type">
+    <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence/>
       </extension>
     </complexContent>
-  </complexType>  -->
+  </complexType>
   <complexType name="URI_PropertyType">
     <sequence minOccurs="0">
       <element ref="mcc:URI"/>

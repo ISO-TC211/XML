@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24"
-  xmlns:gcx="http://www.isotc211.org/2005/gcx/1.0/2013-06-24"
-  xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24"
-  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"
-  xmlns:md1="http://www.isotc211.org/2005/md1/1.0/2013-06-24"
-  xmlns:md2="http://www.isotc211.org/2005/md2/1.0/2013-06-24"
-  xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2013-06-24"
-  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" elementFormDefault="qualified"
-  targetNamespace="http://www.isotc211.org/2005/md2/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:md1="http://www.isotc211.org/namespace/md1/1.0/2014-07-11" xmlns:md2="http://www.isotc211.org/namespace/md2/1.0/2014-07-11" xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11" xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11" xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/md2/1.0/2014-07-11" version="1.0">
   <annotation>
-    <documentation>XML schema to support MD_Metadata XML instances for the conformance class
-      http://www.isotc211.org/spec/19115-3/1.0/conf/extended-metadata-xml, defined in section A.2.2.6 of ISO19115-3</documentation>
+    <documentation>Namespace &lt;font color="#1f497d"&gt;that identifies conformance class that includes user-defined metadata extensions in metadata records&lt;/font&gt;</documentation>
   </annotation>
-
-  <import namespace="http://www.isotc211.org/2005/md1/1.0/2013-06-24"
-    schemaLocation="../../../md1/1.0/2013-06-24/md1.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mex/1.0/2013-06-24"
-    schemaLocation="../../../mex/1.0/2013-06-24/mex.xsd"/>
-
+  <include schemaLocation="metadataWithExtensions.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/cit/1.0/2014-07-11/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/gcx/1.0/2014-07-11/gcx.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/lan/1.0/2014-07-11/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/md1/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/md1/1.0/2014-07-11/md1.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mex/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mex/1.0/2014-07-11/mex.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mpc/1.0/2014-07-11/mpc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mri/1.0/2014-07-11/mri.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" xmlns:srv="http://www.isotc211.org/2005/srv/2.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/srv/2.0/2013-06-24" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/srv/2.0/2014-07-11" version="2.0">
   <include schemaLocation="serviceInformation.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../cit/1.0/2013-06-24/cit.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" schemaLocation="../../../mrd/1.0/2013-06-24/mrd.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mri/1.0/2013-06-24" schemaLocation="../../../mri/1.0/2013-06-24/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mri/1.0/2014-07-11/mri.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

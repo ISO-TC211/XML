@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:msr="http://www.isotc211.org/2005/msr/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/msr/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/msr/1.0/2014-07-11" version="1.0">
   <annotation>
-    <documentation>Frequency with which modifications and deletations are made to the data after it is first produced</documentation>
+    <documentation>Frequency with which modifications and deletions are made to the data after it is first produced</documentation>
   </annotation>
   <include schemaLocation="msr.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../cit/1.0/2013-06-24/cit.xsd"/>
-  <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
-  <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gss" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../mcc/1.0/2013-06-24/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_CellGeometryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
@@ -202,7 +199,7 @@
               <documentation>terms which support grid data georeferencing</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="parameterCitation" type="cit:CI_Citation_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="parameterCitation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>reference providing description of the parameters</documentation>
             </annotation>
@@ -218,14 +215,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_GridSpatialRepresentation" substitutionGroup="msr:AbstractMD_SpatialRepresentation" type="msr:MD_GridSpatialRepresentation_Type">
+  <element name="MD_GridSpatialRepresentation" substitutionGroup="gco:AbstractObject" type="msr:MD_GridSpatialRepresentation_Type">
     <annotation>
       <documentation>information about grid spatial objects in the resource</documentation>
     </annotation>
   </element>
   <complexType name="MD_GridSpatialRepresentation_Type">
     <complexContent>
-      <extension base="msr:AbstractMD_SpatialRepresentation_Type">
+      <extension base="gco:AbstractObject_Type">
         <sequence>
           <element name="numberOfDimensions" type="gco:Integer_PropertyType">
             <annotation>
@@ -301,25 +298,6 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="AbstractMD_SpatialRepresentation" substitutionGroup="mcc:Abstract_SpatialRepresentation" type="msr:AbstractMD_SpatialRepresentation_Type">
-    <annotation>
-      <documentation>digital mechanism used to represent spatial information</documentation>
-    </annotation>
-  </element>
-  <complexType abstract="true" name="AbstractMD_SpatialRepresentation_Type">
-    <complexContent>
-      <extension base="mcc:Abstract_SpatialRepresentation_Type">
-        <sequence/>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="AbstractMD_SpatialRepresentation_PropertyType">
-    <sequence minOccurs="0">
-      <element ref="msr:AbstractMD_SpatialRepresentation"/>
-    </sequence>
-    <attributeGroup ref="gco:ObjectReference"/>
-    <attribute ref="gco:nilReason"/>
-  </complexType>
   <element name="MD_TopologyLevelCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
       <documentation>degree of complexity of the spatial relationships</documentation>
@@ -331,14 +309,14 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_VectorSpatialRepresentation" substitutionGroup="msr:AbstractMD_SpatialRepresentation" type="msr:MD_VectorSpatialRepresentation_Type">
+  <element name="MD_VectorSpatialRepresentation" substitutionGroup="gco:AbstractObject" type="msr:MD_VectorSpatialRepresentation_Type">
     <annotation>
       <documentation>information about the vector spatial objects in the resource</documentation>
     </annotation>
   </element>
   <complexType name="MD_VectorSpatialRepresentation_Type">
     <complexContent>
-      <extension base="msr:AbstractMD_SpatialRepresentation_Type">
+      <extension base="gco:AbstractObject_Type">
         <sequence>
           <element minOccurs="0" name="topologyLevel" type="msr:MD_TopologyLevelCode_PropertyType">
             <annotation>

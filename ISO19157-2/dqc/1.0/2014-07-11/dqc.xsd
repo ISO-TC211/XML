@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" xmlns:dqc="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" version="1.0">
+  <include schemaLocation="abstract.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/cit/1.0/2014-07-11/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mrc/1.0/2014-07-11/mrc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mrd/1.0/2014-07-11/mrd.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

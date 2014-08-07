@@ -8,8 +8,8 @@
   <include schemaLocation="rbc.xsd"/>
   <include schemaLocation="temporalReferenceSystems.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/rce/1.0/2014-07-11" schemaLocation="../../../ISO19111/rce/1.0/rce.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/rce/1.0/2014-07-11" schemaLocation="../../../../ISO19111/rce/1.0/2014-07-11/rce.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractSC_CRS" substitutionGroup="rce:Abstract_CoordinateReferenceSystem" type="rbc:AbstractSC_CRS_Type">

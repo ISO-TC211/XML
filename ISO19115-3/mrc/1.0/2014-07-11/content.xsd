@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gfc="http://www.isotc211.org/2005/gfc/0.1/2013-06-24" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fcc="http://www.isotc211.org/namespace/fcc/1.0/2014-07-11" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" version="1.0">
   <include schemaLocation="mrc.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/cit/1.0/2013-06-24" schemaLocation="../../../cit/1.0/2013-06-24/cit.xsd"/>
-  <!-- Changed schema location to address gml vs. gml/3.2 problem Ted Habermann 2013-12-26 -->
-  <!--<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-  <!-- gfc version number changed from 0.1/2013-06-24 to 1.1/2014-07-11 by Ted Habermann 20140729 -->
-  <import namespace="http://www.isotc211.org/2005/gfc/1.1/2014-07-11" schemaLocation="../../../ISO19110/gfc/1.1/gfc.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/lan/1.0/2013-06-24" schemaLocation="../../../lan/1.0/2013-06-24/lan.xsd"/>
-  <import namespace="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" schemaLocation="../../../mcc/1.0/2013-06-24/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/fcc/1.0/2014-07-11" schemaLocation="../../../../ISO19110/fcc/1.0/2014-07-11/fcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/lan/1.0/2014-07-11/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_AttributeGroup" substitutionGroup="gco:AbstractObject" type="mrc:MD_AttributeGroup_Type"/>
   <complexType name="MD_AttributeGroup_Type">
@@ -64,14 +60,16 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="AbstractMD_ContentInformation" substitutionGroup="mcc:Abstract_ContentInformation" type="mrc:AbstractMD_ContentInformation_Type">
+  <element abstract="true" name="AbstractMD_ContentInformation" substitutionGroup="gco:AbstractObject" type="mrc:AbstractMD_ContentInformation_Type">
     <annotation>
-      <documentation>description of the content of a resource</documentation>
+      <documentation>description of the content of a resource.
+
+Note in 19115-3 implementation, this class is implemented by abstract class _ContentInformation in the Abstract Common Classes package</documentation>
     </annotation>
   </element>
   <complexType abstract="true" name="AbstractMD_ContentInformation_Type">
     <complexContent>
-      <extension base="mcc:Abstract_ContentInformation_Type">
+      <extension base="gco:AbstractObject_Type">
         <sequence/>
       </extension>
     </complexContent>
@@ -94,14 +92,14 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_CoverageDescription" substitutionGroup="mrc:AbstractMD_ContentInformation" type="mrc:MD_CoverageDescription_Type">
+  <element name="MD_CoverageDescription" substitutionGroup="mcc:Abstract_ContentInformation" type="mrc:MD_CoverageDescription_Type">
     <annotation>
       <documentation>details about the content of a resource</documentation>
     </annotation>
   </element>
   <complexType name="MD_CoverageDescription_Type">
     <complexContent>
-      <extension base="mrc:AbstractMD_ContentInformation_Type">
+      <extension base="mcc:Abstract_ContentInformation_Type">
         <sequence>
           <element name="attributeDescription" type="gco:RecordType_PropertyType">
             <annotation>
@@ -125,16 +123,16 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_FeatureCatalogue" substitutionGroup="mrc:AbstractMD_ContentInformation" type="mrc:MD_FeatureCatalogue_Type">
+  <element name="MD_FeatureCatalogue" substitutionGroup="mcc:Abstract_ContentInformation" type="mrc:MD_FeatureCatalogue_Type">
     <annotation>
       <documentation>a catalogue of feature types</documentation>
     </annotation>
   </element>
   <complexType name="MD_FeatureCatalogue_Type">
     <complexContent>
-      <extension base="mrc:AbstractMD_ContentInformation_Type">
+      <extension base="mcc:Abstract_ContentInformation_Type">
         <sequence>
-          <element maxOccurs="unbounded" name="featureCatalogue" type="gfc:FC_FeatureCatalogue_PropertyType">
+          <element maxOccurs="unbounded" name="featureCatalogue" type="fcc:Abstract_FeatureCatalogue_PropertyType">
             <annotation>
               <documentation>the catalogue of feature types, attribution, operations, and relationships used by the resource</documentation>
             </annotation>
@@ -150,14 +148,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_FeatureCatalogueDescription" substitutionGroup="mrc:AbstractMD_ContentInformation" type="mrc:MD_FeatureCatalogueDescription_Type">
+  <element name="MD_FeatureCatalogueDescription" substitutionGroup="mcc:Abstract_ContentInformation" type="mrc:MD_FeatureCatalogueDescription_Type">
     <annotation>
       <documentation>information identifying the feature catalogue or the conceptual schema</documentation>
     </annotation>
   </element>
   <complexType name="MD_FeatureCatalogueDescription_Type">
     <complexContent>
-      <extension base="mrc:AbstractMD_ContentInformation_Type">
+      <extension base="mcc:Abstract_ContentInformation_Type">
         <sequence>
           <element minOccurs="0" name="complianceCode" type="gco:Boolean_PropertyType">
             <annotation>
@@ -179,7 +177,7 @@
               <documentation>subset of feature types from cited feature catalogue occurring in dataset</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="featureCatalogueCitation" type="cit:CI_Citation_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="featureCatalogueCitation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>complete bibliographic reference to one or more external feature catalogues</documentation>
             </annotation>
