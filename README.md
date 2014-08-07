@@ -7,3 +7,8 @@ This repository contains draft XML schema and related documents for the ISO TC21
 and data quality (ISO 19157). These are not final schemas for these standards but may be suitable for 
 initial testing and familiarization. They are provided here to support those kinds of use cases 
 without any expectation for persistence.
+
+Note: the directory structure here was changed (Aug. 2014) in order to be consistent with the proposed ISO TC211
+structure by adding working version date directories into the directory structure. For exxample, the
+cat/1.0 directory now includes two working version directories: 2013-06-24 and 2014-07-11 which have
+two different versions of the cat schema documents.
