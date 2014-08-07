@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2013-06-24" 
-  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" 
-  elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11" version="">
+  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2013-06-24" 
+  elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mdq/1.0/2013-06-24" version="">
   <annotation>
     <documentation>Interim App schema for 19157:2012. 
       Imported with strip guids, classes here are decoupled from HM 19157:2012; 
