@@ -1,27 +1,30 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx"
   xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv1="http://www.isotc211.org/2005/srv"
-  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cat="http://www.isotc211.org/2005/cat/1.0/2013-06-24" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24"
-  xmlns:gcx="http://www.isotc211.org/2005/gcx/1.0/2013-06-24" xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24"
-  xmlns:srv="http://www.isotc211.org/2005/srv/2.0/2013-06-24" xmlns:mac="http://www.isotc211.org/2005/mac/1.0/2013-06-24" xmlns:mas="http://www.isotc211.org/2005/mas/1.0/2013-06-24"
-  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mco="http://www.isotc211.org/2005/mco/1.0/2013-06-24" xmlns:mda="http://www.isotc211.org/2005/mda/1.0/2013-06-24"
-  xmlns:mdb="http://www.isotc211.org/2005/mdb/1.0/2013-06-24" xmlns:mdt="http://www.isotc211.org/2005/mdt/1.0/2013-06-24" xmlns:mex="http://www.isotc211.org/2005/mex/1.0/2013-06-24"
-  xmlns:mrl="http://www.isotc211.org/2005/mrl/1.0/2013-06-24"
-  xmlns:mds="http://www.isotc211.org/2005/mds/1.0/2013-06-24" xmlns:mmi="http://www.isotc211.org/2005/mmi/1.0/2013-06-24" xmlns:mpc="http://www.isotc211.org/2005/mpc/1.0/2013-06-24"
-  xmlns:mrc="http://www.isotc211.org/2005/mrc/1.0/2013-06-24" xmlns:mrd="http://www.isotc211.org/2005/mrd/1.0/2013-06-24" xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24"
-  xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" xmlns:msr="http://www.isotc211.org/2005/msr/1.0/2013-06-24"
-  xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" exclude-result-prefixes="gmd gco gsr gss gts xs gmi gmx xsi srv1 mac">
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-07-11" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+  xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2014-07-11" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11"
+  xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11" xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-07-11" xmlns:mas="http://www.isotc211.org/namespace/mas/1.0/2014-07-11"
+  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mco="http://www.isotc211.org/namespace/mco/1.0/2014-07-11" xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-07-11"
+  xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-07-11" xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-07-11" xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11"
+  xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-07-11" xmlns:mds="http://www.isotc211.org/namespace/mds/1.0/2014-07-11" xmlns:mmi="http://www.isotc211.org/namespace/mmi/1.0/2014-07-11"
+  xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11" xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11"
+  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0/2014-07-11" xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11"
+  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11" exclude-result-prefixes="gmd gco gsr gss gts xs gmi gmx xsi srv1 mac">
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
       <xd:p>
         <xd:b>Created on:</xd:b>March 8, 2014</xd:p>
       <xd:p>Translates from ISO 19139 for ISO 19115 and ISO 19139-2 for 19115-2 to ISO 19139-1 for ISO 19115-1</xd:p>
       <xd:p>
-        <xd:p>
-          <xd:b>Version June 13, 3014</xd:b>
-        </xd:p>
-        <xd:p>Converged the 19115-2 transform into 19115-1 namespaces</xd:p>
-        <xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
+        <xd:b>Version June 13, 2014</xd:b>
+      </xd:p>
+      <xd:p>Converged the 19115-2 transform into 19115-1 namespaces</xd:p>
+      <xd:p>
+        <xd:b>Version August 7, 2014</xd:b>
+      </xd:p>
+      <xd:p>Changed namespace dates to 2014-07-11</xd:p>
+      <xd:p>Fixed DistributedComputingPlatform element</xd:p>
+      <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
     </xd:desc>
   </xd:doc>
   <xsl:output method="xml" indent="yes"/>
@@ -35,66 +38,68 @@
       <xsl:variable name="nameSpacePrefix">
         <xsl:call-template name="getNamespacePrefix"/>
       </xsl:variable>
-      <xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">
+      <!-- in the 2014-07-11 version the MI_Metadata element became MD_Metadata -->
+      <!--<xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">-->
+      <xsl:element name="mdb:MD_Metadata">
         <!-- new namespaces -->
         <xsl:namespace name="xsi" select="'http://www.w3.org/2001/XMLSchema-instance'"/>
         <!-- Namespaces that include concepts outside of metadata -->
         <!-- Catalog (ISO 19115-3) -->
-        <xsl:namespace name="cat" select="'http://www.isotc211.org/2005/cat/1.0/2013-06-24'"/>
+        <xsl:namespace name="cat" select="'http://www.isotc211.org/namespace/cat/1.0/2014-07-11'"/>
         <!-- Citation (ISO 19115-3) -->
-        <xsl:namespace name="cit" select="'http://www.isotc211.org/2005/cit/1.0/2013-06-24'"/>
+        <xsl:namespace name="cit" select="'http://www.isotc211.org/namespace/cit/1.0/2014-07-11'"/>
         <!-- Geospatial Common eXtension (ISO 19115-3) -->
-        <xsl:namespace name="gcx" select="'http://www.isotc211.org/2005/gcx/1.0/2013-06-24'"/>
+        <xsl:namespace name="gcx" select="'http://www.isotc211.org/namespace/gcx/1.0/2014-07-11'"/>
         <!-- Geospatial EXtent (ISO 19115-3) -->
-        <xsl:namespace name="gex" select="'http://www.isotc211.org/2005/gex/1.0/2013-06-24'"/>
+        <xsl:namespace name="gex" select="'http://www.isotc211.org/namespace/gex/1.0/2014-07-11'"/>
         <!-- Language Localization (ISO 19115-3) -->
-        <xsl:namespace name="lan" select="'http://www.isotc211.org/2005/lan/1.0/2013-06-24'"/>
+        <xsl:namespace name="lan" select="'http://www.isotc211.org/namespace/lan/1.0/2014-07-11'"/>
         <!-- Metadata for Services (ISO 19115-3) -->
-        <xsl:namespace name="srv" select="'http://www.isotc211.org/2005/srv/2.0/2013-06-24'"/>
+        <xsl:namespace name="srv" select="'http://www.isotc211.org/namespace/srv/2.0/2014-07-11'"/>
         <!-- Metadata for Application Schema (ISO 19115-3) -->
-        <xsl:namespace name="mas" select="'http://www.isotc211.org/2005/mas/1.0/2013-06-24'"/>
+        <xsl:namespace name="mas" select="'http://www.isotc211.org/namespace/mas/1.0/2014-07-11'"/>
         <!-- Metadata for Common Classes (ISO 19115-3) -->
-        <xsl:namespace name="mcc" select="'http://www.isotc211.org/2005/mcc/1.0/2013-06-24'"/>
+        <xsl:namespace name="mcc" select="'http://www.isotc211.org/namespace/mcc/1.0/2014-07-11'"/>
         <!-- Metadata for COnstraints (ISO 19115-3) -->
-        <xsl:namespace name="mco" select="'http://www.isotc211.org/2005/mco/1.0/2013-06-24'"/>
+        <xsl:namespace name="mco" select="'http://www.isotc211.org/namespace/mco/1.0/2014-07-11'"/>
         <!-- MetaData Application (ISO 19115-3) -->
-        <xsl:namespace name="mda" select="'http://www.isotc211.org/2005/mda/1.0/2013-06-24'"/>
+        <xsl:namespace name="mda" select="'http://www.isotc211.org/namespace/mda/1.0/2014-07-11'"/>
         <!-- MetaDataBase (ISO 19115-3) -->
-        <xsl:namespace name="mdb" select="'http://www.isotc211.org/2005/mdb/1.0/2013-06-24'"/>
+        <xsl:namespace name="mdb" select="'http://www.isotc211.org/namespace/mdb/1.0/2014-07-11'"/>
         <!-- Metadata for Data and Services (ISO 19115-3) -->
-        <xsl:namespace name="mds" select="'http://www.isotc211.org/2005/mds/1.0/2013-06-24'"/>
+        <xsl:namespace name="mds" select="'http://www.isotc211.org/namespace/mds/1.0/2014-07-11'"/>
         <!-- Metadata based Data Transfer (ISO 19115-3) -->
-        <xsl:namespace name="mdt" select="'http://www.isotc211.org/2005/mdt/1.0/2013-06-24'"/>
+        <xsl:namespace name="mdt" select="'http://www.isotc211.org/namespace/mdt/1.0/2014-07-11'"/>
         <!-- Metadata for EXtensions (ISO 19115-3) -->
-        <xsl:namespace name="mex" select="'http://www.isotc211.org/2005/mex/1.0/2013-06-24'"/>
+        <xsl:namespace name="mex" select="'http://www.isotc211.org/namespace/mex/1.0/2014-07-11'"/>
         <!-- Metadata for Maintenance Information (ISO 19115-3) -->
-        <xsl:namespace name="mmi" select="'http://www.isotc211.org/2005/mmi/1.0/2013-06-24'"/>
+        <xsl:namespace name="mmi" select="'http://www.isotc211.org/namespace/mmi/1.0/2014-07-11'"/>
         <!-- Metadata for Portrayal Catalog (ISO 19115-3) -->
-        <xsl:namespace name="mpc" select="'http://www.isotc211.org/2005/mpc/1.0/2013-06-24'"/>
+        <xsl:namespace name="mpc" select="'http://www.isotc211.org/namespace/mpc/1.0/2014-07-11'"/>
         <!-- Metadata for Resource Content (ISO 19115-3) -->
-        <xsl:namespace name="mrc" select="'http://www.isotc211.org/2005/mrc/1.0/2013-06-24'"/>
+        <xsl:namespace name="mrc" select="'http://www.isotc211.org/namespace/mrc/1.0/2014-07-11'"/>
         <!-- Metadata for Resource Distribution (ISO 19115-3) -->
-        <xsl:namespace name="mrd" select="'http://www.isotc211.org/2005/mrd/1.0/2013-06-24'"/>
+        <xsl:namespace name="mrd" select="'http://www.isotc211.org/namespace/mrd/1.0/2014-07-11'"/>
         <!-- Metadata for Resource Identification (ISO 19115-3) -->
-        <xsl:namespace name="mri" select="'http://www.isotc211.org/2005/mri/1.0/2013-06-24'"/>
+        <xsl:namespace name="mri" select="'http://www.isotc211.org/namespace/mri/1.0/2014-07-11'"/>
         <!-- Metadata for Resource Lineage (ISO 19115-3) -->
-        <xsl:namespace name="mrl" select="'http://www.isotc211.org/2005/mrl/1.0/2013-06-24'"/>
+        <xsl:namespace name="mrl" select="'http://www.isotc211.org/namespace/mrl/1.0/2014-07-11'"/>
         <!-- Metadata for Reference System (ISO 19115-3) -->
-        <xsl:namespace name="mrs" select="'http://www.isotc211.org/2005/mrs/1.0/2013-06-24'"/>
+        <xsl:namespace name="mrs" select="'http://www.isotc211.org/namespace/mrs/1.0/2014-07-11'"/>
         <!-- Metadata for Spatial Representation (ISO 19115-3) -->
-        <xsl:namespace name="msr" select="'http://www.isotc211.org/2005/msr/1.0/2013-06-24'"/>
+        <xsl:namespace name="msr" select="'http://www.isotc211.org/namespace/msr/1.0/2014-07-11'"/>
         <!-- Data Quality Measures (ISO 19157-2) -->
-        <xsl:namespace name="mdq" select="'http://www.isotc211.org/2005/mdq/1.0/2013-06-24'"/>
+        <xsl:namespace name="mdq" select="'http://www.isotc211.org/namespace/mdq/1.0/2014-07-11'"/>
         <!-- Metadata for Data Quality (ISO 19157-2) -->
-        <xsl:namespace name="mdq" select="'http://www.isotc211.org/2005/mdq/1.0/2013-06-24'"/>
+        <xsl:namespace name="mdq" select="'http://www.isotc211.org/namespace/mdq/1.0/2014-07-11'"/>
         <!-- Metadata for Acquisition (ISO 19115-2) -->
-        <xsl:namespace name="mac" select="'http://www.isotc211.org/2005/mac/1.0/2013-06-24'"/>
+        <xsl:namespace name="mac" select="'http://www.isotc211.org/namespace/mac/1.0/2014-07-11'"/>
         <!-- Metadata for Acquisition and Imagery (ISO 19115-4) -->
-        <!--<xsl:namespace name="mai" select="'http://www.isotc211.org/2005/mai/1.0/2013-06-24'"/>-->
+        <!--<xsl:namespace name="mai" select="'http://www.isotc211.org/2005/mai/1.0/2014-07-11'"/>-->
         <!-- Metadata for Image Content (ISO 19115-4) -->
-        <!--<xsl:namespace name="mic" select="'http://www.isotc211.org/2005/mic/1.0/2013-06-24'"/>-->
+        <!--<xsl:namespace name="mic" select="'http://www.isotc211.org/2005/mic/1.0/2014-07-11'"/>-->
         <!-- Metadata for Image Lineage (ISO 19115-4) -->
-        <!--<xsl:namespace name="mil" select="'http://www.isotc211.org/2005/mil/1.0/2013-06-24'"/>-->
+        <!--<xsl:namespace name="mil" select="'http://www.isotc211.org/2005/mil/1.0/2014-07-11'"/>-->
         <!-- other ISO namespaces -->
         <!-- Geospatial COmmon -->
         <xsl:namespace name="gco" select="'http://www.isotc211.org/2005/gco'"/>
@@ -419,6 +424,7 @@
             <xsl:element name="mrc:attributeDescription">
               <xsl:copy-of select="./gmd:attributeDescription/gco:RecordType"/>
             </xsl:element>
+            <!-- This loop goes back out to convert each gmd:contentInfo section into a separate mrc:AttributeGroup -->
             <xsl:for-each select="/*/gmd:contentInfo/gmd:MD_CoverageDescription | /*/gmd:contentInfo/gmi:MI_CoverageDescription">
               <xsl:element name="mrc:attributeGroup">
                 <xsl:element name="mrc:MD_AttributeGroup">
@@ -691,11 +697,18 @@
           <xsl:with-param name="elementName" select="'srv:operationName'"/>
           <xsl:with-param name="stringToWrite" select="srv1:SV_OperationMetadata/srv1:operationName/gco:CharacterString"/>
         </xsl:call-template>
-        <xsl:call-template name="writeCodelistElement">
-          <xsl:with-param name="elementName" select="'srv:distributedComputingPlatform'"/>
-          <xsl:with-param name="codeListName" select="'srv:DCPList'"/>
-          <xsl:with-param name="codeListValue" select="srv1:SV_OperationMetadata/srv1:DCP/srv1:DCPList"/>
-        </xsl:call-template>
+        <xsl:choose>
+          <xsl:when test="srv1:SV_OperationMetadata/srv1:DCP/srv1:DCPList">
+            <xsl:call-template name="writeCodelistElement">
+              <xsl:with-param name="elementName" select="'srv:distributedComputingPlatform'"/>
+              <xsl:with-param name="codeListName" select="'srv:DCPList'"/>
+              <xsl:with-param name="codeListValue" select="srv1:SV_OperationMetadata/srv1:DCP/srv1:DCPList"/>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:otherwise>
+            <srv:distributedComputingPlatform gco:nilReason="missing"/>
+          </xsl:otherwise>
+        </xsl:choose>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'srv:invocationName'"/>
           <xsl:with-param name="stringToWrite" select="srv1:SV_OperationMetadata/srv1:invocationName/gco:CharacterString"/>
@@ -729,6 +742,14 @@
   <!-- 
     gmd:contentInfo
   -->
+  <!-- Added 2014-08-07 to change the name of this codeliet -->
+  <xsl:template match="/gmi:MI_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:contentType/gmd:MD_ContentTypeCode" priority="50">
+    <xsl:call-template name="writeCodelistElement">
+      <xsl:with-param name="elementName" select="'mrc:contentType'"/>
+      <xsl:with-param name="codeListName" select="'mrc:MD_CoverageContentTypeCode'"/>
+      <xsl:with-param name="codeListValue" select="."/>
+    </xsl:call-template>
+  </xsl:template>
   <xsl:template match="gmd:dimension">
     <xsl:element name="mrc:attribute">
       <xsl:apply-templates/>
@@ -892,7 +913,7 @@
   <!-- 
   gmi:gmi:acquisitionInformation templates
   -->
-  <xsl:template match="/gmi:MI_Metadata/gmi:acquisitionInformation/gmi:MI_AcquisitionInformation/gmi:operation/gmi:MI_Operation/gmi:status/gmd:MD_ProgressCode">
+  <xsl:template match="gmi:MI_Operation/gmi:status/gmd:MD_ProgressCode">
     <xsl:element name="mcc:MD_ProgressCode">
       <xsl:copy-of select="@*"/>
     </xsl:element>
@@ -1192,6 +1213,7 @@
       </xsl:for-each>
     </gco:DateTime>
   </xsl:template>
+  <!-- Default template writes correct namespace prefix -->
   <xsl:template match="*">
     <xsl:variable name="nameSpacePrefix">
       <xsl:call-template name="getNamespacePrefix"/>
@@ -1202,6 +1224,7 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+  <!-- find the correct namespace prefix -->
   <xsl:template name="getNamespacePrefix">
     <!-- this template determines the correct namespace prefix depending on the position of the element in the new XML -->
     <xsl:variable name="prefix">
@@ -1292,7 +1315,7 @@
         <xsl:when test="ancestor-or-self::gmd:MD_MaintenanceInformation">
           <xsl:text>mmi</xsl:text>
         </xsl:when>
-        <xsl:when test="ancestor-or-self::gmd:MD_DataIdentification or ancestor-or-self::srv1:SV_ServiceIdentification"> 
+        <xsl:when test="ancestor-or-self::gmd:MD_DataIdentification or ancestor-or-self::srv1:SV_ServiceIdentification">
           <!-- or ancestor-or-self::gmd:MD_SpatialRepresentationTypeCode"> this test is not necessary -->
           <xsl:text>mri</xsl:text>
         </xsl:when>
