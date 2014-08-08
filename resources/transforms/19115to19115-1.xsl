@@ -743,7 +743,7 @@
     gmd:contentInfo
   -->
   <!-- Added 2014-08-07 to change the name of this codeliet -->
-  <xsl:template match="/gmi:MI_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:contentType/gmd:MD_ContentTypeCode" priority="50">
+  <xsl:template match="gmd:contentType" priority="50">
     <xsl:call-template name="writeCodelistElement">
       <xsl:with-param name="elementName" select="'mrc:contentType'"/>
       <xsl:with-param name="codeListName" select="'mrc:MD_CoverageContentTypeCode'"/>

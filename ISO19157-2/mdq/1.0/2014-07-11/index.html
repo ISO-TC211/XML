@@ -11,14 +11,28 @@
       </p>
       <h2>XML Schema for mdq 1.0</h2>
       <p><b>mdq.xsd</b> is the XML Schema document to be referenced by XML documents containing XML elements
-         in the mdq 1.0 namespace or by XML Schema documents importing the mdq 1.0 namespace. This XML schema includes (indirectly) all the implemented concepts of
-         the mdq namespace, but it does not contain the declaration of any types.
+         in the mdq 1.0 namespace or by
+         XML Schema documents importing the mdq 1.0 namespace. This XML schema includes (indirectly) all the implemented concepts of
+         the mdq namespace,
+         but it does not contain the declaration of any types.
       </p>
-      <p><i>NOTE: The XML Schema for mdq 1.0 are available <a href="http://isotc211.org/schema">here</a> as part of a zip
-            archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i></p>
+      <p><i>NOTE: The XML Schema for mdq 1.0 are available <a href="http://isotc211.org/schema">here</a> as part of a zip archive including all the XML Schema Implementations
+            defined in ISO/TS 19115-3.</i></p>
       <h2>Related XML Schema for mdq 1.0</h2>
-      <p><b>dataQuality.xsd</b> implements the UML conceptual schema defined in ISO 19157, 6.4. It was created using the encoding rules defined in ISO 19118 and extended in ISO
-         19139 and contains the following classes: CoverageResult, DQ_AbsoluteExternalPositionalAccuracy, DQ_AccuracyOfATimeMeasurement, DQ_Aggregation, AbstractDQ_Completeness, DQ_CompletenessCommission, DQ_CompletenessOmission, DQ_ConceptualConsistency, DQ_Confidence, DQ_ConformanceResult, AbstractDQ_DataEvaluation, DQ_DataInspection, DQ_DataQuality, DQ_DescriptiveResult, DQ_DomainConsistency, AbstractDQ_Element, AbstractDQ_Evaluation, DQ_FormatConsistency, DQ_FullInspection, DQ_GriddedDataPositionalAccuracy, DQ_Homogeneity, DQ_IndirectEvaluation, AbstractDQ_LogicalConsistency, DQ_MeasureReference, DQ_Metaquality, DQ_NonQuantitativeAttributeAccuracy, AbstractDQ_PositionalAccuracy, DQ_QuantitativeAttributeAccuracy, DQ_QuantitativeResult, DQ_RelativeInternalPositionalAccuracy, DQ_Representativity, DQ_Result, DQ_SampleBasedInspection, DQ_Scope, DQ_StandaloneReportInformation, AbstractDQ_TemporalAccuracy, DQ_TemporalConsistency, DQ_TemporalValidity, AbstractDQ_ThematicAccuracy, DQ_ThematicClassificationCorrectness, DQ_TopologicalConsistency, DataQualityValueType, DataQualityValueUnit, QE_CoverageResult, AbstractQE_Usability, DQM_RegisteredDataQualityBasicMeasure, DQM_RegisteredDataQualityMeasure, and DQM_RegisteredDataQualityParameter
+      <p><b>dataQualityElement.xsd</b> implements the UML conceptual schema defined in ISO 19157, 6.4. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
+         19115-3 and contains the following classes: DQ_AbsoluteExternalPositionalAccuracy, DQ_AccuracyOfATimeMeasurement, AbstractDQ_Completeness, DQ_CompletenessCommission, DQ_CompletenessOmission, DQ_ConceptualConsistency, DQ_DataInspection, DQ_DataQuality, DQ_DomainConsistency, AbstractDQ_Element, DQ_FormatConsistency, DQ_GriddedDataPositionalAccuracy, AbstractDQ_LogicalConsistency, DQ_MeasureReference, DQ_NonQuantitativeAttributeCorrectness, AbstractDQ_PositionalAccuracy, DQ_QuantitativeAttributeAccuracy, DQ_RelativeInternalPositionalAccuracy, DQ_StandaloneQualityReportInformation, DQ_TemporalConsistency, AbstractDQ_TemporalQuality, DQ_TemporalValidity, AbstractDQ_ThematicAccuracy, DQ_ThematicClassificationCorrectness, DQ_TopologicalConsistency, and DQ_UsabilityElement
+      </p>
+      <p><b>dataQualityEvaluation.xsd</b> implements the UML conceptual schema defined in ISO 19157, 6.4. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
+         19115-3 and contains the following classes: DQ_AggregationDerivation, AbstractDQ_DataEvaluation, DQ_EvaluationMethod, DQ_EvaluationMethodTypeCode, DQ_FullInspection, DQ_IndirectEvaluation, and DQ_SampleBasedInspection
+      </p>
+      <p><b>dataQualityImagery.xsd</b> implements the UML conceptual schema defined in ISO 19157, 6.4. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
+         19115-3 and contains the following classes: QE_CoverageResult, and QualityResultFile
+      </p>
+      <p><b>dataQualityResult.xsd</b> implements the UML conceptual schema defined in ISO 19157, 6.4. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
+         19115-3 and contains the following classes: DQ_ConformanceResult, DQ_DescriptiveResult, DQ_QuantitativeResult, and AbstractDQ_Result
+      </p>
+      <p><b>metaquality.xsd</b> implements the UML conceptual schema defined in ISO 19157, 6.4. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
+         19115-3 and contains the following classes: DQ_Confidence, DQ_Homogeneity, AbstractDQ_Metaquality, and DQ_Representativity
       </p>
       <h2>Related XML Namespaces for mdq 1.0</h2> The mdq 1.0 namespace imports these other namespaces: 
       <table border="1" cellpadding="3" cellspacing="3">
@@ -29,21 +43,33 @@
             <th>Schema Location</th>
          </tr>
          <tr>
-            <td>Citation and responsible party information</td>
-            <td>cit</td>
-            <td>http://www.isotc211.org/2005/cit/1.0/2013-06-24</td>
-            <td>../../../../ISO19115-3/cit/1.0/cit.xsd</td>
+            <td>Data Quality Common Classes</td>
+            <td>dqc</td>
+            <td>http://www.isotc211.org/namespace/dqc/1.0/2014-07-11</td>
+            <td>../../../ISO19157-2/dqc/1.0/2014-07-11/dqc.xsd</td>
+         </tr>
+         <tr>
+            <td>Geospatial Common eXtension</td>
+            <td>gcx</td>
+            <td>http://www.isotc211.org/namespace/gcx/1.0/2014-07-11</td>
+            <td>../../../ISO19115-3/gcx/1.0/2014-07-11/gcx.xsd</td>
          </tr>
          <tr>
             <td>Metadata Common Classes</td>
             <td>mcc</td>
-            <td>http://www.isotc211.org/2005/mcc/1.0/2013-06-24</td>
-            <td>../../../../ISO19115-3/mcc/1.0/mcc.xsd</td>
+            <td>http://www.isotc211.org/namespace/mcc/1.0/2014-07-11</td>
+            <td>../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Resource Identification</td>
+            <td>mri</td>
+            <td>http://www.isotc211.org/namespace/mri/1.0/2014-07-11</td>
+            <td>../../../ISO19115-3/mri/1.0/2014-07-11/mri.xsd</td>
          </tr>
       </table>
       <h2>Schematron Validation Rules for mdq 1.0</h2> Schematron rules for validating instance documents of the mdq 1.0 namespace are in
-      mdq.sch. Other schematron rule sets that are required for a complete validation are: cit.sch, and mcc.sch
+      mdq.sch. Other schematron rule sets that are required for a complete validation are: dqc.sch, gcx.sch, mcc.sch, and mri.sch
       <hr>
-      <p><font size="small" face="italic">Written by writeHTMLFiles Version: 2014-08-04 at 2014-08-04T12:31:33.546-06:00</font></p>
+      <p><font size="small" face="italic">Written by writeHTMLFiles Version: 2014-08-04 at 2014-08-08T15:07:08.687-06:00</font></p>
    </body>
 </html>
