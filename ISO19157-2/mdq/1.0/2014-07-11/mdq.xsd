@@ -4,9 +4,9 @@
   <include schemaLocation="dataQualityImagery.xsd"/>
   <include schemaLocation="dataQualityResult.xsd"/>
   <include schemaLocation="metaquality.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" schemaLocation="../../../ISO19157-2/dqc/1.0/2014-07-11/dqc.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" schemaLocation="../../../ISO19115-3/gcx/1.0/2014-07-11/gcx.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" schemaLocation="../../../ISO19115-3/mri/1.0/2014-07-11/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" schemaLocation="../../../../ISO19157-2/dqc/1.0/2014-07-11/dqc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/gcx/1.0/2014-07-11/gcx.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mri/1.0/2014-07-11/mri.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>
