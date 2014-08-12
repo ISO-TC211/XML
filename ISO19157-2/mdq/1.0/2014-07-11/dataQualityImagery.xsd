@@ -5,7 +5,7 @@
   <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
   <import namespace="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11" schemaLocation="../../../ISO19115-3/mrd/1.0/mrd.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element name="QE_CoverageResult" substitutionGroup="gco:AbstractObject" type="mdq:QE_CoverageResult_Type">
+  <element name="QE_CoverageResult" substitutionGroup="mdq:AbstractDQ_Result" type="mdq:QE_CoverageResult_Type">
     <annotation>
       <documentation>Description: Result of a data quality measure organising the measured values as a coverage
 shortName: CoverageResult</documentation>
@@ -13,7 +13,7 @@ shortName: CoverageResult</documentation>
   </element>
   <complexType name="QE_CoverageResult_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mdq:AbstractDQ_Result_Type">
         <sequence>
           <element name="spatialRepresentationType" type="mcc:MD_SpatialRepresentationTypeCode_PropertyType">
             <annotation>
