@@ -24,6 +24,7 @@
       </xd:p>
       <xd:p>Changed namespace dates to 2014-07-11</xd:p>
       <xd:p>Fixed DistributedComputingPlatform element</xd:p>
+      
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
     </xd:desc>
   </xd:doc>
@@ -572,6 +573,13 @@
         <xsl:apply-templates select="gmi:MI_AcquisitionInformation/gmi:objective"/>
         <xsl:apply-templates select="gmi:MI_AcquisitionInformation/gmi:acquisitionRequirement"/>
       </xsl:element>
+    </xsl:element>
+  </xsl:template>
+  <xsl:template match="gmi:objectiveOccurance">
+    <!-- This element is mis-spelled in the 19115-2 schema -->
+    <xsl:element name="mac:objectiveOccurence">
+      <xsl:copy-of select="@*"/>
+      <xsl:value-of select="."/>
     </xsl:element>
   </xsl:template>
   <!--
@@ -1240,11 +1248,16 @@
           <xsl:text>srv</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gmi:') and not(ancestor-or-self::gmi:MI_AcquisitionInformation)
-          and not(ancestor-or-self::gmi:QE_CoverageResult) and not(ancestor-or-self::gmi:LE_ProcessStep)">
+          and not(ancestor-or-self::gmi:QE_CoverageResult) and not(ancestor-or-self::gmi:LE_ProcessStep)
+          and not(ancestor-or-self::gmi:LE_Source) and not(ancestor-or-self::gmi:MI_Band)">
           <xsl:text>msr</xsl:text>
         </xsl:when>
-        <xsl:when test="starts-with(name(),'gmi:') and ancestor-or-self::gmi:LE_ProcessStep">
+        <xsl:when test="starts-with(name(),'gmi:') and 
+          (ancestor-or-self::gmi:LE_ProcessStep or ancestor-or-self::gmi:LE_Source)">
           <xsl:text>mrl</xsl:text>
+        </xsl:when>
+        <xsl:when test="starts-with(name(),'gmi:') and (ancestor-or-self::gmi:MI_Band)">
+          <xsl:text>mrc</xsl:text>
         </xsl:when>
         <xsl:when test="ancestor-or-self::gmd:MD_Constraints
           or ancestor-or-self::gmd:MD_SecurityConstraints 
@@ -1319,7 +1332,7 @@
           <xsl:text>mri</xsl:text>
         </xsl:when>-->
         <xsl:when test="ancestor-or-self::gmi:QE_CoverageResult">
-          <xsl:text>mrl</xsl:text>
+          <xsl:text>mdq</xsl:text>
         </xsl:when>
         <xsl:when test="ancestor-or-self::gmd:LI_Lineage">
           <xsl:text>mrl</xsl:text>
