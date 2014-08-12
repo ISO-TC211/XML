@@ -742,20 +742,12 @@
   <!-- 
     gmd:contentInfo
   -->
-  <!-- Added 2014-08-07 to change the name of this codeliet -->
-  <xsl:template match="gmd:contentType" priority="50">
-    <xsl:call-template name="writeCodelistElement">
-      <xsl:with-param name="elementName" select="'mrc:contentType'"/>
-      <xsl:with-param name="codeListName" select="'mrc:MD_CoverageContentTypeCode'"/>
-      <xsl:with-param name="codeListValue" select="."/>
-    </xsl:call-template>
-  </xsl:template>
   <xsl:template match="gmd:dimension">
     <xsl:element name="mrc:attribute">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-  <xsl:template match="gmd:MD_Band">
+  <xsl:template match="gmd:MD_Band | gmi:MI_Band">
     <xsl:element name="mrc:MD_SampleDimension">
       <xsl:apply-templates/>
     </xsl:element>
