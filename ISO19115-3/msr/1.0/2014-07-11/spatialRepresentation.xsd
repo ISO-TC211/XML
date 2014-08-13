@@ -215,14 +215,14 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_GridSpatialRepresentation" substitutionGroup="gco:AbstractObject" type="msr:MD_GridSpatialRepresentation_Type">
+  <element name="MD_GridSpatialRepresentation" substitutionGroup="mcc:Abstract_SpatialRepresentation" type="msr:MD_GridSpatialRepresentation_Type">
     <annotation>
       <documentation>information about grid spatial objects in the resource</documentation>
     </annotation>
   </element>
   <complexType name="MD_GridSpatialRepresentation_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_SpatialRepresentation_Type">
         <sequence>
           <element name="numberOfDimensions" type="gco:Integer_PropertyType">
             <annotation>
@@ -309,14 +309,14 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_VectorSpatialRepresentation" substitutionGroup="gco:AbstractObject" type="msr:MD_VectorSpatialRepresentation_Type">
+  <element name="MD_VectorSpatialRepresentation" substitutionGroup="mcc:Abstract_SpatialRepresentation" type="msr:MD_VectorSpatialRepresentation_Type">
     <annotation>
       <documentation>information about the vector spatial objects in the resource</documentation>
     </annotation>
   </element>
   <complexType name="MD_VectorSpatialRepresentation_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
+      <extension base="mcc:Abstract_SpatialRepresentation_Type">
         <sequence>
           <element minOccurs="0" name="topologyLevel" type="msr:MD_TopologyLevelCode_PropertyType">
             <annotation>
