@@ -4,7 +4,7 @@
   </annotation>
   <include schemaLocation="spatialRepresentation.xsd"/>
   <include schemaLocation="spatialRepresentationImagery.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" schemaLocation="../../../../ISO19157/dqc/1.0/dqc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" schemaLocation="../../../../ISO19157-2/dqc/1.0/2014-07-11/dqc.xsd"/>
   <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>
