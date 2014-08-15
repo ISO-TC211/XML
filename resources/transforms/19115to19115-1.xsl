@@ -24,7 +24,6 @@
       </xd:p>
       <xd:p>Changed namespace dates to 2014-07-11</xd:p>
       <xd:p>Fixed DistributedComputingPlatform element</xd:p>
-      
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
     </xd:desc>
   </xd:doc>
@@ -314,6 +313,14 @@
     </mdb:metadataStandard>
   </xsl:template>
   <!-- gmd:spatialRepresentationInfo uses default templates -->
+  <xsl:template match="gmi:geographicCoordinates">
+    <xsl:element name="gml:Point">
+      <xsl:attribute name="gml:id">
+        <xsl:value-of select="generate-id()"/>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
   <!-- gmd:referenceSystemInfo uses default templates -->
   <!-- gmd:metadataExtensionInfo uses default templates -->
   <xsl:template match="gmd:identificationInfo">
@@ -755,8 +762,13 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-  <xsl:template match="gmd:MD_Band | gmi:MI_Band">
+  <xsl:template match="gmd:MD_Band">
     <xsl:element name="mrc:MD_SampleDimension">
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+  <xsl:template match="gmi:MI_Band">
+    <xsl:element name="mrc:MI_Band">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -937,6 +949,9 @@
       <xsl:copy-of select="@*"/>
       <xsl:choose>
         <xsl:when test="@gco:nilReason"/>
+        <xsl:when test="normalize-space(.)=''">
+          <xsl:attribute name="gco:nilReason" select="'missing'"/>
+        </xsl:when>
         <xsl:otherwise>
           <cit:CI_Date>
             <cit:date>
@@ -1247,16 +1262,17 @@
         <xsl:when test="starts-with(name(),'srv:') and not(name()='srv:extent')">
           <xsl:text>srv</xsl:text>
         </xsl:when>
-        <xsl:when test="starts-with(name(),'gmi:') and not(ancestor-or-self::gmi:MI_AcquisitionInformation)
+        <xsl:when
+          test="starts-with(name(),'gmi:') and not(ancestor-or-self::gmi:MI_AcquisitionInformation)
           and not(ancestor-or-self::gmi:QE_CoverageResult) and not(ancestor-or-self::gmi:LE_ProcessStep)
-          and not(ancestor-or-self::gmi:LE_Source) and not(ancestor-or-self::gmi:MI_Band)">
+          and not(ancestor-or-self::gmi:LE_Source) and not(ancestor-or-self::gmi:MI_CoverageDescription)">
           <xsl:text>msr</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gmi:') and 
           (ancestor-or-self::gmi:LE_ProcessStep or ancestor-or-self::gmi:LE_Source)">
           <xsl:text>mrl</xsl:text>
         </xsl:when>
-        <xsl:when test="starts-with(name(),'gmi:') and (ancestor-or-self::gmi:MI_Band)">
+        <xsl:when test="starts-with(name(),'gmi:') and (ancestor-or-self::gmi:MI_CoverageDescription)">
           <xsl:text>mrc</xsl:text>
         </xsl:when>
         <xsl:when test="ancestor-or-self::gmd:MD_Constraints
