@@ -314,12 +314,21 @@
   </xsl:template>
   <!-- gmd:spatialRepresentationInfo uses default templates -->
   <xsl:template match="gmi:geographicCoordinates">
-    <xsl:element name="gml:Point">
-      <xsl:attribute name="gml:id">
-        <xsl:value-of select="generate-id()"/>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:element>
+    <xsl:choose>
+      <xsl:when test="normalize-space(.)=''">
+        <msr:geographicCoordinates/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="msr:geographicCoordinates">
+          <xsl:element name="gml:Point">
+            <xsl:attribute name="gml:id">
+              <xsl:value-of select="generate-id()"/>
+            </xsl:attribute>
+            <xsl:apply-templates select="./*"/>
+          </xsl:element>
+        </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   <!-- gmd:referenceSystemInfo uses default templates -->
   <!-- gmd:metadataExtensionInfo uses default templates -->
