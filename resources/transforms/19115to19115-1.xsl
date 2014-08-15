@@ -13,17 +13,31 @@
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
       <xd:p>
-        <xd:b>Created on:</xd:b>March 8, 2014</xd:p>
-      <xd:p>Translates from ISO 19139 for ISO 19115 and ISO 19139-2 for 19115-2 to ISO 19139-1 for ISO 19115-1</xd:p>
+        <xd:b>Created on:</xd:b>March 8, 2014
+      </xd:p>
+
+      <xd:p>Translates from ISO 19139 for ISO 19115 and ISO 19139-2 for 19115-2 
+        to ISO 19139-1 for ISO 19115-1</xd:p>
+
       <xd:p>
         <xd:b>Version June 13, 2014</xd:b>
+        <xd:ul>
+          <xd:li>Converged the 19115-2 transform into 19115-1 namespaces</xd:li>
+        </xd:ul>
       </xd:p>
-      <xd:p>Converged the 19115-2 transform into 19115-1 namespaces</xd:p>
       <xd:p>
         <xd:b>Version August 7, 2014</xd:b>
+        <xd:ul>
+          <xd:li>Changed namespace dates to 2014-07-11</xd:li>
+          <xd:li>Fixed DistributedComputingPlatform element</xd:li>
+        </xd:ul>
       </xd:p>
-      <xd:p>Changed namespace dates to 2014-07-11</xd:p>
-      <xd:p>Fixed DistributedComputingPlatform element</xd:p>
+      <xd:p>
+        <xd:b>Version August 15, 2014</xd:b>
+        <xd:ul>
+          <xd:li>Add multilingual metadata support by converting gmd:locale and copying gmd:PT_FreeText and element attributes (eg. gco:nilReason, xsi:type) for gmd:CharacterString elements (Author: fx.prunayre@gmail.com).</xd:li>
+        </xd:ul>
+      </xd:p>
       
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
     </xd:desc>
@@ -118,6 +132,7 @@
         <xsl:apply-templates select="gmd:contact"/>
         <xsl:apply-templates select="gmd:dateStamp"/>
         <xsl:apply-templates select="gmd:metadataStandardName"/>
+        <xsl:apply-templates select="gmd:locale"/>
         <xsl:apply-templates select="gmd:spatialRepresentationInfo"/>
         <xsl:apply-templates select="gmd:referenceSystemInfo"/>
         <xsl:apply-templates select="gmd:metadataExtensionInfo"/>
@@ -167,18 +182,23 @@
       </mcc:MD_Identifier>
     </xsl:element>
   </xsl:template>
-  <xsl:template match="gmd:language" priority="5">
+  <xsl:template match="gmd:language|gmd:locale" priority="5">
     <xsl:variable name="nameSpacePrefix">
       <xsl:call-template name="getNamespacePrefix"/>
     </xsl:variable>
-    <xsl:element name="{concat($nameSpacePrefix,':','defaultLocale')}">
+    <xsl:variable name="elementName" select="if (name() = 'language') then 'defaultLocale' else 'otherLocale'"/>
+    <xsl:element name="{concat($nameSpacePrefix, ':', $elementName)}">
       <!--<xsl:element name="{'mdb:defaultLocale'}">-->
       <xsl:copy-of select="@*"/>
       <lan:PT_Locale>
+        <xsl:copy-of select="gmd:PT_Locale/@*"/>
         <xsl:call-template name="writeCodelistElement">
           <xsl:with-param name="elementName" select="'lan:language'"/>
           <xsl:with-param name="codeListName" select="'lan:LanguageCode'"/>
-          <xsl:with-param name="codeListValue" select="gmd:LanguageCode | gco:CharacterString"/>
+          <xsl:with-param name="codeListValue" select="
+            gco:CharacterString |
+            gmd:LanguageCode/@codeListValue |
+            gmd:PT_Locale/gmd:languageCode/gmd:LanguageCode/@codeListValue"/>
         </xsl:call-template>
         <xsl:choose>
           <xsl:when test="../gmd:characterSet">
@@ -304,11 +324,11 @@
       <cit:CI_Citation>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'cit:title'"/>
-          <xsl:with-param name="stringToWrite" select="gco:CharacterString"/>
+          <xsl:with-param name="nodeWithStringToWrite" select="."/>
         </xsl:call-template>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'cit:edition'"/>
-          <xsl:with-param name="stringToWrite" select="../gmd:metadataStandardVersion/gco:CharacterString"/>
+          <xsl:with-param name="nodeWithStringToWrite" select="../gmd:metadataStandardVersion"/>
         </xsl:call-template>
       </cit:CI_Citation>
     </mdb:metadataStandard>
@@ -328,15 +348,15 @@
           <xsl:apply-templates select="gmd:citation"/>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:abstract'"/>
-            <xsl:with-param name="stringToWrite" select="gmd:abstract/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="gmd:abstract"/>
           </xsl:call-template>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:purpose'"/>
-            <xsl:with-param name="stringToWrite" select="gmd:purpose/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="gmd:purpose"/>
           </xsl:call-template>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:credit'"/>
-            <xsl:with-param name="stringToWrite" select="gmd:credit/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="gmd:credit"/>
           </xsl:call-template>
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'mri:status'"/>
@@ -365,11 +385,11 @@
           <xsl:apply-templates select="gmd:characterSet"/>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:environmentDescription'"/>
-            <xsl:with-param name="stringToWrite" select="gmd:environmentDescription/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="gmd:environmentDescription"/>
           </xsl:call-template>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:supplementalInformation'"/>
-            <xsl:with-param name="stringToWrite" select="gmd:supplementalInformation/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="gmd:supplementalInformation"/>
           </xsl:call-template>
           <!-- Service Identification Information -->
           <xsl:if test="srv1:serviceType">
@@ -381,7 +401,7 @@
           </xsl:if>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'srv:serviceTypeVersion'"/>
-            <xsl:with-param name="stringToWrite" select="srv1:serviceTypeVersion/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="srv1:serviceTypeVersion"/>
           </xsl:call-template>
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'srv:couplingType'"/>
@@ -473,11 +493,11 @@
                       <xsl:apply-templates select="gmd:measureIdentification"/>
                       <xsl:call-template name="writeCharacterStringElement">
                         <xsl:with-param name="elementName" select="'mdq:nameOfMeasure'"/>
-                        <xsl:with-param name="stringToWrite" select="gmd:nameOfMeasure/gco:CharacterString"/>
+                        <xsl:with-param name="nodeWithStringToWrite" select="gmd:nameOfMeasure"/>
                       </xsl:call-template>
                       <xsl:call-template name="writeCharacterStringElement">
                         <xsl:with-param name="elementName" select="'mdq:measureDescription'"/>
-                        <xsl:with-param name="stringToWrite" select="gmd:measureDescription/gco:CharacterString"/>
+                        <xsl:with-param name="nodeWithStringToWrite" select="gmd:measureDescription"/>
                       </xsl:call-template>
                     </mdq:DQ_MeasureReference>
                   </mdq:measure>
@@ -492,7 +512,7 @@
                       </xsl:if>
                       <xsl:call-template name="writeCharacterStringElement">
                         <xsl:with-param name="elementName" select="'mdq:evaluationMethodDescription'"/>
-                        <xsl:with-param name="stringToWrite" select="gmd:evaluationMethodDescription/gco:CharacterString"/>
+                        <xsl:with-param name="nodeWithStringToWrite" select="gmd:evaluationMethodDescription"/>
                       </xsl:call-template>
                       <mdq:evaluationProcedure>
                         <xsl:apply-templates select="gmd:evaluationProcedure/gmd:CI_Citation"/>
@@ -523,7 +543,7 @@
         <mrl:LI_Lineage>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mrl:statement'"/>
-            <xsl:with-param name="stringToWrite" select="gmd:statement/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="gmd:statement"/>
           </xsl:call-template>
           <xsl:if test="../../../gmd:DQ_DataQuality/gmd:scope">
             <xsl:variable name="dataQualityScopeObject" select="../../../gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope"/>
@@ -703,7 +723,7 @@
       <srv:SV_OperationMetadata>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'srv:operationName'"/>
-          <xsl:with-param name="stringToWrite" select="srv1:SV_OperationMetadata/srv1:operationName/gco:CharacterString"/>
+          <xsl:with-param name="nodeWithStringToWrite" select="srv1:SV_OperationMetadata/srv1:operationName"/>
         </xsl:call-template>
         <xsl:choose>
           <xsl:when test="srv1:SV_OperationMetadata/srv1:DCP/srv1:DCPList">
@@ -719,7 +739,7 @@
         </xsl:choose>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'srv:invocationName'"/>
-          <xsl:with-param name="stringToWrite" select="srv1:SV_OperationMetadata/srv1:invocationName/gco:CharacterString"/>
+          <xsl:with-param name="nodeWithStringToWrite" select="srv1:SV_OperationMetadata/srv1:invocationName"/>
         </xsl:call-template>
         <xsl:apply-templates select="srv1:SV_OperationMetadata/srv1:connectPoint"/>
         <xsl:apply-templates select="srv1:SV_OperationMetadata/srv1:parameters"/>
@@ -825,7 +845,7 @@
           <xsl:copy-of select="*[1]/@*"/>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mrl:description'"/>
-            <xsl:with-param name="stringToWrite" select="./*/gmd:description/gco:CharacterString"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="./*/gmd:description"/>
           </xsl:call-template>
           <xsl:apply-templates select="./*/gmd:scaleDenominator"/>
           <xsl:apply-templates select="./*/gmd:sourceReferenceSystem"/>
@@ -961,6 +981,12 @@
       </xsl:choose>
     </cit:date>
   </xsl:template>
+  <xsl:template match="gmd:CI_Citation/gmd:title">
+    <xsl:call-template name="writeCharacterStringElement">
+      <xsl:with-param name="elementName" select="'cit:title'"/>
+      <xsl:with-param name="nodeWithStringToWrite" select="."/>
+    </xsl:call-template>
+  </xsl:template>
   <xsl:template match="gmd:CI_Citation/gmd:editionDate">
     <cit:editionDate>
       <xsl:call-template name="writeDateTime"/>
@@ -999,7 +1025,7 @@
                 <cit:CI_Organisation>
                   <xsl:call-template name="writeCharacterStringElement">
                     <xsl:with-param name="elementName" select="'cit:name'"/>
-                    <xsl:with-param name="stringToWrite" select="gmd:organisationName/gco:CharacterString"/>
+                    <xsl:with-param name="nodeWithStringToWrite" select="gmd:organisationName"/>
                   </xsl:call-template>
                   <!-- contactInformation comes before indivudual/position -->
                   <xsl:call-template name="writeContactInformation"/>
@@ -1009,13 +1035,13 @@
                         <xsl:if test="gmd:individualName">
                           <xsl:call-template name="writeCharacterStringElement">
                             <xsl:with-param name="elementName" select="'cit:name'"/>
-                            <xsl:with-param name="stringToWrite" select="gmd:individualName/gco:CharacterString"/>
+                            <xsl:with-param name="nodeWithStringToWrite" select="gmd:individualName"/>
                           </xsl:call-template>
                         </xsl:if>
                         <xsl:if test="gmd:positionName">
                           <xsl:call-template name="writeCharacterStringElement">
                             <xsl:with-param name="elementName" select="'cit:positionName'"/>
-                            <xsl:with-param name="stringToWrite" select="gmd:positionName/gco:CharacterString"/>
+                            <xsl:with-param name="nodeWithStringToWrite" select="gmd:positionName"/>
                           </xsl:call-template>
                         </xsl:if>
                       </cit:CI_Individual>
@@ -1028,14 +1054,14 @@
                   <xsl:if test="gmd:individualName">
                     <xsl:call-template name="writeCharacterStringElement">
                       <xsl:with-param name="elementName" select="'cit:name'"/>
-                      <xsl:with-param name="stringToWrite" select="gmd:individualName/gco:CharacterString"/>
+                      <xsl:with-param name="nodeWithStringToWrite" select="gmd:individualName"/>
                     </xsl:call-template>
                   </xsl:if>
                   <xsl:call-template name="writeContactInformation"/>
                   <xsl:if test="gmd:positionName">
                     <xsl:call-template name="writeCharacterStringElement">
                       <xsl:with-param name="elementName" select="'cit:positionName'"/>
-                      <xsl:with-param name="stringToWrite" select="gmd:positionName/gco:CharacterString"/>
+                      <xsl:with-param name="nodeWithStringToWrite" select="gmd:positionName"/>
                     </xsl:call-template>
                   </xsl:if>
                 </cit:CI_Individual>
@@ -1155,13 +1181,29 @@
   </xsl:template>
   <xsl:template name="writeCharacterStringElement">
     <xsl:param name="elementName"/>
-    <xsl:param name="stringToWrite"/>
+    <xsl:param name="nodeWithStringToWrite"/>
+    
+    <xsl:variable name="isMultilingual"
+      select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
+    <xsl:variable name="hasCharacterString"
+      select="count($nodeWithStringToWrite/gco:CharacterString) = 1"/>
+    
     <xsl:choose>
-      <xsl:when test="$stringToWrite">
+      <xsl:when test="$nodeWithStringToWrite">
         <xsl:element name="{$elementName}">
-          <gco:CharacterString>
-            <xsl:value-of select="$stringToWrite"/>
-          </gco:CharacterString>
+          <xsl:copy-of select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>
+          <xsl:if test="$isMultilingual">
+            <xsl:attribute name="xsi:type" select="'lan:PT_FreeText_PropertyType'"/>
+          </xsl:if>
+          <xsl:if test="$hasCharacterString">
+            <gco:CharacterString>
+              <xsl:value-of select="$nodeWithStringToWrite/gco:CharacterString"/>
+            </gco:CharacterString>
+          </xsl:if>
+          <xsl:if test="$isMultilingual">
+            <xsl:apply-templates
+              select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
+          </xsl:if>
         </xsl:element>
       </xsl:when>
     </xsl:choose>
@@ -1246,6 +1288,9 @@
         </xsl:when>
         <xsl:when test="starts-with(name(),'srv:') and not(name()='srv:extent')">
           <xsl:text>srv</xsl:text>
+        </xsl:when>
+        <xsl:when test="ancestor-or-self::gmd:PT_FreeText">
+          <xsl:text>lan</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gmi:') and not(ancestor-or-self::gmi:MI_AcquisitionInformation)
           and not(ancestor-or-self::gmi:QE_CoverageResult) and not(ancestor-or-self::gmi:LE_ProcessStep)
@@ -1357,7 +1402,6 @@
   <xsl:template match="gmd:hierarchyLevelName" priority="5"/>
   <xsl:template match="gmd:metadataStandardVersion" priority="5"/>
   <xsl:template match="gmd:dataSetURI" priority="5"/>
-  <xsl:template match="gmd:locale" priority="5"/>
   <xsl:template match="gmd:CI_ResponsibleParty/gmd:role" priority="5"/>
   <xsl:template match="gmd:CI_ResponsibleParty/gmd:organisationName" priority="5"/>
   <xsl:template match="gmd:CI_ResponsibleParty/gmd:individualName" priority="5"/>
