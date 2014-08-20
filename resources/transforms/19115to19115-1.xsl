@@ -44,6 +44,15 @@
   <xsl:output method="xml" indent="yes"/>
   <xsl:strip-space elements="*"/>
   <xsl:variable name="stylesheetVersion" select="'0.1'"/>
+  
+  
+  <!-- Define if parent identifier should be defined using a uuidref 
+    attribute or a CI_Citation with a title. -->
+  <xsl:param name="isParentIdentifierDefinedWithUUIDAttribute" 
+    select="false()"
+    as="xs:boolean"/>
+  
+  
   <xsl:template match="/">
     <!-- 
     root element (MD_Metadata or MI_Metadata)
@@ -238,42 +247,56 @@
   </xsl:template>
   <xsl:template match="gmd:parentIdentifier" priority="5">
     <!--
-         gmd:parentIdentifier is changed from a gco:CharacterString to a
-         MD_Identifier in a CI_Citation which now includes a codespace. 
-         This transform assumes a form of namespace:code for the 
-         parentIdentifier
+         gmd:parentIdentifier is changed from a gco:CharacterString to a 
+         mdb:parentMetadata element. This transform support two types 
+         of conversion depending on the
+         isParentIdentifierDefinedWithUUIDAttribute parameter.
+         
+         a) if $isParentIdentifierDefinedWithUUIDAttribute is true, then 
+         populate an uuidref attribute based on the gco:CharacterString value
+         
+         b) if false, assumes a form of namespace:code for the 
+         parentIdentifier and populate the title and identifier of the
+         citation.
     -->
     <xsl:element name="mdb:parentMetadata">
-      <cit:CI_Citation>
-        <cit:title>
-          <gco:CharacterString>
-            <xsl:value-of select="gco:CharacterString"/>
-          </gco:CharacterString>
-        </cit:title>
-        <cit:identifier>
-          <mcc:MD_Identifier>
-            <mcc:code>
-              <gco:CharacterString>
-                <xsl:choose>
-                  <xsl:when test="contains(gco:CharacterString,':')">
-                    <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="gco:CharacterString"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </gco:CharacterString>
-            </mcc:code>
-            <xsl:if test="contains(gco:CharacterString,':')">
-              <mcc:codeSpace>
-                <gco:CharacterString>
-                  <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
-                </gco:CharacterString>
-              </mcc:codeSpace>
-            </xsl:if>
-          </mcc:MD_Identifier>
-        </cit:identifier>
-      </cit:CI_Citation>
+      <xsl:choose>
+        <xsl:when test="$isParentIdentifierDefinedWithUUIDAttribute">
+          <xsl:attribute name="uuidref" select="gco:CharacterString"/>
+        </xsl:when>
+        <xsl:otherwise>
+         <cit:CI_Citation>
+           <cit:title>
+             <gco:CharacterString>
+               <xsl:value-of select="gco:CharacterString"/>
+             </gco:CharacterString>
+           </cit:title>
+           <cit:identifier>
+             <mcc:MD_Identifier>
+               <mcc:code>
+                 <gco:CharacterString>
+                   <xsl:choose>
+                     <xsl:when test="contains(gco:CharacterString,':')">
+                       <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
+                     </xsl:when>
+                     <xsl:otherwise>
+                       <xsl:value-of select="gco:CharacterString"/>
+                     </xsl:otherwise>
+                   </xsl:choose>
+                 </gco:CharacterString>
+               </mcc:code>
+               <xsl:if test="contains(gco:CharacterString,':')">
+                 <mcc:codeSpace>
+                   <gco:CharacterString>
+                     <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
+                   </gco:CharacterString>
+                 </mcc:codeSpace>
+               </xsl:if>
+             </mcc:MD_Identifier>
+           </cit:identifier>
+         </cit:CI_Citation>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:element>
   </xsl:template>
   <xsl:template match="gmd:hierarchyLevel" priority="5">
