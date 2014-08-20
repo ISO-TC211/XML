@@ -185,7 +185,7 @@
     <xsl:variable name="nameSpacePrefix">
       <xsl:call-template name="getNamespacePrefix"/>
     </xsl:variable>
-    <xsl:variable name="elementName" select="if (name() = 'language') then 'defaultLocale' else 'otherLocale'"/>
+    <xsl:variable name="elementName" select="if (local-name() = 'language') then 'defaultLocale' else 'otherLocale'"/>
     <xsl:element name="{concat($nameSpacePrefix, ':', $elementName)}">
       <!--<xsl:element name="{'mdb:defaultLocale'}">-->
       <xsl:copy-of select="@*"/>
