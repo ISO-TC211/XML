@@ -978,7 +978,7 @@
       <xsl:copy-of select="@*"/>
       <xsl:choose>
         <xsl:when test="@gco:nilReason"/>
-        <xsl:when test="normalize-space(.)=''">
+        <xsl:when test="normalize-space()=''">
           <xsl:attribute name="gco:nilReason" select="'missing'"/>
         </xsl:when>
         <xsl:otherwise>
