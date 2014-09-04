@@ -1,24 +1,11 @@
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx"
-  xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv1="http://www.isotc211.org/2005/srv"
-  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-07-11" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
-  xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2014-07-11" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11"
-  xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11" xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-07-11" xmlns:mas="http://www.isotc211.org/namespace/mas/1.0/2014-07-11"
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mco="http://www.isotc211.org/namespace/mco/1.0/2014-07-11" xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-07-11"
-  xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-07-11" xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-07-11" xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11"
-  xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-07-11" xmlns:mds="http://www.isotc211.org/namespace/mds/1.0/2014-07-11" xmlns:mmi="http://www.isotc211.org/namespace/mmi/1.0/2014-07-11"
-  xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11" xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11"
-  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0/2014-07-11" xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11"
-  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11" exclude-result-prefixes="gmd gco gsr gss gts xs gmi gmx xsi srv1 mac">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv1="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-07-11" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11" xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2014-07-11" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11"
+  xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11" xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-07-11" xmlns:mas="http://www.isotc211.org/namespace/mas/1.0/2014-07-11" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mco="http://www.isotc211.org/namespace/mco/1.0/2014-07-11" xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-07-11" xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-07-11" xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-07-11" xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11" xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-07-11" xmlns:mds="http://www.isotc211.org/namespace/mds/1.0/2014-07-11" xmlns:mmi="http://www.isotc211.org/namespace/mmi/1.0/2014-07-11" xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11" xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11" xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11"
+  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11" xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0/2014-07-11" xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11" xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11" exclude-result-prefixes="gmd gco gsr gss gts xs gmi gmx xsi srv1 mac">
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
       <xd:p>
-        <xd:b>Created on:</xd:b>March 8, 2014
-      </xd:p>
-
-      <xd:p>Translates from ISO 19139 for ISO 19115 and ISO 19139-2 for 19115-2 
-        to ISO 19139-1 for ISO 19115-1</xd:p>
-
+        <xd:b>Created on:</xd:b>March 8, 2014 </xd:p>
+      <xd:p>Translates from ISO 19139 for ISO 19115 and ISO 19139-2 for 19115-2 to ISO 19139-1 for ISO 19115-1</xd:p>
       <xd:p>
         <xd:b>Version June 13, 2014</xd:b>
         <xd:ul>
@@ -38,21 +25,21 @@
           <xd:li>Add multilingual metadata support by converting gmd:locale and copying gmd:PT_FreeText and element attributes (eg. gco:nilReason, xsi:type) for gmd:CharacterString elements (Author: fx.prunayre@gmail.com).</xd:li>
         </xd:ul>
       </xd:p>
+      <xd:p>
+        <xd:b>Version September 4, 2014</xd:b>
+        <xd:ul>
+          <xd:li>Added transform for MD_FeatureCatalogueDescription (problem identified by Tobias Spears</xd:li>
+        </xd:ul>
+      </xd:p>
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
     </xd:desc>
   </xd:doc>
   <xsl:output method="xml" indent="yes"/>
   <xsl:strip-space elements="*"/>
   <xsl:variable name="stylesheetVersion" select="'0.1'"/>
-  
-  
   <!-- Define if parent identifier should be defined using a uuidref 
     attribute or a CI_Citation with a title. -->
-  <xsl:param name="isParentIdentifierDefinedWithUUIDAttribute" 
-    select="false()"
-    as="xs:boolean"/>
-  
-  
+  <xsl:param name="isParentIdentifierDefinedWithUUIDAttribute" select="false()" as="xs:boolean"/>
   <xsl:template match="/">
     <!-- 
     root element (MD_Metadata or MI_Metadata)
@@ -265,36 +252,36 @@
           <xsl:attribute name="uuidref" select="gco:CharacterString"/>
         </xsl:when>
         <xsl:otherwise>
-         <cit:CI_Citation>
-           <cit:title>
-             <gco:CharacterString>
-               <xsl:value-of select="gco:CharacterString"/>
-             </gco:CharacterString>
-           </cit:title>
-           <cit:identifier>
-             <mcc:MD_Identifier>
-               <mcc:code>
-                 <gco:CharacterString>
-                   <xsl:choose>
-                     <xsl:when test="contains(gco:CharacterString,':')">
-                       <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
-                     </xsl:when>
-                     <xsl:otherwise>
-                       <xsl:value-of select="gco:CharacterString"/>
-                     </xsl:otherwise>
-                   </xsl:choose>
-                 </gco:CharacterString>
-               </mcc:code>
-               <xsl:if test="contains(gco:CharacterString,':')">
-                 <mcc:codeSpace>
-                   <gco:CharacterString>
-                     <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
-                   </gco:CharacterString>
-                 </mcc:codeSpace>
-               </xsl:if>
-             </mcc:MD_Identifier>
-           </cit:identifier>
-         </cit:CI_Citation>
+          <cit:CI_Citation>
+            <cit:title>
+              <gco:CharacterString>
+                <xsl:value-of select="gco:CharacterString"/>
+              </gco:CharacterString>
+            </cit:title>
+            <cit:identifier>
+              <mcc:MD_Identifier>
+                <mcc:code>
+                  <gco:CharacterString>
+                    <xsl:choose>
+                      <xsl:when test="contains(gco:CharacterString,':')">
+                        <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="gco:CharacterString"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </gco:CharacterString>
+                </mcc:code>
+                <xsl:if test="contains(gco:CharacterString,':')">
+                  <mcc:codeSpace>
+                    <gco:CharacterString>
+                      <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
+                    </gco:CharacterString>
+                  </mcc:codeSpace>
+                </xsl:if>
+              </mcc:MD_Identifier>
+            </cit:identifier>
+          </cit:CI_Citation>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:element>
@@ -460,7 +447,7 @@
       </gco:Boolean>
     </srv:optionality>
   </xsl:template>
-  <xsl:template match="gmd:contentInfo">
+  <xsl:template match="gmd:contentInfo[not(gmd:MD_FeatureCatalogueDescription)]">
     <xsl:if test="not(preceding-sibling::gmd:contentInfo)">
       <!-- ********************************************************************** -->
       <!-- First contentInfo section.                                             -->
@@ -471,7 +458,6 @@
         <xsl:for-each select="*">
           <xsl:variable name="coverageDescriptionName">
             <xsl:choose>
-              <!--<xsl:when test="local-name()='MD_CoverageDescription'">-->
               <xsl:when test="count(//gmi:MI_CoverageDescription)>0">
                 <xsl:value-of select="'mrc:MI_CoverageDescription'"/>
               </xsl:when>
@@ -501,6 +487,21 @@
         </xsl:for-each>
       </xsl:element>
     </xsl:if>
+  </xsl:template>
+  <!-- transform contentInfo sections with Feature Catalogues -->
+  <xsl:template match="gmd:contentInfo[gmd:MD_FeatureCatalogueDescription]">
+    <xsl:element name="mdb:contentInfo">
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+  <xsl:template match="//gmd:MD_FeatureCatalogueDescription/gmd:featureTypes">
+    <mrc:featureTypes>
+      <mrc:MD_FeatureTypeInfo>
+        <mrc:featureTypeName>
+          <xsl:apply-templates/>
+        </mrc:featureTypeName>
+      </mrc:MD_FeatureTypeInfo>
+    </mrc:featureTypes>
   </xsl:template>
   <!-- gmd:distributionInfo uses default templates -->
   <xsl:template match="gmd:dataQualityInfo">
@@ -674,8 +675,7 @@
       </cit:identifier>
     </xsl:if>
     <!-- Avoid putting out empty citedResponsibleParties for just onlineResources (responsible parties without names) -->
-    <xsl:if
-      test="count(gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString) != 0">
+    <xsl:if test="count(gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString) != 0">
       <cit:citedResponsibleParty>
         <xsl:apply-templates/>
       </cit:citedResponsibleParty>
@@ -1229,12 +1229,8 @@
   <xsl:template name="writeCharacterStringElement">
     <xsl:param name="elementName"/>
     <xsl:param name="nodeWithStringToWrite"/>
-    
-    <xsl:variable name="isMultilingual"
-      select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
-    <xsl:variable name="hasCharacterString"
-      select="count($nodeWithStringToWrite/gco:CharacterString) = 1"/>
-    
+    <xsl:variable name="isMultilingual" select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
+    <xsl:variable name="hasCharacterString" select="count($nodeWithStringToWrite/gco:CharacterString) = 1"/>
     <xsl:choose>
       <xsl:when test="$nodeWithStringToWrite">
         <xsl:element name="{$elementName}">
@@ -1248,8 +1244,7 @@
             </gco:CharacterString>
           </xsl:if>
           <xsl:if test="$isMultilingual">
-            <xsl:apply-templates
-              select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
+            <xsl:apply-templates select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
           </xsl:if>
         </xsl:element>
       </xsl:when>
@@ -1339,8 +1334,7 @@
         <xsl:when test="ancestor-or-self::gmd:PT_FreeText">
           <xsl:text>lan</xsl:text>
         </xsl:when>
-        <xsl:when
-          test="starts-with(name(),'gmi:') and not(ancestor-or-self::gmi:MI_AcquisitionInformation)
+        <xsl:when test="starts-with(name(),'gmi:') and not(ancestor-or-self::gmi:MI_AcquisitionInformation)
           and not(ancestor-or-self::gmi:QE_CoverageResult) and not(ancestor-or-self::gmi:LE_ProcessStep)
           and not(ancestor-or-self::gmi:LE_Source) and not(ancestor-or-self::gmi:MI_CoverageDescription)">
           <xsl:text>msr</xsl:text>
@@ -1394,8 +1388,7 @@
         <xsl:when test="ancestor-or-self::gmd:EX_Extent">
           <xsl:text>gex</xsl:text>
         </xsl:when>
-        <xsl:when
-          test="ancestor-or-self::gmd:MD_Georectified or ancestor-or-self::gmi:MI_Georectified
+        <xsl:when test="ancestor-or-self::gmd:MD_Georectified or ancestor-or-self::gmi:MI_Georectified
           or ancestor-or-self::gmd:MD_Georeferenceable or ancestor-or-self::gmi:MI_Georeferenceable
           or ancestor-or-self::gmd:MD_GridSpatialRepresentation or ancestor-or-self::gmd:MD_ReferenceSystem
           or name()=gmi:MI_Metadata">
@@ -1417,7 +1410,8 @@
           <!-- or ancestor-or-self::gmd:MD_SpatialRepresentationTypeCode"> this test is not necessary -->
           <xsl:text>mri</xsl:text>
         </xsl:when>
-        <xsl:when test="ancestor-or-self::gmd:MD_CoverageDescription or ancestor-or-self::gmi:MI_CoverageDescription">
+        <xsl:when test="ancestor-or-self::gmd:MD_CoverageDescription or ancestor-or-self::gmi:MI_CoverageDescription
+          or ancestor-or-self::gmd:MD_FeatureCatalogueDescription">
           <xsl:text>mrc</xsl:text>
         </xsl:when>
         <!-- Moved here to get CoverageResult right -->
