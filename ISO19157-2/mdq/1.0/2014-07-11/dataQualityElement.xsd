@@ -5,7 +5,7 @@
   targetNamespace="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11" version="1.0">
   <include schemaLocation="mdq.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" schemaLocation="../../../../ISO19157/dqc/1.0/2014-07-11/dqc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-07-11" schemaLocation="../../../../ISO19157-2/dqc/1.0/2014-07-11/dqc.xsd"/>
   <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DQ_AbsoluteExternalPositionalAccuracy" substitutionGroup="mdq:AbstractDQ_PositionalAccuracy" type="mdq:DQ_AbsoluteExternalPositionalAccuracy_Type">
