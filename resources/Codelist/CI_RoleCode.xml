@@ -75,7 +75,7 @@
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12383_18916">
-      <description>party who jointly authorsthe resource</description>
+      <description>party who jointly authors the resource</description>
       <identifier codeSpace="http://www.isotc211.org/namespace/cit/1.0/2014-07-11/CI_RoleCode">coAuthor</identifier>
     </Definition>
   </dictionaryEntry>
