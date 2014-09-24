@@ -59,8 +59,7 @@
     <schemaStandardTitle>Geographic Metadata — Part 2: XML schema implementation</schemaStandardTitle>
     <paragraphNumber>6.4</paragraphNumber>
   </namespace>
-  
-<!--  <namespace>
+  <!--  <namespace>
     <title>Registered Quality Measures</title>
     <requirementRoot>registered-quality-measures</requirementRoot>
     <scope/>
@@ -75,7 +74,6 @@
     <schemaStandardTitle>Geographic information — Data Quality — Part 2: XML schema implementation</schemaStandardTitle>
     <paragraphNumber>6.6</paragraphNumber>
   </namespace>-->
-  
   <!--<namespace>
     <title>Metadata for Imagery Quality</title>
     <scope>Information related to quality of imagery and gridded data.</scope>
@@ -275,9 +273,7 @@
   <namespace>
     <title>Metadata for Data and Services</title>
     <requirementRoot>metadata-data-or-services</requirementRoot>
-    <scope>This namespace contains all classes needed for a complete metadata record for any resource. It is used for metadata records 
-      that do not include geospatial common extensions (gex), extenbsions to the schema (mex), data series (DS_*) elements (mda) or
-      metadata for data transfer (mdt).</scope>
+    <scope>This namespace contains all classes needed for a complete metadata record for any resource. It is used for metadata records that do not include geospatial common extensions (gex), extenbsions to the schema (mex), data series (DS_*) elements (mda) or metadata for data transfer (mdt).</scope>
     <UMLPackage>&lt;&lt;Leaf&gt;&gt;</UMLPackage>
     <prefix>mds</prefix>
     <version>1.0</version>
@@ -512,7 +508,6 @@
     <conceptualStandardTitle>Geographic information -- Methodology for feature cataloguing</conceptualStandardTitle>
     <schemaStandardNumber>19110</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>unknown</paragraphNumber>
   </namespace>
   <namespace>
     <title>General Feature Catalog</title>
@@ -527,7 +522,6 @@
     <conceptualStandardTitle>Geographic information -- Methodology for feature cataloguing</conceptualStandardTitle>
     <schemaStandardNumber>19110</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>unknown</paragraphNumber>
   </namespace>
   <namespace>
     <title>Referencing By Coordinates</title>
@@ -542,7 +536,6 @@
     <conceptualStandardTitle>Geographic information -- Spatial referencing by coordinates</conceptualStandardTitle>
     <schemaStandardNumber>19111</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>unknown</paragraphNumber>
   </namespace>
   <namespace>
     <title>Referencing By Coordinates Common</title>
@@ -557,7 +550,6 @@
     <conceptualStandardTitle>Geographic information -- Spatial referencing by coordinates</conceptualStandardTitle>
     <schemaStandardNumber>19111</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>unknown</paragraphNumber>
   </namespace>
   <namespace>
     <title>Procedures for Registration</title>
@@ -572,7 +564,6 @@
     <conceptualStandardTitle>Geographic information -- Procedures for item registration</conceptualStandardTitle>
     <schemaStandardNumber>19135</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>unknown</paragraphNumber>
   </namespace>
   <namespace>
     <title>Registration Common</title>
@@ -587,7 +578,6 @@
     <conceptualStandardTitle>Geographic information -- Procedures for item registration</conceptualStandardTitle>
     <schemaStandardNumber>19135</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>unknown</paragraphNumber>
   </namespace>
   <namespace>
     <title>Geographic COmmon</title>
@@ -662,7 +652,6 @@
     <conceptualStandardTitle>Geographic information -- Geography Markup Language (GML)</conceptualStandardTitle>
     <schemaStandardNumber>19118</schemaStandardNumber>
     <schemaStandardTitle>ISO 19118:2011 Geographic information -- Encoding</schemaStandardTitle>
-    <paragraphNumber/>
   </namespace>
   <namespace>
     <title>XML Linking Language (XLink) Version 1.0. W3C Recommendation</title>
@@ -677,6 +666,5 @@
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
     <schemaStandardNumber>19139</schemaStandardNumber>
     <schemaStandardTitle/>
-    <paragraphNumber/>
   </namespace>
 </ISOSchema>

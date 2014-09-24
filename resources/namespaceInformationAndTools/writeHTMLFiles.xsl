@@ -61,7 +61,7 @@
             </h1>
             <img><xsl:attribute name="src" select="concat(prefix,'.png')"/></img>
             <h2>Description</h2>
-            <p><xsl:value-of select="$namespaceVersionTitle"/> is an XML Schema implementation derived from ISO <xsl:value-of select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle,', Clause ',paragraphNumber)"/>. <xsl:if test="scope!=''"> It includes <xsl:value-of select="concat(lower-case(substring(scope,1,1)),substring(scope,2))"/>
+            <p><xsl:value-of select="$namespaceVersionTitle"/> is an XML Schema implementation derived from ISO <xsl:value-of select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle, if (exists(paragraphNumber)) then concat(', Clause ',paragraphNumber) else '')"/>. <xsl:if test="scope!=''"> It includes <xsl:value-of select="concat(lower-case(substring(scope,1,1)),substring(scope,2))"/>
               </xsl:if> The XML schema was encoded using the rules described in <xsl:value-of select="encodingRules"/>.</p>
             <h2>XML Namespace for <xsl:value-of select="$namespaceVersion"/></h2>
             <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="concat(location,'/',prefix,'/',version)"/></b>.</p>
