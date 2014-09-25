@@ -47,7 +47,7 @@
   <namespace>
     <title>Data Quality Common Classes</title>
     <requirementRoot>data-quality-common</requirementRoot>
-    <scope>This namespace is included in the XML implementation model in order to enable modularization of the schema. It includes abstract classes shared by multiple namespaces.</scope>
+    <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
     <UMLPackage>Data Quality</UMLPackage>
     <prefix>dqc</prefix>
     <version>1.0</version>
@@ -228,7 +228,7 @@
   <namespace>
     <title>Metadata Common Classes</title>
     <requirementRoot>common-classes</requirementRoot>
-    <scope>This namespace is included in the XML implementation model in order to enable modularization of the schema. It includes abstract classes shared by multiple namespaces.</scope>
+    <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
     <UMLPackage>&lt;&lt;Leaf&gt;&gt;</UMLPackage>
     <prefix>mcc</prefix>
     <version>1.0</version>
@@ -498,7 +498,7 @@
   <namespace>
     <title>Feature Catalog Common</title>
     <requirementRoot>feature-catalog-common</requirementRoot>
-    <scope>This namespace is included in the XML implementation model in order to enable modularization of the schema. It includes abstract classes shared by multiple namespaces.</scope>
+    <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
     <UMLPackage/>
     <prefix>fcc</prefix>
     <version>1.0</version>
@@ -540,7 +540,7 @@
   <namespace>
     <title>Referencing By Coordinates Common</title>
     <requirementRoot>coordinate-system-common</requirementRoot>
-    <scope>This namespace is included in the XML implementation model in order to enable modularization of the schema. It includes abstract classes shared by multiple namespaces.</scope>
+    <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
     <UMLPackage/>
     <prefix>rce</prefix>
     <version>1.0</version>
@@ -554,7 +554,7 @@
   <namespace>
     <title>Procedures for Registration</title>
     <requirementRoot>registration-common</requirementRoot>
-    <scope>This namespace is included in the XML implementation model in order to enable modularization of the schema. It includes abstract classes shared by multiple namespaces.</scope>
+    <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
     <UMLPackage/>
     <prefix>pre</prefix>
     <version>1.0</version>
@@ -568,7 +568,7 @@
   <namespace>
     <title>Registration Common</title>
     <requirementRoot>registration-common</requirementRoot>
-    <scope>This namespace is included in the XML implementation model in order to enable modularization of the schema. It includes abstract classes shared by multiple namespaces.</scope>
+    <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
     <UMLPackage/>
     <prefix>reg</prefix>
     <version>1.0</version>
