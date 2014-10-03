@@ -700,14 +700,48 @@
 	 resources that are associated with the resource being described.
     -->
     <mri:associatedResource>
-      <mri:MD_AssociatedResource>
+      <xsl:element name="mri:MD_AssociatedResource">
+        <xsl:copy-of select="gmd:MD_AggregateInformation/@*"/>
         <!-- The name element is mapped from the existing gmd:aggregateDataSetName class.
 					 The metadataReference replaces the gmd:aggregateDataSetIdentifier in order to
 					 clarify the fact that it identifies and gives the location of the metadata 
 					 for the associated resources. -->
-        <mri:name>
-          <xsl:apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation"/>
-        </mri:name>
+        <xsl:choose>
+          <xsl:when test="exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetName)
+            and exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier)">
+            <mri:name>
+              <xsl:apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation"/>
+            </mri:name>
+          </xsl:when>
+          <xsl:when test="exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetName)">
+            <mri:name>
+              <xsl:apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation"/>
+            </mri:name>
+          </xsl:when>
+          <xsl:when test="exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier)">
+            <mri:name>
+              <cit:CI_Citation>
+                <xsl:call-template name="writeCharacterStringElement">
+                  <xsl:with-param name="elementName" select="'cit:title'"/>
+                  <xsl:with-param name="nodeWithStringToWrite" select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title"/>
+                </xsl:call-template>
+                <cit:date>
+                  <cit:CI_Date>
+                    <cit:date>
+                      <gco:DateTime>2000-05-05T00:00:00</gco:DateTime>
+                    </cit:date>
+                    <cit:dateType>
+                      <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+                    </cit:dateType>
+                  </cit:CI_Date>
+                </cit:date>
+                <cit:identifier>
+                  <xsl:apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier"/>
+                </cit:identifier>
+              </cit:CI_Citation>
+            </mri:name>
+          </xsl:when>
+        </xsl:choose>
         <xsl:call-template name="writeCodelistElement">
           <xsl:with-param name="elementName" select="'mri:associationType'"/>
           <xsl:with-param name="codeListName" select="'mri:DS_AssociationTypeCode'"/>
@@ -718,29 +752,7 @@
           <xsl:with-param name="codeListName" select="'mri:DS_InitiativeTypeCode'"/>
           <xsl:with-param name="codeListValue" select="./gmd:MD_AggregateInformation/gmd:initiativeType/gmd:DS_InitiativeTypeCode"/>
         </xsl:call-template>
-        <!--        <mri:metadataReference>
-          <!-\- need something like apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation" here -\->
-          <cit:CI_Citation>
-            <cit:title>
-              <gco:CharacterString>CharacterString419</gco:CharacterString>
-            </cit:title>
-            <cit:date>
-              <cit:CI_Date>
-                <cit:date>
-                  <gco:DateTime>2006-05-04T18:13:51.0Z</gco:DateTime>
-                </cit:date>
-                <cit:dateType>
-                  <cit:CI_DateTypeCode codeList="http://www.oxygenxml.com/" codeListValue="http://www.oxygenxml.com/">CI_DateTypeCode11</cit:CI_DateTypeCode>
-                </cit:dateType>
-              </cit:CI_Date>
-            </cit:date>
-            <cit:identifier>
-              <xsl:apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier"/>
-            </cit:identifier>
-           </cit:CI_Citation>
-        </mri:metadataReference>
--->
-      </mri:MD_AssociatedResource>
+      </xsl:element>
     </mri:associatedResource>
   </xsl:template>
   <xsl:template match="gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty">
