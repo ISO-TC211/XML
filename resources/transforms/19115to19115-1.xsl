@@ -447,7 +447,8 @@
       </gco:Boolean>
     </srv:optionality>
   </xsl:template>
-  <xsl:template match="gmd:contentInfo[not(gmd:MD_FeatureCatalogueDescription)]">
+  <xsl:template match="gmd:contentInfo[not(gmd:MD_FeatureCatalogueDescription)
+    and not(gmd:MD_ImageDescription)]">
     <xsl:if test="not(preceding-sibling::gmd:contentInfo)">
       <!-- ********************************************************************** -->
       <!-- First contentInfo section.                                             -->
@@ -489,7 +490,7 @@
     </xsl:if>
   </xsl:template>
   <!-- transform contentInfo sections with Feature Catalogues -->
-  <xsl:template match="gmd:contentInfo[gmd:MD_FeatureCatalogueDescription]">
+  <xsl:template match="gmd:contentInfo[gmd:MD_FeatureCatalogueDescription] | gmd:contentInfo[gmd:MD_ImageDescription]">
     <xsl:element name="mdb:contentInfo">
       <xsl:apply-templates/>
     </xsl:element>
