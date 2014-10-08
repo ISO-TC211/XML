@@ -11,21 +11,38 @@
       </p>
       <h2>XML Schema for cit 1.0</h2>
       <p><b>cit.xsd</b> is the XML Schema document to be referenced by XML documents containing XML elements
-         in the cit 1.0 namespace or by
-         XML Schema documents importing the cit 1.0 namespace. This XML schema includes (indirectly) all the implemented concepts of
-         the cit namespace,
-         but it does not contain the declaration of any types.
+         in the cit 1.0 namespace or by XML Schema documents importing the cit 1.0 namespace. This XML schema includes (indirectly) all the implemented concepts of
+         the cit namespace, but it does not contain the declaration of any types.
       </p>
-      <p><i>NOTE: The XML Schema for cit 1.0 are available <a href="http://isotc211.org/schema">here</a> as part of a zip archive including all the XML Schema Implementations
-            defined in ISO/TS 19115-3.</i></p>
+      <p><i>NOTE: The XML Schema for cit 1.0 are available <a href="http://isotc211.org/schema">here</a> as part of a zip archive including all the XML Schema Implementations defined in
+            ISO/TS 19115-3.</i></p>
       <h2>Related XML Schema for cit 1.0</h2>
-      <p><b>citation.xsd</b> implements the UML conceptual schema defined in ISO 19115-1, 6.6.3. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
+      <p><b>citation.xsd</b> implements the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.6.3. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO
          19115-3 and contains the following classes: CI_Address, CI_Citation, CI_Contact, CI_Date, CI_DateTypeCode, CI_Individual, CI_OnLineFunctionCode, CI_OnlineResource, CI_Organisation, AbstractCI_Party, CI_PresentationFormCode, CI_Responsibility, CI_RoleCode, CI_Series, CI_Telephone, and CI_TelephoneTypeCode
       </p>
-      <h2>No Related XML Namespaces for cit 1.0</h2>
-      <h2>Schematron Validation Rules for cit 1.0</h2> Schematron rules for validating instance documents of the cit 1.0 namespace are in
-      cit.sch. Other schematron rule sets that are required for a complete validation are: 
+      <h2>Related XML Namespaces for cit 1.0</h2> The cit 1.0 namespace imports these other namespaces: 
+      <table border="1" cellpadding="3" cellspacing="3">
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Geographic COmmon</td>
+            <td>gco</td>
+            <td>http://www.isotc211.org/2005/gco</td>
+            <td>http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Common Classes</td>
+            <td>mcc</td>
+            <td>http://www.isotc211.org/namespace/mcc/1.0/2014-07-11</td>
+            <td>../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd</td>
+         </tr>
+      </table>
+      <h2>Schematron Validation Rules for cit 1.0</h2> Schematron rules for validating instance documents of the cit 1.0 namespace are in cit.sch. Other schematron rule sets that are required for a complete validation are: gco.sch, and mcc.sch
       <hr>
-      <p><font size="small" face="italic">Written by writeHTMLFiles Version: 2014-08-04 at 2014-08-08T15:07:08.687-06:00</font></p>
+      <p><font size="small" face="italic">Written by writeHTMLFiles Version: 2014-09-24 at 2014-10-07T16:40:37.52-06:00</font></p>
    </body>
 </html>

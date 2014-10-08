@@ -3,6 +3,8 @@
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <import namespace="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/cit/1.0/2014-07-11/cit.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+    <!-- hand-craft adjustments starting at line 29 and 71. ShapeChange does not have rules for 
+  implementing language localisation according to ISO19139  -->
   <element name="CountryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
   <complexType name="CountryCode_PropertyType">
     <sequence minOccurs="0">
@@ -17,15 +19,24 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="LocalisedCharacterString" substitutionGroup="gco:AbstractObject" type="lan:LocalisedCharacterString_Type"/>
+  
+  <!-- hand crafted, copy from gmd freeText.xsd, following rule in ISO19139 9.3.18.3 -->
+  
+  <element name="LocalisedCharacterString" substitutionGroup="gco:CharacterString" type="lan:LocalisedCharacterString_Type"/>
   <complexType name="LocalisedCharacterString_Type">
-    <complexContent>
+<!--    <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <element name="locale" type="lan:PT_Locale_PropertyType"/>
         </sequence>
       </extension>
-    </complexContent>
+    </complexContent> -->
+    <simpleContent>
+      <extension base="string">
+        <attribute name="id" type="ID"/>
+        <attribute name="locale" type="anyURI"/>
+      </extension>
+    </simpleContent>
   </complexType>
   <complexType name="LocalisedCharacterString_PropertyType">
     <sequence minOccurs="0">
@@ -34,6 +45,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
+  <!-- end localisedCharacterSTring sectionl. PropertyType is not modified from ShapeChange output -->
+  
   <element name="MD_CharacterSetCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
   <complexType name="MD_CharacterSetCode_PropertyType">
     <sequence minOccurs="0">
@@ -41,6 +54,7 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
+  
   <element name="PT_FreeText" substitutionGroup="gco:AbstractObject" type="lan:PT_FreeText_Type"/>
   <complexType name="PT_FreeText_Type">
     <complexContent>
@@ -51,13 +65,25 @@
       </extension>
     </complexContent>
   </complexType>
+  
+      <!-- Hand crafted.  MAKE FIXES BASED ON gmd freeText.xsd  2014-08-21 SMR -->
+          <!-- PT_FreeText can't substitute for CharacterString because that is a simple type; have to extend 
+          the property typeso that instance docs will still have a CharacterString Element, 
+          and a textGroup with localisedCharacterStrings-->
   <complexType name="PT_FreeText_PropertyType">
-    <sequence minOccurs="0">
+  <complexContent>
+    <extension base="gco:CharacterString_PropertyType">
+       <sequence minOccurs="0">
       <element ref="lan:PT_FreeText"/>
     </sequence>
-    <attributeGroup ref="gco:ObjectReference"/>
-    <attribute ref="gco:nilReason"/>
+<!--    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>  -->
+    <!-- ISO19139 does not extend abstractObjectproperty type, so don't have these attributes -->
+    </extension>
+  </complexContent>
   </complexType>
+  
+  
   <element name="PT_Locale" substitutionGroup="gco:AbstractObject" type="lan:PT_Locale_Type"/>
   <complexType name="PT_Locale_Type">
     <complexContent>

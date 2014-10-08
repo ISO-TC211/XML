@@ -1,0 +1,112 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="MD_ProgressCode" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>status of the resource</description>
+  <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11">MD_ProgressCode</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18728">
+      <description>has been completed</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">completed</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18729">
+      <description>stored in an offline storage facility</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">historicalArchive</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18730">
+      <description>no longer relevant</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">obsolete</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18731">
+      <description>continually being updated</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">onGoing</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18732">
+      <description>fixed date has been established upon or by which the resource will be created or updated</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">planned</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18733">
+      <description>needs to be generated or updated</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">required</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18734">
+      <description>currently in the process of being created</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">underDevelopment</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18735">
+      <description>progress concluded and no changes will be accepted</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">final</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18736">
+      <description>committed to, but not yet addressed</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">pending</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18737">
+      <description>item is no longer recommended for use. It has not been superseded by another item</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">retired</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18738">
+      <description>replaced by new</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">superseded</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18739">
+      <description>provisional changes likely before resource becomes final or complete</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">tentative</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18740">
+      <description>acceptable under specific conditions</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">valid</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18741">
+      <description>agreed to by sponsor</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">accepted</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18742">
+      <description>rejected by sponsor</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">notAccepted</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18743">
+      <description>removed from consideration</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">withdrawn</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18744">
+      <description>suggested that development needs to be undertaken</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">proposed</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12309_18745">
+      <description>resource superseded and will become obsolete, use only for historical purposes</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11/MD_ProgressCode">deprecated</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>
