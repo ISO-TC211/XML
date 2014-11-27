@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdq:DQ_QuantitativeResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.isotc211.org/2005/mdq/1.0/2013-06-24 mdq.xsd"
- xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24"
- xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"
+ xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2014-07-11"
+ xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2014-07-11"
  xmlns:gmd="http://www.isotc211.org/2005/gmd"
  xmlns:gco="http://www.isotc211.org/2005/gco"
  xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24"
+ xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2014-07-11"
  xmlns:gml="http://www.opengis.net/gml/3.2"
  xmlns:gsr="http://www.isotc211.org/2005/gsr"
  xmlns:gss="http://www.isotc211.org/2005/gss"
  xmlns:gts="http://www.isotc211.org/2005/gts"
- xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24">
+ xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2014-07-11">
   <mdq:dateTime>
     <gco:DateTime>2006-05-04T18:13:51.0Z</gco:DateTime>
   </mdq:dateTime>

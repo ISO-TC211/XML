@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gex:EX_Extent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gex/1.0/2013-06-24 gex.xsd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2013-06-24">
+<gex:EX_Extent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gex/1.0/2013-06-24 gex.xsd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2014-07-11" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2014-07-11" xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2014-07-11">
   <gex:geographicElement>
     <gex:EX_GeographicBoundingBox>
       <gex:extentTypeCode>
@@ -37,7 +37,7 @@
       <gex:verticalCRSId>
         <mrs:MD_ReferenceSystem>
           <mrs:referenceSystemIdentifier>
-            <mcc:MD_Identifier xmlns="http://www.isotc211.org/2005/mcc/1.0/2013-06-24">
+            <mcc:MD_Identifier xmlns="http://www.isotc211.org/2005/mcc/1.0/2014-07-11">
               <mcc:code>
                 <gco:CharacterString>/gex:EX_Extent/gex:verticalElement/gex:EX_VerticalExtent/gex:verticalCRSId/mrs:MD_ReferenceSystem/mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:code/gco:CharacterString</gco:CharacterString>
               </mcc:code>

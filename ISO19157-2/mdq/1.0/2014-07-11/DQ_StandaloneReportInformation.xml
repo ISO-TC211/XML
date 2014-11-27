@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdq:DQ_DataQuality xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" 
+  xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2014-07-11" 
   xmlns:gco="http://www.isotc211.org/2005/gco"  
-  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" 
-  xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" 
-  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" 
+  xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2014-07-11" 
+  xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2014-07-11" 
+  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2014-07-11" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.isotc211.org/2005/mdq/1.0/2013-06-24 file:/Users/tedhabermann/Dropbox/ISO/19115-3/ImplementationDevelopment/xsd20130624/ISO19157-2/mdq/1.0/dataQuality.xsd">
   <mdq:scope>
