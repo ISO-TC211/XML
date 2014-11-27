@@ -11,14 +11,14 @@
   <valuesMaxLength>30</valuesMaxLength>
   <isUseIncrementalNamesForValues>true</isUseIncrementalNamesForValues>
   <discardOptionalElementsAfterNestedLevel>6</discardOptionalElementsAfterNestedLevel>
-  <namespaceMapping ns="http://www.isotc211.org/2005/cit/1.0/2013-06-24" proxy="cit"/>
+  <namespaceMapping ns="http://www.isotc211.org/2005/cit/1.0/2014-07-11" proxy="cit"/>
   <namespaceMapping ns="http://www.isotc211.org/2005/gts" proxy="gts"/>
   <namespaceMapping ns="http://www.isotc211.org/2005/gco" proxy="gco"/>
-  <namespaceMapping ns="http://www.isotc211.org/2005/dqm/1.0/2013-06-24" proxy="dqm"/>
+  <namespaceMapping ns="http://www.isotc211.org/2005/dqm/1.0/2014-07-11" proxy="dqm"/>
   <namespaceMapping ns="http://www.opengis.net/gml/3.2" proxy="gml"/>
   <namespaceMapping ns="http://www.isotc211.org/2005/gss" proxy="gss"/>
   <namespaceMapping ns="http://www.isotc211.org/2005/gsr" proxy="gsr"/>
-  <namespaceMapping ns="http://www.isotc211.org/2005/mcc/1.0/2013-06-24" proxy="mcc"/>
+  <namespaceMapping ns="http://www.isotc211.org/2005/mcc/1.0/2014-07-11" proxy="mcc"/>
   <namespaceMapping ns="http://www.isotc211.org/2005/gmd" proxy="gmd"/>
   <namespaceMapping ns="http://www.w3.org/1999/xlink" proxy="xlink"/>
   <element namespace="&lt;ANY>" name="&lt;ANY>">

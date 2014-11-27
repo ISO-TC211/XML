@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2013-06-24" xmlns:gco="http://www.isotc211.org/2005/gco"
-  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2013-06-24" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gts="http://www.isotc211.org/2005/gts"
-  xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2013-06-24" xmlns:mdb="http://www.isotc211.org/2005/mdb/1.0/2013-06-24"
-  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2013-06-24" xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2013-06-24" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2013-06-24"
-  xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2013-06-24" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cit="http://www.isotc211.org/2005/cit/1.0/2014-07-11" xmlns:gco="http://www.isotc211.org/2005/gco"
+  xmlns:gex="http://www.isotc211.org/2005/gex/1.0/2014-07-11" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:lan="http://www.isotc211.org/2005/lan/1.0/2014-07-11" xmlns:mdb="http://www.isotc211.org/2005/mdb/1.0/2014-07-11"
+  xmlns:mri="http://www.isotc211.org/2005/mri/1.0/2014-07-11" xmlns:mdq="http://www.isotc211.org/2005/mdq/1.0/2014-07-11" xmlns:mcc="http://www.isotc211.org/2005/mcc/1.0/2014-07-11"
+  xmlns:mrs="http://www.isotc211.org/2005/mrs/1.0/2014-07-11" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:xlink="http://www.w3.org/1999/xlink">
   <mdb:defaultLocale>
     <lan:PT_Locale>
       <lan:language>
