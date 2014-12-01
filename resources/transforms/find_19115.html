@@ -1,23 +1,128 @@
 <html xmlns:hdf5="http://hdfgroup.org/HDF5/XML/schema/HDF5-File" xmlns:h4="http://www.hdfgroup.org/HDF4/XML/schema/HDF4map/1.0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <body>
-      <h1>ISO 19115 Elements in register.xsd</h1>
+      <h1>ISO 19115 Elements in acquisitionInformation.xsd</h1>
       <h2>gmd:CI_Citation_PropertyType</h2>
       <ul>
-         <li>RE_ItemClass_Type/technicalStandard/gmd:CI_Citation_PropertyType</li>
-         <li>RE_ReferenceSource_Type/citation/gmd:CI_Citation_PropertyType</li>
-         <li>RE_Locale_Type/citation/gmd:CI_Citation_PropertyType</li>
-      </ul><b>Replace these types with mcc:Abstract_Citation_PropertyType</b><h2>gmd:CI_OnlineResource_PropertyType</h2>
+         <li>MI_Instrument_Type/citation/gmd:CI_Citation_PropertyType</li>
+         <li>MI_Operation_Type/citation/gmd:CI_Citation_PropertyType</li>
+         <li>MI_Platform_Type/citation/gmd:CI_Citation_PropertyType</li>
+         <li>MI_Requirement_Type/citation/gmd:CI_Citation_PropertyType</li>
+         <li>MI_Plan_Type/citation/gmd:CI_Citation_PropertyType</li>
+      </ul><b>Replace these types with mcc:Abstract_Citation_PropertyType</b><h2>gmd:CI_ResponsibleParty_PropertyType</h2>
       <ul>
-         <li>RE_Register_Type/uniformResourceIdentifier/gmd:CI_OnlineResource_PropertyType</li>
-         <li>RE_SubregisterDescription_Type/uniformResourceIdentifier/gmd:CI_OnlineResource_PropertyType</li>
-      </ul><b>Replace these types with mcc:Abstract_OnlineResource_PropertyType</b><h2>gmd:CI_ResponsibleParty_PropertyType</h2>
+         <li>MI_Platform_Type/sponsor/gmd:CI_ResponsibleParty_PropertyType</li>
+         <li>MI_Requirement_Type/requestor/gmd:CI_ResponsibleParty_PropertyType</li>
+         <li>MI_Requirement_Type/recipient/gmd:CI_ResponsibleParty_PropertyType</li>
+      </ul><b>Replace these types with mcc:Abstract_Responsibility_PropertyType</b><h2>gmd:EX_Extent_PropertyType</h2>
       <ul>
-         <li>AbstractRegisterStakeholder_Type/contact/gmd:CI_ResponsibleParty_PropertyType</li>
-      </ul><b>Replace these types with mcc:Abstract_Responsibility_PropertyType</b><h2>gmd:LanguageCode_PropertyType</h2>
+         <li>MI_Objective_Type/extent/gmd:EX_Extent_PropertyType</li>
+      </ul><b>Replace these types with mcc:Abstract_Extent_PropertyType</b><h2>gmd:MD_Identifier_PropertyType</h2>
       <ul>
-         <li>RE_Locale_Type/language/gmd:LanguageCode_PropertyType</li>
-      </ul><b>Replace these types with lan:LanguageCode_PropertyType</b><h2>gmd:MD_CharacterSetCode_PropertyType</h2>
+         <li>MI_Platform_Type/identifier/gmd:MD_Identifier_PropertyType</li>
+         <li>MI_Event_Type/identifier/gmd:MD_Identifier_PropertyType</li>
+         <li>MI_Requirement_Type/identifier/gmd:MD_Identifier_PropertyType</li>
+         <li>MI_PlatformPass_Type/identifier/gmd:MD_Identifier_PropertyType</li>
+         <li>MI_Objective_Type/identifier/gmd:MD_Identifier_PropertyType</li>
+      </ul><b>Replace these types with mcc:MD_Identifier_PropertyType</b><h2>gmd:MD_ProgressCode_PropertyType</h2>
       <ul>
-         <li>RE_Locale_Type/characterEncoding/gmd:MD_CharacterSetCode_PropertyType</li>
-      </ul><b>Replace these types with lan:MD_CharacterSetCode_PropertyType</b><hr><i>Created using find_19115.xsl Version: 2014-11-29</i></body>
+         <li>MI_Operation_Type/status/gmd:MD_ProgressCode_PropertyType</li>
+         <li>MI_Plan_Type/status/gmd:MD_ProgressCode_PropertyType</li>
+      </ul><b>Replace these types with mcc:MD_ProgressCode_PropertyType</b><h2>gmi:MI_AcquisitionInformation_Type</h2>
+      <ul>
+         <li>/MI_AcquisitionInformation/gmi:MI_AcquisitionInformation_Type</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_ContextCode_PropertyType</h2>
+      <ul>
+         <li>MI_Event_Type/context/gmi:MI_ContextCode_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_Event_PropertyType</h2>
+      <ul>
+         <li>MI_Operation_Type/significantEvent/gmi:MI_Event_PropertyType</li>
+         <li>MI_PlatformPass_Type/relatedEvent/gmi:MI_Event_PropertyType</li>
+         <li>MI_Objective_Type/objectiveOccurance/gmi:MI_Event_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_Event_Type</h2>
+      <ul>
+         <li>/MI_Event/gmi:MI_Event_Type</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_GeometryTypeCode_PropertyType</h2>
+      <ul>
+         <li>MI_Plan_Type/type/gmi:MI_GeometryTypeCode_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_Instrument_PropertyType</h2>
+      <ul>
+         <li>MI_Platform_Type/instrument/gmi:MI_Instrument_PropertyType</li>
+         <li>MI_AcquisitionInformation_Type/instrument/gmi:MI_Instrument_PropertyType</li>
+         <li>MI_Event_Type/relatedSensor/gmi:MI_Instrument_PropertyType</li>
+         <li>MI_Objective_Type/sensingInstrument/gmi:MI_Instrument_PropertyType</li>
+      </ul><b>Replace these types with mac:MI_Instrument_PropertyType</b><h2>gmi:MI_Instrument_Type</h2>
+      <ul>
+         <li>/MI_Instrument/gmi:MI_Instrument_Type</li>
+      </ul><b>Replace these types with mac:MI_Instrument_Type</b><h2>gmi:MI_ObjectiveTypeCode_PropertyType</h2>
+      <ul>
+         <li>MI_Objective_Type/type/gmi:MI_ObjectiveTypeCode_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_Objective_PropertyType</h2>
+      <ul>
+         <li>MI_Operation_Type/objective/gmi:MI_Objective_PropertyType</li>
+         <li>MI_AcquisitionInformation_Type/objective/gmi:MI_Objective_PropertyType</li>
+         <li>MI_Event_Type/expectedObjective/gmi:MI_Objective_PropertyType</li>
+      </ul><b>Replace these types with mac:MI_Objective_PropertyType</b><h2>gmi:MI_Objective_Type</h2>
+      <ul>
+         <li>/MI_Objective/gmi:MI_Objective_Type</li>
+      </ul><b>Replace these types with mac:MI_Objective_Type</b><h2>gmi:MI_Operation_PropertyType</h2>
+      <ul>
+         <li>MI_Operation_Type/parentOperation/gmi:MI_Operation_PropertyType</li>
+         <li>MI_Operation_Type/childOperation/gmi:MI_Operation_PropertyType</li>
+         <li>MI_AcquisitionInformation_Type/operation/gmi:MI_Operation_PropertyType</li>
+         <li>MI_Plan_Type/operation/gmi:MI_Operation_PropertyType</li>
+      </ul><b>Replace these types with mac:MI_Operation_PropertyType</b><h2>gmi:MI_Operation_Type</h2>
+      <ul>
+         <li>/MI_Operation/gmi:MI_Operation_Type</li>
+      </ul><b>Replace these types with mac:MI_Operation_Type</b><h2>gmi:MI_Plan_PropertyType</h2>
+      <ul>
+         <li>MI_Operation_Type/plan/gmi:MI_Plan_PropertyType</li>
+         <li>MI_AcquisitionInformation_Type/acquisitionPlan/gmi:MI_Plan_PropertyType</li>
+         <li>MI_Requirement_Type/satisifiedPlan/gmi:MI_Plan_PropertyType</li>
+      </ul><b>Replace these types with mac:MI_Plan_PropertyType</b><h2>gmi:MI_Plan_Type</h2>
+      <ul>
+         <li>/MI_Plan/gmi:MI_Plan_Type</li>
+      </ul><b>Replace these types with mac:MI_Plan_Type</b><h2>gmi:MI_PlatformPass_PropertyType</h2>
+      <ul>
+         <li>MI_Event_Type/relatedPass/gmi:MI_PlatformPass_PropertyType</li>
+         <li>MI_Objective_Type/pass/gmi:MI_PlatformPass_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_PlatformPass_Type</h2>
+      <ul>
+         <li>/MI_PlatformPass/gmi:MI_PlatformPass_Type</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_Platform_PropertyType</h2>
+      <ul>
+         <li>MI_Instrument_Type/mountedOn/gmi:MI_Platform_PropertyType</li>
+         <li>MI_Operation_Type/platform/gmi:MI_Platform_PropertyType</li>
+         <li>MI_AcquisitionInformation_Type/platform/gmi:MI_Platform_PropertyType</li>
+      </ul><b>Replace these types with mac:MI_Platform_PropertyType</b><h2>gmi:MI_Platform_Type</h2>
+      <ul>
+         <li>/MI_Platform/gmi:MI_Platform_Type</li>
+      </ul><b>Replace these types with mac:MI_Platform_Type</b><h2>gmi:MI_PriorityCode_PropertyType</h2>
+      <ul>
+         <li>MI_Requirement_Type/priority/gmi:MI_PriorityCode_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_RequestedDate_PropertyType</h2>
+      <ul>
+         <li>MI_Requirement_Type/requestedDate/gmi:MI_RequestedDate_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_RequestedDate_Type</h2>
+      <ul>
+         <li>/MI_RequestedDate/gmi:MI_RequestedDate_Type</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_Requirement_PropertyType</h2>
+      <ul>
+         <li>MI_AcquisitionInformation_Type/acquisitionRequirement/gmi:MI_Requirement_PropertyType</li>
+         <li>MI_Plan_Type/satisfiedRequirement/gmi:MI_Requirement_PropertyType</li>
+      </ul><b>Replace these types with mac:MI_Requiremente_PropertyType</b><h2>gmi:MI_Requirement_Type</h2>
+      <ul>
+         <li>/MI_Requirement/gmi:MI_Requirement_Type</li>
+      </ul><b>Replace these types with mac:MI_Requiremente_Type</b><h2>gmi:MI_SensorTypeCode_PropertyType</h2>
+      <ul>
+         <li>MI_Instrument_Type/type/gmi:MI_SensorTypeCode_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_SensorTypeCode_Type</h2>
+      <ul>
+         <li>/MI_SensorTypeCode/gmi:MI_SensorTypeCode_Type</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_SequenceCode_PropertyType</h2>
+      <ul>
+         <li>MI_Event_Type/sequence/gmi:MI_SequenceCode_PropertyType</li>
+      </ul><b>Replace these types with </b><h2>gmi:MI_TriggerCode_PropertyType</h2>
+      <ul>
+         <li>MI_Event_Type/trigger/gmi:MI_TriggerCode_PropertyType</li>
+      </ul><b>Replace these types with </b><hr><i>Created using find_19115.xsl Version: 2014-11-29</i></body>
 </html>
