@@ -1049,7 +1049,6 @@
     <cit:date>
       <xsl:copy-of select="@*"/>
       <xsl:choose>
-        <xsl:when test="@gco:nilReason"/>
         <xsl:when test="normalize-space()=''">
           <xsl:attribute name="gco:nilReason" select="'missing'"/>
         </xsl:when>
@@ -1321,7 +1320,6 @@
       have to account for gco:Date and gco:DateTime which are both valid descendants of gmd:date
      -->
     <gco:DateTime>
-      <xsl:copy-of select="@* | descendant::gmd:date/@*"/>
       <xsl:for-each select="descendant::gco:Date">
         <xsl:variable name="dateNodeString">
           <xsl:value-of select="xs:string(.)"/>
