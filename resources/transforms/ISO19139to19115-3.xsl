@@ -127,8 +127,8 @@
   <xsl:template match="gmd:fileIdentifier" priority="5">
     <!--
     gmd:fileIdentifier is changed from a gco:CharacterString to a MD_Identifer
-		which now includes a codespace. This transform assumes a form of 
-		namespace:code for the fileIdentifier
+		which now includes a codespace. If gmd:fileIdentifier includes a ':',
+		this transform assumes a form of namespace:code for the fileIdentifier
     -->
     <xsl:element name="mdb:metadataIdentifier">
       <mcc:MD_Identifier>

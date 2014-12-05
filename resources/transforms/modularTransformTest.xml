@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+                       id="indOrgPos">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:contactInstructions/gco:CharacterString</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+               </cit:name>
+               <cit:positionName>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" id="ind">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Individual>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact.2/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+      </cit:CI_Individual>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" id="org">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact.3/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" id="pos">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Individual>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+         <cit:positionName>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.4/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+         </cit:positionName>
+      </cit:CI_Individual>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+                       id="indOrg">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.5/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+               </cit:name>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+                       id="indPos">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Individual>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+         <cit:positionName>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.6/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+         </cit:positionName>
+      </cit:CI_Individual>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+                       id="orgPos">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:positionName>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:contact.7/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>2111-11-11T11:11:11/gmd:MD_Metadata/gmd:metadataStandardName/gco:CharacterString/gmd:MD_Metadata/gmd:metadataStandardVersion/gco:CharacterString/gmd:MD_Metadata/gmd:dataSetURI/gco:CharacterString/gmd:MD_Metadata/gmd:locale/gmd:PT_Locale/gmd:languageCode/gmd:LanguageCode/gmd:MD_Metadata/gmd:locale/gmd:PT_Locale/gmd:country/gmd:Country/gmd:MD_Metadata/gmd:locale/gmd:PT_Locale/gmd:characterEncoding/gmd:MD_CharacterSetCode77788/gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_Georectified/gmd:axisDimensionProperties/gmd:MD_Dimension/gmd:dimensionName/gmd:MD_DimensionNameTypeCode777777777/gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_Georectified/gmd:axisDimensionProperties.2/gmd:MD_Dimension/gmd:dimensionName/gmd:MD_DimensionNameTypeCode22332234/gmd:MD_Metadata/gmd:spatialRepresentationInfo/gmd:MD_Georectified/gmd:cellGeometry/gmd:MD_CellGeometryCode11.1122.2233.33444.44centre<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:authority/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-04-04T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2777-07-07T00:00:00</gco:DateTime>
+         </cit:date>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:CI_Responsibility>
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue=""/>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:authority/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:contactInfo>/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:authority/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:authority/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:authority/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:authority/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:contactInfo>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:version/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:protocol/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:applicationProfile/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:name/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:description/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:shortName/gco:CharacterString777777/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:definition/gco:CharacterStringmandatory/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:condition/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:maximumOccurrence/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:domainValue/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:parentEntity/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:rule/gco:CharacterString/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:rationale/gco:CharacterString<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue=""/>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:source/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extendedElementInformation/gmd:MD_ExtendedElementInformation/gmd:source/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString</cit:contactInfo>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>
+<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle/gmx:Anchor/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle/gmx:FileName<cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date.2/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date.2/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-11-11T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-12-22T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-12-22T22:22:22</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date.2/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date.2/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             gco:nilReason="missing"
+             xlink:title="This is a title attribute on a date"/>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="unknown"/>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date.2/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date.2/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:edition/gco:CharacterString<cit:editionDate>
+      <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2012-09-09T00:00:00</gco:DateTime>
+   </cit:editionDate>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:RS_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString<cit:CI_Responsibility id="citedIndOrgPos">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:contactInfo>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:contactInstructions/gco:CharacterString</cit:contactInfo>
+            <cit:individual>
+               <cit:CI_Individual>
+                  <cit:name>
+                     <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+                  </cit:name>
+                  <cit:positionName>
+                     <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+                  </cit:positionName>
+               </cit:CI_Individual>
+            </cit:individual>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="citedInd">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.2/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="citedOrg">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.3/gmd:CI_ResponsibleParty/gmd:organizationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="citedPos">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:positionName>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.4/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+            </cit:positionName>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="citedIndOrg">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:organizationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:individual>
+               <cit:CI_Individual>
+                  <cit:name>
+                     <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+                  </cit:name>
+               </cit:CI_Individual>
+            </cit:individual>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="citedIndPos">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.6/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:positionName>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.6/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+            </cit:positionName>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="citedOrgPos">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="publisher">publisher</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.7/gmd:CI_ResponsibleParty/gmd:organizationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:individual>
+               <cit:CI_Individual>
+                  <cit:positionName>
+                     <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.7/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+                  </cit:positionName>
+               </cit:CI_Individual>
+            </cit:individual>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:presentationForm/gmd:CI_PresentationFormCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:series/gmd:CI_Series/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:series/gmd:CI_Series/gmd:issueIdentification/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:series/gmd:CI_Series/gmd:page/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:otherCitationDetails/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:collectiveTitle/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:ISBN/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:ISSN/gco:CharacterStringhttp://www.example.com/CI_Citation.CI_OnlineResource/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.8/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.8/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty.8/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:purpose/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:status/gmd:MD_ProgressCode<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+               </cit:name>
+               <cit:positionName>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode20121006/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileDescription/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileType/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic[2]/gmd:fileDescription/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic[2]/gmd:fileType/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic[3]/gmd:fileDescription/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic[3]/gmd:fileType/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:version/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:amendmentNumber/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:specification/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:fileDecompressionTechnique/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gmx:Anchor/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:version/gmx:Anchor/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:amendmentNumber/gmx:FileName/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:specification/gmx:FileName/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:fileDecompressionTechnique/gmx:Anchor/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword.2/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-10-10T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.2/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.2/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.2/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-05-05T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.3/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.3/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.3/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-07-07T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.4/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.4/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.4/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-06-06T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.5/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.5/gmd:MD_Keywords/gmd:keyword.2/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.5/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.5/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-08-08T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-09-09T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:edition/gco:CharacterString<cit:CI_Responsibility>
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="publisher">publisher</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:contactInfo>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterStringhttp://www.example.com/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords.6/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:contactInfo>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:specificUsage/gco:CharacterString2012-10-06T17:36:00/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userDeterminedLimitations/gco:CharacterString/<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userContactInfo/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userContactInfo/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userContactInfo/gmd:CI_ResponsibleParty/gmd:organisationName</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userContactInfo/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userContactInfo/gmd:CI_ResponsibleParty/gmd:individualName</gco:CharacterString>
+               </cit:name>
+               <cit:positionName>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:userContactInfo/gmd:CI_ResponsibleParty/gmd:positionName</gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_Constraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useLimitation/gmx:Anchor/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gmx:Anchor/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:classification/gmd:MD_ClassificationCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:classificationSystem/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:handlingDescription/gco:CharacterString<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2000-05-05T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:edition/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString<cit:CI_Responsibility id="fgdccitation_22753.114849.926657.1">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.1/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="fgdccitation_22753.114849.926657.2">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.2/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="fgdccitation_22753.114849.926657.3">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.3/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="fgdccitation_22753.114849.926657.4">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="publisher">publisher</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.4/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:CI_Citation>
+<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title</gco:CharacterString>
+   </cit:title>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="missing"/>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:code/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:associationType/gmd:DS_AssociationTypeCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:initiativeType/gmd:DS_InitiativeTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2000-01-02T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:edition/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString<cit:CI_Responsibility id="fgdccitation_22425.114851.062325.1">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="fgdccitation_22425.114851.062325.2">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.2/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="fgdccitation_22425.114851.062325.3">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.3/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>
+   <cit:CI_Responsibility id="fgdccitation_22425.114851.062325.4">
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="publisher">publisher</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Individual>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.4/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+         </cit:CI_Individual>
+      </cit:party>
+   </cit:CI_Responsibility>http://www.example.com/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty.5/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:associationType/gmd:DS_AssociationTypeCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.2/gmd:MD_AggregateInformation/gmd:initiativeType/gmd:DS_InitiativeTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title</gco:CharacterString>
+   </cit:title>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="missing"/>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:code/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.3/gmd:MD_AggregateInformation/gmd:associationType/gmd:DS_AssociationTypeCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.3/gmd:MD_AggregateInformation/gmd:initiativeType/gmd:DS_InitiativeTypeCode/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode56777123456789/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet/gmd:MD_CharacterSetCodeoceansfarming/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:environmentDescription/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:description/gco:CharacterString111.1112322.22233.33344.4441<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement.2/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2000-06-06T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=""/>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement.2/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:MD_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicDescription/gmd:geographicIdentifier/gmd:MD_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:begin/gml:TimeInstant/gml:timePosition/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:beginPosition/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:endPosition/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">8888-08-08T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="missing"/>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString<cit:CI_Responsibility>
+      <cit:role>
+         <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                          codeListValue="originator">originator</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+         <cit:CI_Organisation>
+            <cit:name>
+               <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+            </cit:name>
+            <cit:contactInfo>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString</cit:contactInfo>
+            <cit:individual>
+               <cit:CI_Individual>
+                  <cit:name>
+                     <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+                  </cit:name>
+               </cit:CI_Individual>
+            </cit:individual>
+         </cit:CI_Organisation>
+      </cit:party>
+   </cit:CI_Responsibility>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:abstract/gco:CharacterString<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+               </cit:name>
+               <cit:positionName>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode77770707/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword.2/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords.5/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-08-08T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue=" /gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode&#xA;                    "> /gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode
+                    </cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_Constraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:classification/gmd:MD_ClassificationCode/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:classificationSystem/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints/gmd:handlingDescription/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType/gco:LocalName/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:serviceTypeVersion/gco:CharacterString1-100.01-50.0120.1252.012011-08-17T23:44:00Z2012-10-03T07:44:00Z/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:couplingType/srv:SV_CouplingType/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:operationName/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:DCP/srv:DCPList/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:operationDescription/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:invocationName/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:name/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:name/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterStringin/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:description/gco:CharacterStringtruefalse/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:parameters/srv:SV_Parameter/srv:valueType/gco:TypeName/gco:aName/gco:CharacterStringhttp://www.example.com/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/gmd:MD_Metadata/gmd:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations/srv:SV_OperationMetadata/srv:dependsOn/srv:SV_OperationMetadata/srv:operationName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:contentType/gmd:MD_CoverageContentTypeCode/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:descriptor/gco:CharacterString11.1114522.222333.3335/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:descriptor/gco:CharacterString66.6677.7788.88/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.3/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.3/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.3/gmd:MD_Band/gmd:descriptor/gco:CharacterString33.3344.44555.55/gmd:MD_Metadata/gmd:contentInfo/gmd:MD_CoverageDescription/gmd:attributeDescription/gco:RecordType/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:contentType/gmd:MD_CoverageContentTypeCode/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:descriptor/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:sequenceIdentifier/gco:MemberName/gco:attributeType/gco:TypeName/gco:aName/gco:CharacterString/gmd:MD_Metadata/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:descriptor/gco:CharacterString00.111111.111122.2222true
+          /gmd:MD_Metadata/gmd:contentInfo/gmd:MD_FeatureCatalogueDescription/gmd:featureTypes/gco:ScopedName
+        /gmd:MD_Metadata/gmd:contentInfo/gmd:MD_FeatureCatalogueDescription/gmd:featureTypes/gco:LocalName<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmi:MI_Metadata/gmd:contentInfo/gmd:MD_FeatureCatalogueDescription/gmd:featureCatalogueCitation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2666-06-06T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:contentInfo/gmd:MD_FeatureCatalogueDescription/gmd:featureCatalogueCitation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:contentInfo/gmd:MD_FeatureCatalogueDescription/gmd:featureCatalogueCitation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:contentInfo/gmd:MD_ImageDescription/gmd:processingLevelCode/gmd:MD_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:version/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:specification/gco:CharacterString<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="distributor">distributor</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString</cit:contactInfo>
+         <cit:individual>
+            <cit:CI_Individual>
+               <cit:name>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+               </cit:name>
+               <cit:positionName>
+                  <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString</gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:individual>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:fees/gco:CharacterString2014-07-07T07:07:07/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:orderingInstructions/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:turnaround/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:unitsOfDistribution/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:transferSize/gco:Real/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString//gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:formatDistributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="distributor">distributor</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:contactInstructions/gco:CharacterString</cit:contactInfo>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:fees/gco:CharacterString1999-09-09T09:09:09/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:orderingInstructions/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:turnaround/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:unitsOfDistribution/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:transferSize/gco:Realhttp://www.example.com/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="distributor">distributor</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:contactInstructions/gco:CharacterString</cit:contactInfo>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:fees/gco:CharacterString2008-08-08T08:08:08/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:orderingInstructions/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:turnaround/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:amendmentNumber/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:specification/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:fileDecompressionTechnique/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+                       id="fgdccontact_1609.114857.63875">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue="distributor">distributor</cit:CI_RoleCode>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Organisation>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+         <cit:contactInfo>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:hoursOfService/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:contactInstructions/gco:CharacterString</cit:contactInfo>
+      </cit:CI_Organisation>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:fees/gco:CharacterString2006-06-06T06:06:06/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:orderingInstructions/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributionOrderProcess/gmd:MD_StandardOrderProcess/gmd:turnaround/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorTransferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:unitsOfDistribution/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString/gco:/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:applicationProfile/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:offLine/gmd:MD_Medium/gmd:name/gmd:MD_MediumNameCode/@codeListValue/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope/gmd:extent/gmd:EX_Extent/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope/gmd:levelDescription/gmd:MD_ScopeDescription/gmd:other/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:nameOfMeasure/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:measureIdentification/gmd:MD_Identifier/gmd:code/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:measureDescription/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:evaluationMethodType/gmd:DQ_EvaluationMethodTypeCode/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:evaluationMethodDescription/gco:CharacterString<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:evaluationProcedure/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="missing"/>
+</cit:CI_Citation>2012-10-02T15:44:00/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:result/gmd:DQ_QuantitativeResult/gmd:value/gco:Record/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report.3/gmd:DQ_CompletenessOmission/gmd:nameOfMeasure/gco:CharacterString<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_CompletenessOmission/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2012-10-02T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_CompletenessOmission/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_CompletenessOmission/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_CompletenessOmission/gmd:result/gmd:DQ_ConformanceResult/gmd:explanation/gco:CharacterStringfalse/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report.5/gmd:DQ_AbsoluteExternalPositionalAccuracy/gmd:nameOfMeasure/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_AbsoluteExternalPositionalAccuracy/gmd:result/gmd:DQ_QuantitativeResult/gmd:valueType/gco:RecordType/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_AbsoluteExternalPositionalAccuracy/gmd:result/gmd:DQ_QuantitativeResult/gmd:value/gco:Record<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2222-02-22T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:explanation/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:pass/gco:Boolean/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo.3/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:processStep/gmd:LI_ProcessStep/gmd:description/gco:CharacterString2005-05-05T05:05:06<cit:CI_Responsibility xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:role>
+      <cit:CI_RoleCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_RoleCode"
+                       codeListValue=""/>
+   </cit:role>
+   <cit:party>
+      <cit:CI_Individual>
+         <cit:name>
+            <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:processStep/gmd:LI_ProcessStep/gmd:processor/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString</gco:CharacterString>
+         </cit:name>
+      </cit:CI_Individual>
+   </cit:party>
+</cit:CI_Responsibility>/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:description/gco:CharacterString9999998<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:sourceCitation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="missing"/>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:sourceExtent/gmd:EX_Extent/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:description/gco:CharacterString9999997/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:sourceReferenceSystem/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gco:CharacterString<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:sourceCitation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>
+   <cit:date xmlns:gco="http://www.isotc211.org/2005/gco" gco:nilReason="missing"/>
+</cit:CI_Citation>/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:source/gmd:LI_Source/gmd:sourceExtent/gmd:EX_Extent/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:processStep/gmd:LI_ProcessStep/gmd:description/gco:CharacterString2005-05-05T05:05:05<cit:CI_Citation xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11">
+   <cit:title>
+      <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:title/gco:CharacterString</gco:CharacterString>
+   </cit:title>/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:alternateTitle/gco:CharacterString<cit:date>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2000-01-05T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                 codeListValue="/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </cit:date>/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:edition/gco:CharacterString<cit:editionDate>
+      <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2000-02-05T00:00:00</gco:DateTime>
+   </cit:editionDate>
+   <cit:CI_Citation>
+      <cit:title>
+         <gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title</gco:CharacterString>
+      </cit:title>
+      <cit:date>
+         <cit:CI_Date>
+            <cit:date>
+               <gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2000-01-01T02:02:02</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+               <cit:CI_DateTypeCode codeList="setTheDefaultCodeListLocationInTheMasterTransform#CI_DateTypeCode"
+                                    codeListValue="/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+            </cit:dateType>
+         </cit:CI_Date>
+      </cit:date>
+   </cit:CI_Citation>/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:linkage/gmd:URL/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:description/gco:CharacterString/gmd:MD_Metadata/gmd:portrayalCatalogueInfo/gmd:MD_PortrayalCatalogueReference/gmd:portrayalCatalogueCitation/gmd:CI_Citation/gmd:citedResponsibleParty/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:onlineResource/gmd:CI_OnlineResource/gmd:function/gmd:CI_OnLineFunctionCode</cit:CI_Citation>/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_LegalConstraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_SecurityConstraints/gmd:useLimitation/gco:CharacterString/gmd:MD_Metadata/gmd:metadataConstraints/gmd:MD_SecurityConstraints/gmd:classification/gmd:MD_ClassificationCode19980808/gmd:MD_Metadata/gmd:metadataMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceNote/gco:CharacterString
