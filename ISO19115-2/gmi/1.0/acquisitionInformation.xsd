@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by STEPHANE BIDAULT (I.G.N/SAF/RECEPTIONS) -->
+<!-- 
+	Update: 5/21/2009, AMilan
+	Edits for consistency with ISO 19115-2
+		MI_Operation_Type
+		* added: <xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
+		* added: <xs:element name="type" type="gmi:MI_OperationTypeCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+		* Added: <xs:element name="MI_OperationTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+		*Added: <xs:complexType name="MI_OperationTypeCode_PropertyType">
+				<xs:sequence><xs:element ref="gmi:MI_OperationTypeCode" minOccurs="0"/></xs:sequence>
+				<xs:attribute ref="gco:nilReason"/>
+				</xs:complexType>
+								
+	Update: 4/30/2009, AMilan
+	Edits for consistency with ISO 19115-2
+		MI_Objective
+		* changed conditionality from 1 to [1..*]<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="unbounded"/>		
+		MI_Operation_Type
+		* changed citation to optional
+		MI_Requirement_Type
+		* changed citation to optional
+		MI_Event, MI_Plan = OK
+		MI_Instrument_Type
+		* added unbounded maxOccurs: <xs:element name="citation" type="gmd:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		* added this element: <xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
+		* changed type from gmi:MI_SensorTypeCode to characterString: <xs:element name="type" type="gco:CharacterString_PropertyType"/>	
+		MI_Platform_Type
+		*	changed maxOccurs to unbounded <xs:element name="citation" type="gmd:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+-->
+
 <xs:schema elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/gmi" 
 xmlns:gmi="http://www.isotc211.org/2005/gmi"
 xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" version="0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -21,8 +50,9 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="citation" type="gmd:CI_Citation_PropertyType"/>
-					<xs:element name="type" type="gmi:MI_SensorTypeCode_PropertyType"/>
+					<xs:element name="citation" type="gmd:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
+					<xs:element name="type" type="gco:CharacterString_PropertyType"/>
 					<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="mountedOn" type="gmi:MI_Platform_PropertyType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
@@ -48,8 +78,10 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
 					<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="citation" type="gmd:CI_Citation_PropertyType"/>
+					<xs:element name="citation" type="gmd:CI_Citation_PropertyType"  minOccurs="0" maxOccurs="1"/>
+					<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
 					<xs:element name="status" type="gmd:MD_ProgressCode_PropertyType"/>
+					<xs:element name="type" type="gmi:MI_OperationTypeCode_PropertyType" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="parentOperation" type="gmi:MI_Operation_PropertyType" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="childOperation" type="gmi:MI_Operation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="platform" type="gmi:MI_Platform_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
@@ -78,7 +110,7 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="citation" type="gmd:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="citation" type="gmd:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
 					<xs:element name="description" type="gco:CharacterString_PropertyType"/>
 					<xs:element name="sponsor" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
@@ -163,7 +195,7 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="citation" type="gmd:CI_Citation_PropertyType"/>
+					<xs:element name="citation" type="gmd:CI_Citation_PropertyType" minOccurs="0"/>
 					<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
 					<xs:element name="requestor" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element name="recipient" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
@@ -218,7 +250,7 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType"/>
+					<xs:element name="identifier" type="gmd:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element name="priority" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="type" type="gmi:MI_ObjectiveTypeCode_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="function" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
@@ -370,4 +402,18 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+<!-- added missing info (am 5/21/09) -->	
+	<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="MI_OperationTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MI_OperationTypeCode_PropertyType">
+		<xs:sequence>
+			<xs:element ref="gmi:MI_OperationTypeCode" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	
+	
 </xs:schema>
