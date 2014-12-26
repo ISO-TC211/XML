@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by STEPHANE BIDAULT (I.G.N/SAF/RECEPTIONS) -->
-<xs:schema xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.isotc211.org/2005/gmi" elementFormDefault="qualified" version="0.1">
+<!--
+	Update: 4/30/2009, AMilan
+	Edited to conform to 19115-2
+	
+	MI_Georectified_Type
+	* removed geolocationIdentification
+	
+	MI_Georeferenceable_Type
+	* removed platformParameters  
+-->
+<xs:schema xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.isotc211.org/2005/gmi" elementFormDefault="qualified" version="0.1">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 04-04-2008 17:12:47 ====== Name: SpatialRepresentation - Position: 3</xs:documentation>
@@ -8,7 +18,7 @@
 	<!-- ================================== Imports ================================== -->
 	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/gmd.xsd"/>
 	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd"/>
-	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="../gml/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml.xsd"/>
 	<xs:include schemaLocation="../gmi/acquisitionInformation.xsd"/>
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
@@ -21,7 +31,6 @@
 			<xs:extension base="gmd:MD_Georeferenceable_Type">
 				<xs:sequence>
 					<xs:element name="geolocationInformation" type="gmi:MI_GeolocationInformation_PropertyType" maxOccurs="unbounded"/>
-					<xs:element name="platformParameters" type="gmi:MI_Platform_PropertyType" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -45,7 +54,6 @@
 			<xs:extension base="gmd:MD_Georectified_Type">
 				<xs:sequence>
 					<xs:element name="checkPoint" type="gmi:MI_GCP_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="geolocationIdentification" type="gmi:MI_GCPCollection_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
