@@ -38,7 +38,8 @@
   xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11"
   exclude-result-prefixes="#all">
   
-  <xsl:import href="schema-utility.xsl"/>
+  <!-- This template creates the namespaces required for 19115-3 in the output xml -->
+  <xsl:import href="create19115-3Namespaces.xsl"/>
   
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
