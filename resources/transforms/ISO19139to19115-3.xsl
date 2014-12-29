@@ -38,8 +38,10 @@
   xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11"
   exclude-result-prefixes="#all">
   
-  <!-- This template creates the namespaces required for 19115-3 in the output xml -->
+  <!-- Imnport template that creates the namespaces required for 19115-3 in the output xml -->
   <xsl:import href="create19115-3Namespaces.xsl"/>
+  <!-- Import template for DateTime translation -->
+  <xsl:import href="DateTime.xsl"/>
   
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
@@ -1256,35 +1258,6 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:for-each>
-  </xsl:template>
-  <xsl:template name="writeDateTime">
-    <!--
-      have to account for gco:Date and gco:DateTime which are both valid descendants of gmd:date
-     -->
-    <gco:DateTime>
-      <xsl:for-each select="descendant::gco:Date">
-        <xsl:variable name="dateNodeString">
-          <xsl:value-of select="xs:string(.)"/>
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="string-length($dateNodeString)=6">
-            <xsl:value-of select="concat(substring($dateNodeString,1,4),'-',substring($dateNodeString,5,2),'-01T00:00:00')"/>
-          </xsl:when>
-          <xsl:when test="string-length($dateNodeString)=7">
-            <xsl:value-of select="concat(substring($dateNodeString,1,4),'-',substring($dateNodeString,6,2),'-01T00:00:00')"/>
-          </xsl:when>
-          <xsl:when test="string-length($dateNodeString)=8">
-            <xsl:value-of select="concat(substring($dateNodeString,1,4),'-',substring($dateNodeString,5,2),'-',substring($dateNodeString,7,2),'T00:00:00')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="concat($dateNodeString,'T00:00:00')"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:for-each>
-      <xsl:for-each select="descendant::gco:DateTime">
-        <xsl:value-of select="."/>
-      </xsl:for-each>
-    </gco:DateTime>
   </xsl:template>
   <!-- Default template writes correct namespace prefix -->
   <xsl:template match="*">
