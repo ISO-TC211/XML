@@ -33,7 +33,8 @@
    <mdb:metadataScope>
       <mdb:MD_MetadataScope>
          <mdb:resourceScope>
-            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue="AnyURI">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI1">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
          </mdb:resourceScope>
          <!-- Invalid for conf.metadata-base-instance.scope-name
           mdb:name>
@@ -44,9 +45,62 @@
    <mdb:metadataScope>
       <mdb:MD_MetadataScope>
          <mdb:resourceScope>
-            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue="anyValidURI">/*/gmd:hierarchyLevel.2/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI2">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
          </mdb:resourceScope>
          <mdb:name>
+            <!-- Invalid for conf.metadata-base-instance.scope-name
+               <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
+               -->
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI3">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Invalid for conf.metadata-base-instance.scope-name -->
+            <gco:CharacterString></gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI4">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <!-- Valid for conf.metadata-base-instance.scope-name due to nilReason -->
+         <mdb:name gco:nilReason="unknown">
+            <gco:CharacterString></gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="anyValidURI5">/*/gmd:hierarchyLevel.2/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Valid for conf.metadata-base-instance.scope-name -->
+            <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   
+   <!-- No match for the context -->
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="dataset">/*/gmd:hierarchyLevel.2/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Valid for conf.metadata-base-instance.scope-name -->
             <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
          </mdb:name>
       </mdb:MD_MetadataScope>

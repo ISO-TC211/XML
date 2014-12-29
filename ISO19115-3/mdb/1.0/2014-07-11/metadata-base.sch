@@ -17,6 +17,13 @@
     <sch:diagnostic 
       id="conf.metadata-base-instance.root-element-failure-fr"
       xml:lang="fr">Modifier l'élément racine du document pour que ce soit un élément MD_Metadata.</sch:diagnostic>
+
+    <sch:diagnostic 
+      id="conf.metadata-base-instance.root-element-success-en"
+      xml:lang="en">Root element MD_Metadata found.</sch:diagnostic>
+    <sch:diagnostic 
+      id="conf.metadata-base-instance.root-element-success-fr"
+      xml:lang="fr">Élément racine MD_Metadata défini.</sch:diagnostic>
   </sch:diagnostics>
   
   <sch:pattern id="conf.metadata-base-instance.root-element">
@@ -29,9 +36,16 @@
       ISO19115-1 DOIT avoir un élément racine MD_Metadata (défini dans l'espace
       de nommage http://www.isotc211.org/2005/mdb/1.0).</sch:p>
     <sch:rule context="/">
-      <sch:assert test="(count(/mdb:MD_Metadata) = 1)"
+      <sch:let name="numberOfMD_MetadataElement" 
+               value="count(/mdb:MD_Metadata)"/>
+      
+      <sch:assert test="$numberOfMD_MetadataElement = 1"
       diagnostics="conf.metadata-base-instance.root-element-failure-en 
                    conf.metadata-base-instance.root-element-failure-fr"/>
+      
+      <sch:report test="$numberOfMD_MetadataElement = 1"
+        diagnostics="conf.metadata-base-instance.root-element-success-en 
+                     conf.metadata-base-instance.root-element-success-fr"/>
     </sch:rule>
   </sch:pattern>
   
@@ -42,11 +56,27 @@
     <sch:diagnostic 
       id="conf.metadata-base-instance.scope-name-failure-en" 
       xml:lang="en">Specify a name for the metadata scope 
-      (required if the scope code is not "dataset").</sch:diagnostic>
+      (required if the scope code is not "dataset", in that case
+      "<sch:value-of select="$scopeCode"/>").</sch:diagnostic>
     <sch:diagnostic 
       id="conf.metadata-base-instance.scope-name-failure-fr" 
       xml:lang="fr">Préciser la description du domaine d'application 
-      (car le document décrit une ressource qui n'est pas un "jeu de données").</sch:diagnostic>
+      (car le document décrit une ressource qui n'est pas un "jeu de données",
+      la ressource est de type "<sch:value-of select="$scopeCode"/>").</sch:diagnostic>
+    
+    
+    <sch:diagnostic 
+      id="conf.metadata-base-instance.scope-name-success-en" 
+      xml:lang="en">Scope name 
+      "<sch:value-of select="$scopeCodeName"/><sch:value-of select="$nilReason"/>"
+      is defined for resource with type "<sch:value-of select="$scopeCode"/>".
+    </sch:diagnostic>
+    <sch:diagnostic 
+      id="conf.metadata-base-instance.scope-name-success-fr" 
+      xml:lang="fr">La description du domaine d'application 
+      "<sch:value-of select="$scopeCodeName"/><sch:value-of select="$nilReason"/>"
+      est renseigné pour la ressource de type "<sch:value-of select="$scopeCode"/>".
+    </sch:diagnostic>
   </sch:diagnostics>
   
   <sch:pattern id="conf.metadata-base-instance.scope-name">
@@ -57,11 +87,30 @@
     <sch:p xml:lang="fr">Si un élément domaine d'application (MD_MetadataScope)
       est défini, sa description (name) DOIT avoir une valeur
       si se domaine n'est pas "jeu de données" (ie. "dataset").</sch:p>
-    <sch:rule context="//mdb:MD_MetadataScope/mdb:resourceScope/
-                          mcc:MD_ScopeCode[not(@codeListValue ='dataset')]">
-      <sch:assert test="(count(../../mdb:name)=1)"
+    
+    <sch:rule context="//mdb:MD_MetadataScope[not(mdb:resourceScope/
+                          mcc:MD_ScopeCode/@codeListValue ='dataset')]">
+      
+      <sch:let name="scopeCode" 
+        value="mdb:resourceScope/mcc:MD_ScopeCode/@codeListValue"/>
+      
+      <sch:let name="scopeCodeName" 
+        value="normalize-space(mdb:name)"/>
+      <sch:let name="hasScopeCodeName" 
+        value="$scopeCodeName != ''"/>
+      
+      <sch:let name="nilReason" 
+        value="mdb:name/@gco:nilReason"/>
+      <sch:let name="hasNilReason" 
+        value="$nilReason != ''"/>
+      
+      <sch:assert test="$hasScopeCodeName or $hasNilReason"
         diagnostics="conf.metadata-base-instance.scope-name-failure-en
                      conf.metadata-base-instance.scope-name-failure-fr"/>
+      
+      <sch:report test="$hasScopeCodeName or $hasNilReason"
+        diagnostics="conf.metadata-base-instance.scope-name-success-en
+                     conf.metadata-base-instance.scope-name-success-fr"/>
     </sch:rule>
   </sch:pattern>
   
