@@ -42,6 +42,8 @@
   <xsl:import href="create19115-3Namespaces.xsl"/>
   <!-- Import template for DateTime translation -->
   <xsl:import href="DateTime.xsl"/>
+  <!-- Import templates for multiLingualCharacterStrings -->
+  <xsl:import href="multiLingualCharacterStrings.xsl"/>
   
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
@@ -1217,30 +1219,6 @@
         </xsl:element>
       </xsl:element>
     </xsl:if>
-  </xsl:template>
-  <xsl:template name="writeCharacterStringElement">
-    <xsl:param name="elementName"/>
-    <xsl:param name="nodeWithStringToWrite"/>
-    <xsl:variable name="isMultilingual" select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
-    <xsl:variable name="hasCharacterString" select="count($nodeWithStringToWrite/gco:CharacterString) = 1"/>
-    <xsl:choose>
-      <xsl:when test="$nodeWithStringToWrite">
-        <xsl:element name="{$elementName}">
-          <xsl:copy-of select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>
-          <xsl:if test="$isMultilingual">
-            <xsl:attribute name="xsi:type" select="'lan:PT_FreeText_PropertyType'"/>
-          </xsl:if>
-          <xsl:if test="$hasCharacterString">
-            <gco:CharacterString>
-              <xsl:value-of select="$nodeWithStringToWrite/gco:CharacterString"/>
-            </gco:CharacterString>
-          </xsl:if>
-          <xsl:if test="$isMultilingual">
-            <xsl:apply-templates select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
-          </xsl:if>
-        </xsl:element>
-      </xsl:when>
-    </xsl:choose>
   </xsl:template>
   <xsl:template name="characterStringSubstitutions">
     <xsl:param name="parentElement"/>
