@@ -980,59 +980,6 @@
   <!--
     Utility Templates
   -->
-  <xsl:template match="gmd:CI_Citation">
-    <xsl:element name="cit:CI_Citation">
-      <xsl:apply-templates/>
-      <!-- Special attention is required for CI_ResponsibleParties that are included in the CI_Citation only for a URL. These are currently identified as those 
-        with no name elements (individualName, organisationName, or positionName)
-      -->
-      <xsl:for-each select=".//gmd:CI_ResponsibleParty[count(gmd:individualName/gco:CharacterString) + count(gmd:organisationName/gco:CharacterString) + count(gmd:positionName/gco:CharacterString) = 0]">
-        <xsl:call-template name="CI_ResponsiblePartyToOnlineResource"/>
-      </xsl:for-each>
-    </xsl:element>
-  </xsl:template>
-  <xsl:template match="gmd:CI_Citation/gmd:date">
-    <cit:date>
-      <xsl:copy-of select="@*"/>
-      <xsl:choose>
-        <xsl:when test="normalize-space()=''">
-          <xsl:attribute name="gco:nilReason" select="'missing'"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <cit:CI_Date>
-            <cit:date>
-              <xsl:choose>
-                <xsl:when test="descendant::gmd:date/@gco:nilReason">
-                  <xsl:copy-of select="descendant::gmd:date/@gco:nilReason"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:call-template name="writeDateTime"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </cit:date>
-            <xsl:for-each select="descendant::gmd:dateType">
-              <xsl:call-template name="writeCodelistElement">
-                <xsl:with-param name="elementName" select="'cit:dateType'"/>
-                <xsl:with-param name="codeListName" select="'cit:CI_DateTypeCode'"/>
-                <xsl:with-param name="codeListValue" select="gmd:CI_DateTypeCode"/>
-              </xsl:call-template>
-            </xsl:for-each>
-          </cit:CI_Date>
-        </xsl:otherwise>
-      </xsl:choose>
-    </cit:date>
-  </xsl:template>
-  <xsl:template match="gmd:CI_Citation/gmd:title">
-    <xsl:call-template name="writeCharacterStringElement">
-      <xsl:with-param name="elementName" select="'cit:title'"/>
-      <xsl:with-param name="nodeWithStringToWrite" select="."/>
-    </xsl:call-template>
-  </xsl:template>
-  <xsl:template match="gmd:CI_Citation/gmd:editionDate">
-    <cit:editionDate>
-      <xsl:call-template name="writeDateTime"/>
-    </cit:editionDate>
-  </xsl:template>
   <xsl:template match="gmd:contactInfo/gmd:CI_Contact/gmd:phone">
     <xsl:for-each select="gmd:CI_Telephone/*">
       <cit:phone>
@@ -1303,4 +1250,8 @@
        I am not sure why this is necessary.
   -->
   <xsl:include href="CI_ResponsibleParty.xsl"/>
+  <!-- Include templates for CI_Citation. These are included here to prevent them being overridden by the default template.
+       I am not sure why this is necessary.
+  -->
+  <xsl:include href="CI_Citation.xsl"/>
 </xsl:stylesheet>
