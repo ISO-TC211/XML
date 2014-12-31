@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-07-11"
+                 xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
+                 xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11"
+                 xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2014-07-11"
+                 xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11"
+                 xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11"
+                 xmlns:mas="http://www.isotc211.org/namespace/mas/1.0/2014-07-11"
+                 xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11"
+                 xmlns:mco="http://www.isotc211.org/namespace/mco/1.0/2014-07-11"
+                 xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-07-11"
+                 xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-07-11"
+                 xmlns:mds="http://www.isotc211.org/namespace/mds/1.0/2014-07-11"
+                 xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-07-11"
+                 xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11"
+                 xmlns:mmi="http://www.isotc211.org/namespace/mmi/1.0/2014-07-11"
+                 xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11"
+                 xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11"
+                 xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11"
+                 xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11"
+                 xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-07-11"
+                 xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0/2014-07-11"
+                 xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11"
+                 xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11"
+                 xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-07-11"
+                 xmlns:mai="http://www.isotc211.org/namespace/mai/1.0/2014-07-11"
+                 xmlns:mic="http://www.isotc211.org/namespace/mic/1.0/2014-07-11"
+                 xmlns:mil="http://www.isotc211.org/namespace/mil/1.0/2014-07-11"
+                 xmlns:gco="http://www.isotc211.org/2005/gco"
+                 xmlns:gml="http://www.opengis.net/gml/3.2"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI1">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <!-- Invalid for conf.metadata-base-instance.scope-name
+          mdb:name>
+            <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
+         </mdb:name> -->
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI2">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Invalid for conf.metadata-base-instance.scope-name
+               <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
+               -->
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI3">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Invalid for conf.metadata-base-instance.scope-name -->
+            <gco:CharacterString></gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="AnyURI4">/*/gmd:hierarchyLevel/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <!-- Valid for conf.metadata-base-instance.scope-name due to nilReason -->
+         <mdb:name gco:nilReason="unknown">
+            <gco:CharacterString></gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="anyValidURI5">/*/gmd:hierarchyLevel.2/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Valid for conf.metadata-base-instance.scope-name -->
+            <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   
+   <!-- No match for the context -->
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="dataset">/*/gmd:hierarchyLevel.2/gmd:MD_ScopeCode</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+         <mdb:name>
+            <!-- Valid for conf.metadata-base-instance.scope-name -->
+            <gco:CharacterString>/*/gmd:hierarchyLevelName/gco:CharacterString</gco:CharacterString>
+         </mdb:name>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   
+   <!-- Invalid for conf.metadata-base-instance.create-date -->
+   <mdb:dateInfo>
+      <cit:CI_Date>
+         <cit:date>
+            <gco:DateTime>2011-11-11T00:00:00</gco:DateTime>
+         </cit:date>
+         <cit:dateType>
+            <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" 
+               codeListValue="anyValidURI">nocreationdate</cit:CI_DateTypeCode>
+         </cit:dateType>
+      </cit:CI_Date>
+   </mdb:dateInfo>
+</mdb:MD_Metadata>
