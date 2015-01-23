@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-12-25" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" xmlns:pre="http://www.isotc211.org/namespace/pre/1.0/2014-12-25" xmlns:reg="http://www.isotc211.org/namespace/reg/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/reg/1.0/2014-12-25" version="1.0">
+  <include schemaLocation="registration.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/cit/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/cit/1.0/2014-12-25/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/pre/1.0/2014-12-25" schemaLocation="../../../ISO19135/pre/1.0/2014-12-25/pre.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

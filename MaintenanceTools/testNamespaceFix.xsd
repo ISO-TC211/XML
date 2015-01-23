@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-12-25" 
+  xmlns:dqc="http://www.isotc211.org/namespace/dqc/1.0/2014-12-25" 
+  xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" 
+  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" 
+  xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-12-25" 
+  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-12-25" 
+  elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mdb/1.0/2014-12-25" version="1.0">
+
+  <import namespace="http://www.isotc211.org/namespace/fcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/fcc/1.0/2014-12-25/fcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/rbc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/rbc/1.0/2014-12-25/rbc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/cit/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/cit/1.0/2014-12-25/cit.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/mri/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mri/1.0/2014-12-25/mri.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/gml/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/gml/1.0/2014-12-25/gml.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/gco/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/gco/1.0/2014-12-25/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/pre/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/pre/1.0/2014-12-25/pre.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/reg/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/reg/1.0/2014-12-25/reg.xsd"/>
+  <import namespace="http://www.isotc211.org/namespace/dqc/1.0/2014-12-25" schemaLocation="../../../../../19157/-2/dqc/1.0/2014-12-25/dqc.xsd"/>
+  
+</schema>
