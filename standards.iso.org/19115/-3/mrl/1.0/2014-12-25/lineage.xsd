@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gco="http://www.isotc211.org/2014/gco" 
   xmlns:gmw="http://www.isotc211.org/2014/gmw"  
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" 
-  xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-12-25" 
-  elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mrl/1.0/2014-12-25" version="1.0">
+  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" 
+  xmlns:mrl="http://standards.iso.org/19115/-3/mrl/1.0/2014-12-25" 
+  elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mrl/1.0/2014-12-25" version="1.0">
 <!--  <include schemaLocation="mrl.xsd"/>-->
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../ISO19139rework/gmw.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../../../19139/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../../../19139/gmw.xsd"/>
   
 <!--  xmlns:gts="http://www.isotc211.org/2005/gts"
   <import namespace="http://www.isotc211.org/2005/gts" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"/>-->
   
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="LI_Lineage" substitutionGroup="mcc:Abstract_LineageInformation" type="mrl:LI_Lineage_Type">
     <annotation>

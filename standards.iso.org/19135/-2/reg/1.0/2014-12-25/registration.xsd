@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" xmlns:pre="http://www.isotc211.org/namespace/pre/1.0/2014-12-25" xmlns:reg="http://www.isotc211.org/namespace/reg/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/reg/1.0/2014-12-25" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" xmlns:pre="http://standards.iso.org/19135/-2/pre/1.0/2014-12-25" xmlns:reg="http://standards.iso.org/19135/-2/reg/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19135/-2/reg/1.0/2014-12-25" version="1.0">
   <include schemaLocation="reg.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/pre/1.0/2014-12-25" schemaLocation="../../../ISO19135/pre/1.0/2014-12-25/pre.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19135/-2/pre/1.0/2014-12-25" schemaLocation="../../../ISO19135/pre/1.0/2014-12-25/pre.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="RE_AdditionInformation" substitutionGroup="reg:AbstractRE_ProposalManagementInformation" type="reg:RE_AdditionInformation_Type"/>
   <complexType name="RE_AdditionInformation_Type">

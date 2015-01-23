@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gco="http://www.isotc211.org/2014/gco" 
-  xmlns:gmw="http://www.isotc211.org/2014/gmw" 
-  xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-12-25" 
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mac/1.0/2014-12-25" version="1.0">
-<!--  <include schemaLocation="mac.xsd"/>-->
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../ISO19139rework/gmw.xsd"/>
-  
-<!--  xmlns:gmw="http://www.isotc211.org/2014/gmw" 
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2014/gco" xmlns:gmw="http://www.isotc211.org/2014/gmw" xmlns:mac="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25" version="1.0">
+  <!--  <include schemaLocation="mac.xsd"/>-->
+  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../../../19139/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../../../19139/gmw.xsd"/>
+  <!--  xmlns:gmw="http://www.isotc211.org/2014/gmw" 
   <import namespace="http://www.isotc211.org/2005/gss" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>-->
-  
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation" type="mac:MI_AcquisitionInformation_Type">
     <annotation>
-      <documentation>Description: Designations for the measuring instruments and their bands, the platform carrying them, and the mission to which the data contributes
-FGDC: Platform_and_Instrument_Identification, Mission_Information
-shortName: PltfrmInstId</documentation>
+      <documentation>Description: Designations for the measuring instruments and their bands, the platform carrying them, and the mission to which the data contributes FGDC: Platform_and_Instrument_Identification, Mission_Information shortName: PltfrmInstId</documentation>
     </annotation>
   </element>
   <complexType name="MI_AcquisitionInformation_Type">
@@ -43,8 +36,7 @@ shortName: PltfrmInstId</documentation>
   </complexType>
   <element name="MI_ContextCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>Description: context of activation
-shortName: CntxtCode</documentation>
+      <documentation>Description: context of activation shortName: CntxtCode</documentation>
     </annotation>
   </element>
   <complexType name="MI_ContextCode_PropertyType">
@@ -75,8 +67,7 @@ shortName: CntxtCode</documentation>
   </complexType>
   <element name="MI_Event" substitutionGroup="gco:AbstractObject" type="mac:MI_Event_Type">
     <annotation>
-      <documentation>Description: identification of a significant collection point within an operation
-shortName: Event</documentation>
+      <documentation>Description: identification of a significant collection point within an operation shortName: Event</documentation>
     </annotation>
   </element>
   <complexType name="MI_Event_Type">
@@ -85,32 +76,27 @@ shortName: Event</documentation>
         <sequence>
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: Event name or number
-shortName: evtId</documentation>
+              <documentation>Description: Event name or number shortName: evtId</documentation>
             </annotation>
           </element>
           <element name="trigger" type="mac:MI_TriggerCode_PropertyType">
             <annotation>
-              <documentation>Description: Initiator of the event
-shortName: evtTrig</documentation>
+              <documentation>Description: Initiator of the event shortName: evtTrig</documentation>
             </annotation>
           </element>
           <element name="context" type="mac:MI_ContextCode_PropertyType">
             <annotation>
-              <documentation>Description: Meaning of the event
-shortName: evtCntxt</documentation>
+              <documentation>Description: Meaning of the event shortName: evtCntxt</documentation>
             </annotation>
           </element>
           <element name="sequence" type="mac:MI_SequenceCode_PropertyType">
             <annotation>
-              <documentation>Description: Relative time ordering of the event
-shortName: evtSeq</documentation>
+              <documentation>Description: Relative time ordering of the event shortName: evtSeq</documentation>
             </annotation>
           </element>
           <element name="time" type="gco:DateTime_PropertyType">
             <annotation>
-              <documentation>Description: Time the event occured
-shortName: evtTime</documentation>
+              <documentation>Description: Time the event occured shortName: evtTime</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="relatedPass" type="mac:MI_PlatformPass_PropertyType"/>
@@ -129,8 +115,7 @@ shortName: evtTime</documentation>
   </complexType>
   <element name="MI_GeometryTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>Description: geometric description of collection
-shortName: GeoTypeCode</documentation>
+      <documentation>Description: geometric description of collection shortName: GeoTypeCode</documentation>
     </annotation>
   </element>
   <complexType name="MI_GeometryTypeCode_PropertyType">
@@ -141,9 +126,7 @@ shortName: GeoTypeCode</documentation>
   </complexType>
   <element name="MI_Instrument" substitutionGroup="gco:AbstractObject" type="mac:MI_Instrument_Type">
     <annotation>
-      <documentation>Description: Designations for the measuring instruments
-FGDC: Platform_and_Instrument_Identification
-shortName: PltfrmInstId</documentation>
+      <documentation>Description: Designations for the measuring instruments FGDC: Platform_and_Instrument_Identification shortName: PltfrmInstId</documentation>
     </annotation>
   </element>
   <complexType name="MI_Instrument_Type">
@@ -152,32 +135,22 @@ shortName: PltfrmInstId</documentation>
         <sequence>
           <element maxOccurs="unbounded" minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
-              <documentation>Description: complete citation of the instrument
-FGDC: Instrument_Full_Name
-Position: 1
-shortName: instNam
-Conditional: if shortName not specified</documentation>
+              <documentation>Description: complete citation of the instrument FGDC: Instrument_Full_Name Position: 1 shortName: instNam Conditional: if shortName not specified</documentation>
             </annotation>
           </element>
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: complete citation of the instrument
-FGDC: Instrument_Full_Name
-Position: 1
-shortName: instNam
-Conditional: if shortName not specified</documentation>
+              <documentation>Description: complete citation of the instrument FGDC: Instrument_Full_Name Position: 1 shortName: instNam Conditional: if shortName not specified</documentation>
             </annotation>
           </element>
           <element name="type" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: Code describing the type of instrument
-shortName: instType</documentation>
+              <documentation>Description: Code describing the type of instrument shortName: instType</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: Textual description of the instrument
-shortName: instDesc</documentation>
+              <documentation>Description: Textual description of the instrument shortName: instDesc</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="mountedOn" type="mac:MI_Platform_PropertyType"/>
@@ -194,8 +167,7 @@ shortName: instDesc</documentation>
   </complexType>
   <element name="MI_Objective" substitutionGroup="gco:AbstractObject" type="mac:MI_Objective_Type">
     <annotation>
-      <documentation>Description: Describes the characteristics, spatial and temportal extent of the intended object to be observed 
-shortName: TargetId</documentation>
+      <documentation>Description: Describes the characteristics, spatial and temportal extent of the intended object to be observed shortName: TargetId</documentation>
     </annotation>
   </element>
   <complexType name="MI_Objective_Type">
@@ -204,37 +176,27 @@ shortName: TargetId</documentation>
         <sequence>
           <element maxOccurs="unbounded" name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: Registered code used to identify the objective
-Postion: 1
-shortName: targetId</documentation>
+              <documentation>Description: Registered code used to identify the objective Postion: 1 shortName: targetId</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="priority" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: priority applied to the target
-Position: 3
-shortName: trgtPriority</documentation>
+              <documentation>Description: priority applied to the target Position: 3 shortName: trgtPriority</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="type" type="mac:MI_ObjectiveTypeCode_PropertyType">
             <annotation>
-              <documentation>Description: collection technique for the objective
-Position: 4
-shortName: trgtType</documentation>
+              <documentation>Description: collection technique for the objective Position: 4 shortName: trgtType</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="function" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: function performed by or at the objective
-Position: 5
-shortName: trgtFunct</documentation>
+              <documentation>Description: function performed by or at the objective Position: 5 shortName: trgtFunct</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="extent" type="mcc:Abstract_Extent_PropertyType">
             <annotation>
-              <documentation>Description: extent information including the bounding box, bounding polygon, vertical and temporal extent of the objective
-Position: 6
-shortName: trgtExtent</documentation>
+              <documentation>Description: extent information including the bounding box, bounding polygon, vertical and temporal extent of the objective Position: 6 shortName: trgtExtent</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sensingInstrument" type="mac:MI_Instrument_PropertyType"/>
@@ -253,8 +215,7 @@ shortName: trgtExtent</documentation>
   </complexType>
   <element name="MI_ObjectiveTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>Description: temporal persistence of collection objective
-shortName: ObjTypeCode</documentation>
+      <documentation>Description: temporal persistence of collection objective shortName: ObjTypeCode</documentation>
     </annotation>
   </element>
   <complexType name="MI_ObjectiveTypeCode_PropertyType">
@@ -265,8 +226,7 @@ shortName: ObjTypeCode</documentation>
   </complexType>
   <element name="MI_Operation" substitutionGroup="gco:AbstractObject" type="mac:MI_Operation_Type">
     <annotation>
-      <documentation>Description: Designations for the operation used to acquire the dataset
-shortName: MssnId</documentation>
+      <documentation>Description: Designations for the operation used to acquire the dataset shortName: MssnId</documentation>
     </annotation>
   </element>
   <complexType name="MI_Operation_Type">
@@ -275,44 +235,27 @@ shortName: MssnId</documentation>
         <sequence>
           <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: Description of the mission on which the platform observations are part and the objectives of that mission
-FGDC: Mission_Description
-Position: 3
-shortName: mssnDesc</documentation>
+              <documentation>Description: Description of the mission on which the platform observations are part and the objectives of that mission FGDC: Mission_Description Position: 3 shortName: mssnDesc</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
-              <documentation>Description: character string by which the mission is known
-FGDC: Mission_Name
-Position: 1
-shortName: pltMssnNam
-NITF_ACFTA:AC_MSN_ID</documentation>
+              <documentation>Description: character string by which the mission is known FGDC: Mission_Name Position: 1 shortName: pltMssnNam NITF_ACFTA:AC_MSN_ID</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: character string by which the mission is known
-FGDC: Mission_Name
-Position: 1
-shortName: pltMssnNam
-NITF_ACFTA:AC_MSN_ID</documentation>
+              <documentation>Description: character string by which the mission is known FGDC: Mission_Name Position: 1 shortName: pltMssnNam NITF_ACFTA:AC_MSN_ID</documentation>
             </annotation>
           </element>
           <element name="status" type="mcc:MD_ProgressCode_PropertyType">
             <annotation>
-              <documentation>Description: status of the data acquisition
-FGDC: Mission_Start_Date
-Position: 4
-shortName: mssnStatus</documentation>
+              <documentation>Description: status of the data acquisition FGDC: Mission_Start_Date Position: 4 shortName: mssnStatus</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="type" type="mac:MI_OperationTypeCode_PropertyType">
             <annotation>
-              <documentation>Description: status of the data acquisition
-FGDC: Mission_Start_Date
-Position: 4
-shortName: mssnStatus</documentation>
+              <documentation>Description: status of the data acquisition FGDC: Mission_Start_Date Position: 4 shortName: mssnStatus</documentation>
             </annotation>
           </element>
           <element name="parentOperation" type="mac:MI_Operation_PropertyType"/>
@@ -345,8 +288,7 @@ shortName: mssnStatus</documentation>
   </complexType>
   <element name="MI_Plan" substitutionGroup="gco:AbstractObject" type="mac:MI_Plan_Type">
     <annotation>
-      <documentation>Description: Designations for the planning information related to meeting requirements
-shortName: PlanId</documentation>
+      <documentation>Description: Designations for the planning information related to meeting requirements shortName: PlanId</documentation>
     </annotation>
   </element>
   <complexType name="MI_Plan_Type">
@@ -355,22 +297,17 @@ shortName: PlanId</documentation>
         <sequence>
           <element minOccurs="0" name="type" type="mac:MI_GeometryTypeCode_PropertyType">
             <annotation>
-              <documentation>Description: manner of sampling geometry the planner expects for collection of the objective data
-Postion: 2
-shortName: planType</documentation>
+              <documentation>Description: manner of sampling geometry the planner expects for collection of the objective data Postion: 2 shortName: planType</documentation>
             </annotation>
           </element>
           <element name="status" type="mcc:MD_ProgressCode_PropertyType">
             <annotation>
-              <documentation>Description: current status of the plan (pending, completed, etc.)
-shortName: planStatus</documentation>
+              <documentation>Description: current status of the plan (pending, completed, etc.) shortName: planStatus</documentation>
             </annotation>
           </element>
           <element name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
-              <documentation>Description: Identification of authority requesting target collection
-Postion: 1
-shortName: planReqId</documentation>
+              <documentation>Description: Identification of authority requesting target collection Postion: 1 shortName: planReqId</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="operation" type="mac:MI_Operation_PropertyType"/>
@@ -388,8 +325,7 @@ shortName: planReqId</documentation>
   </complexType>
   <element name="MI_Platform" substitutionGroup="mcc:Abstract_Platform" type="mac:MI_Platform_Type">
     <annotation>
-      <documentation>Description: Designations for the platform used to acquire the dataset
-shortName: PltfrmId</documentation>
+      <documentation>Description: Designations for the platform used to acquire the dataset shortName: PltfrmId</documentation>
     </annotation>
   </element>
   <complexType name="MI_Platform_Type">
@@ -398,33 +334,22 @@ shortName: PltfrmId</documentation>
         <sequence>
           <element maxOccurs="unbounded" minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
-              <documentation>Description: complete citation of the platform
-FGDC: Platform_Full_Name
-Position: 3
-shortName: pltNam
-Conditional: if shortName not specified</documentation>
+              <documentation>Description: complete citation of the platform FGDC: Platform_Full_Name Position: 3 shortName: pltNam Conditional: if shortName not specified</documentation>
             </annotation>
           </element>
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: Unique identification of the platform
-shortName: pltId</documentation>
+              <documentation>Description: Unique identification of the platform shortName: pltId</documentation>
             </annotation>
           </element>
           <element name="description" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: Narrative description of the platform supporting the instrument
-FGDC: Platform_Description
-Position: 2
-shortName: pltfrmDesc</documentation>
+              <documentation>Description: Narrative description of the platform supporting the instrument FGDC: Platform_Description Position: 2 shortName: pltfrmDesc</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sponsor" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
-              <documentation>Description: organization responsible for building, launch, or operation of the platform
-FGDC: Platform_Sponsor
-Position: 6
-shortName: pltfrmSpnsr</documentation>
+              <documentation>Description: organization responsible for building, launch, or operation of the platform FGDC: Platform_Sponsor Position: 6 shortName: pltfrmSpnsr</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" name="instrument" type="mac:MI_Instrument_PropertyType"/>
@@ -441,8 +366,7 @@ shortName: pltfrmSpnsr</documentation>
   </complexType>
   <element name="MI_PlatformPass" substitutionGroup="gco:AbstractObject" type="mac:MI_PlatformPass_Type">
     <annotation>
-      <documentation>Description: identification of collection coverage
-shortName: PlatformPass</documentation>
+      <documentation>Description: identification of collection coverage shortName: PlatformPass</documentation>
     </annotation>
   </element>
   <complexType name="MI_PlatformPass_Type">
@@ -451,14 +375,12 @@ shortName: PlatformPass</documentation>
         <sequence>
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: unique name of the pass
-shortName: passId</documentation>
+              <documentation>Description: unique name of the pass shortName: passId</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="extent" type="gmw:GM_Object_PropertyType">
             <annotation>
-              <documentation>Description: Area covered by the pass
-shortName: passExt</documentation>
+              <documentation>Description: Area covered by the pass shortName: passExt</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="relatedEvent" type="mac:MI_Event_PropertyType"/>
@@ -475,8 +397,7 @@ shortName: passExt</documentation>
   </complexType>
   <element name="MI_PriorityCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>Description: ordered list of priorities
-shortName: PriCode</documentation>
+      <documentation>Description: ordered list of priorities shortName: PriCode</documentation>
     </annotation>
   </element>
   <complexType name="MI_PriorityCode_PropertyType">
@@ -487,8 +408,7 @@ shortName: PriCode</documentation>
   </complexType>
   <element name="MI_RequestedDate" substitutionGroup="gco:AbstractObject" type="mac:MI_RequestedDate_Type">
     <annotation>
-      <documentation>Description: range of date validity
-shortName: ReqstDate</documentation>
+      <documentation>Description: range of date validity shortName: ReqstDate</documentation>
     </annotation>
   </element>
   <complexType name="MI_RequestedDate_Type">
@@ -497,14 +417,12 @@ shortName: ReqstDate</documentation>
         <sequence>
           <element name="requestedDateOfCollection" type="gco:DateTime_PropertyType">
             <annotation>
-              <documentation>Description: preferred date and time of collection
-shortName: collectDate</documentation>
+              <documentation>Description: preferred date and time of collection shortName: collectDate</documentation>
             </annotation>
           </element>
           <element name="latestAcceptableDate" type="gco:DateTime_PropertyType">
             <annotation>
-              <documentation>Description: latest date and time collection must be completed
-shortName: latestDate</documentation>
+              <documentation>Description: latest date and time collection must be completed shortName: latestDate</documentation>
             </annotation>
           </element>
         </sequence>
@@ -520,8 +438,7 @@ shortName: latestDate</documentation>
   </complexType>
   <element name="MI_Requirement" substitutionGroup="gco:AbstractObject" type="mac:MI_Requirement_Type">
     <annotation>
-      <documentation>Description: requirement to be satisfied by the planned data acquisition
-shortName: Requirement</documentation>
+      <documentation>Description: requirement to be satisfied by the planned data acquisition shortName: Requirement</documentation>
     </annotation>
   </element>
   <complexType name="MI_Requirement_Type">
@@ -530,44 +447,37 @@ shortName: Requirement</documentation>
         <sequence>
           <element minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
-              <documentation>Description: identification of reference or guidance material for the requirement
-shortName: reqRef</documentation>
+              <documentation>Description: identification of reference or guidance material for the requirement shortName: reqRef</documentation>
             </annotation>
           </element>
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: unique name, or code, for the requirement
-shortName: reqId</documentation>
+              <documentation>Description: unique name, or code, for the requirement shortName: reqId</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" name="requestor" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
-              <documentation>Description: origin of requirement
-shortName: requestor</documentation>
+              <documentation>Description: origin of requirement shortName: requestor</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" name="recipient" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
-              <documentation>Description: person(s), or body(ies), to recieve results of requirement
-shortName: recipient</documentation>
+              <documentation>Description: person(s), or body(ies), to recieve results of requirement shortName: recipient</documentation>
             </annotation>
           </element>
           <element name="priority" type="mac:MI_PriorityCode_PropertyType">
             <annotation>
-              <documentation>Description: relative ordered importance, or urgency, of the requirement
-shortName: reqPri</documentation>
+              <documentation>Description: relative ordered importance, or urgency, of the requirement shortName: reqPri</documentation>
             </annotation>
           </element>
           <element name="requestedDate" type="mac:MI_RequestedDate_PropertyType">
             <annotation>
-              <documentation>Description:  required or preferred acquisition date and time
-shortName: reqDate</documentation>
+              <documentation>Description: required or preferred acquisition date and time shortName: reqDate</documentation>
             </annotation>
           </element>
           <element name="expiryDate" type="gco:DateTime_PropertyType">
             <annotation>
-              <documentation>Description: date and time after which collection is no longer valid
-shortName: reqExpire</documentation>
+              <documentation>Description: date and time after which collection is no longer valid shortName: reqExpire</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="satisifiedPlan" type="mac:MI_Plan_PropertyType"/>
@@ -584,13 +494,7 @@ shortName: reqExpire</documentation>
   </complexType>
   <element name="MI_SensorTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>&lt;UsedBy&gt;
-&lt;NameSpace&gt;ISO 19115-2 Metadata - Imagery&lt;/NameSpace&gt;
-&lt;Class&gt;MI_Instrument&lt;/Class&gt;
-&lt;Package&gt;Acquisition information - Imagery&lt;/Package&gt;
-&lt;Attribute&gt;type&lt;/Attribute&gt;
-&lt;Type&gt;MI_SensorTypeCode&lt;/Type&gt;
-&lt;UsedBy&gt;</documentation>
+      <documentation>&lt;UsedBy&gt; &lt;NameSpace&gt;ISO 19115-2 Metadata - Imagery&lt;/NameSpace&gt; &lt;Class&gt;MI_Instrument&lt;/Class&gt; &lt;Package&gt;Acquisition information - Imagery&lt;/Package&gt; &lt;Attribute&gt;type&lt;/Attribute&gt; &lt;Type&gt;MI_SensorTypeCode&lt;/Type&gt; &lt;UsedBy&gt;</documentation>
     </annotation>
   </element>
   <complexType name="MI_SensorTypeCode_PropertyType">
@@ -601,8 +505,7 @@ shortName: reqExpire</documentation>
   </complexType>
   <element name="MI_SequenceCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>Description: temporal relation of activation
-shortName: SeqCode</documentation>
+      <documentation>Description: temporal relation of activation shortName: SeqCode</documentation>
     </annotation>
   </element>
   <complexType name="MI_SequenceCode_PropertyType">
@@ -613,8 +516,7 @@ shortName: SeqCode</documentation>
   </complexType>
   <element name="MI_TriggerCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>Description: mechanism of activation
-shortName: TriggerCode</documentation>
+      <documentation>Description: mechanism of activation shortName: TriggerCode</documentation>
     </annotation>
   </element>
   <complexType name="MI_TriggerCode_PropertyType">

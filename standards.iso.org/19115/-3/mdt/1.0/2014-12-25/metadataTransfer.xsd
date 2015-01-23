@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-12-25" xmlns:gco="http://www.isotc211.org/2014/gco" xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-12-25" xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-12-25" xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mdt/1.0/2014-12-25" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0/2014-12-25" xmlns:gco="http://www.isotc211.org/2014/gco" xmlns:gcx="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25" xmlns:mda="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25" xmlns:mdt="http://standards.iso.org/19115/-3/mdt/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mdt/1.0/2014-12-25" version="1.0">
   <include schemaLocation="mdt.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/cat/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/cat/1.0/2014-12-25/cat.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/gcx/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/gcx/1.0/2014-12-25/gcx.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mda/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mda/1.0/2014-12-25/mda.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../../../19139/gco.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/cat/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/cat/1.0/2014-12-25/cat.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/gcx/1.0/2014-12-25/gcx.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mda/1.0/2014-12-25/mda.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MX_Aggregate" substitutionGroup="mda:AbstractDS_Aggregate" type="mdt:MX_Aggregate_Type"/>
   <complexType name="MX_Aggregate_Type">

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2014/gco" xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-12-25" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/gcx/1.0/2014-12-25" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2014/gco" xmlns:gcx="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25" version="1.0">
   <annotation>
     <documentation>Handcrafted</documentation>
   </annotation>
   <include schemaLocation="gcx.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../../../19139/gco.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="Anchor" substitutionGroup="gco:AbstractObject" type="gcx:Anchor_Type"/>
   <complexType name="Anchor_Type">

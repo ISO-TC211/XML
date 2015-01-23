@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
-xmlns:fcc="http://www.isotc211.org/namespace/fcc/1.0/2014-12-25" 
+xmlns:fcc="http://standards.iso.org/19110/fcc/1.0/2014-12-25" 
 xmlns:gco="http://www.isotc211.org/2014/gco" 
 xmlns:gmw="http://www.isotc211.org/2014/gmw"  
-xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" 
-xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mrc/1.0/2014-12-25" version="1.0">
+xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" 
+xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mrc/1.0/2014-12-25" version="1.0">
 <!--  <include schemaLocation="mrc.xsd"/>-->
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../ISO19139rework/gmw.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/fcc/1.0/2014-12-25" schemaLocation="../../../ISO19110/fcc/1.0/2014-12-25/fcc.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../../../19139/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../../../19139/gmw.xsd"/>
+  <import namespace="http://standards.iso.org/19110/fcc/1.0/2014-12-25" schemaLocation="../../../ISO19110/fcc/1.0/2014-12-25/fcc.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_AttributeGroup" substitutionGroup="gco:AbstractObject" type="mrc:MD_AttributeGroup_Type"/>
   <complexType name="MD_AttributeGroup_Type">
