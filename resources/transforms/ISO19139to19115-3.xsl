@@ -2,8 +2,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:gmd="http://www.isotc211.org/2005/gmd"
   xmlns:gco="http://www.isotc211.org/2005/gco"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd"
   xmlns:gmi="http://www.isotc211.org/2005/gmi"
   xmlns:gmx="http://www.isotc211.org/2005/gmx"
   xmlns:gsr="http://www.isotc211.org/2005/gsr"
@@ -12,38 +12,44 @@
   xmlns:srv1="http://www.isotc211.org/2005/srv"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-07-11"
-  xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
-  xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11"
-  xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2014-07-11"
-  xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11"
-  xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11"
-  xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-07-11"
-  xmlns:mas="http://www.isotc211.org/namespace/mas/1.0/2014-07-11"
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11"
-  xmlns:mco="http://www.isotc211.org/namespace/mco/1.0/2014-07-11"
-  xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-07-11"
-  xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-07-11"
-  xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-07-11"
-  xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11"
-  xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-07-11"
-  xmlns:mds="http://www.isotc211.org/namespace/mds/1.0/2014-07-11"
-  xmlns:mmi="http://www.isotc211.org/namespace/mmi/1.0/2014-07-11"
-  xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11"
-  xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11"
-  xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11"
-  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11"
-  xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0/2014-07-11"
-  xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11"
-  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11"
+  xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0/2014-12-25"
+  xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0/2014-12-25"
+  xmlns:gcx="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25"
+  xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0/2014-12-25"
+  xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25"
+  xmlns:srv="http://standards.iso.org/19115/-3/srv/2.0/2014-12-25"
+  xmlns:mac="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25"
+  xmlns:mas="http://standards.iso.org/19115/-3/mas/1.0/2014-12-25"
+  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"
+  xmlns:mco="http://standards.iso.org/19115/-3/mco/1.0/2014-12-25"
+  xmlns:mda="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25"
+  xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25"
+  xmlns:mdt="http://standards.iso.org/19115/-3/mdt/1.0/2014-12-25"
+  xmlns:mex="http://standards.iso.org/19115/-3/mex/1.0/2014-12-25"
+  xmlns:mrl="http://standards.iso.org/19115/-3/mrl/1.0/2014-12-25"
+  xmlns:mds="http://standards.iso.org/19115/-3/mds/1.0/2014-12-25"
+  xmlns:mmi="http://standards.iso.org/19115/-3/mmi/1.0/2014-12-25"
+  xmlns:mpc="http://standards.iso.org/19115/-3/mpc/1.0/2014-12-25"
+  xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0/2014-12-25"
+  xmlns:mrd="http://standards.iso.org/19115/-3/mrd/1.0/2014-12-25"
+  xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0/2014-12-25"
+  xmlns:mrs="http://standards.iso.org/19115/-3/mrs/1.0/2014-12-25"
+  xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25"
+  xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0/2014-12-25"
+  xmlns:gco_new="http://standards.iso.org/19139/gco/1.0/2014-12-25"
   exclude-result-prefixes="#all">
   
-  <!-- Imnport template that creates the namespaces required for 19115-3 in the output xml -->
+  <!-- Import template that creates the namespaces required for 19115-3 in the output xml -->
   <xsl:import href="create19115-3Namespaces.xsl"/>
   <!-- Import template for DateTime translation -->
   <xsl:import href="DateTime.xsl"/>
   <!-- Import templates for multiLingualCharacterStrings -->
   <xsl:import href="multiLingualCharacterStrings.xsl"/>
+  
+  <!-- This transform introduces a new namespce with the prefix gco. 
+    We need placeholder for the new namespace in the transform that gets 
+    converted to gco on output-->
+  <xsl:namespace-alias stylesheet-prefix="gco_new" result-prefix="gco"/>
   
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
@@ -59,7 +65,7 @@
       <xd:p>
         <xd:b>Version August 7, 2014</xd:b>
         <xd:ul>
-          <xd:li>Changed namespace dates to 2014-07-11</xd:li>
+          <xd:li>Changed namespace dates to 2014-12-25</xd:li>
           <xd:li>Fixed DistributedComputingPlatform element</xd:li>
         </xd:ul>
       </xd:p>
@@ -92,7 +98,7 @@
       <xsl:variable name="nameSpacePrefix">
         <xsl:call-template name="getNamespacePrefix"/>
       </xsl:variable>
-      <!-- in the 2014-07-11 version the MI_Metadata element became MD_Metadata -->
+      <!-- in the 2014-12-25 version the MI_Metadata element became MD_Metadata -->
       <!--<xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">-->
       <xsl:element name="mdb:MD_Metadata">
         <!-- new namespaces -->
@@ -138,22 +144,22 @@
     <xsl:element name="mdb:metadataIdentifier">
       <mcc:MD_Identifier>
         <mcc:code>
-          <gco:CharacterString>
+          <gco_new:CharacterString>
             <xsl:choose>
-              <xsl:when test="contains(gco:CharacterString,':')">
-                <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
+              <xsl:when test="contains(.,':')">
+                <xsl:value-of select="substring-after(.,':')"/>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="gco:CharacterString"/>
+                <xsl:value-of select="."/>
               </xsl:otherwise>
             </xsl:choose>
-          </gco:CharacterString>
+          </gco_new:CharacterString>
         </mcc:code>
-        <xsl:if test="contains(gco:CharacterString,':')">
+        <xsl:if test="contains(.,':')">
           <mcc:codeSpace>
-            <gco:CharacterString>
-              <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
-            </gco:CharacterString>
+            <gco_new:CharacterString>
+              <xsl:value-of select="substring-before(.,':')"/>
+            </gco_new:CharacterString>
           </mcc:codeSpace>
         </xsl:if>
       </mcc:MD_Identifier>
@@ -186,7 +192,7 @@
             </xsl:call-template>
           </xsl:when>
           <xsl:otherwise>
-            <lan:characterEncoding gco:nilReason="unknown"/>
+            <lan:characterEncoding gco_new:nilReason="unknown"/>
           </xsl:otherwise>
         </xsl:choose>
       </lan:PT_Locale>
@@ -231,34 +237,34 @@
     <xsl:element name="mdb:parentMetadata">
       <xsl:choose>
         <xsl:when test="$isParentIdentifierDefinedWithUUIDAttribute">
-          <xsl:attribute name="uuidref" select="gco:CharacterString"/>
+          <xsl:attribute name="uuidref" select="."/>
         </xsl:when>
         <xsl:otherwise>
           <cit:CI_Citation>
             <cit:title>
-              <gco:CharacterString>
-                <xsl:value-of select="gco:CharacterString"/>
-              </gco:CharacterString>
+              <gco_new:CharacterString>
+                <xsl:value-of select="."/>
+              </gco_new:CharacterString>
             </cit:title>
             <cit:identifier>
               <mcc:MD_Identifier>
                 <mcc:code>
-                  <gco:CharacterString>
+                  <gco_new:CharacterString>
                     <xsl:choose>
-                      <xsl:when test="contains(gco:CharacterString,':')">
-                        <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
+                      <xsl:when test="contains(.,':')">
+                        <xsl:value-of select="substring-after(.,':')"/>
                       </xsl:when>
                       <xsl:otherwise>
-                        <xsl:value-of select="gco:CharacterString"/>
+                        <xsl:value-of select="."/>
                       </xsl:otherwise>
                     </xsl:choose>
-                  </gco:CharacterString>
+                  </gco_new:CharacterString>
                 </mcc:code>
-                <xsl:if test="contains(gco:CharacterString,':')">
+                <xsl:if test="contains(.,':')">
                   <mcc:codeSpace>
-                    <gco:CharacterString>
-                      <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
-                    </gco:CharacterString>
+                    <gco_new:CharacterString>
+                      <xsl:value-of select="substring-before(.,':')"/>
+                    </gco_new:CharacterString>
                   </mcc:codeSpace>
                 </xsl:if>
               </mcc:MD_Identifier>
@@ -282,9 +288,10 @@
         </xsl:call-template>
         <xsl:if test="../gmd:hierarchyLevelName">
           <mdb:name>
-            <gco:CharacterString>
-              <xsl:value-of select="../gmd:hierarchyLevelName/gco:CharacterString"/>
-            </gco:CharacterString>
+            <gco_new:CharacterString>
+              <!-- this selects the gco:CharacterString without using the old namespace -->
+              <xsl:value-of select="../gmd:hierarchyLevelName"/>
+            </gco_new:CharacterString>
           </mdb:name>
         </xsl:if>
       </mdb:MD_MetadataScope>
@@ -768,7 +775,7 @@
             </xsl:call-template>
           </xsl:when>
           <xsl:otherwise>
-            <srv:distributedComputingPlatform gco:nilReason="missing"/>
+            <srv:distributedComputingPlatform gco_new:nilReason="missing"/>
           </xsl:otherwise>
         </xsl:choose>
         <xsl:call-template name="writeCharacterStringElement">
@@ -1028,7 +1035,7 @@
             </xsl:call-template>
           </cit:alternateTitle>
           <!-- 19115(2006) does not have concept of a format specification date -->
-          <cit:date gco:nilReason="unknown"/>
+          <cit:date gco_new:nilReason="unknown"/>
           <cit:edition>
             <xsl:call-template name="characterStringSubstitutions">
               <xsl:with-param name="parentElement" select="gmd:version"/>
@@ -1113,7 +1120,9 @@
           <xsl:text>gcx</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gco:')">
-          <xsl:text>gco</xsl:text>
+          <!-- the namespace associated with the gco prefix is changing. gco_new is a 
+            namespace-alias that is converted to gco on output -->
+          <xsl:text>gco_new</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gml:')">
           <xsl:text>gml</xsl:text>
