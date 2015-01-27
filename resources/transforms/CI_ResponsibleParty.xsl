@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco1="http://www.isotc211.org/2005/gco" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx"
     xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv1="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0/2014-12-25" xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0/2014-12-25"
     xmlns:gcx="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25" xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0/2014-12-25" 
@@ -13,7 +14,7 @@
     xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0/2014-12-25" xmlns:mrd="http://standards.iso.org/19115/-3/mrd/1.0/2014-12-25"
     xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0/2014-12-25" xmlns:mrs="http://standards.iso.org/19115/-3/mrs/1.0/2014-12-25" 
     xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25" xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0/2014-12-25" 
-    xmlns:gco_new="http://standards.iso.org/19139/gco/1.0/2014-12-25" exclude-result-prefixes="#all">
+    xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" exclude-result-prefixes="#all">
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -31,11 +32,11 @@
   <!-- This transform introduces a new namespce with the prefix gco. 
     We need placeholder for the new namespace in the transform that gets 
     converted to gco on output-->
-  <xsl:namespace-alias stylesheet-prefix="gco_new" result-prefix="gco"/>
+  <!--<xsl:namespace-alias stylesheet-prefix="gco_new" result-prefix="gco"/>-->
   
     <xsl:template match="gmd:CI_ResponsibleParty">
         <xsl:choose>
-            <xsl:when test="count(gmd:individualName/gco:CharacterString) + count(gmd:organisationName/gco:CharacterString) + count(gmd:positionName/gco:CharacterString) > 0">
+            <xsl:when test="count(gmd:individualName/gco1:CharacterString) + count(gmd:organisationName/gco1:CharacterString) + count(gmd:positionName/gco1:CharacterString) > 0">
                 <!-- 
                 CI_ResponsibleParties that include name elements (individualName, organisationName, or positionName) are translated to CI_Responsibilities.
                 CI_ResponsibleParties without name elements are assummed to be placeholders for CI_OnlineResources. They are transformed later in the process

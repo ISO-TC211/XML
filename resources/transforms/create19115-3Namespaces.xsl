@@ -60,6 +60,9 @@
     <!-- other ISO namespaces -->
     <!-- Geospatial COmmon -->
     <xsl:namespace name="gco" select="'http://standards.iso.org/19139/gco/1.0/2014-12-25'"/>
+    <!-- GML Wrappers -->
+    <xsl:namespace name="gmw" select="'http://standards.iso.org/19139/gmw/1.0/2014-12-25'"/>
+    
     <!-- external namespaces -->
     <xsl:namespace name="gml" select="'http://www.opengis.net/gml/3.2'"/>
     <xsl:namespace name="xlink" select="'http://www.w3.org/1999/xlink'"/>

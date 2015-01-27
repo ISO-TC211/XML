@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco1="http://www.isotc211.org/2005/gco" 
   xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx" 
   xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" 
   xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv1="http://www.isotc211.org/2005/srv" 
@@ -18,7 +18,7 @@
   xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0/2014-12-25" xmlns:mrd="http://standards.iso.org/19115/-3/mrd/1.0/2014-12-25"
   xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0/2014-12-25" xmlns:mrs="http://standards.iso.org/19115/-3/mrs/1.0/2014-12-25" 
   xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25" xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0/2014-12-25" 
-  xmlns:gco_new="http://standards.iso.org/19139/gco/1.0/2014-12-25" exclude-result-prefixes="#all">
+  xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" exclude-result-prefixes="#all">
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
       <xd:p> These utility templates transform CodeLists and CharacterStrings from ISO 19139 into ISO 19115-3.</xd:p>
@@ -29,7 +29,7 @@
   <!-- This transform introduces a new namespce with the prefix gco. 
     We need placeholder for the new namespace in the transform that gets 
     converted to gco on output-->
-  <xsl:namespace-alias stylesheet-prefix="gco_new" result-prefix="gco"/>
+  <!--<xsl:namespace-alias stylesheet-prefix="gco_new" result-prefix="gco"/>-->
   <xsl:template name="writeCharacterStringElement">
     <!-- Parameters
         elementName = the name of the element (with namespace prefix) that contains the codelist, i.e. cit:name
@@ -38,13 +38,12 @@
     <xsl:param name="elementName"/>
     <xsl:param name="nodeWithStringToWrite"/>
     <xsl:variable name="isMultilingual" select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
-    <xsl:variable name="hasCharacterString" select="count($nodeWithStringToWrite/gco:CharacterString) = 1"/>
+    <xsl:variable name="hasCharacterString" select="count($nodeWithStringToWrite/gco1:CharacterString) = 1"/>
     <!-- Need to add new gco namespace -->
     <xsl:variable name="newElementName">
       <xsl:choose>
-        <xsl:when test="starts-with($elementName,'gco:')">
-          <!--<xsl:value-of select="concat('gco_new:',substring-after($elementName,':'))"/>-->
-          <xsl:value-of select="concat('xxx:',substring-after($elementName,':'))"/>
+        <xsl:when test="starts-with($elementName,'gco1:')">
+          <xsl:value-of select="concat('gco:',substring-after($elementName,':'))"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="$elementName"/>
@@ -59,9 +58,9 @@
             <xsl:attribute name="xsi:type" select="'lan:PT_FreeText_PropertyType'"/>
           </xsl:if>
           <xsl:if test="$hasCharacterString">
-            <gco_new:CharacterString>
-              <xsl:value-of select="$nodeWithStringToWrite/gco:CharacterString"/>
-            </gco_new:CharacterString>
+            <gco:CharacterString>
+              <xsl:value-of select="$nodeWithStringToWrite/gco1:CharacterString"/>
+            </gco:CharacterString>
           </xsl:if>
           <xsl:if test="$isMultilingual">
             <xsl:apply-templates select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
