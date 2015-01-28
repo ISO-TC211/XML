@@ -1,0 +1,11 @@
+git add ./19110/gfc/1.1/2014-12-25/featureCatalogue.xsd
+git add ./19110/gfc/1.1/2014-12-25/gfc.xsd
+git add ./19111/rce/1.0/2014-12-25/abstractClasses.xsd
+git add ./19115/-3/cat/1.0/2014-12-25/cat.xsd
+git add ./19115/-3/cat/1.0/2014-12-25/catalogues.xsd
+git add ./19115/-3/mac/1.0/2014-12-25/acquisitionInformationImagery.xsd
+git add ./19115/-3/mas/1.0/2014-12-25/applicationSchema.xsd
+git add ./19115/-3/mcc/1.0/2014-12-25/AbstractCommonClasses.xsd
+git add ./19135/-2/pre/1.0/2014-12-25/abstract.xsd
+git add ./19139/gco/1.0/2014-12-25/baseTypes2014.xsd
+git add ./19157/-2/dqc/1.0/2014-12-25/abstract.xsd
