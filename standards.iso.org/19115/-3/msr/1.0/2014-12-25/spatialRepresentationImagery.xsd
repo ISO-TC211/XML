@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:dqc="http://standards.iso.org/19157/-2/dqc/1.0/2014-12-25" 
-  xmlns:gco="http://www.isotc211.org/2014/gco" 
+  xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" 
   xmlns:gmw="http://www.isotc211.org/2014/gmw" 
   xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" 
   xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25" version="1.0">
@@ -10,13 +10,13 @@
 Position: 3</documentation>
   </annotation>
 <!--  <include schemaLocation="msr.xsd"/>-->
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../ISO19139rework/gmw.xsd"/>
+  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../../../19139/gmw/1.0/2014-12-25/gmw.xsd"/>
   
 <!--  <import namespace="http://www.isotc211.org/2005/gss" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>-->
   
-  <import namespace="http://standards.iso.org/19157/-2/dqc/1.0/2014-12-25" schemaLocation="../../../ISO19157/dqc/1.0/dqc.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19157/-2/dqc/1.0/2014-12-25" schemaLocation="../../../../../19157/-2/dqc/1.0/2014-12-25/dqc.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MI_GCP" substitutionGroup="gco:AbstractObject" type="msr:MI_GCP_Type"/>
   <complexType name="MI_GCP_Type">

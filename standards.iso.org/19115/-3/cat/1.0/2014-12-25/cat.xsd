@@ -8,6 +8,6 @@
   <include schemaLocation="codelistItem.xsd"/>
   <include schemaLocation="crsItem.xsd"/>
   <include schemaLocation="uomItem.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

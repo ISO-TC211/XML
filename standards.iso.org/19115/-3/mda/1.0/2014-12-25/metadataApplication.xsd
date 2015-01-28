@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://www.isotc211.org/2014/gco" xmlns:mda="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25" xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:mda="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25" xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25" version="1.0">
   <include schemaLocation="mda.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/mdb/1.0/mdb.xsd"/>
+  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mdb/1.0/2014-12-25/mdb.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractDS_Aggregate" substitutionGroup="mda:AbstractDS_Resource" type="mda:AbstractDS_Aggregate_Type">
     <annotation>

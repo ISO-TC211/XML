@@ -5,8 +5,8 @@
   <include schemaLocation="datums.xsd"/>
   <include schemaLocation="parametricValues.xsd"/>
   <include schemaLocation="temporalReferenceSystems.xsd"/>
-  <import namespace="http://standards.iso.org/19157/-2/dqc/1.0/2014-12-25" schemaLocation="../../../ISO19157/dqc/1.0/dqc.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../ISO19111/rce/1.0/rce.xsd"/>
+  <import namespace="http://standards.iso.org/19157/-2/dqc/1.0/2014-12-25" schemaLocation="../../../../../19157/-2/dqc/1.0/2014-12-25/dqc.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../../../19111/rce/1.0/2014-12-25/rce.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

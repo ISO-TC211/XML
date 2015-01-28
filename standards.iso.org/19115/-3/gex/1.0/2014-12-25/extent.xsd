@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gco="http://www.isotc211.org/2014/gco" 
+  xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" 
   xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0/2014-12-25" 
   xmlns:gmw="http://www.isotc211.org/2014/gmw"  
   xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"  
@@ -12,11 +12,11 @@
   xmlns:rce="http://standards.iso.org/19111/rce/1.0/2014-12-25" -->
   
  <!-- <include schemaLocation="gex.xsd"/>-->
-  <import namespace="http://www.isotc211.org/2014/gco" schemaLocation="../../../ISO19139rework/gco.xsd"/>
-  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../ISO19139rework/gmw.xsd"/>
+  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
+  <import namespace="http://www.isotc211.org/2014/gmw" schemaLocation="../../../../../19139/gmw/1.0/2014-12-25/gmw.xsd"/>
 <!--  <import namespace="http://www.isotc211.org/2005/gts" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"/>-->
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
-<!--  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../ISO19111/rce/1.0/rce.xsd"/>-->
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+<!--  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../../../19111/rce/1.0/2014-12-25/rce.xsd"/>-->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="EX_BoundingPolygon" substitutionGroup="gex:AbstractEX_GeographicExtent" type="gex:EX_BoundingPolygon_Type">
     <annotation>
