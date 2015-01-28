@@ -5,9 +5,9 @@
       <xd:p>
         <xd:b>Title: Write Standard ISO Namespace Description Files (namespace/index.html)</xd:b>
       </xd:p>
-      <xd:p><xd:b>Version:</xd:b>0.0</xd:p>
+      <xd:p><xd:b>Version:</xd:b>0.1</xd:p>
       <xd:p><xd:b>Created on:</xd:b>February 27, 2013</xd:p>
-      <xd:p><xd:b>Modified on:</xd:b> August 4, 2014, 2014</xd:p>
+      <xd:p><xd:b>Modified on:</xd:b> January 4, 2014, 2014</xd:p>
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
       <xd:p>This stylesheets reads ISONamespaceInformation.xml and writes standard namespace description files into a filesystem with the ISO namespace structure.</xd:p>
       <xd:p>It assumes a schema directory hierarchy like schemaRootDirectory/namespace/version/namespace.xsd</xd:p>
@@ -40,12 +40,12 @@
     <!-- The parameter standard is a string that includes the numbers of the standards that will be output. For example '19115-2 19115-3'  -->
     <xsl:for-each select="//namespace[contains($standard,schemaStandardNumber)]">
       <xsl:variable name="currentNamespace" select="."/>
-      <xsl:variable name="schemaDirectory" select="concat($schemaRootDirectory,'/ISO',schemaStandardNumber,'/',prefix,'/',version,'/',$workingVersionDate,'/')"/>
-      <xsl:variable name="schemaFile" select="concat($schemaRootDirectory,'/ISO',schemaStandardNumber,'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.xsd')"/>
+      <xsl:variable name="schemaDirectory" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/')"/>
+      <xsl:variable name="schemaFile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.xsd')"/>
       <xsl:variable name="namespaceVersion" select="concat(prefix,' ',version)"/>
       <xsl:variable name="upperCasePrefix" select="upper-case(prefix)"/>
       <xsl:variable name="namespaceVersionTitle" select="concat($upperCasePrefix,' ',version)"/>
-      <xsl:variable name="outfile" select="concat($schemaRootDirectory,'/ISO',schemaStandardNumber,'/',prefix,'/',version,'/',$workingVersionDate,'/index.html')"/>
+      <xsl:variable name="outfile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/index.html')"/>
       <xsl:value-of select="concat('Schema: ',$schemaFile,', Output:', $outfile)"/>
       <br/>
       <xsl:result-document href="{$outfile}">
@@ -64,7 +64,7 @@
             <p><xsl:value-of select="$namespaceVersionTitle"/> is an XML Schema implementation derived from ISO <xsl:value-of select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle, if (exists(paragraphNumber)) then concat(', Clause ',paragraphNumber) else '')"/>. <xsl:if test="scope!=''"> It includes <xsl:value-of select="concat(lower-case(substring(scope,1,1)),substring(scope,2))"/>
               </xsl:if> The XML schema was encoded using the rules described in <xsl:value-of select="encodingRules"/>.</p>
             <h2>XML Namespace for <xsl:value-of select="$namespaceVersion"/></h2>
-            <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="concat(location,'/',prefix,'/',version)"/></b>.</p>
+            <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/></b>.</p>
             <h2>XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
             <p><b><xsl:value-of select="concat(prefix,'.xsd')"/></b> is the XML Schema document to be referenced by XML documents containing XML elements in the <xsl:value-of select="$namespaceVersion"/> namespace or by XML Schema documents importing the <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/> namespace, but it does not contain the declaration of any types.</p>
             <p>

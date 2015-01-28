@@ -68,7 +68,7 @@
               <td>
                 <!-- Standard Prefix -->
                 <xsl:element name="a">
-                  <xsl:attribute name="href" select="concat('..','/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/','index.html')"/>
+                  <xsl:attribute name="href" select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/','index.html')"/>
                   <xsl:value-of select="prefix"/>
                 </xsl:element>
               </td>
