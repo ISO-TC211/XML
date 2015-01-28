@@ -130,7 +130,7 @@
     </xsl:variable>
     <xsl:variable name="elementName" select="if (local-name() = 'language') then 'defaultLocale' else 'otherLocale'"/>
     <xsl:element name="{concat($nameSpacePrefix, ':', $elementName)}">
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <lan:PT_Locale>
         <xsl:copy-of select="gmd:PT_Locale/@*"/>
         <xsl:call-template name="writeCodelistElement">
@@ -166,7 +166,7 @@
         </xsl:variable>
         <xsl:element name="{concat($nameSpacePrefix,':','defaultLocale')}">
           <!--<xsl:element name="{'mdb:defaultLocale'}">-->
-          <xsl:copy-of select="@*"/>
+          <xsl:call-template name="copyAllAttributes"/>
           <lan:PT_Locale>
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'lan:characterEncoding'"/>
@@ -311,13 +311,13 @@
   <!-- gmd:metadataExtensionInfo uses default templates -->
   <xsl:template match="gmd:identificationInfo">
     <mdb:identificationInfo>
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:for-each select="./*">
         <xsl:variable name="nameSpacePrefix">
           <xsl:call-template name="getNamespacePrefix"/>
         </xsl:variable>
         <xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">
-          <xsl:copy-of select="@*"/>
+          <xsl:call-template name="copyAllAttributes"/>
           <xsl:apply-templates select="gmd:citation"/>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:abstract'"/>
@@ -415,8 +415,14 @@
             </xsl:choose>
           </xsl:variable>
           <xsl:element name="{$coverageDescriptionName}">
+            <!-- Loop the RecordType to copy element and attributes into new gco namespace -->
             <xsl:element name="mrc:attributeDescription">
-              <xsl:copy-of select="./gmd:attributeDescription/gco1:RecordType"/>
+              <xsl:for-each select="./gmd:attributeDescription/gco1:RecordType">
+                <xsl:element name="gco:RecordType">
+                  <xsl:call-template name="copyAllAttributes"/>
+                  <xsl:value-of select="."/>
+                </xsl:element>
+              </xsl:for-each>
             </xsl:element>
             <!-- This loop goes back out to convert each gmd:contentInfo section into a separate mrc:AttributeGroup -->
             <xsl:for-each select="/*/gmd:contentInfo/gmd:MD_CoverageDescription | /*/gmd:contentInfo/gmi:MI_CoverageDescription">
@@ -586,7 +592,7 @@
   <xsl:template match="gmi:objectiveOccurance">
     <!-- This element is mis-spelled in the 19115-2 schema -->
     <xsl:element name="mac:objectiveOccurence">
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:value-of select="."/>
     </xsl:element>
   </xsl:template>
@@ -762,7 +768,7 @@
   -->
   <xsl:template match="gmd:RS_Identifier">
     <mcc:MD_Identifier>
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:apply-templates/>
     </mcc:MD_Identifier>
   </xsl:template>
@@ -786,7 +792,9 @@
   </xsl:template>
   <xsl:template match="gmd:MD_Band/gmd:descriptor | gmi:MI_Band/gmd:descriptor">
     <xsl:element name="mrc:description">
-      <xsl:copy-of select="./gco1:CharacterString"/>
+      <xsl:element name="gco:CharacterString">
+        <xsl:value-of select="."/>
+      </xsl:element>
     </xsl:element>
   </xsl:template>
   <!-- 
@@ -842,7 +850,7 @@
   </xsl:template>
   <xsl:template match="gmd:LI_ProcessStep/gmd:source">
     <mrl:source>
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:if test="*[1]">
         <xsl:variable name="lineageElement" select="concat('mrl:',local-name(*[1]))"/>
         <xsl:element name="{$lineageElement}">
@@ -884,7 +892,7 @@
   </xsl:template>
   <xsl:template match="gmi:LE_ProcessStep">
     <xsl:element name="mrl:LE_ProcessStep">
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:apply-templates select="gmd:description"/>
       <xsl:apply-templates select="gmd:dateTime"/>
       <xsl:apply-templates select="gmd:processor"/>
@@ -908,7 +916,7 @@
   </xsl:template>
   <xsl:template match="gmi:LE_Processing">
     <xsl:element name="mrl:LE_Processing">
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:apply-templates select="gmi:algorithm"/>
       <xsl:apply-templates select="gmi:identifier"/>
       <xsl:apply-templates select="gmi:softwareReference"/>
@@ -939,7 +947,7 @@
   -->
   <xsl:template match="gmi:MI_Operation/gmi:status/gmd:MD_ProgressCode">
     <xsl:element name="mcc:MD_ProgressCode">
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
     </xsl:element>
   </xsl:template>
   <!--
@@ -979,7 +987,7 @@
   </xsl:template>
   <xsl:template match="gmd:MD_Format">
     <xsl:element name="mrd:MD_Format">
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
       <xsl:element name="mrd:formatSpecificationCitation">
         <xsl:element name="cit:CI_Citation">
           <cit:title>
@@ -1051,7 +1059,7 @@
         </xsl:when>
         <xsl:otherwise>
           <xsl:element name="{concat('gcx:',local-name(.))}">
-            <xsl:copy-of select="@*" copy-namespaces="no"/>
+            <xsl:call-template name="copyAllAttributes"/>
             <xsl:value-of select="."/>
           </xsl:element>
         </xsl:otherwise>
@@ -1065,7 +1073,6 @@
     </xsl:variable>
     <xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">
       <!-- copy all attributes -->
-      <!--<xsl:copy-of select="@*"/>-->
       <xsl:call-template name="copyAllAttributes"/>
       <xsl:apply-templates/>
     </xsl:element>

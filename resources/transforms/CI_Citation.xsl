@@ -27,7 +27,8 @@
   </xsl:template>
   <xsl:template match="gmd:CI_Citation/gmd:date">
     <cit:date>
-      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="copyAllAttributes"/>
+      <!--<xsl:copy-of select="@*"/>-->
       <xsl:choose>
         <xsl:when test="normalize-space()=''">
           <xsl:attribute name="gco:nilReason" select="'missing'"/>
@@ -37,7 +38,9 @@
             <cit:date>
               <xsl:choose>
                 <xsl:when test="descendant::gmd:date/@gco1:nilReason">
-                  <xsl:copy-of select="descendant::gmd:date/@gco1:nilReason"/>
+                  <xsl:attribute name="gco:nilReason">
+                    <xsl:value-of select="descendant::gmd:date/@gco1:nilReason"/>
+                  </xsl:attribute>
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:call-template name="writeDateTime"/>
