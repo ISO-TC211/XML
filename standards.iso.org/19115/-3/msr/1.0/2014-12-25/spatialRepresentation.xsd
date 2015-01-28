@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gco="http://www.isotc211.org/2014/gco" 
   xmlns:gmw="http://www.isotc211.org/2014/gmw" 
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" 
-  xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/msr/1.0/2014-12-25" version="1.0">
+  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" 
+  xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25" version="1.0">
   <annotation>
     <documentation>Frequency with which modifications and deletions are made to the data after it is first produced</documentation>
   </annotation>
@@ -12,7 +12,7 @@
   
 <!--  <import namespace="http://www.isotc211.org/2005/gss" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>-->
   
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_CellGeometryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>

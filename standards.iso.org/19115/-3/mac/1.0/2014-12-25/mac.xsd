@@ -2,9 +2,9 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gco="http://www.isotc211.org/2014/gco"
   xmlns:gmw="http://www.isotc211.org/2014/gmw"
-  xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-12-25"
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25" elementFormDefault="qualified"
-  targetNamespace="http://www.isotc211.org/namespace/mac/1.0/2014-12-25" version="">
+  xmlns:mac="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25"
+  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified"
+  targetNamespace="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25" version="">
   <import namespace="http://www.isotc211.org/2014/gco"
     schemaLocation="../../../ISO19139rework/gco.xsd"/>
   <import namespace="http://www.isotc211.org/2014/gmw"
@@ -12,7 +12,7 @@
 <!--  <import namespace="http://www.isotc211.org/2005/gss"
     schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gss/gss.xsd"/>-->
   
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-12-25"
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"
     schemaLocation="../../../ISO19115-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation"
