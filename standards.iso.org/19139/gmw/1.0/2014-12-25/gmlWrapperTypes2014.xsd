@@ -13,7 +13,8 @@ Information Metadata documented in ISO/TS 19139:2007. GCO includes all the defin
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
 	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <!--	<xs:include schemaLocation="gco.xsd"/>-->
-	<xs:import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="baseTypes2014.xsd"/>
+	<xs:import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../gco/1.0/2014-12-25/baseTypes2014.xsd"/>
+
 
 <!-- ============================= Units of Measure ============================ -->
 <!-- ........................................................................ -->
