@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:pre="http://standards.iso.org/19135/-2/pre/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19135/-2/pre/1.0/2014-12-25" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:pre="http://standards.iso.org/19135/-2/pre/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19135/-2/pre/1.0/2014-12-25" version="1.0">
   <include schemaLocation="pre.xsd"/>
-  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
+  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_Register" substitutionGroup="gco:AbstractObject" type="pre:Abstract_Register_Type"/>
   <complexType abstract="true" name="Abstract_Register_Type">
