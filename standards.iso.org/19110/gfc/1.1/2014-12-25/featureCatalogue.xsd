@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fcc="http://standards.iso.org/19110/fcc/1.0/2014-12-25" xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:gfc="http://standards.iso.org/19110/gfc/1.1/2014-12-25" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19110/gfc/1.1/2014-12-25" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fcc="http://standards.iso.org/19110/fcc/1.0/2014-12-25" 
+  xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:gfc="http://standards.iso.org/19110/gfc/1.1/2014-12-25" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/19139/-1/gmw/1.0/2014-12-25"
+  xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" 
+  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19110/gfc/1.1/2014-12-25" version="1.1">
   <include schemaLocation="gfc.xsd"/>
   <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
   <import namespace="http://standards.iso.org/19110/fcc/1.0/2014-12-25" schemaLocation="../../../fcc/1.0/2014-12-25/fcc.xsd"/>
   <import namespace="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" schemaLocation="../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
   <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19139/gmw/1.0/2014-12-25" schemaLocation="../../../../19139/gmw/1.0/2014-12-25/gmw.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="FC_AssociationRole" substitutionGroup="gfc:AbstractFC_PropertyType" type="gfc:FC_AssociationRole_Type">
     <annotation>
-      <documentation>A role of the association FC_AssociationRole::relation. 
-&lt;ocl&gt;
-roleName = FC_Member::memberName;
-FC_PropertyType::cardinality realizes GF_AssociationRole::cardinality
-&lt;/ocl&gt;</documentation>
+      <documentation>A role of the association FC_AssociationRole::relation. &lt;ocl&gt; roleName = FC_Member::memberName; FC_PropertyType::cardinality realizes GF_AssociationRole::cardinality &lt;/ocl&gt;</documentation>
     </annotation>
   </element>
   <complexType name="FC_AssociationRole_Type">
@@ -26,8 +28,7 @@ FC_PropertyType::cardinality realizes GF_AssociationRole::cardinality
           </element>
           <element name="isOrdered" type="gco:Boolean_PropertyType">
             <annotation>
-              <documentation>Indicates if the instances of this association role within the containing feature instance are ordered or not, with FALSE = "not ordered"  and TRUE = "ordered".
-If TRUE, the the FC_PropertyType::definition shall contain an explanation of the meaning of the order.</documentation>
+              <documentation>Indicates if the instances of this association role within the containing feature instance are ordered or not, with FALSE = "not ordered" and TRUE = "ordered". If TRUE, the the FC_PropertyType::definition shall contain an explanation of the meaning of the order.</documentation>
             </annotation>
           </element>
           <element name="isNavigable" type="gco:Boolean_PropertyType">
@@ -122,11 +123,7 @@ If TRUE, the the FC_PropertyType::definition shall contain an explanation of the
         <sequence>
           <element minOccurs="0" name="valueType" type="gco:TypeName_PropertyType">
             <annotation>
-              <documentation>type of the value of this feature attribute; a name from some namespace
-
-&lt;c&gt;
-Mandatory if the value type of the feature attribute is not defined globally
-&lt;/c&gt;</documentation>
+              <documentation>type of the value of this feature attribute; a name from some namespace &lt;c&gt; Mandatory if the value type of the feature attribute is not defined globally &lt;/c&gt;</documentation>
             </annotation>
           </element>
         </sequence>
@@ -249,8 +246,7 @@ Mandatory if the value type of the feature attribute is not defined globally
   </complexType>
   <element name="FC_FeatureAssociation" substitutionGroup="gfc:FC_FeatureType" type="gfc:FC_FeatureAssociation_Type">
     <annotation>
-      <documentation>Relationship that links instances of this feature type with instances of the same or of a different feature type. 
-The memberOf-linkBetween association in the General Feature Model is not directly implemented here since it can be easily derived from combining the Role and MemberOf associations.</documentation>
+      <documentation>Relationship that links instances of this feature type with instances of the same or of a different feature type. The memberOf-linkBetween association in the General Feature Model is not directly implemented here since it can be easily derived from combining the Role and MemberOf associations.</documentation>
     </annotation>
   </element>
   <complexType name="FC_FeatureAssociation_Type">
@@ -294,9 +290,7 @@ The memberOf-linkBetween association in the General Feature Model is not directl
           </element>
           <element minOccurs="0" name="valueType" type="gco:TypeName_PropertyType">
             <annotation>
-              <documentation>The type of the value of this feature attribute; a name from some namespace. Implementations of  this International Standard shall specify which namespace implementation is to be used. One possibility is the URI (RFC2396).
-
-&lt;c&gt;Mandatory for local feature attribute&lt;/c&gt;</documentation>
+              <documentation>The type of the value of this feature attribute; a name from some namespace. Implementations of this International Standard shall specify which namespace implementation is to be used. One possibility is the URI (RFC2396). &lt;c&gt;Mandatory for local feature attribute&lt;/c&gt;</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="listedValue" type="gfc:FC_ListedValue_PropertyType">
@@ -331,11 +325,7 @@ The memberOf-linkBetween association in the General Feature Model is not directl
           </element>
           <element minOccurs="0" name="functionalLanguage" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>The formal functional language in which the feature operation formal definition occurs in this feature catalogue.
-
-&lt;c&gt;
-Mandatory if feature operation formal definition occurs in feature catalogue.
-&lt;/c&gt;</documentation>
+              <documentation>The formal functional language in which the feature operation formal definition occurs in this feature catalogue. &lt;c&gt; Mandatory if feature operation formal definition occurs in feature catalogue. &lt;/c&gt;</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="identifier" type="mcc:MD_Identifier_PropertyType">
@@ -376,12 +366,7 @@ Mandatory if feature operation formal definition occurs in feature catalogue.
   </complexType>
   <element name="FC_FeatureOperation" substitutionGroup="gfc:AbstractFC_PropertyType" type="gfc:FC_FeatureOperation_Type">
     <annotation>
-      <documentation>Operation that every instance of an associated feature type must implement.
-&lt;ocl&gt;
-triggeredByValuesOf realizes GF_Operation::triggeredByValuesOf;
-observesValuesOf realizes GF_Operation::observesValuesOf;
-affectsValuesOf realizes GF_Operation::affectsValuesOf
-&lt;/ocl&gt;</documentation>
+      <documentation>Operation that every instance of an associated feature type must implement. &lt;ocl&gt; triggeredByValuesOf realizes GF_Operation::triggeredByValuesOf; observesValuesOf realizes GF_Operation::observesValuesOf; affectsValuesOf realizes GF_Operation::affectsValuesOf &lt;/ocl&gt;</documentation>
     </annotation>
   </element>
   <complexType name="FC_FeatureOperation_Type">
@@ -426,13 +411,7 @@ affectsValuesOf realizes GF_Operation::affectsValuesOf
   </complexType>
   <element name="FC_FeatureType" substitutionGroup="fcc:Abstract_FeatureType" type="gfc:FC_FeatureType_Type">
     <annotation>
-      <documentation>Class of real world phenomena with common properties
-
-&lt;ocl&gt;
-typeName realizes GF_FeatureType::typeName;
-isAbstract realizes GF_FeatureType::isAbstract;
-constrainedBy realizes GF_FeatureType::constrainedBy
-&lt;/ocl&gt;</documentation>
+      <documentation>Class of real world phenomena with common properties &lt;ocl&gt; typeName realizes GF_FeatureType::typeName; isAbstract realizes GF_FeatureType::isAbstract; constrainedBy realizes GF_FeatureType::constrainedBy &lt;/ocl&gt;</documentation>
     </annotation>
   </element>
   <complexType name="FC_FeatureType_Type">
@@ -446,9 +425,7 @@ constrainedBy realizes GF_FeatureType::constrainedBy
           </element>
           <element minOccurs="0" name="definition" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Definition of the feature type in a natural language. This attribute is required if the definition is not provided by FC_FeatureCatalogue::definitionSource. If not provided, the definitionReference should specify a citation where the definition may be found, and any additional information as to which definition is to be used.
-
-&lt;c&gt;Mandatory if definition not provided by definition source.&lt;/c&gt;</documentation>
+              <documentation>Definition of the feature type in a natural language. This attribute is required if the definition is not provided by FC_FeatureCatalogue::definitionSource. If not provided, the definitionReference should specify a citation where the definition may be found, and any additional information as to which definition is to be used. &lt;c&gt;Mandatory if definition not provided by definition source.&lt;/c&gt;</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="code" type="gco:CharacterString_PropertyType">
@@ -514,10 +491,7 @@ constrainedBy realizes GF_FeatureType::constrainedBy
   </complexType>
   <element name="FC_InheritanceRelation" substitutionGroup="gco:AbstractObject" type="gfc:FC_InheritanceRelation_Type">
     <annotation>
-      <documentation>FC_InheritanceRelation realizes GF_InheritanceRelation. 
-&lt;ocl&gt;
-FC_InheritanceRelation always assumes that its GF_InheritanceRelation::uniqueInstance is TRUE.
-&lt;/ocl&gt;</documentation>
+      <documentation>FC_InheritanceRelation realizes GF_InheritanceRelation. &lt;ocl&gt; FC_InheritanceRelation always assumes that its GF_InheritanceRelation::uniqueInstance is TRUE. &lt;/ocl&gt;</documentation>
     </annotation>
   </element>
   <complexType name="FC_InheritanceRelation_Type">
@@ -640,15 +614,12 @@ FC_InheritanceRelation always assumes that its GF_InheritanceRelation::uniqueIns
           </element>
           <element minOccurs="0" name="definition" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Definition of the member in a natural language. This attribute is required if the definition is not provided by FC_FeatureCatalogue::definitionSource. If not provided, the definitionReference should specify a citation where the definition may be found, and any additional information as to which definition is to be used.
-
-&lt;c&gt;Mandatory if definition not provided by definition source.&lt;/c&gt;</documentation>
+              <documentation>Definition of the member in a natural language. This attribute is required if the definition is not provided by FC_FeatureCatalogue::definitionSource. If not provided, the definitionReference should specify a citation where the definition may be found, and any additional information as to which definition is to be used. &lt;c&gt;Mandatory if definition not provided by definition source.&lt;/c&gt;</documentation>
             </annotation>
           </element>
           <element name="cardinality" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Cardinality of the member in the feature class. If this is an attribute or operation, the default cardinality is 1. If this is an association role, then the default cardinality is 0..*. For operations, this is the number of return values possible. 
-This is an elaboration of the GFM to allow for complete specifications for various programming and data defintion languages.</documentation>
+              <documentation>Cardinality of the member in the feature class. If this is an attribute or operation, the default cardinality is 1. If this is an association role, then the default cardinality is 0..*. For operations, this is the number of return values possible. This is an elaboration of the GFM to allow for complete specifications for various programming and data defintion languages.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="designation" type="gco:CharacterString_PropertyType">

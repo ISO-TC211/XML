@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" xmlns:rbc="http://standards.iso.org/19111/rbc/1.0/2014-12-25" xmlns:rce="http://standards.iso.org/19111/rce/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19111/rbc/1.0/2014-12-25" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" xmlns:rbc="http://standards.iso.org/19111/rbc/1.0/2014-12-25" xmlns:rce="http://standards.iso.org/19111/rce/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19111/rbc/1.0/2014-12-25" version="1.0">
   <annotation>
     <documentation>The Coordinate Reference System package describes the data elements, relationships and associated metadata required for spatial referencing by coordinates.</documentation>
   </annotation>
@@ -7,9 +8,10 @@
   <include schemaLocation="datums.xsd"/>
   <include schemaLocation="rbc.xsd"/>
   <include schemaLocation="temporalReferenceSystems.xsd"/>
-  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../../../19111/rce/1.0/2014-12-25/rce.xsd"/>
+  <!--<import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>-->
+  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
+  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../../19111/rce/1.0/2014-12-25/rce.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractSC_CRS" substitutionGroup="rce:Abstract_CoordinateReferenceSystem" type="rbc:AbstractSC_CRS_Type">
@@ -50,8 +52,7 @@
   </complexType>
   <element name="SC_CompoundCRS" substitutionGroup="gml:AbstractCRS" type="rbc:SC_CompoundCRS_Type">
     <annotation>
-      <documentation>A coordinate reference system describing the position of points through two or more independent single coordinate reference systems. 
-Note: two coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</documentation>
+      <documentation>A coordinate reference system describing the position of points through two or more independent single coordinate reference systems. Note: two coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</documentation>
     </annotation>
   </element>
   <complexType name="SC_CompoundCRS_Type">
@@ -117,9 +118,7 @@ Note: two coordinate reference systems are independent of each other if coordina
   </complexType>
   <element name="SC_EngineeringCRS" substitutionGroup="rbc:AbstractSC_SingleCRS" type="rbc:SC_EngineeringCRS_Type">
     <annotation>
-      <documentation>A contextually local coordinate reference system which can be divided into two broad categories: 
-- earth-fixed systems applied to engineering activities on or near the surface of the earth; 
-- CRSs on moving platforms such as road vehicles, vessels, aircraft or spacecraft.</documentation>
+      <documentation>A contextually local coordinate reference system which can be divided into two broad categories: - earth-fixed systems applied to engineering activities on or near the surface of the earth; - CRSs on moving platforms such as road vehicles, vessels, aircraft or spacecraft.</documentation>
     </annotation>
   </element>
   <complexType name="SC_EngineeringCRS_Type">
@@ -248,9 +247,7 @@ Note: two coordinate reference systems are independent of each other if coordina
   </complexType>
   <element abstract="true" name="AbstractSC_SingleCRS" substitutionGroup="gml:AbstractCRS" type="rbc:AbstractSC_SingleCRS_Type">
     <annotation>
-      <documentation>Coordinate reference system consisting of one Coordinate System and one Datum (as opposed to a Compound CRS). 
-
-Note: In ISO 19111:2003, this class was called SC_CoordinateReferenceSystem.</documentation>
+      <documentation>Coordinate reference system consisting of one Coordinate System and one Datum (as opposed to a Compound CRS). Note: In ISO 19111:2003, this class was called SC_CoordinateReferenceSystem.</documentation>
     </annotation>
   </element>
   <complexType abstract="true" name="AbstractSC_SingleCRS_Type">
@@ -269,9 +266,7 @@ Note: In ISO 19111:2003, this class was called SC_CoordinateReferenceSystem.</do
   </complexType>
   <element name="SC_VerticalCRS" substitutionGroup="rbc:AbstractSC_SingleCRS" type="rbc:SC_VerticalCRS_Type">
     <annotation>
-      <documentation>A 1D coordinate reference system used for recording heights or depths. Vertical CRSs make use of the direction of gravity to define the concept of height or depth, but the relationship with gravity may not be straightforward. 
-
-By implication, ellipsoidal heights (h) cannot be captured in a vertical coordinate reference system. Ellipsoidal heights cannot exist independently, but only as inseparable part of a 3D coordinate tuple defined in a geodetic 3D coordinate reference system.</documentation>
+      <documentation>A 1D coordinate reference system used for recording heights or depths. Vertical CRSs make use of the direction of gravity to define the concept of height or depth, but the relationship with gravity may not be straightforward. By implication, ellipsoidal heights (h) cannot be captured in a vertical coordinate reference system. Ellipsoidal heights cannot exist independently, but only as inseparable part of a 3D coordinate tuple defined in a geodetic 3D coordinate reference system.</documentation>
     </annotation>
   </element>
   <complexType name="SC_VerticalCRS_Type">

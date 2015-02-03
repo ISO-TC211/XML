@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://www.isotc211.org/2014/gmw" 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/19139/gmw/1.0/2014-12-25" 
 	xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25"
-	targetNamespace="http://www.isotc211.org/2014/gmw" elementFormDefault="qualified" version="2014-12-25">
+	targetNamespace="http://standards.iso.org/19139/gmw/1.0/2014-12-25" elementFormDefault="qualified" version="2014-12-25">
 	
 	<!-- smr 2014-12-27 refactor gco, gsr, gts, gss to put all gml dependencies in this namespace for base data types -->
 	<!-- ================================= Annotation ================================ -->
