@@ -7,10 +7,6 @@
 <!--  <include schemaLocation="mrl.xsd"/>-->
   <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" schemaLocation="../../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
   <import namespace="http://standards.iso.org/19139/gmw/1.0/2014-12-25" schemaLocation="../../../../../19139/gmw/1.0/2014-12-25/gmw.xsd"/>
-  
-<!--  xmlns:gts="http://www.isotc211.org/2005/gts"
-  <import namespace="http://www.isotc211.org/2005/gts" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gts/gts.xsd"/>-->
-  
   <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="LI_Lineage" substitutionGroup="mcc:Abstract_LineageInformation" type="mrl:LI_Lineage_Type">
