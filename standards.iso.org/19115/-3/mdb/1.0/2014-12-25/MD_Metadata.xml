@@ -1288,27 +1288,19 @@
                <mrd:formatSpecificationCitation>
                   <cit:CI_Citation>
                      <cit:title>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                      </cit:title>
                      <cit:alternateTitle>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:specification/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:specification/gco:CharacterString</gco:CharacterString>
                      </cit:alternateTitle>
                      <cit:date gco:nilReason="unknown"/>
                      <cit:edition>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
                      </cit:edition>
                      <cit:identifier>
                         <mcc:MD_Identifier>
                            <mcc:code>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                            </mcc:code>
                         </mcc:MD_Identifier>
                      </cit:identifier>
@@ -2474,10 +2466,7 @@
    <mdb:contentInfo>
       <mrc:MD_CoverageDescription>
          <mrc:attributeDescription>
-            <gco:RecordType xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                            xmlns:srv="http://www.isotc211.org/2005/srv"
-                            xmlns:gmx="http://www.isotc211.org/2005/gmx"
-                            xlink:href="http://www.ngdc.noaa.gov/getRecordDescription/gov.noaa.class:AERO100"/>
+            <gco:RecordType xlink:href="http://www.ngdc.noaa.gov/getRecordDescription/gov.noaa.class:AERO100"/>
          </mrc:attributeDescription>
          <mrc:attributeGroup>
             <mrc:MD_AttributeGroup>
@@ -2502,9 +2491,7 @@
                         </gco:MemberName>
                      </mrc:sequenceIdentifier>
                      <mrc:description>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
                      </mrc:description>
                      <mrc:maxValue>
                         <gco:Real>11.111</gco:Real>
@@ -2535,9 +2522,7 @@
                         </gco:MemberName>
                      </mrc:sequenceIdentifier>
                      <mrc:description>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
                      </mrc:description>
                      <mrc:maxValue>
                         <gco:Real>66.66</gco:Real>
@@ -2568,9 +2553,7 @@
                         </gco:MemberName>
                      </mrc:sequenceIdentifier>
                      <mrc:description>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.3/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:contentInfo/gmi:MI_CoverageDescription/gmd:dimension.3/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
                      </mrc:description>
                      <mrc:maxValue>
                         <gco:Real>33.33</gco:Real>
@@ -2609,9 +2592,7 @@
                         </gco:MemberName>
                      </mrc:sequenceIdentifier>
                      <mrc:description>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
                      </mrc:description>
                   </mrc:MD_SampleDimension>
                </mrc:attribute>
@@ -2632,9 +2613,7 @@
                         </gco:MemberName>
                      </mrc:sequenceIdentifier>
                      <mrc:description>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:contentInfo.2/gmi:MI_CoverageDescription/gmd:dimension.2/gmd:MD_Band/gmd:descriptor/gco:CharacterString</gco:CharacterString>
                      </mrc:description>
                      <mrc:maxValue>
                         <gco:Real>00.0000</gco:Real>
@@ -2659,23 +2638,17 @@
                <mrd:formatSpecificationCitation>
                   <cit:CI_Citation>
                      <cit:title>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                      </cit:title>
                      <cit:alternateTitle/>
                      <cit:date gco:nilReason="unknown"/>
                      <cit:edition>
-                        <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                             xmlns:srv="http://www.isotc211.org/2005/srv"
-                                             xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
+                        <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
                      </cit:edition>
                      <cit:identifier>
                         <mcc:MD_Identifier>
                            <mcc:code>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                            </mcc:code>
                         </mcc:MD_Identifier>
                      </cit:identifier>
@@ -2774,23 +2747,17 @@
                      <mrd:formatSpecificationCitation>
                         <cit:CI_Citation>
                            <cit:title>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                            </cit:title>
                            <cit:alternateTitle/>
                            <cit:date gco:nilReason="unknown"/>
                            <cit:edition>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
                            </cit:edition>
                            <cit:identifier>
                               <mcc:MD_Identifier>
                                  <mcc:code>
-                                    <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                         xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                         xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                                    <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                                  </mcc:code>
                               </mcc:MD_Identifier>
                            </cit:identifier>
@@ -2918,27 +2885,19 @@
                      <mrd:formatSpecificationCitation>
                         <cit:CI_Citation>
                            <cit:title>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                            </cit:title>
                            <cit:alternateTitle>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:specification/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:specification/gco:CharacterString</gco:CharacterString>
                            </cit:alternateTitle>
                            <cit:date gco:nilReason="unknown"/>
                            <cit:edition>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
                            </cit:edition>
                            <cit:identifier>
                               <mcc:MD_Identifier>
                                  <mcc:code>
-                                    <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                         xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                         xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                                    <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.2/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                                  </mcc:code>
                               </mcc:MD_Identifier>
                            </cit:identifier>
@@ -3072,23 +3031,17 @@
                      <mrd:formatSpecificationCitation>
                         <cit:CI_Citation>
                            <cit:title>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                            </cit:title>
                            <cit:alternateTitle/>
                            <cit:date gco:nilReason="unknown"/>
                            <cit:edition>
-                              <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                   xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                   xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
+                              <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:version/gco:CharacterString</gco:CharacterString>
                            </cit:edition>
                            <cit:identifier>
                               <mcc:MD_Identifier>
                                  <mcc:code>
-                                    <gco:CharacterString xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                                                         xmlns:srv="http://www.isotc211.org/2005/srv"
-                                                         xmlns:gmx="http://www.isotc211.org/2005/gmx">/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
+                                    <gco:CharacterString>/*/gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor.3/gmd:MD_Distributor/gmd:distributorFormat/gmd:MD_Format/gmd:name/gco:CharacterString</gco:CharacterString>
                                  </mcc:code>
                               </mcc:MD_Identifier>
                            </cit:identifier>
