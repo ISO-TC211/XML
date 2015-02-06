@@ -5,13 +5,16 @@
   xmlns:mac="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25"
   xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified"
   targetNamespace="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25" version="">
-  <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25"
+  
+  <include schemaLocation="acquisitionInformationImagery.xsd"/>
+  
+ <!--<!-\- <import namespace="http://standards.iso.org/19139/gco/1.0/2014-12-25"
     schemaLocation="../../../../../19139/gco/1.0/2014-12-25/gco.xsd"/>
   <import namespace="http://standards.iso.org/19139/gmw/1.0/2014-12-25"
     schemaLocation="../../../../../19139/gmw/1.0/2014-12-25/gmw.xsd"/>
   <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"
     schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <!-\-XML Schema document created by ShapeChange - http://shapechange.net/-\->
   <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation"
     type="mac:MI_AcquisitionInformation_Type">
     <annotation>
@@ -626,5 +629,6 @@
       <element ref="mac:MI_TriggerCode"/>
     </sequence>
     <attribute ref="gco:nilReason"/>
-  </complexType>
+  </complexType>-->
+  
 </schema>
