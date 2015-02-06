@@ -108,21 +108,7 @@ Information Metadata documented in ISO/TS 19139:2007. GCO includes all the defin
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
-	<!-- =========================================================================== -->
-	<!-- ........................................................................ -->
-	<xs:element name="TM_PeriodDuration" type="xs:duration"/>
-	<!-- ........................................................................ -->
-	<xs:complexType name="TM_PeriodDuration_PropertyType">
-		<!-- used in maintenance.xsd mmi:userDefinedMaintenanceFrequency
-			used in distribution.xsd mrd:transferFrequency
-			used in identification.xsd mri:temporalResolution.  all of these properties
-			are optional. -->
-		<xs:sequence minOccurs="0">
-			<xs:element ref="gmw:TM_PeriodDuration"/>
-		</xs:sequence>
-		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType>
-	<!-- =========================================================================== -->
+	
 	<!--================================================-->
 	
 	<!-- ### from gss  geometry.xsd ################################################ -->
