@@ -1,42 +1,48 @@
 <xsl:stylesheet version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:gmd="http://www.isotc211.org/2005/gmd"
-  xmlns:gco="http://www.isotc211.org/2005/gco"
-  xmlns:gmi="http://www.isotc211.org/2005/gmi"
-  xmlns:gmx="http://www.isotc211.org/2005/gmx"
-  xmlns:gsr="http://www.isotc211.org/2005/gsr"
-  xmlns:gss="http://www.isotc211.org/2005/gss"
-  xmlns:gts="http://www.isotc211.org/2005/gts"
-  xmlns:srv1="http://www.isotc211.org/2005/srv"
-  xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:cat="http://www.isotc211.org/namespace/cat/1.0/2014-07-11"
-  xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11"
-  xmlns:gcx="http://www.isotc211.org/namespace/gcx/1.0/2014-07-11"
-  xmlns:gex="http://www.isotc211.org/namespace/gex/1.0/2014-07-11"
-  xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11"
-  xmlns:srv="http://www.isotc211.org/namespace/srv/2.0/2014-07-11"
-  xmlns:mac="http://www.isotc211.org/namespace/mac/1.0/2014-07-11"
-  xmlns:mas="http://www.isotc211.org/namespace/mas/1.0/2014-07-11"
-  xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11"
-  xmlns:mco="http://www.isotc211.org/namespace/mco/1.0/2014-07-11"
-  xmlns:mda="http://www.isotc211.org/namespace/mda/1.0/2014-07-11"
-  xmlns:mdb="http://www.isotc211.org/namespace/mdb/1.0/2014-07-11"
-  xmlns:mdt="http://www.isotc211.org/namespace/mdt/1.0/2014-07-11"
-  xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11"
-  xmlns:mrl="http://www.isotc211.org/namespace/mrl/1.0/2014-07-11"
-  xmlns:mds="http://www.isotc211.org/namespace/mds/1.0/2014-07-11"
-  xmlns:mmi="http://www.isotc211.org/namespace/mmi/1.0/2014-07-11"
-  xmlns:mpc="http://www.isotc211.org/namespace/mpc/1.0/2014-07-11"
-  xmlns:mrc="http://www.isotc211.org/namespace/mrc/1.0/2014-07-11"
-  xmlns:mrd="http://www.isotc211.org/namespace/mrd/1.0/2014-07-11"
-  xmlns:mri="http://www.isotc211.org/namespace/mri/1.0/2014-07-11"
-  xmlns:mrs="http://www.isotc211.org/namespace/mrs/1.0/2014-07-11"
-  xmlns:msr="http://www.isotc211.org/namespace/msr/1.0/2014-07-11"
-  xmlns:mdq="http://www.isotc211.org/namespace/mdq/1.0/2014-07-11"
-  exclude-result-prefixes="#all">
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                xmlns:gcoold="http://www.isotc211.org/2005/gco"
+                xmlns:gmi="http://www.isotc211.org/2005/gmi"
+                xmlns:gmx="http://www.isotc211.org/2005/gmx"
+                xmlns:gsr="http://www.isotc211.org/2005/gsr"
+                xmlns:gss="http://www.isotc211.org/2005/gss"
+                xmlns:gts="http://www.isotc211.org/2005/gts"
+                xmlns:srvold="http://www.isotc211.org/2005/srv"
+                xmlns:gml30="http://www.opengis.net/gml"
+                xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0/2014-12-25"
+                xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0/2014-12-25"
+                xmlns:gcx="http://standards.iso.org/19115/-3/gcx/1.0/2014-12-25"
+                xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0/2014-12-25"
+                xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25"
+                xmlns:srv="http://standards.iso.org/19115/-3/srv/2.0/2014-12-25"
+                xmlns:mac="http://standards.iso.org/19115/-3/mac/1.0/2014-12-25"
+                xmlns:mas="http://standards.iso.org/19115/-3/mas/1.0/2014-12-25"
+                xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"
+                xmlns:mco="http://standards.iso.org/19115/-3/mco/1.0/2014-12-25"
+                xmlns:mda="http://standards.iso.org/19115/-3/mda/1.0/2014-12-25"
+                xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25"
+                xmlns:mdt="http://standards.iso.org/19115/-3/mdt/1.0/2014-12-25"
+                xmlns:mex="http://standards.iso.org/19115/-3/mex/1.0/2014-12-25"
+                xmlns:mic="http://standards.iso.org/19115/-3/mic/1.0/2014-12-25"
+                xmlns:mil="http://standards.iso.org/19115/-3/mil/1.0/2014-12-25"
+                xmlns:mrl="http://standards.iso.org/19115/-3/mrl/1.0/2014-12-25"
+                xmlns:mds="http://standards.iso.org/19115/-3/mds/1.0/2014-12-25"
+                xmlns:mmi="http://standards.iso.org/19115/-3/mmi/1.0/2014-12-25"
+                xmlns:mpc="http://standards.iso.org/19115/-3/mpc/1.0/2014-12-25"
+                xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0/2014-12-25"
+                xmlns:mrd="http://standards.iso.org/19115/-3/mrd/1.0/2014-12-25"
+                xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0/2014-12-25"
+                xmlns:mrs="http://standards.iso.org/19115/-3/mrs/1.0/2014-12-25"
+                xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0/2014-12-25"
+                xmlns:mai="http://standards.iso.org/19115/-3/mai/1.0/2014-12-25"
+                xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0/2014-12-25"
+                xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25"
+                xmlns:gml="http://www.opengis.net/gml/3.2"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+                exclude-result-prefixes="#all">
   
   <!-- Imnport template that creates the namespaces required for 19115-3 in the output xml -->
   <xsl:import href="create19115-3Namespaces.xsl"/>
@@ -75,15 +81,26 @@
           <xd:li>Added transform for MD_FeatureCatalogueDescription (problem identified by Tobias Spears</xd:li>
         </xd:ul>
       </xd:p>
+      <xd:p>
+        <xd:b>Version February 5, 2015</xd:b>
+        <xd:ul>
+          <xd:li>Update to 2014-12-25 version</xd:li>
+        </xd:ul>
+      </xd:p>
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
     </xd:desc>
   </xd:doc>
+
   <xsl:output method="xml" indent="yes"/>
+
   <xsl:strip-space elements="*"/>
+
   <xsl:variable name="stylesheetVersion" select="'0.1'"/>
-  <!-- Define if parent identifier should be defined using a uuidref 
+
+  <!-- Define if parent identifier should be defined using a uuidref
     attribute or a CI_Citation with a title. -->
   <xsl:param name="isParentIdentifierDefinedWithUUIDAttribute" select="false()" as="xs:boolean"/>
+
   <xsl:template match="/">
     <!-- 
     root element (MD_Metadata or MI_Metadata)
@@ -126,6 +143,8 @@
     </xsl:for-each>
     <!-- end of main root element processing -->
   </xsl:template>
+
+
   <!-- 
     root element templates
   -->
@@ -140,25 +159,27 @@
         <mcc:code>
           <gco:CharacterString>
             <xsl:choose>
-              <xsl:when test="contains(gco:CharacterString,':')">
-                <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
+              <xsl:when test="contains(gcoold:CharacterString,':')">
+                <xsl:value-of select="substring-after(gcoold:CharacterString,':')"/>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="gco:CharacterString"/>
+                <xsl:value-of select="gcoold:CharacterString"/>
               </xsl:otherwise>
             </xsl:choose>
           </gco:CharacterString>
         </mcc:code>
-        <xsl:if test="contains(gco:CharacterString,':')">
+        <xsl:if test="contains(gcoold:CharacterString,':')">
           <mcc:codeSpace>
             <gco:CharacterString>
-              <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
+              <xsl:value-of select="substring-before(gcoold:CharacterString,':')"/>
             </gco:CharacterString>
           </mcc:codeSpace>
         </xsl:if>
       </mcc:MD_Identifier>
     </xsl:element>
   </xsl:template>
+
+
   <xsl:template match="gmd:language|gmd:locale" priority="5">
     <xsl:variable name="nameSpacePrefix">
       <xsl:call-template name="getNamespacePrefix"/>
@@ -166,14 +187,14 @@
     <xsl:variable name="elementName" select="if (local-name() = 'language') then 'defaultLocale' else 'otherLocale'"/>
     <xsl:element name="{concat($nameSpacePrefix, ':', $elementName)}">
       <!--<xsl:element name="{'mdb:defaultLocale'}">-->
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <lan:PT_Locale>
         <xsl:copy-of select="gmd:PT_Locale/@*"/>
         <xsl:call-template name="writeCodelistElement">
           <xsl:with-param name="elementName" select="'lan:language'"/>
           <xsl:with-param name="codeListName" select="'lan:LanguageCode'"/>
           <xsl:with-param name="codeListValue" select="
-            gco:CharacterString |
+            gcoold:CharacterString |
             gmd:LanguageCode/@codeListValue |
             gmd:PT_Locale/gmd:languageCode/gmd:LanguageCode/@codeListValue"/>
         </xsl:call-template>
@@ -182,7 +203,7 @@
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'lan:characterEncoding'"/>
               <xsl:with-param name="codeListName" select="'lan:MD_CharacterSetCode'"/>
-              <xsl:with-param name="codeListValue" select="../gmd:characterSet/gmd:MD_CharacterSetCode"/>
+              <xsl:with-param name="codeListValue" select="../gmd:characterSet/gmd:MD_CharacterSetCode/@codeListValue"/>
             </xsl:call-template>
           </xsl:when>
           <xsl:otherwise>
@@ -192,6 +213,8 @@
       </lan:PT_Locale>
     </xsl:element>
   </xsl:template>
+
+
   <xsl:template match="gmd:characterSet" priority="5">
     <xsl:choose>
       <!-- if ../gmd/language exists, characterSet has already been translated to defaultLocale -->
@@ -202,21 +225,23 @@
         </xsl:variable>
         <xsl:element name="{concat($nameSpacePrefix,':','defaultLocale')}">
           <!--<xsl:element name="{'mdb:defaultLocale'}">-->
-          <xsl:copy-of select="@*"/>
+          <xsl:apply-templates select="@*"/>
           <lan:PT_Locale>
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'lan:characterEncoding'"/>
               <xsl:with-param name="codeListName" select="'lan:MD_CharacterSetCode'"/>
-              <xsl:with-param name="codeListValue" select="gmd:MD_CharacterSetCode"/>
+              <xsl:with-param name="codeListValue" select="gmd:MD_CharacterSetCode/@codeListValue"/>
             </xsl:call-template>
           </lan:PT_Locale>
         </xsl:element>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
+
   <xsl:template match="gmd:parentIdentifier" priority="5">
     <!--
-         gmd:parentIdentifier is changed from a gco:CharacterString to a 
+         gmd:parentIdentifier is changed from a gco:CharacterString to a
          mdb:parentMetadata element. This transform support two types 
          of conversion depending on the
          isParentIdentifierDefinedWithUUIDAttribute parameter.
@@ -231,13 +256,13 @@
     <xsl:element name="mdb:parentMetadata">
       <xsl:choose>
         <xsl:when test="$isParentIdentifierDefinedWithUUIDAttribute">
-          <xsl:attribute name="uuidref" select="gco:CharacterString"/>
+          <xsl:attribute name="uuidref" select="gcoold:CharacterString"/>
         </xsl:when>
         <xsl:otherwise>
           <cit:CI_Citation>
             <cit:title>
               <gco:CharacterString>
-                <xsl:value-of select="gco:CharacterString"/>
+                <xsl:value-of select="gcoold:CharacterString"/>
               </gco:CharacterString>
             </cit:title>
             <cit:identifier>
@@ -245,19 +270,19 @@
                 <mcc:code>
                   <gco:CharacterString>
                     <xsl:choose>
-                      <xsl:when test="contains(gco:CharacterString,':')">
-                        <xsl:value-of select="substring-after(gco:CharacterString,':')"/>
+                      <xsl:when test="contains(gcoold:CharacterString,':')">
+                        <xsl:value-of select="substring-after(gcoold:CharacterString,':')"/>
                       </xsl:when>
                       <xsl:otherwise>
-                        <xsl:value-of select="gco:CharacterString"/>
+                        <xsl:value-of select="gcoold:CharacterString"/>
                       </xsl:otherwise>
                     </xsl:choose>
                   </gco:CharacterString>
                 </mcc:code>
-                <xsl:if test="contains(gco:CharacterString,':')">
+                <xsl:if test="contains(gcoold:CharacterString,':')">
                   <mcc:codeSpace>
                     <gco:CharacterString>
-                      <xsl:value-of select="substring-before(gco:CharacterString,':')"/>
+                      <xsl:value-of select="substring-before(gcoold:CharacterString,':')"/>
                     </gco:CharacterString>
                   </mcc:codeSpace>
                 </xsl:if>
@@ -268,6 +293,8 @@
       </xsl:choose>
     </xsl:element>
   </xsl:template>
+
+
   <xsl:template match="gmd:hierarchyLevel" priority="5">
     <!-- ************************************************************************ -->
     <!-- gmd:hierarchyLevel and gmd:hierarchyLevelName are combined into a
@@ -278,18 +305,22 @@
         <xsl:call-template name="writeCodelistElement">
           <xsl:with-param name="elementName" select="'mdb:resourceScope'"/>
           <xsl:with-param name="codeListName" select="'mcc:MD_ScopeCode'"/>
-          <xsl:with-param name="codeListValue" select="gmd:MD_ScopeCode | gmx:MX_ScopeCode"/>
+          <xsl:with-param name="codeListValue"
+                          select="gmd:MD_ScopeCode/@codeListValue|
+                                  gmx:MX_ScopeCode/@codeListValue"/>
         </xsl:call-template>
         <xsl:if test="../gmd:hierarchyLevelName">
           <mdb:name>
             <gco:CharacterString>
-              <xsl:value-of select="../gmd:hierarchyLevelName/gco:CharacterString"/>
+              <xsl:value-of select="../gmd:hierarchyLevelName/gcoold:CharacterString"/>
             </gco:CharacterString>
           </mdb:name>
         </xsl:if>
       </mdb:MD_MetadataScope>
     </mdb:metadataScope>
   </xsl:template>
+
+
   <xsl:template match="gmd:dateStamp" priority="5">
     <!--
       dateStamp is changed into a CI_Date that includes a dateType 
@@ -307,6 +338,8 @@
       </cit:CI_Date>
     </mdb:dateInfo>
   </xsl:template>
+
+
   <xsl:template match="gmd:metadataStandardName" priority="5">
     <!-- 
       metadataStandardName and gmd:metadataStandardVersion are combined into a CI_Citation 
@@ -324,6 +357,8 @@
       </cit:CI_Citation>
     </mdb:metadataStandard>
   </xsl:template>
+
+
   <!-- gmd:spatialRepresentationInfo uses default templates -->
   <xsl:template match="gmi:geographicCoordinates">
     <xsl:choose>
@@ -342,17 +377,19 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
+
   <!-- gmd:referenceSystemInfo uses default templates -->
   <!-- gmd:metadataExtensionInfo uses default templates -->
   <xsl:template match="gmd:identificationInfo">
     <mdb:identificationInfo>
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:for-each select="./*">
         <xsl:variable name="nameSpacePrefix">
           <xsl:call-template name="getNamespacePrefix"/>
         </xsl:variable>
         <xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">
-          <xsl:copy-of select="@*"/>
+          <xsl:apply-templates select="@*"/>
           <xsl:apply-templates select="gmd:citation"/>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:abstract'"/>
@@ -368,20 +405,20 @@
           </xsl:call-template>
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'mri:status'"/>
-            <xsl:with-param name="codeListValue" select="gmd:status/gmd:MD_ProgressCode"/>
+            <xsl:with-param name="codeListValue" select="gmd:status/gmd:MD_ProgressCode/@codeListValue"/>
             <xsl:with-param name="codeListName" select="'mcc:MD_ProgressCode'"/>
           </xsl:call-template>
           <xsl:apply-templates select="gmd:pointOfContact"/>
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'mri:spatialRepresentationType'"/>
             <xsl:with-param name="codeListName" select="'mcc:MD_SpatialRepresentationTypeCode'"/>
-            <xsl:with-param name="codeListValue" select="gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode"/>
+            <xsl:with-param name="codeListValue" select="gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode/@codeListValue"/>
           </xsl:call-template>
           <xsl:apply-templates select="gmd:spatialResolution"/>
           <!-- This is here to handle early adopters of temporalResolution -->
           <xsl:apply-templates select="gmd:temporalResolution"/>
           <xsl:apply-templates select="gmd:topicCategory"/>
-          <xsl:apply-templates select="gmd:extent | srv1:extent"/>
+          <xsl:apply-templates select="gmd:extent | srvold:extent"/>
           <xsl:apply-templates select="gmd:resourceMaintenance"/>
           <xsl:apply-templates select="gmd:graphicOverview"/>
           <xsl:apply-templates select="gmd:resourceFormat"/>
@@ -400,35 +437,39 @@
             <xsl:with-param name="nodeWithStringToWrite" select="gmd:supplementalInformation"/>
           </xsl:call-template>
           <!-- Service Identification Information -->
-          <xsl:if test="srv1:serviceType">
+          <xsl:if test="srvold:serviceType">
             <srv:serviceType>
-              <gco:LocalName>
-                <xsl:value-of select="srv1:serviceType/gco:LocalName"/>
-              </gco:LocalName>
+              <gco:ScopedName>
+                <xsl:value-of select="srvold:serviceType/gcoold:LocalName"/>
+              </gco:ScopedName>
             </srv:serviceType>
           </xsl:if>
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'srv:serviceTypeVersion'"/>
-            <xsl:with-param name="nodeWithStringToWrite" select="srv1:serviceTypeVersion"/>
+            <xsl:with-param name="nodeWithStringToWrite" select="srvold:serviceTypeVersion"/>
           </xsl:call-template>
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'srv:couplingType'"/>
             <xsl:with-param name="codeListName" select="'srv:SV_CouplingType'"/>
-            <xsl:with-param name="codeListValue" select="srv1:couplingType/srv1:SV_CouplingType"/>
+            <xsl:with-param name="codeListValue" select="srvold:couplingType/srvold:SV_CouplingType/@codeListValue"/>
           </xsl:call-template>
-          <xsl:apply-templates select="srv1:containsOperations"/>
-          <xsl:apply-templates select="srv1:operatesOn"/>
+          <xsl:apply-templates select="srvold:containsOperations"/>
+          <xsl:apply-templates select="srvold:operatesOn"/>
         </xsl:element>
       </xsl:for-each>
     </mdb:identificationInfo>
   </xsl:template>
-  <xsl:template match="srv1:optionality">
+
+
+  <xsl:template match="srvold:optionality">
     <srv:optionality>
       <gco:Boolean>
-        <xsl:value-of select="gco:CharacterString"/>
+        <xsl:value-of select="gcoold:CharacterString"/>
       </gco:Boolean>
     </srv:optionality>
   </xsl:template>
+
+
   <xsl:template match="gmd:contentInfo[not(gmd:MD_FeatureCatalogueDescription)
     and not(gmd:MD_ImageDescription)]">
     <xsl:if test="not(preceding-sibling::gmd:contentInfo)">
@@ -471,6 +512,8 @@
       </xsl:element>
     </xsl:if>
   </xsl:template>
+
+
   <!-- transform contentInfo sections with Feature Catalogues -->
   <xsl:template match="gmd:contentInfo[gmd:MD_FeatureCatalogueDescription] | gmd:contentInfo[gmd:MD_ImageDescription]">
     <xsl:element name="mdb:contentInfo">
@@ -486,6 +529,8 @@
       </mrc:MD_FeatureTypeInfo>
     </mrc:featureTypes>
   </xsl:template>
+
+
   <!-- gmd:distributionInfo uses default templates -->
   <xsl:template match="gmd:dataQualityInfo">
     <xsl:if test="gmd:DQ_DataQuality/gmd:report">
@@ -526,10 +571,10 @@
                   </mdq:measure>
                   <mdq:evaluationMethod>
                     <mdq:DQ_FullInspection>
-                      <xsl:if test="gmd:dateTime/gco:DateTime">
+                      <xsl:if test="gmd:dateTime/gcoold:DateTime">
                         <mdq:dateTime>
                           <gco:DateTime>
-                            <xsl:value-of select="gmd:dateTime/gco:DateTime"/>
+                            <xsl:value-of select="gmd:dateTime/gcoold:DateTime"/>
                           </gco:DateTime>
                         </mdq:dateTime>
                       </xsl:if>
@@ -543,7 +588,7 @@
                       <xsl:call-template name="writeCodelistElement">
                         <xsl:with-param name="elementName" select="'mdq:evaluationMethodType'"/>
                         <xsl:with-param name="codeListName" select="'mdq:DQ_EvaluationMethodTypeCode'"/>
-                        <xsl:with-param name="codeListValue" select="gmd:evaluationMethodType/gmd:DQ_EvaluationMethodTypeCode "/>
+                        <xsl:with-param name="codeListValue" select="gmd:evaluationMethodType/gmd:DQ_EvaluationMethodTypeCode/@codeListValue"/>
                       </xsl:call-template>
                     </mdq:DQ_FullInspection>
                   </mdq:evaluationMethod>
@@ -555,6 +600,7 @@
         </mdq:DQ_DataQuality>
       </mdb:dataQualityInfo>
     </xsl:if>
+
     <!-- 
     gmd:lineage moves directly under MD_Metadata
     -->
@@ -575,7 +621,9 @@
                 <xsl:call-template name="writeCodelistElement">
                   <xsl:with-param name="elementName" select="'mcc:level'"/>
                   <xsl:with-param name="codeListName" select="'mcc:MD_ScopeCode'"/>
-                  <xsl:with-param name="codeListValue" select="$dataQualityScopeObject//gmd:MD_ScopeCode | $dataQualityScopeObject//gmx:MX_ScopeCode"/>
+                  <xsl:with-param name="codeListValue"
+                                  select="$dataQualityScopeObject//gmd:MD_ScopeCode/@codeListValue|
+                                          $dataQualityScopeObject//gmx:MX_ScopeCode/@codeListValue"/>
                 </xsl:call-template>
                 <xsl:for-each select="$dataQualityScopeObject//gmd:EX_Extent">
                   <mcc:extent>
@@ -602,6 +650,7 @@
       </xsl:element>
     </xsl:for-each>
   </xsl:template>
+
   <!-- gmd:portrayalCatalogueInfo uses default templates -->
   <!-- gmd:metadataConstraints uses default templates -->
   <!-- gmd:applicationSchemaInfo uses default templates -->
@@ -621,10 +670,11 @@
   <xsl:template match="gmi:objectiveOccurance">
     <!-- This element is mis-spelled in the 19115-2 schema -->
     <xsl:element name="mac:objectiveOccurence">
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:value-of select="."/>
     </xsl:element>
   </xsl:template>
+
   <!--
   gmd:spatialRepresentation templates
   -->
@@ -636,6 +686,7 @@
       <xsl:apply-templates select="gmi:coordinateReferenceSystem"/>
     </xsl:element>
   </xsl:template>
+
   <!--
   gmd:identificationInformation templates
   -->
@@ -651,19 +702,20 @@
         <mcc:MD_Identifier>
           <mcc:code>
             <gco:CharacterString>
-              <xsl:value-of select="/*/gmd:dataSetURI/gco:CharacterString"/>
+              <xsl:value-of select="/*/gmd:dataSetURI/gcoold:CharacterString"/>
             </gco:CharacterString>
           </mcc:code>
         </mcc:MD_Identifier>
       </cit:identifier>
     </xsl:if>
     <!-- Avoid putting out empty citedResponsibleParties for just onlineResources (responsible parties without names) -->
-    <xsl:if test="count(gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString) != 0">
+    <xsl:if test="count(gmd:CI_ResponsibleParty/gmd:individualName/gcoold:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:organisationName/gcoold:CharacterString) + count(gmd:CI_ResponsibleParty/gmd:positionName/gcoold:CharacterString) != 0">
       <cit:citedResponsibleParty>
         <xsl:apply-templates/>
       </cit:citedResponsibleParty>
     </xsl:if>
   </xsl:template>
+
   <xsl:template match="/*/gmd:identificationInfo/*/gmd:resourceSpecificUsage/gmd:MD_Usage/gmd:usageDateTime">
     <mri:usageDateTime>
       <gml:TimeInstant>
@@ -676,6 +728,7 @@
       </gml:TimeInstant>
     </mri:usageDateTime>
   </xsl:template>
+
   <xsl:template match="gmd:aggregationInfo" priority="5">
     <!-- 
    gmd:MD_AggregateInformation was renamed gmd:associatedResource in order
@@ -711,10 +764,11 @@
                 <cit:date>
                   <cit:CI_Date>
                     <cit:date>
-                      <gco:DateTime>2000-05-05T00:00:00</gco:DateTime>
+                      <gco:DateTime></gco:DateTime>
                     </cit:date>
                     <cit:dateType>
-                      <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode">/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:aggregationInfo.1/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode</cit:CI_DateTypeCode>
+                      <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode"
+                                           codeListValue=""/>
                     </cit:dateType>
                   </cit:CI_Date>
                 </cit:date>
@@ -738,6 +792,7 @@
       </xsl:element>
     </mri:associatedResource>
   </xsl:template>
+
   <xsl:template match="gmd:aggregationInfo/gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation/gmd:citedResponsibleParty">
     <xsl:if test="not(preceding-sibling::gmd:citedResponsibleParty) and ancestor::gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier">
       <!-- ********************************************************************** 
@@ -752,19 +807,23 @@
       <xsl:apply-templates/>
     </cit:citedResponsibleParty>
   </xsl:template>
-  <xsl:template match="srv1:containsOperations">
+
+  <xsl:template match="srvold:containsOperations">
     <srv:containsOperations>
       <srv:SV_OperationMetadata>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'srv:operationName'"/>
-          <xsl:with-param name="nodeWithStringToWrite" select="srv1:SV_OperationMetadata/srv1:operationName"/>
+          <xsl:with-param name="nodeWithStringToWrite"
+                          select="srvold:SV_OperationMetadata/srvold:operationName"/>
         </xsl:call-template>
         <xsl:choose>
-          <xsl:when test="srv1:SV_OperationMetadata/srv1:DCP/srv1:DCPList">
+          <xsl:when test="srvold:SV_OperationMetadata/srvold:DCP/srvold:DCPList">
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'srv:distributedComputingPlatform'"/>
               <xsl:with-param name="codeListName" select="'srv:DCPList'"/>
-              <xsl:with-param name="codeListValue" select="srv1:SV_OperationMetadata/srv1:DCP/srv1:DCPList"/>
+              <xsl:with-param name="codeListValue"
+                              select="srvold:SV_OperationMetadata/srvold:DCP/
+                                        srvold:DCPList/@codeListValue"/>
             </xsl:call-template>
           </xsl:when>
           <xsl:otherwise>
@@ -773,31 +832,35 @@
         </xsl:choose>
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'srv:invocationName'"/>
-          <xsl:with-param name="nodeWithStringToWrite" select="srv1:SV_OperationMetadata/srv1:invocationName"/>
+          <xsl:with-param name="nodeWithStringToWrite"
+                          select="srvold:SV_OperationMetadata/srvold:invocationName"/>
         </xsl:call-template>
-        <xsl:apply-templates select="srv1:SV_OperationMetadata/srv1:connectPoint"/>
-        <xsl:apply-templates select="srv1:SV_OperationMetadata/srv1:parameters"/>
+        <xsl:apply-templates select="srvold:SV_OperationMetadata/srvold:connectPoint"/>
+        <xsl:apply-templates select="srvold:SV_OperationMetadata/srvold:parameters"/>
       </srv:SV_OperationMetadata>
     </srv:containsOperations>
   </xsl:template>
-  <xsl:template match="srv1:parameters">
+
+  <xsl:template match="srvold:parameters">
     <srv:parameter>
-      <xsl:apply-templates select="srv1:SV_Parameter"/>
+      <xsl:apply-templates select="srvold:SV_Parameter"/>
     </srv:parameter>
   </xsl:template>
-  <xsl:template match="srv1:SV_Parameter/srv1:name">
+
+  <xsl:template match="srvold:SV_Parameter/srvold:name">
     <xsl:element name="srv:name">
       <gco:MemberName>
         <xsl:apply-templates/>
       </gco:MemberName>
     </xsl:element>
   </xsl:template>
+
   <!--
     gmd:referenceSystemInformation templates
   -->
   <xsl:template match="gmd:RS_Identifier">
     <mcc:MD_Identifier>
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </mcc:MD_Identifier>
   </xsl:template>
@@ -809,19 +872,22 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+
   <xsl:template match="gmd:MD_Band">
     <xsl:element name="mrc:MD_SampleDimension">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+
   <xsl:template match="gmi:MI_Band">
     <xsl:element name="mrc:MI_Band">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+
   <xsl:template match="gmd:MD_Band/gmd:descriptor | gmi:MI_Band/gmd:descriptor">
     <xsl:element name="mrc:description">
-      <xsl:copy-of select="./gco:CharacterString"/>
+      <xsl:copy-of select="./gcoold:CharacterString"/>
     </xsl:element>
   </xsl:template>
   <!-- 
@@ -848,12 +914,14 @@
       <xsl:apply-templates select="gmd:valueType"/>
     </mdq:DQ_QuantitativeResult>
   </xsl:template>
+
   <!-- added to account for element name change from valueType to valueRecordType - 2014-07-29 -->
   <xsl:template match="gmd:result/gmd:DQ_QuantitativeResult/gmd:valueType">
     <xsl:element name="mdq:valueRecordType">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+
   <xsl:template match="gmd:report/*/gmd:result/gmd:DQ_ConformanceResult/gmd:specification">
     <mdq:specification>
       <!--<dqm:DQM_SourceReference>
@@ -863,10 +931,11 @@
       </dqm:DQM_SourceReference>-->
     </mdq:specification>
   </xsl:template>
+
   <xsl:template match="gmd:report/*/gmd:result/gmi:QE_CoverageResult/gmi:resultContentDescription/gmi:MI_CoverageDescription">
     <xsl:element name="mrc:MI_CoverageDescription">
       <xsl:element name="mrc:attributeDescription">
-        <xsl:copy-of select="./gmd:attributeDescription/gco:RecordType"/>
+        <xsl:copy-of select="./gmd:attributeDescription/gcoold:RecordType"/>
       </xsl:element>
       <xsl:element name="mrc:attributeGroup">
         <xsl:element name="mrc:MD_AttributeGroup">
@@ -875,9 +944,10 @@
       </xsl:element>
     </xsl:element>
   </xsl:template>
+
   <xsl:template match="gmd:LI_ProcessStep/gmd:source">
     <mrl:source>
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:if test="*[1]">
         <xsl:variable name="lineageElement" select="concat('mrl:',local-name(*[1]))"/>
         <xsl:element name="{$lineageElement}">
@@ -919,7 +989,7 @@
   </xsl:template>
   <xsl:template match="gmi:LE_ProcessStep">
     <xsl:element name="mrl:LE_ProcessStep">
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:apply-templates select="gmd:description"/>
       <xsl:apply-templates select="gmd:dateTime"/>
       <xsl:apply-templates select="gmd:processor"/>
@@ -936,14 +1006,14 @@
           <xsl:value-of select="generate-id()"/>
         </xsl:attribute>
         <gml:timePosition>
-          <xsl:value-of select="./gco:DateTime"/>
+          <xsl:value-of select="./gcoold:DateTime"/>
         </gml:timePosition>
       </gml:TimeInstant>
     </mrl:stepDateTime>
   </xsl:template>
   <xsl:template match="gmi:LE_Processing">
     <xsl:element name="mrl:LE_Processing">
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:apply-templates select="gmi:algorithm"/>
       <xsl:apply-templates select="gmi:identifier"/>
       <xsl:apply-templates select="gmi:softwareReference"/>
@@ -974,7 +1044,7 @@
   -->
   <xsl:template match="gmi:MI_Operation/gmi:status/gmd:MD_ProgressCode">
     <xsl:element name="mcc:MD_ProgressCode">
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
     </xsl:element>
   </xsl:template>
   <!--
@@ -986,7 +1056,7 @@
         <cit:CI_Telephone>
           <cit:number>
             <gco:CharacterString>
-              <xsl:value-of select="./gco:CharacterString"/>
+              <xsl:value-of select="./gcoold:CharacterString"/>
             </gco:CharacterString>
           </cit:number>
           <xsl:call-template name="writeCodelistElement">
@@ -1007,14 +1077,16 @@
       </cit:phone>
     </xsl:for-each>
   </xsl:template>
+
   <xsl:template match="gmd:CI_OnlineResource/gmd:linkage/gmd:URL">
     <gco:CharacterString>
       <xsl:value-of select="."/>
     </gco:CharacterString>
   </xsl:template>
+
   <xsl:template match="gmd:MD_Format">
     <xsl:element name="mrd:MD_Format">
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:element name="mrd:formatSpecificationCitation">
         <xsl:element name="cit:CI_Citation">
           <cit:title>
@@ -1048,6 +1120,7 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+
   <xsl:template name="writeCodelistElement">
     <xsl:param name="elementName"/>
     <xsl:param name="codeListName"/>
@@ -1073,23 +1146,53 @@
       </xsl:element>
     </xsl:if>
   </xsl:template>
+
   <xsl:template name="characterStringSubstitutions">
     <xsl:param name="parentElement"/>
-    <!-- This template takes a parent of a gco:CharacterString element and writes out the child for several possible substitutions  -->
+    <!-- This template takes a parent of a gcoold:CharacterString element and writes out the child for several possible substitutions  -->
     <xsl:for-each select="$parentElement/*">
       <xsl:choose>
         <xsl:when test="local-name(.)='CharacterString'">
-          <xsl:copy-of select="."/>
+          <gco:CharacterString>
+            <xsl:value-of select="."/>
+          </gco:CharacterString>
         </xsl:when>
         <xsl:otherwise>
           <xsl:element name="{concat('gcx:',local-name(.))}">
-            <xsl:copy-of select="@*" copy-namespaces="no"/>
+            <xsl:apply-templates select="@*"/>
             <xsl:value-of select="."/>
           </xsl:element>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:for-each>
   </xsl:template>
+
+
+  <xsl:template match="gml30:*">
+    <xsl:element name="{local-name(.)}"
+                 namespace="http://www.opengis.net/gml/3.2">
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="@gml30:*">
+    <xsl:attribute name="gml:{local-name()}">
+      <xsl:value-of select="."/>
+    </xsl:attribute>
+  </xsl:template>
+
+  <xsl:template match="@gcoold:*">
+    <xsl:attribute name="gco:{local-name()}">
+      <xsl:value-of select="."/>
+    </xsl:attribute>
+  </xsl:template>
+
+  <xsl:template match="@*">
+    <xsl:copy-of select="."/>
+  </xsl:template>
+
+
   <!-- Default template writes correct namespace prefix -->
   <xsl:template match="*">
     <xsl:variable name="nameSpacePrefix">
@@ -1097,10 +1200,12 @@
     </xsl:variable>
     <xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">
       <!-- copy all attributes -->
-      <xsl:copy-of select="@*"/>
+      <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+
+
   <!-- find the correct namespace prefix -->
   <xsl:template name="getNamespacePrefix">
     <!-- this template determines the correct namespace prefix depending on the position of the element in the new XML -->
@@ -1199,7 +1304,7 @@
         <xsl:when test="ancestor-or-self::gmd:MD_MaintenanceInformation">
           <xsl:text>mmi</xsl:text>
         </xsl:when>
-        <xsl:when test="ancestor-or-self::gmd:MD_DataIdentification or ancestor-or-self::srv1:SV_ServiceIdentification">
+        <xsl:when test="ancestor-or-self::gmd:MD_DataIdentification or ancestor-or-self::srvold:SV_ServiceIdentification">
           <!-- or ancestor-or-self::gmd:MD_SpatialRepresentationTypeCode"> this test is not necessary -->
           <xsl:text>mri</xsl:text>
         </xsl:when>
@@ -1245,7 +1350,7 @@
   <xsl:template match="gmd:MD_Format/gmd:name" priority="5"/>
   <xsl:template match="gmd:MD_Format/gmd:specification" priority="5"/>
   <xsl:template match="gmd:MD_Format/gmd:version" priority="5"/>
-  <xsl:template match="srv1:containsOperations/srv1:SV_OperationMetadata/srv1:parameters/srv1:SV_Parameter/srv1:valueType" priority="5"/>
+  <xsl:template match="srvold:containsOperations/srvold:SV_OperationMetadata/srvold:parameters/srvold:SV_Parameter/srvold:valueType" priority="5"/>
   <!-- Include templates for CI_ResponsibleParty. These are included here to prevent them being overridden by the default template.
        I am not sure why this is necessary.
   -->
