@@ -153,7 +153,7 @@
               <documentation>factor which provides a general understanding of the density of spatial data in the resource</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="temporalResolution" type="gmw:TM_PeriodDuration_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="temporalResolution" type="gco:TM_PeriodDuration_PropertyType">
             <annotation>
               <documentation>resolution of the resource with respect to time</documentation>
             </annotation>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fcc="http://standards.iso.org/19110/fcc/1.0/2014-12-25" 
   xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:gfc="http://standards.iso.org/19110/gfc/1.1/2014-12-25" 
-  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/19139/-1/gmw/1.0/2014-12-25"
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/19139/gmw/1.0/2014-12-25"
   xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" 
   xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19110/gfc/1.1/2014-12-25" version="1.1">
   <include schemaLocation="gfc.xsd"/>
@@ -10,8 +10,9 @@
   <import namespace="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25" schemaLocation="../../../../19115/-3/lan/1.0/2014-12-25/lan.xsd"/>
   <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
   <import namespace="http://standards.iso.org/19139/gmw/1.0/2014-12-25" schemaLocation="../../../../19139/gmw/1.0/2014-12-25/gmw.xsd"/>
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
+<!--  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>-->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <!-- SMR 2015-02-07 change gml:CodeType to gco:CodeType for 2014-12-25 build; UnitOfMeasure is in gmw, not gco so change that too -->
   <element name="FC_AssociationRole" substitutionGroup="gfc:AbstractFC_PropertyType" type="gfc:FC_AssociationRole_Type">
     <annotation>
       <documentation>A role of the association FC_AssociationRole::relation. &lt;ocl&gt; roleName = FC_Member::memberName; FC_PropertyType::cardinality realizes GF_AssociationRole::cardinality &lt;/ocl&gt;</documentation>
@@ -418,7 +419,7 @@
     <complexContent>
       <extension base="fcc:Abstract_FeatureType_Type">
         <sequence>
-          <element name="typeName" type="gml:CodeType">
+          <element name="typeName" type="gco:CodeType">
             <annotation>
               <documentation>Text string that uniquely identifies this feature type within the feature catalogue that contains this feature type.</documentation>
             </annotation>
@@ -438,7 +439,7 @@
               <documentation>Indicates if the feature type is abstract or not.</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="aliases" type="gml:CodeType">
+          <element maxOccurs="unbounded" minOccurs="0" name="aliases" type="gco:CodeType">
             <annotation>
               <documentation>Equivalent name(s) of this feature type.</documentation>
             </annotation>
@@ -607,7 +608,7 @@
     <complexContent>
       <extension base="gfc:AbstractFC_CarrierOfCharacteristics_Type">
         <sequence>
-          <element name="memberName" type="gml:CodeType">
+          <element name="memberName" type="gco:CodeType">
             <annotation>
               <documentation>member name that locates this member within a feature type for a local property or within the feature catalogue for a global property</documentation>
             </annotation>
