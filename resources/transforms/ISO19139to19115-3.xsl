@@ -494,9 +494,14 @@
             </xsl:choose>
           </xsl:variable>
           <xsl:element name="{$coverageDescriptionName}">
-            <xsl:element name="mrc:attributeDescription">
-              <xsl:copy-of select="./gmd:attributeDescription/gco:RecordType"/>
-            </xsl:element>
+            <xsl:if test="gmd:attributeDescription/gcoold:RecordType/@*">
+              <!--<xsl:element name="mrc:attributeDescription">
+                <xsl:element name="gco:RecordType">-->
+                  <xsl:apply-templates/>
+                <!--</xsl:element>
+                <xsl:copy-of select="./gmd:attributeDescription/gcoold:RecordType"/>
+              </xsl:element>-->
+            </xsl:if>
             <!-- This loop goes back out to convert each gmd:contentInfo section into a separate mrc:AttributeGroup -->
             <xsl:for-each
               select="/*/gmd:contentInfo/gmd:MD_CoverageDescription | /*/gmd:contentInfo/gmi:MI_CoverageDescription">
@@ -522,6 +527,9 @@
   <xsl:template
     match="gmd:contentInfo[gmd:MD_FeatureCatalogueDescription] | gmd:contentInfo[gmd:MD_ImageDescription]">
     <xsl:element name="mdb:contentInfo">
+      <!--<xsl:if test="exists(./gmd:MD_ImageDescription)">
+        <mrc:attributeDescription gco:nilReason="unknown"/>
+      </xsl:if>-->
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -787,7 +795,7 @@
                   />
                 </xsl:call-template>
                 <cit:date gco:nilReason="unknown"/>
-                  
+
                 <cit:identifier>
                   <xsl:apply-templates
                     select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier"
@@ -836,29 +844,28 @@
     If it exists in /gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:collectiveTitle,
     an MD_AssociatedResource section needs to be added.-->
   <xsl:template name="collectiveTitle">
-      <xsl:for-each
-        select=".//gmd:citation/gmd:CI_Citation/gmd:collectiveTitle">
+    <xsl:for-each select=".//gmd:citation/gmd:CI_Citation/gmd:collectiveTitle">
 
-        <mri:associatedResource>
-          <xsl:element name="mri:MD_AssociatedResource">
-            <!-- The name element is mapped from the existing collectiveTitle -->
-            <mri:name>
-              <cit:CI_Citation>
-                <xsl:call-template name="writeCharacterStringElement">
-                  <xsl:with-param name="elementName" select="'cit:title'"/>
-                  <xsl:with-param name="nodeWithStringToWrite" select="."/>
-                </xsl:call-template>
-              </cit:CI_Citation>
-            </mri:name>
-            <xsl:call-template name="writeCodelistElement">
-              <xsl:with-param name="elementName" select="'mri:associationType'"/>
-              <xsl:with-param name="codeListName" select="'mri:DS_AssociationTypeCode'"/>
-              <xsl:with-param name="codeListValue" select="'largerWorkCitation'"/>
-            </xsl:call-template>
+      <mri:associatedResource>
+        <xsl:element name="mri:MD_AssociatedResource">
+          <!-- The name element is mapped from the existing collectiveTitle -->
+          <mri:name>
+            <cit:CI_Citation>
+              <xsl:call-template name="writeCharacterStringElement">
+                <xsl:with-param name="elementName" select="'cit:title'"/>
+                <xsl:with-param name="nodeWithStringToWrite" select="."/>
+              </xsl:call-template>
+            </cit:CI_Citation>
+          </mri:name>
+          <xsl:call-template name="writeCodelistElement">
+            <xsl:with-param name="elementName" select="'mri:associationType'"/>
+            <xsl:with-param name="codeListName" select="'mri:DS_AssociationTypeCode'"/>
+            <xsl:with-param name="codeListValue" select="'largerWorkCitation'"/>
+          </xsl:call-template>
 
-          </xsl:element>
-        </mri:associatedResource>
-      </xsl:for-each>
+        </xsl:element>
+      </mri:associatedResource>
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="srvold:containsOperations">
@@ -941,7 +948,9 @@
 
   <xsl:template match="gmd:MD_Band/gmd:descriptor | gmi:MI_Band/gmd:descriptor">
     <xsl:element name="mrc:description">
-      <xsl:copy-of select="./gcoold:CharacterString"/>
+      <xsl:element name="gco:CharacterString">
+        <xsl:value-of select="."/>
+      </xsl:element>
     </xsl:element>
   </xsl:template>
   <!-- 
@@ -1375,7 +1384,7 @@
         </xsl:when>
         <xsl:when
           test="ancestor-or-self::gmd:MD_CoverageDescription or ancestor-or-self::gmi:MI_CoverageDescription
-          or ancestor-or-self::gmd:MD_FeatureCatalogueDescription">
+          or ancestor-or-self::gmd:MD_FeatureCatalogueDescription or ancestor-or-self::gmd:MD_ImageDescription">
           <xsl:text>mrc</xsl:text>
         </xsl:when>
         <!-- Moved here to get CoverageResult right -->
@@ -1408,9 +1417,11 @@
   <xsl:template match="gmd:hierarchyLevelName" priority="5"/>
   <xsl:template match="gmd:metadataStandardVersion" priority="5"/>
   <xsl:template match="gmd:dataSetURI" priority="5"/>
-  <xsl:template match="gmd:contentInfo/*/gmd:attributeDescription" priority="5"/>
+  <xsl:template match="gmd:contentInfo/gmd:MD_CoverageDescription/gmd:attributeDescription"
+    priority="5"/>
   <xsl:template match="gmd:contentInfo/gmi:MI_CoverageDescription/gmi:rangeElementDescription"
     priority="5"/>
+  <xsl:template match="gmd:contentInfo/gmd:MD_ImageDescription/gmd:contentType" priority="5"/>
   <xsl:template
     match="gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:result/gmi:QE_CoverageResult//gmd:attributeDescription"
     priority="5"/>
