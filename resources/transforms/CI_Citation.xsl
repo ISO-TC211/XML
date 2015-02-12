@@ -103,4 +103,7 @@
             <xsl:call-template name="writeDateTime"/>
         </cit:editionDate>
     </xsl:template>
+    
+    <!-- The collectiveTitle element was dropped from CI_Citation in 19115-1 -->
+    <xsl:template match="gmd:CI_Citation/gmd:collectiveTitle"/>
 </xsl:stylesheet>
