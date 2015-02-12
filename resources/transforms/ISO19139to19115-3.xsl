@@ -763,18 +763,21 @@
           <xsl:when
             test="exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetName)
             and exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier)">
+            <!-- both name an identifier exist - use standard template -->
             <mri:name>
               <xsl:apply-templates
                 select="gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation"/>
             </mri:name>
           </xsl:when>
           <xsl:when test="exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetName)">
+            <!-- only an name exists - write it into a CI_Citation -->
             <mri:name>
               <xsl:apply-templates
                 select="gmd:MD_AggregateInformation/gmd:aggregateDataSetName/gmd:CI_Citation"/>
             </mri:name>
           </xsl:when>
           <xsl:when test="exists(gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier)">
+            <!-- only an identifier exists - write it into a CI_Citation -->
             <mri:name>
               <cit:CI_Citation>
                 <xsl:call-template name="writeCharacterStringElement">
@@ -783,17 +786,8 @@
                     select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title"
                   />
                 </xsl:call-template>
-                <cit:date>
-                  <cit:CI_Date>
-                    <cit:date>
-                      <gco:DateTime/>
-                    </cit:date>
-                    <cit:dateType>
-                      <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode"
-                        codeListValue=""/>
-                    </cit:dateType>
-                  </cit:CI_Date>
-                </cit:date>
+                <cit:date gco:nilReason="unknown"/>
+                  
                 <cit:identifier>
                   <xsl:apply-templates
                     select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier"
