@@ -374,7 +374,18 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
+  <xsl:template match="gmd:MD_PixelOrientationCode">
+    <xsl:element name="msr:MD_PixelOrientationCode">
+      <xsl:choose>
+        <xsl:when test=".='center'">
+          <xsl:value-of select="'centre'"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
 
   <!-- gmd:referenceSystemInfo uses default templates -->
   <!-- gmd:metadataExtensionInfo uses default templates -->
