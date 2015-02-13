@@ -31,7 +31,7 @@
             <td align="center">Catalog, Code List Item, uom Item, CRS Item</td>
             <td>cat.xsd</td>
             <td>catalogues.xsd, codelistItem.xsd, crsItem.xsd, uomItem.xsd</td>
-            <td>-3, gco</td>
+            <td>lan, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/cit/1.0/2014-12-25/index.html">cit</a></td>
@@ -45,7 +45,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Citation</td>
             <td>cit.xsd</td>
             <td>citation.xsd</td>
-            <td>gco, -3</td>
+            <td>gco, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19157/-2/dqc/1.0/2014-12-25/index.html">dqc</a></td>
@@ -61,7 +61,7 @@
             <td align="center">Data Quality</td>
             <td>dqc.xsd</td>
             <td>abstract.xsd</td>
-            <td>gco, -3</td>
+            <td>gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19157/-2/dqm/1.0/2014-12-25/index.html">dqm</a></td>
@@ -75,7 +75,7 @@
             <td align="center">Data Quality</td>
             <td>dqm.xsd</td>
             <td>qualityMeasures.xsd</td>
-            <td>-3, -2, gco</td>
+            <td>cat, mcc, pre, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19110/fcc/1.0/2014-12-25/index.html">fcc</a></td>
@@ -105,7 +105,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Extended Types</td>
             <td>gcx.xsd</td>
             <td>extendedTypes.xsd</td>
-            <td>gco, xlink, -3</td>
+            <td>gco, xlink, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/gex/1.0/2014-12-25/index.html">gex</a></td>
@@ -121,7 +121,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Extent</td>
             <td>gex.xsd</td>
             <td>extent.xsd</td>
-            <td>gco, gmw, -3, gss, gts, rce, gsr</td>
+            <td>gco, gmw, mcc, gss, gts, rce, gsr</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19110/gfc/1.1/2014-12-25/index.html">gfc</a></td>
@@ -142,7 +142,7 @@
             <td align="center"></td>
             <td>gfc.xsd</td>
             <td>featureCatalogue.xsd</td>
-            <td>gco, fcc, -3, gml</td>
+            <td>gco, fcc, lan, mcc, gmw, cit</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/lan/1.0/2014-12-25/index.html">lan</a></td>
@@ -156,7 +156,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Language</td>
             <td>lan.xsd</td>
             <td>language.xsd</td>
-            <td>-3, gco</td>
+            <td>cit, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mas/1.0/2014-12-25/index.html">mas</a></td>
@@ -170,7 +170,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Application Schema</td>
             <td>mas.xsd</td>
             <td>applicationSchema.xsd</td>
-            <td>gco, -3</td>
+            <td>gco, mcc, cit</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mcc/1.0/2014-12-25/index.html">mcc</a></td>
@@ -200,7 +200,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Constraints</td>
             <td>mco.xsd</td>
             <td>constraints.xsd</td>
-            <td>gco, -3</td>
+            <td>gco, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/md1/1.0/2014-12-25/index.html">md1</a></td>
@@ -216,7 +216,7 @@
             <td align="center">Implementation Model Only</td>
             <td>md1.xsd</td>
             <td>metadataWExtendedType.xsd</td>
-            <td>-3</td>
+            <td>gcx, mds</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/md2/1.0/2014-12-25/index.html">md2</a></td>
@@ -233,7 +233,7 @@
             <td align="center">Implementation Model Only</td>
             <td>md2.xsd</td>
             <td>metadataWithExtensions.xsd</td>
-            <td>-3</td>
+            <td>cit, gcx, lan, mcc, md1, mex, mpc, mri</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mda/1.0/2014-12-25/index.html">mda</a></td>
@@ -249,7 +249,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Metadata Application</td>
             <td>mda.xsd</td>
             <td>metadataApplication.xsd</td>
-            <td>-3, gco</td>
+            <td>md2, gco, mdb</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mdb/1.0/2014-12-25/index.html">mdb</a></td>
@@ -265,7 +265,7 @@
             <td align="center"></td>
             <td>mdb.xsd</td>
             <td>metadataBase.xsd</td>
-            <td>-3, -2, gco</td>
+            <td>cit, dqc, lan, mcc, mri, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19157/-2/mdq/1.0/2014-12-25/index.html">mdq</a></td>
@@ -281,7 +281,7 @@
             <td>dataQualityElement.xsd, dataQualityEvaluation.xsd, dataQualityImagery.xsd, dataQualityResult.xsd,
                metaquality.xsd
             </td>
-            <td>gco, -2, -3</td>
+            <td>gco, dqc, mcc, gcx, mrd, gmw</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mds/1.0/2014-12-25/index.html">mds</a></td>
@@ -299,7 +299,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt;</td>
             <td>mds.xsd</td>
             <td>metadataDataServices.xsd</td>
-            <td>fcc, -3, -2</td>
+            <td>fcc, gex, mac, mas, mco, mdb, mdq, mmi, mpc, mrc, mrd, mrl, mrs, msr, srv</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mdt/1.0/2014-12-25/index.html">mdt</a></td>
@@ -317,7 +317,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Metadata-based Data Transfers</td>
             <td>mdt.xsd</td>
             <td>metadataTransfer.xsd</td>
-            <td>-3, gco</td>
+            <td>cat, gcx, mda, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mex/1.0/2014-12-25/index.html">mex</a></td>
@@ -331,7 +331,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Metadata Extension</td>
             <td>mex.xsd</td>
             <td>metadataExtension.xsd</td>
-            <td>gco, -3</td>
+            <td>gco, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mmi/1.0/2014-12-25/index.html">mmi</a></td>
@@ -345,7 +345,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Maintenance</td>
             <td>mmi.xsd</td>
             <td>maintenance.xsd</td>
-            <td>gco, gmw, -3</td>
+            <td>gco, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mpc/1.0/2014-12-25/index.html">mpc</a></td>
@@ -359,7 +359,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Portrayal Catalog</td>
             <td>mpc.xsd</td>
             <td>portrayalCatalogue.xsd</td>
-            <td>-3, gco</td>
+            <td>mcc, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mrc/1.0/2014-12-25/index.html">mrc</a></td>
@@ -373,7 +373,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Resource Content</td>
             <td>mrc.xsd</td>
             <td>content.xsd, contentInformationImagery.xsd</td>
-            <td>gco, gmw, fcc, -3</td>
+            <td>gco, gmw, fcc, lan, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mrd/1.0/2014-12-25/index.html">mrd</a></td>
@@ -387,7 +387,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Distribution Information</td>
             <td>mrd.xsd</td>
             <td>distribution.xsd</td>
-            <td>gco, gmw, -3</td>
+            <td>gco, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mri/1.0/2014-12-25/index.html">mri</a></td>
@@ -401,7 +401,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Identification Information</td>
             <td>mri.xsd</td>
             <td>identification.xsd</td>
-            <td>gco, gmw, -3</td>
+            <td>gco, gmw, lan, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mrl/1.0/2014-12-25/index.html">mrl</a></td>
@@ -415,7 +415,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt;</td>
             <td>mrl.xsd</td>
             <td>lineage.xsd, lineageImagery.xsd</td>
-            <td>gco, gmw, -3</td>
+            <td>gco, gmw, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/mrs/1.0/2014-12-25/index.html">mrs</a></td>
@@ -429,7 +429,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Reference System</td>
             <td>mrs.xsd</td>
             <td>referenceSystem.xsd</td>
-            <td>-3, gco</td>
+            <td>mcc, gco</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/msr/1.0/2014-12-25/index.html">msr</a></td>
@@ -443,7 +443,7 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Spatial Representation</td>
             <td>msr.xsd</td>
             <td>spatialRepresentation.xsd, spatialRepresentationImagery.xsd</td>
-            <td>-2, -3, gco, gmw</td>
+            <td>dqc, mcc, gco, gmw</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19111/rbc/1.0/2014-12-25/index.html">rbc</a></td>
@@ -466,7 +466,7 @@
             <td>coordinateOperations.xsd, coordinateReferenceSystems.xsd, coordinateSystems.xsd, datums.xsd,
                parametricValues.xsd, temporalReferenceSystems.xsd
             </td>
-            <td>gco, -2, -3, rce, gml</td>
+            <td>gco, dqc, mcc, rce, gml, gmw</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19111/rce/1.0/2014-12-25/index.html">rce</a></td>
@@ -482,7 +482,7 @@
             <td align="center"></td>
             <td>rce.xsd</td>
             <td>abstractClasses.xsd</td>
-            <td>gco, -3</td>
+            <td>gco, mcc</td>
          </tr>
          <tr>
             <td><a href="../standards.iso.org/19115/-3/srv/2.0/2014-12-25/index.html">srv</a></td>
@@ -496,10 +496,10 @@
             <td align="center">&lt;&lt;Leaf&gt;&gt; Services</td>
             <td>srv.xsd</td>
             <td>serviceInformation.xsd</td>
-            <td>gco, -3</td>
+            <td>gco, mcc, mri</td>
          </tr>
       </table>
       <hr>
-      <p><font size="small" face="italic">Written by makeNamespaceTable Version: 2015-01-26 at 2015-01-28T14:35:01.073-07:00</font></p>
+      <p><font size="small" face="italic">Written by makeNamespaceTable Version: 2015-01-26 at 2015-02-13T15:41:26.11-07:00</font></p>
    </body>
 </html>

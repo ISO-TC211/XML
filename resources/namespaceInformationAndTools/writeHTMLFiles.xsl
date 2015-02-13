@@ -79,7 +79,8 @@
               <h2>Related XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
               <xsl:variable name="currentRoot" select="/"/>
               <xsl:for-each select="$otherSchemaList">
-                <p><b><xsl:value-of select="."/></b> implements the UML conceptual schema defined in <xsl:value-of select="concat('ISO ',$currentNamespace/conceptualStandardNumber,', ',$currentNamespace/conceptualStandardTitle, if (exists($currentNamespace/paragraphNumber)) then concat(', Clause ',$currentNamespace/paragraphNumber) else '')"/>. It was created using the encoding rules defined in ISO 19118, ISO 19139, and ISO 19115-3 and contains the following classes: <xsl:variable name="otherSchemaFile" select="concat($schemaRootDirectory,'/ISO',$currentNamespace/schemaStandardNumber,'/',$currentNamespace/prefix,'/',$currentNamespace/version,'/',$currentNamespace/$workingVersionDate,'/',.)"/>
+                <p><b><xsl:value-of select="."/></b> implements the UML conceptual schema defined in <xsl:value-of select="concat('ISO ',$currentNamespace/conceptualStandardNumber,', ',$currentNamespace/conceptualStandardTitle, if (exists($currentNamespace/paragraphNumber)) then concat(', Clause ',$currentNamespace/paragraphNumber) else '')"/>. It was created using the encoding rules defined in ISO 19118, ISO 19139, and the implementation approach described in ISO 19115-3 and contains the following classes: 
+                  <xsl:variable name="otherSchemaFile" select="concat($schemaRootDirectory,'/',replace($currentNamespace/schemaStandardNumber,'-','/-'),'/',$currentNamespace/prefix,'/',$currentNamespace/version,'/',$currentNamespace/$workingVersionDate,'/',.)"/>
                   <xsl:for-each select="document($otherSchemaFile)/*/xs:element">
                     <xsl:if test="position()!=1"><xsl:text>, </xsl:text></xsl:if>
                     <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>
@@ -92,7 +93,10 @@
             <xsl:variable name="completeNamespacePrefixList" as="xs:string*">
               <xsl:for-each select="collection(iri-to-uri($xsdFilesSelect))">
                 <xsl:for-each select="/*/xs:import">
-                  <xsl:sequence select="tokenize(@namespace,'/')[5]"/>
+                  <xsl:variable name="pathTokens" as="xs:string+" select="tokenize(@schemaLocation,'/')"/>
+                  <xsl:variable name="numberOfTokens" select="count($pathTokens)"/>
+                  <xsl:sequence select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
+                  <!--<xsl:sequence select="tokenize(@namespace,'/')[5]"/>-->
                 </xsl:for-each>
               </xsl:for-each>
             </xsl:variable>
@@ -104,7 +108,9 @@
                       <xsl:sequence select="'gml'"/>
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:sequence select="tokenize(@namespace,'/')[5]"/>
+                      <xsl:variable name="pathTokens" as="xs:string+" select="tokenize(@schemaLocation,'/')"/>
+                      <xsl:variable name="numberOfTokens" select="count($pathTokens)"/>
+                      <xsl:sequence select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:for-each>
