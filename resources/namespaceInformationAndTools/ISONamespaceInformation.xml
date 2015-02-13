@@ -8,7 +8,7 @@
     <prefix>cat</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -22,7 +22,7 @@
     <prefix>mdq</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19157</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Data Quality</conceptualStandardTitle>
     <schemaStandardNumber>19157-2</schemaStandardNumber>
@@ -37,7 +37,7 @@
     <prefix>dqm</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19157</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Data Quality</conceptualStandardTitle>
     <schemaStandardNumber>19157-2</schemaStandardNumber>
@@ -67,7 +67,7 @@
     <prefix>rqm</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19157</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Data Quality</conceptualStandardTitle>
     <schemaStandardNumber>19157-2</schemaStandardNumber>
@@ -81,7 +81,7 @@
     <prefix>miq</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardTitle>19115-2, Geographic Information - Metadata - Part 2: Extensions for imagery and gridded data</conceptualStandardTitle>
     <schemaStandardNumber>19115-4</schemaStandardNumber>
     <paragraphNumber>A.2.2</paragraphNumber>
@@ -93,7 +93,7 @@
     <prefix>mis</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-2</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 2: Extensions for imagery and gridded data</conceptualStandardTitle>
     <schemaStandardNumber>19115-4</schemaStandardNumber>
@@ -106,7 +106,7 @@
     <prefix>mil</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-2</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 2: Extensions for imagery and gridded data</conceptualStandardTitle>
     <schemaStandardNumber>19115-4</schemaStandardNumber>
@@ -119,7 +119,7 @@
     <prefix>mic</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-2</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 2: Extensions for imagery and gridded data</conceptualStandardTitle>
     <schemaStandardNumber>19115-4</schemaStandardNumber>
@@ -132,7 +132,7 @@
     <prefix>mac</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-2</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 2: Extensions for imagery and gridded data</conceptualStandardTitle>
     <schemaStandardNumber>19115-4</schemaStandardNumber>
@@ -145,7 +145,7 @@
     <prefix>mai</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-2</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 2: Extensions for imagery and gridded data</conceptualStandardTitle>
     <schemaStandardNumber>19115-4</schemaStandardNumber>
@@ -159,7 +159,7 @@
     <prefix>cit</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -174,7 +174,7 @@
     <prefix>gcx</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -189,7 +189,7 @@
     <prefix>gex</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -204,7 +204,7 @@
     <prefix>lan</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -218,7 +218,7 @@
     <prefix>mas</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -233,7 +233,7 @@
     <prefix>mcc</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -248,7 +248,7 @@
     <prefix>mco</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -263,7 +263,7 @@
     <prefix>mda</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -278,7 +278,7 @@
     <prefix>mds</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -293,7 +293,7 @@
     <prefix>md1</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -308,7 +308,7 @@
     <prefix>md2</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -323,7 +323,7 @@
     <prefix>mdt</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -338,7 +338,7 @@
     <prefix>mex</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -353,7 +353,7 @@
     <prefix>mmi</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -368,7 +368,7 @@
     <prefix>mpc</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -383,7 +383,7 @@
     <prefix>mrc</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -398,7 +398,7 @@
     <prefix>mrd</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -413,7 +413,7 @@
     <prefix>mri</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -428,7 +428,7 @@
     <prefix>mrl</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -443,7 +443,7 @@
     <prefix>mrs</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -458,7 +458,7 @@
     <prefix>msr</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -473,7 +473,7 @@
     <prefix>srv</prefix>
     <version>2.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -488,7 +488,7 @@
     <prefix>mdb</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
     <schemaStandardNumber>19115-3</schemaStandardNumber>
@@ -503,7 +503,7 @@
     <prefix>fcc</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19110</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Methodology for feature cataloguing</conceptualStandardTitle>
     <schemaStandardNumber>19110</schemaStandardNumber>
@@ -517,7 +517,7 @@
     <prefix>gfc</prefix>
     <version>1.1</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19110</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Methodology for feature cataloguing</conceptualStandardTitle>
     <schemaStandardNumber>19110</schemaStandardNumber>
@@ -531,7 +531,7 @@
     <prefix>rbc</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19111</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Spatial referencing by coordinates</conceptualStandardTitle>
     <schemaStandardNumber>19111</schemaStandardNumber>
@@ -545,7 +545,7 @@
     <prefix>rce</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19110</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Spatial referencing by coordinates</conceptualStandardTitle>
     <schemaStandardNumber>19111</schemaStandardNumber>
@@ -559,7 +559,7 @@
     <prefix>pre</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19135</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Procedures for item registration</conceptualStandardTitle>
     <schemaStandardNumber>19135-2</schemaStandardNumber>
@@ -573,7 +573,7 @@
     <prefix>reg</prefix>
     <version>1.0</version>
     <location>http://standards.iso.org</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19135</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Procedures for item registration</conceptualStandardTitle>
     <schemaStandardNumber>19135-2</schemaStandardNumber>
@@ -587,7 +587,7 @@
     <prefix>gco</prefix>
     <version>1.0</version>
     <location>http://www.isotc211.org/2005/gco</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
     <schemaStandardNumber>19139</schemaStandardNumber>
@@ -602,7 +602,7 @@
     <prefix>gss</prefix>
     <version>1.0</version>
     <location>http://www.isotc211.org/2005/gss</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 8 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
     <schemaStandardNumber>19139</schemaStandardNumber>
@@ -617,7 +617,7 @@
     <prefix>gts</prefix>
     <version>1.0</version>
     <location>http://www.isotc211.org/2005/gts</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 9 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 9 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
     <schemaStandardNumber>19139</schemaStandardNumber>
@@ -632,7 +632,7 @@
     <prefix>gsr</prefix>
     <version>1.0</version>
     <location>http://www.isotc211.org/2005/gsr</location>
-    <encodingRules>ISO/TS 19139:2007, Clause 9 and ISO/TS19115-3, Clause 8</encodingRules>
+    <encodingRules>ISO/TS 19139:2007, Clause 9 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
     <schemaStandardNumber>19139</schemaStandardNumber>
