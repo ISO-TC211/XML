@@ -483,25 +483,18 @@
       <!-- ********************************************************************** -->
       <xsl:element name="mdb:contentInfo">
         <xsl:for-each select="*">
-          <xsl:variable name="coverageDescriptionName">
-            <xsl:choose>
-              <xsl:when test="count(//gmi:MI_CoverageDescription)>0">
-                <xsl:value-of select="'mrc:MI_CoverageDescription'"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="'mrc:MD_CoverageDescription'"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:variable>
-          <xsl:element name="{$coverageDescriptionName}">
-            <xsl:if test="gmd:attributeDescription/gcoold:RecordType/@*">
-              <!--<xsl:element name="mrc:attributeDescription">
-                <xsl:element name="gco:RecordType">-->
-                  <xsl:apply-templates/>
-                <!--</xsl:element>
-                <xsl:copy-of select="./gmd:attributeDescription/gcoold:RecordType"/>
-              </xsl:element>-->
-            </xsl:if>
+          <!-- Process the first MD_CoverageDescription section. Get the mrc:attributeDescription from here. -->
+          <xsl:element name="mrc:MD_CoverageDescription">
+            <xsl:element name="mrc:attributeDescription">
+              <xsl:element name="gco:RecordType">
+                <xsl:for-each select=".//gcoold:RecordType">
+                  <xsl:for-each select="@*">
+                    <xsl:attribute name="{name(.)}" select="."/>
+                  </xsl:for-each>
+                  <xsl:value-of select="."/>
+                </xsl:for-each>
+              </xsl:element>
+            </xsl:element>
             <!-- This loop goes back out to convert each gmd:contentInfo section into a separate mrc:AttributeGroup -->
             <xsl:for-each
               select="/*/gmd:contentInfo/gmd:MD_CoverageDescription | /*/gmd:contentInfo/gmi:MI_CoverageDescription">
@@ -527,9 +520,6 @@
   <xsl:template
     match="gmd:contentInfo[gmd:MD_FeatureCatalogueDescription] | gmd:contentInfo[gmd:MD_ImageDescription]">
     <xsl:element name="mdb:contentInfo">
-      <!--<xsl:if test="exists(./gmd:MD_ImageDescription)">
-        <mrc:attributeDescription gco:nilReason="unknown"/>
-      </xsl:if>-->
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -1268,7 +1258,6 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-
 
   <!-- find the correct namespace prefix -->
   <xsl:template name="getNamespacePrefix">
