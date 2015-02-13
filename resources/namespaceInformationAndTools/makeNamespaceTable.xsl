@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
       <xd:p>
@@ -9,9 +10,12 @@
       <xd:p><xd:b>Created on:</xd:b>February 27, 2013</xd:p>
       <xd:p><xd:b>Revised on:</xd:b>August 4, 2014</xd:p>
       <xd:p><xd:b>Author:</xd:b>rehabermann@me.com</xd:p>
-      <xd:p>This stylesheets reads ISOSchema.xml and uses writes standard namespace description files.</xd:p>
-      <xd:p>It assumes a schema directory hierarchy like schemaRootDirectory/namespace/version/workingVersionDate/namespace.xsd</xd:p>
-      <xd:p>and writes index.html files into the namespace directories (schemaRootDirectory/namespace/version/workingVersionDate/index.html)</xd:p>
+      <xd:p>This stylesheets reads ISOSchema.xml and uses writes standard namespace description
+        files.</xd:p>
+      <xd:p>It assumes a schema directory hierarchy like
+        schemaRootDirectory/namespace/version/workingVersionDate/namespace.xsd</xd:p>
+      <xd:p>and writes index.html files into the namespace directories
+        (schemaRootDirectory/namespace/version/workingVersionDate/index.html)</xd:p>
     </xd:desc>
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
@@ -59,8 +63,10 @@
           <xsl:for-each select="//namespace[contains($standard,schemaStandardNumber)]">
             <xsl:sort select="prefix"/>
             <xsl:variable name="currentNamespace" select="."/>
-            <xsl:variable name="schemaFile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.xsd')"/>
-            <xsl:variable name="schemaDirectory" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/')"/>
+            <xsl:variable name="schemaFile"
+              select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.xsd')"/>
+            <xsl:variable name="schemaDirectory"
+              select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/')"/>
             <xsl:variable name="namespaceVersion" select="concat(prefix,' ',version)"/>
             <xsl:variable name="upperCasePrefix" select="upper-case(prefix)"/>
             <xsl:variable name="namespaceVersionTitle" select="concat($upperCasePrefix,' ',version)"/>
@@ -68,7 +74,8 @@
               <td>
                 <!-- Standard Prefix -->
                 <xsl:element name="a">
-                  <xsl:attribute name="href" select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/','index.html')"/>
+                  <xsl:attribute name="href"
+                    select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/','index.html')"/>
                   <xsl:value-of select="prefix"/>
                 </xsl:element>
               </td>
@@ -86,7 +93,9 @@
               </td>
               <td>
                 <!-- Standard - Paragraph -->
-                <xsl:value-of select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle,', ',paragraphNumber)"/>
+                <xsl:value-of
+                  select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle,', ',paragraphNumber)"
+                />
               </td>
               <td>
                 <!-- Requirements Name -->
@@ -98,7 +107,8 @@
               </td>
               <td>
                 <!-- Thumbnail -->
-                <xsl:variable name="imageFile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.png')"/>
+                <xsl:variable name="imageFile"
+                  select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.png')"/>
                 <a>
                   <xsl:attribute name="href" select="$imageFile"/>
                   <img>
@@ -137,11 +147,13 @@
                 <xsl:for-each select="collection(iri-to-uri($xsdFilesSelect))">
                   <xsl:for-each select="/*/xs:import">
                     <xsl:choose>
-                      <xsl:when test="contains(@namespace,'gml')">
+                      <xsl:when test="contains(@schemaLocation,'gml')">
                         <xsl:sequence select="'gml'"/>
                       </xsl:when>
                       <xsl:otherwise>
-                        <xsl:sequence select="tokenize(@namespace,'/')[5]"/>
+                        <xsl:variable name="pathTokens" as="xs:string+" select="tokenize(@schemaLocation,'/')"/>
+                        <xsl:variable name="numberOfTokens" select="count($pathTokens)"/>
+                        <xsl:sequence select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:for-each>
@@ -159,7 +171,9 @@
         <hr/>
         <p>
           <font size="small" face="italic">
-            <xsl:value-of select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"/>
+            <xsl:value-of
+              select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"
+            />
           </font>
         </p>
       </body>
