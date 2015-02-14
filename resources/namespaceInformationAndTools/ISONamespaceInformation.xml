@@ -496,6 +496,22 @@
     <paragraphNumber>6.5.2</paragraphNumber>
   </namespace>
   <namespace>
+    <title>Geographic Markup Wrappers</title>
+    <requirementRoot>geographic-wrappers</requirementRoot>
+    <scope>Wrappers for gml dependencies.</scope>
+    <UMLPackage>None</UMLPackage>
+    <prefix>gmw</prefix>
+    <version>1.0</version>
+    <location>http://standards.iso.org</location>
+    <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
+    <conceptualStandardNumber>19115-1</conceptualStandardNumber>
+    <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
+    <schemaStandardNumber>19115-3</schemaStandardNumber>
+    <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
+    <paragraphNumber>TBD</paragraphNumber>
+  </namespace>
+  
+  <namespace>
     <title>Feature Catalog Common</title>
     <requirementRoot>feature-catalog-common</requirementRoot>
     <scope>abstract classes shared by multiple namespaces and is required in order to enable modularization of the XML implementation.</scope>
