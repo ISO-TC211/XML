@@ -14,3 +14,7 @@ cat/1.0 directory now includes two working version directories: 2013-06-24 and 2
 two different versions of the cat schema documents.
 
 Note: the directory structure was changed again for the 2014-12-25 release in order to match the iso.standards.org structure. Directories like ISO19115-3 were changed to standards.iso.org/19115/-3. The current schemas are now in the standards.iso.org directory.
+
+We finally achieved a valid transform result with the 2014-12-25 schema. Thanks to everyone that helped. The output is in
+standards.iso.org/19115/-3/mdt/1.0/2014-12-25/mdt.xml. It is a PathFile that has the source 19115 paths as element contents.
+This allow us to see where the content comes from in the source 19115 record and defines the crosswalk.
