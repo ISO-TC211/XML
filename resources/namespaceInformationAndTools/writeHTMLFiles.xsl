@@ -45,6 +45,7 @@
       <xsl:variable name="namespaceVersion" select="concat(prefix,' ',version)"/>
       <xsl:variable name="upperCasePrefix" select="upper-case(prefix)"/>
       <xsl:variable name="namespaceVersionTitle" select="concat($upperCasePrefix,' ',version)"/>
+      <xsl:variable name="namespaceURL" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/>
       <xsl:variable name="outfile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/index.html')"/>
       <xsl:value-of select="concat('Schema: ',$schemaFile,', Output:', $outfile)"/>
       <br/>
@@ -64,11 +65,11 @@
             <p><xsl:value-of select="$namespaceVersionTitle"/> is an XML Schema implementation derived from ISO <xsl:value-of select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle, if (exists(paragraphNumber)) then concat(', Clause ',paragraphNumber) else '')"/>. <xsl:if test="scope!=''"> It includes <xsl:value-of select="concat(lower-case(substring(scope,1,1)),substring(scope,2))"/>
               </xsl:if> The XML schema was encoded using the rules described in <xsl:value-of select="encodingRules"/>.</p>
             <h2>XML Namespace for <xsl:value-of select="$namespaceVersion"/></h2>
-            <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/></b>.</p>
+            <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="$namespaceURL"/></b>.</p>
             <h2>XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
             <p><b><xsl:value-of select="concat(prefix,'.xsd')"/></b> is the XML Schema document to be referenced by XML documents containing XML elements in the <xsl:value-of select="$namespaceVersion"/> namespace or by XML Schema documents importing the <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/> namespace, but it does not contain the declaration of any types.</p>
             <p>
-              <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <a href="http://isotc211.org/schema">here</a> as part of a zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i>
+              <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <a href="http://standards.iso.org">here</a> as part of a zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i>
             </p>
             <xsl:variable name="otherSchemaList" as="xs:string*">
               <xsl:for-each select="document($schemaFile)/*/xs:include">
