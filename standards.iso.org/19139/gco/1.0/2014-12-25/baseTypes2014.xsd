@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25" xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns:xlink="http://www.w3.org/1999/xlink"  targetNamespace="http://standards.iso.org/19139/gco/1.0/2014-12-25" 
-  elementFormDefault="qualified" attributeFormDefault="unqualified" version="2014-12-25">
+<xs:schema xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="http://standards.iso.org/19139/gco/1.0/2014-12-25"
+	elementFormDefault="qualified" attributeFormDefault="unqualified" version="2014-12-25">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>Geographic COmmon (GCO) extensible markup language is a component of the XML Schema Implementation of Geographic
@@ -9,7 +10,7 @@ Information Metadata documented in ISO/TS 19115-3, based on the implementation p
 This gcoBase.xsd schema provides:
 		1.  tools to handle specific objects like "code lists" and "record";
 		2. Some XML types that do not follow the general encoding rules specified in ISO19139.
-		***constructed as test, SMR 2014-12-22.  Refactor gco, gts, gsr, gss to separate gml dependencies.  
+		*** SMR 2014-12-22.  Refactor gco, gts, gsr, gss to separate gml dependencies.  
 		To remove the dependency between gml and the base datatypes in ISO19115-3:
 			1. The nilReason attribute is defined here instead of extending the gml type. 
 			2. The definition of MeasureType is copied here from gml 3.2 basic Types. The only
@@ -18,7 +19,8 @@ This gcoBase.xsd schema provides:
 		</xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
-	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink"
+		schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 
 	<!-- ########################################################################### -->
 	<!-- =========================================================================== -->
@@ -39,18 +41,18 @@ This gcoBase.xsd schema provides:
 	</xs:attributeGroup>
 	<!--================== NULL ====================-->
 	<xs:attribute name="nilReason" type="gco:NilReasonType"/>
-	
+
 	<xs:simpleType name="NilReasonType">
 		<xs:annotation>
 			<xs:documentation>copied from gml32:NilReasonType. This Type defines a content model that allows recording of an 
 				explanation for a void value or other exception.
 				gml:NilReasonType is a union of the following enumerated values:
-				-	inapplicable there is no value
-				-	missing the correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist
-				-	template the value will be available later
-				-	unknown the correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists
-				-	withheld the value is not divulged
-				-	other:text other brief explanation, where text is a string of two or more characters with no included spaces
+				-	inapplicable- there is no value
+				-	missing- the correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist
+				-	template- the value will be available later
+				-	unknown- the correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists
+				-	withheld- the value is not divulged
+				-	other:text - other brief explanation, where text is a string of two or more characters with no included spaces
 				and
 				-	xs:anyURI which should refer to a resource which describes the reason for the exception
 				A particular community may choose to assign more detailed semantics to the standard values provided. Alternatively, the URI method enables a specific or more complete explanation for the absence of a value to be provided elsewhere and indicated by-reference in an instance document.
@@ -89,7 +91,7 @@ This gcoBase.xsd schema provides:
 		<xs:attribute name="uuid" type="xs:string"/>
 	</xs:attributeGroup>
 	<!-- ========================================================================== -->
-	
+
 	<!-- ====================== The CodeList prototype ================================= -->
 	<!--It is used to refer to a specific codeListValue in a register-->
 	<!--================= Type ==================-->
@@ -105,7 +107,7 @@ This gcoBase.xsd schema provides:
 	<!-- ========================================================================== -->
 	<!-- ========================== The isoType attribute ============================== -->
 	<xs:attribute name="isoType" type="xs:string"/>
-	
+
 	<!-- moved from 19139 basicTypes.xsd -->
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
@@ -165,7 +167,8 @@ This gcoBase.xsd schema provides:
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="range" type="gco:MultiplicityRange_PropertyType" maxOccurs="unbounded"/>
+					<xs:element name="range" type="gco:MultiplicityRange_PropertyType"
+						maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -204,7 +207,7 @@ This gcoBase.xsd schema provides:
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
-	
+
 	<!-- ........................................................................ -->
 	<xs:element name="CharacterString" type="xs:string"/>
 	<!-- ........................................................................ -->
@@ -225,7 +228,7 @@ This gcoBase.xsd schema provides:
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	
+
 	<!-- =========================== Date & DateTime ================================= -->
 	<!--=============================================-->
 	<xs:element name="DateTime" type="xs:dateTime"/>
@@ -403,7 +406,7 @@ This gcoBase.xsd schema provides:
 			<xs:pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<!--================= Element =================-->
 	<xs:element name="Measure" type="gco:MeasureType"/>
 	<!-- ============ Property =================== -->
@@ -466,7 +469,7 @@ This gcoBase.xsd schema provides:
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="GenericName_PropertyType">
 		<!-- used in catalogues.xsd cat:identifier
 			used in metadataTransfer.xsd mdt:featureTypes
@@ -488,5 +491,22 @@ This gcoBase.xsd schema provides:
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+
+	<!-- =========================================================================== -->
+	<!-- ......move from gmw because it has no dependency on gml ................... -->
+	<xs:element name="TM_PeriodDuration" type="xs:duration"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="TM_PeriodDuration_PropertyType">
+		<!-- used in maintenance.xsd mmi:userDefinedMaintenanceFrequency
+			used in distribution.xsd mrd:transferFrequency
+			used in identification.xsd mri:temporalResolution.  all of these properties
+			are optional. -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gco:TM_PeriodDuration"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+
 	<!--==============End================-->
 </xs:schema>
