@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25 ../../../schema.xsd"
+                 xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"
+                 xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0/2014-12-25"
+                 xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25"
+                 xmlns:mmi="http://standards.iso.org/19115/-3/mmi/1.0/2014-12-25">
+   <mdb:metadataIdentifier></mdb:metadataIdentifier>
+   
+   <!-- Some rules applies to dataset only -->
+   <mdb:metadataScope>
+      <mdb:MD_MetadataScope>
+         <mdb:resourceScope>
+            <mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" 
+               codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+         </mdb:resourceScope>
+      </mdb:MD_MetadataScope>
+   </mdb:metadataScope>
+   
+   <mdb:contact></mdb:contact>
+   <mdb:dateInfo></mdb:dateInfo>
+   <mdb:identificationInfo>
+      <mri:MD_DataIdentification>
+         <mri:citation></mri:citation>
+         <mri:abstract></mri:abstract>
+         
+         <!-- Valid for rule.mmi-updatefrequency -->
+         <mri:resourceMaintenance>
+            <mmi:MD_MaintenanceInformation>
+               <mmi:maintenanceAndUpdateFrequency>
+                  <mmi:MD_MaintenanceFrequencyCode 
+                     codeList="" 
+                     codeListValue="asNeeded"/>
+               </mmi:maintenanceAndUpdateFrequency>
+            </mmi:MD_MaintenanceInformation>
+         </mri:resourceMaintenance>
+         
+         
+         <mri:resourceMaintenance>
+            <mmi:MD_MaintenanceInformation>
+               <mmi:userDefinedMaintenanceFrequency>
+                  <TM_PeriodDuration xmlns="http://standards.iso.org/19139/gmw/1.0/2014-12-25">
+                     P2Y
+                  </TM_PeriodDuration>
+               </mmi:userDefinedMaintenanceFrequency>
+            </mmi:MD_MaintenanceInformation>
+         </mri:resourceMaintenance>
+      </mri:MD_DataIdentification>
+   </mdb:identificationInfo>
+</mdb:MD_Metadata>
