@@ -4,6 +4,6 @@
   </annotation>
   <include schemaLocation="extent.xsd"/>
   <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/19111/rce/1.0/2014-12-25" schemaLocation="../../../../../19111/rce/1.0/2014-12-25/rce.xsd"/>
+
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>
