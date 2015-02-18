@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:rbc="http://www.isotc211.org/namespace/rbc/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/rbc/1.0/2014-07-11" version="1.0">
-  <include schemaLocation="coordinateReferenceSystems.xsd"/>
-  <include schemaLocation="rbc.xsd"/>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-</schema>
