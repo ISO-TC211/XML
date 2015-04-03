@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25 ../../../schema.xsd"
+                 xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25"
+                 xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0/2014-12-25"
+                 xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0/2014-12-25"
+                 xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0/2014-12-25"
+                 xmlns:gco="http://standards.iso.org/19139/gco/1.0/2014-12-25">
+   <mdb:metadataIdentifier></mdb:metadataIdentifier>
+   <mdb:contact>
+      <cit:CI_Responsibility>
+         <cit:role>
+            <cit:CI_RoleCode codeList="" codeListValue="owner"/>
+         </cit:role>
+         <cit:party>
+            <cit:CI_Individual>
+               <!-- Invalid for rule.cit.individualnameandposition -->
+               <cit:name>
+                  <gco:CharacterString></gco:CharacterString>
+               </cit:name>
+               <cit:positionName>
+                  <gco:CharacterString></gco:CharacterString>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:party>
+         <cit:party>
+            <cit:CI_Individual>
+               <cit:positionName xsi:type="lan:PT_FreeText_PropertyType">
+                  <lan:PT_FreeText>
+                     <lan:textGroup>
+                        <lan:LocalisedCharacterString></lan:LocalisedCharacterString>
+                     </lan:textGroup>
+                     <lan:textGroup>
+                        <lan:LocalisedCharacterString></lan:LocalisedCharacterString>
+                     </lan:textGroup>
+                  </lan:PT_FreeText>
+               </cit:positionName>
+            </cit:CI_Individual>
+         </cit:party>
+         <cit:party>
+            <cit:CI_Organisation>
+               <cit:name></cit:name>
+               <cit:logo>
+                  <mcc:MD_BrowseGraphic>
+                     <mcc:fileName></mcc:fileName>
+                  </mcc:MD_BrowseGraphic>
+               </cit:logo>
+            </cit:CI_Organisation>
+         </cit:party>
+         <cit:party>
+            <cit:CI_Organisation>
+               <cit:name></cit:name>
+            </cit:CI_Organisation>
+         </cit:party>
+         <cit:party>
+            <cit:CI_Organisation>
+            </cit:CI_Organisation>
+         </cit:party>
+      </cit:CI_Responsibility>
+   </mdb:contact>
+</mdb:MD_Metadata>
