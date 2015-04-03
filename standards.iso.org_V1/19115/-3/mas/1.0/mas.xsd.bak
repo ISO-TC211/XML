@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0/2014-12-25" xmlns:mas="http://standards.iso.org/19115/-3/mas/1.0/2014-12-25" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mas/1.0/2014-12-25" version="1.0">
-  <annotation>
-    <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;to specify the application schema associated with a resource&lt;/font&gt;</documentation>
-  </annotation>
-  <include schemaLocation="applicationSchema.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/cit/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/cit/1.0/2014-12-25/cit.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0/2014-12-25" schemaLocation="../../../../../19115/-3/mcc/1.0/2014-12-25/mcc.xsd"/>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-</schema>
