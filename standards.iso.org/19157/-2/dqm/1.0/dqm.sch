@@ -50,31 +50,31 @@
   </sch:pattern>
   
   <!-- 
-    Rule: DQM_Measure
+    Rule: DQM_Measure | DQM_BasicMeasure | DQM_Parameter
     Ref: {valueType shall be one of the data types defined in ISO/TS 19103}
     -->
   <sch:diagnostics>
-    <sch:diagnostic id="rule.dqm.valuetype-failure-en" xml:lang="en">The DQM_Measure.valueType
+    <sch:diagnostic id="rule.dqm.valuetype-failure-en" xml:lang="en">The valueType
       shall be one of the data types defined in ISO/TS 19103.</sch:diagnostic>
     
-    <sch:diagnostic id="rule.dqm.valuetype-success-en" xml:lang="en">valurType is
+    <sch:diagnostic id="rule.dqm.valuetype-success-en" xml:lang="en">valueType is
       "<sch:value-of select="normalize-space($valueType)"/>". </sch:diagnostic>
   </sch:diagnostics>
   
   <sch:pattern id="rule.dqm.valutype">
     <sch:title xml:lang="en">DQM_Measure.valueType shall be one of the data types defined in ISO/TS 19103</sch:title>
     
-    <sch:rule context="//dqm:DQM_Measure">
+    <sch:rule context="//dqm:DQM_Measure | //dqm:DQM_BasicMeasure | dqm:DQM_Parameter">
       
       <sch:let name="valueType" value="dqm:valueType/gco:TypeName/gco:aName/gco:CharacterString"/>
       
       <sch:assert test="(index-of(
         ('Date','Time','DateTime','Number','Decimal','Integer','Real','Vector','CharacterString','Boolean','Set','Bag'),$valueType) > 0)"
-        diagnostics="rule.dqm.measurename-failure-en"/>
+        diagnostics="rule.dqm.valuetype-failure-en"/>
       
       <sch:report test="(index-of(
         ('Date','Time','DateTime','Number','Decimal','Integer','Real','Vector','CharacterString','Boolean','Set','Bag'),$valueType) > 0)"
-        diagnostics="rule.dqm.measurename-success-en"/>
+        diagnostics="rule.dqm.valuetype-success-en"/>
     </sch:rule>
-  </sch:pattern>
+  </sch:pattern>  
 </sch:schema>

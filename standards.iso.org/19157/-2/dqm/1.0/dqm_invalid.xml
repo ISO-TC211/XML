@@ -21,7 +21,7 @@
          <dqm:elementName>
             <gco:TypeName>
                <gco:aName>
-                  <gco:CharacterString>DQ_CompletenessOmmission</gco:CharacterString>
+                  <gco:CharacterString>incorrectTypeName</gco:CharacterString>
                </gco:aName>
             </gco:TypeName>
          </dqm:elementName>
@@ -30,7 +30,7 @@
          <dqm:valueType>
             <gco:TypeName>
                <gco:aName>
-                  <gco:CharacterString>Boolean</gco:CharacterString>
+                  <gco:CharacterString>incorrectValueType</gco:CharacterString>
                </gco:aName>
             </gco:TypeName>
          </dqm:valueType>
@@ -47,7 +47,7 @@
                <dqm:valueType>
                   <gco:TypeName>
                      <gco:aName>
-                        <gco:CharacterString>Boolean</gco:CharacterString>
+                        <gco:CharacterString>incorrectValueType</gco:CharacterString>
                      </gco:aName>
                   </gco:TypeName>
                </dqm:valueType>
@@ -61,7 +61,7 @@
                <dqm:valueType>
                   <gco:TypeName>
                      <gco:aName>
-                        <gco:CharacterString>Integer</gco:CharacterString>
+                        <gco:CharacterString>incorrectValueType</gco:CharacterString>
                      </gco:aName>
                   </gco:TypeName>
                </dqm:valueType>
