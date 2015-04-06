@@ -12,7 +12,7 @@
    Rule:
    If measureIdentification is not provided,then nameOfMeasure shall be provided.
    -->
-   <mdq:scope gco:nilReason="inapplicable"/>
+   <mdq:scope gco:nilReason="missing"/>
    <mdq:report>
       <!-- report with measureIdentification -->
       <mdq:DQ_ConceptualConsistency>
