@@ -506,11 +506,10 @@
     <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
-    <schemaStandardNumber>19115-3</schemaStandardNumber>
+    <schemaStandardNumber>19139</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
     <paragraphNumber>TBD</paragraphNumber>
-  </namespace>
-  
+  </namespace>  
   <namespace>
     <title>Feature Catalog Common</title>
     <requirementRoot>feature-catalog-common</requirementRoot>
@@ -562,7 +561,7 @@
     <version>1.0</version>
     <location>http://standards.iso.org</location>
     <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
-    <conceptualStandardNumber>19110</conceptualStandardNumber>
+    <conceptualStandardNumber>19111</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic information -- Spatial referencing by coordinates</conceptualStandardTitle>
     <schemaStandardNumber>19111</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
@@ -602,7 +601,7 @@
     <UMLPackage>None</UMLPackage>
     <prefix>gco</prefix>
     <version>1.0</version>
-    <location>http://www.isotc211.org/2005/gco</location>
+    <location>http://standards.iso.org</location>
     <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
@@ -621,7 +620,7 @@
     <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
-    <schemaStandardNumber>19139</schemaStandardNumber>
+    <schemaStandardNumber>19139-2005</schemaStandardNumber>
     <schemaStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</schemaStandardTitle>
     <paragraphNumber>9.4</paragraphNumber>
   </namespace>
@@ -636,7 +635,7 @@
     <encodingRules>ISO/TS 19139:2007, Clause 9 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
-    <schemaStandardNumber>19139</schemaStandardNumber>
+    <schemaStandardNumber>19139-2005</schemaStandardNumber>
     <schemaStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</schemaStandardTitle>
     <paragraphNumber>9.5</paragraphNumber>
   </namespace>
@@ -651,7 +650,7 @@
     <encodingRules>ISO/TS 19139:2007, Clause 9 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
-    <schemaStandardNumber>19139</schemaStandardNumber>
+    <schemaStandardNumber>19139-2005</schemaStandardNumber>
     <schemaStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</schemaStandardTitle>
     <paragraphNumber>9.6</paragraphNumber>
   </namespace>
@@ -680,7 +679,7 @@
     <encodingRules/>
     <conceptualStandardNumber>19139</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
-    <schemaStandardNumber>19139</schemaStandardNumber>
+    <schemaStandardNumber>19139-2005</schemaStandardNumber>
     <schemaStandardTitle/>
   </namespace>
 </ISOSchema>
