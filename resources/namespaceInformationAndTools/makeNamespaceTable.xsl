@@ -20,7 +20,7 @@
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
     This is the root of the schema directories. 
-    Example: /Users/tedhabermann/Dropbox/GitHub/ISO TC211 XMG/standards.iso.org 
+    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org 
   -->
   <xsl:param name="schemaRootDirectory"/>
   <!-- Parameter standard:
@@ -30,15 +30,16 @@
   -->
   <xsl:param name="standard"/>
   <!-- Parameter workingVersionDate
-    This is the date associated with a working version of the schema. It is in the format YYY-MM-DD 
-    Example: 2014-12-25
+    This is the date associated with a working version of the schema. It is in the format /YYYY-MM-DD
+    NOTE THE SLASH INCLUDED BEFORE THE DATE
+    Example: /2014-12-25
   -->
   <xsl:param name="workingVersionDate"/>
   <xsl:output method="html"/>
   <xsl:strip-space elements="*"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:variable name="TransformName" select="'makeNamespaceTable'"/>
-  <xsl:variable name="TransformVersion" select="'2015-01-26'"/>
+  <xsl:variable name="TransformVersion" select="'2015-04-16'"/>
   <xsl:template match="/">
     <html>
       <head>
@@ -64,10 +65,11 @@
             <xsl:sort select="prefix"/>
             <xsl:variable name="currentNamespace" select="."/>
             <xsl:variable name="schemaFile"
-              select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.xsd')"/>
+              select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.xsd')"/>
             <xsl:variable name="schemaDirectory"
-              select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/')"/>
+              select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/')"/>
             <xsl:variable name="namespaceVersion" select="concat(prefix,' ',version)"/>
+            <xsl:variable name="namespaceURL" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/>
             <xsl:variable name="upperCasePrefix" select="upper-case(prefix)"/>
             <xsl:variable name="namespaceVersionTitle" select="concat($upperCasePrefix,' ',version)"/>
             <tr>
@@ -75,7 +77,7 @@
                 <!-- Standard Prefix -->
                 <xsl:element name="a">
                   <xsl:attribute name="href"
-                    select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/','index.html')"/>
+                    select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
                   <xsl:value-of select="prefix"/>
                 </xsl:element>
               </td>
@@ -103,12 +105,12 @@
               </td>
               <td>
                 <!-- Namespace URI -->
-                <xsl:value-of select="concat(location,'/',prefix,'/',version)"/>
+                <xsl:value-of select="$namespaceURL"/>
               </td>
               <td>
                 <!-- Thumbnail -->
                 <xsl:variable name="imageFile"
-                  select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.png')"/>
+                  select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
                 <a>
                   <xsl:attribute name="href" select="$imageFile"/>
                   <img>

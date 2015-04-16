@@ -16,7 +16,8 @@
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
     This is the root of the schema directories. 
-    Example: /Users/tedhabermann/Dropbox/GitHub/ISO TC211 XMG 
+    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org
+ 
   -->
   <xsl:param name="schemaRootDirectory"/>
   <!-- Parameter standard:
@@ -26,8 +27,9 @@
   -->
   <xsl:param name="standard"/>
   <!-- Parameter workingVersionDate
-    This is the date associated with a working version of the schema. It is in the format YYY-MM-DD 
-    Example: 2014-07-11
+    This is the date associated with a working version of the schema. It is in the format /YYYY-MM-DD
+    NOTE THE SLASH INCLUDED BEFORE THE DATE
+    Example: /2014-07-11
   -->
   <xsl:param name="workingVersionDate"/>
   <xsl:variable name="TransformName" select="'writeHTMLFiles'"/>
@@ -40,13 +42,13 @@
     <!-- The parameter standard is a string that includes the numbers of the standards that will be output. For example '19115-2 19115-3'  -->
     <xsl:for-each select="//namespace[contains($standard,schemaStandardNumber)]">
       <xsl:variable name="currentNamespace" select="."/>
-      <xsl:variable name="schemaDirectory" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/')"/>
-      <xsl:variable name="schemaFile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/',prefix,'.xsd')"/>
+      <xsl:variable name="schemaDirectory" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/')"/>
+      <xsl:variable name="schemaFile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.xsd')"/>
       <xsl:variable name="namespaceVersion" select="concat(prefix,' ',version)"/>
       <xsl:variable name="upperCasePrefix" select="upper-case(prefix)"/>
       <xsl:variable name="namespaceVersionTitle" select="concat($upperCasePrefix,' ',version)"/>
       <xsl:variable name="namespaceURL" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/>
-      <xsl:variable name="outfile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,'/',$workingVersionDate,'/index.html')"/>
+      <xsl:variable name="outfile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/index.html')"/>
       <xsl:value-of select="concat('Schema: ',$schemaFile,', Output:', $outfile)"/>
       <br/>
       <xsl:result-document href="{$outfile}">
@@ -81,7 +83,7 @@
               <xsl:variable name="currentRoot" select="/"/>
               <xsl:for-each select="$otherSchemaList">
                 <p><b><xsl:value-of select="."/></b> implements the UML conceptual schema defined in <xsl:value-of select="concat('ISO ',$currentNamespace/conceptualStandardNumber,', ',$currentNamespace/conceptualStandardTitle, if (exists($currentNamespace/paragraphNumber)) then concat(', Clause ',$currentNamespace/paragraphNumber) else '')"/>. It was created using the encoding rules defined in ISO 19118, ISO 19139, and the implementation approach described in ISO 19115-3 and contains the following classes: 
-                  <xsl:variable name="otherSchemaFile" select="concat($schemaRootDirectory,'/',replace($currentNamespace/schemaStandardNumber,'-','/-'),'/',$currentNamespace/prefix,'/',$currentNamespace/version,'/',$currentNamespace/$workingVersionDate,'/',.)"/>
+                  <xsl:variable name="otherSchemaFile" select="concat($schemaRootDirectory,'/',replace($currentNamespace/schemaStandardNumber,'-','/-'),'/',$currentNamespace/prefix,'/',$currentNamespace/version,'/',$workingVersionDate,'/',.)"/>
                   <xsl:for-each select="document($otherSchemaFile)/*/xs:element">
                     <xsl:if test="position()!=1"><xsl:text>, </xsl:text></xsl:if>
                     <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>

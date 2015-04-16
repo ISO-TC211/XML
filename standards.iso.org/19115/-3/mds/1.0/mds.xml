@@ -21,7 +21,7 @@
    <!-- 
    This is a sample metadata record for the complete metadata conformance class.
    It contains required elements from the mdb, mcc (cit, gco), lan, mri,
-   mas, mco, mrl, gex, mrc, mrd, mpc, msr, rms, and srv namespaces.
+   mas, mco, mrl, gex, mrc, mrd, mpc, msr and srv namespaces.
    
    This sample includes optional elements of MD_Metadata that are included in
    the mds namespace and required elements within them. More detailed examples
