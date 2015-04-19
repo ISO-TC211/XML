@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-   This codelist catalogue was originally developed by Steve Richard and
-   updated to be consistent with the cat namespace by Ted Habermann 2015-04-17
- -->
+AUTHOR : Energistics contact: steve.richard@azgs.az.gov
+PURPOSE : implement codelist catalog for ISO19115-3/2012-10-13, for use
+in Energistics Energy Industry Metadata profile prototype project
+http://www.energistics.org/asset-data-management/metadata-work-group
+DESCRIPTION : 
+Build on pattern from gmxCodelists.xml 2008-09-11 by Nicolas Lesage used for ISO19139 implementation -->
+<!-- update schema locations fro gml v3.2 to ISO19136 repository and xlinks to W3c repository  and gco and gms to ISO19139 repository
+ smr 2012-11-23 -->
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19139/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+   xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
+   xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"
+   xmlns:gco="http://standards.iso.org/19139/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:gml="http://www.opengis.net/gml/3.2"
+   xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
    <!--=====Catalogue description=====-->
    <cat:name>
-      <gco:CharacterString>All Codelists ISO19115-3/2015-04-17</gco:CharacterString>
+      <gco:CharacterString>Codelists for description of metadata datasets compliant with ISO/TC 211 19115-3</gco:CharacterString>
    </cat:name>
    <cat:scope>
       <gco:CharacterString>Codelists for description of metadata datasets compliant with ISO/TC 211 19115-3</gco:CharacterString>
@@ -19,25 +25,19 @@
       <gco:CharacterString>ISO TC211 Metadata Standards</gco:CharacterString>
    </cat:fieldOfApplication>
    <cat:versionNumber>
-      <gco:CharacterString>1.0</gco:CharacterString>
+      <gco:CharacterString>0.1</gco:CharacterString>
    </cat:versionNumber>
    <cat:versionDate>
-      <gco:Date>2015-04-17</gco:Date>
+      <gco:Date>2015-04-18</gco:Date>
    </cat:versionDate>
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codeList="http://www.oxygenxml.com/"
-               codeListValue="http://www.oxygenxml.com/">LanguageCode1</lan:LanguageCode>
+            <lan:LanguageCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
-         <lan:country>
-            <lan:CountryCode codeList="http://www.oxygenxml.com/"
-               codeListValue="http://www.oxygenxml.com/">CountryCode1</lan:CountryCode>
-         </lan:country>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codeList="http://www.oxygenxml.com/"
-               codeListValue="http://www.oxygenxml.com/"
-               >MD_CharacterSetCode2</lan:MD_CharacterSetCode>
+            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
+               codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
    </cat:locale>
