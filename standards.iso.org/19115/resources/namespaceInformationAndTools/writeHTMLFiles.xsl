@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
   <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
     <xd:desc>
       <xd:p>
@@ -10,12 +9,9 @@
       <xd:p><xd:b>Created on:</xd:b>February 27, 2013</xd:p>
       <xd:p><xd:b>Modified on:</xd:b> January 4, 2014, 2014</xd:p>
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
-      <xd:p>This stylesheets reads ISONamespaceInformation.xml and writes standard namespace
-        description files into a filesystem with the ISO namespace structure.</xd:p>
-      <xd:p>It assumes a schema directory hierarchy like
-        schemaRootDirectory/namespace/version/namespace.xsd</xd:p>
-      <xd:p>and writes index.html files into the namespace directories
-        (schemaRootDirectory/namespace/version/index.html)</xd:p>
+      <xd:p>This stylesheets reads ISONamespaceInformation.xml and writes standard namespace description files into a filesystem with the ISO namespace structure.</xd:p>
+      <xd:p>It assumes a schema directory hierarchy like schemaRootDirectory/namespace/version/namespace.xsd</xd:p>
+      <xd:p>and writes index.html files into the namespace directories (schemaRootDirectory/namespace/version/index.html)</xd:p>
     </xd:desc>
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
@@ -39,23 +35,20 @@
   <xsl:variable name="TransformName" select="'writeHTMLFiles'"/>
   <xsl:variable name="TransformVersion" select="'2014-09-24'"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
+  
   <xsl:output method="html"/>
   <xsl:strip-space elements="*"/>
   <xsl:template match="/">
     <!-- The parameter standard is a string that includes the numbers of the standards that will be output. For example '19115-2 19115-3'  -->
     <xsl:for-each select="//namespace[contains($standard,schemaStandardNumber)]">
       <xsl:variable name="currentNamespace" select="."/>
-      <xsl:variable name="schemaDirectory"
-        select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/')"/>
-      <xsl:variable name="schemaFile"
-        select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.xsd')"/>
+      <xsl:variable name="schemaDirectory" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/')"/>
+      <xsl:variable name="schemaFile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.xsd')"/>
       <xsl:variable name="namespaceVersion" select="concat(prefix,' ',version)"/>
       <xsl:variable name="upperCasePrefix" select="upper-case(prefix)"/>
       <xsl:variable name="namespaceVersionTitle" select="concat($upperCasePrefix,' ',version)"/>
-      <xsl:variable name="namespaceURL"
-        select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/>
-      <xsl:variable name="outfile"
-        select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/index.html')"/>
+      <xsl:variable name="namespaceURL" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version)"/>
+      <xsl:variable name="outfile" select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/index.html')"/>
       <xsl:value-of select="concat('Schema: ',$schemaFile,', Output:', $outfile)"/>
       <br/>
       <xsl:result-document href="{$outfile}">
@@ -71,27 +64,14 @@
             </h1>
             <img><xsl:attribute name="src" select="concat(prefix,'.png')"/></img>
             <h2>Description</h2>
-            <p><xsl:value-of select="$namespaceVersionTitle"/> is an XML Schema implementation
-              derived from ISO <xsl:value-of
-                select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle, if (exists(paragraphNumber)) then concat(', Clause ',paragraphNumber) else '')"
-              />. <xsl:if test="scope!=''"> It includes <xsl:value-of
-                  select="concat(lower-case(substring(scope,1,1)),substring(scope,2))"/>
-              </xsl:if> The XML schema was encoded using the rules described in <xsl:value-of
-                select="encodingRules"/>.</p>
+            <p><xsl:value-of select="$namespaceVersionTitle"/> is an XML Schema implementation derived from ISO <xsl:value-of select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle, if (exists(paragraphNumber)) then concat(', Clause ',paragraphNumber) else '')"/>. <xsl:if test="scope!=''"> It includes <xsl:value-of select="concat(lower-case(substring(scope,1,1)),substring(scope,2))"/>
+            </xsl:if> The XML schema was encoded using the rules described in <xsl:value-of select="encodingRules"/>.</p>
             <h2>XML Namespace for <xsl:value-of select="$namespaceVersion"/></h2>
-            <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of
-                  select="$namespaceURL"/></b>.</p>
+            <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="$namespaceURL"/></b>.</p>
             <h2>XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
-            <p><b><xsl:value-of select="concat(prefix,'.xsd')"/></b> is the XML Schema document to
-              be referenced by XML documents containing XML elements in the <xsl:value-of
-                select="$namespaceVersion"/> namespace or by XML Schema documents importing the
-                <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes
-              (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/>
-              namespace, but it does not contain the declaration of any types.</p>
+            <p><b><xsl:value-of select="concat(prefix,'.xsd')"/></b> is the XML Schema document to be referenced by XML documents containing XML elements in the <xsl:value-of select="$namespaceVersion"/> namespace or by XML Schema documents importing the <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/> namespace, but it does not contain the declaration of any types.</p>
             <p>
-              <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available
-                  <a href="http://standards.iso.org">here</a> as part of a zip archive including all
-                the XML Schema Implementations defined in ISO/TS 19115-3.</i>
+              <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <a href="http://standards.iso.org">here</a> as part of a zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i>
             </p>
             <xsl:variable name="otherSchemaList" as="xs:string*">
               <xsl:for-each select="document($schemaFile)/*/xs:include">
@@ -103,7 +83,7 @@
               <xsl:variable name="currentRoot" select="/"/>
               <xsl:for-each select="$otherSchemaList">
                 <p><b><xsl:value-of select="."/></b> implements the UML conceptual schema defined in
-                    <xsl:value-of
+                  <xsl:value-of
                     select="concat('ISO ',$currentNamespace/conceptualStandardNumber,', ',$currentNamespace/conceptualStandardTitle, if (exists($currentNamespace/paragraphNumber)) then concat(', Clause ',$currentNamespace/paragraphNumber) else '')"
                   />. It was created using the encoding rules defined in ISO 19118, ISO 19139, and
                   the implementation approach described in ISO 19115-3 and contains the following
@@ -128,11 +108,9 @@
             <xsl:variable name="completeNamespacePrefixList" as="xs:string*">
               <xsl:for-each select="collection(iri-to-uri($xsdFilesSelect))">
                 <xsl:for-each select="/*/xs:import">
-                  <xsl:variable name="pathTokens" as="xs:string+"
-                    select="tokenize(@schemaLocation,'/')"/>
+                  <xsl:variable name="pathTokens" as="xs:string+" select="tokenize(@schemaLocation,'/')"/>
                   <xsl:variable name="numberOfTokens" select="count($pathTokens)"/>
-                  <xsl:sequence
-                    select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
+                  <xsl:sequence select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
                   <!--<xsl:sequence select="tokenize(@namespace,'/')[5]"/>-->
                 </xsl:for-each>
               </xsl:for-each>
@@ -145,12 +123,9 @@
                       <xsl:sequence select="'gml'"/>
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:variable name="pathTokens" as="xs:string+"
-                        select="tokenize(@schemaLocation,'/')"/>
+                      <xsl:variable name="pathTokens" as="xs:string+" select="tokenize(@schemaLocation,'/')"/>
                       <xsl:variable name="numberOfTokens" select="count($pathTokens)"/>
-                      <xsl:sequence
-                        select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"
-                      />
+                      <xsl:sequence select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:for-each>
@@ -171,27 +146,19 @@
             </xsl:variable>
             <xsl:choose>
               <xsl:when test="count($otherNamespacePrefixList)">
-                <h2>Related XML Namespaces for <xsl:value-of select="$namespaceVersion"/></h2> The
-                  <xsl:value-of select="$namespaceVersion"/> namespace imports these other
-                namespaces: <xsl:variable name="currentRoot" select="/"/>
+                <h2>Related XML Namespaces for <xsl:value-of select="$namespaceVersion"/></h2> The <xsl:value-of select="$namespaceVersion"/> namespace imports these other namespaces: <xsl:variable name="currentRoot" select="/"/>
                 <table border="1" cellpadding="3" cellspacing="3">
                   <tr>
-                    <th>Name</th><th>Standard Prefix</th><th>Namespace Location</th><th>Schema
-                      Location</th></tr>
+                    <th>Name</th><th>Standard Prefix</th><th>Namespace Location</th><th>Schema Location</th></tr>
                   <!--<xsl:variable name="distinctNamespacePrefixList" select="distinct-values($otherNamespacePrefixList)"/>-->
                   <xsl:for-each select="distinct-values($otherNamespacePrefixList)">
                     <xsl:sort select="."/>
-                    <xsl:variable name="sequencePosition"
-                      select="subsequence(index-of($otherNamespacePrefixList,.),1,1)"/>
+                    <xsl:variable name="sequencePosition" select="subsequence(index-of($otherNamespacePrefixList,.),1,1)"/>
                     <tr>
-                      <td><xsl:value-of select="key('namespaceTitleLookup',.,$currentRoot)/title"
-                        /></td>
+                      <td><xsl:value-of select="key('namespaceTitleLookup',.,$currentRoot)/title"/></td>
                       <td><xsl:value-of select="."/></td>
-                      <td><xsl:value-of
-                          select="subsequence($otherNamespaceList,$sequencePosition,1)"/></td>
-                      <td><xsl:value-of
-                          select="subsequence($otherNamespaceLocationList,$sequencePosition,1)"
-                        /></td>
+                      <td><xsl:value-of select="subsequence($otherNamespaceList,$sequencePosition,1)"/></td>
+                      <td><xsl:value-of select="subsequence($otherNamespaceLocationList,$sequencePosition,1)"/></td>
                     </tr>
                   </xsl:for-each>
                 </table>
@@ -200,20 +167,14 @@
                 <h2>No Related XML Namespaces for <xsl:value-of select="$namespaceVersion"/></h2>
               </xsl:otherwise>
             </xsl:choose>
-            <h2>Schematron Validation Rules for <xsl:value-of select="$namespaceVersion"/></h2>
-            Schematron rules for validating instance documents of the <xsl:value-of
-              select="$namespaceVersion"/> namespace are in <xsl:value-of
-              select="concat(prefix,'.sch')"/>. Other schematron rule sets that are required for a
-            complete validation are: <xsl:variable name="currentRoot" select="/"/>
+            <h2>Schematron Validation Rules for <xsl:value-of select="$namespaceVersion"/></h2> Schematron rules for validating instance documents of the <xsl:value-of select="$namespaceVersion"/> namespace are in <xsl:value-of select="concat(prefix,'.sch')"/>. Other schematron rule sets that are required for a complete validation are: <xsl:variable name="currentRoot" select="/"/>
             <xsl:for-each select="$otherNamespacePrefixList">
               <xsl:if test="position()!=1"><xsl:text>, </xsl:text></xsl:if>
               <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>
               <xsl:value-of select="concat(.,'.sch')"/>
             </xsl:for-each>
             <hr/>
-            <p><font size="small" face="italic"><xsl:value-of
-                  select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"
-                /></font></p>
+            <p><font size="small" face="italic"><xsl:value-of select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"/></font></p>
           </body>
         </html>
       </xsl:result-document>
