@@ -520,9 +520,9 @@
     <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
     <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>Geographic Information - Metadata - Part 1: Fundamentals</conceptualStandardTitle>
-    <schemaStandardNumber>19139</schemaStandardNumber>
+    <schemaStandardNumber>19115-3</schemaStandardNumber>
     <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
-    <paragraphNumber>TBD</paragraphNumber>
+    <paragraphNumber/>
   </namespace>  
   <namespace>
     <title>Feature Catalog Common</title>
@@ -617,11 +617,11 @@
     <version>1.0</version>
     <location>http://standards.iso.org</location>
     <encodingRules>ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause 8</encodingRules>
-    <conceptualStandardNumber>19139</conceptualStandardNumber>
+    <conceptualStandardNumber>19115-1</conceptualStandardNumber>
     <conceptualStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</conceptualStandardTitle>
-    <schemaStandardNumber>19139</schemaStandardNumber>
-    <schemaStandardTitle>ISO/TS 19139 Geographic information - Metadata - XML schema implementation</schemaStandardTitle>
-    <paragraphNumber>9.7</paragraphNumber>
+    <schemaStandardNumber>19115-3</schemaStandardNumber>
+    <schemaStandardTitle>Geographic information — Metadata — XML schema implementation for fundamental concepts</schemaStandardTitle>
+    <paragraphNumber/>
   </namespace>
   <namespace>
     <title>Geographic Spatial Schema</title>

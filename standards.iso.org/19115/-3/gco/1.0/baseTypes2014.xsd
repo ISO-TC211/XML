@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:gco="http://standards.iso.org/19139/gco/1.0"
+<xs:schema xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
-	targetNamespace="http://standards.iso.org/19139/gco/1.0"
-	elementFormDefault="qualified" attributeFormDefault="unqualified" version="2014-12-25">
+	targetNamespace="http://standards.iso.org/19115/-3/gco/1.0"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>Geographic COmmon (GCO) extensible markup language is a component of the XML Schema Implementation of Geographic

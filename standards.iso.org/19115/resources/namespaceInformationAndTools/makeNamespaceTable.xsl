@@ -76,8 +76,8 @@
               <td>
                 <!-- Standard Prefix -->
                 <xsl:element name="a">
-                  <xsl:attribute name="href"
-                    select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
+                  <!--<xsl:attribute name="href" select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>-->
+                  <xsl:attribute name="href" select="concat('../../',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
                   <xsl:value-of select="prefix"/>
                 </xsl:element>
               </td>
@@ -96,8 +96,13 @@
               <td>
                 <!-- Standard - Paragraph -->
                 <xsl:value-of
-                  select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle,', ',paragraphNumber)"
+                  select="concat('ISO ',conceptualStandardNumber,', ',conceptualStandardTitle)"
                 />
+                <xsl:if test="string-length(paragraphNumber)">
+                  <xsl:value-of
+                    select="concat(', ',paragraphNumber)"
+                  />
+                </xsl:if>
               </td>
               <td>
                 <!-- Requirements Name -->
