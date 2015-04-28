@@ -4,7 +4,7 @@
  xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0 ../../../../19115/-3/mds/1.0/mds.xsd"
  xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0"
  xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0"
- xmlns:gco="http://standards.iso.org/19139/gco/1.0"
+ xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0"
  xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0"
  xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"

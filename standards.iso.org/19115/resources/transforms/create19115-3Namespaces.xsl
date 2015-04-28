@@ -57,7 +57,7 @@
     <xsl:namespace name="mac" select="'http://standards.iso.org/19115/-3/mac/1.0'"/>
     <!-- other ISO namespaces -->
     <!-- Geospatial COmmon -->
-    <xsl:namespace name="gco" select="'http://standards.iso.org/19139/gco/1.0'"/>
+    <xsl:namespace name="gco" select="'http://standards.iso.org/19115/-3/gco/1.0'"/>
     <!-- external namespaces -->
     <xsl:namespace name="gml" select="'http://www.opengis.net/gml/3.2'"/>
     <xsl:namespace name="xlink" select="'http://www.w3.org/1999/xlink'"/>

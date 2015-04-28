@@ -39,7 +39,7 @@
          <mri:resourceMaintenance>
             <mmi:MD_MaintenanceInformation>
                <mmi:userDefinedMaintenanceFrequency>
-                  <TM_PeriodDuration xmlns="http://standards.iso.org/19139/gmw/1.0">
+                  <TM_PeriodDuration xmlns="http://standards.iso.org/19115/-3/gmw/1.0">
                      P2Y
                   </TM_PeriodDuration>
                </mmi:userDefinedMaintenanceFrequency>

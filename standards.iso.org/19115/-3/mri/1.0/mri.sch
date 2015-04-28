@@ -8,7 +8,7 @@
   <sch:ns prefix="mcc" uri="http://standards.iso.org/19115/-3/mcc/1.0"/>
   <sch:ns prefix="mrc" uri="http://standards.iso.org/19115/-3/mrc/1.0"/>
   <sch:ns prefix="lan" uri="http://standards.iso.org/19115/-3/lan/1.0"/>
-  <sch:ns prefix="gco" uri="http://standards.iso.org/19139/gco/1.0"/>
+  <sch:ns prefix="gco" uri="http://standards.iso.org/19115/-3/gco/1.0"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     

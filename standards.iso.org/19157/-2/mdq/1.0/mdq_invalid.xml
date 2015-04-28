@@ -3,7 +3,7 @@
 <mdq:DQ_DataQuality xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://standards.iso.org/19157/-2/mdq/1.0 mdq.xsd"
    xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0"
-   xmlns:gco="http://standards.iso.org/19139/gco/1.0"
+   xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
    xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0"
    xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0">
    <!-- 
