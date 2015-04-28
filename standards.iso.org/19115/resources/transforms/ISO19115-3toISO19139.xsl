@@ -38,7 +38,7 @@
                 xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0"
                 xmlns:mai="http://standards.iso.org/19115/-3/mai/1.0"
                 xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0"
-                xmlns:gco2="http://standards.iso.org/19139/gco/1.0"
+                xmlns:gco2="http://standards.iso.org/19115/-3/gco/1.0"
                 xmlns:gml32="http://www.opengis.net/gml/3.2"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"

@@ -4,7 +4,7 @@
   <sch:ns prefix="cat" uri="http://standards.iso.org/19115/-3/cat/1.0"/>
   <sch:ns prefix="cit" uri="http://standards.iso.org/19115/-3/cit/1.0"/>
   <sch:ns prefix="mcc" uri="http://standards.iso.org/19115/-3/mcc/1.0"/>
-  <sch:ns prefix="gco" uri="http://standards.iso.org/19139/gco/1.0"/>
+  <sch:ns prefix="gco" uri="http://standards.iso.org/19115/-3/gco/1.0"/>
   <!--
     ISO 19157-2 base requirements for data quality metadata instance documents
     
