@@ -59,4 +59,5 @@
       </cit:CI_Responsibility>
    </mdb:contact>
    <mdb:dateInfo gco:nilReason="inapplicable"/>
+   <mdb:identificationInfo gco:nilReason="inapplicable"/>
 </mdb:MD_Metadata>

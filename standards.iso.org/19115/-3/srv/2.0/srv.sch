@@ -70,7 +70,7 @@
     -->
   <sch:diagnostics>
     <sch:diagnostic id="rule.srv.coupledresource-failure-en"
-      xml:lang="en">The service identification MUST specified coupling type 
+      xml:lang="en">The service identification MUST specify coupling type 
       when coupled resource exist</sch:diagnostic>
     <sch:diagnostic id="rule.srv.coupledresource-failure-fr"
       xml:lang="fr">L'identification du service DOIT 
@@ -87,7 +87,7 @@
   </sch:diagnostics>
   
   <sch:pattern id="rule.srv.coupledresource">
-    <sch:title xml:lang="en">Service identification MUST specified coupling type 
+    <sch:title xml:lang="en">Service identification MUST specify coupling type 
       when coupled resource exist</sch:title>
     <sch:title xml:lang="fr">L'identification du service DOIT 
       définir un type de couplage lorsqu'une ressource est couplée</sch:title>
