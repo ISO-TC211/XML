@@ -18,12 +18,12 @@
     -->
   <sch:diagnostics>
     <sch:diagnostic id="rule.gex.extenthasoneelement-failure-en"
-      xml:lang="en">The extent does not contains any element.</sch:diagnostic>
+      xml:lang="en">The extent does not contain a description or a geographicElement.</sch:diagnostic>
     <sch:diagnostic id="rule.gex.extenthasoneelement-failure-fr"
       xml:lang="fr">L'étendue ne contient aucun élement.</sch:diagnostic>
     
     <sch:diagnostic id="rule.gex.extenthasoneelement-desc-success-en"
-      xml:lang="en">The extent contains e description.</sch:diagnostic>
+      xml:lang="en">The extent contains a description.</sch:diagnostic>
     <sch:diagnostic id="rule.gex.extenthasoneelement-desc-success-fr"
       xml:lang="fr">L'étendue contient une description.</sch:diagnostic>
     

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0 ../../../schema.xsd"
-                 xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0"
-                 xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
-                 xmlns:mex="http://standards.iso.org/19115/-3/mex/1.0">
+ xsi:schemaLocation="http://standards.iso.org/19115/-3/mdt/1.0 ../../mdt/1.0/mdt.xsd" 
+ xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0" xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
+ xmlns:mex="http://standards.iso.org/19115/-3/mex/1.0">
    <mdb:metadataIdentifier></mdb:metadataIdentifier>
    <mdb:contact></mdb:contact>
    <mdb:dateInfo></mdb:dateInfo>
@@ -75,12 +74,6 @@
             </mex:MD_ExtendedElementInformation>
          </mex:extendedElementInformation>
          
-         
-         
-         
-         
-         
-         
          <!-- Invalid for rule.mex.conditional -->
          <mex:extendedElementInformation>
             <mex:MD_ExtendedElementInformation>
@@ -100,12 +93,7 @@
                <mex:source></mex:source>
             </mex:MD_ExtendedElementInformation>
          </mex:extendedElementInformation>
-         
-         
-         
-         
-         
-         
+          
          <!-- Invalid for rule.mex.mandatorycode -->
          <mex:extendedElementInformation>
             <mex:MD_ExtendedElementInformation>
@@ -129,4 +117,5 @@
          
       </mex:MD_MetadataExtensionInformation>
    </mdb:metadataExtensionInfo>
+   <mdb:identificationInfo/>
 </mdb:MD_Metadata>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0 ../../../schema.xsd"
-                 xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0"
-                 xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
-                 xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0">
+ xsi:schemaLocation="http://standards.iso.org/19115/-3/mds/1.0 ../../mds/1.0/mds.xsd" 
+ xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0" 
+ xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
+ xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0"
+ xmlns:gfc="http://standards.iso.org/19110/gfc/1.1">
    <mdb:metadataIdentifier></mdb:metadataIdentifier>
    <mdb:contact></mdb:contact>
    <mdb:dateInfo></mdb:dateInfo>
@@ -17,9 +18,9 @@
    <mdb:contentInfo>
       <mrc:MD_FeatureCatalogue>
          <mrc:featureCatalogue>
-            <FC_FeatureCatalogue xmlns="http://standards.iso.org/19110/gfc/1.1/2014-12-25">
-               <producer></producer>
-            </FC_FeatureCatalogue>
+            <gfc:FC_FeatureCatalogue>
+               <gfc:producer></gfc:producer>
+            </gfc:FC_FeatureCatalogue>
          </mrc:featureCatalogue>
       </mrc:MD_FeatureCatalogue>
    </mdb:contentInfo>
@@ -54,14 +55,14 @@
                      <mrc:boundMin>
                         <gco:Real>0</gco:Real>
                      </mrc:boundMin>
-                     <mrc:boundMax>
-                        <gco:Real>1.0</gco:Real>
-                     </mrc:boundMax>
                      <mrc:boundUnits>
                         <gml:ConventionalUnit gml:id="cm">
                            <gml:identifier codeSpace="">cm</gml:identifier>
                         </gml:ConventionalUnit>
                      </mrc:boundUnits>
+                     <mrc:boundMax>
+                        <gco:Real>1.0</gco:Real>
+                     </mrc:boundMax>
                   </mrc:MD_Band>
                </mrc:attribute>
             </mrc:MD_AttributeGroup>
