@@ -140,7 +140,6 @@
     <!-- end of main root element processing -->
   </xsl:template>
 
-
   <!-- 
     root element templates
   -->
@@ -174,7 +173,6 @@
       </mcc:MD_Identifier>
     </xsl:element>
   </xsl:template>
-
 
   <xsl:template match="gmd:language|gmd:locale" priority="5">
     <xsl:variable name="nameSpacePrefix">
@@ -213,7 +211,6 @@
       </lan:PT_Locale>
     </xsl:element>
   </xsl:template>
-
 
   <xsl:template match="gmd:characterSet" priority="5">
     <xsl:choose>
@@ -323,18 +320,27 @@
     <!--
       dateStamp is changed into a CI_Date that includes a dateType 
     -->
-    <mdb:dateInfo>
-      <cit:CI_Date>
-        <cit:date>
-          <xsl:call-template name="writeDateTime"/>
-        </cit:date>
-        <xsl:call-template name="writeCodelistElement">
-          <xsl:with-param name="elementName" select="'cit:dateType'"/>
-          <xsl:with-param name="codeListName" select="'cit:CI_DateTypeCode'"/>
-          <xsl:with-param name="codeListValue" select="'creation'"/>
-        </xsl:call-template>
-      </cit:CI_Date>
-    </mdb:dateInfo>
+    <xsl:choose>
+      <xsl:when test="@*[local-name()='nilReason']">
+        <xsl:element name="mdb:dateInfo">
+          <xsl:attribute name="gco:nilReason" select="@*[local-name()='nilReason']"/>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <mdb:dateInfo>
+          <cit:CI_Date>
+            <cit:date>
+              <xsl:call-template name="writeDateTime"/>
+            </cit:date>
+            <xsl:call-template name="writeCodelistElement">
+              <xsl:with-param name="elementName" select="'cit:dateType'"/>
+              <xsl:with-param name="codeListName" select="'cit:CI_DateTypeCode'"/>
+              <xsl:with-param name="codeListValue" select="'creation'"/>
+            </xsl:call-template>
+          </cit:CI_Date>
+        </mdb:dateInfo>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="gmd:metadataStandardName" priority="5">
