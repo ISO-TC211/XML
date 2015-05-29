@@ -154,6 +154,7 @@
     <xsl:template name="writeContactInformation">
         <xsl:for-each select="gmd:contactInfo">
             <cit:contactInfo>
+                <xsl:apply-templates select="@*"/>
                 <xsl:apply-templates/>
             </cit:contactInfo>
         </xsl:for-each>
