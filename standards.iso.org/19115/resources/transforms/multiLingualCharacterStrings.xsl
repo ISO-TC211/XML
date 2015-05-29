@@ -55,7 +55,9 @@
         <xsl:choose>
             <xsl:when test="$nodeWithStringToWrite">
                 <xsl:element name="{$elementName}">
-                    <xsl:copy-of select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>
+                    <!--<xsl:copy-of select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>-->
+                    <!-- Deal with attributes (may be in the old gco namespace -->
+                    <xsl:apply-templates select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>
                     <xsl:if test="$isMultilingual">
                         <xsl:attribute name="xsi:type" select="'lan:PT_FreeText_PropertyType'"/>
                     </xsl:if>
