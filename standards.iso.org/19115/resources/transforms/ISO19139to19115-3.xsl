@@ -1288,7 +1288,7 @@
   <xsl:template match="gmd:metadataStandardVersion" priority="5"/>
   <xsl:template match="gmd:dataSetURI" priority="5"/>
   <!-- Match MD_ and MI_CoverageDescription -->
-  <xsl:template match="gmd:contentInfo/*/gmd:attributeDescription" priority="5"/>
+  <xsl:template match="gmd:contentInfo/gmd:MD_CoverageDescription/gmd:attributeDescription | gmd:contentInfo/gmi:MI_CoverageDescription/gmd:attributeDescription" priority="5"/>
   <xsl:template match="gmd:contentInfo/gmi:MI_CoverageDescription/gmi:rangeElementDescription" priority="5"/>
   <xsl:template match="gmd:contentInfo/gmd:MD_ImageDescription/gmd:contentType" priority="5"/>
   <xsl:template match="gmd:report/gmd:DQ_QuantitativeAttributeAccuracy/gmd:result/gmi:QE_CoverageResult//gmd:attributeDescription" priority="5"/>
