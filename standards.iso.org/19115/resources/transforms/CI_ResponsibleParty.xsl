@@ -65,10 +65,9 @@
                 using the CI_ResponsiblePartyToOnlineResource template
                 -->
                <xsl:element name="cit:CI_Responsibility">
-                    <xsl:copy-of select="./@*"/>
+                   <xsl:apply-templates select="./@*"/>
                     <xsl:choose>
-                        <xsl:when test="./gmd:role">
-                            <!--<xsl:when test="./gmd:role/gmd:CI_RoleCode">-->
+                        <xsl:when test="./gmd:role/gmd:CI_RoleCode">
                             <xsl:call-template name="writeCodelistElement">
                                 <xsl:with-param name="elementName" select="'cit:role'"/>
                                 <xsl:with-param name="codeListName" select="'cit:CI_RoleCode'"/>
@@ -77,7 +76,7 @@
                         </xsl:when>
                         <xsl:when test="./gmd:role/@*">
                             <cit:role>
-                                <xsl:copy-of select="./gmd:role/@*"/>
+                                <xsl:apply-templates select="./gmd:role/@*"/>
                             </cit:role>
                         </xsl:when>
                         <xsl:otherwise>
