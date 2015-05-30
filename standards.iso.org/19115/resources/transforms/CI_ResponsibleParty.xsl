@@ -67,7 +67,8 @@
                <xsl:element name="cit:CI_Responsibility">
                     <xsl:copy-of select="./@*"/>
                     <xsl:choose>
-                        <xsl:when test="./gmd:role/gmd:CI_RoleCode">
+                        <xsl:when test="./gmd:role">
+                            <!--<xsl:when test="./gmd:role/gmd:CI_RoleCode">-->
                             <xsl:call-template name="writeCodelistElement">
                                 <xsl:with-param name="elementName" select="'cit:role'"/>
                                 <xsl:with-param name="codeListName" select="'cit:CI_RoleCode'"/>
