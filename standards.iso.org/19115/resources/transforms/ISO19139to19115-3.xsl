@@ -510,7 +510,18 @@
           <xsl:for-each select="gmd:DQ_DataQuality/gmd:report">
             <xsl:for-each select="*">
               <xsl:element name="mdq:report">
-                <xsl:element name="{concat('mdq:',local-name())}">
+                <!-- DQ_NonQuantitativeAttributeAccuracy changed to DQ_NonQuantitativeAttributeCorrectness -->
+                <xsl:variable name="dataQualityReportType">
+                  <xsl:choose>
+                    <xsl:when test="local-name()='DQ_NonQuantitativeAttributeAccuracy'">
+                      <xsl:value-of select="'DQ_NonQuantitativeAttributeCorrectness'"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="local-name()"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:variable>                
+                <xsl:element name="{concat('mdq:',$dataQualityReportType)}">
                   <!-- gmd:result uses default templates -->
                   <mdq:measure>
                     <mdq:DQ_MeasureReference>
@@ -892,7 +903,9 @@
   <xsl:template match="gmd:report/*/gmd:result/gmi:QE_CoverageResult/gmi:resultContentDescription/gmi:MI_CoverageDescription">
     <xsl:element name="mrc:MI_CoverageDescription">
       <xsl:element name="mrc:attributeDescription">
-        <xsl:copy-of select="./gmd:attributeDescription/gcoold:RecordType"/>
+        <xsl:element name="gco:RecordType">
+          <xsl:apply-templates select="./gmd:attributeDescription/gcoold:RecordType/@*"/>
+        </xsl:element>
       </xsl:element>
       <xsl:element name="mrc:attributeGroup">
         <xsl:element name="mrc:MD_AttributeGroup">
@@ -1080,24 +1093,31 @@
     <xsl:param name="codeListValue"/>
     <!-- The correct codeList Location goes here -->
     <xsl:variable name="codeListLocation" select="'codeListLocation'"/>
-    <xsl:if test="$codeListValue">
-      <xsl:element name="{$elementName}">
-        <xsl:element name="{$codeListName}">
-          <xsl:attribute name="codeList">
-            <xsl:value-of select="$codeListLocation"/>
-            <xsl:value-of select="'#'"/>
-            <xsl:value-of select="substring-after($codeListName,':')"/>
-          </xsl:attribute>
-          <xsl:attribute name="codeListValue">
-            <!-- the anyValidURI value is used for testing with paths -->
-            <!--<xsl:value-of select="'anyValidURI'"/>-->
-            <!-- commented out for testing -->
+    <xsl:choose>
+      <xsl:when test="$codeListValue">
+        <xsl:element name="{$elementName}">
+          <xsl:element name="{$codeListName}">
+            <xsl:attribute name="codeList">
+              <xsl:value-of select="$codeListLocation"/>
+              <xsl:value-of select="'#'"/>
+              <xsl:value-of select="substring-after($codeListName,':')"/>
+            </xsl:attribute>
+            <xsl:attribute name="codeListValue">
+              <!-- the anyValidURI value is used for testing with paths -->
+              <!--<xsl:value-of select="'anyValidURI'"/>-->
+              <!-- commented out for testing -->
+              <xsl:value-of select="$codeListValue"/>
+            </xsl:attribute>
             <xsl:value-of select="$codeListValue"/>
-          </xsl:attribute>
-          <xsl:value-of select="$codeListValue"/>
+          </xsl:element>
         </xsl:element>
-      </xsl:element>
-    </xsl:if>
+      </xsl:when>
+      <xsl:when test="@*">
+        <xsl:element name="{$elementName}">
+          <xsl:apply-templates select="@*"/>
+        </xsl:element>
+      </xsl:when>
+    </xsl:choose>
   </xsl:template>
   <xsl:template name="characterStringSubstitutions">
     <xsl:param name="parentElement"/>
@@ -1217,9 +1237,9 @@
         <xsl:when test="ancestor-or-self::gmd:MD_PortrayalCatalogueReference">
           <xsl:text>mpc</xsl:text>
         </xsl:when>
-        <!--<xsl:when test="ancestor-or-self::gmd:MD_SpatialRepresentationTypeCode">
-          <xsl:text>msr</xsl:text>
-        </xsl:when>-->
+        <xsl:when test="ancestor-or-self::gmd:MD_SpatialRepresentationTypeCode">
+          <xsl:text>mcc</xsl:text>
+        </xsl:when>
         <xsl:when test="ancestor-or-self::gmd:MD_ReferenceSystem">
           <xsl:text>mrs</xsl:text>
         </xsl:when>
