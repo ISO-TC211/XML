@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/19115/-3/gmw/1.0"
-	xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
-	targetNamespace="http://standards.iso.org/19115/-3/gmw/1.0" elementFormDefault="qualified"
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0"
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+	targetNamespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" elementFormDefault="qualified"
 	version="2014-12-25">
 
 	<!-- smr 2014-12-27 refactor gco, gsr, gts, gss to put all gml dependencies in this namespace for base data types -->
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>Geographic COmmon (GCO) extensible markup language is a component of the XML Schema Implementation of Geographic
-Information Metadata documented in ISO/TS 19139:2007. GCO includes all the definitions of http://standards.iso.org/19115/-3/gco/1.0" namespace. The root document of this namespace is the file gco.xsd. This basicTypes.xsd schema implements concepts from the "basic types" package of ISO/TS 19103.</xs:documentation>
+Information Metadata documented in ISO/TS 19139:2007. GCO includes all the definitions of http://standards.iso.org/iso/19115/-3/gco/1.0" namespace. The root document of this namespace is the file gco.xsd. This basicTypes.xsd schema implements concepts from the "basic types" package of ISO/TS 19103.</xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
 	<xs:import namespace="http://www.opengis.net/gml/3.2"
@@ -17,7 +17,7 @@ Information Metadata documented in ISO/TS 19139:2007. GCO includes all the defin
 	<xs:import namespace="http://www.w3.org/1999/xlink"
 		schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 	<!--	<xs:include schemaLocation="gco.xsd"/>-->
-	<xs:import namespace="http://standards.iso.org/19115/-3/gco/1.0"
+	<xs:import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0"
 		schemaLocation="../../gco/1.0/baseTypes2014.xsd"/>
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
+<xs:schema xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
-	targetNamespace="http://standards.iso.org/19115/-3/gco/1.0"
+	targetNamespace="http://standards.iso.org/iso/19115/-3/gco/1.0"
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>

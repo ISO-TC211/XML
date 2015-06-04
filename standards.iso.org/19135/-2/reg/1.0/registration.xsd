@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0" xmlns:pre="http://standards.iso.org/19135/-2/pre/1.0" xmlns:reg="http://standards.iso.org/19135/-2/reg/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19135/-2/reg/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:pre="http://standards.iso.org/iso/19135/-2/pre/1.0" xmlns:reg="http://standards.iso.org/iso/19135/-2/reg/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19135/-2/reg/1.0" version="1.0">
   <include schemaLocation="reg.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gco/1.0"    schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/19135/-2/pre/1.0" schemaLocation="../../../../19135/-2/pre/1.0/pre.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0"    schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19135/-2/pre/1.0" schemaLocation="../../../../19135/-2/pre/1.0/pre.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="RE_AdditionInformation" substitutionGroup="reg:AbstractRE_ProposalManagementInformation" type="reg:RE_AdditionInformation_Type"/>
   <complexType name="RE_AdditionInformation_Type">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-  <sch:ns prefix="cit" uri="http://standards.iso.org/19115/-3/cit/1.0"/>
-  <sch:ns prefix="mri" uri="http://standards.iso.org/19115/-3/mri/1.0"/>
-  <sch:ns prefix="mex" uri="http://standards.iso.org/19115/-3/mex/1.0"/>
-  <sch:ns prefix="mcc" uri="http://standards.iso.org/19115/-3/mcc/1.0"/>
-  <sch:ns prefix="lan" uri="http://standards.iso.org/19115/-3/lan/1.0"/>
-  <sch:ns prefix="gco" uri="http://standards.iso.org/19115/-3/gco/1.0"/>
+  <sch:ns prefix="cit" uri="http://standards.iso.org/iso/19115/-3/cit/1.0"/>
+  <sch:ns prefix="mri" uri="http://standards.iso.org/iso/19115/-3/mri/1.0"/>
+  <sch:ns prefix="mex" uri="http://standards.iso.org/iso/19115/-3/mex/1.0"/>
+  <sch:ns prefix="mcc" uri="http://standards.iso.org/iso/19115/-3/mcc/1.0"/>
+  <sch:ns prefix="lan" uri="http://standards.iso.org/iso/19115/-3/lan/1.0"/>
+  <sch:ns prefix="gco" uri="http://standards.iso.org/iso/19115/-3/gco/1.0"/>
 
   <!--
     ISO 19115-3 base requirements for metadata instance documents

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
-   xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
-   xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Maintenance Information (mex) Namespace</gco:CharacterString>
@@ -35,10 +35,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_MaintenanceFrequencyCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>frequency with which modifications and deletions are made to the
@@ -51,7 +51,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_continual">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_continual</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_continual</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is repeatedly and frequently
@@ -62,7 +62,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_daily">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_daily</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_daily</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated each day</gco:CharacterString>
@@ -72,7 +72,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_weekly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_weekly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_weekly</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated on a weekly basis</gco:CharacterString>
@@ -82,7 +82,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_fortnightly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_fortnightly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_fortnightly</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated every two weeks</gco:CharacterString>
@@ -92,7 +92,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_monthly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_monthly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_monthly</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated each month</gco:CharacterString>
@@ -102,7 +102,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_quarterly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_quarterly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_quarterly</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated every three months</gco:CharacterString>
@@ -112,7 +112,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_biannually">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_biannually</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_biannually</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated twice each year</gco:CharacterString>
@@ -122,7 +122,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_annually">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_annually</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_annually</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated every year</gco:CharacterString>
@@ -132,7 +132,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_asNeeded">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_asNeeded</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_asNeeded</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated as deemed necessary</gco:CharacterString>
@@ -142,7 +142,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_irregular">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_irregular</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_irregular</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated in intervals that are uneven in
@@ -153,7 +153,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_notPlanned">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_notPlanned</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_notPlanned</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>there are no plans to update the data</gco:CharacterString>
@@ -163,7 +163,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_unknown">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_unknown</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_unknown</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>frequency of maintenance for the data is not
@@ -174,7 +174,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_periodic">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_periodic</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_periodic</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated at regular
@@ -185,7 +185,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_semimonthly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_semimonthly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_semimonthly</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource updated twice a monthly</gco:CharacterString>
@@ -195,7 +195,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_biennially">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_MaintenanceFrequencyCode_biennially</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_MaintenanceFrequencyCode_biennially</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>resource is updated every 2 years</gco:CharacterString>

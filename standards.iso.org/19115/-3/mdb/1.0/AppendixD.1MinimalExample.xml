@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Minimal gmd based instance document -->
-<mdb:MD_Metadata xmlns="http://standards.iso.org/19115/-3/mdb/1.0" 
-    xmlns:dqc="http://standards.iso.org/19157/-2/dqc/1.0" 
-    xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" 
-    xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" 
-    xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0" 
-    xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0"
-    xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0"
-    xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0"
-    xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0"
+<mdb:MD_Metadata xmlns="http://standards.iso.org/iso/19115/-3/mdb/1.0" 
+    xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" 
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+    xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0 mdb.xsd">
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0 mdb.xsd">
     <mdb:contact>
         <cit:CI_Responsibility>
             <cit:role>
-                <cit:CI_RoleCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
             </cit:role>
             <cit:party>
                 <cit:CI_Organisation>
@@ -32,7 +32,7 @@
                 <gco:DateTime>2004-03-12T12:00:00</gco:DateTime>
             </cit:date>
             <cit:dateType>
-                <cit:CI_DateTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#creation" codeListValue="Creation"/>
+                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#creation" codeListValue="Creation"/>
             </cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
@@ -51,7 +51,7 @@
                                 <gco:DateTime>1993-01-01T12:00:00</gco:DateTime>
                             </cit:date>
                             <cit:dateType>
-                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
                             </cit:dateType>
                         </cit:CI_Date>
                     </cit:date>    
@@ -97,10 +97,10 @@
             <mri:defaultLocale>
                 <lan:PT_Locale>
                     <lan:language>
-                        <lan:LanguageCode codeList="http://standards.iso.org/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">English</lan:LanguageCode>
+                        <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">English</lan:LanguageCode>
                     </lan:language>
                     <lan:characterEncoding>
-                        <lan:MD_CharacterSetCode codeList="http://standards.iso.org/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
+                        <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
                     </lan:characterEncoding>
                 </lan:PT_Locale>
             </mri:defaultLocale>

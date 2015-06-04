@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
-   xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"
-   xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:gml="http://www.opengis.net/gml/3.2"
-   xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Resource Identification (mri) Namespace</gco:CharacterString>
@@ -24,10 +24,10 @@
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+            <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
+            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
                codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
@@ -37,11 +37,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="DS_AssociationTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >DS_AssociationTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >DS_AssociationTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -55,7 +55,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_crossReference">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_crossReference</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -66,7 +66,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_largerWorkCitation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_largerWorkCitation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -78,7 +78,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_partOfSeamlessDatabase">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_partOfSeamlessDatabase</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -90,7 +90,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_stereoMate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_stereoMate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -102,7 +102,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_isComposedOf">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_isComposedOf</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -114,7 +114,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_collectiveTitle">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_collectiveTitle</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -127,7 +127,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_series">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_series</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -139,7 +139,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_dependency">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_dependency</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -150,7 +150,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_AssociationTypeCode_revisionOf">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_AssociationTypeCode_revisionOf</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -165,11 +165,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="DS_InitiativeTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >DS_InitiativeTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >DS_InitiativeTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -183,7 +183,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_campaign">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_campaign</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -194,7 +194,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_collection">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_collection</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -206,7 +206,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_exercise">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_exercise</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -218,7 +218,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_experiment">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_experiment</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -230,7 +230,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_investigation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_investigation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -241,7 +241,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_mission">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_mission</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -253,7 +253,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_sensor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_sensor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -265,7 +265,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_operation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_operation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -277,7 +277,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_platform">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_platform</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -289,7 +289,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_process">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_process</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -301,7 +301,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_program">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_program</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -312,7 +312,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_project">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_project</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -324,7 +324,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_study">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_study</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -335,7 +335,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_task">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_task</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -346,7 +346,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DS_InitiativeTypeCode_trial">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >DS_InitiativeTypeCode_trial</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -361,11 +361,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_KeywordTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_KeywordTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_KeywordTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -377,7 +377,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_discipline">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_discipline</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -389,7 +389,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_place">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_place</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -400,7 +400,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_stratum">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_stratum</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -412,7 +412,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_temporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_temporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -424,7 +424,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_theme">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_theme</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -436,7 +436,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_dataCentre">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_dataCentre</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -448,7 +448,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_featureType">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_featureType</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -461,7 +461,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_instrument">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_instrument</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -473,7 +473,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_platform">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_platform</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -485,7 +485,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_process">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_process</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -497,7 +497,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_project">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_project</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -509,7 +509,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_service">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_service</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -521,7 +521,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_product">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_product</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -532,7 +532,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_subTopicCategory">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_subTopicCategory</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -544,7 +544,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_KeywordTypeCode_taxon">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_KeywordTypeCode_taxon</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -559,11 +559,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_TopicCategoryCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_TopicCategoryCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_TopicCategoryCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -583,7 +583,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_farming">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_farming</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -596,7 +596,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_biota">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_biota</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -609,7 +609,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_boundaries ">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_boundaries </gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -622,7 +622,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_climatologyMeteorologyAtmosphere">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_climatologyMeteorologyAtmosphere</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -635,7 +635,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_economy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_economy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -649,7 +649,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_elevation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_elevation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -662,7 +662,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_environment">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_environment</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -676,7 +676,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_geoscientificInformation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_geoscientificInformation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -691,7 +691,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_health">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_health</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -704,7 +704,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_imageryBaseMapsEarthCover">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_imageryBaseMapsEarthCover</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -716,7 +716,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_intelligenceMilitary ">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_intelligenceMilitary </gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -729,7 +729,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_inlandWaters">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_inlandWaters</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -743,7 +743,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_location">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_location</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -756,7 +756,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_oceans">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_oceans</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -769,7 +769,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_planningCadastre">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_planningCadastre</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -782,7 +782,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_society">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_society</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -796,7 +796,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_structure">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_structure</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -808,7 +808,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_transportation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_transportation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -821,7 +821,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_utilitiesCommunication">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_utilitiesCommunication</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -836,7 +836,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_extraTerrestrial">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_extraTerrestrial</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -848,7 +848,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_TopicCategoryCode_disaster">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_TopicCategoryCode_disaster</gco:ScopedName>
                </cat:identifier>
                <cat:definition>

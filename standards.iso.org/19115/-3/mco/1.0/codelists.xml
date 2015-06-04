@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Constraints (mco) Namespace</gco:CharacterString>
@@ -35,11 +35,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_ClassificationCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ClassificationCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ClassificationCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -53,7 +53,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_unclassified">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_unclassified</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -64,7 +64,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_restricted">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_restricted</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -75,7 +75,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_confidential">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_confidential</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -87,7 +87,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_secret">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_secret</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -99,7 +99,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_topSecret">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_topSecret</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -110,7 +110,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_SBU">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_SBU</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -122,7 +122,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_forOfficialUseOnly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_forOfficialUseOnly</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -134,7 +134,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_protected">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_protected</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -146,7 +146,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ClassificationCode_limitedDistribution">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ClassificationCode_limitedDistribution</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -161,11 +161,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_RestrictionCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_RestrictionCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_RestrictionCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -179,7 +179,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_copyright">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_copyright</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -193,7 +193,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_patent">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_patent</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -205,7 +205,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_patentPending">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_patentPending</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -217,7 +217,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_trademark">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_trademark</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -230,7 +230,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_licence">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_licence</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -241,7 +241,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_intellectualPropertyRights">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_intellectualPropertyRights</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -253,7 +253,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_restricted">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_restricted</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -265,7 +265,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_otherRestrictions">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_otherRestrictions</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -276,7 +276,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_unrestricted">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_unrestricted</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -287,7 +287,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_licenceUnrestricted">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_licenceUnrestricted</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -299,7 +299,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_licenceEndUser">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_licenceEndUser</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -312,7 +312,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_licenceDistributor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_licenceDistributor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -324,7 +324,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_private">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_private</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -336,7 +336,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_statutory">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_statutory</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -347,7 +347,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_confidential">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_confidential</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -360,7 +360,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_SBU">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_SBU</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -372,7 +372,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_RestrictionCode_in-confidence">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_RestrictionCode_in-confidence</gco:ScopedName>
                </cat:identifier>
                <cat:definition>

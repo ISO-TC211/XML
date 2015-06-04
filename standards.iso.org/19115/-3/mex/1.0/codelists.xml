@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata with Schema Extensions (mex) Namespace</gco:CharacterString>
@@ -35,11 +35,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_DatatypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_DatatypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_DatatypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -51,7 +51,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_class">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_class</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_class</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>descriptor of a set of objects that share the same
@@ -63,7 +63,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_codelist">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_codelist</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_codelist</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>flexible enumeration useful for expressing a long list of
@@ -74,7 +74,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_enumeration">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_enumeration</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_enumeration</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>data type whose instances form a list of named literal
@@ -85,7 +85,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_codelistElement">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_codelistElement</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_codelistElement</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>permissible value for a codelist or enumeration
@@ -96,7 +96,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_abstractClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_abstractClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_abstractClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>class that cannot be directly
@@ -107,7 +107,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_aggregateClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_aggregateClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_aggregateClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>class that is composed of classes it is connected to by an
@@ -118,7 +118,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_specifiedClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_specifiedClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_specifiedClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>subclass that may be substituted for its
@@ -129,7 +129,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_datatypeClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_datatypeClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_datatypeClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>class with few or no operations whose primary purpose is to
@@ -141,7 +141,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_interfaceClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_interfaceClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_interfaceClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>named set of operations that characterize the behaviour of an
@@ -152,7 +152,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_unionClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_unionClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_unionClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>class describing a selection of one of the specified
@@ -163,7 +163,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_metaClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_metaClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_metaClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>class whose instances are classes</gco:CharacterString>
@@ -173,7 +173,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_typeClass">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_typeClass</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_typeClass</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>class used for specification of a domain of instances
@@ -185,7 +185,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_characterString">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_characterString</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_characterString</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>textual information</gco:CharacterString>
@@ -195,7 +195,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_integer">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_integer</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_integer</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>numerical field</gco:CharacterString>
@@ -205,7 +205,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_DatatypeCode_association">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_DatatypeCode_association</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_DatatypeCode_association</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>semantic relationship between two classes that involves
@@ -219,11 +219,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_ObligationCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ObligationCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ObligationCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -235,7 +235,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ObligationCode_mandatory">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_ObligationCode_mandatory</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_ObligationCode_mandatory</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>element is always required</gco:CharacterString>
@@ -245,7 +245,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ObligationCode_optional">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_ObligationCode_optional</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_ObligationCode_optional</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>element is not required</gco:CharacterString>
@@ -255,7 +255,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ObligationCode_conditional">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MD_ObligationCode_conditional</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MD_ObligationCode_conditional</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>element is required when a specific condition is
