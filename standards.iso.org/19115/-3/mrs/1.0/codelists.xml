@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
-   xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"
-   xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:gml="http://www.opengis.net/gml/3.2"
-   xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Reference System (mrs) Namespace</gco:CharacterString>
@@ -24,10 +24,10 @@
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+            <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
+            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
                codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
@@ -37,11 +37,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_ReferenceSystemTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ReferenceSystemTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ReferenceSystemTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -53,7 +53,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundEngineeringParametric">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundEngineeringParametric</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -67,7 +67,7 @@
             <cat:CT_CodelistValue
                id="MD_ReferenceSystemTypeCode_compoundEngineeringParametricTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundEngineeringParametricTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -80,7 +80,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundEngineeringTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundEngineeringTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -93,7 +93,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundEngineeringVertical">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundEngineeringVertical</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -107,7 +107,7 @@
             <cat:CT_CodelistValue
                id="MD_ReferenceSystemTypeCode_compoundEngineeringVerticalTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundEngineeringVerticalTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -120,7 +120,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundGeodeticParametric">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundGeodeticParametric</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -134,7 +134,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundGeodeticParametricTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundGeodeticParametricTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -148,7 +148,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundGeographic2DTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundGeographic2DTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -162,7 +162,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundGeographic2DVertical">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundGeographic2DVertical</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -176,7 +176,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundGeographicVerticalTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundGeographicVerticalTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -190,7 +190,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundGeographic3DTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundGeographic3DTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -204,7 +204,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundProjected2DParametric">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundProjected2DParametric</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -218,7 +218,7 @@
             <cat:CT_CodelistValue
                id="MD_ReferenceSystemTypeCode_compoundProjected2DParametricTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundProjected2DParametricTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -232,7 +232,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundProjectedTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundProjectedTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -245,7 +245,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundProjectedVertical">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundProjectedVertical</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -259,7 +259,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_compoundProjectedVerticalTemporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_compoundProjectedVerticalTemporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -272,7 +272,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_engineering">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_engineering</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -285,7 +285,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_engineeringDesign">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_engineeringDesign</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -298,7 +298,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_engineeringImage">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_engineeringImage</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -311,7 +311,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_geodeticGeocentric">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_geodeticGeocentric</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -323,7 +323,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_geodeticGeographic2D">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_geodeticGeographic2D</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -335,7 +335,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_geodeticGeographic3D">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_geodeticGeographic3D</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -347,7 +347,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_geographicIdentifier">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_geographicIdentifier</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -359,7 +359,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_linear">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_linear</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -374,7 +374,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_parametric">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_parametric</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -387,7 +387,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_projected">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_projected</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -400,7 +400,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_temporal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_temporal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -412,7 +412,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ReferenceSystemTypeCode_vertical">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ReferenceSystemTypeCode_vertical</gco:ScopedName>
                </cat:identifier>
                <cat:definition>

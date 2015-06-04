@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" 
-  xmlns:gmw="http://standards.iso.org/19115/-3/gmw/1.0"
-  xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" 
-  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0" 
-  xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mri/1.0" version="1.0">
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+  xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0"
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mri/1.0" version="1.0">
 <!--  <include schemaLocation="mri.xsd"/>-->
-  <import namespace="http://standards.iso.org/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DS_AssociationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>

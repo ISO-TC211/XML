@@ -4,10 +4,10 @@
    updated to be consistent with the cat namespace by Ted Habermann 2015-04-17
  -->
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the metadata for Data Quality Measures (dqm) Namespace</gco:CharacterString>
@@ -39,10 +39,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="DQM_ValueStructure">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>structure for reporting a complex data quality result</gco:CharacterString>
@@ -53,7 +53,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQM_ValueStructure_bag">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure_bag</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure_bag</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>finite, unordered collection of related items (objects or values) that may be repeated (ISO 19107:2003)</gco:CharacterString>
@@ -63,7 +63,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQM_ValueStructure_set">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure_set</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure_set</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>unordered collection of related items (objects or values) with no repetition (ISO 19107:2003)</gco:CharacterString>
@@ -73,7 +73,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQM_ValueStructure_sequence">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure_sequence</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure_sequence</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>finite, ordered collection of related items (objects or values) that may be repeated (ISO 19107:2003)</gco:CharacterString>
@@ -83,7 +83,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQM_ValueStructure_table">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure_table</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure_table</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>an arrangement of data in which each item may be identified by means of arguments or keys (ISO/IEC 2382-4:1999)</gco:CharacterString>
@@ -93,7 +93,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQM_ValueStructure_matrix">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure_matrix</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure_matrix</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>rectangular array of numbers (ISO/TS 19129:2009)</gco:CharacterString>
@@ -103,7 +103,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQM_ValueStructure_coverage">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">DQM_ValueStructure_coverage</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">DQM_ValueStructure_coverage</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO 19123:2005)</gco:CharacterString>

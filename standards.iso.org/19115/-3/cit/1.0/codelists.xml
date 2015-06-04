@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Citation (cit) Namespace</gco:CharacterString>
@@ -60,7 +60,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_publication">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_publication</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -72,7 +72,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_revision">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_revision</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -84,7 +84,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_expiry">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_expiry</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -95,7 +95,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_lastUpdate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_lastUpdate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -107,7 +107,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_lastRevision">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_lastRevision</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -119,7 +119,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_nextUpdate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_nextUpdate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -131,7 +131,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_unavailable">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_unavailable</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -143,7 +143,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_inForce">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_inForce</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -155,7 +155,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_adopted">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_adopted</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -167,7 +167,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_deprecated">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_deprecated</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -179,7 +179,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_superseded">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_superseded</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -191,7 +191,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_validityBegins">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_validityBegins</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -204,7 +204,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_validityExpires">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_validityExpires</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -216,7 +216,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_released">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_released</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -228,7 +228,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_distribution">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_DateTypeCode_distribution</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -243,11 +243,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_OnLineFunctionCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >CI_OnLineFunctionCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >CI_OnLineFunctionCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -259,7 +259,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_download">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_download</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -271,7 +271,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_information">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_information</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -282,7 +282,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_offlineAccess">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_offlineAccess</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -294,7 +294,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_order">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_order</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -306,7 +306,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_search">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_search</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -318,7 +318,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_completeMetadata">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_completeMetadata</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -329,7 +329,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_browseGraphic">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_browseGraphic</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -340,7 +340,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_upload">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_upload</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -352,7 +352,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_emailService">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_emailService</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -363,7 +363,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_browsing">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_browsing</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -374,7 +374,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_fileAccess">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_OnLineFunctionCode_fileAccess</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -388,11 +388,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_PresentationFormCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >CI_PresentationFormCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >CI_PresentationFormCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -404,7 +404,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_documentDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_documentDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -416,7 +416,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_documentHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_documentHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -429,7 +429,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_imageDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_imageDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -443,7 +443,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_imageHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_imageHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -458,7 +458,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_mapDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_mapDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -470,7 +470,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_mapHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_mapHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -482,7 +482,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_modelDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_modelDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -494,7 +494,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_modelHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_modelHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -505,7 +505,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_profileDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_profileDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -516,7 +516,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_profileHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_profileHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -528,7 +528,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_tableDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_tableDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -540,7 +540,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_tableHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_tableHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -553,7 +553,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_videoDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_videoDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -564,7 +564,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_videoHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_videoHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -575,7 +575,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_audioDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_audioDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -586,7 +586,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_audioHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_audioHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -598,7 +598,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_multimediaDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_multimediaDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -610,7 +610,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_multimediaHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_multimediaHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -622,7 +622,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_physicalSample">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_physicalSample</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -634,7 +634,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_diagramDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_diagramDigital</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -647,7 +647,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_diagramHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_PresentationFormCode_diagramHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -663,10 +663,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_RoleCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">CI_RoleCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">CI_RoleCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">CI_RoleCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">CI_RoleCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>function performed by the responsible party</gco:CharacterString>
@@ -677,7 +677,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_resourceProvider">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_resourceProvider</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -688,7 +688,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_custodian">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_custodian</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -701,7 +701,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_owner">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_owner</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -712,7 +712,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_user">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_user</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -723,7 +723,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_distributor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_distributor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -734,7 +734,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_originator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_originator</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -745,7 +745,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_pointOfContact">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_pointOfContact</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -757,7 +757,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_principalInvestigator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_principalInvestigator</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -769,7 +769,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_processor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_processor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -781,7 +781,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_publisher">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_publisher</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -792,7 +792,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_author">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_author</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -803,7 +803,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_sponsor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_sponsor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -814,7 +814,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_coAuthor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_coAuthor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -825,7 +825,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_collaborator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_collaborator</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -837,7 +837,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_editor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_editor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -849,7 +849,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_mediator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_mediator</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -861,7 +861,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_rightsHolder">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_rightsHolder</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -873,7 +873,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_contributor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_contributor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -884,7 +884,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_funder">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_funder</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -896,7 +896,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_stakeholder">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_RoleCode_stakeholder</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -911,11 +911,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_TelephoneTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >CI_TelephoneTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >CI_TelephoneTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -927,7 +927,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_TelephoneTypeCode_voice">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_TelephoneTypeCode_voice</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -938,7 +938,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_TelephoneTypeCode_fax">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_TelephoneTypeCode_fax</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -949,7 +949,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_TelephoneTypeCode_sms">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >CI_TelephoneTypeCode_sms</gco:ScopedName>
                </cat:identifier>
                <cat:definition>

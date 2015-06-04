@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
-   xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"
-   xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:gml="http://www.opengis.net/gml/3.2"
-   xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Services (srv) Namespace</gco:CharacterString>
@@ -24,10 +24,10 @@
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+            <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
+            <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CharacterSetCode"
                codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
@@ -37,11 +37,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="SV_CouplingType">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >SV_CouplingType</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >SV_CouplingType</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -55,7 +55,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_CouplingType_loose">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >SV_CouplingType_loose</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -67,7 +67,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_CouplingType_mixed">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >SV_CouplingType_mixed</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -81,7 +81,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_CouplingType_tight">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >SV_CouplingType_tight</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -96,11 +96,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="SV_ParameterDirection">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >SV_ParameterDirection</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >SV_ParameterDirection</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -114,7 +114,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_ParameterDirection_in">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >SV_ParameterDirection_in</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -126,7 +126,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_ParameterDirection_out">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >SV_ParameterDirection_out</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -138,7 +138,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_ParameterDirection_inout">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >SV_ParameterDirection_inout</gco:ScopedName>
                </cat:identifier>
                <cat:definition>

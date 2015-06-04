@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:mas="http://standards.iso.org/19115/-3/mas/1.0" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19115/-3/mas/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mas/1.0" version="1.0">
   <include schemaLocation="mas.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MD_ApplicationSchemaInformation" substitutionGroup="mcc:Abstract_ApplicationSchemaInformation" type="mas:MD_ApplicationSchemaInformation_Type">
     <annotation>

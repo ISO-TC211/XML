@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- VMAP 0 gmd based instance document -->
-<mdb:MD_Metadata xmlns="http://standards.iso.org/19115/-3/mds/1.0"
-    xmlns:fcc="http://standards.iso.org/19110/fcc/1.0"
-    xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0"
-    xmlns:mac="http://standards.iso.org/19115/-3/mac/1.0"
-    xmlns:mas="http://standards.iso.org/19115/-3/mas/1.0"
-    xmlns:mco="http://standards.iso.org/19115/-3/mco/1.0"
-    xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0"
-    xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0"
-    xmlns:mds="http://standards.iso.org/19115/-3/mds/1.0"
-    xmlns:mmi="http://standards.iso.org/19115/-3/mmi/1.0"
-    xmlns:mpc="http://standards.iso.org/19115/-3/mpc/1.0"
-    xmlns:mrc="http://standards.iso.org/19115/-3/mrc/1.0"
-    xmlns:mrd="http://standards.iso.org/19115/-3/mrd/1.0"
-    xmlns:mrl="http://standards.iso.org/19115/-3/mrl/1.0"
-    xmlns:mrs="http://standards.iso.org/19115/-3/mrs/1.0"
-    xmlns:msr="http://standards.iso.org/19115/-3/msr/1.0"
-    xmlns:srv="http://standards.iso.org/19115/-3/srv/2.0"
-    xmlns:dqc="http://standards.iso.org/19157/-2/dqc/1.0"
-    xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
-    xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"
-    xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0"
-    xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0"
-    xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0" 
+<mdb:MD_Metadata xmlns="http://standards.iso.org/iso/19115/-3/mds/1.0"
+    xmlns:fcc="http://standards.iso.org/iso/19110/fcc/1.0"
+    xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+    xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0"
+    xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+    xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+    xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+    xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/1.0"
+    xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+    xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+    xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0"
+    xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+    xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+    xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+    xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
+    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
+    xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0"
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://standards.iso.org/19115/-3/mds/1.0 mds.xsd" 
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mds/1.0 mds.xsd" 
     uuid="US_NGA_VPF_VMAP0"
     id="VMAP0">
     <mdb:defaultLocale>
         <lan:PT_Locale>
             <lan:language>
-                <lan:LanguageCode codeList="http://standards.iso.org/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">English</lan:LanguageCode>
+                <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">English</lan:LanguageCode>
             </lan:language>
             <lan:characterEncoding>
-                <lan:MD_CharacterSetCode codeList="http://standards.iso.org/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
+                <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
             </lan:characterEncoding>
         </lan:PT_Locale>
     </mdb:defaultLocale>
     <mdb:contact>
         <cit:CI_Responsibility>
             <cit:role>
-                <cit:CI_RoleCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="publisher"/>
+                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="publisher"/>
             </cit:role>
             <cit:party>
                 <cit:CI_Organisation>
@@ -67,7 +67,7 @@
                 <gco:DateTime>2004-03-14T12:00:00</gco:DateTime>
             </cit:date>
             <cit:dateType>
-                <cit:CI_DateTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
             </cit:dateType>
         </cit:CI_Date>
     </mdb:dateInfo>
@@ -116,12 +116,12 @@
                                 <gco:DateTime>2000-09-03T12:00:00</gco:DateTime>
                             </cit:date>
                             <cit:dateType>
-                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
                             </cit:dateType>
                         </cit:CI_Date>
                     </cit:date>
                     <cit:presentationForm>
-                        <cit:CI_PresentationFormCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_PresentationFormCode" codeListValue="mapDigital"/>
+                        <cit:CI_PresentationFormCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_PresentationFormCode" codeListValue="mapDigital"/>
                     </cit:presentationForm>
                 </cit:CI_Citation>
             </mri:citation>
@@ -130,12 +130,12 @@
                     applications</gco:CharacterString>
             </mri:abstract>
             <mri:status>
-                <mcc:MD_ProgressCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#MD_ProgressCode" codeListValue="completed"/>
+                <mcc:MD_ProgressCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#MD_ProgressCode" codeListValue="completed"/>
             </mri:status>
             <mri:pointOfContact>
                 <cit:CI_Responsibility id="ID00001">
                     <cit:role>
-                        <cit:CI_RoleCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="originator"/>
+                        <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="originator"/>
                     </cit:role>
                     <cit:party>
                         <cit:CI_Organisation>
@@ -181,7 +181,7 @@
                                                 <gco:CharacterString>http</gco:CharacterString>
                                             </cit:protocol>
                                             <cit:function>
-                                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
+                                                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
                                             </cit:function>
                                         </cit:CI_OnlineResource>
                                     </cit:onlineResource>
@@ -200,7 +200,7 @@
             </mri:pointOfContact>
             <mri:spatialRepresentationType>
 
-                <mcc:MD_SpatialRepresentationTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector"/>
+                <mcc:MD_SpatialRepresentationTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector"/>
             </mri:spatialRepresentationType>
             <mri:spatialResolution>
                 <mri:MD_Resolution>
@@ -366,7 +366,7 @@
                     <mrd:distributorContact>
                         <cit:CI_Responsibility>
                             <cit:role>
-                                <cit:CI_RoleCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="distributor"/>
+                                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="distributor"/>
                             </cit:role>
                             <cit:party>
                                 <cit:CI_Individual>
@@ -389,7 +389,7 @@
                                                   <gco:CharacterString>555-555-5555</gco:CharacterString>
                                                   </cit:number>
                                                   <cit:numberType>
-                                                  <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_TelephoneTypeCode" codeListValue="office"/>
+                                                  <cit:CI_TelephoneTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_TelephoneTypeCode" codeListValue="office"/>
                                                   </cit:numberType>
                                                 </cit:CI_Telephone>
                                             </cit:phone>
@@ -425,7 +425,7 @@
                                         <gco:CharacterString>http://geoengine.nga.mil/ftpdir/archive/vpf_data/v0noa.tar.gz</gco:CharacterString>
                                     </cit:linkage>
                                     <cit:function>
-                                        <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
+                                        <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
                                     </cit:function>
                                 </cit:CI_OnlineResource>
                             </mrd:onLine>
@@ -435,7 +435,7 @@
                                         <gco:CharacterString>http://geoengine.nga.mil/ftpdir/archive/vpf_data/v0sas.tar.gz</gco:CharacterString>
                                     </cit:linkage>
                                     <cit:function>
-                                        <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
+                                        <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
                                     </cit:function>
                                 </cit:CI_OnlineResource>
                             </mrd:onLine>
@@ -445,7 +445,7 @@
                                         <gco:CharacterString>http://geoengine.nga.mil/ftpdir/archive/vpf_data/v0soa.tar.gz</gco:CharacterString>
                                     </cit:linkage>
                                     <cit:function>
-                                        <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
+                                        <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="download"/>
                                     </cit:function>
                                 </cit:CI_OnlineResource>
                             </mrd:onLine>
@@ -459,7 +459,7 @@
                     <mrd:distributorContact>
                         <cit:CI_Responsibility>
                             <cit:role>
-                                <cit:CI_RoleCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="distributor"/>
+                                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="distributor"/>
                             </cit:role>
                             <cit:party>
                                 <cit:CI_Individual>
@@ -497,7 +497,7 @@
                                                   <gco:CharacterString>http://www.dscr.dla.mil/pc9</gco:CharacterString>
                                                   </cit:linkage>
                                                   <cit:function>
-                                                  <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="order"/>
+                                                  <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_OnLineFunctionCode" codeListValue="order"/>
                                                   </cit:function>
                                                 </cit:CI_OnlineResource>
                                             </cit:onlineResource>
@@ -543,7 +543,7 @@
                                         <gco:Integer>4</gco:Integer>
                                     </mrd:volumes>
                                     <mrd:mediumFormat>
-                                        <mrd:MD_MediumFormatCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#MD_MediumFormatCode" codeListValue="iso9660"/>
+                                        <mrd:MD_MediumFormatCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#MD_MediumFormatCode" codeListValue="iso9660"/>
                                     </mrd:mediumFormat>
                                 </mrd:MD_Medium>
                             </mrd:offLine>
@@ -559,7 +559,7 @@
             <mdq:scope>
                 <mcc:MD_Scope>
                     <mcc:level>
-                        <mcc:MD_ScopeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#MD_ScopeCode" codeListValue="dataset"/>
+                        <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#MD_ScopeCode" codeListValue="dataset"/>
                     </mcc:level>
                 </mcc:MD_Scope>
             </mdq:scope>
@@ -586,7 +586,7 @@
                                                 <gco:DateTime>1995-02-09T00:00:00Z</gco:DateTime>
                                             </cit:date>
                                             <cit:dateType>
-                                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
                                             </cit:dateType>
                                         </cit:CI_Date>
                                     </cit:date>
@@ -619,7 +619,7 @@
     <mdb:metadataConstraints>
         <mco:MD_SecurityConstraints>
             <mco:classification>
-                <mco:MD_ClassificationCode codeList="http://standards.iso.org/19115/resources/Codelist/cat/codeList.xml#MD_ClassificationCode" codeListValue="unclassified"/>
+                <mco:MD_ClassificationCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#MD_ClassificationCode" codeListValue="unclassified"/>
             </mco:classification>
             <mco:handlingDescription>
                 <gco:CharacterString>RELEASABILITY - unrestricted</gco:CharacterString>

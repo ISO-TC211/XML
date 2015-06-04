@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../../19115/-3/mds/1.0/mds.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0 ../../../../19115/-3/mds/1.0/mds.xsd"
- xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0"
- xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
- xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0"
- xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0"
- xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0 ../../../../19115/-3/mds/1.0/mds.xsd"
+ xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+ xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+ xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+ xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+ xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0">
    <!-- 
    This is a sample metadata record for the minimal metadata conformance class.
    It contains required elements from the mdb, mcc (cit, gco), lan, and mri
@@ -90,12 +90,12 @@
                      <mdq:measureIdentification>
                         <mcc:MD_Identifier>
                            <mcc:code>
-                              <gco:CharacterString>http://standards.iso.org/19157/-2/mdq/1.0/conf/data-quality-xml/schema-valid</gco:CharacterString>
+                              <gco:CharacterString>http://standards.iso.org/iso/19157/-2/mdq/1.0/conf/data-quality-xml/schema-valid</gco:CharacterString>
                            </mcc:code>
                         </mcc:MD_Identifier>
                      </mdq:measureIdentification>
                      <mdq:measureDescription>
-                        <gco:CharacterString>Use ISO 19157-2 to verify that instances of XML elements from the namespace http://standards.iso.org/19157/-2/mdq/1.0 are well-formed and valid. </gco:CharacterString>
+                        <gco:CharacterString>Use ISO 19157-2 to verify that instances of XML elements from the namespace http://standards.iso.org/iso/19157/-2/mdq/1.0 are well-formed and valid. </gco:CharacterString>
                      </mdq:measureDescription>
                   </mdq:DQ_MeasureReference>
                </mdq:measure>

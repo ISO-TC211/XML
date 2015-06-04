@@ -3,7 +3,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:gcoold="http://www.isotc211.org/2005/gco"
-                xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
+                xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
                 exclude-result-prefixes="#all">
     <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
         <xd:desc>

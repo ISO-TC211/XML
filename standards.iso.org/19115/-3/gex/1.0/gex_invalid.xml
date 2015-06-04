@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.iso.org/19115/-3/mdb/1.0 ../../mdb/1.0/mdb.xsd"
-   xmlns:mdb="http://standards.iso.org/19115/-3/mdb/1.0" xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:mri="http://standards.iso.org/19115/-3/mri/1.0"
-   xmlns:gex="http://standards.iso.org/19115/-3/gex/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0 ../../mdb/1.0/mdb.xsd"
+   xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+   xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <mdb:metadataIdentifier/>
    <mdb:metadataScope/>
    <mdb:contact/>

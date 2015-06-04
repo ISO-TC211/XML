@@ -33,7 +33,7 @@
   -->
   <xsl:param name="workingVersionDate"/>
   <xsl:variable name="TransformName" select="'writeHTMLFiles'"/>
-  <xsl:variable name="TransformVersion" select="'2014-09-24'"/>
+  <xsl:variable name="TransformVersion" select="'2015-06-04'"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   
   <xsl:output method="html"/>
@@ -69,7 +69,10 @@
             <h2>XML Namespace for <xsl:value-of select="$namespaceVersion"/></h2>
             <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="$namespaceURL"/></b>.</p>
             <h2>XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
-            <p><b><xsl:value-of select="concat(prefix,'.xsd')"/></b> is the XML Schema document to be referenced by XML documents containing XML elements in the <xsl:value-of select="$namespaceVersion"/> namespace or by XML Schema documents importing the <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/> namespace, but it does not contain the declaration of any types.</p>
+            <p><b><xsl:element name="a">
+              <xsl:attribute name="href" select="concat($namespaceURL,'/',prefix,'.xsd')"/>
+              <xsl:value-of select="concat(prefix,'.xsd')"/>
+            </xsl:element></b> is the XML Schema document to be referenced by XML documents containing XML elements in the <xsl:value-of select="$namespaceVersion"/> namespace or by XML Schema documents importing the <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/> namespace, but it does not contain the declaration of any types.</p>
             <p>
               <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <a href="http://standards.iso.org">here</a> as part of a zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i>
             </p>
@@ -82,7 +85,10 @@
               <h2>Related XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
               <xsl:variable name="currentRoot" select="/"/>
               <xsl:for-each select="$otherSchemaList">
-                <p><b><xsl:value-of select="."/></b> implements the UML conceptual schema defined in
+                <p><b><xsl:element name="a">
+                  <xsl:attribute name="href" select="concat($namespaceURL,'/',.)"/>
+                  <xsl:value-of select="."/>
+                </xsl:element></b> implements the UML conceptual schema defined in
                   <xsl:value-of
                     select="concat('ISO ',$currentNamespace/conceptualStandardNumber,', ',$currentNamespace/conceptualStandardTitle, if (exists($currentNamespace/paragraphNumber)) then concat(', Clause ',$currentNamespace/paragraphNumber) else '')"
                   />. It was created using the encoding rules defined in ISO 19118, ISO 19139, and
@@ -157,7 +163,10 @@
                     <tr>
                       <td><xsl:value-of select="key('namespaceTitleLookup',.,$currentRoot)/title"/></td>
                       <td><xsl:value-of select="."/></td>
-                      <td><xsl:value-of select="subsequence($otherNamespaceList,$sequencePosition,1)"/></td>
+                      <td><xsl:element name="a">
+                        <xsl:attribute name="href" select="subsequence($otherNamespaceList,$sequencePosition,1)"/>
+                        <xsl:value-of select="subsequence($otherNamespaceList,$sequencePosition,1)"/>
+                      </xsl:element></td>
                       <td><xsl:value-of select="subsequence($otherNamespaceLocationList,$sequencePosition,1)"/></td>
                     </tr>
                   </xsl:for-each>
@@ -173,6 +182,8 @@
               <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>
               <xsl:value-of select="concat(.,'.sch')"/>
             </xsl:for-each>
+            <h2>Working Versions</h2>
+            When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>.
             <hr/>
             <p><font size="small" face="italic"><xsl:value-of select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"/></font></p>
           </body>

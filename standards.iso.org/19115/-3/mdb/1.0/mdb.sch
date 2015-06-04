@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-  <sch:ns prefix="cit" uri="http://standards.iso.org/19115/-3/cit/1.0"/>
-  <sch:ns prefix="mri" uri="http://standards.iso.org/19115/-3/mri/1.0"/>
-  <sch:ns prefix="mdb" uri="http://standards.iso.org/19115/-3/mdb/1.0"/>
-  <sch:ns prefix="mcc" uri="http://standards.iso.org/19115/-3/mcc/1.0"/>
-  <sch:ns prefix="lan" uri="http://standards.iso.org/19115/-3/lan/1.0"/>
-  <sch:ns prefix="gco" uri="http://standards.iso.org/19115/-3/gco/1.0"/>
+  <sch:ns prefix="cit" uri="http://standards.iso.org/iso/19115/-3/cit/1.0"/>
+  <sch:ns prefix="mri" uri="http://standards.iso.org/iso/19115/-3/mri/1.0"/>
+  <sch:ns prefix="mdb" uri="http://standards.iso.org/iso/19115/-3/mdb/1.0"/>
+  <sch:ns prefix="mcc" uri="http://standards.iso.org/iso/19115/-3/mcc/1.0"/>
+  <sch:ns prefix="lan" uri="http://standards.iso.org/iso/19115/-3/lan/1.0"/>
+  <sch:ns prefix="gco" uri="http://standards.iso.org/iso/19115/-3/gco/1.0"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     
@@ -39,10 +39,10 @@
     
     <sch:p xml:lang="en">A metadata instance document conforming to 
       this specification SHALL have a root MD_Metadata element 
-      defined in the http://standards.iso.org/19115/-3/mdb/1.0 namespace.</sch:p>
+      defined in the http://standards.iso.org/iso/19115/-3/mdb/1.0 namespace.</sch:p>
     <sch:p xml:lang="fr">Une fiche de métadonnées conforme au standard
       ISO19115-1 DOIT avoir un élément racine MD_Metadata (défini dans l'espace
-      de nommage http://standards.iso.org/19115/-3/mdb/1.0).</sch:p>
+      de nommage http://standards.iso.org/iso/19115/-3/mdb/1.0).</sch:p>
     <sch:rule context="/">
       <sch:let name="hasOneMD_MetadataElement" 
                value="count(/mdb:MD_Metadata) = 1"/>

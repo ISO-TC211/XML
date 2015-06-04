@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:gcx="http://standards.iso.org/19115/-3/gcx/1.0" xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0" xmlns:mdq="http://standards.iso.org/19157/-2/mdq/1.0" xmlns:mrd="http://standards.iso.org/19115/-3/mrd/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19157/-2/mdq/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19157/-2/mdq/1.0" version="1.0">
   <include schemaLocation="mdq.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gcx/1.0" schemaLocation="../../../../19115/-3/gcx/1.0/gcx.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mrd/1.0" schemaLocation="../../../../19115/-3/mrd/1.0/mrd.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" schemaLocation="../../../../19115/-3/gcx/1.0/gcx.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mrd/1.0" schemaLocation="../../../../19115/-3/mrd/1.0/mrd.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="QE_CoverageResult" substitutionGroup="mdq:AbstractDQ_Result" type="mdq:QE_CoverageResult_Type">
     <annotation>

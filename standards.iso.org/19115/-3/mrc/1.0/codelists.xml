@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Resource Content (mrc) Namespace</gco:CharacterString>
@@ -35,11 +35,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_CoverageContentTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_CoverageContentTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_CoverageContentTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -53,7 +53,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_image">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_image</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -65,7 +65,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_thematicClassification">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_thematicClassification</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -77,7 +77,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_physicalMeasurement">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_physicalMeasurement</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -89,7 +89,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_auxillaryInformation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_auxillaryInformation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -103,7 +103,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_qualityInformation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_qualityInformation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -116,7 +116,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_referenceInformation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_referenceInformation</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -130,7 +130,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_modelResult">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_modelResult</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -143,7 +143,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_CoverageContentTypeCode_coordinate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_CoverageContentTypeCode_coordinate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -158,11 +158,11 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_ImagingConditionCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ImagingConditionCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                >MD_ImagingConditionCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
@@ -176,7 +176,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_blurredImage">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_blurredImage</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -187,7 +187,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_cloud">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_cloud</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -199,7 +199,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_degradingObliquity">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_degradingObliquity</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -211,7 +211,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_fog">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_fog</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -223,7 +223,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_heavySmokeOrDust">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_heavySmokeOrDust</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -235,7 +235,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_night">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_night</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -246,7 +246,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_rain">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_rain</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -257,7 +257,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_semiDarkness">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_semiDarkness</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -269,7 +269,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_shadow">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_shadow</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -281,7 +281,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_snow">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_snow</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
@@ -293,7 +293,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_ImagingConditionCode_terrainMasking">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115"
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
                      >MD_ImagingConditionCode_terrainMasking</gco:ScopedName>
                </cat:identifier>
                <cat:definition>

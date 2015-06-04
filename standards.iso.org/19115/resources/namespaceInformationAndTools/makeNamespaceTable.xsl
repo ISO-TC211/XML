@@ -39,7 +39,7 @@
   <xsl:strip-space elements="*"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:variable name="TransformName" select="'makeNamespaceTable'"/>
-  <xsl:variable name="TransformVersion" select="'2015-04-16'"/>
+  <xsl:variable name="TransformVersion" select="'2015-06-04'"/>
   <xsl:template match="/">
     <html>
       <head>
@@ -77,7 +77,8 @@
                 <!-- Standard Prefix -->
                 <xsl:element name="a">
                   <!--<xsl:attribute name="href" select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>-->
-                  <xsl:attribute name="href" select="concat('../../',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
+                  <!--<xsl:attribute name="href" select="concat('../../',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>-->
+                  <xsl:attribute name="href" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
                   <xsl:value-of select="prefix"/>
                 </xsl:element>
               </td>
@@ -110,12 +111,15 @@
               </td>
               <td>
                 <!-- Namespace URI -->
-                <xsl:value-of select="$namespaceURL"/>
+                <xsl:element name="a">
+                  <xsl:attribute name="href" select="$namespaceURL"/>
+                  <xsl:value-of select="$namespaceURL"/>
+                </xsl:element>               
               </td>
               <td>
                 <!-- Thumbnail -->
                 <xsl:variable name="imageFile"
-                  select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
+                  select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
                 <a>
                   <xsl:attribute name="href" select="$imageFile"/>
                   <img>
@@ -129,7 +133,10 @@
                 <xsl:value-of select="UMLPackage"/>
               </td>
               <td>
-                <xsl:value-of select="concat(prefix,'.xsd')"/>
+                <xsl:element name="a">
+                  <xsl:attribute name="href" select="concat($namespaceURL,'/',prefix,'.xsd')"/>
+                  <xsl:value-of select="concat(prefix,'.xsd')"/>
+                </xsl:element>
               </td>
               <td>
                 <!-- XML Schema Included -->
@@ -145,9 +152,16 @@
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:variable>
-                <xsl:if test="count($otherSchemaList)">
+                <!--<xsl:if test="count($otherSchemaList)">
                   <xsl:value-of select="$otherSchemaList" separator=", "/>
-                </xsl:if>
+                </xsl:if>-->
+                <xsl:for-each select="$otherSchemaList">
+                  <xsl:element name="a">
+                    <xsl:attribute name="href" select="concat($namespaceURL,'/',.)"/>
+                    <xsl:value-of select="."/>
+                  </xsl:element>
+                  <xsl:text> </xsl:text>
+                </xsl:for-each>
               </td>
               <xsl:variable name="xsdFilesSelect" select="concat($schemaDirectory, '?select=*.xsd')"/>
               <xsl:variable name="namespacePrefixList" as="xs:string*">

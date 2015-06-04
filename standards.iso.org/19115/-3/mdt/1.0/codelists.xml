@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://standards.iso.org/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://standards.iso.org/19115/-3/cat/1.0"
- xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Data Transfer (mdt) Namespace</gco:CharacterString>
@@ -35,10 +35,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MX_ScopeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString>
@@ -49,7 +49,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_initiative">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_initiative</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_initiative</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which was originally identified as an initiative (DS_Initiative)</gco:CharacterString>
@@ -59,7 +59,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_stereoMate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_stereoMate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_stereoMate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which was originally identified as a stereo mate (DS_StereoMate)</gco:CharacterString>
@@ -69,7 +69,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_sensor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_sensor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_sensor</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which was originally identified as a sensor (DS_Sensor)</gco:CharacterString>
@@ -79,7 +79,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_platformSeries">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_platformSeries</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_platformSeries</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which was originally identified as a platform series (DS_PlatformSeries)</gco:CharacterString>
@@ -89,7 +89,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_sensorSeries">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_sensorSeries</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_sensorSeries</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which was originally identified as a sensor series (DS_SensorSeries)</gco:CharacterString>
@@ -99,7 +99,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_productionSeries">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_productionSeries</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_productionSeries</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which was originally identified as a sensor series (DS_SensorSeries)</gco:CharacterString>
@@ -109,7 +109,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_transferAggregate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_transferAggregate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_transferAggregate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which has no existence outside of the transfer context</gco:CharacterString>
@@ -119,7 +119,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MX_ScopeCode_otherAggregate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/19115">MX_ScopeCode_otherAggregate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">MX_ScopeCode_otherAggregate</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>The referencing entity applies to a transfer aggregate which has an existence

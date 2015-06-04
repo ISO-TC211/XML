@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:cit="http://standards.iso.org/19115/-3/cit/1.0"
-  xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0"
-  xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" elementFormDefault="qualified"
-  targetNamespace="http://standards.iso.org/19115/-3/lan/1.0" version="1.0">
+  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" elementFormDefault="qualified"
+  targetNamespace="http://standards.iso.org/iso/19115/-3/lan/1.0" version="1.0">
   <include schemaLocation="lan.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gco/1.0"
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0"
     schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/cit/1.0"
+  <import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0"
     schemaLocation="../../../../19115/-3/cit/1.0/cit.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- hand-craft adjustments starting at line 29 and 71. ShapeChange does not have rules for 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fcc="http://standards.iso.org/19110/fcc/1.0" 
-  xmlns:gco="http://standards.iso.org/19115/-3/gco/1.0" xmlns:gfc="http://standards.iso.org/19110/gfc/1.1" 
-  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/19115/-3/gmw/1.0"
-  xmlns:lan="http://standards.iso.org/19115/-3/lan/1.0" 
-  xmlns:mcc="http://standards.iso.org/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/19110/gfc/1.1" version="1.1">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fcc="http://standards.iso.org/iso/19110/fcc/1.0" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0"
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19110/gfc/1.1" version="1.1">
   <include schemaLocation="gfc.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gco/1.0" schemaLocation="../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/19110/fcc/1.0" schemaLocation="../../../19110/fcc/1.0/fcc.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/lan/1.0" schemaLocation="../../../19115/-3/lan/1.0/lan.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/mcc/1.0" schemaLocation="../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/19115/-3/gmw/1.0" schemaLocation="../../../19115/-3/gmw/1.0/gmw.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19110/fcc/1.0" schemaLocation="../../../19110/fcc/1.0/fcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../19115/-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../19115/-3/gmw/1.0/gmw.xsd"/>
 <!--  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>-->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- SMR 2015-02-07 change gml:CodeType to gco:CodeType for 2014-12-25 build; UnitOfMeasure is in gmw, not gco so change that too -->
