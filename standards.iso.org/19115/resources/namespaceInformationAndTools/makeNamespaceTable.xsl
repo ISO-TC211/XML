@@ -119,7 +119,7 @@
               <td>
                 <!-- Thumbnail -->
                 <xsl:variable name="imageFile"
-                  select="concat($schemaRootDirectory,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
+                  select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
                 <a>
                   <xsl:attribute name="href" select="$imageFile"/>
                   <img>
@@ -133,7 +133,10 @@
                 <xsl:value-of select="UMLPackage"/>
               </td>
               <td>
-                <xsl:value-of select="concat(prefix,'.xsd')"/>
+                <xsl:element name="a">
+                  <xsl:attribute name="href" select="concat($namespaceURL,'/',prefix,'.xsd')"/>
+                  <xsl:value-of select="concat(prefix,'.xsd')"/>
+                </xsl:element>
               </td>
               <td>
                 <!-- XML Schema Included -->
@@ -155,8 +158,9 @@
                 <xsl:for-each select="$otherSchemaList">
                   <xsl:element name="a">
                     <xsl:attribute name="href" select="concat($namespaceURL,'/',.)"/>
-                    <xsl:value-of select="concat($namespaceURL,'/',.)"/>
+                    <xsl:value-of select="."/>
                   </xsl:element>
+                  <xsl:text> </xsl:text>
                 </xsl:for-each>
               </td>
               <xsl:variable name="xsdFilesSelect" select="concat($schemaDirectory, '?select=*.xsd')"/>
