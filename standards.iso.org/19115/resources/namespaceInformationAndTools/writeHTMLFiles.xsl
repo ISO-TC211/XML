@@ -33,7 +33,7 @@
   -->
   <xsl:param name="workingVersionDate"/>
   <xsl:variable name="TransformName" select="'writeHTMLFiles'"/>
-  <xsl:variable name="TransformVersion" select="'2014-09-24'"/>
+  <xsl:variable name="TransformVersion" select="'2015-06-04'"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   
   <xsl:output method="html"/>
@@ -182,6 +182,8 @@
               <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>
               <xsl:value-of select="concat(.,'.sch')"/>
             </xsl:for-each>
+            <h2>Working Versions</h2>
+            When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>.
             <hr/>
             <p><font size="small" face="italic"><xsl:value-of select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"/></font></p>
           </body>
