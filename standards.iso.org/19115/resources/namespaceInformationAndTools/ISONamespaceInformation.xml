@@ -405,7 +405,7 @@
     <paragraphNumber>6.5.9</paragraphNumber>
   </namespace>
   <namespace>
-    <title>Metadata for Resource DIstribution</title>
+    <title>Metadata for Resource Distribution</title>
     <requirementRoot>resource-distribution</requirementRoot>
     <scope>Elements specifying how a resource is accessed.</scope>
     <UMLPackage>&lt;&lt;Leaf&gt;&gt; Distribution Information</UMLPackage>
