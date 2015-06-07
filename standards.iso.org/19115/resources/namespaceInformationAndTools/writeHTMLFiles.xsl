@@ -71,20 +71,20 @@
               </xsl:if> The XML schema was encoded using the rules described in <xsl:value-of select="encodingRules"/>.</p>
             <xsl:if test="count(collection(iri-to-uri($xmlFilesSelect)))">
               <h2>Sample XML files for <xsl:value-of select="$namespaceVersion"/></h2>
-            <xsl:for-each select="collection(iri-to-uri($xmlFilesSelect))">
-              <xsl:variable name="fileName" select="tokenize(document-uri(.), '/')[last()]"/>
-              <xsl:if test="$fileName!='codelists.xml'">
-                <xsl:element name="a">
-                  <xsl:attribute name="href" select="$fileName"/>
-                  <xsl:value-of select="$fileName"/>
-                </xsl:element>
-                <xsl:text> </xsl:text>
-              </xsl:if>
-            </xsl:for-each>
+              <xsl:for-each select="collection(iri-to-uri($xmlFilesSelect))">
+                <xsl:variable name="fileName" select="tokenize(document-uri(.), '/')[last()]"/>
+                <xsl:if test="$fileName!='codelists.xml'">
+                  <xsl:element name="a">
+                    <xsl:attribute name="href" select="$fileName"/>
+                    <xsl:value-of select="$fileName"/>
+                  </xsl:element>
+                  <xsl:text> </xsl:text>
+                </xsl:if>
+              </xsl:for-each>
             </xsl:if>
-            <xsl:if test="count(collection(iri-to-uri(concat($schemaDirectory, '?select=codelists.html'))))">
+            <xsl:if test="count(collection(iri-to-uri(concat($schemaDirectory, '?select=codelists.*'))))">
               <h2>CodeLists for <xsl:value-of select="$namespaceVersion"/></h2>
-              <xsl:for-each select="collection(iri-to-uri(concat($schemaDirectory, '?select=codelists.html')))">
+              <xsl:for-each select="collection(iri-to-uri(concat($schemaDirectory, '?select=codelists.*')))">
                 <xsl:variable name="fileName" select="tokenize(document-uri(.), '/')[last()]"/>
                 <xsl:element name="a">
                   <xsl:attribute name="href" select="$fileName"/>
@@ -97,13 +97,13 @@
             <p>The namespace URI for <xsl:value-of select="$namespaceVersion"/> is <b><xsl:value-of select="$namespaceURL"/></b>.</p>
             <h2>XML Schema for <xsl:value-of select="$namespaceVersion"/></h2>
             <p><b><xsl:element name="a">
-              <xsl:attribute name="href" select="concat(prefix,'.xsd')"/>
-              <xsl:value-of select="concat(prefix,'.xsd')"/>
+                  <xsl:attribute name="href" select="concat(prefix,'.xsd')"/>
+                  <xsl:value-of select="concat(prefix,'.xsd')"/>
                 </xsl:element></b> is the XML Schema document to be referenced by XML documents containing XML elements in the <xsl:value-of select="$namespaceVersion"/> namespace or by XML Schema documents importing the <xsl:value-of select="$namespaceVersion"/> namespace. This XML schema includes (indirectly) all the implemented concepts of the <xsl:value-of select="prefix"/> namespace, but it
               does not contain the declaration of any types.</p>
             <p>
               <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <xsl:element name="a">
-                <xsl:attribute name="href" select="'http://standards.iso.org/iso/19115/19115.zip'"/>here</xsl:element> as part of a zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i>
+                  <xsl:attribute name="href" select="'http://standards.iso.org/iso/19115/19115.zip'"/>here</xsl:element> as part of a zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3.</i>
             </p>
             <xsl:variable name="otherSchemaList" as="xs:string*">
               <xsl:for-each select="document($schemaFile)/*/xs:include">
@@ -115,7 +115,7 @@
               <xsl:variable name="currentRoot" select="/"/>
               <xsl:for-each select="$otherSchemaList">
                 <p><b><xsl:element name="a">
-                      <xsl:attribute name="href" select="concat($namespaceURL,'/',.)"/>
+                      <xsl:attribute name="href" select="."/>
                       <xsl:value-of select="."/>
                     </xsl:element></b> implements the UML conceptual schema defined in <xsl:value-of select="concat('ISO ',$currentNamespace/conceptualStandardNumber,', ',$currentNamespace/conceptualStandardTitle, if (exists($currentNamespace/paragraphNumber)) then concat(', Clause ',$currentNamespace/paragraphNumber) else '')"/>. It was created using the encoding rules defined in ISO 19118, ISO
                   19139, and the implementation approach described in ISO 19115-3 and contains the following classes (codeLists are bold): <xsl:variable name="otherSchemaFile" select="concat($schemaRootDirectory,'/',replace($currentNamespace/schemaStandardNumber,'-','/-'),'/',$currentNamespace/prefix,'/',$currentNamespace/version,'/',$workingVersionDate,'/',.)"/>
@@ -199,13 +199,14 @@
                 <h2>No Related XML Namespaces for <xsl:value-of select="$namespaceVersion"/></h2>
               </xsl:otherwise>
             </xsl:choose>
-            <h2>Schematron Validation Rules for <xsl:value-of select="$namespaceVersion"/></h2> Schematron rules for validating instance documents of the <xsl:value-of select="$namespaceVersion"/> namespace are in <xsl:element name="a"><xsl:attribute name="href" select="concat(prefix,'.sch')"/><xsl:value-of select="concat(prefix,'.sch')"/></xsl:element>. Other schematron rule sets that are
-            required for a complete validation are: <xsl:variable name="currentRoot" select="/"/>
-            <xsl:for-each select="$otherNamespacePrefixList">
-              <xsl:if test="position()!=1"><xsl:text>, </xsl:text></xsl:if>
-              <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>
-              <xsl:value-of select="concat(.,'.sch')"/>
-            </xsl:for-each>
+            <xsl:if test="count(collection(iri-to-uri(concat($schemaDirectory, '?select=*.sch'))))">
+              <h2>Schematron Validation Rules for <xsl:value-of select="$namespaceVersion"/></h2> Schematron rules for validating instance documents of the <xsl:value-of select="$namespaceVersion"/> namespace are in <xsl:element name="a"><xsl:attribute name="href" select="concat(prefix,'.sch')"/><xsl:value-of select="concat(prefix,'.sch')"/></xsl:element>. Other schematron rule sets that are
+              required for a complete validation are: <xsl:variable name="currentRoot" select="/"/>
+              <xsl:for-each select="$otherNamespacePrefixList">
+                <xsl:if test="position()!=1"><xsl:text>, </xsl:text></xsl:if>
+                <xsl:if test="position()=last() and position()!=1"><xsl:text>and </xsl:text></xsl:if>
+                <xsl:value-of select="concat(.,'.sch')"/>
+              </xsl:for-each></xsl:if>
             <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. <hr/>
             <p><font size="small" face="italic"><xsl:value-of select="concat('Written by ',$TransformName,' Version: ',$TransformVersion, ' at ',current-dateTime())"/></font></p>
           </body>
