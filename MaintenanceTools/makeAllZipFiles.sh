@@ -8,6 +8,7 @@ pushd ../standards.iso.org/19115/-3/gex/1.0;	zip gex.zip *; popd
 pushd ../standards.iso.org/19115/-3/gmw/1.0;	zip gmw.zip *; popd
 pushd ../standards.iso.org/19115/-3/gwm/1.0;	zip gwm.zip *; popd
 pushd ../standards.iso.org/19115/-3/lan/1.0;	zip lan.zip *; popd
+pushd ../standards.iso.org/19115/-3/mac/1.0;	zip mac.zip *; popd
 pushd ../standards.iso.org/19115/-3/mas/1.0;	zip mas.zip *; popd
 pushd ../standards.iso.org/19115/-3/mcc/1.0;	zip mcc.zip *; popd
 pushd ../standards.iso.org/19115/-3/mco/1.0;	zip mco.zip *; popd
