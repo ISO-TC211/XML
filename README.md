@@ -1,4 +1,4 @@
-XML
+Working XML Repository
 ===
 
 XML schema, transforms, schematron rules, and examples for ISO TC211 Metadata Standards
