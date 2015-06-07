@@ -13,7 +13,9 @@ The current version of the official schema are at <http://standards.iso.org/iso>
 # The ISO TC211 Schema Repository
 The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/Version. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0> or
-<http://standards.iso.org/iso/19157/-2/mdq/1.0>. Comments, suggestions, change requests and revisions are managed in this repository, i.e. [ISO TC211 Git Repository](https://github.com/ISO-TC211/XML). 
+<http://standards.iso.org/iso/19157/-2/mdq/1.0>. Comments, suggestions, change requests and revisions are managed in this repository, i.e. [ISO TC211 Git Repository](https://github.com/ISO-TC211/XML).
+
+A zip archive of the complete official schema is available at http://standards.iso.org/iso/19115/19115.zip.
 
 Summary information about all of these namespaces is avaialble at http://standards.iso.org/iso/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
 
