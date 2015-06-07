@@ -1,3 +1,4 @@
+pushd ../standards.iso.org/19115;zip -r 19115.zip ../*; popd
 pushd ../standards.iso.org/19110/fcc/1.0;	zip fcc.zip *; popd
 pushd ../standards.iso.org/19110/gfc/1.1;	zip gfc.zip *; popd
 pushd ../standards.iso.org/19115/-3/cat/1.0;	zip cat.zip *; popd

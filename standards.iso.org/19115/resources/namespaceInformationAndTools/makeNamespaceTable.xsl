@@ -39,7 +39,7 @@
   <xsl:strip-space elements="*"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:variable name="TransformName" select="'makeNamespaceTable'"/>
-  <xsl:variable name="TransformVersion" select="'2015-06-04'"/>
+  <xsl:variable name="TransformVersion" select="'2015-06-06'"/>
   <xsl:template match="/">
     <html>
       <head>
@@ -77,8 +77,10 @@
                 <!-- Standard Prefix -->
                 <xsl:element name="a">
                   <!--<xsl:attribute name="href" select="concat('..','/standards.iso.org/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>-->
-                  <!--<xsl:attribute name="href" select="concat('../../',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>-->
-                  <xsl:attribute name="href" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
+                  <!-- This makes links relative to this file (use locally) -->
+                  <xsl:attribute name="href" select="concat('../../',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>
+                  <!-- This makes links to standards.iso.org -->
+                  <!--<xsl:attribute name="href" select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/','index.html')"/>-->
                   <xsl:value-of select="prefix"/>
                 </xsl:element>
               </td>
@@ -118,8 +120,12 @@
               </td>
               <td>
                 <!-- Thumbnail -->
+                <!-- relative links to images -->
                 <xsl:variable name="imageFile"
-                  select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
+                  select="concat('../../',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/>
+                <!-- links to images on standards.iso.org -->
+        <!--        <xsl:variable name="imageFile"
+                  select="concat(location,'/',replace(schemaStandardNumber,'-','/-'),'/',prefix,'/',version,$workingVersionDate,'/',prefix,'.png')"/> -->
                 <a>
                   <xsl:attribute name="href" select="$imageFile"/>
                   <img>
