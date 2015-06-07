@@ -8,4 +8,30 @@ and data quality (ISO 19157). These are not final schemas for these standards bu
 initial testing and familiarization. They are provided here to support those kinds of use cases 
 without any expectation for persistence.
 
-The schemas in the standards.iso.org directory of this repository are the most current schemas. This directory structure is different from the previous one in several important ways. First, each standard has a single root that contains sub-directories for each part of the standard. For example, the directory standards.iso.org includes the 19115 sub-directory and it includes -2 and -3 sub-directories that include sub-directories for each namespace defined in each part of the standard. Second, the namespace directories have no working dates. For example the mdb namespace is in the directory standards.iso.org/19115/-3/mdb/1.0. This anticipates the directory structure at the eventual target for these schemas (http://standards.iso.org).
+The schemas in the standards.iso.org directory of this repository are the most current schemas. This directory structure is different from the previous working structure in several important ways. First, each standard has a single root that contains sub-directories for each part of the standard. For example, the directory standards.iso.org/iso includes the 19115 sub-directory and it includes -2 and -3 sub-directories that include sub-directories for each namespace defined in each part of the standard. Second, the namespace directories have no working dates. For example the mdb namespace is in the directory standards.iso.org/iso/19115/-3/mdb/1.0. This anticipates the directory structure at the eventual target for these schemas (http://standards.iso.org/iso), described below.
+
+# The ISO TC211 Schema Repository
+The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/Version. For example:
+<http://standards.iso.org/iso/19115/-3/cit/1.0> or
+<http://standards.iso.org/iso/19157/-2/mdq/1.0>. Comments, suggestions, change requests and revisions are managed in the [ISO TC211 Git Repository](https://github.com/ISO-TC211/XML). 
+
+Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described here.  
+
+##Package Diagram
+UML Package Diagrams show dependencies between the current namespace and others as well as the entities defined in each namespace.
+##Description
+The Description includes information about the ISO Standard implemented in the namespace and general information about the purpose and content of the namespace.
+##Sample XML Files
+Each namespace directory includes sample XML files for the namespace and for demonstrating related schematron rules. The namespace sample files are called xxx.xml (for namespace xxx). The schematron rule examples include xxx_valid.xml and xxx_invalid.xml examples for each schematron rule.
+##Codelists
+If the namespace includes codelists, an xml (codelists.xml) and html (codelists.html) version of the codelists are provided.
+##Namespace Location
+The standard location for namespace xxx is http://standards.iso.org/iso/xxx/Version.
+##Schema Location
+The standard schema for namespace xxx is http://standards.iso.org/iso/xxx/Version/xxx.xsd. These XML schema include (indirectly) all the implemented concepts of the xxx namespace, but they do not contain the declaration of any types.
+##Related Schema
+The xxx.xsd files reference other schemas that define the types included in the namespace. These usually have more descriptive names than xxx.xsd, e.g. citation.xsd.
+##Related Namespaces
+If there are dependencies  between namespace xxx and others, the standard prefix for the namespace, the URI (absolute), and the schema location (relative) are listed here.
+##Schematron Rules
+If the namespace includes requirements that can not be tested 
