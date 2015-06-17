@@ -854,7 +854,9 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-  <xsl:template match="gmd:MD_Band/gmd:descriptor | gmi:MI_Band/gmd:descriptor">
+  <xsl:template match="gmd:MD_Band/gmd:descriptor|
+                       gmi:MI_Band/gmd:descriptor|
+                       gmd:MD_RangeDimension/gmd:descriptor">
     <xsl:element name="mrc:description">
       <xsl:element name="gco:CharacterString">
         <xsl:value-of select="."/>
