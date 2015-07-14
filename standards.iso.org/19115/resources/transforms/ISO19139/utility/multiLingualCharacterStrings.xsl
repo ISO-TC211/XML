@@ -73,4 +73,37 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
+
+    <xsl:template name="writeCodelistElement">
+      <xsl:param name="elementName"/>
+      <xsl:param name="codeListName"/>
+      <xsl:param name="codeListValue"/>
+      <!-- The correct codeList Location goes here -->
+      <xsl:variable name="codeListLocation" select="'codeListLocation'"/>
+      <xsl:choose>
+        <xsl:when test="$codeListValue">
+          <xsl:element name="{$elementName}">
+            <xsl:element name="{$codeListName}">
+              <xsl:attribute name="codeList">
+                <xsl:value-of select="$codeListLocation"/>
+                <xsl:value-of select="'#'"/>
+                <xsl:value-of select="substring-after($codeListName,':')"/>
+              </xsl:attribute>
+              <xsl:attribute name="codeListValue">
+                <!-- the anyValidURI value is used for testing with paths -->
+                <!--<xsl:value-of select="'anyValidURI'"/>-->
+                <!-- commented out for testing -->
+                <xsl:value-of select="$codeListValue"/>
+              </xsl:attribute>
+              <xsl:value-of select="$codeListValue"/>
+            </xsl:element>
+          </xsl:element>
+        </xsl:when>
+        <xsl:when test="@*">
+          <xsl:element name="{$elementName}">
+            <xsl:apply-templates select="@*"/>
+          </xsl:element>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:template>
 </xsl:stylesheet>
