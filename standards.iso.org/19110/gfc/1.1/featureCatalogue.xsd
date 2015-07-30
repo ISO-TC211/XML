@@ -9,10 +9,12 @@
   <import namespace="http://standards.iso.org/iso/19110/fcc/1.0" schemaLocation="../../../19110/fcc/1.0/fcc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../19115/-3/lan/1.0/lan.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../19115/-3/gmw/1.0/gmw.xsd"/>
-<!--  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>-->
+<!--  <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../19115/-3/gmw/1.0/gmw.xsd"/> -->
+  <!--  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>-->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- SMR 2015-02-07 change gml:CodeType to gco:CodeType for 2014-12-25 build; UnitOfMeasure is in gmw, not gco so change that too -->
+  <!-- SMR 2015-06-14 hand craft to put featureType association before inheritanceRelation on FC_FeatureCatalogue -->
+  
   <element name="FC_AssociationRole" substitutionGroup="gfc:AbstractFC_PropertyType" type="gfc:FC_AssociationRole_Type">
     <annotation>
       <documentation>A role of the association FC_AssociationRole::relation. &lt;ocl&gt; roleName = FC_Member::memberName; FC_PropertyType::cardinality realizes GF_AssociationRole::cardinality &lt;/ocl&gt;</documentation>
@@ -284,8 +286,9 @@
               <documentation>The numeric or alphanumeric code that uniquely identifies the feature attribute within the feature catalogue.</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="valueMeasurementUnit" type="gmw:UnitOfMeasure_PropertyType">
-            <annotation>
+<!--          <element minOccurs="0" name="valueMeasurementUnit" type="gmw:UnitOfMeasure_PropertyType">-->
+          <element minOccurs="0" name="valueMeasurementUnit" type="gco:UomIdentifier_PropertyType">
+              <annotation>
               <documentation>Unit of measure used for this feature attribute.</documentation>
             </annotation>
           </element>
@@ -334,14 +337,14 @@
               <documentation>identifier of the feature catalogue</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="inheritanceRelation" type="gfc:FC_InheritanceRelation_PropertyType">
-            <annotation>
-              <documentation>role that links this feature catalogue to the inheritance relationships that it contains</documentation>
-            </annotation>
-          </element>
           <element maxOccurs="unbounded" minOccurs="0" name="featureType" type="gfc:FC_FeatureType_PropertyType">
             <annotation>
               <documentation>The role that links this feature catalogue to the feature types that it contains.</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="inheritanceRelation" type="gfc:FC_InheritanceRelation_PropertyType">
+            <annotation>
+              <documentation>role that links this feature catalogue to the inheritance relationships that it contains</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="globalProperty" type="gfc:AbstractFC_PropertyType_PropertyType">
