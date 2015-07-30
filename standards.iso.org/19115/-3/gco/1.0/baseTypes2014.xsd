@@ -8,9 +8,11 @@
 		<xs:documentation>Geographic COmmon (GCO) extensible markup language is a component of the XML Schema Implementation of Geographic
 Information Metadata documented in ISO/TS 19115-3, based on the implementation patterns defined and utilized in ISO19139.
 This gcoBase.xsd schema provides:
-		1.  tools to handle specific objects like "code lists" and "record";
+		1. tools to handle specific objects like "code lists" and "record";
 		2. Some XML types that do not follow the general encoding rules specified in ISO19139.
 		*** SMR 2014-12-22.  Refactor gco, gts, gsr, gss to separate gml dependencies.  
+		All element or attribute types in this schema are either types defined by this schema, or are datatypes defined by 
+		the XML schema namespace (http://www.w3.org/2001/XMLSchema)
 		To remove the dependency between gml and the base datatypes in ISO19115-3:
 			1. The nilReason attribute is defined here instead of extending the gml type. 
 			2. The definition of MeasureType is copied here from gml 3.2 basic Types. The only
@@ -375,11 +377,16 @@ This gcoBase.xsd schema provides:
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="xs:double">
-				<xs:attribute name="uom" type="gco:UomIdentifier" use="required"/>
+				<xs:attribute name="uom" type="gco:UomIdentifierType" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:simpleType name="UomIdentifier">
+	<!-- SMR handcraft UomIdentifier to implement 19103:2015 interface; this will allow
+	reducing dependencies on GML for elements using measures with a separate unit of measurement element-->
+	<!--================= Element =================-->
+	<xs:element name="UomIdentifier" type="gco:UomIdentifierType"/>
+	<!--================= Type ===================-->
+	<xs:simpleType name="UomIdentifierType">
 		<xs:annotation>
 			<xs:documentation>The simple type gml:UomIdentifer defines the syntax and value space of the unit of measure identifier.</xs:documentation>
 		</xs:annotation>
@@ -406,6 +413,17 @@ This gcoBase.xsd schema provides:
 			<xs:pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
+	
+	<!-- ============ UomIdentifier Property =================== -->
+	<!-- implementing interface defined in ISO19103:2015 -->
+	<xs:complexType name="UomIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gco:UomIdentifier"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+
 
 	<!--================= Element =================-->
 	<xs:element name="Measure" type="gco:MeasureType"/>
