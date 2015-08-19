@@ -62,25 +62,31 @@
     -->
     <xsl:element name="mdb:metadataIdentifier">
       <mcc:MD_Identifier>
-        <mcc:code>
-          <gco:CharacterString>
-            <xsl:choose>
-              <xsl:when test="contains(gcoold:CharacterString,':')">
-                <xsl:value-of select="substring-after(gcoold:CharacterString,':')"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="gcoold:CharacterString"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </gco:CharacterString>
-        </mcc:code>
-        <xsl:if test="contains(gcoold:CharacterString,':')">
-          <mcc:codeSpace>
-            <gco:CharacterString>
-              <xsl:value-of select="substring-before(gcoold:CharacterString,':')"/>
-            </gco:CharacterString>
-          </mcc:codeSpace>
-        </xsl:if>
+        <xsl:for-each select="*">
+          <mcc:code>
+            <!-- The code could be a gco:CharacterString or any substitution for gco:CharacterString -->
+            <xsl:variable name="nameSpacePrefix">
+              <xsl:call-template name="getNamespacePrefix"/>
+            </xsl:variable>
+            <xsl:element name="{concat($nameSpacePrefix, ':',local-name())}">
+              <xsl:choose>
+                <xsl:when test="contains(.,':')">
+                  <xsl:value-of select="substring-after(.,':')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="."/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:element>
+          </mcc:code>
+          <xsl:if test="contains(.,':')">
+            <mcc:codeSpace>
+              <gco:CharacterString>
+                <xsl:value-of select="substring-before(.,':')"/>
+              </gco:CharacterString>
+            </mcc:codeSpace>
+          </xsl:if>
+        </xsl:for-each>
       </mcc:MD_Identifier>
     </xsl:element>
   </xsl:template>
