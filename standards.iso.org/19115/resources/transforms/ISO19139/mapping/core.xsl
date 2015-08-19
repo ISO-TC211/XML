@@ -558,10 +558,8 @@
             <!-- only an identifier exists - write it into a CI_Citation -->
             <mri:name>
               <cit:CI_Citation>
-                <xsl:call-template name="writeCharacterStringElement">
-                  <xsl:with-param name="elementName" select="'cit:title'"/>
-                  <xsl:with-param name="nodeWithStringToWrite" select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier/gmd:authority/gmd:CI_Citation/gmd:title"/>
-                </xsl:call-template>
+                <!-- No citation title or date exists -->
+                <cit:title gco:nilReason="unknown"/>
                 <cit:date gco:nilReason="unknown"/>
                 <cit:identifier>
                   <xsl:apply-templates select="gmd:MD_AggregateInformation/gmd:aggregateDataSetIdentifier/gmd:MD_Identifier" mode="from19139to19115-3"/>
