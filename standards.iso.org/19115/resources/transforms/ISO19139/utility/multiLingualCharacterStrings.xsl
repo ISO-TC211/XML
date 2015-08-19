@@ -39,7 +39,7 @@
         <xd:desc>
             <xd:p>
                 These utility templates transform CodeLists and CharacterStrings from ISO 19139 into ISO 19115-3.</xd:p>
-            <xd:p>Version December 5, 2014</xd:p>
+            <xd:p>Version August 8, 2015</xd:p>
             <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
         </xd:desc>
     </xd:doc>
@@ -51,20 +51,32 @@
         <xsl:param name="elementName"/>
         <xsl:param name="nodeWithStringToWrite"/>
         <xsl:variable name="isMultilingual" select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
-        <xsl:variable name="hasCharacterString" select="count($nodeWithStringToWrite/gcoold:CharacterString) = 1"/>
+        <!-- 
+            The hasCharacterString variable was generalized to include situations where substitutions are
+            being used gor gco:CharacterString, e.g. gmx:FileName.
+        -->
+        <xsl:variable name="hasChildNode" select="count($nodeWithStringToWrite/*) = 1"/>
         <xsl:choose>
             <xsl:when test="$nodeWithStringToWrite">
                 <xsl:element name="{$elementName}">
-                    <!--<xsl:copy-of select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>-->
                     <!-- Deal with attributes (may be in the old gco namespace -->
                     <xsl:apply-templates select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>
                     <xsl:if test="$isMultilingual">
                         <xsl:attribute name="xsi:type" select="'lan:PT_FreeText_PropertyType'"/>
                     </xsl:if>
-                    <xsl:if test="$hasCharacterString">
-                        <gco:CharacterString>
-                            <xsl:value-of select="$nodeWithStringToWrite/gcoold:CharacterString"/>
-                        </gco:CharacterString>
+                    <xsl:if test="$hasChildNode">
+                        <!-- 
+                            This could be any substitution for gco:CharacterString.
+                            Get correct namespace and preserve name for substitutions
+                        -->
+                        <xsl:for-each select="$nodeWithStringToWrite/*">
+                            <xsl:variable name="nameSpacePrefix">
+                                <xsl:call-template name="getNamespacePrefix"/>
+                            </xsl:variable>
+                            <xsl:element name="{concat($nameSpacePrefix, ':',local-name())}">
+                                <xsl:value-of select="."/>
+                            </xsl:element>
+                        </xsl:for-each>
                     </xsl:if>
                     <xsl:if test="$isMultilingual">
                         <xsl:apply-templates select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
