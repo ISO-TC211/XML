@@ -5,6 +5,7 @@
                 xmlns:gcoold="http://www.isotc211.org/2005/gco"
                 xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
                 exclude-result-prefixes="#all">
+
     <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b>December 5, 2014 </xd:p>
@@ -14,6 +15,7 @@
             <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
         </xd:desc>
     </xd:doc>
+
     <xsl:template name="writeDateTime">
      <!--
       have to account for gco:Date and gco:DateTime which are both valid descendants of gmd:date

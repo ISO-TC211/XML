@@ -4,7 +4,7 @@
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:gmd="http://www.isotc211.org/2005/gmd"
-                xmlns:gco="http://www.isotc211.org/2005/gco"
+                xmlns:gcoold="http://www.isotc211.org/2005/gco"
                 xmlns:gmi="http://www.isotc211.org/2005/gmi"
                 xmlns:gmx="http://www.isotc211.org/2005/gmx"
                 xmlns:gsr="http://www.isotc211.org/2005/gsr"
@@ -40,8 +40,11 @@
                 xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
                 xmlns:mai="http://standards.iso.org/iso/19115/-3/mai/1.0"
                 xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
-                xmlns:gco2="http://standards.iso.org/iso/19115/-3/gco/1.0"
+                xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
                 exclude-result-prefixes="#all">
+    
+    <xsl:import href="../utility/multiLingualCharacterStrings.xsl"/>
+    
     <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" scope="stylesheet">
         <xd:desc>
             <xd:p>
@@ -56,16 +59,17 @@
             <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
         </xd:desc>
     </xd:doc>
-    <xsl:template match="gmd:CI_ResponsibleParty">
+
+    <xsl:template match="gmd:CI_ResponsibleParty" mode="from19139to19115-3">
         <xsl:choose>
-            <xsl:when test="count(gmd:individualName/gco:CharacterString) + count(gmd:organisationName/gco:CharacterString) + count(gmd:positionName/gco:CharacterString) > 0">
+            <xsl:when test="count(gmd:individualName/gcoold:CharacterString) + count(gmd:organisationName/gcoold:CharacterString) + count(gmd:positionName/gcoold:CharacterString) > 0">
                 <!-- 
                 CI_ResponsibleParties that include name elements (individualName, organisationName, or positionName) are translated to CI_Responsibilities.
                 CI_ResponsibleParties without name elements are assummed to be placeholders for CI_OnlineResources. They are transformed later in the process
                 using the CI_ResponsiblePartyToOnlineResource template
                 -->
                <xsl:element name="cit:CI_Responsibility">
-                   <xsl:apply-templates select="./@*"/>
+                   <xsl:apply-templates select="./@*" mode="from19139to19115-3"/>
                     <xsl:choose>
                         <xsl:when test="./gmd:role/gmd:CI_RoleCode">
                             <xsl:call-template name="writeCodelistElement">
@@ -76,11 +80,11 @@
                         </xsl:when>
                         <xsl:when test="./gmd:role/@*">
                             <cit:role>
-                                <xsl:apply-templates select="./gmd:role/@*"/>
+                                <xsl:apply-templates select="./gmd:role/@*" mode="from19139to19115-3"/>
                             </cit:role>
                         </xsl:when>
                         <xsl:otherwise>
-                            <cit:role gco:nilReason="missing"/>
+                            <cit:role gcoold:nilReason="missing"/>
                         </xsl:otherwise>
                     </xsl:choose>
                     <cit:party>
@@ -144,18 +148,48 @@
         CI_Citations do not include CI_OnlineResources. In this case we, transform
         only the CI_OnlineResource element of the CI_ResponsibleParty 
     -->
-        <xsl:apply-templates select=".//gmd:onlineResource"/>
+        <xsl:apply-templates select=".//gmd:onlineResource" mode="from19139to19115-3"/>
     </xsl:template>
+
+    <xsl:template match="gmd:contactInfo/gmd:CI_Contact/gmd:phone" mode="from19139to19115-3">
+      <xsl:for-each select="gmd:CI_Telephone/*">
+        <cit:phone>
+          <cit:CI_Telephone>
+            <cit:number>
+              <gco:CharacterString>
+                <xsl:value-of select="./gcoold:CharacterString"/>
+              </gco:CharacterString>
+            </cit:number>
+            <xsl:call-template name="writeCodelistElement">
+              <xsl:with-param name="elementName" select="'cit:numberType'"/>
+              <xsl:with-param name="codeListName" select="'cit:CI_TelephoneTypeCode'"/>
+              <xsl:with-param name="codeListValue">
+                <xsl:choose>
+                  <xsl:when test="local-name()='voice'">
+                    <xsl:value-of select="'voice'"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="'facsimile'"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:with-param>
+            </xsl:call-template>
+          </cit:CI_Telephone>
+        </cit:phone>
+      </xsl:for-each>
+    </xsl:template>
+
     <!-- Empty high-priority templates are used for elements that move to new locations in the output -->
-    <xsl:template match="gmd:CI_ResponsibleParty/gmd:role" priority="5"/>
-    <xsl:template match="gmd:CI_ResponsibleParty/gmd:organisationName" priority="5"/>
-    <xsl:template match="gmd:CI_ResponsibleParty/gmd:individualName" priority="5"/>
-    <xsl:template match="gmd:CI_ResponsibleParty/gmd:positionName" priority="5"/>
+    <xsl:template match="gmd:CI_ResponsibleParty/gmd:role" priority="5" mode="from19139to19115-3"/>
+    <xsl:template match="gmd:CI_ResponsibleParty/gmd:organisationName" priority="5" mode="from19139to19115-3"/>
+    <xsl:template match="gmd:CI_ResponsibleParty/gmd:individualName" priority="5" mode="from19139to19115-3"/>
+    <xsl:template match="gmd:CI_ResponsibleParty/gmd:positionName" priority="5" mode="from19139to19115-3"/>
+
     <xsl:template name="writeContactInformation">
         <xsl:for-each select="gmd:contactInfo">
             <cit:contactInfo>
-                <xsl:apply-templates select="@*"/>
-                <xsl:apply-templates/>
+                <xsl:apply-templates select="@*" mode="from19139to19115-3"/>
+                <xsl:apply-templates mode="from19139to19115-3"/>
             </cit:contactInfo>
         </xsl:for-each>
     </xsl:template>

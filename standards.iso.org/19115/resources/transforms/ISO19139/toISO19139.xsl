@@ -12,17 +12,17 @@
                 xmlns:srv="http://www.isotc211.org/2005/srv"
                 xmlns:gml="http://www.opengis.net/gml"
                 xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
-                xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" 
-                xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" 
-                xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
-                xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
-                xmlns:srv2="http://standards.iso.org/iso/19115/-3/srv/2.0" 
-                xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0" 
-                xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" 
-                xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
-                xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0" 
-                xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" 
-                xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" 
+                xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+                xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+                xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+                xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+                xmlns:srv2="http://standards.iso.org/iso/19115/-3/srv/2.0"
+                xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0"
+                xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+                xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+                xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+                xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+                xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
                 xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/1.0"
                 xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
                 xmlns:mic="http://standards.iso.org/iso/19115/-3/mic/1.0"
@@ -85,7 +85,7 @@
       </xsl:variable>
       <xsl:element name="{concat($nameSpacePrefix,':',local-name(.))}">
         <xsl:call-template name="add-namespaces"/>
-        
+
         <xsl:apply-templates select="mdb:metadataIdentifier"/>
         <xsl:apply-templates select="mdb:defaultLocale"/>
         <xsl:apply-templates select="mdb:parentMetadata"/>
@@ -529,16 +529,22 @@
   </xsl:template>
   <xsl:template match="cit:party/*/cit:contactInfo/cit:CI_Contact/cit:phone">
     <!-- Only one phone number is allowed in ISO19139 -->
-    <xsl:if test="name(preceding-sibling::node()[1]) != name()">
+    <xsl:variable name="phoneType" 
+                  select="if (cit:numberType/cit:CI_TelephoneTypeCode/@codeListValue != '')
+                          then cit:numberType/cit:CI_TelephoneTypeCode/@codeListValue 
+                          else cit:numberType/cit:CI_TelephoneTypeCode"/>
+    <xsl:if test="count(preceding-sibling::node()[cit:numberType/cit:CI_TelephoneTypeCode = $phoneType]) = 0">
       <xsl:for-each select="cit:CI_Telephone">
         <gmd:phone>
           <gmd:CI_Telephone>
-            <xsl:for-each select=".[cit:numberType/cit:CI_TelephoneTypeCode = 'voice']/cit:number">
+            <xsl:for-each select=".[cit:numberType/cit:CI_TelephoneTypeCode = 'voice' or
+              cit:numberType/cit:CI_TelephoneTypeCode/@codeListValue = 'voice']/cit:number">
               <gmd:voice>
                 <xsl:apply-templates select="gco2:CharacterString"/>
               </gmd:voice>
             </xsl:for-each>
-            <xsl:for-each select=".[cit:numberType/cit:CI_TelephoneTypeCode = 'facsimile']/cit:number">
+            <xsl:for-each select=".[cit:numberType/cit:CI_TelephoneTypeCode = 'facsimile' or
+              cit:numberType/cit:CI_TelephoneTypeCode/@codeListValue = 'facsimile']/cit:number">
               <gmd:facsimile>
                 <xsl:apply-templates select="gco2:CharacterString"/>
               </gmd:facsimile>
@@ -548,6 +554,9 @@
       </xsl:for-each>
     </xsl:if>
   </xsl:template>
+  
+  
+  
   <xsl:template name="CI_ResponsiblePartyToOnlineResource">
     <!-- 
       Transform only the CI_OnlineResource element of the CI_ResponsibleParty 
