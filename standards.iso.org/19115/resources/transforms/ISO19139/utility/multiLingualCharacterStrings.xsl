@@ -83,9 +83,16 @@
                     </xsl:if>
                 </xsl:element>
             </xsl:when>
+            <xsl:otherwise>
+                <!-- 
+                    If the node to be written does not exist - add a gco:nilReason attribute 
+                -->
+                <xsl:element name="{$elementName}">
+                    <xsl:attribute name="gco:nilReason" select="'unknown'"/>
+                </xsl:element>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-
     <xsl:template name="writeCodelistElement">
       <xsl:param name="elementName"/>
       <xsl:param name="codeListName"/>
