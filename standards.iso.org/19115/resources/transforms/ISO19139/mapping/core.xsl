@@ -286,17 +286,17 @@
             <xsl:with-param name="elementName" select="'mri:credit'"/>
             <xsl:with-param name="nodeWithStringToWrite" select="gmd:credit"/>
           </xsl:call-template>
-          <xsl:call-template name="writeCodelistElement">
-            <xsl:with-param name="elementName" select="'mri:status'"/>
-            <xsl:with-param name="codeListValue" select="gmd:status/gmd:MD_ProgressCode/@codeListValue"/>
-            <xsl:with-param name="codeListName" select="'mcc:MD_ProgressCode'"/>
-          </xsl:call-template>
+            <xsl:call-template name="writeCodelistElement">
+              <xsl:with-param name="elementName" select="'mri:status'"/>
+              <xsl:with-param name="codeListValue" select="gmd:status/gmd:MD_ProgressCode/@codeListValue"/>
+              <xsl:with-param name="codeListName" select="'mcc:MD_ProgressCode'"/>
+            </xsl:call-template>
           <xsl:apply-templates select="gmd:pointOfContact" mode="from19139to19115-3"/>
-          <xsl:call-template name="writeCodelistElement">
-            <xsl:with-param name="elementName" select="'mri:spatialRepresentationType'"/>
-            <xsl:with-param name="codeListName" select="'mcc:MD_SpatialRepresentationTypeCode'"/>
-            <xsl:with-param name="codeListValue" select="gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode/@codeListValue"/>
-          </xsl:call-template>
+            <xsl:call-template name="writeCodelistElement">
+              <xsl:with-param name="elementName" select="'mri:spatialRepresentationType'"/>
+              <xsl:with-param name="codeListName" select="'mcc:MD_SpatialRepresentationTypeCode'"/>
+              <xsl:with-param name="codeListValue" select="gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode/@codeListValue"/>
+            </xsl:call-template>
           <xsl:apply-templates select="gmd:spatialResolution" mode="from19139to19115-3"/>
           <!-- This is here to handle early adopters of temporalResolution -->
           <xsl:apply-templates select="gmd:temporalResolution" mode="from19139to19115-3"/>
