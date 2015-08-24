@@ -161,6 +161,9 @@
         <xsl:when test="ancestor-or-self::gmd:CI_Citation">
           <xsl:text>cit</xsl:text>
         </xsl:when>
+        <xsl:when test="ancestor-or-self::gmd:MD_ApplicationSchemaInformation">
+          <xsl:text>mas</xsl:text>
+        </xsl:when>
         <xsl:when test="ancestor-or-self::gmi:MI_AcquisitionInformation">
           <xsl:text>mac</xsl:text>
         </xsl:when>
