@@ -311,7 +311,7 @@ Position: 4
 shortName: mssnStatus</documentation>
             </annotation>
           </element>
-          <element name="parentOperation" type="mac:MI_Operation_PropertyType"/>
+          <element name="parentOperation" type="mac:MI_Operation_PropertyType" minOccurs="0"/>
           <element maxOccurs="unbounded" minOccurs="0" name="childOperation" type="mac:MI_Operation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="platform" type="mac:MI_Platform_PropertyType">
             <annotation>
