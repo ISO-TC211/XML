@@ -116,7 +116,7 @@
           <xsl:text>gml</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gts:')">
-          <xsl:text>gts</xsl:text>
+          <xsl:text>gco</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'srv:') and not(name()='srv:extent')">
           <xsl:text>srv</xsl:text>
