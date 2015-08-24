@@ -30,6 +30,7 @@
       <mcc:MD_Identifier>
         <xsl:for-each select="*">
           <mcc:code>
+            <xsl:apply-templates select="$parentElement/@*" mode="from19139to19115-3"/>
             <!-- The code could be a gco:CharacterString or any substitution for gco:CharacterString -->
             <xsl:variable name="nameSpacePrefix">
               <xsl:call-template name="getNamespacePrefix"/>

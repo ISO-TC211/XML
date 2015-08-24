@@ -47,6 +47,7 @@
   <xsl:template name="characterStringSubstitutions">
     <xsl:param name="parentElement"/>
     <!-- This template takes a parent of a gcoold:CharacterString element and writes out the child for several possible substitutions  -->
+    <xsl:apply-templates select="$parentElement/@*" mode="from19139to19115-3"/>
     <xsl:for-each select="$parentElement/*">
       <xsl:choose>
         <xsl:when test="local-name(.)='CharacterString'">

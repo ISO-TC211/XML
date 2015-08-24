@@ -33,7 +33,8 @@
         <xsl:if test="$nodeWithStringToWrite">
             <xsl:element name="{$elementName}">
                 <!-- Deal with attributes (may be in the old gco namespace -->
-                <xsl:apply-templates select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"/>
+                <xsl:apply-templates select="$nodeWithStringToWrite/@*[name() != 'xsi:type']"
+                                     mode="from19139to19115-3"/>
                 <xsl:if test="$isMultilingual">
                     <xsl:attribute name="xsi:type" select="'lan:PT_FreeText_PropertyType'"/>
                 </xsl:if>
