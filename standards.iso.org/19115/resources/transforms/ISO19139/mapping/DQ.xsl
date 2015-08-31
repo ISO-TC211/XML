@@ -274,7 +274,9 @@
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="gmd:LI_ProcessStep/gmd:dateTime | gmi:LE_ProcessStep/gmd:dateTime" priority="5" mode="from19139to19115-3">
+  <xsl:template match="gmd:LI_ProcessStep/gmd:dateTime | gmi:LE_ProcessStep/gmd:dateTime"
+                mode="from19139to19115-3"
+                priority="5">
     <mrl:stepDateTime>
       <gml:TimeInstant>
         <xsl:attribute name="gml:id">
