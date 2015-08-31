@@ -30,6 +30,7 @@
       <mcc:MD_Identifier>
         <xsl:for-each select="*">
           <mcc:code>
+            <xsl:apply-templates select="$parentElement/@*" mode="from19139to19115-3"/>
             <!-- The code could be a gco:CharacterString or any substitution for gco:CharacterString -->
             <xsl:variable name="nameSpacePrefix">
               <xsl:call-template name="getNamespacePrefix"/>
@@ -166,6 +167,22 @@
       </xsl:choose>
     </xsl:element>
   </xsl:template>
+
+  <xsl:template match="gmd:updateScope" priority="5" mode="from19139to19115-3">
+    <mmi:maintenanceScope>
+      <mcc:MD_Scope>
+        <mcc:level>
+          <xsl:call-template name="writeCodelistElement">
+            <xsl:with-param name="elementName" select="'mdb:resourceScope'"/>
+            <xsl:with-param name="codeListName" select="'mcc:MD_ScopeCode'"/>
+            <xsl:with-param name="codeListValue" select="gmd:MD_ScopeCode/@codeListValue"/>
+          </xsl:call-template>
+        </mcc:level>
+      </mcc:MD_Scope>
+    </mmi:maintenanceScope>
+  </xsl:template>
+
+
   <xsl:template match="gmd:hierarchyLevel" priority="5" mode="from19139to19115-3">
     <!-- ************************************************************************ -->
     <!-- gmd:hierarchyLevel and gmd:hierarchyLevelName are combined into a

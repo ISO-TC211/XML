@@ -47,6 +47,7 @@
   <xsl:template name="characterStringSubstitutions">
     <xsl:param name="parentElement"/>
     <!-- This template takes a parent of a gcoold:CharacterString element and writes out the child for several possible substitutions  -->
+    <xsl:apply-templates select="$parentElement/@*" mode="from19139to19115-3"/>
     <xsl:for-each select="$parentElement/*">
       <xsl:choose>
         <xsl:when test="local-name(.)='CharacterString'">
@@ -116,7 +117,7 @@
           <xsl:text>gml</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'gts:')">
-          <xsl:text>gts</xsl:text>
+          <xsl:text>gco</xsl:text>
         </xsl:when>
         <xsl:when test="starts-with(name(),'srv:') and not(name()='srv:extent')">
           <xsl:text>srv</xsl:text>
@@ -160,6 +161,9 @@
           Changed 2013-03-06 to fix PresentationFormCode <xsl:when test="parent::gmd:CI_Citation or self::gmd:CI_Citation">-->
         <xsl:when test="ancestor-or-self::gmd:CI_Citation">
           <xsl:text>cit</xsl:text>
+        </xsl:when>
+        <xsl:when test="ancestor-or-self::gmd:MD_ApplicationSchemaInformation">
+          <xsl:text>mas</xsl:text>
         </xsl:when>
         <xsl:when test="ancestor-or-self::gmi:MI_AcquisitionInformation">
           <xsl:text>mac</xsl:text>
