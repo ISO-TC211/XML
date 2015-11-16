@@ -211,10 +211,6 @@
           or ancestor-or-self::gmd:MD_FeatureCatalogueDescription or ancestor-or-self::gmd:MD_ImageDescription">
           <xsl:text>mrc</xsl:text>
         </xsl:when>
-        <!-- Moved here to get CoverageResult right -->
-        <!--<xsl:when test="ancestor-or-self::gmd:MD_SpatialRepresentationTypeCode">
-          <xsl:text>mri</xsl:text>
-        </xsl:when>-->
         <xsl:when test="ancestor-or-self::gmi:QE_CoverageResult">
           <xsl:text>mdq</xsl:text>
         </xsl:when>
