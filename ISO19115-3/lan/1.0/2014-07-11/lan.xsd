@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" xmlns:lan="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/lan/1.0/2014-07-11" version="1.0">
-  <annotation>
-    <documentation>Namespace for XML elements used to implement cultural and linguistic adaptability, i.e. different character set and language encoding of metadata content. Originally defined in ISO 19139.</documentation>
-  </annotation>
-  <include schemaLocation="language.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/cit/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/cit/1.0/2014-07-11/cit.xsd"/>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-</schema>
