@@ -22,7 +22,7 @@
      -->
         <xsl:apply-templates select="@*"
                              mode="from19139to19115-3"/>
-        <xsl:if test="gcoold:*">
+        <xsl:if test="descendant::gcoold:*">
           <gco:DateTime>
               <xsl:for-each select="descendant::gcoold:Date">
                   <xsl:variable name="dateNodeString">
