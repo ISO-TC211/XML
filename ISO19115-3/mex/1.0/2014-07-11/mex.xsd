@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:mcc="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" xmlns:mex="http://www.isotc211.org/namespace/mex/1.0/2014-07-11" elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/namespace/mex/1.0/2014-07-11" version="1.0">
-  <annotation>
-    <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document user-defined metadata extensions&lt;/font&gt;.</documentation>
-  </annotation>
-  <include schemaLocation="metadataExtension.xsd"/>
-  <import namespace="http://www.isotc211.org/namespace/mcc/1.0/2014-07-11" schemaLocation="../../../../ISO19115-3/mcc/1.0/2014-07-11/mcc.xsd"/>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-</schema>
