@@ -9,10 +9,17 @@
       <srv:SV_ServiceIdentification>
          <mri:citation/>
          <mri:abstract/>
-         <srv:serviceType/>
+         <srv:serviceType>
+            <gco:ScopedName codeSpace="https://github.com/OSGeo/Cat-Interop">
+               OGC:WPS
+            </gco:ScopedName>
+         </srv:serviceType>
+         <srv:serviceTypeVersion>
+            <gco:CharacterString>1.0</gco:CharacterString>
+         </srv:serviceTypeVersion>
          <!-- Valid for rule.srv.coupledresource -->
          <srv:couplingType>
-            <srv:SV_CouplingType codeList="" codeListValue="tight"/>
+            <srv:SV_CouplingType codeList="" codeListValue="loose"/>
          </srv:couplingType>
          <srv:coupledResource>
             <srv:SV_CoupledResource>
