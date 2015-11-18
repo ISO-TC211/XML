@@ -14,7 +14,7 @@ pushd ../standards.iso.org/19110/gfc/1.1;	zip gfc.zip *; popd
 # create the zip files in 19111 namespaces
 #
 pushd ../standards.iso.org/19111/rbc/1.0;	zip rbc.zip *; popd
-pushd ../standards.iso.org/19111/rce/1.1;	zip rce.zip *; popd
+pushd ../standards.iso.org/19111/rce/1.0;	zip rce.zip *; popd
 # 
 # create the zip files in 19115 namespaces
 #
@@ -24,7 +24,6 @@ pushd ../standards.iso.org/19115/-3/cit/1.0;	zip cit.zip *; popd
 pushd ../standards.iso.org/19115/-3/gcx/1.0;	zip gcx.zip *; popd
 pushd ../standards.iso.org/19115/-3/gex/1.0;	zip gex.zip *; popd
 pushd ../standards.iso.org/19115/-3/gmw/1.0;	zip gmw.zip *; popd
-pushd ../standards.iso.org/19115/-3/gwm/1.0;	zip gwm.zip *; popd
 pushd ../standards.iso.org/19115/-3/lan/1.0;	zip lan.zip *; popd
 pushd ../standards.iso.org/19115/-3/mac/1.0;	zip mac.zip *; popd
 pushd ../standards.iso.org/19115/-3/mas/1.0;	zip mas.zip *; popd
@@ -66,11 +65,12 @@ pushd ../standards.iso.org/19157/-2/mdq/1.0;	zip mdq.zip *; popd
 # create the zip files for each standard - these include the up-to-date
 # namespace archives
 #
-pushd ../standards.iso.org/19110;zip -r 19110.zip ../*; popd
-pushd ../standards.iso.org/19111;zip -r 19111.zip ../*; popd
-pushd ../standards.iso.org/19115;zip -r 19115.zip ../*; popd
-pushd ../standards.iso.org/19135;zip -r 19135.zip ../*; popd
-pushd ../standards.iso.org/19139;zip -r 19139.zip ../*; popd
-pushd ../standards.iso.org/19155;zip -r 19155.zip ../*; popd
-pushd ../standards.iso.org/19157;zip -r 19157.zip ../*; popd
+pushd ../standards.iso.org/19110;zip -r 19110.zip .; popd
+pushd ../standards.iso.org/19111;zip -r 19111.zip .; popd
+pushd ../standards.iso.org/19115;zip -r 19115.zip .; popd
+pushd ../standards.iso.org/19115;zip -r 19115AllNamespaces.zip ../*; popd
+pushd ../standards.iso.org/19135;zip -r 19135.zip .; popd
+pushd ../standards.iso.org/19139;zip -r 19139.zip .; popd
+pushd ../standards.iso.org/19155;zip -r 19155.zip .; popd
+pushd ../standards.iso.org/19157;zip -r 19157.zip .; popd
 
