@@ -104,7 +104,7 @@
             <p>
               <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <xsl:element name="a">
                 <xsl:attribute name="href" select="concat(prefix,'.zip')"/>here</xsl:element>. A zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3 and related standards is also <xsl:element name="a">
-                <xsl:attribute name="href" select="'http://standards.iso.org/iso/19115/19115.zip'"/>available</xsl:element>.</i>
+                <xsl:attribute name="href" select="'http://standards.iso.org/iso/19115/19115AllNamespaces.zip'"/>available</xsl:element>.</i>
             </p>
             <xsl:variable name="otherSchemaList" as="xs:string*">
               <xsl:for-each select="document($schemaFile)/*/xs:include">
