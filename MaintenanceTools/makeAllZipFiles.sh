@@ -5,6 +5,11 @@
 # all inclusive files for each standard, e.g. ../standards.iso.org/19115/19115.zip
 # and namespace specific zip files are created in each namespace directory
 # e.g. ../standards.iso.org/19115/-3/cat/1.0/cat.zip
+#
+# remove all existing namespaces
+echo "Remove existing zip files"
+find ../standards.iso.org -name *.zip -print
+find ../standards.iso.org -name *.zip -delete
 # 
 # create the zip files in 19110 namespaces
 #
@@ -73,4 +78,9 @@ pushd ../standards.iso.org/19135;zip -r 19135.zip .; popd
 pushd ../standards.iso.org/19139;zip -r 19139.zip .; popd
 pushd ../standards.iso.org/19155;zip -r 19155.zip .; popd
 pushd ../standards.iso.org/19157;zip -r 19157.zip .; popd
+#
+# list all zipfiles
+#
+echo "Existing zip files"
+find ../standards.iso.org -name *.zip -print
 
