@@ -198,7 +198,12 @@
     <complexContent>
       <extension base="mcc:Abstract_TypedDate_Type">
         <sequence>
-          <element name="date" type="gco:DateTime_PropertyType">
+<!--          <element name="date" type="gco:DateTime_PropertyType">-->
+          <!-- use of gco:DateTime property did not implement the intention of the 19115-1 committee, the desire was
+          for the more general representation allowing date, datetime, yy, yymm, etc. 
+          See discussion on github https://github.com/ISO-TC211/XML/issues/117https://github.com/ISO-TC211/XML/issues/117
+          SMR 2015-09-01 -->
+          <element name="date" type="gco:Date_PropertyType">
             <annotation>
               <documentation>reference date for the cited resource</documentation>
             </annotation>
