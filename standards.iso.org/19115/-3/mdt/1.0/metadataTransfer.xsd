@@ -40,11 +40,19 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MX_DataSet" substitutionGroup="gco:AbstractObject" type="mdt:MX_DataSet_Type"/>
+  <!--
+    Fix made by Ted Habermann - 20151123
+    <element name="MX_DataSet" substitutionGroup="gco:AbstractObject" type="mdt:MX_DataSet_Type"/>
+  -->  
+  <element name="MX_DataSet" substitutionGroup="mda:AbstractDS_Resource" type="mdt:MX_DataSet_Type"/>
   <complexType name="MX_DataSet_Type">
     <complexContent>
-      <extension base="gco:AbstractObject_Type">
-        <sequence>
+      <!--
+        Fix made by Ted Habermann - 20151123
+        <extension base="gco:AbstractObject_Type">
+      -->
+      <extension base="mda:AbstractDS_Resource_Type">
+          <sequence>
           <element maxOccurs="unbounded" minOccurs="0" name="datasetCatalogue" type="cat:AbstractCT_Catalogue_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="supportFile" type="mdt:MX_SupportFile_PropertyType"/>
           <element maxOccurs="unbounded" name="dataFile" type="mdt:MX_DataFile_PropertyType"/>
