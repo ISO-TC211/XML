@@ -28,11 +28,14 @@ Each namespace directory includes sample XML files for the namespace and for dem
 ##Codelists
 If the namespace includes codelists, an xml (codelists.xml) and html (codelists.html) version of the codelists are provided.
 ##Namespace Location
-The standard location for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/Version. For example:
+The standard location for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/xxx/Version. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0> or
 <http://standards.iso.org/iso/19157/-2/mdq/1.0>.
 ##Schema Location
-The standard schema for namespace xxx is http://standards.iso.org/iso/xxx/Version/xxx.xsd. These XML schema include (indirectly) all the implemented concepts of the xxx namespace, but they do not contain the declaration of any types.
+The standard schema for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/xxx/Version/xxx.xsd. For example:
+<http://standards.iso.org/iso/19115/-3/cit/1.0/cit.xsd> or
+<http://standards.iso.org/iso/19157/-2/mdq/1.0/mdq.xsd>.
+These XML schema include (indirectly) all the implemented concepts of the xxx namespace, but they do not contain the declaration of any types.
 ##Related Schema
 The xxx.xsd files reference other schemas that define the types included in the namespace. These usually have more descriptive names than xxx.xsd, e.g. citation.xsd.
 ##Related Namespaces
