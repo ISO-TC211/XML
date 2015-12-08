@@ -11,11 +11,11 @@ without any expectation for persistence.
 The current version of the official schema are at <http://standards.iso.org/iso>. These official schemas are also in the standards.iso.org directory of this repository. This directory structure is different from the previous working structure in several important ways. First, each standard has a single root that contains sub-directories for each part of the standard. For example, the directory standards.iso.org/iso includes the 19115 sub-directory and it includes -2 and -3 sub-directories that include sub-directories for each namespace defined in each part of the standard. Second, the namespace directories have no working dates. For example the mdb namespace is in the directory standards.iso.org/iso/19115/-3/mdb/1.0. This anticipates the directory structure at the final target for these schemas (http://standards.iso.org/iso), described below.
 
 # The ISO TC211 Schema Repository
-The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/Version. For example:
+The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/NamespacePrefix/Version. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0> or
 <http://standards.iso.org/iso/19157/-2/mdq/1.0>. Comments, suggestions, change requests and revisions are managed in this repository, i.e. [ISO TC211 Git Repository](https://github.com/ISO-TC211/XML).
 
-A zip archive of the complete official schema is available at http://standards.iso.org/iso/19115/19115.zip.
+A zip archive of the complete official schema is available at http://standards.iso.org/iso/19115/19115AllNamespaces.zip.
 
 Summary information about all of these namespaces is avaialble at http://standards.iso.org/iso/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
 
