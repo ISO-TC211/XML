@@ -8,7 +8,7 @@ and data quality (ISO 19157). These are not final schemas for these standards bu
 initial testing and familiarization. They are provided here to support those kinds of use cases 
 without any expectation for persistence.
 
-The current version of the official schema are at <http://standards.iso.org/iso>. These official schemas are also in the standards.iso.org directory of this repository. This directory structure is different from the previous working structure in several important ways. First, each standard has a single root that contains sub-directories for each part of the standard. For example, the directory standards.iso.org/iso includes the 19115 sub-directory and it includes -2 and -3 sub-directories that include sub-directories for each namespace defined in each part of the standard. Second, the namespace directories have no working dates. For example the mdb namespace is in the directory standards.iso.org/iso/19115/-3/mdb/1.0. This anticipates the directory structure at the final target for these schemas (http://standards.iso.org/iso), described below.
+The current version of the official schema are at <http://standards.iso.org/iso>. These official schemas are also in the standards.iso.org directory of this repository. The directory standards.iso.org/iso includes a sub-directory for each ISO Standard.
 
 # The ISO TC211 Schema Repository
 The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/NamespacePrefix/Version. For example:
