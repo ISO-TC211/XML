@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
+CORRECTIONS referenced 2012-07-13 #01
+AUTHOR: XML Maintenance group - Nicolas Lesage
+PURPOSE: Use of absolute path in xsi:schemaLocation
+DESCRIPTION:
+- ../gmx/gmx.xsd replaced by http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd
+- ../gco/gco.xsd replaced by http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd
+- ../xlink/xlinks.xsd replaced by http://www.w3.org/1999/xlink.xsd
+- ../gml/gml.xsd replaced by http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd
+
+CORRECTIONS referenced 2012-07-13 #02
+AUTHOR: XML Maintenance group - Nicolas Lesage
+PURPOSE: Invalid description of MD_DatatypeCode_codelist
+DESCRIPTION:
+<gml:description>descriptor of a set of objects that share the same attributes, operations, methods, relationships, and behavior</gml:description>
+has been replaced by:
+<gml:description>flexible enumeration useful for expressing a long list of values, can be extended</gml:description>
+
 CORRECTIONS referenced by 2008-09-11 #NN
 AUTHOR : IGN (France) contact: nicolas.lesage@ign.fr
 PURPOSE : Correction of 3 typographical errors 
@@ -8,7 +25,8 @@ DESCRIPTION :
 #02: 'MD_MaintenanceFrequencyCode_quartely' replaced by 'MD_MaintenanceFrequencyCode_quarterly'
 #03: 'quartely' replaced by 'quarterly'
 -->
-<CT_CodelistCatalogue xmlns="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmx ../../gmx/gmx.xsd http://www.isotc211.org/2005/gco ../../gco/gco.xsd http://www.opengis.net/gml/3.2 ../../../ISO_19136_Schemas/gml.xsd http://www.w3.org/1999/xlink http://schemas.opengis.net/xlink/1.0.0/xlinks.xsd">
+<!-- 2012-07-13 #01 -->
+<CT_CodelistCatalogue xmlns="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd http://www.isotc211.org/2005/gco http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd http://www.opengis.net/gml/3.2 http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
 	<!--=====Catalogue description=====-->
 	<name>
 		<gco:CharacterString>gmxCodelists</gco:CharacterString>
@@ -687,7 +705,8 @@ DESCRIPTION :
 			</codeEntry>
 			<codeEntry>
 				<CodeDefinition gml:id="MD_DatatypeCode_codelist">
-					<gml:description>descriptor of a set of objects that share the same attributes, operations, methods, relationships, and behavior</gml:description>
+					<!-- 2012-07-13 #02 -->
+					<gml:description>flexible enumeration useful for expressing a long list of values, can be extended</gml:description>
 					<gml:identifier codeSpace="ISOTC211/19115">codelist</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
