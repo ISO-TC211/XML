@@ -27,7 +27,7 @@
         <xsl:variable name="isMultilingual" select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
         <!-- 
             The hasCharacterString variable was generalized to include situations where substitutions are
-            being used gor gco:CharacterString, e.g. gmx:FileName.
+            being used for gco:CharacterString, e.g. gmx:FileName.
         -->
         <xsl:variable name="hasChildNode" select="count($nodeWithStringToWrite/*) = 1"/>
         <xsl:if test="$nodeWithStringToWrite">

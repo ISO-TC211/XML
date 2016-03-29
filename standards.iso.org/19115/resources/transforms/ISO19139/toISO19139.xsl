@@ -54,10 +54,15 @@
       </xd:p>
     </xd:desc>
   </xd:doc>
-  
+
   <xsl:output method="xml" indent="yes"/>
   
   <xsl:strip-space elements="*"/>
+
+  <!-- Define if all online resources in the ISO19115-3 document should
+  be combined in the ISO19139 distribution section. A new section is added
+  with those documents. eg. feature catalogue, quality reports, legends  -->
+  <xsl:variable name="mergeAllOnlineResourcesInDistribution" select="true()"/>
   
   <xsl:template name="add-namespaces">
     <!-- new namespaces -->
@@ -173,14 +178,24 @@
   
   
   <!-- Assume dateStamp is revision date in the source record. Standard says creation
-  but implementations usually use date stamp as revision date. -->
-  <xsl:template match="mdb:dateInfo[cit:CI_Date/cit:dateType/cit:CI_DateTypeCode='revision']" priority="5">
+  but implementations usually use date stamp as revision date. If no revision date,
+  use the first occurence. -->
+  <xsl:template match="mdb:dateInfo[
+                          cit:CI_Date/cit:dateType/cit:CI_DateTypeCode/@codeListValue = 'revision']"
+                priority="5">
     <gmd:dateStamp>
       <xsl:apply-templates select="cit:CI_Date/cit:date/*"/>
     </gmd:dateStamp>
   </xsl:template>
-  
-  
+  <xsl:template match="mdb:dateInfo[
+                          count(../mdb:dateInfo[cit:CI_Date/cit:dateType/cit:CI_DateTypeCode/@codeListValue = 'revision']) = 0 and
+                          position() = 1]" priority="5">
+    <gmd:dateStamp>
+      <xsl:apply-templates select="cit:CI_Date/cit:date/*"/>
+    </gmd:dateStamp>
+  </xsl:template>
+
+
   <xsl:template match="mdb:metadataStandard" priority="5">
     <gmd:metadataStandardName>
       <gco:CharacterString>
@@ -219,16 +234,10 @@
           </xsl:call-template>
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'gmd:status'"/>
-            <xsl:with-param name="codeListValue" select="mri:status/mri:MD_ProgressCode"/>
+            <xsl:with-param name="codeListValue" select="mri:status/mri:MD_ProgressCode/@codeListValue"/>
             <xsl:with-param name="codeListName" select="'gmd:MD_ProgressCode'"/>
           </xsl:call-template>
           <xsl:apply-templates select="mri:pointOfContact"/>
-          <xsl:call-template name="writeCodelistElement">
-            <xsl:with-param name="elementName" select="'gmd:spatialRepresentationType'"/>
-            <xsl:with-param name="codeListName" select="'gmd:MD_SpatialRepresentationTypeCode'"/>
-            <xsl:with-param name="codeListValue" select="mri:spatialRepresentationType/mri:MD_SpatialRepresentationTypeCode"/>
-          </xsl:call-template>
-
           <xsl:apply-templates select="mri:resourceMaintenance"/>
           <xsl:apply-templates select="mri:graphicOverview"/>
           <xsl:apply-templates select="mri:resourceFormat"/>
@@ -236,11 +245,24 @@
           <xsl:apply-templates select="mri:resourceSpecificUsage"/>
           <xsl:apply-templates select="mri:resourceConstraints"/>
           <xsl:apply-templates select="mri:associatedResource"/>
+          <xsl:call-template name="writeCodelistElement">
+            <xsl:with-param name="elementName" select="'gmd:spatialRepresentationType'"/>
+            <xsl:with-param name="codeListName" select="'gmd:MD_SpatialRepresentationTypeCode'"/>
+            <xsl:with-param name="codeListValue" select="mri:spatialRepresentationType/mcc:MD_SpatialRepresentationTypeCode/@codeListValue"/>
+          </xsl:call-template>
           <xsl:apply-templates select="mri:spatialResolution"/>
           <!-- This is here to handle early adopters of temporalResolution -->
           <xsl:apply-templates select="mri:temporalResolution"/>
-          <xsl:apply-templates select="mri:language"/>
-          <xsl:apply-templates select="mri:characterSet"/>
+          <xsl:apply-templates select="mri:defaultLocale/lan:PT_Locale/lan:language"/>
+          <xsl:apply-templates select="mri:otherLocale/lan:PT_Locale/lan:language"/>
+          <xsl:for-each select="mri:defaultLocale/lan:PT_Locale/lan:characterEncoding|
+                                mri:otherLocale/lan:PT_Locale/lan:characterEncoding">
+            <xsl:call-template name="writeCodelistElement">
+              <xsl:with-param name="elementName" select="'gmd:characterSet'"/>
+              <xsl:with-param name="codeListName" select="'gmd:MD_CharacterSetCode'"/>
+              <xsl:with-param name="codeListValue" select="lan:MD_CharacterSetCode/@codeListValue"/>
+            </xsl:call-template>
+          </xsl:for-each>
           <xsl:apply-templates select="mri:topicCategory"/>
 
           <xsl:call-template name="writeCharacterStringElement">
@@ -252,7 +274,7 @@
           <xsl:if test="srv2:serviceType">
             <srv:serviceType>
               <gco:LocalName>
-                <xsl:value-of select="srv2:serviceType/gco:ScopedName"/>
+                <xsl:value-of select="srv2:serviceType/gco2:ScopedName"/>
               </gco:LocalName>
             </srv:serviceType>
           </xsl:if>
@@ -270,7 +292,7 @@
           <xsl:call-template name="writeCodelistElement">
             <xsl:with-param name="elementName" select="'srv:couplingType'"/>
             <xsl:with-param name="codeListName" select="'srv:SV_CouplingType'"/>
-            <xsl:with-param name="codeListValue" select="srv2:couplingType/srv2:SV_CouplingType"/>
+            <xsl:with-param name="codeListValue" select="srv2:couplingType/srv2:SV_CouplingType/@codeListValue"/>
           </xsl:call-template>
           <xsl:apply-templates select="srv2:containsOperations"/>
           <xsl:apply-templates select="srv2:operatesOn"/>
@@ -278,7 +300,79 @@
       </xsl:for-each>
     </gmd:identificationInfo>
   </xsl:template>
-  
+
+
+  <xsl:template match="mdb:distributionInfo">
+    <gmd:distributionInfo>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates select="*"/>
+    </gmd:distributionInfo>
+
+    <!-- Add a new distribution section after existing one with
+    documents referenced in other sections of the record. -->
+    <xsl:if test="$mergeAllOnlineResourcesInDistribution">
+      <!-- Define custom function depending on the section of origin.
+      Values are an extension of ISO19139 to be able to make distinction
+      between documents. -->
+      <xsl:variable name="functionMap">
+        <entry key="portrayalCatalogueCitation" value="information.portrayal"/>
+        <entry key="additionalDocumentation" value="information.lineage"/>
+        <entry key="specification" value="information.qualitySpecification"/>
+        <entry key="reportReference" value="information.qualityReport"/>
+        <entry key="featureCatalogueCitation" value="information.content"/>
+      </xsl:variable>
+
+      <xsl:variable name="hasRelation"
+                    select="count(ancestor::mdb:MD_Metadata/descendant::*[
+                              local-name() = $functionMap/entry/@key]/
+                                *[cit:onlineResource/*/cit:linkage/
+                                  gco2:CharacterString != '']) > 0"/>
+      <xsl:if test="$hasRelation">
+        <gmd:distributionInfo>
+          <gmd:MD_Distribution>
+            <gmd:transferOptions>
+              <gmd:MD_DigitalTransferOptions>
+                <xsl:for-each select="ancestor::mdb:MD_Metadata/descendant::*[
+                    local-name() = $functionMap/entry/@key
+                    ]/*[cit:onlineResource/*/cit:linkage/gco2:CharacterString != '']">
+                  <gmd:onLine>
+                    <gmd:CI_OnlineResource>
+                      <gmd:linkage>
+                        <xsl:apply-templates select="cit:onlineResource/cit:CI_OnlineResource/cit:linkage/gco2:CharacterString"/>
+                      </gmd:linkage>
+                      <gmd:protocol>
+                        <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+                      </gmd:protocol>
+                      <xsl:call-template name="writeCharacterStringElement">
+                        <xsl:with-param name="elementName" select="'gmd:name'"/>
+                        <xsl:with-param name="nodeWithStringToWrite" select="cit:title"/>
+                      </xsl:call-template>
+
+                      <xsl:call-template name="writeCharacterStringElement">
+                        <xsl:with-param name="elementName" select="'gmd:description'"/>
+                        <xsl:with-param name="nodeWithStringToWrite" select="cit:onlineResource/cit:CI_OnlineResource/cit:description"/>
+                      </xsl:call-template>
+
+                      <xsl:variable name="type" select="local-name(..)"/>
+                      <xsl:variable name="function" select="$functionMap/entry[@key = $type]/@value"/>
+                      <xsl:if test="$function">
+                        <gmd:function>
+                          <gmd:CI_OnLineFunctionCode
+                            codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_OnLineFunctionCode"
+                            codeListValue="{$function}"/>
+                        </gmd:function>
+                      </xsl:if>
+                    </gmd:CI_OnlineResource>
+                  </gmd:onLine>
+                </xsl:for-each>
+              </gmd:MD_DigitalTransferOptions>
+            </gmd:transferOptions>
+          </gmd:MD_Distribution>
+        </gmd:distributionInfo>
+      </xsl:if>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="mdb:contentInfo">
     <gmd:contentInfo>
       <xsl:apply-templates select="*"/>
@@ -311,14 +405,10 @@
       <gmd:DQ_DataQuality>
         <xsl:if test="mdq:DQ_DataQuality/mdq:scope">
           <gmd:scope>
-            <xsl:choose>
-              <xsl:when test="mdq:DQ_DataQuality/mdq:scope/@*">
-                <xsl:apply-templates select="mdq:DQ_DataQuality/mdq:scope/@*"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:apply-templates select="mdq:DQ_DataQuality/mdq:scope/mcc:DQ_Scope/*"/>
-              </xsl:otherwise>
-            </xsl:choose>
+            <gmd:DQ_Scope>
+             <xsl:apply-templates select="mdq:DQ_DataQuality/mdq:scope/@*"/>
+             <xsl:apply-templates select="mdq:DQ_DataQuality/mdq:scope/mcc:MD_Scope/*"/>
+            </gmd:DQ_Scope>
           </gmd:scope>
         </xsl:if>
         
@@ -339,7 +429,7 @@
               <xsl:call-template name="writeCodelistElement">
                 <xsl:with-param name="elementName" select="'gmd:evaluationMethodType'"/>
                 <xsl:with-param name="codeListName" select="'gmd:DQ_EvaluationMethodTypeCode'"/>
-                <xsl:with-param name="codeListValue" select="mdq:evaluation/mdq:DQ_FullInspection/mdq:evaluationMethodType/mdq:DQ_EvaluationMethodTypeCode "/>
+                <xsl:with-param name="codeListValue" select="mdq:evaluation/mdq:DQ_FullInspection/mdq:evaluationMethodType/mdq:DQ_EvaluationMethodTypeCode/@codeListValue"/>
               </xsl:call-template>
               
               <xsl:call-template name="writeCharacterStringElement">
@@ -426,30 +516,19 @@
   <xsl:template match="cit:CI_Citation/cit:date">
     <gmd:date>
       <xsl:apply-templates select="@*"/>
-      <xsl:choose>
-        <xsl:when test="@gco2:nilReason"/>
-        <xsl:otherwise>
-          <gmd:CI_Date>
-            <gmd:date>
-              <xsl:choose>
-                <xsl:when test="descendant::gmd:date/@gco2:nilReason">
-                  <xsl:copy-of select="descendant::gmd:date/@gco2:nilReason"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:call-template name="writeDateTime"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </gmd:date>
-            <xsl:for-each select="descendant::cit:dateType">
-              <xsl:call-template name="writeCodelistElement">
-                <xsl:with-param name="elementName" select="'gmd:dateType'"/>
-                <xsl:with-param name="codeListName" select="'gmd:CI_DateTypeCode'"/>
-                <xsl:with-param name="codeListValue" select="cit:CI_DateTypeCode"/>
-              </xsl:call-template>
-            </xsl:for-each>
-          </gmd:CI_Date>
-        </xsl:otherwise>
-      </xsl:choose>
+      <gmd:CI_Date>
+        <gmd:date>
+          <xsl:copy-of select="descendant::gmd:date/@gco2:nilReason"/>
+          <xsl:call-template name="writeDateTime"/>
+        </gmd:date>
+        <xsl:for-each select="descendant::cit:dateType">
+          <xsl:call-template name="writeCodelistElement">
+            <xsl:with-param name="elementName" select="'gmd:dateType'"/>
+            <xsl:with-param name="codeListName" select="'gmd:CI_DateTypeCode'"/>
+            <xsl:with-param name="codeListValue" select="cit:CI_DateTypeCode/@codeListValue"/>
+          </xsl:call-template>
+        </xsl:for-each>
+      </gmd:CI_Date>
     </gmd:date>
   </xsl:template>
   <xsl:template match="cit:CI_Citation/cit:editionDate">
@@ -712,34 +791,12 @@
   </xsl:template>
   
   <xsl:template name="writeDateTime">
-    <!--
-      have to account for gco:Date and gco:DateTime which are both valid descendants of gmd:date
-     -->
-    <gco:DateTime>
-      <xsl:copy-of select="@* | descendant::gmd:date/@*"/>
-      <xsl:for-each select="descendant::gco2:Date">
-        <xsl:variable name="dateNodeString">
-          <xsl:value-of select="xs:string(.)"/>
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="string-length($dateNodeString)=6">
-            <xsl:value-of select="concat(substring($dateNodeString,1,4),'-',substring($dateNodeString,5,2),'-01T00:00:00')"/>
-          </xsl:when>
-          <xsl:when test="string-length($dateNodeString)=7">
-            <xsl:value-of select="concat(substring($dateNodeString,1,4),'-',substring($dateNodeString,6,2),'-01T00:00:00')"/>
-          </xsl:when>
-          <xsl:when test="string-length($dateNodeString)=8">
-            <xsl:value-of select="concat(substring($dateNodeString,1,4),'-',substring($dateNodeString,5,2),'-',substring($dateNodeString,7,2),'T00:00:00')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="concat($dateNodeString,'T00:00:00')"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:for-each>
-      <xsl:for-each select="descendant::gco2:DateTime">
+    <xsl:for-each select="descendant::gco2:*">
+      <xsl:element name="{concat('gco:',local-name(.))}">
+        <xsl:copy-of select="@*"/>
         <xsl:value-of select="."/>
-      </xsl:for-each>
-    </gco:DateTime>
+      </xsl:element>
+    </xsl:for-each>
   </xsl:template>
   
   <xsl:template name="getNamespacePrefix">
