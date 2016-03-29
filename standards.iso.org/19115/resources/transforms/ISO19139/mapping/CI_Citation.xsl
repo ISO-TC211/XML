@@ -72,31 +72,27 @@
     <xsl:template match="gmd:CI_Citation/gmd:date" mode="from19139to19115-3">
         <cit:date>
             <xsl:apply-templates select="@*" mode="from19139to19115-3"/>
-            <xsl:choose>
-                <xsl:when test="normalize-space()=''"/>
-                <xsl:otherwise>
-                    <cit:CI_Date>
+            <xsl:if test="exists(descendant::gmd:date/*) or
+                          exists(descendant::gmd:dateType)">
+                <cit:CI_Date>
+                    <xsl:if test="
+                        exists(descendant::gmd:date/@gcoold:nilReason) or
+                        normalize-space(descendant::gmd:date/*/text()) != ''">
                         <cit:date>
-                            <xsl:choose>
-                                <xsl:when test="descendant::gmd:date/@gcoold:nilReason">
-                                    <!-- added this to get gmd:dates with gco:nilReason and dateTypes -->
-                                    <xsl:attribute name="gco:nilReason" select="descendant::gmd:date/@gcoold:nilReason"/>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:call-template name="writeDateTime"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
+                            <xsl:apply-templates mode="from19139to19115-3" 
+                                                 select="descendant::gmd:date/@gcoold:nilReason"/>
+                            <xsl:call-template name="writeDateTime"/>
                         </cit:date>
-                        <xsl:for-each select="descendant::gmd:dateType">
-                            <xsl:call-template name="writeCodelistElement">
-                                <xsl:with-param name="elementName" select="'cit:dateType'"/>
-                                <xsl:with-param name="codeListName" select="'cit:CI_DateTypeCode'"/>
-                                <xsl:with-param name="codeListValue" select="gmd:CI_DateTypeCode/@codeListValue"/>
-                            </xsl:call-template>
-                        </xsl:for-each>
-                    </cit:CI_Date>
-                </xsl:otherwise>
-            </xsl:choose>
+                    </xsl:if>
+                    <xsl:for-each select="descendant::gmd:dateType">
+                        <xsl:call-template name="writeCodelistElement">
+                            <xsl:with-param name="elementName" select="'cit:dateType'"/>
+                            <xsl:with-param name="codeListName" select="'cit:CI_DateTypeCode'"/>
+                            <xsl:with-param name="codeListValue" select="gmd:CI_DateTypeCode/@codeListValue"/>
+                        </xsl:call-template>
+                    </xsl:for-each>
+                </cit:CI_Date>
+            </xsl:if>
         </cit:date>
     </xsl:template>
 

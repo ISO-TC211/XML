@@ -691,8 +691,7 @@
   </xsl:template>
 
   <xsl:template match="gml32:*">
-    <xsl:element name="{local-name(.)}"
-                 namespace="http://www.opengis.net/gml">
+    <xsl:element name="gml:{local-name(.)}">
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
     </xsl:element>
