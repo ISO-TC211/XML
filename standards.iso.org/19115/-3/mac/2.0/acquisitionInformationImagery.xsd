@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" 
-  xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" 
-  targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <include schemaLocation="event.xsd"/>
   <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation" type="mac:MI_AcquisitionInformation_Type">
     <annotation>
       <documentation>Description: Designations for the measuring instruments and their bands, the platform carrying them, and the mission to which the data contributes FGDC: Platform_and_Instrument_Identification, Mission_Information shortName: PltfrmInstId</documentation>
@@ -58,6 +56,8 @@
           <element name="maxRelativeHumidity" type="gco:Real_PropertyType"/>
           <element name="maxAltitude" type="gco:Real_PropertyType"/>
           <element name="meterologicalConditions" type="gco:CharacterString_PropertyType"/>
+          <element name="solarAzimuth" type="gco:Real_PropertyType"/>
+          <element name="solarElevation" type="gco:Real_PropertyType"/>          
         </sequence>
       </extension>
     </complexContent>
@@ -165,7 +165,7 @@
           </element>
           <element name="otherProperty" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
-              <documentation>instance of otherAttributeType that defines attributes not explicitly included in MI_Platform</documentation>
+              <documentation>instance of otherPropertyType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
           </element>
           <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/>
@@ -308,6 +308,17 @@
           <element maxOccurs="unbounded" minOccurs="0" name="objective" type="mac:MI_Objective_PropertyType"/>
           <element minOccurs="0" name="plan" type="mac:MI_Plan_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="significantEvent" type="mac:MI_Event_PropertyType"/>
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1">
+            <annotation>
+              <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
+            </annotation>
+          </element>
+          <element name="otherProperty" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1">
+            <annotation>
+              <documentation>instance of otherPropertyType that defines attributes not explicitly included in MI_Operation</documentation>
+            </annotation>
+          </element>
+          
         </sequence>
       </extension>
     </complexContent>
@@ -372,7 +383,7 @@
     <complexContent>
       <extension base="mcc:Abstract_Platform_Type">
         <sequence>
-          <element maxOccurs="unbounded" minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
+          <element name="citation" type="mcc:Abstract_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
             <annotation>
               <documentation>Description: complete citation of the platform FGDC: Platform_Full_Name Position: 3 shortName: pltNam Conditional: if shortName not specified</documentation>
             </annotation>
@@ -400,10 +411,10 @@
           </element>
           <element name="otherProperty" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
-              <documentation>instance of otherAttributeType that defines attributes not explicitly included in MI_Platform</documentation>
+              <documentation>instance of otherPropertyType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
           </element>
-          <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>         
+          <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
       </extension>
     </complexContent>
