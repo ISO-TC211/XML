@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0"
-  xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified"
-  targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
   <!--  <include schemaLocation="mac.xsd"/>-->
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
@@ -9,8 +7,7 @@
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation" type="mac:MI_AcquisitionInformation_Type">
     <annotation>
-      <documentation>Description: Designations for the measuring instruments and their bands, the platform carrying them, and the mission to which the data contributes FGDC:
-        Platform_and_Instrument_Identification, Mission_Information shortName: PltfrmInstId</documentation>
+      <documentation>Description: Designations for the measuring instruments and their bands, the platform carrying them, and the mission to which the data contributes FGDC: Platform_and_Instrument_Identification, Mission_Information shortName: PltfrmInstId</documentation>
     </annotation>
   </element>
   <complexType name="MI_AcquisitionInformation_Type">
@@ -160,7 +157,7 @@
             </annotation>
           </element>
           <element minOccurs="0" name="mountedOn" type="mac:MI_Platform_PropertyType"/>
-          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0"  maxOccurs="1">
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
@@ -170,7 +167,8 @@
               <documentation>instance of otherAttributeType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
           </element>
-          <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0" />
+          <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/>
+          <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
       </extension>
     </complexContent>
@@ -178,6 +176,32 @@
   <complexType name="MI_Instrument_PropertyType">
     <sequence minOccurs="0">
       <element ref="mac:MI_Instrument"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =========================================================================== -->
+  <complexType name="MI_Sensor_Type">
+    <annotation>
+      <documentation>Sensor Description</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="mac:MI_Instrument_Type">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="hosted" type="mac:MI_Instrument_PropertyType"/>
+          <!--
+          <element name="history" type="mac:MI_EventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        -->
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ........................................................................ -->
+  <element name="MI_Sensor" substitutionGroup="mac:MI_Instrument" type="mac:MI_Sensor_Type"/>
+  <!-- ........................................................................ -->
+  <complexType name="MI_Sensor_PropertyType">
+    <sequence>
+      <element ref="mac:MI_Sensor" minOccurs="0"/>
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
@@ -213,8 +237,7 @@
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="extent" type="mcc:Abstract_Extent_PropertyType">
             <annotation>
-              <documentation>Description: extent information including the bounding box, bounding polygon, vertical and temporal extent of the objective Position: 6 shortName:
-                trgtExtent</documentation>
+              <documentation>Description: extent information including the bounding box, bounding polygon, vertical and temporal extent of the objective Position: 6 shortName: trgtExtent</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sensingInstrument" type="mac:MI_Instrument_PropertyType"/>
@@ -253,8 +276,7 @@
         <sequence>
           <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>Description: Description of the mission on which the platform observations are part and the objectives of that mission FGDC: Mission_Description Position: 3 shortName:
-                mssnDesc</documentation>
+              <documentation>Description: Description of the mission on which the platform observations are part and the objectives of that mission FGDC: Mission_Description Position: 3 shortName: mssnDesc</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
@@ -372,7 +394,7 @@
             </annotation>
           </element>
           <element maxOccurs="unbounded" name="instrument" type="mac:MI_Instrument_PropertyType"/>
-          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0"  maxOccurs="1">
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
@@ -523,8 +545,7 @@
   </complexType>
   <element name="MI_SensorTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
-      <documentation>&lt;UsedBy&gt; &lt;NameSpace&gt;ISO 19115-2 Metadata - Imagery&lt;/NameSpace&gt; &lt;Class&gt;MI_Instrument&lt;/Class&gt; &lt;Package&gt;Acquisition information -
-        Imagery&lt;/Package&gt; &lt;Attribute&gt;type&lt;/Attribute&gt; &lt;Type&gt;MI_SensorTypeCode&lt;/Type&gt; &lt;UsedBy&gt;</documentation>
+      <documentation>&lt;UsedBy&gt; &lt;NameSpace&gt;ISO 19115-2 Metadata - Imagery&lt;/NameSpace&gt; &lt;Class&gt;MI_Instrument&lt;/Class&gt; &lt;Package&gt;Acquisition information - Imagery&lt;/Package&gt; &lt;Attribute&gt;type&lt;/Attribute&gt; &lt;Type&gt;MI_SensorTypeCode&lt;/Type&gt; &lt;UsedBy&gt;</documentation>
     </annotation>
   </element>
   <complexType name="MI_SensorTypeCode_PropertyType">
