@@ -160,6 +160,17 @@
             </annotation>
           </element>
           <element minOccurs="0" name="mountedOn" type="mac:MI_Platform_PropertyType"/>
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0"  maxOccurs="1">
+            <annotation>
+              <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
+            </annotation>
+          </element>
+          <element name="otherProperty" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1">
+            <annotation>
+              <documentation>instance of otherAttributeType that defines attributes not explicitly included in MI_Platform</documentation>
+            </annotation>
+          </element>
+          <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0" />
         </sequence>
       </extension>
     </complexContent>
@@ -347,7 +358,7 @@
           </element>
           <element name="identifier" type="mcc:MD_Identifier_PropertyType">
             <annotation>
-              <documentation>Description: Unique identification of the platform shortName: pltId</documentation>
+              <documentation>Unique identification of the platform</documentation>
             </annotation>
           </element>
           <element name="description" type="gco:CharacterString_PropertyType">
@@ -361,6 +372,16 @@
             </annotation>
           </element>
           <element maxOccurs="unbounded" name="instrument" type="mac:MI_Instrument_PropertyType"/>
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0"  maxOccurs="1">
+            <annotation>
+              <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
+            </annotation>
+          </element>
+          <element name="otherProperty" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1">
+            <annotation>
+              <documentation>instance of otherAttributeType that defines attributes not explicitly included in MI_Platform</documentation>
+            </annotation>
+          </element>
         </sequence>
       </extension>
     </complexContent>
