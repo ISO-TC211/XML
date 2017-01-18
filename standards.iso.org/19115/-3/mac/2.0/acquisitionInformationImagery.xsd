@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
-  <!--  <include schemaLocation="mac.xsd"/>-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" 
+  xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" 
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mac/2.0" version="1.0">
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
@@ -169,6 +170,7 @@
           </element>
           <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/>
           <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
       </extension>
     </complexContent>
@@ -189,9 +191,6 @@
       <extension base="mac:MI_Instrument_Type">
         <sequence>
           <element maxOccurs="unbounded" minOccurs="0" name="hosted" type="mac:MI_Instrument_PropertyType"/>
-          <!--
-          <element name="history" type="mac:MI_EventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-        -->
         </sequence>
       </extension>
     </complexContent>
@@ -404,6 +403,7 @@
               <documentation>instance of otherAttributeType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
           </element>
+          <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>         
         </sequence>
       </extension>
     </complexContent>
