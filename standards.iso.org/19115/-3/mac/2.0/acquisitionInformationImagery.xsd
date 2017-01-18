@@ -17,6 +17,11 @@
     <complexContent>
       <extension base="mcc:Abstract_AcquisitionInformation_Type">
         <sequence>
+          <element name="scope" type="mcc:MD_Scope_PropertyType">
+            <annotation>
+              <documentation>the specific data to which the acquisition information applies</documentation>
+            </annotation>
+          </element>
           <element maxOccurs="unbounded" minOccurs="0" name="instrument" type="mac:MI_Instrument_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="operation" type="mac:MI_Operation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="platform" type="mac:MI_Platform_PropertyType"/>
