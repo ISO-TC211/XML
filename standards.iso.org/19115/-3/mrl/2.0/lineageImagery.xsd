@@ -160,6 +160,11 @@
               <documentation>Description: Parameters to control the processing operations, entered at run time FGDC: Command_Line_Processing_Parameter Position: 5 shortName: procInfoParam</documentation>
             </annotation>
           </element>
+          <element name="parameter" type="mrl:LE_ProcessParameter_PropertyType" minOccurs="0" maxOccurs="unbounded">
+            <annotation>
+              <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
+            </annotation>
+          </element>
           <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
@@ -230,7 +235,7 @@
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in LE_Processing</documentation>
             </annotation>
           </element>
-          <element name="resource" type="mrl:LI_Source_Type" minOccurs="0" maxOccurs="unbounded">
+          <element name="resource" type="mrl:LI_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
             <annotation>
               <documentation>xxx</documentation>
             </annotation>
