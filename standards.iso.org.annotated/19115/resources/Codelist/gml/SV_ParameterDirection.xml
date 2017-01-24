@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="SV_ParameterDirection" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>class of information to which the referencing entity applies</description>
+  <identifier codeSpace="http://www.isotc211.org/namespace/srv/2.0/2014-07-11">SV_ParameterDirection</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_12537_19488">
+      <description>the parameter is an input parameter to the service instance</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/srv/2.0/2014-07-11/SV_ParameterDirection">in</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12537_19489">
+      <description>the parameter is an output parameter to the service instance</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/srv/2.0/2014-07-11/SV_ParameterDirection">out</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12537_19490">
+      <description>the parameter is both an input and output parameter to the service instance</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/srv/2.0/2014-07-11/SV_ParameterDirection">in/out</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

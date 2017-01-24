@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="DS_InitiativeTypeCode" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>type of aggregation activity in which resources are related</description>
+  <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11">DS_InitiativeTypeCode</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19255">
+      <description>series of organized planned actions</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">campaign</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19256">
+      <description>accumulation of resources assembled for a specific purpose</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">collection</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19257">
+      <description>specific performance of a function or group of functions</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">exercise</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19258">
+      <description>process designed to find if something is effective or valid</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">experiment</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19259">
+      <description>search or systematic inquiry</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">investigation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19260">
+      <description>specific operation of a data collection system</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">mission</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19261">
+      <description>device or piece of equipment which detects or records</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">sensor</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19262">
+      <description>action that is part of a series of actions</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">operation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19263">
+      <description>vehicle or other support base that holds a sensor</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">platform</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19264">
+      <description>method of doing something involving a number of steps</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">process</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19265">
+      <description>specific planned activity</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">program</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19266">
+      <description>organized undertaking, research, or development</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">project</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19267">
+      <description>examination or investigation</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">study</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19268">
+      <description>piece of work</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">task</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_12484_19269">
+      <description>process of testing to discover or demonstrate something</description>
+      <identifier codeSpace="http://www.isotc211.org/namespace/mri/1.0/2014-07-11/DS_InitiativeTypeCode">trial</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>
