@@ -376,7 +376,11 @@
               <documentation>contact information for the party</documentation>
             </annotation>
           </element>
-        </sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="partyIdentifier" type="mcc:MD_Identifier_PropertyType">
+            <annotation>
+              <documentation>value uniquely identifying a party (individual or organization)</documentation>
+            </annotation>
+          </element></sequence>
       </extension>
     </complexContent>
   </complexType>
