@@ -22,7 +22,13 @@
   <complexType abstract="true" name="AbstractMD_SpatialRepresentation_Type">
     <complexContent>
       <extension base="mcc:Abstract_SpatialRepresentation_Type">
-        <sequence/>
+        <sequence>
+          <element minOccurs="0" name="scope" type="mcc:MD_Scope_PropertyType">
+            <annotation>
+              <documentation>level and extent of the spatial representation</documentation>
+            </annotation>
+          </element>
+        </sequence>
       </extension>
     </complexContent>
   </complexType>
