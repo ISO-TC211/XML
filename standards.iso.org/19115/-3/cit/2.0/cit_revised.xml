@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cit:party>
+    <cit:CI_Organisation>
+        <cit:name/>
+        <cit:contactInfo/>
+        <!-- partyIdentifier: An identifier for people or organizations. -->
+        <cit:partyIdentifier>
+            <mcc:MD_Identifier>
+                <mcc:code>
+                    <gco:CharacterString>/mdb:MD_Metadata/mdb:contact/cit:CI_Responsibility/cit:party/cit:CI_Organisation/cit:partyIdentifier/mcc:MD_Identifier/mcc:code/gco:CharacterString</gco:CharacterString>
+                </mcc:code>
+            </mcc:MD_Identifier>
+        </cit:partyIdentifier>
+        <cit:individual/>
+    </cit:CI_Organisation>
+</cit:party>
+
