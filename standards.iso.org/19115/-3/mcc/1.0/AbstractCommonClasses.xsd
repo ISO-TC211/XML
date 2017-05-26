@@ -337,7 +337,9 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <!-- Abstract SV_ServiceParameter added as part of ISO 19115-2 Revision 2017-01 -->
+  <!--
+    Abstract SV_ServiceParameter added as part of ISO 19115-2 Revision 2017-01 
+  -->
   <element abstract="true" name="Abstract_Parameter" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Parameter_Type"/>
   <complexType abstract="true" name="Abstract_Parameter_Type">
     <complexContent>
