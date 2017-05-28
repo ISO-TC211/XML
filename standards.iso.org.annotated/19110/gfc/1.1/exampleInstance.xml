@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfc:FC_FeatureCatalogue id="FC" 
+    xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1" 
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+    xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="
+    http://standards.iso.org/iso/19110/gfc/1.1 https://raw.githubusercontent.com/ISO-TC211/XML/master/standards.iso.org/19110/gfc/1.1/gfc.xsd">
+	<cat:name>
+		<gco:CharacterString>RoadsBridgesCatalogue</gco:CharacterString>
+	</cat:name>
+	<cat:scope>
+		<gco:CharacterString>Roads and bridges : the restrictions of the highway network</gco:CharacterString>
+	</cat:scope>
+	<cat:fieldOfApplication>
+		<gco:CharacterString>Transport, Traffic safety</gco:CharacterString>
+	</cat:fieldOfApplication>
+	<cat:versionNumber>
+		<gco:CharacterString>V1.1</gco:CharacterString>
+	</cat:versionNumber>
+	<cat:versionDate>
+		<gco:Date>2015-12-21</gco:Date>
+	</cat:versionDate>
+	<cat:language>
+	    <lan:LanguageCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/LanguageCode.xml" codeListValue="eng">eng</lan:LanguageCode>
+	</cat:language>
+	<cat:characterSet>
+	    <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
+	</cat:characterSet>
+	<cat:locale>
+		<lan:PT_Locale id="fra">
+			<lan:language>
+			    <lan:LanguageCode codeListValue="fra" codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/LanguageCode.xml">fra</lan:LanguageCode>
+			</lan:language>
+			<lan:characterEncoding>
+			    <lan:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/lan/CharacterSetCode.xml" codeListValue="utf8">UTF-8</lan:MD_CharacterSetCode>
+			</lan:characterEncoding>
+		</lan:PT_Locale>
+	</cat:locale>
+	<gfc:producer>
+		<cit:CI_Responsibility>
+		    <cit:role>
+		        <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+		    </cit:role>
+		    <cit:party>
+		        <cit:CI_Organisation>
+		            <cit:name>
+		                <gco:CharacterString>Department of Transport</gco:CharacterString>
+		            </cit:name>
+		        </cit:CI_Organisation>
+		    </cit:party>
+		</cit:CI_Responsibility>
+	</gfc:producer>
+	<gfc:featureType>
+		<!-- the Road feature type (id FT1)-->
+		<gfc:FC_FeatureType id="FT1">
+			<gfc:typeName>
+				Road
+			</gfc:typeName>
+			<gfc:definition>
+				<gco:CharacterString>A route with a specially prepared surface that is maintained for use by motor vehicles.</gco:CharacterString>
+			</gfc:definition>
+			<gfc:isAbstract>
+				<gco:Boolean>false</gco:Boolean>
+			</gfc:isAbstract>
+			<gfc:aliases>
+				truck road
+			</gfc:aliases>
+		    <gfc:designation xsi:type="lan:PT_FreeText_PropertyType">
+		        <gco:CharacterString>Road</gco:CharacterString>
+		        <lan:PT_FreeText>
+		            <lan:textGroup>
+		                <lan:LocalisedCharacterString locale="#fra">Voie routière</lan:LocalisedCharacterString>
+		            </lan:textGroup>
+		        </lan:PT_FreeText>
+		    </gfc:designation>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "number" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT1"/>
+		            <gfc:memberName>
+		                number
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>CharacterString</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "length" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT1"/>
+		            <gfc:memberName>
+		                length
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:designation xsi:type="lan:PT_FreeText_PropertyType">
+		                <gco:CharacterString>Length</gco:CharacterString>
+		                <lan:PT_FreeText>
+		                    <lan:textGroup>
+		                        <lan:LocalisedCharacterString locale="#fra">Longueur</lan:LocalisedCharacterString>
+		                    </lan:textGroup>
+		                </lan:PT_FreeText>
+		            </gfc:designation>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>Decimal</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "zMax" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT1"/>
+		            <gfc:memberName>
+		                zMax
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>Decimal</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "zMin" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT1"/>
+		            <gfc:memberName>
+		                zMin
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>Decimal</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "slope" operation -->
+		        <gfc:FC_FeatureOperation>
+		            <gfc:featureType xlink:href="#FT1"/>
+		            <gfc:memberName>
+		                slope
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:signature>
+		                <gco:CharacterString>slope((Decimal)zMin,(Decimal)zMax,(Decimal)length):Real</gco:CharacterString>
+		            </gfc:signature>
+		        </gfc:FC_FeatureOperation>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics xlink:href="#R2"/>
+		    <!-- the "supports" role -->
+		    <gfc:inheritsTo xlink:href="#IR1"/>
+		    <gfc:definitionReference>
+		        <gfc:FC_DefinitionReference>
+		            <gfc:sourceIdentifier>
+		                <gco:CharacterString>AP030</gco:CharacterString>
+		            </gfc:sourceIdentifier>
+		            
+		            <gfc:translation>
+		                <gfc:FC_LocalisedDefinitionReference>
+		                    <gfc:sourceIdentifier>
+		                        <lan:LocalisedCharacterString locale="#fra">Voie routière</lan:LocalisedCharacterString>
+		                    </gfc:sourceIdentifier>
+		                    <gfc:definitionSource>
+		                        <gfc:FC_DefinitionSource>
+		                            <gfc:source>
+		                                <cit:CI_Citation>
+		                                    <cit:title>
+		                                        <gco:CharacterString>French Hachette Dictionary</gco:CharacterString>
+		                                    </cit:title>
+		                                    <cit:date>
+		                                        <cit:CI_Date>
+		                                            <cit:date>
+		                                                <gco:Date>2010</gco:Date>
+		                                            </cit:date>
+		                                            <cit:dateType>
+		                                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+		                                            </cit:dateType>
+		                                        </cit:CI_Date>
+		                                    </cit:date>
+		                                </cit:CI_Citation>
+		                            </gfc:source>
+		                        </gfc:FC_DefinitionSource>
+		                    </gfc:definitionSource>
+		                </gfc:FC_LocalisedDefinitionReference>
+		            </gfc:translation>
+		            <gfc:definitionSource>
+		                <gfc:FC_DefinitionSource>
+		                    <gfc:source>
+		                        <cit:CI_Citation>
+		                            <cit:title>
+		                                <gco:CharacterString>DFDD</gco:CharacterString>
+		                            </cit:title>
+		                            <cit:date>
+		                                <cit:CI_Date>
+		                                    <cit:date>
+		                                        <gco:Date>1997-06-01</gco:Date>
+		                                    </cit:date>
+		                                    <cit:dateType>
+		                                        <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+		                                    </cit:dateType>
+		                                </cit:CI_Date>
+		                            </cit:date>
+		                        </cit:CI_Citation>
+		                    </gfc:source>
+		                </gfc:FC_DefinitionSource>
+		            </gfc:definitionSource>
+		        </gfc:FC_DefinitionReference>
+		    </gfc:definitionReference>
+		    <gfc:featureCatalogue xlink:href="#FC"/>
+		</gfc:FC_FeatureType>
+	</gfc:featureType>
+	<gfc:featureType>
+		<!-- the Bridge type (id FT2) -->
+		<gfc:FC_FeatureType id="FT2">
+			<gfc:typeName>
+				Bridge
+			</gfc:typeName>
+			<gfc:definition>
+				<gco:CharacterString>A structure that connects two locations and provides for the passage of a transportation route (for example: a road or a railway) over a terrain obstacle (for example: a waterbody, a gully, and/or a road). </gco:CharacterString>
+			</gfc:definition>
+			<gfc:isAbstract>
+				<gco:Boolean>false</gco:Boolean>
+			</gfc:isAbstract>
+			<gfc:aliases>
+				overpass
+			</gfc:aliases>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "name" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT2"/>
+		            <gfc:memberName>
+		                name
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>CharacterString</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "height" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT2"/>
+		            <gfc:memberName>
+		                height
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>Decimal</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "bridgeType" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT2"/>
+		            <gfc:memberName>
+		                bridgeType
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>BridgeType</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		            <gfc:listedValue>
+		                <!-- the "footbridge" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>footbridge</gco:CharacterString>
+		                    </gfc:label>
+		                    <gfc:designation xsi:type="lan:PT_FreeText_PropertyType">
+		                        <gco:CharacterString>Foot bridge</gco:CharacterString>
+		                        <lan:PT_FreeText>
+		                            <lan:textGroup>
+		                                <lan:LocalisedCharacterString locale="#fra">Pont piéton</lan:LocalisedCharacterString>
+		                            </lan:textGroup>
+		                        </lan:PT_FreeText>
+		                    </gfc:designation>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		            <gfc:listedValue>
+		                <!-- the "drawbridge" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>drawbridge</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		            <gfc:listedValue>
+		                <!-- the "portableBridge" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>portableBridge</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		            <gfc:listedValue>
+		                <!-- the "highwayBridge" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>highwayBridge</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:carrierOfCharacteristics xlink:href="#R1"/>
+		    <!-- the default "theRoad" role -->
+		    <gfc:definitionReference>
+		        <gfc:FC_DefinitionReference>
+		            <gfc:sourceIdentifier>
+		                <gco:CharacterString>AQ040</gco:CharacterString>
+		            </gfc:sourceIdentifier>
+		            <gfc:definitionSource>
+		                <gfc:FC_DefinitionSource>
+		                    <gfc:source>
+		                        <cit:CI_Citation>
+		                            <cit:title>
+		                                <gco:CharacterString>DFDD</gco:CharacterString>
+		                            </cit:title>
+		                            <cit:date>
+		                                <cit:CI_Date>
+		                                    <cit:date>
+		                                        <gco:Date>1997-06-01</gco:Date>
+		                                    </cit:date>
+		                                    <cit:dateType>
+		                                        <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+		                                    </cit:dateType>
+		                                </cit:CI_Date>
+		                            </cit:date>
+		                        </cit:CI_Citation>
+		                    </gfc:source>
+		                </gfc:FC_DefinitionSource>
+		            </gfc:definitionSource>
+		        </gfc:FC_DefinitionReference>
+		    </gfc:definitionReference>
+		    <gfc:featureCatalogue xlink:href="#FC"/>
+		</gfc:FC_FeatureType>
+	</gfc:featureType>
+	<gfc:featureType>
+		<!-- the Motorway type (id FT3)-->
+		<gfc:FC_FeatureType id="FT3">
+			<gfc:typeName>
+				Motorway
+			</gfc:typeName>
+			<gfc:definition>
+				<gco:CharacterString>Road exclusively reserved for motor traffic, whose approaches and exits are specially arranged and which has no intersections on the same level. </gco:CharacterString>
+			</gfc:definition>
+			<gfc:isAbstract>
+				<gco:Boolean>false</gco:Boolean>
+			</gfc:isAbstract>
+			<gfc:aliases>
+				expressway
+			</gfc:aliases>
+		    <gfc:carrierOfCharacteristics>
+		        <!-- the "access" attribute -->
+		        <gfc:FC_FeatureAttribute>
+		            <gfc:featureType xlink:href="#FT3"/>
+		            <gfc:memberName>
+		                access
+		            </gfc:memberName>
+		            <gfc:cardinality>
+		                <gco:CharacterString>1</gco:CharacterString>
+		            </gfc:cardinality>
+		            <gfc:valueType>
+		                <gco:TypeName>
+		                    <gco:aName>
+		                        <gco:CharacterString>AccessType</gco:CharacterString>
+		                    </gco:aName>
+		                </gco:TypeName>
+		            </gfc:valueType>
+		            <gfc:listedValue>
+		                <!-- the "free" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>free</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		            <gfc:listedValue>
+		                <!-- the "restricted" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>restricted</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		            <gfc:listedValue>
+		                <!-- the "toll" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>toll</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		            <gfc:listedValue>
+		                <!-- the "seasonal" value -->
+		                <gfc:FC_ListedValue>
+		                    <gfc:label>
+		                        <gco:CharacterString>seasonal</gco:CharacterString>
+		                    </gfc:label>
+		                </gfc:FC_ListedValue>
+		            </gfc:listedValue>
+		        </gfc:FC_FeatureAttribute>
+		    </gfc:carrierOfCharacteristics>
+		    <gfc:featureCatalogue xlink:href="#FC"/>
+		</gfc:FC_FeatureType>
+	</gfc:featureType>
+	<gfc:featureType>
+		<!-- the association between Road and Bridge types (id AS1) -->
+		<gfc:FC_FeatureAssociation id="AS1">
+			<gfc:typeName>
+				go through
+			</gfc:typeName>
+			<gfc:isAbstract>
+				<gco:Boolean>false</gco:Boolean>
+			</gfc:isAbstract>
+			<gfc:featureCatalogue xlink:href="#FC"/>
+			<gfc:roleName>
+				<!-- "theRoad" role in the association -->
+				<gfc:FC_AssociationRole id="R1">
+					<gfc:featureType xlink:href="#FT2"/>
+					<!-- "theRoad" as an attribute of Bridge -->
+					<gfc:memberName>
+						theRoad
+					</gfc:memberName>
+					<gfc:cardinality>
+						<gco:CharacterString>0..*</gco:CharacterString>
+					</gfc:cardinality>
+					<gfc:type>
+						<gfc:FC_RoleType codeList="http://standards.iso.org/.../Codelists.xml#FC_RoleType" codeListValue="ordinary"/>
+					</gfc:type>
+					<gfc:isOrdered>
+						<gco:Boolean>false</gco:Boolean>
+					</gfc:isOrdered>
+					<gfc:isNavigable>
+						<gco:Boolean>false</gco:Boolean>
+					</gfc:isNavigable>
+				    <gfc:rolePlayer xlink:href="#FT1"/>
+				    <gfc:relation xlink:href="#AS1"/>
+				</gfc:FC_AssociationRole>
+			</gfc:roleName>
+			<gfc:roleName>
+				<!-- "supports" role in the association -->
+				<gfc:FC_AssociationRole id="R2">
+					<gfc:featureType xlink:href="#FT1"/>
+					<!-- "supports" as an attribute of Road -->
+					<gfc:memberName>
+						supports
+					</gfc:memberName>
+					<gfc:cardinality>
+						<gco:CharacterString>0..*</gco:CharacterString>
+					</gfc:cardinality>
+					<gfc:type>
+						<gfc:FC_RoleType codeList="http://standards.iso.org/.../Codelists.xml#FC_RoleType" codeListValue="ordinary"/>
+					</gfc:type>
+					<gfc:isOrdered>
+						<gco:Boolean>false</gco:Boolean>
+					</gfc:isOrdered>
+					<gfc:isNavigable>
+						<gco:Boolean>true</gco:Boolean>
+					</gfc:isNavigable>
+				    <gfc:rolePlayer xlink:href="#FT2"/>
+				    <gfc:relation xlink:href="#AS1"/>
+				</gfc:FC_AssociationRole>
+			</gfc:roleName>
+		</gfc:FC_FeatureAssociation>
+	</gfc:featureType>
+	<gfc:inheritanceRelation>
+		<!-- the inheritance from Road to Motorway (id IR1) -->
+		<gfc:FC_InheritanceRelation id="IR1">
+			<gfc:description>
+				<gco:CharacterString>Motorway is a specialization of Road</gco:CharacterString>
+			</gfc:description>
+			<gfc:uniqueInstance>
+				<gco:Boolean>true</gco:Boolean>
+			</gfc:uniqueInstance>
+		    <gfc:designation xsi:type="lan:PT_FreeText_PropertyType">
+		        <gco:CharacterString>Motorway is a specialization of Road</gco:CharacterString>
+		        <lan:PT_FreeText>
+		            <lan:textGroup>
+		                <lan:LocalisedCharacterString locale="#fra">Voie rapide est une spécialisation de voie routière</lan:LocalisedCharacterString>
+		            </lan:textGroup>
+		        </lan:PT_FreeText>
+		    </gfc:designation>
+		    <gfc:subtype xlink:href="#FT3"/>
+			<gfc:supertype xlink:href="#FT1"/>
+		</gfc:FC_InheritanceRelation>
+	</gfc:inheritanceRelation>
+</gfc:FC_FeatureCatalogue>

@@ -1,0 +1,130 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>
+         Codelists from the Metadata for Services (srv) Namespace
+         
+      </title>
+   </head>
+   <h1>ISO 19115-3 Codelist Report</h1>
+   <h2>
+      Codelists from the Metadata for Services (srv) Namespace
+      
+   </h2>
+   <table>
+      <tr><b>
+            <td>Scope</td></b><td>
+            Codelists from the Metadata for Services (srv) Namespace
+            
+         </td>
+      </tr>
+      <tr><b>
+            <td>Field of Application</td></b><td>
+            ISO TC211 Metadata Standards
+            
+         </td>
+      </tr>
+      <tr><b>
+            <td>Version (Date)</td></b><td>
+            0.1
+             ()
+         </td>
+      </tr>
+   </table>
+   <h2>
+      SV_CouplingType
+       (
+      SV_CouplingType
+      ):
+   </h2><b>Description: </b>
+   class of information to which the referencing entity
+   applies
+   
+   <table width="95%" border="1" cellpadding="2" cellspacing="2">
+      <tr>
+         <th valign="top">Entry</th>
+         <th valign="top">Definition</th>
+      </tr>
+      <tr>
+         <td valign="top">
+            SV_CouplingType_loose
+            
+         </td>
+         <td valign="top">
+            service instance is loosely coupled with a data instance,
+            i.e. no MD_DataIdentification class has to be described
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            SV_CouplingType_mixed
+            
+         </td>
+         <td valign="top">
+            service instance is mixed coupled with a data instance, i.e.
+            MD_DataIdentification describes the associated data instance and additionally
+            the service instance might work with other external data
+            instances
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            SV_CouplingType_tight
+            
+         </td>
+         <td valign="top">
+            service instance is tightly coupled with a data instance,
+            i.e. MD_DataIdentification class MUST be described
+            
+         </td>
+      </tr>
+   </table><a href="#top">top</a><h2>
+      SV_ParameterDirection
+       (
+      SV_ParameterDirection
+      ):
+   </h2><b>Description: </b>
+   class of information to which the referencing entity
+   applies
+   
+   <table width="95%" border="1" cellpadding="2" cellspacing="2">
+      <tr>
+         <th valign="top">Entry</th>
+         <th valign="top">Definition</th>
+      </tr>
+      <tr>
+         <td valign="top">
+            SV_ParameterDirection_in
+            
+         </td>
+         <td valign="top">
+            the parameter is an input parameter to the service
+            instance
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            SV_ParameterDirection_out
+            
+         </td>
+         <td valign="top">
+            the parameter is an output parameter to the service
+            instance
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            SV_ParameterDirection_inout
+            
+         </td>
+         <td valign="top">
+            the parameter is both an input and output parameter to the
+            service instance
+            
+         </td>
+      </tr>
+   </table><a href="#top">top</a><hr/><i>Stylesheet: CT_CodelistHTML.xsl Version: 2015-04-17</i></html>

@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+   <!--=====Catalogue description=====-->
+   <cat:name>
+      <gco:CharacterString>Codelists from the Citation (cit) Namespace</gco:CharacterString>
+   </cat:name>
+   <cat:scope>
+      <gco:CharacterString>Codelists related to Citation (cit) Namespace</gco:CharacterString>
+   </cat:scope>
+   <cat:fieldOfApplication>
+      <gco:CharacterString>ISO TC211 Metadata Standards</gco:CharacterString>
+   </cat:fieldOfApplication>
+   <cat:versionNumber>
+      <gco:CharacterString>1.0</gco:CharacterString>
+   </cat:versionNumber>
+   <cat:versionDate>
+      <gco:Date>2015-04-18</gco:Date>
+   </cat:versionDate>
+   <cat:locale>
+      <lan:PT_Locale>
+         <lan:language>
+            <lan:LanguageCode codeList="standards.iso.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+         </lan:language>
+         <lan:characterEncoding>
+            <lan:MD_CharacterSetCode codeList="standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+         </lan:characterEncoding>
+      </lan:PT_Locale>
+   </cat:locale>
+   <!--============================= Codelists =======================================-->
+   <!--=== CI_DateTypeCode ===-->
+   <cat:codelistItem>
+      <cat:CT_Codelist id="CI_DateTypeCode">
+         <cat:identifier>
+            <gco:ScopedName codeSpace="isotc211">CI_DateTypeCode</gco:ScopedName>
+         </cat:identifier>
+         <cat:name>
+            <gco:ScopedName codeSpace="isotc211">CI_DateTypeCode</gco:ScopedName>
+         </cat:name>
+         <cat:definition>
+            <gco:CharacterString>identification of when a given event occurred</gco:CharacterString>
+         </cat:definition>
+         <cat:description>
+            <gco:CharacterString>identification of when a given event occurred</gco:CharacterString>
+         </cat:description>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_creation">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="isotc211">CI_DateTypeCode_creation</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when the resource was brought into
+                     existence</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_publication">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_publication</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when the resource was
+                     issued</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_revision">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_revision</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when the resource was examined or re-examined
+                     and improved or amended</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_expiry">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_expiry</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource expires </gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_lastUpdate">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_lastUpdate</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource was last
+                     updated</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_lastRevision">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_lastRevision</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource was last
+                     reviewed</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_nextUpdate">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_nextUpdate</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource will be next
+                     updated</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_unavailable">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_unavailable</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource became not available or
+                     obtainable</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_inForce">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_inForce</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource became in
+                     force</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_adopted">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_adopted</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource was
+                     adopted</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_deprecated">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_deprecated</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource was
+                     deprecated</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_superseded">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_superseded</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when resource was superseded or replaced by
+                     another resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_validityBegins">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_validityBegins</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>time at which the data are considered to become valid. NOTE:
+                     There could be quite a delay between creation and validity
+                     begins</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_validityExpires">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_validityExpires</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>time at which the data are no longer considered to be
+                     valid</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_released">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_released</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>the date that the resource shall be released for public
+                     access</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_DateTypeCode_distribution">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_DateTypeCode_distribution</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>date identifies when an instance of the resource was
+                     distributed</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+      </cat:CT_Codelist>
+   </cat:codelistItem>
+   <!-- CI_OnLineFunctionCode  -->
+   <cat:codelistItem>
+      <cat:CT_Codelist id="CI_OnLineFunctionCode">
+         <cat:identifier>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+               >CI_OnLineFunctionCode</gco:ScopedName>
+         </cat:identifier>
+         <cat:name>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+               >CI_OnLineFunctionCode</gco:ScopedName>
+         </cat:name>
+         <cat:definition>
+            <gco:CharacterString>function performed by the resource</gco:CharacterString>
+         </cat:definition>
+         <cat:description>
+            <gco:CharacterString>function performed by the resource</gco:CharacterString>
+         </cat:description>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_download">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_download</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online instructions for transferring data from one storage
+                     device or system to another</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_information">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_information</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online information about the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_offlineAccess">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_offlineAccess</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online instructions for requesting the resource from the
+                     provider</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_order">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_order</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online order process for obtaining the
+                     resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_search">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_search</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online search interface for seeking out information about the
+                     resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_completeMetadata">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_completeMetadata</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>complete metadata provided</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_browseGraphic">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_browseGraphic</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>browse graphic provided</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_upload">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_upload</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online resource upload capability
+                     provided</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_emailService">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_emailService</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online email service provided</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_browsing">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_browsing</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online browsing provided</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_OnLineFunctionCode_fileAccess">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_OnLineFunctionCode_fileAccess</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>online file access provided</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+      </cat:CT_Codelist>
+   </cat:codelistItem>
+   <!-- CI_PresentationFormCode  -->
+   <cat:codelistItem>
+      <cat:CT_Codelist id="CI_PresentationFormCode">
+         <cat:identifier>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+               >CI_PresentationFormCode</gco:ScopedName>
+         </cat:identifier>
+         <cat:name>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+               >CI_PresentationFormCode</gco:ScopedName>
+         </cat:name>
+         <cat:definition>
+            <gco:CharacterString>mode in which the data are represented</gco:CharacterString>
+         </cat:definition>
+         <cat:description>
+            <gco:CharacterString>mode in which the data are represented</gco:CharacterString>
+         </cat:description>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_documentDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_documentDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>digital representation of a primarily textual item (can
+                     contain illustrations also)</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_documentHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_documentHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>representation of a primarily textual item (can contain
+                     illustrations also) on paper, photographic material, or other
+                     media</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_imageDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_imageDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>likeness of natural or man-made features, objects, and
+                     activities acquired through the sensing of visual or any other segment of the
+                     electromagnetic spectrum by sensors, such as thermal infrared, and high
+                     resolution radar and stored in digital format</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_imageHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_imageHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>likeness of natural or man-made features, objects, and
+                     activities acquired through the sensing of visual or any other segment of the
+                     electromagnetic spectrum by sensors, such as thermal infrared, and high
+                     resolution radar and reproduced on paper, photographic material, or other media
+                     for use directly by the human user</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_mapDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_mapDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>map represented in raster or vector
+                     form</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_mapHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_mapHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>map printed on paper, photographic material, or other media
+                     for use directly by the human user</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_modelDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_modelDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>multi-dimensional digital representation of a feature,
+                     process, etc.</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_modelHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_modelHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>3-dimensional, physical model</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_profileDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_profileDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>vertical cross-section in digital form</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_profileHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_profileHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>vertical cross-section printed on paper,
+                     etc.</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_tableDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_tableDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>digital representation of facts or figures systematically
+                     displayed, especially in columns</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_tableHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_tableHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>representation of facts or figures systematically displayed,
+                     especially in columns, printed on paper, photographic material, or other
+                     media</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_videoDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_videoDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>digital video recording</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_videoHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_videoHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>video recording on film</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_audioDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_audioDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>digital audio recording</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_audioHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_audioHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>audio recording delivered by analog media, such as a magnetic
+                     tape</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_multimediaDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_multimediaDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>information representation using simultaneously various
+                     digital modes for text, sound, image</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_multimediaHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_multimediaHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>information representation using simultaneously various
+                     analog modes for text, sound, image</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_physicalSample">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_physicalSample</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>a physical object, e.g. Rock or mineral sample, microscope
+                     slide</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_diagramDigital">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_diagramDigital</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>information represented graphically by charts such as pie
+                     chart, bar chart, and other type of diagrams and recorded in digital
+                     format</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_PresentationFormCode_diagramHardcopy">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_PresentationFormCode_diagramHardcopy</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>information represented graphically by charts such as pie
+                     chart, bar chart, and other type of diagrams and printed on paper,
+                     phototographic material, or other media</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+      </cat:CT_Codelist>
+   </cat:codelistItem>
+   <!-- CI_RoleCode  -->
+   <cat:codelistItem>
+      <cat:CT_Codelist id="CI_RoleCode">
+         <cat:identifier>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">CI_RoleCode</gco:ScopedName>
+         </cat:identifier>
+         <cat:name>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115">CI_RoleCode</gco:ScopedName>
+         </cat:name>
+         <cat:definition>
+            <gco:CharacterString>function performed by the responsible party</gco:CharacterString>
+         </cat:definition>
+         <cat:description>
+            <gco:CharacterString>function performed by the responsible party</gco:CharacterString>
+         </cat:description>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_resourceProvider">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_resourceProvider</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party that supplies the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_custodian">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_custodian</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party that accepts accountability and responsibility for the
+                     resource and ensures appropriate care and maintenance of the
+                     resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_owner">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_owner</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party that owns the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_user">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_user</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who uses the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_distributor">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_distributor</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who distributes the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_originator">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_originator</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who created the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_pointOfContact">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_pointOfContact</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who can be contacted for acquiring knowledge about or
+                     acquisition of the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_principalInvestigator">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_principalInvestigator</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>key party responsible for gathering information and
+                     conducting research</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_processor">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_processor</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who has processed the data in a manner such that the
+                     resource has been modified</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_publisher">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_publisher</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who published the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_author">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_author</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who authored the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_sponsor">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_sponsor</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who speaks for the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_coAuthor">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_coAuthor</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who jointly authors the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_collaborator">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_collaborator</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who assists with the generation of the resource other
+                     than the principal investigator</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_editor">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_editor</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who reviewed or modified the resource to improve the
+                     content</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_mediator">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_mediator</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>a class of entity that mediates access to the resource and
+                     for whom the resource is intended or useful</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_rightsHolder">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_rightsHolder</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party owning or managing rights over the
+                     resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_contributor">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_contributor</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party contributing to the resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_funder">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_funder</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party providing monetary support for the
+                     resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_RoleCode_stakeholder">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_RoleCode_stakeholder</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>party who has an interest in the resource or the use of the
+                     resource</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+      </cat:CT_Codelist>
+   </cat:codelistItem>
+   <!-- CI_TelephoneTypeCode  -->
+   <cat:codelistItem>
+      <cat:CT_Codelist id="CI_TelephoneTypeCode">
+         <cat:identifier>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+               >CI_TelephoneTypeCode</gco:ScopedName>
+         </cat:identifier>
+         <cat:name>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+               >CI_TelephoneTypeCode</gco:ScopedName>
+         </cat:name>
+         <cat:definition>
+            <gco:CharacterString>type of telephone</gco:CharacterString>
+         </cat:definition>
+         <cat:description>
+            <gco:CharacterString>type of telephone</gco:CharacterString>
+         </cat:description>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_TelephoneTypeCode_voice">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_TelephoneTypeCode_voice</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>telephone provides voice service</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_TelephoneTypeCode_fax">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_TelephoneTypeCode_fax</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>telephone provides facsimile service</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="CI_TelephoneTypeCode_sms">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
+                     >CI_TelephoneTypeCode_sms</gco:ScopedName>
+               </cat:identifier>
+               <cat:definition>
+                  <gco:CharacterString>telephone provides sms service</gco:CharacterString>
+               </cat:definition>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+      </cat:CT_Codelist>
+   </cat:codelistItem>
+   <!--=== EOF ===-->
+</cat:CT_CodelistCatalogue>
