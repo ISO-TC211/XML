@@ -19,26 +19,26 @@ A zip archive of the complete official schema is available at http://standards.i
 
 Summary information about all of these namespaces is avaialble at http://standards.iso.org/iso/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
 
-##Package Diagram
+## Package Diagram
 UML Package Diagrams show dependencies between the current namespace and others as well as the entities defined in each namespace.
 ##Description
 The Description includes information about the ISO Standard implemented in the namespace and general information about the purpose and content of the namespace.
-##Sample XML Files
+## Sample XML Files
 Each namespace directory includes sample XML files for the namespace and for demonstrating related schematron rules. The namespace sample files are called xxx.xml (for namespace xxx). The schematron rule examples include xxx_valid.xml and xxx_invalid.xml examples for each schematron rule.
-##Codelists
+## Codelists
 If the namespace includes codelists, an xml (codelists.xml) and html (codelists.html) version of the codelists are provided.
-##Namespace Location
+## Namespace Location
 The standard location for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/xxx/Version. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0> or
 <http://standards.iso.org/iso/19157/-2/mdq/1.0>.
-##Schema Location
+## Schema Location
 The standard schema for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/xxx/Version/xxx.xsd. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0/cit.xsd> or
 <http://standards.iso.org/iso/19157/-2/mdq/1.0/mdq.xsd>.
 These XML schema include (indirectly) all the implemented concepts of the xxx namespace, but they do not contain the declaration of any types.
-##Related Schema
+## Related Schema
 The xxx.xsd files reference other schemas that define the types included in the namespace. These usually have more descriptive names than xxx.xsd, e.g. citation.xsd.
-##Related Namespaces
+## Related Namespaces
 If there are dependencies  between namespace xxx and others, the standard prefix for the namespace, the URI (absolute), and the schema location (relative) are listed here.
-##Schematron Rules
+## Schematron Rules
 If the namespace includes requirements that can not be tested 
