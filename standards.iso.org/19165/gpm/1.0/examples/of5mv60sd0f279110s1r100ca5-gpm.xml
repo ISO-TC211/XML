@@ -1,0 +1,1983 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="../preservation.xsl"?>
+<gpm:GP_PreservationMetadata xmlns:gpm="http://standards.iso.org/iso/19165/gpm/1.0" 
+	xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" 
+	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+	xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://standards.iso.org/iso/19115/-3/gts"  
+	xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0" xmlns:mai="http://standards.iso.org/iso/19115/-3/mai/1.0" 
+	xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+	xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0" xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" 
+	xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
+	xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/1.0" xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/1.0" 
+	xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0" xmlns:mic="http://standards.iso.org/iso/19115/-3/mic/1.0" 
+	xmlns:mil="http://standards.iso.org/iso/19115/-3/mil/1.0" xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" 
+	xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0" 
+	xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0" xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" 
+	xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://standards.iso.org/iso/19165/gpm/1.0 ../gpm.xsd">
+	<mdb:metadataIdentifier>
+		<mcc:MD_Identifier>
+			<mcc:code>
+				<gco:CharacterString>of5mv60sd0f279110s1r100ca5</gco:CharacterString>
+			</mcc:code>
+		</mcc:MD_Identifier>
+	</mdb:metadataIdentifier>
+	<mdb:defaultLocale>
+		<lan:PT_Locale>
+			<lan:language>
+				<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
+			</lan:language>
+			<lan:characterEncoding>
+				<lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue=""/>
+			</lan:characterEncoding>
+		</lan:PT_Locale>
+	</mdb:defaultLocale>
+	<mdb:metadataScope>
+		<mdb:MD_MetadataScope>
+			<mdb:resourceScope>
+				<mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue=""/>
+			</mdb:resourceScope>
+		</mdb:MD_MetadataScope>
+	</mdb:metadataScope>
+	<mdb:contact>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Organisation>
+					<cit:name>
+						<gco:CharacterString>Institut Cartogràfic de Catalunya (ICC)</gco:CharacterString>
+					</cit:name>
+					<cit:contactInfo>
+						<cit:CI_Contact>
+							<cit:phone>
+								<cit:CI_Telephone>
+									<cit:number>
+										<gco:CharacterString>+34 93 567 15 00</gco:CharacterString>
+									</cit:number>
+									<cit:numberType>
+										<cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+									</cit:numberType>
+								</cit:CI_Telephone>
+							</cit:phone>
+							<cit:phone>
+								<cit:CI_Telephone>
+									<cit:number>
+										<gco:CharacterString>+34 93 567 15 67</gco:CharacterString>
+									</cit:number>
+									<cit:numberType>
+										<cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+									</cit:numberType>
+								</cit:CI_Telephone>
+							</cit:phone>
+							<cit:address>
+								<cit:CI_Address>
+									<cit:deliveryPoint>
+										<gco:CharacterString>Parc de Montjuïc</gco:CharacterString>
+									</cit:deliveryPoint>
+									<cit:city>
+										<gco:CharacterString>Barcelona</gco:CharacterString>
+									</cit:city>
+									<cit:postalCode>
+										<gco:CharacterString>E-08038</gco:CharacterString>
+									</cit:postalCode>
+									<cit:electronicMailAddress>
+										<gco:CharacterString>centre.atencio@icc.cat</gco:CharacterString>
+									</cit:electronicMailAddress>
+								</cit:CI_Address>
+							</cit:address>
+							<cit:onlineResource>
+								<cit:CI_OnlineResource>
+									<cit:linkage>
+										<gco:CharacterString>http://www.icc.cat</gco:CharacterString>
+									</cit:linkage>
+									<cit:function>
+										<cit:CI_OnLineFunctionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="information"/>
+									</cit:function>
+								</cit:CI_OnlineResource>
+							</cit:onlineResource>
+						</cit:CI_Contact>
+					</cit:contactInfo>
+				</cit:CI_Organisation>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</mdb:contact>
+	<mdb:dateInfo>
+		<cit:CI_Date>
+			<cit:date>
+				<gco:DateTime>2013-08-01T00:00:00</gco:DateTime>
+			</cit:date>
+			<cit:dateType>
+				<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode>
+			</cit:dateType>
+		</cit:CI_Date>
+	</mdb:dateInfo>
+	<mdb:metadataStandard>
+		<cit:CI_Citation>
+			<cit:title>
+				<gco:CharacterString>ISO 19115:2003/Cor.1:2006 Geographic Information - Metadata</gco:CharacterString>
+			</cit:title>
+			<cit:edition>
+				<gco:CharacterString>IS</gco:CharacterString>
+			</cit:edition>
+		</cit:CI_Citation>
+	</mdb:metadataStandard>
+	<mdb:alternativeMetadataReference>
+		<cit:CI_Citation>
+			<cit:title>
+				<gco:CharacterString>ESPECIFICACIONS TÈCNIQUES de l'Ortofoto de Catalunya 1:5000 (OF-5M) v6.1</gco:CharacterString>
+			</cit:title>
+			<cit:date>
+				<cit:CI_Date>
+					<cit:date>
+						<gco:DateTime>2012-12-31T00:00:00</gco:DateTime>
+					</cit:date>
+					<cit:dateType>
+						<cit:CI_DateTypeCode codeListValue="revision" codeList="codeListLocation#CI_DateTypeCode">revisió 1.0</cit:CI_DateTypeCode>
+					</cit:dateType>
+				</cit:CI_Date>
+			</cit:date>
+			<cit:edition>
+				<gco:CharacterString>6.1</gco:CharacterString>
+			</cit:edition>
+			<cit:citedResponsibleParty>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeListValue="originator" codeList="codeListLocation#CI_RoleCode">creador</cit:CI_RoleCode>
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation>
+							<cit:name>
+								<gco:CharacterString>Institut Cartogràfic de Catalunya</gco:CharacterString>
+							</cit:name>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</cit:citedResponsibleParty>
+		</cit:CI_Citation>
+	</mdb:alternativeMetadataReference>
+	<mdb:spatialRepresentationInfo>
+		<msr:MD_Georectified>
+			<msr:numberOfDimensions>
+				<gco:Integer>2</gco:Integer>
+			</msr:numberOfDimensions>
+			<msr:axisDimensionProperties>
+				<msr:MD_Dimension>
+					<msr:dimensionName>
+						<msr:MD_DimensionNameTypeCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="row"/>
+					</msr:dimensionName>
+					<msr:dimensionSize>
+						<gco:Integer>4777</gco:Integer>
+					</msr:dimensionSize>
+					<msr:resolution>
+						<gco:Measure uom="m">0.5</gco:Measure>
+					</msr:resolution>
+				</msr:MD_Dimension>
+			</msr:axisDimensionProperties>
+			<msr:axisDimensionProperties>
+				<msr:MD_Dimension>
+					<msr:dimensionName>
+						<msr:MD_DimensionNameTypeCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="column"/>
+					</msr:dimensionName>
+					<msr:dimensionSize>
+						<gco:Integer>7050</gco:Integer>
+					</msr:dimensionSize>
+					<msr:resolution>
+						<gco:Measure uom="m">0.5</gco:Measure>
+					</msr:resolution>
+				</msr:MD_Dimension>
+			</msr:axisDimensionProperties>
+			<msr:cellGeometry>
+				<msr:MD_CellGeometryCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="area"/>
+			</msr:cellGeometry>
+			<msr:transformationParameterAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</msr:transformationParameterAvailability>
+			<msr:checkPointAvailability>
+				<gco:Boolean>false</gco:Boolean>
+			</msr:checkPointAvailability>
+			<msr:cornerPoints>
+				<gml:Point gml:id="ID0002">
+					<gml:coordinates decimal="." cs="," ts=" ">394259.75, 4620499.25</gml:coordinates>
+				</gml:Point>
+			</msr:cornerPoints>
+			<msr:cornerPoints>
+				<gml:Point gml:id="ID0003">
+					<gml:coordinates decimal="." cs="," ts=" ">397784.25, 4618111.25</gml:coordinates>
+				</gml:Point>
+			</msr:cornerPoints>
+			<msr:pointInPixel>
+				<msr:MD_PixelOrientationCode>centre</msr:MD_PixelOrientationCode>
+			</msr:pointInPixel>
+			<msr:transformationDimensionMapping>
+				<gco:CharacterString>La dimensió columna de la imatge correspon a l'eix X (Est) del sistema de referència de coordenades i el seu valor creix d'oest a est. La dimensió fila correspon a l'eix Y (Nord) i el seu valor creix de nord a sud.</gco:CharacterString>
+			</msr:transformationDimensionMapping>
+		</msr:MD_Georectified>
+	</mdb:spatialRepresentationInfo>
+	<mdb:referenceSystemInfo>
+		<mrs:MD_ReferenceSystem id="ID0004">
+			<mrs:referenceSystemIdentifier>
+				<mcc:MD_Identifier>
+					<mcc:code>
+						<gco:CharacterString>EPSG:25831 - ETRS89 / UTM zone 31N</gco:CharacterString>
+					</mcc:code>
+				</mcc:MD_Identifier>
+			</mrs:referenceSystemIdentifier>
+		</mrs:MD_ReferenceSystem>
+	</mdb:referenceSystemInfo>
+	<mdb:identificationInfo>
+		<mri:MD_DataIdentification id="ID0005">
+			<mri:citation>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Ortofoto de Catalunya 1:5 000 - Full "Monistrolet" (279110)</gco:CharacterString>
+					</cit:title>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>1987-10-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>1998-08-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2002-12-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2005-06-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2007-05-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2009-07-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2010-12-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2011-09-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2013-07-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2013-07-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2013-07-01T00:00:00</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:edition>
+						<gco:CharacterString>10</gco:CharacterString>
+					</cit:edition>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:code>
+								<gco:CharacterString>279110</gco:CharacterString>
+							</mcc:code>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:authority>
+								<cit:CI_Citation>
+									<cit:title/>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role/>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>Cintoteca</gco:CharacterString>
+													</cit:name>
+													<cit:individual>
+														<cit:CI_Individual>
+															<cit:name>
+																<gco:CharacterString>Cuidant Delacinto</gco:CharacterString>
+															</cit:name>
+															<cit:contactInfo>
+																<cit:CI_Contact>
+																	<cit:phone>
+																		<cit:CI_Telephone>
+																			<cit:number>
+																				<gco:CharacterString>+34935671500</gco:CharacterString>
+																			</cit:number>
+																		</cit:CI_Telephone>
+																	</cit:phone>
+																</cit:CI_Contact>
+															</cit:contactInfo>
+															<cit:positionName>
+																<gco:CharacterString>Responsable de la cintoteca</gco:CharacterString>
+															</cit:positionName>
+														</cit:CI_Individual>
+													</cit:individual>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+								</cit:CI_Citation>
+							</mcc:authority>
+							<mcc:code>
+								<gco:CharacterString>GPM_of5mv60sd0f279110s1r100ca5</gco:CharacterString>
+							</mcc:code>
+							<mcc:description>
+								<gco:CharacterString>Codi que identifica unívocament i, per tant, permet localitzar el recurs un cop emmagatzemat a la cintoteca.</gco:CharacterString>
+							</mcc:description>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+					<cit:citedResponsibleParty>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Organisation>
+									<cit:name>
+										<gco:CharacterString>Institut Cartogràfic de Catalunya (ICC)</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34 93 567 15 00</gco:CharacterString>
+													</cit:number>
+													<cit:numberType>
+														<cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+													</cit:numberType>
+												</cit:CI_Telephone>
+											</cit:phone>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34 93 567 15 67</gco:CharacterString>
+													</cit:number>
+													<cit:numberType>
+														<cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+													</cit:numberType>
+												</cit:CI_Telephone>
+											</cit:phone>
+											<cit:address>
+												<cit:CI_Address>
+													<cit:deliveryPoint>
+														<gco:CharacterString>Parc de Montjuïc</gco:CharacterString>
+													</cit:deliveryPoint>
+													<cit:city>
+														<gco:CharacterString>Barcelona</gco:CharacterString>
+													</cit:city>
+													<cit:postalCode>
+														<gco:CharacterString>E-08038</gco:CharacterString>
+													</cit:postalCode>
+													<cit:electronicMailAddress>
+														<gco:CharacterString>centre.atencio@icc.cat</gco:CharacterString>
+													</cit:electronicMailAddress>
+												</cit:CI_Address>
+											</cit:address>
+											<cit:onlineResource>
+												<cit:CI_OnlineResource>
+													<cit:linkage>
+														<gco:CharacterString>http://www.icc.cat</gco:CharacterString>
+													</cit:linkage>
+													<cit:function>
+														<cit:CI_OnLineFunctionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="information"/>
+													</cit:function>
+												</cit:CI_OnlineResource>
+											</cit:onlineResource>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+								</cit:CI_Organisation>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</cit:citedResponsibleParty>
+					<cit:presentationForm>
+						<cit:CI_PresentationFormCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="imageDigital"/>
+					</cit:presentationForm>
+					<cit:series>
+						<cit:CI_Series>
+							<cit:name>
+								<gco:CharacterString>Ortofoto de Catalunya 1:5 000 (OF-5M) v6.0</gco:CharacterString>
+							</cit:name>
+							<cit:issueIdentification>
+								<gco:CharacterString>6.0</gco:CharacterString>
+							</cit:issueIdentification>
+						</cit:CI_Series>
+					</cit:series>
+					<cit:otherCitationDetails>
+						<gco:CharacterString>Les especificacions de l'OF-5M v6.0 estan descrites al document "Especificacions tècniques de l'Ortofoto de Catalunya 1:5 000 (OF-5M) v6.0", que es lliura amb les dades i també es pot descarregar del Web de l'ICC.</gco:CharacterString>
+					</cit:otherCitationDetails>
+				</cit:CI_Citation>
+			</mri:citation>
+			<mri:abstract>
+				<gco:CharacterString>L'ortofoto és un document cartogràfic que consisteix en una imatge aèria vertical que ha estat rectificada de tal manera que es manté una escala uniforme a tota la superfície de la imatge. Constitueix una representació geomètrica a escala de la superfície terrestre. S'utilitzen ortofotos de la sèrie Ortofoto de Catalunya 1:2 500 per obtenir l'ortofoto 1:5 000 mitjançant tècniques de generalització. Aquesta sèrie es complementa amb la sèrie de l'Ortofoto infraroja de Catalunya 1:5 000 de la mateixa època, que aporta informació de la zona infraroja de l'espectre electromagnètic.</gco:CharacterString>
+			</mri:abstract>
+			<mri:purpose>
+				<gco:CharacterString>El motiu principal de la seva producció és disposar del recobriment ortofotogràfic de Catalunya, que proporciona a l'usuari la capacitat d'interpretar el territori. Aquesta capacitat d'anàlisi es pot centrar en temes urbanístics, ambientals, etc.</gco:CharacterString>
+			</mri:purpose>
+			<mri:status>
+				<mcc:MD_ProgressCode codeList="codeListLocation#MD_ProgressCode" codeListValue=""/>
+			</mri:status>
+			<mri:spatialRepresentationType>
+				<mcc:MD_SpatialRepresentationTypeCode codeList="codeListLocation#MD_SpatialRepresentationTypeCode" codeListValue=""/>
+			</mri:spatialRepresentationType>
+			<mri:spatialResolution>
+				<mri:MD_Resolution>
+					<mri:equivalentScale>
+						<mri:MD_RepresentativeFraction>
+							<mri:denominator>
+								<gco:Integer>5000</gco:Integer>
+							</mri:denominator>
+						</mri:MD_RepresentativeFraction>
+					</mri:equivalentScale>
+				</mri:MD_Resolution>
+			</mri:spatialResolution>
+			<mri:topicCategory>
+				<mri:MD_TopicCategoryCode>imageryBaseMapsEarthCover</mri:MD_TopicCategoryCode>
+			</mri:topicCategory>
+			<mri:extent>
+				<gex:EX_Extent>
+					<gex:geographicElement>
+						<gex:EX_GeographicBoundingBox>
+							<gex:westBoundLongitude>
+								<gco:Decimal>1.729167</gco:Decimal>
+							</gex:westBoundLongitude>
+							<gex:eastBoundLongitude>
+								<gco:Decimal>1.770833</gco:Decimal>
+							</gex:eastBoundLongitude>
+							<gex:southBoundLatitude>
+								<gco:Decimal>41.708333</gco:Decimal>
+							</gex:southBoundLatitude>
+							<gex:northBoundLatitude>
+								<gco:Decimal>41.729167</gco:Decimal>
+							</gex:northBoundLatitude>
+						</gex:EX_GeographicBoundingBox>
+					</gex:geographicElement>
+					<gex:temporalElement>
+						<gex:EX_TemporalExtent>
+							<gex:extent>
+								<gml:TimePeriod gml:id="id001" frame="#ISO-8601">
+									<gml:begin owns="false">
+										<gml:TimeInstant gml:id="id002" frame="#ISO-8601">
+											<gml:timePosition frame="#ISO-8601">2012-06-01</gml:timePosition>
+										</gml:TimeInstant>
+									</gml:begin>
+									<gml:end owns="false">
+										<gml:TimeInstant gml:id="id003" frame="#ISO-8601">
+											<gml:timePosition frame="#ISO-8601">2012-05-01</gml:timePosition>
+										</gml:TimeInstant>
+									</gml:end>
+								</gml:TimePeriod>
+							</gex:extent>
+						</gex:EX_TemporalExtent>
+					</gex:temporalElement>
+				</gex:EX_Extent>
+			</mri:extent>
+			<mri:graphicOverview>
+				<mcc:MD_BrowseGraphic>
+					<mcc:fileName>
+						<gco:CharacterString>of5mv60sd0f279110s1r100ca5-ql.jpeg</gco:CharacterString>
+					</mcc:fileName>
+					<mcc:fileDescription>
+						<gco:CharacterString>Imatge mostra de l'aparença del fitxer</gco:CharacterString>
+					</mcc:fileDescription>
+				</mcc:MD_BrowseGraphic>
+			</mri:graphicOverview>
+			<mri:resourceFormat>
+				<gpm:GP_Format>
+					<mrd:formatSpecificationCitation/>
+					<mrd:amendmentNumber/>
+					<mrd:fileDecompressionTechnique/>
+					<mrd:medium/>
+					<gpm:formatSpecificationParticularities/>
+				</gpm:GP_Format>
+			</mri:resourceFormat>
+			<mri:descriptiveKeywords>
+				<mri:MD_Keywords>
+					<mri:keyword>
+						<gco:CharacterString>Can Servitge</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>les Cisternes de Monistrolet</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Muralla de la Noguera</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Pont Nou</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Riera de Rajadell</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Monistrolet</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Rajadell</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Sant Salvador de Guardiola</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Bages</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Catalunya</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Espanya</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Europa</gco:CharacterString>
+					</mri:keyword>
+					<mri:type>
+						<mri:MD_KeywordTypeCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="place"/>
+					</mri:type>
+				</mri:MD_Keywords>
+			</mri:descriptiveKeywords>
+			<mri:descriptiveKeywords>
+				<mri:MD_Keywords>
+					<mri:keyword>
+						<gco:CharacterString>2012</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>2012</gco:CharacterString>
+					</mri:keyword>
+					<mri:type>
+						<mri:MD_KeywordTypeCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="temporal"/>
+					</mri:type>
+				</mri:MD_Keywords>
+			</mri:descriptiveKeywords>
+			<mri:descriptiveKeywords>
+				<mri:MD_Keywords>
+					<mri:keyword>
+						<gco:CharacterString>Ortoimatge</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Imatge</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>Fotografia aèria</gco:CharacterString>
+					</mri:keyword>
+					<mri:type>
+						<mri:MD_KeywordTypeCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="theme"/>
+					</mri:type>
+				</mri:MD_Keywords>
+			</mri:descriptiveKeywords>
+			<mri:resourceConstraints>
+				<mco:MD_LegalConstraints id="ID0006">
+					<mco:accessConstraints>
+						<mco:MD_RestrictionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="copyright"/>
+					</mco:accessConstraints>
+					<mco:accessConstraints>
+						<mco:MD_RestrictionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="intellectualPropertyRights"/>
+					</mco:accessConstraints>
+					<mco:useConstraints>
+						<mco:MD_RestrictionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="license"/>
+					</mco:useConstraints>
+					<mco:useConstraints>
+						<mco:MD_RestrictionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="intellectualPropertyRights"/>
+					</mco:useConstraints>
+					<mco:useConstraints>
+						<mco:MD_RestrictionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="otherRestictions"/>
+					</mco:useConstraints>
+					<mco:otherConstraints>
+						<gco:CharacterString>La llicència d'ús de les dades elaborades per l'ICC, en qualsevol suport, s'entén atorgada únicament al sol·licitant, de manera personal, revocable, puntual, no exclusiva i intransferible, condicionada en tot moment al compliment de les clàusules que es detallen a l'apartat "Condicions d'ús" al Web de l'ICC. El sol·licitant no adquireix cap títol, dret o interès sobre la informació cedida, podent-la destinar únicament al seu ús personal o al de l'empresa a la que representa, per aquelles activitats directament relacionades amb el seu objecte social.</gco:CharacterString>
+					</mco:otherConstraints>
+				</mco:MD_LegalConstraints>
+			</mri:resourceConstraints>
+			<mri:defaultLocale>
+				<lan:PT_Locale>
+					<lan:language>
+						<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
+					</lan:language>
+					<lan:characterEncoding gco:nilReason="unknown"/>
+				</lan:PT_Locale>
+			</mri:defaultLocale>
+			<mri:supplementalInformation>
+				<gco:CharacterString>La unitat de distribució espacial (superfície de terreny coberta per cada full) de les ortofotos coincideix amb el mínim rectangle contenidor del full que correspon a la subdivisió de 8x8 fulls del Mapa Topográfico Nacional 1:50 000 (MTN) més una orla de 25 píxels. Les coordenades de les cantonades de la subdivisió estan definides en el sistema de referència ETRS89 segons el Reial Decret 1071/2007 i expressades en el sistema de referència de coordenades de les dades. L'extensió horitzontal de les dades es descriu en aquestes metadades en coordenades geogràfiques amb la longitud i latitud mínima i màxima de les cantonades del full derivat del MTN. És, per tant, un àmbit geogràfic aproximat. La sèrie recobreix el territori de Catalunya. L'extensió temporal es refereix a les dates del vol o vols a partir dels que s'ha elaborat l'ortofoto. Durant el període de transició establert al Reial Decret 1071/2007 per passar del sistema de referència ED50 al sistema ETRS89, l'ortofoto estarà disponible en ambdós sistemes. Fitxer d'imatge MrSID amb factor de compressió 10.</gco:CharacterString>
+			</mri:supplementalInformation>
+		</mri:MD_DataIdentification>
+	</mdb:identificationInfo>
+	<mdb:contentInfo>
+		<mrc:MD_CoverageDescription>
+			<mrc:attributeDescription>
+				<gco:RecordType xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Color RGB</gco:RecordType>
+			</mrc:attributeDescription>
+			<mrc:attributeGroup>
+				<mrc:MD_AttributeGroup>
+					<mrc:contentType>
+						<mrc:MD_CoverageContentTypeCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="image"/>
+					</mrc:contentType>
+					<mrc:attribute>
+						<mrc:MD_Band>
+							<mrc:sequenceIdentifier>
+								<gco:MemberName>
+									<gco:aName>
+										<gco:CharacterString>1</gco:CharacterString>
+									</gco:aName>
+									<gco:attributeType/>
+								</gco:MemberName>
+							</mrc:sequenceIdentifier>
+							<mrc:description>
+								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Vermell. Límits espectrals calculats segons FWHM.</gco:CharacterString>
+							</mrc:description>
+							<mrc:maxValue>
+								<gco:Real>676.38</gco:Real>
+							</mrc:maxValue>
+							<mrc:minValue>
+								<gco:Real>600.94</gco:Real>
+							</mrc:minValue>
+							<mrc:units>
+								<gml:UnitDefinition gml:id="ID0007">
+									<gml:identifier codeSpace="">nm</gml:identifier>
+								</gml:UnitDefinition>
+							</mrc:units>
+							<mrc:bitsPerValue>
+								<gco:Integer>8</gco:Integer>
+							</mrc:bitsPerValue>
+							<mrc:peakResponse>
+								<gco:Real>623.82</gco:Real>
+							</mrc:peakResponse>
+							<mrc:toneGradation>
+								<gco:Integer>256</gco:Integer>
+							</mrc:toneGradation>
+						</mrc:MD_Band>
+					</mrc:attribute>
+					<mrc:attribute>
+						<mrc:MD_Band>
+							<mrc:sequenceIdentifier>
+								<gco:MemberName>
+									<gco:aName>
+										<gco:CharacterString>2</gco:CharacterString>
+									</gco:aName>
+									<gco:attributeType/>
+								</gco:MemberName>
+							</mrc:sequenceIdentifier>
+							<mrc:description>
+								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Verd. Límits espectrals calculats segons FWHM.</gco:CharacterString>
+							</mrc:description>
+							<mrc:maxValue>
+								<gco:Real>595.98</gco:Real>
+							</mrc:maxValue>
+							<mrc:minValue>
+								<gco:Real>513.92</gco:Real>
+							</mrc:minValue>
+							<mrc:units>
+								<gml:UnitDefinition gml:id="ID0008">
+									<gml:identifier codeSpace="">nm</gml:identifier>
+								</gml:UnitDefinition>
+							</mrc:units>
+							<mrc:bitsPerValue>
+								<gco:Integer>8</gco:Integer>
+							</mrc:bitsPerValue>
+							<mrc:peakResponse>
+								<gco:Real>543.27</gco:Real>
+							</mrc:peakResponse>
+							<mrc:toneGradation>
+								<gco:Integer>256</gco:Integer>
+							</mrc:toneGradation>
+						</mrc:MD_Band>
+					</mrc:attribute>
+					<mrc:attribute>
+						<mrc:MD_Band>
+							<mrc:sequenceIdentifier>
+								<gco:MemberName>
+									<gco:aName>
+										<gco:CharacterString>3</gco:CharacterString>
+									</gco:aName>
+									<gco:attributeType/>
+								</gco:MemberName>
+							</mrc:sequenceIdentifier>
+							<mrc:description>
+								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Blau. Límits espectrals calculats segons FWHM.</gco:CharacterString>
+							</mrc:description>
+							<mrc:maxValue>
+								<gco:Real>513.87</gco:Real>
+							</mrc:maxValue>
+							<mrc:minValue>
+								<gco:Real>429.17</gco:Real>
+							</mrc:minValue>
+							<mrc:units>
+								<gml:UnitDefinition gml:id="ID0009">
+									<gml:identifier codeSpace="">nm</gml:identifier>
+								</gml:UnitDefinition>
+							</mrc:units>
+							<mrc:bitsPerValue>
+								<gco:Integer>8</gco:Integer>
+							</mrc:bitsPerValue>
+							<mrc:peakResponse>
+								<gco:Real>473.80</gco:Real>
+							</mrc:peakResponse>
+							<mrc:toneGradation>
+								<gco:Integer>256</gco:Integer>
+							</mrc:toneGradation>
+						</mrc:MD_Band>
+					</mrc:attribute>
+				</mrc:MD_AttributeGroup>
+			</mrc:attributeGroup>
+		</mrc:MD_CoverageDescription>
+	</mdb:contentInfo>
+	<mdb:distributionInfo>
+		<mrd:MD_Distribution>
+			<mrd:distributor>
+				<mrd:MD_Distributor>
+					<mrd:distributorContact>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="owner">owner</cit:CI_RoleCode>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Organisation>
+									<cit:name>
+										<gco:CharacterString>Institut Cartogràfic de Catalunya (ICC)</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34 93 567 15 00</gco:CharacterString>
+													</cit:number>
+													<cit:numberType>
+														<cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="voice">voice</cit:CI_TelephoneTypeCode>
+													</cit:numberType>
+												</cit:CI_Telephone>
+											</cit:phone>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34 93 567 15 67</gco:CharacterString>
+													</cit:number>
+													<cit:numberType>
+														<cit:CI_TelephoneTypeCode codeList="codeListLocation#CI_TelephoneTypeCode" codeListValue="facsimile">facsimile</cit:CI_TelephoneTypeCode>
+													</cit:numberType>
+												</cit:CI_Telephone>
+											</cit:phone>
+											<cit:address>
+												<cit:CI_Address>
+													<cit:deliveryPoint>
+														<gco:CharacterString>Parc de Montjuïc</gco:CharacterString>
+													</cit:deliveryPoint>
+													<cit:city>
+														<gco:CharacterString>Barcelona</gco:CharacterString>
+													</cit:city>
+													<cit:postalCode>
+														<gco:CharacterString>E-08038</gco:CharacterString>
+													</cit:postalCode>
+													<cit:electronicMailAddress>
+														<gco:CharacterString>centre.atencio@icc.cat</gco:CharacterString>
+													</cit:electronicMailAddress>
+												</cit:CI_Address>
+											</cit:address>
+											<cit:onlineResource>
+												<cit:CI_OnlineResource>
+													<cit:linkage>
+														<gco:CharacterString>http://www.icc.cat</gco:CharacterString>
+													</cit:linkage>
+													<cit:function>
+														<cit:CI_OnLineFunctionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="information"/>
+													</cit:function>
+												</cit:CI_OnlineResource>
+											</cit:onlineResource>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+								</cit:CI_Organisation>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</mrd:distributorContact>
+					<mrd:distributionOrderProcess>
+						<mrd:MD_StandardOrderProcess>
+							<mrd:fees>
+								<gco:CharacterString>Informació digital gratuïta; còpia en CD i DVD segons tarifes vigents.</gco:CharacterString>
+							</mrd:fees>
+							<mrd:orderingInstructions>
+								<gco:CharacterString>El producte es pot obtenir per via telemàtica tal i com s'indica a l'apartat "Opcions de transferència" d'aquestes metadades i també es pot adquirir als centres d'atenció al públic especificats al Web de l'ICC. A les especificacions tècniques i al mateix Web es pot trobar més informació referent a altres formats i suports disponibles.</gco:CharacterString>
+							</mrd:orderingInstructions>
+						</mrd:MD_StandardOrderProcess>
+					</mrd:distributionOrderProcess>
+					<mrd:distributorFormat>
+						<gpm:GP_Format>
+							<mrd:formatSpecificationCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">MrSID</gco:CharacterString>
+									</cit:title>
+									<cit:alternateTitle/>
+									<cit:date gco:nilReason="unknown"/>
+									<cit:edition>
+										<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Generation 3 (MG3)</gco:CharacterString>
+									</cit:edition>
+									<cit:identifier>
+										<mcc:MD_Identifier>
+											<mcc:code>
+												<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">MrSID</gco:CharacterString>
+											</mcc:code>
+										</mcc:MD_Identifier>
+									</cit:identifier>
+								</cit:CI_Citation>
+							</mrd:formatSpecificationCitation>
+							<gpm:formatSpecificationParticularities>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>ESPECIFICACIONS PER AL FORMAT "MrSID" (MrSID) de la Ortofoto de Catalunya 1:5 000 (OF-5M)</gco:CharacterString>
+									</cit:title>
+									<cit:date>
+										<cit:CI_Date>
+											<cit:date>
+												<gco:DateTime>2011-06-30T00:00:00</gco:DateTime>
+											</cit:date>
+											<cit:dateType>
+												<cit:CI_DateTypeCode codeListValue="revision" codeList="codeListLocation#CI_DateTypeCode">revisió 1</cit:CI_DateTypeCode>
+											</cit:dateType>
+										</cit:CI_Date>
+									</cit:date>
+									<cit:edition>
+										<gco:CharacterString>Implementació de format 1</gco:CharacterString>
+									</cit:edition>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeListValue="originator" codeList="codeListLocation#CI_RoleCode">creador</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>Institut Cartogràfic de Catalunya</gco:CharacterString>
+													</cit:name>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+								</cit:CI_Citation>
+							</gpm:formatSpecificationParticularities>
+						</gpm:GP_Format>
+					</mrd:distributorFormat>
+					<mrd:distributorTransferOptions>
+						<mrd:MD_DigitalTransferOptions>
+							<mrd:unitsOfDistribution>
+								<gco:CharacterString>Full</gco:CharacterString>
+							</mrd:unitsOfDistribution>
+							<mrd:onLine>
+								<cit:CI_OnlineResource>
+									<cit:linkage>
+										<gco:CharacterString>http://www.icc.cat</gco:CharacterString>
+									</cit:linkage>
+									<cit:protocol>
+										<gco:CharacterString>http</gco:CharacterString>
+									</cit:protocol>
+									<cit:name>
+										<gco:CharacterString>Consulta i descàrrega de mapes</gco:CharacterString>
+									</cit:name>
+									<cit:description>
+										<gco:CharacterString>Descàrrega de dades per fulls mitjançant recerca directa sobre un fons cartogràfic continu on es pot triar el lloc, el producte i el format.</gco:CharacterString>
+									</cit:description>
+									<cit:function>
+										<cit:CI_OnLineFunctionCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="download"/>
+									</cit:function>
+								</cit:CI_OnlineResource>
+							</mrd:onLine>
+							<mrd:offLine>
+								<mrd:MD_Medium>
+									<mrd:name>
+										<cit:CI_Citation>
+											<cit:title>
+												<gco:CharacterString/>
+											</cit:title>
+										</cit:CI_Citation>
+									</mrd:name>
+								</mrd:MD_Medium>
+							</mrd:offLine>
+						</mrd:MD_DigitalTransferOptions>
+					</mrd:distributorTransferOptions>
+				</mrd:MD_Distributor>
+			</mrd:distributor>
+		</mrd:MD_Distribution>
+	</mdb:distributionInfo>
+	<mdb:resourceLineage>
+		<mrl:LI_Lineage>
+			<mrl:statement>
+				<gco:CharacterString>L'ortofoto s'ha creat a partir de la generalització d'ortofotos a escala 1:2 500, de 25 cm de mida de píxel. Les diferències més significatives respecte a la versió anterior són les que es deriven de les millores de la darrera versió de l'Ortofoto de Catalunya 1:2 500. Els paràmetres de qualitat general del producte estan descrits a les especificacions tècniques que es troben al Web de l'ICC.</gco:CharacterString>
+			</mrl:statement>
+			<mrl:scope>
+				<mcc:MD_Scope>
+					<mcc:level>
+						<mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue=""/>
+					</mcc:level>
+				</mcc:MD_Scope>
+			</mrl:scope>
+			<mrl:additionalDocumentation>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Producció Ortofoto (OF)</gco:CharacterString>
+					</cit:title>
+					<cit:alternateTitle>
+						<gco:CharacterString>Manual de Processos ICGC</gco:CharacterString>
+					</cit:alternateTitle>
+					<cit:edition>
+						<gco:CharacterString>9.0</gco:CharacterString>
+					</cit:edition>
+					<cit:editionDate>
+						<gco:DateTime>2014-02-04T00:00:00</gco:DateTime>
+					</cit:editionDate>
+					<cit:citedResponsibleParty>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeListValue="originator" codeList="codeListLocation#CI_RoleCode">autor</cit:CI_RoleCode>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Organisation>
+									<cit:name>
+										<gco:CharacterString>Institut Cartogràfic de Catalunya</gco:CharacterString>
+									</cit:name>
+								</cit:CI_Organisation>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</cit:citedResponsibleParty>
+				</cit:CI_Citation>
+			</mrl:additionalDocumentation>
+			<mrl:processStep>
+				<mrl:LI_ProcessStep>
+					<mrl:description>
+						<gco:CharacterString>Generalització, mitjançant l'agregació de píxels, de les ortofotos digitals en color amb una mida de píxel de 25 cm de costat a imatges amb píxels de 50 cm de costat.</gco:CharacterString>
+					</mrl:description>
+					<mrl:source>
+						<mrl:LI_Source>
+							<mrl:description>
+								<gco:CharacterString>Ortofoto de 25 cm de mida de píxel realitzada emprant les imatges digitals en color de la càmera mètrica digital Z/I Imaging DMC i rectificada geomètricament a partir del model d'elevacions del terreny, que prové de la informació altimètrica de la Base topogràfica de Catalunya 1:5 000 v2.0 i les seves actualitzacions. Posteriorment es realitza el mosaic i les millores radiomètriques per obtenir el full definitiu.</gco:CharacterString>
+							</mrl:description>
+							<mrl:sourceSpatialResolution>
+								<mri:MD_Resolution>
+									<mri:equivalentScale>
+										<mri:MD_RepresentativeFraction>
+											<mri:denominator>
+												<gco:Integer>2500</gco:Integer>
+											</mri:denominator>
+										</mri:MD_RepresentativeFraction>
+									</mri:equivalentScale>
+								</mri:MD_Resolution>
+							</mrl:sourceSpatialResolution>
+							<mrl:sourceCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>Ortofoto de Catalunya 1:2 500 (OF-25C) v3.3 - Full 279111/279110/278110/278109/280111/280110/279109/280109/278111</gco:CharacterString>
+									</cit:title>
+									<cit:date>
+										<cit:CI_Date>
+											<cit:date>
+												<gco:DateTime>2013-07-01T00:00:00</gco:DateTime>
+											</cit:date>
+											<cit:dateType>
+												<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+											</cit:dateType>
+										</cit:CI_Date>
+									</cit:date>
+									<cit:date>
+										<cit:CI_Date>
+											<cit:date>
+												<gco:DateTime>2013-07-01T00:00:00</gco:DateTime>
+											</cit:date>
+											<cit:dateType>
+												<cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue=""/>
+											</cit:dateType>
+										</cit:CI_Date>
+									</cit:date>
+									<cit:edition>
+										<gco:CharacterString>4</gco:CharacterString>
+									</cit:edition>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="owner">owner</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>Institut Cartogràfic de Catalunya (ICC)</gco:CharacterString>
+													</cit:name>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+									<cit:presentationForm>
+										<cit:CI_PresentationFormCode codeList="http://idec.icc.cat/schema/resources/Codelist/ML_gmxCodelists.xml" codeListValue="imageDigital"/>
+									</cit:presentationForm>
+									<cit:otherCitationDetails>
+										<gco:CharacterString>Data de les fotografies aèries: 2012-06, 2012-05.</gco:CharacterString>
+									</cit:otherCitationDetails>
+								</cit:CI_Citation>
+							</mrl:sourceCitation>
+						</mrl:LI_Source>
+					</mrl:source>
+				</mrl:LI_ProcessStep>
+			</mrl:processStep>
+			<mrl:processStep>
+				<mrl:LI_ProcessStep>
+					<mrl:description>
+						<gco:CharacterString>Control de qualitat. Es verifiquen els paràmetres de qualitat del producte establerts a les especificacions tècniques (exactitud posicional, consistència i completesa). </gco:CharacterString>
+					</mrl:description>
+				</mrl:LI_ProcessStep>
+			</mrl:processStep>
+		</mrl:LI_Lineage>
+	</mdb:resourceLineage>
+	<mdb:portrayalCatalogueInfo>
+		<mpc:MD_PortrayalCatalogueReference>
+			<mpc:portrayalCatalogueCitation>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Document de recomanacions de simbolització</gco:CharacterString>
+					</cit:title>
+					<cit:onlineResource>
+						<cit:CI_OnlineResource>
+							<cit:linkage>
+								<gco:CharacterString>Localització del document</gco:CharacterString>
+							</cit:linkage>
+						</cit:CI_OnlineResource>
+					</cit:onlineResource>
+				</cit:CI_Citation>
+			</mpc:portrayalCatalogueCitation>
+		</mpc:MD_PortrayalCatalogueReference>
+	</mdb:portrayalCatalogueInfo>
+	<mdb:applicationSchemaInfo>
+		<mas:MD_ApplicationSchemaInformation>
+			<mas:name/>
+			<mas:schemaLanguage/>
+			<mas:constraintLanguage/>
+		</mas:MD_ApplicationSchemaInformation>
+	</mdb:applicationSchemaInfo>
+	<gpm:associatedResource>
+		<gpm:GP_AssociatedResource>
+			<mri:name>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Base topogràfica de Catalunya 1:5 000 - Full "Monistrolet" (279110)</gco:CharacterString>
+					</cit:title>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:code>
+								<gco:CharacterString>bt5mv20mm1f279110c1r040</gco:CharacterString>
+							</mcc:code>
+							<mcc:description>
+								<gco:CharacterString>Identificador del recurs</gco:CharacterString>
+							</mcc:description>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+				</cit:CI_Citation>
+			</mri:name>
+			<mri:associationType>
+				<mri:DS_AssociationTypeCode codeListValue="crossReference" codeList="codeListLocation#DS_AssociationTypeCode">referència</mri:DS_AssociationTypeCode>
+			</mri:associationType>
+			<mri:initiativeType>
+				<mri:DS_InitiativeTypeCode codeListValue="campaign" codeList="codeListLocation#DS_InitiativeTypeCode">campanya</mri:DS_InitiativeTypeCode>
+			</mri:initiativeType>
+			<mri:metadataReference>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Metadades del full "Monistrolet" (279110)</gco:CharacterString>
+					</cit:title>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:code>
+								<gco:CharacterString>bt5mv20sh0f279110c1r040ca5</gco:CharacterString>
+							</mcc:code>
+							<mcc:description>
+								<gco:CharacterString>Identificador del topogràfic a la cintoteca</gco:CharacterString>
+							</mcc:description>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+					<cit:onlineResource>
+						<cit:CI_OnlineResource>
+							<cit:linkage>
+								<gco:CharacterString>bt5mv20sh0f279110c1r040ca5.xml</gco:CharacterString>
+							</cit:linkage>
+						</cit:CI_OnlineResource>
+					</cit:onlineResource>
+				</cit:CI_Citation>
+			</mri:metadataReference>
+			<gpm:relationType>
+				<gpm:GP_RelationTypeCode codeListValue="isSourceOf" codeList="codeListLocation#GP_RelationTypeCode">font</gpm:GP_RelationTypeCode>
+			</gpm:relationType>
+			<gpm:associationProcess>
+				<mrl:LI_ProcessStep>
+					<mrl:description>
+						<gco:CharacterString>Derivació del topogràfic a partir de la ortofoto.</gco:CharacterString>
+					</mrl:description>
+					<mrl:processor>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeListValue="processor" codeList="codeListLocation#CI_RoleCode"/>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>Maria Pla</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34935671500</gco:CharacterString>
+													</cit:number>
+												</cit:CI_Telephone>
+											</cit:phone>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+									<cit:positionName>
+										<gco:CharacterString>Responsable de producció</gco:CharacterString>
+									</cit:positionName>
+								</cit:CI_Individual>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</mrl:processor>
+				</mrl:LI_ProcessStep>
+			</gpm:associationProcess>
+		</gpm:GP_AssociatedResource>
+	</gpm:associatedResource>
+	<gpm:associatedResource>
+		<gpm:GP_AssociatedResource>
+			<mri:name>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Ortofoto de Catalunya 1:5 000 - Full "Manresa" (280110)</gco:CharacterString>
+					</cit:title>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:code>
+								<gco:CharacterString>of5mv20mm1f280110c1r040</gco:CharacterString>
+							</mcc:code>
+							<mcc:description>
+								<gco:CharacterString>Identificador del recurs</gco:CharacterString>
+							</mcc:description>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+				</cit:CI_Citation>
+			</mri:name>
+			<mri:associationType>
+				<mri:DS_AssociationTypeCode codeListValue="series" codeList="codeListLocation#DS_AssociationTypeCode">sèrie</mri:DS_AssociationTypeCode>
+			</mri:associationType>
+			<mri:initiativeType>
+				<mri:DS_InitiativeTypeCode codeListValue="collection" codeList="codeListLocation#DS_InitiativeTypeCode">col·lecció</mri:DS_InitiativeTypeCode>
+			</mri:initiativeType>
+			<mri:metadataReference>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Metadades del full "Manresa" (280110)</gco:CharacterString>
+					</cit:title>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:code>
+								<gco:CharacterString>of5mv60sd0f280110s1r100ca5</gco:CharacterString>
+							</mcc:code>
+							<mcc:description>
+								<gco:CharacterString>Identificador de la ortofoto a la cintoteca</gco:CharacterString>
+							</mcc:description>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+					<cit:onlineResource>
+						<cit:CI_OnlineResource>
+							<cit:linkage>
+								<gco:CharacterString>of5mv60sd0f280110s1r100ca5.xml</gco:CharacterString>
+							</cit:linkage>
+						</cit:CI_OnlineResource>
+					</cit:onlineResource>
+				</cit:CI_Citation>
+			</mri:metadataReference>
+			<gpm:relationType>
+				<gpm:GP_RelationTypeCode codeListValue="hasSibling" codeList="codeListLocation#GP_RelationTypeCode">germà</gpm:GP_RelationTypeCode>
+			</gpm:relationType>
+		</gpm:GP_AssociatedResource>
+	</gpm:associatedResource>
+	<gpm:informationValue>
+		<gpm:GP_InformationValue>
+			<gpm:type>
+				<gpm:GP_InformationValueTypeCode codeListValue="administrativeValue" codeList="codeListLocation#GP_InformationValueTypeCode">administratiu</gpm:GP_InformationValueTypeCode>
+			</gpm:type>
+			<gpm:dueDate>
+				<cit:CI_Date>
+					<cit:date>
+						<gco:DateTime>2015-12-31T00:00:00</gco:DateTime>
+					</cit:date>
+					<cit:dateType>
+						<cit:CI_DateTypeCode codeListValue="nextUpdate" codeList="codeListLocation#CI_DateTypeCode">propera actualització</cit:CI_DateTypeCode>
+					</cit:dateType>
+				</cit:CI_Date>
+			</gpm:dueDate>
+			<gpm:comments>
+				<gco:CharacterString>Les dades tindran valor administratiu fins a la propera versió de les mateixes, és a dir, fins al proper vol i generació d'ortofotos.</gco:CharacterString>
+			</gpm:comments>
+			<gpm:justification>
+				<gpm:GP_JustificationValue>
+					<gpm:justification>
+						<gco:CharacterString>Les ortofotos serveixen com a informació de base per a nombrosos procediments administratius.</gco:CharacterString>
+					</gpm:justification>
+					<gpm:justificationType>
+						<gpm:GP_JustificationValueTypeCode codeListValue="important" codeList="codeListLocation#GP_JustificationValueTypeCode">important</gpm:GP_JustificationValueTypeCode>
+					</gpm:justificationType>
+				</gpm:GP_JustificationValue>
+			</gpm:justification>
+		</gpm:GP_InformationValue>
+	</gpm:informationValue>
+	<gpm:informationValue>
+		<gpm:GP_InformationValue>
+			<gpm:type>
+				<gpm:GP_InformationValueTypeCode codeListValue="legalAndFiscalValue" codeList="codeListLocation#GP_InformationValueTypeCode">legal i fiscal</gpm:GP_InformationValueTypeCode>
+			</gpm:type>
+			<gpm:dueDate>
+				<cit:CI_Date>
+					<cit:date>
+						<gco:DateTime>2015-12-31T00:00:00</gco:DateTime>
+					</cit:date>
+					<cit:dateType>
+						<cit:CI_DateTypeCode codeListValue="nextUpdate" codeList="codeListLocation#CI_DateTypeCode">propera actualització</cit:CI_DateTypeCode>
+					</cit:dateType>
+				</cit:CI_Date>
+			</gpm:dueDate>
+			<gpm:comments>
+				<gco:CharacterString>El valor legal i fiscal de les ortofotos s'entén efectiu mentre dura el valor administratiu de les mateixes.</gco:CharacterString>
+			</gpm:comments>
+			<gpm:justification>
+				<gpm:GP_JustificationValue>
+					<gpm:justification>
+						<gco:CharacterString>Les ortofotos poden servir com a document provatori en qüestions legals i fiscals.</gco:CharacterString>
+					</gpm:justification>
+					<gpm:justificationType>
+						<gpm:GP_JustificationValueTypeCode codeListValue="testimonial" codeList="codeListLocation#GP_JustificationValueTypeCode">testimonial</gpm:GP_JustificationValueTypeCode>
+					</gpm:justificationType>
+				</gpm:GP_JustificationValue>
+			</gpm:justification>
+		</gpm:GP_InformationValue>
+	</gpm:informationValue>
+	<gpm:informationValue>
+		<gpm:GP_InformationValue>
+			<gpm:type>
+				<gpm:GP_InformationValueTypeCode codeListValue="informativeAndHistoricalValue" codeList="codeListLocation#GP_InformationValueTypeCode">informatiu i històric</gpm:GP_InformationValueTypeCode>
+			</gpm:type>
+			<gpm:dueDate>
+				<cit:CI_Date>
+					<cit:date>
+						<gco:DateTime>9000-12-31T00:00:00</gco:DateTime>
+					</cit:date>
+					<cit:dateType>
+						<cit:CI_DateTypeCode codeListValue="expiry" codeList="codeListLocation#CI_DateTypeCode"/>
+					</cit:dateType>
+				</cit:CI_Date>
+			</gpm:dueDate>
+			<gpm:comments>
+				<gco:CharacterString>El valor informatiu i històric de les ortofotos no té data de caducitat.</gco:CharacterString>
+			</gpm:comments>
+			<gpm:justification>
+				<gpm:GP_JustificationValue>
+					<gpm:justification>
+						<gco:CharacterString>La ortofoto és un testimoni històric de l'estat del territori en la data en què fou presa.</gco:CharacterString>
+					</gpm:justification>
+					<gpm:justificationType>
+						<gpm:GP_JustificationValueTypeCode codeListValue="testimonial" codeList="codeListLocation#GP_JustificationValueTypeCode">testimonial</gpm:GP_JustificationValueTypeCode>
+					</gpm:justificationType>
+				</gpm:GP_JustificationValue>
+			</gpm:justification>
+		</gpm:GP_InformationValue>
+	</gpm:informationValue>
+	<gpm:packagingInformation>
+		<gpm:GP_PackagingInformation>
+			<mrd:description>
+				<gco:CharacterString>Aquest és el paquet de preservació de la ortofoto of5mv60sd0f279110s1r100ca5.</gco:CharacterString>
+			</mrd:description>
+			<mrd:distributor>
+				<gpm:GP_Archive>
+					<mrd:distributorContact>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeListValue="custodian" codeList="codeListLocation#CI_RoleCode">Responsable de l'emmagatzemament</cit:CI_RoleCode>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>Cuidant Delacinto</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34935671500</gco:CharacterString>
+													</cit:number>
+												</cit:CI_Telephone>
+											</cit:phone>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+									<cit:positionName>
+										<gco:CharacterString>Cap de la cintoteca</gco:CharacterString>
+									</cit:positionName>
+								</cit:CI_Individual>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</mrd:distributorContact>
+				</gpm:GP_Archive>
+			</mrd:distributor>
+			<mrd:transferOptions>
+				<mrd:MD_DigitalTransferOptions>
+					<mrd:unitsOfDistribution>
+						<gco:CharacterString>Fitxer ZIP</gco:CharacterString>
+					</mrd:unitsOfDistribution>
+					<mrd:transferSize>
+						<gco:Real>15</gco:Real>
+					</mrd:transferSize>
+					<mrd:offLine>
+						<mrd:MD_Medium>
+							<mrd:name>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>of5mv60sd0f279110s1r100ca5.zip</gco:CharacterString>
+									</cit:title>
+								</cit:CI_Citation>
+							</mrd:name>
+							<mrd:identifier>
+								<mcc:MD_Identifier>
+									<mcc:code>
+										<gco:CharacterString>0123456789</gco:CharacterString>
+									</mcc:code>
+								</mcc:MD_Identifier>
+							</mrd:identifier>
+						</mrd:MD_Medium>
+					</mrd:offLine>
+					<mrd:transferFrequency>
+						<gco:TM_PeriodDuration>P5Y0M0DT00H00M00S</gco:TM_PeriodDuration>
+					</mrd:transferFrequency>
+					<mrd:distributionFormat>
+						<mrd:MD_Format>
+							<mrd:formatSpecificationCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>ZIP File Format Specification</gco:CharacterString>
+									</cit:title>
+									<cit:edition>
+										<gco:CharacterString>6.3.3</gco:CharacterString>
+									</cit:edition>
+									<cit:editionDate>
+										<gco:DateTime>2012-09-01T00:00:00</gco:DateTime>
+									</cit:editionDate>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeListValue="rightsHolder" codeList="codeListLocation#CI_RoleCode">propietari</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>PKWARE Inc.</gco:CharacterString>
+													</cit:name>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.pkware.com/documents/casestudies/APPNOTE.TXT</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Citation>
+							</mrd:formatSpecificationCitation>
+							<mrd:amendmentNumber>
+								<gco:CharacterString/>
+							</mrd:amendmentNumber>
+							<mrd:fileDecompressionTechnique>
+								<gco:CharacterString>Cal disposar de programari específic per a descomprimir els fitxers: PKWARE, PKZIP, etc.</gco:CharacterString>
+							</mrd:fileDecompressionTechnique>
+						</mrd:MD_Format>
+					</mrd:distributionFormat>
+				</mrd:MD_DigitalTransferOptions>
+			</mrd:transferOptions>
+			<gpm:packageIdentifier>
+				<mcc:MD_Identifier>
+					<mcc:authority>
+						<cit:CI_Citation>
+							<cit:title/>
+							<cit:citedResponsibleParty>
+								<cit:CI_Responsibility>
+									<cit:role/>
+									<cit:party>
+										<cit:CI_Organisation>
+											<cit:name>
+												<gco:CharacterString>ICGC-Cartoteca</gco:CharacterString>
+											</cit:name>
+											<cit:individual>
+												<cit:CI_Individual>
+													<cit:name>
+														<gco:CharacterString>Carme Montaner</gco:CharacterString>
+													</cit:name>
+													<cit:contactInfo>
+														<cit:CI_Contact>
+															<cit:phone>
+																<cit:CI_Telephone>
+																	<cit:number>
+																		<gco:CharacterString>+34935671500</gco:CharacterString>
+																	</cit:number>
+																</cit:CI_Telephone>
+															</cit:phone>
+														</cit:CI_Contact>
+													</cit:contactInfo>
+													<cit:positionName>
+														<gco:CharacterString>Cap de la Cartoteca</gco:CharacterString>
+													</cit:positionName>
+												</cit:CI_Individual>
+											</cit:individual>
+										</cit:CI_Organisation>
+									</cit:party>
+								</cit:CI_Responsibility>
+							</cit:citedResponsibleParty>
+						</cit:CI_Citation>
+					</mcc:authority>
+					<mcc:code>
+						<gco:CharacterString>GPM_of5mv60sd0f279110s1r100ca5</gco:CharacterString>
+					</mcc:code>
+				</mcc:MD_Identifier>
+			</gpm:packageIdentifier>
+			<gpm:dueDate>
+				<cit:CI_Date>
+					<cit:date>
+						<gco:DateTime>2019-12-31T00:00:00</gco:DateTime>
+					</cit:date>
+					<cit:dateType>
+						<cit:CI_DateTypeCode codeListValue="expiry" codeList="codeListLocation#CI_DateTypeCode">Límit per a la preservació</cit:CI_DateTypeCode>
+					</cit:dateType>
+				</cit:CI_Date>
+			</gpm:dueDate>
+			<gpm:packageElement>
+				<gpm:GP_PackageElement>
+					<gpm:name>
+						<gco:CharacterString>of5mv60sd0f279110s1r100ca5.xml</gco:CharacterString>
+					</gpm:name>
+					<gpm:format>
+						<mrd:MD_Format>
+							<mrd:formatSpecificationCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>Extensible Markup Language (XML) 1.0</gco:CharacterString>
+									</cit:title>
+									<cit:editionDate>
+										<gco:DateTime>2008-11-26T00:00:00</gco:DateTime>
+									</cit:editionDate>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeListValue="originator" codeList="codeListLocation#CI_RoleCode">creador</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>World Wide Web Consortium W3C</gco:CharacterString>
+													</cit:name>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.w3.org/TR/REC-xml/</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Citation>
+							</mrd:formatSpecificationCitation>
+						</mrd:MD_Format>
+					</gpm:format>
+					<gpm:size>
+						<gco:Real>0.006</gco:Real>
+					</gpm:size>
+					<gpm:type>
+						<gpm:GP_PackageElementTypeCode codeListValue="metadata" codeList="codeListLocation#GP_PackageElementTypeCode">Metadades</gpm:GP_PackageElementTypeCode>
+					</gpm:type>
+					<gpm:disseminationConstraints>
+						<mco:MD_RestrictionCode codeListValue="intellectualPropertyRights" codeList="codeListLocation#MD_RestrictionCode">Drets de propietat intel·lectual</mco:MD_RestrictionCode>
+					</gpm:disseminationConstraints>
+				</gpm:GP_PackageElement>
+			</gpm:packageElement>
+			<gpm:packageElement>
+				<gpm:GP_PackageElement>
+					<gpm:name>
+						<gco:CharacterString>of5mv60sd0f279110s1r100ca5.jpg</gco:CharacterString>
+					</gpm:name>
+					<gpm:format>
+						<mrd:MD_Format>
+							<mrd:formatSpecificationCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>JPEG File Interchange Format</gco:CharacterString>
+									</cit:title>
+									<cit:edition>
+										<gco:CharacterString>1.02</gco:CharacterString>
+									</cit:edition>
+									<cit:editionDate>
+										<gco:DateTime>1992-09-01T00:00:00</gco:DateTime>
+									</cit:editionDate>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeListValue="author" codeList="codeListLocation#CI_RoleCode">Autor</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Individual>
+													<cit:name>
+														<gco:CharacterString>Eric Hamilton</gco:CharacterString>
+													</cit:name>
+												</cit:CI_Individual>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.jpeg.org/public/jfif.pdf</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Citation>
+							</mrd:formatSpecificationCitation>
+						</mrd:MD_Format>
+					</gpm:format>
+					<gpm:size>
+						<gco:Real>11</gco:Real>
+					</gpm:size>
+					<gpm:type>
+						<gpm:GP_PackageElementTypeCode codeListValue="distributionData" codeList="codeListLocation#GP_PackageElementTypeCode">Dades a distribuir</gpm:GP_PackageElementTypeCode>
+					</gpm:type>
+					<gpm:disseminationConstraints>
+						<mco:MD_RestrictionCode codeListValue="intellectualPropertyRights" codeList="codeListLocation#MD_RestrictionCode">Drets de propietat intel·lectual</mco:MD_RestrictionCode>
+					</gpm:disseminationConstraints>
+					<gpm:offLine>
+						<mrd:MD_Medium>
+							<mrd:name>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>of5mv60sd0f279110s1r100ca5.zip</gco:CharacterString>
+									</cit:title>
+								</cit:CI_Citation>
+							</mrd:name>
+						</mrd:MD_Medium>
+					</gpm:offLine>
+				</gpm:GP_PackageElement>
+			</gpm:packageElement>
+			<gpm:packageElement>
+				<gpm:GP_PackageElement>
+					<gpm:name>
+						<gco:CharacterString>of5mv61esp_01ca.pdf</gco:CharacterString>
+					</gpm:name>
+					<gpm:format>
+						<mrd:MD_Format>
+							<mrd:formatSpecificationCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>PDF Reference</gco:CharacterString>
+									</cit:title>
+									<cit:alternateTitle>
+										<gco:CharacterString>Adobe® Portable Document Format sixth edition</gco:CharacterString>
+									</cit:alternateTitle>
+									<cit:edition>
+										<gco:CharacterString>1.7</gco:CharacterString>
+									</cit:edition>
+									<cit:editionDate>
+										<gco:DateTime>2006-11-30T00:00:00</gco:DateTime>
+									</cit:editionDate>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeListValue="originator" codeList="codeListLocation#CI_RoleCode">Creador</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>Adobe Systems Incorporated </gco:CharacterString>
+													</cit:name>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Citation>
+							</mrd:formatSpecificationCitation>
+						</mrd:MD_Format>
+					</gpm:format>
+					<gpm:size>
+						<gco:Real>0.083</gco:Real>
+					</gpm:size>
+					<gpm:type>
+						<gpm:GP_PackageElementTypeCode codeListValue="technicalSpecifications" codeList="codeListLocation#GP_PackageElementTypeCode">Especificacions tècniques</gpm:GP_PackageElementTypeCode>
+					</gpm:type>
+					<gpm:disseminationConstraints>
+						<mco:MD_RestrictionCode codeListValue="intellectualPropertyRights" codeList="codeListLocation#MD_RestrictionCode">Drets de propietat intel·lectual</mco:MD_RestrictionCode>
+					</gpm:disseminationConstraints>
+					<gpm:offLine>
+						<mrd:MD_Medium>
+							<mrd:name>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>of5mv60sd0f279110s1r100ca5.zip</gco:CharacterString>
+									</cit:title>
+								</cit:CI_Citation>
+							</mrd:name>
+						</mrd:MD_Medium>
+					</gpm:offLine>
+				</gpm:GP_PackageElement>
+			</gpm:packageElement>
+			<gpm:packageElement>
+				<gpm:GP_PackageElement>
+					<gpm:name>
+						<gco:CharacterString>OFC-MP_v090.pdf</gco:CharacterString>
+					</gpm:name>
+					<gpm:format>
+						<mrd:MD_Format>
+							<mrd:formatSpecificationCitation>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>PDF Reference</gco:CharacterString>
+									</cit:title>
+									<cit:alternateTitle>
+										<gco:CharacterString>Adobe® Portable Document Format sixth edition</gco:CharacterString>
+									</cit:alternateTitle>
+									<cit:edition>
+										<gco:CharacterString>1.7</gco:CharacterString>
+									</cit:edition>
+									<cit:editionDate>
+										<gco:DateTime>2006-11-30T00:00:00</gco:DateTime>
+									</cit:editionDate>
+									<cit:citedResponsibleParty>
+										<cit:CI_Responsibility>
+											<cit:role>
+												<cit:CI_RoleCode codeListValue="originator" codeList="codeListLocation#CI_RoleCode">Creador</cit:CI_RoleCode>
+											</cit:role>
+											<cit:party>
+												<cit:CI_Organisation>
+													<cit:name>
+														<gco:CharacterString>Adobe Systems Incorporated </gco:CharacterString>
+													</cit:name>
+												</cit:CI_Organisation>
+											</cit:party>
+										</cit:CI_Responsibility>
+									</cit:citedResponsibleParty>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Citation>
+							</mrd:formatSpecificationCitation>
+						</mrd:MD_Format>
+					</gpm:format>
+					<gpm:size>
+						<gco:Real>3</gco:Real>
+					</gpm:size>
+					<gpm:type>
+						<gpm:GP_PackageElementTypeCode codeListValue="productionProcessesManual" codeList="codeListLocation#GP_PackageElementTypeCode">Manual de processos de producció</gpm:GP_PackageElementTypeCode>
+					</gpm:type>
+					<gpm:disseminationConstraints>
+						<mco:MD_RestrictionCode codeListValue="intellectualPropertyRights" codeList="codeListLocation#MD_RestrictionCode">Drets de propietat intel·lectual</mco:MD_RestrictionCode>
+					</gpm:disseminationConstraints>
+					<gpm:offLine>
+						<mrd:MD_Medium>
+							<mrd:name>
+								<cit:CI_Citation>
+									<cit:title>
+										<gco:CharacterString>of5mv60sd0f279110s1r100ca5.zip</gco:CharacterString>
+									</cit:title>
+								</cit:CI_Citation>
+							</mrd:name>
+						</mrd:MD_Medium>
+					</gpm:offLine>
+				</gpm:GP_PackageElement>
+			</gpm:packageElement>
+		</gpm:GP_PackagingInformation>
+	</gpm:packagingInformation>
+	<gpm:resourceUsage>
+		<gpm:GP_Usage>
+			<mri:specificUsage>
+				<gco:CharacterString>Correcció geomètrica d'imatge Landsat</gco:CharacterString>
+			</mri:specificUsage>
+			<mri:usageDateTime>
+				<gml:TimeInstant gml:id="RU-1">
+					<gml:timePosition>2013-12-31</gml:timePosition>
+				</gml:TimeInstant>
+			</mri:usageDateTime>
+			<mri:userDeterminedLimitations>
+				<gco:CharacterString>La ortofoto està desenfocada.</gco:CharacterString>
+			</mri:userDeterminedLimitations>
+			<mri:userContactInfo>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeListValue="user" codeList="codeListLocation#CI_RoleCode">usuari</cit:CI_RoleCode>
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation>
+							<cit:name>
+								<gco:CharacterString>Universitat Autònoma de Barcelona</gco:CharacterString>
+							</cit:name>
+							<cit:individual>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>Xavier Pons</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34935814804</gco:CharacterString>
+													</cit:number>
+												</cit:CI_Telephone>
+											</cit:phone>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+									<cit:positionName>
+										<gco:CharacterString>Catedràtic de Geografia</gco:CharacterString>
+									</cit:positionName>
+								</cit:CI_Individual>
+							</cit:individual>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</mri:userContactInfo>
+			<mri:response>
+				<gco:CharacterString>Esperem solucionar això en la propera versió.</gco:CharacterString>
+			</mri:response>
+			<mri:additionalDocumentation>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Cadena de pre-procesamiento estándar para las imágenes Landsat del Plan Nacional de Teledetección</gco:CharacterString>
+					</cit:title>
+					<cit:editionDate>
+						<gco:DateTime>2011-10-06T00:00:00</gco:DateTime>
+					</cit:editionDate>
+					<cit:citedResponsibleParty>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeListValue="author" codeList="codeListLocation#CI_RoleCode">autors</cit:CI_RoleCode>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>S. Hantson, E. Chuvieco, X. Pons, C. Domingo, C. Cea, G. Moré,
+J. Cristobal, J. J. Peces y J. A. Tejeiro</gco:CharacterString>
+									</cit:name>
+								</cit:CI_Individual>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</cit:citedResponsibleParty>
+					<cit:series>
+						<cit:CI_Series>
+							<cit:name>
+								<gco:CharacterString>Revista de Teledetección</gco:CharacterString>
+							</cit:name>
+							<cit:issueIdentification>
+								<gco:CharacterString>36</gco:CharacterString>
+							</cit:issueIdentification>
+							<cit:page>
+								<gco:CharacterString>51-61</gco:CharacterString>
+							</cit:page>
+						</cit:CI_Series>
+					</cit:series>
+					<cit:ISSN>
+						<gco:CharacterString>1988-8740</gco:CharacterString>
+					</cit:ISSN>
+					<cit:onlineResource>
+						<cit:CI_OnlineResource>
+							<cit:linkage>
+								<gco:CharacterString>http://www.aet.org.es/revistas/revista36/Numero36_05.pdf</gco:CharacterString>
+							</cit:linkage>
+						</cit:CI_OnlineResource>
+					</cit:onlineResource>
+				</cit:CI_Citation>
+			</mri:additionalDocumentation>
+			<mri:identifiedIssues/>
+			<gpm:service>
+				<gpm:GP_ServiceIdentification>
+					<mri:citation/>
+					<mri:abstract/>
+					<srv:serviceType>
+						<gco:ScopedName>download</gco:ScopedName>
+					</srv:serviceType>
+					<srv:accessProperties>
+						<mrd:MD_StandardOrderProcess>
+							<mrd:fees>
+								<gco:CharacterString>gratuït</gco:CharacterString>
+							</mrd:fees>
+						</mrd:MD_StandardOrderProcess>
+					</srv:accessProperties>
+					<srv:containsOperations>
+						<srv:SV_OperationMetadata>
+							<srv:operationName>
+								<gco:CharacterString>GetCoverage</gco:CharacterString>
+							</srv:operationName>
+							<srv:distributedComputingPlatform>
+								<srv:DCPList codeListValue="get" codeList="codeListLocation#DCPList">get</srv:DCPList>
+							</srv:distributedComputingPlatform>
+							<srv:connectPoint>
+								<cit:CI_OnlineResource>
+									<cit:linkage>
+										<gco:CharacterString>http://www.icc.cat/vissir3/</gco:CharacterString>
+									</cit:linkage>
+								</cit:CI_OnlineResource>
+							</srv:connectPoint>
+						</srv:SV_OperationMetadata>
+					</srv:containsOperations>
+					<gpm:usageMetrics>
+						<gpm:GP_ServiceUsageMetrics>
+							<mdq:measure>
+								<mdq:DQ_MeasureReference>
+									<mdq:nameOfMeasure>
+										<gco:CharacterString>Descàrregues per mes</gco:CharacterString>
+									</mdq:nameOfMeasure>
+								</mdq:DQ_MeasureReference>
+							</mdq:measure>
+							<mdq:result>
+								<mdq:DQ_QuantitativeResult>
+									<mdq:value>
+										<gco:Record>10</gco:Record>
+									</mdq:value>
+									<mdq:valueUnit>
+										<gml:BaseUnit gml:id="UM_1">
+											<gml:identifier codeSpace="">visites</gml:identifier>
+											<gml:unitsSystem/>
+										</gml:BaseUnit>
+									</mdq:valueUnit>
+								</mdq:DQ_QuantitativeResult>
+							</mdq:result>
+						</gpm:GP_ServiceUsageMetrics>
+					</gpm:usageMetrics>
+				</gpm:GP_ServiceIdentification>
+			</gpm:service>
+		</gpm:GP_Usage>
+	</gpm:resourceUsage>
+	<gpm:preservationActions>
+		<mrl:LI_Lineage>
+			<mrl:processStep>
+				<mrl:LI_ProcessStep>
+					<mrl:description>
+						<gco:CharacterString>El fitxer s'ha transformat al nou datum de treball ETRS89.</gco:CharacterString>
+					</mrl:description>
+					<mrl:stepDateTime>
+						<gml:TimeInstant gml:id="PA_1">
+							<gml:timePosition>2014-10-07</gml:timePosition>
+						</gml:TimeInstant>
+					</mrl:stepDateTime>
+					<mrl:processor>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeListValue="processor" codeList="codeListLocation#CI_RoleCode">responsable</cit:CI_RoleCode>
+							</cit:role>
+							<cit:party>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>Carme Montaner</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+34935671500</gco:CharacterString>
+													</cit:number>
+												</cit:CI_Telephone>
+											</cit:phone>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+									<cit:positionName>
+										<gco:CharacterString>Responsable de la cartoteca</gco:CharacterString>
+									</cit:positionName>
+								</cit:CI_Individual>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</mrl:processor>
+				</mrl:LI_ProcessStep>
+			</mrl:processStep>
+		</mrl:LI_Lineage>
+	</gpm:preservationActions>
+</gpm:GP_PreservationMetadata>
