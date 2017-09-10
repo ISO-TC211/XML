@@ -19,7 +19,7 @@
       <gco:CharacterString>0.1</gco:CharacterString>
    </cat:versionNumber>
    <cat:versionDate>
-      <gco:Date>2015-04-18</gco:Date>
+      <gco:Date>2017-09-10</gco:Date>
    </cat:versionDate>
    <cat:locale>
       <lan:PT_Locale>
@@ -33,16 +33,13 @@
       </lan:PT_Locale>
    </cat:locale>
    <!--============================= Codelists =======================================-->
-   <!-- MD_MediumFormatCode  -->
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_MediumFormatCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-               >MD_MediumFormatCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">MD_MediumFormatCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-               >MD_MediumFormatCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">MD_MediumFormatCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>method used to write to the medium</gco:CharacterString>
@@ -53,83 +50,115 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_cpio">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_cpio</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">cpio</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">cpio</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>Copy In / Out (UNIX file format and
-                     command)</gco:CharacterString>
+                  <gco:CharacterString>Copy In / Out (UNIX file format and command)</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Copy In / Out (UNIX file format and command)</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_tar">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_tar</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">tar</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">tar</gco:ScopedName>
+               </cat:name>
                <cat:definition>
                   <gco:CharacterString>Tape Archive</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Tape Archive</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_highSierra">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_highSierra</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">highSierra</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">highSierra</gco:ScopedName>
+               </cat:name>
                <cat:definition>
                   <gco:CharacterString>high sierra file system</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>high sierra file system</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_iso9660">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_iso9660</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">iso9660</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">iso9660</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>information processing volume and file structure of
-                     CD-ROM</gco:CharacterString>
+                  <gco:CharacterString>information processing volume and file structure of CD-ROM</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>information processing volume and file structure of CD-ROM</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_iso9660RockRidge">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_iso9660RockRidge</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">iso9660RockRidge</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">iso9660RockRidge</gco:ScopedName>
+               </cat:name>
                <cat:definition>
                   <gco:CharacterString>rock ridge interchange protocol (UNIX)</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>rock ridge interchange protocol (UNIX)</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_iso9660AppleHFS">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_iso9660AppleHFS</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">iso9660AppleHFS</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">iso9660AppleHFS</gco:ScopedName>
+               </cat:name>
                <cat:definition>
                   <gco:CharacterString>hierarchical file system (Macintosh)</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>hierarchical file system (Macintosh)</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MediumFormatCode_udf">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >MD_MediumFormatCode_udf</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">udf</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/mrd/1.0">udf</gco:ScopedName>
+               </cat:name>
                <cat:definition>
                   <gco:CharacterString>universal disk format</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>universal disk format</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
       </cat:CT_Codelist>
    </cat:codelistItem>
-   <!--=== EOF ===-->
 </cat:CT_CodelistCatalogue>
