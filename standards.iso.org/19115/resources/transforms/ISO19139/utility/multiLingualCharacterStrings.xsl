@@ -27,9 +27,9 @@
         <xsl:variable name="isMultilingual" select="count($nodeWithStringToWrite/gmd:PT_FreeText) > 0"/>
         <!-- 
             The hasCharacterString variable was generalized to include situations where substitutions are
-            being used gor gco:CharacterString, e.g. gmx:FileName.
+            being used for gco:CharacterString, e.g. gmx:FileName.
         -->
-        <xsl:variable name="hasChildNode" select="count($nodeWithStringToWrite/*) = 1"/>
+        <xsl:variable name="hasChildNode" select="count($nodeWithStringToWrite/*) > 0"/>
         <xsl:if test="$nodeWithStringToWrite">
             <xsl:element name="{$elementName}">
                 <!-- Deal with attributes (may be in the old gco namespace -->
@@ -43,7 +43,7 @@
                             This could be any substitution for gco:CharacterString.
                             Get correct namespace and preserve name for substitutions
                         -->
-                    <xsl:for-each select="$nodeWithStringToWrite/*">
+                    <xsl:for-each select="$nodeWithStringToWrite/*[local-name() != 'PT_FreeText']">
                         <xsl:variable name="nameSpacePrefix">
                             <xsl:call-template name="getNamespacePrefix"/>
                         </xsl:variable>
@@ -53,7 +53,9 @@
                     </xsl:for-each>
                 </xsl:if>
                 <xsl:if test="$isMultilingual">
-                    <xsl:apply-templates select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
+                    <xsl:apply-templates
+                        mode="from19139to19115-3"
+                        select="$nodeWithStringToWrite/gmd:PT_FreeText"/>
                 </xsl:if>
             </xsl:element>
         </xsl:if>
