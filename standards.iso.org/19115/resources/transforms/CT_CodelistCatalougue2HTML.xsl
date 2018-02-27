@@ -3,26 +3,37 @@
   xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
-  xmlns:gco="http://standards.iso.org/iso/19139/gco/1.0" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
   <xd:doc scope="stylesheet">
     <xd:desc>
-      <xd:p><xd:b>Created on:</xd:b> April 17, 2015</xd:p>
-      <xd:p><xd:b>Author:</xd:b>Ted Habermann</xd:p>
+      <xd:p><xd:b>Created on: </xd:b>April 17, 2015</xd:p>
+      <xd:p><xd:b>Author: </xd:b>Ted Habermann</xd:p>
+      <xd:p><xd:b>Updated on: </xd:b>September 10, 20175</xd:p>
+      <xd:p>Added Catalog information and summary fields (counts of codelists and items), updated Version date</xd:p>     
     </xd:desc>
   </xd:doc>
   <xsl:param name="contents"/>
   <xsl:variable name="stylesheetName" select="'CT_CodelistHTML.xsl'"/>
-  <xsl:variable name="stylesheetVersion" select="'2015-04-17'"/>
+  <xsl:variable name="stylesheetVersion" select="'2017-09-10'"/>
   <xsl:template match="/">
     <html>
       <a name="top"/>
-      <h1>ISO 19115-3 Codelist Report</h1>
-      <p>This report describes the ISO 19115-3 codelists and their values.</p>
+      <h1>Codelist Catalog</h1>
+      <p>This report describes the ISO TC211 codelist catalogs, the codelists they contain, and the values and definitions of the codes.</p>
       <p> 
-        Please contact <a href="mailto:thabermann@hdfgroup.org">Ted Habermann</a> if you have questions or suggestions.</p>
-      <h2>Codelists:</h2>
+        Please contact <a href="mailto:rehabermann@me.com">Ted Habermann</a> if you have questions or suggestions.</p>
+      <h2>Catalog</h2>
+      <b>Name: </b><xsl:value-of select="cat:CT_CodelistCatalogue/cat:name/gco:CharacterString"/><br/>
+      <b>Scope: </b><xsl:value-of select="cat:CT_CodelistCatalogue/cat:scope/gco:CharacterString"/><br/>
+      <b>Field of application: </b><xsl:value-of select="cat:CT_CodelistCatalogue/cat:fieldOfApplication/gco:CharacterString"/><br/>
+      <b>Version: </b><xsl:value-of select="cat:CT_CodelistCatalogue/cat:versionNumber/gco:CharacterString"/><br/>
+      <b>Date: </b><xsl:value-of select="cat:CT_CodelistCatalogue/cat:versionDate/gco:Date"/><br/>
+      <b>Number of CodeLists: </b><xsl:value-of select="count(//cat:codelistItem)"/><br/>
+      <b>Number of items: </b><xsl:value-of select="count(//cat:codeEntry)"/>
+      <hr/>
+      <h2>Codelists</h2>
       <xsl:if test="$contents">
         <table width="95%" border="1" cellpadding="2" cellspacing="2">
           <tr>
@@ -88,13 +99,13 @@
             <xsl:value-of select="@id"/>
           </xsl:attribute>
         </xsl:element>
-        <h2><xsl:value-of select="cat:name"/>: </h2>
-        <b>Description: </b>
-        <xsl:value-of select="cat:description"/>
+        <h2><xsl:value-of select="cat:identifier"/>: </h2>
+        <b>Description: </b><xsl:value-of select="cat:definition"/><br/>
+        <b>CodeSpace: </b><xsl:value-of select="cat:identifier/gco:ScopedName/@codeSpace"/><br/>
+        <b>Number of items: </b><xsl:value-of select="count(cat:codeEntry)"/>
         <table width="95%" border="1" cellpadding="2" cellspacing="2">
           <tr>
             <th valign="top">Entry</th>
-            
             <th valign="top">Definition</th>
           </tr>
           <xsl:for-each select="cat:codeEntry">

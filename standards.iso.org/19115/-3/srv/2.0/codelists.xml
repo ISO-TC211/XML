@@ -19,7 +19,7 @@
       <gco:CharacterString>0.1</gco:CharacterString>
    </cat:versionNumber>
    <cat:versionDate>
-      <gco:Date>2015-04-18</gco:Date>
+      <gco:Date>2017-09-10</gco:Date>
    </cat:versionDate>
    <cat:locale>
       <lan:PT_Locale>
@@ -33,121 +33,132 @@
       </lan:PT_Locale>
    </cat:locale>
    <!--============================= Codelists =======================================-->
-   <!-- SV_CouplingType  -->
    <cat:codelistItem>
       <cat:CT_Codelist id="SV_CouplingType">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-               >SV_CouplingType</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SV_CouplingType</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-               >SV_CouplingType</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SV_CouplingType</gco:ScopedName>
          </cat:name>
          <cat:definition>
-            <gco:CharacterString>class of information to which the referencing entity
-               applies</gco:CharacterString>
+            <gco:CharacterString>type of coupling between service and associated data (if exists)</gco:CharacterString>
          </cat:definition>
          <cat:description>
-            <gco:CharacterString>class of information to which the referencing entity
-               applies</gco:CharacterString>
+            <gco:CharacterString>type of coupling between service and associated data (if exists)</gco:CharacterString>
          </cat:description>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_CouplingType_loose">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >SV_CouplingType_loose</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">loose</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">loose</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>service instance is loosely coupled with a data instance,
-                     i.e. no MD_DataIdentification class has to be described</gco:CharacterString>
+                  <gco:CharacterString>service instance is loosely coupled with a data instance, i.e. no MD_DataIdentification class has to be described</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>service instance is loosely coupled with a data instance, i.e. no MD_DataIdentification class has to be described</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_CouplingType_mixed">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >SV_CouplingType_mixed</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">mixed</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">mixed</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>service instance is mixed coupled with a data instance, i.e.
-                     MD_DataIdentification describes the associated data instance and additionally
-                     the service instance might work with other external data
-                     instances</gco:CharacterString>
+                  <gco:CharacterString>service instance is mixed coupled with a data instance, i.e. MD_DataIdentification describes the associated data instance and additionally the service instance might work with other external data instances</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>service instance is mixed coupled with a data instance, i.e. MD_DataIdentification describes the associated data instance and additionally the service instance might work with other external data instances</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_CouplingType_tight">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >SV_CouplingType_tight</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">tight</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">tight</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>service instance is tightly coupled with a data instance,
-                     i.e. MD_DataIdentification class MUST be described</gco:CharacterString>
+                  <gco:CharacterString>service instance is tightly coupled with a data instance, i.e. MD_DataIdentification class MUST be described</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>service instance is tightly coupled with a data instance, i.e. MD_DataIdentification class MUST be described</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
       </cat:CT_Codelist>
    </cat:codelistItem>
-   <!-- SV_ParameterDirection  -->
    <cat:codelistItem>
       <cat:CT_Codelist id="SV_ParameterDirection">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-               >SV_ParameterDirection</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SV_ParameterDirection</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-               >SV_ParameterDirection</gco:ScopedName>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SV_ParameterDirection</gco:ScopedName>
          </cat:name>
          <cat:definition>
-            <gco:CharacterString>class of information to which the referencing entity
-               applies</gco:CharacterString>
+            <gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString>
          </cat:definition>
          <cat:description>
-            <gco:CharacterString>class of information to which the referencing entity
-               applies</gco:CharacterString>
+            <gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString>
          </cat:description>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_ParameterDirection_in">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >SV_ParameterDirection_in</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">in</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">in</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>the parameter is an input parameter to the service
-                     instance</gco:CharacterString>
+                  <gco:CharacterString>the parameter is an input parameter to the service instance</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>the parameter is an input parameter to the service instance</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_ParameterDirection_out">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >SV_ParameterDirection_out</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">out</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">out</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>the parameter is an output parameter to the service
-                     instance</gco:CharacterString>
+                  <gco:CharacterString>the parameter is an output parameter to the service instance</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>the parameter is an output parameter to the service instance</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
          <cat:codeEntry>
             <cat:CT_CodelistValue id="SV_ParameterDirection_inout">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115"
-                     >SV_ParameterDirection_inout</gco:ScopedName>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">in/out</gco:ScopedName>
                </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">in/out</gco:ScopedName>
+               </cat:name>
                <cat:definition>
-                  <gco:CharacterString>the parameter is both an input and output parameter to the
-                     service instance</gco:CharacterString>
+                  <gco:CharacterString>the parameter is both an input and output parameter to the service instance</gco:CharacterString>
                </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>the parameter is both an input and output parameter to the service instance</gco:CharacterString>
+               </cat:description>
             </cat:CT_CodelistValue>
          </cat:codeEntry>
       </cat:CT_Codelist>
    </cat:codelistItem>
-   <!--=== EOF ===-->
 </cat:CT_CodelistCatalogue>
