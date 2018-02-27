@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrc/2.0" version="1.0">
-  <annotation>
-    <documentation>Name: Content Position: 5</documentation>
-  </annotation>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" 
+  xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" 
+  elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrc/2.0" version="1.0">
   <include schemaLocation="content.xsd"/>
   <include schemaLocation="mrc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>

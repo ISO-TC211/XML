@@ -3,8 +3,10 @@ xmlns:fcc="http://standards.iso.org/iso/19110/fcc/1.0"
 xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
 xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0"  
 xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
-xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrc/2.0" version="1.0">
-<!--  <include schemaLocation="mrc.xsd"/>-->
+xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" elementFormDefault="qualified" 
+targetNamespace="http://standards.iso.org/iso/19115/-3/mrc/2.0" version="1.0">
+  <include schemaLocation="contentInformationImagery.xsd"/>
+  <include schemaLocation="mrc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
   <import namespace="http://standards.iso.org/iso/19110/fcc/1.0" schemaLocation="../../../../19110/fcc/1.0/fcc.xsd"/>
@@ -402,6 +404,7 @@ Note in 19115-3 implementation, this class is implemented by abstract class _Con
               <documentation>maximum number of significant bits in the uncompressed representation for the value in each band of each pixel</documentation>
             </annotation>
           </element>
+          <element minOccurs="0" maxOccurs="unbounded" name="rangeElementDescription" type="mrc:MI_RangeElementDescription_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
