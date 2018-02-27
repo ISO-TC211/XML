@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
-  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0" 
-  xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrl/2.0" version="1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrl/2.0" version="1.0">
   <include schemaLocation="mrl.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
@@ -218,13 +216,38 @@
   </complexType>
   <element name="LE_ProcessParameter" substitutionGroup="mcc:Abstract_Parameter" type="mrl:LE_ProcessParameter_Type">
     <annotation>
-      <documentation>xxx</documentation>
+      <documentation>This was added as part of the 19115-2 Revision</documentation>
     </annotation>
   </element>
   <complexType name="LE_ProcessParameter_Type">
     <complexContent>
       <extension base="mcc:Abstract_Parameter_Type">
         <sequence>
+          <element name="name" type="gco:MemberName_PropertyType">
+            <annotation>
+              <documentation>the name, as used by the process for this parameter</documentation>
+            </annotation>
+          </element>
+          <element name="direction" type="mrl:LE_ParameterDirection_PropertyType">
+            <annotation>
+              <documentation>indication if the parameter is an input to the service, an output or both</documentation>
+            </annotation>
+          </element>
+          <element name="description" type="gco:CharacterString_PropertyType">
+            <annotation>
+              <documentation>a narrative explanation of the role of the parameter</documentation>
+            </annotation>
+          </element>
+          <element name="optionality" type="gco:Boolean_PropertyType">
+            <annotation>
+              <documentation>indication if the parameter is required</documentation>
+            </annotation>
+          </element>
+          <element name="repeatability" type="gco:Boolean_PropertyType">
+            <annotation>
+              <documentation>indication if more than one value of the parameter may be provided</documentation>
+            </annotation>
+          </element>
           <element name="valueType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1">
             <annotation>
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
@@ -250,5 +273,40 @@
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
-  </complexType> 
+  </complexType>
+  <!-- LE_ProcessParameter added during 19115-2 Revision -->
+  <element name="LE_ParameterDirection" substitutionGroup="gco:CharacterString" type="mrl:LE_ParameterDirection_Type">
+    <annotation>
+      <documentation>direction of parameter (in, out, in/out)</documentation>
+    </annotation>
+  </element>
+  <simpleType name="LE_ParameterDirection_Type">
+    <annotation>
+      <documentation>direction of parameter (in, out, in/out)</documentation>
+    </annotation>
+    <restriction base="string">
+      <enumeration value="in">
+        <annotation>
+          <documentation>the parameter is an input parameter to the process</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="out">
+        <annotation>
+          <documentation>the parameter is an output parameter to the process</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="in/out">
+        <annotation>
+          <documentation>the parameter is both an input and output parameter to the process</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <complexType name="LE_ParameterDirection_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mrl:LE_ParameterDirection"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  
 </schema>
