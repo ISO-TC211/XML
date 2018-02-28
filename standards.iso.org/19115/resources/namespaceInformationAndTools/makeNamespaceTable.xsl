@@ -6,12 +6,12 @@
       <xd:p>
         <xd:b>Title: Write Standard ISO Namespace Table</xd:b>
       </xd:p>
-      <xd:p><xd:b>Version:</xd:b>0.0</xd:p>
+      <xd:p><xd:b>Version:</xd:b>1.0</xd:p>
       <xd:p><xd:b>Created on:</xd:b>February 27, 2013</xd:p>
       <xd:p><xd:b>Revised on:</xd:b>August 4, 2014</xd:p>
+      <xd:p><xd:b>Revised on:</xd:b>February 28, 2018</xd:p>
       <xd:p><xd:b>Author:</xd:b>rehabermann@me.com</xd:p>
-      <xd:p>This stylesheets reads ISOSchema.xml and uses writes standard namespace description
-        files.</xd:p>
+      <xd:p>This stylesheets reads ISOSchema.xml and uses writes standard namespace description files.</xd:p>
       <xd:p>It assumes a schema directory hierarchy like
         schemaRootDirectory/namespace/version/workingVersionDate/namespace.xsd</xd:p>
       <xd:p>and writes index.html files into the namespace directories
@@ -39,7 +39,7 @@
   <xsl:strip-space elements="*"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:variable name="TransformName" select="'makeNamespaceTable'"/>
-  <xsl:variable name="TransformVersion" select="'2015-06-06'"/>
+  <xsl:variable name="TransformVersion" select="'2018-02-28'"/>
   <xsl:template match="/">
     <html>
       <head>
@@ -178,9 +178,15 @@
                         <xsl:sequence select="'gml'"/>
                       </xsl:when>
                       <xsl:otherwise>
+                        <!-- 
+                          the schemaLocation attribute of the import statement is tokenized on / and the
+                          variable numberOfTokens gives the total number of tokens. The last token is the
+                          name of the imported xsd file and the prefix is the part of that string before the .xsd.
+                          The next-to-last token is the version number of the schema.
+                        -->
                         <xsl:variable name="pathTokens" as="xs:string+" select="tokenize(@schemaLocation,'/')"/>
                         <xsl:variable name="numberOfTokens" select="count($pathTokens)"/>
-                        <xsl:sequence select="substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.')"/>
+                        <xsl:sequence select="concat(substring-before(tokenize(@schemaLocation,'/')[$numberOfTokens],'.'),'.',tokenize(@schemaLocation,'/')[$numberOfTokens - 1])"/>
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:for-each>
