@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" version="1.0">
   <include schemaLocation="mcc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -109,9 +110,7 @@
   </complexType>
   <element abstract="true" name="Abstract_Format" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Format_Type">
     <annotation>
-      <documentation>&lt;ul&gt;
-	&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</documentation>
+      <documentation>&lt;ul&gt; &lt;li&gt;&lt;/li&gt; &lt;/ul&gt;</documentation>
     </annotation>
   </element>
   <complexType abstract="true" name="Abstract_Format_Type">
@@ -334,6 +333,24 @@
   <complexType name="Abstract_TypedDate_PropertyType">
     <sequence minOccurs="0">
       <element ref="mcc:Abstract_TypedDate"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!--
+    Abstract SV_ServiceParameter added as part of ISO 19115-2 Revision 2017-01 
+  -->
+  <element abstract="true" name="Abstract_Parameter" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_Parameter_Type"/>
+  <complexType abstract="true" name="Abstract_Parameter_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Abstract_Parameter_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mcc:Abstract_Parameter"/>
     </sequence>
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
