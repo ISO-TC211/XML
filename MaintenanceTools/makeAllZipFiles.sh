@@ -96,6 +96,6 @@ pushd ../standards.iso.org/iso/19157;zip -r 19157.zip .; popd
 #
 echo "Existing zip files"
 find ../standards.iso.org -name *.zip -print > zipFileList.txt
-cat zipFilesList.txt
+cat zipFileList.txt
 
 
