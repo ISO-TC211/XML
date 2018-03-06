@@ -2,9 +2,11 @@
 # makeAllZipFiles.sh
 #
 # This utility creates zip files with the schemas at several levels:
-# all inclusive files for each standard, e.g. ../standards.iso.org/iso/19115/19115.zip
+# all inclusive files for each standard, e.g. ./iso/19115/19115.zip
 # and namespace specific zip files are created in each namespace directory
-# e.g. ../standards.iso.org/iso/19115/-3/cat/1.0/cat.zip
+# e.g. ./iso/19115/-3/cat/1.0/cat.zip
+#
+# run this script from XML/MaintenanceTools directory
 #
 # remove all existing namespaces
 echo "Remove existing zip files"
@@ -93,5 +95,7 @@ pushd ../standards.iso.org/iso/19157;zip -r 19157.zip .; popd
 # list all zipfiles
 #
 echo "Existing zip files"
-find ../standards.iso.org -name *.zip -print
+find ../standards.iso.org -name *.zip -print > zipFileList.txt
+cat zipFilesList.txt
+
 
