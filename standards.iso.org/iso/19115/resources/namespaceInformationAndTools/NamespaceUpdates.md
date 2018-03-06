@@ -1,4 +1,4 @@
-# Namespace Updates
+# Namespace Updates - 2018-03-06
 
 ## Namespace Table
 Five base namespaces have been updated to new versions: ./19115/-3/msr/2.0, ./19115/-3/mrc/2.0, ./19115/-3/mrl/2.0, ./19115/-3/mac/2.0, ./19115/-3/cit/2.0 
@@ -10,7 +10,7 @@ Five base namespaces have been updated to new versions: ./19115/-3/msr/2.0, ./19
 ### Update the makeNamespaceTable.xsl that produces the HTML table of namespace information. 
 1. Include the version numbers in the imported namespaces
 
-### Wrapper Namespaces
+## New Versions of Wrapper Namespaces
 There are several namespaces that serve as wrappers for groups of namespaces that are used together. These need to be updated to import Version 2 of the appropriate namespaces.
 
 1. Metadata Base (mdb) imports cit. 
@@ -19,6 +19,36 @@ There are several namespaces that serve as wrappers for groups of namespaces tha
 4. Metadata with Extended Services (md2) imports cit, md1.
 5. MetaData Application (mda) imports md2, mdb.
 6. Metadata for Data Transfer (mdt) imports mda.
+
+### Version 2.0 Directories
+The namespaces with the new versions are:
+
+ISOTC211-XML/XML/standards.iso.org/iso  
+find . -type d -name 2.0 -print  
+./19115/-3/cit/2.0  
+./19115/-3/mac/2.0  
+./19115/-3/md1/2.0  
+./19115/-3/md2/2.0  
+./19115/-3/mda/2.0  
+./19115/-3/mdb/2.0  
+./19115/-3/mds/2.0  
+./19115/-3/mdt/2.0  
+./19115/-3/mrc/2.0  
+./19115/-3/mrl/2.0  
+./19115/-3/msr/2.0  
+./19115/-3/srv/2.0  
+
+## Codelist files
+The transform ISOTC211-XML/XML/standards.iso.org/iso/19115/resources/transforms/CT_CodelistCatalougue2HTML.xsl is used to create html versions of the codelist.xml files in each nemespace directory. This should be done before the index.html files are created so that the codelist.xml and codelist.html files will be included in the index files.
+
+## Sample XML files
+Sample XML files are created for each namespace inorder to illustrate new capabilities and correct namespaces and schema locations. This should be done before the index.html files are created so that the sample files will be included in the index files.
+
+## index.html files
+Run the xsl ISOTC211-XML/XML/standards.iso.org/iso/19115/resources/namespaceInformationAndTools/writeHTMLFiles.xsl on ISONamespaceInformation.xml to create index.html files in all of the namespace directories. The names of the files that are written are in writeHTMLFilesLog.html.
+
+## Zip files
+The script XML/MaintenanceTools/makeAllZipFiles.sh creates all of the zip files in the repository. The names of the files are written into zipFileList.txt. This script should be run last so that all of the zip files are up-to-date.
 
 ## Instance Document
 The current instance document header is:
@@ -48,3 +78,4 @@ The current instance document header is:
    http://standards.iso.org/iso/19115/-3/msr/2.0 ../../../ISOTC211-XML/XML/standards.iso.org/19115/-3/msr/2.0/msr.xsd
    http://standards.iso.org/iso/19115/-3/cit/2.0 ../../../ISOTC211-XML/XML/standards.iso.org/19115/-3/cit/2.0/cit.xsd">
 ```
+
