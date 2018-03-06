@@ -16,7 +16,7 @@
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
     This is the root of the schema directories. 
-    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org
+    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org/iso
  
   -->
   <xsl:param name="schemaRootDirectory"/>

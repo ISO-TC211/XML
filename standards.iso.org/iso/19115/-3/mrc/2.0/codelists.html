@@ -1,0 +1,232 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><a name="top"></a><h1>Codelist Catalog</h1>
+   <p>This report describes the ISO TC211 codelist catalogs, the codelists they contain,
+      and the values and definitions of the codes.
+   </p>
+   <p> 
+      Please contact <a href="mailto:rehabermann@me.com">Ted Habermann</a> if you have questions or suggestions.
+   </p>
+   <h2>Catalog</h2><b>Name: </b>Codelists from the Metadata for Resource Content (mrc) Namespace<br/><b>Scope: </b>Codelists related to Metadata for Resource Content (mrc) Namespace<br/><b>Field of application: </b>ISO TC211 Metadata Standards<br/><b>Version: </b>1.1<br/><b>Date: </b>2017-09-10<br/><b>Number of CodeLists: </b>2<br/><b>Number of items: </b>19
+   <hr/>
+   <h2>Codelists</h2><a href="MD_CoverageContentTypeCode"></a><h2>
+      MD_CoverageContentTypeCode
+      : 
+   </h2><b>Description: </b>
+   specific type of information represented in the cell
+   <br/><b>CodeSpace: </b>http://standards.iso.org/iso/19115/-3/mrc/1.0<br/><b>Number of items: </b>8
+   <table width="95%" border="1" cellpadding="2" cellspacing="2">
+      <tr>
+         <th valign="top">Entry</th>
+         <th valign="top">Definition</th>
+      </tr>
+      <tr>
+         <td valign="top">
+            image
+            
+         </td>
+         <td valign="top">
+            meaningful numerical representation of a physical parameter that is not the actual
+            value of the physical parameter
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            thematicClassification
+            
+         </td>
+         <td valign="top">
+            code value with no quantitative meaning, used to represent a physical quantity
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            physicalMeasurement
+            
+         </td>
+         <td valign="top">
+            value in physical units of the quantity being measured
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            auxillaryInformation
+            
+         </td>
+         <td valign="top">
+            data, usually a physical measurement, used to support the calculation of the primary
+            physicalMeasurement coverages in the dataset (e.g. grid of aerosol optical thickness
+            used in the calculation of a sea surface temperature product).
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            qualityInformation
+            
+         </td>
+         <td valign="top">
+            data used to characterize the quality of the physicalMeasurement coverages in the
+            dataset. Typically included in a gmi:QE_CoverageResult.
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            referenceInformation
+            
+         </td>
+         <td valign="top">
+            reference information used to support the calculation or use of the physicalMeasurement
+            coverages in the dataset (e.g. grids of latitude/longitude used to geolocate the physical
+            measurements).
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            modelResult
+            
+         </td>
+         <td valign="top">
+            resources with values that are calculated using a model rather than being observed
+            or calculated from observations.
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            coordinate
+            
+         </td>
+         <td valign="top">
+            data used to provide coordinate axis values  
+            
+         </td>
+      </tr>
+   </table><a href="#top">top</a><a href="MD_ImagingConditionCode"></a><h2>
+      MD_ImagingConditionCode
+      : 
+   </h2><b>Description: </b>
+   code which indicates conditions which may affect the image
+   <br/><b>CodeSpace: </b>http://standards.iso.org/iso/19115/-3/mrc/1.0<br/><b>Number of items: </b>11
+   <table width="95%" border="1" cellpadding="2" cellspacing="2">
+      <tr>
+         <th valign="top">Entry</th>
+         <th valign="top">Definition</th>
+      </tr>
+      <tr>
+         <td valign="top">
+            blurredImage
+            
+         </td>
+         <td valign="top">
+            portion of the image is blurred
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            cloud
+            
+         </td>
+         <td valign="top">
+            portion of the image is partially obscured by cloud cover
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            degradingObliquity
+            
+         </td>
+         <td valign="top">
+            acute angle between the plane of the ecliptic (the plane of the Earth s orbit) and
+            the plane of the celestial equator
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            fog
+            
+         </td>
+         <td valign="top">
+            portion of the image is partially obscured by fog
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            heavySmokeOrDust
+            
+         </td>
+         <td valign="top">
+            portion of the image is partially obscured by heavy smoke or dust
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            night
+            
+         </td>
+         <td valign="top">
+            image was taken at night
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            rain
+            
+         </td>
+         <td valign="top">
+            image was taken during rainfall
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            semiDarkness
+            
+         </td>
+         <td valign="top">
+            image was taken during semi-dark conditions; twilight conditions
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            shadow
+            
+         </td>
+         <td valign="top">
+            portion of the image is obscured by shadow
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            snow
+            
+         </td>
+         <td valign="top">
+            portion of the image is obscured by snow
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            terrainMasking
+            
+         </td>
+         <td valign="top">
+            the absence of collection data of a given point or area caused by the relative location
+            of topographic features which obstruct the collection path between the collector(s)
+            and the subject(s) of interest
+            
+         </td>
+      </tr>
+   </table><a href="#top">top</a><hr/><i>Stylesheet: CT_CodelistHTML.xsl Version: 2017-09-10</i></html>
