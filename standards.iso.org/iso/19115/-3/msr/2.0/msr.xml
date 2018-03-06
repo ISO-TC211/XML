@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msr:MD_Georectified id="seriesSpatialRepresentation"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/msr/2.0 ../../mds/2.0/mds.xsd">
+    <msr:scope>
+        <mcc:MD_Scope>
+            <mcc:level>
+                <mcc:MD_ScopeCode codeList="" codeListValue="">mcc:level/mcc:MD_ScopeCode</mcc:MD_ScopeCode>
+            </mcc:level>
+            <mcc:levelDescription>
+                <mcc:MD_ScopeDescription>
+                    <mcc:dataset>
+                        <gco:CharacterString>mcc:dataset/gco:CharacterString</gco:CharacterString>
+                    </mcc:dataset>
+                </mcc:MD_ScopeDescription>
+            </mcc:levelDescription>
+        </mcc:MD_Scope>
+    </msr:scope>
+    <msr:numberOfDimensions>
+        <gco:Integer>999</gco:Integer>
+    </msr:numberOfDimensions>
+    <msr:axisDimensionProperties>
+        <msr:MD_Dimension>
+            <msr:dimensionName>
+                <msr:MD_DimensionNameTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_DimensionNameTypeCode" codeListValue="row">msr:dimensionName/msr:MD_DimensionNameTypeCode</msr:MD_DimensionNameTypeCode>
+            </msr:dimensionName>
+            <msr:dimensionSize>
+                <gco:Integer>555</gco:Integer>
+            </msr:dimensionSize>
+            <msr:resolution>
+                <gco:Measure uom="degrees">88</gco:Measure>
+            </msr:resolution>
+        </msr:MD_Dimension>
+    </msr:axisDimensionProperties>
+    <msr:axisDimensionProperties>
+        <msr:MD_Dimension>
+            <msr:dimensionName>
+                <msr:MD_DimensionNameTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_DimensionNameTypeCode" codeListValue="column">msr:dimensionName/msr:MD_DimensionNameTypeCode</msr:MD_DimensionNameTypeCode>
+            </msr:dimensionName>
+            <msr:dimensionSize>
+                <gco:Integer>556</gco:Integer>
+            </msr:dimensionSize>
+            <msr:resolution>
+                <gco:Measure uom="degrees">89</gco:Measure>
+            </msr:resolution>
+        </msr:MD_Dimension>
+    </msr:axisDimensionProperties>
+    <msr:cellGeometry>
+        <msr:MD_CellGeometryCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CellGeometryCode" codeListValue="area">msr:cellGeometry/msr:MD_CellGeometryCode</msr:MD_CellGeometryCode>
+    </msr:cellGeometry>
+    <msr:transformationParameterAvailability gco:nilReason="unknown"/>
+    <msr:checkPointAvailability gco:nilReason="unknown"/>
+    <msr:cornerPoints>
+        <gml:Point gml:id="cornerPoint-upper-left" srsName="urn:x-ogc:def:crs:EPSG::4326">
+            <gml:pos>10 20</gml:pos>
+        </gml:Point>
+    </msr:cornerPoints>
+    <msr:cornerPoints>
+        <gml:Point gml:id="cornerPoint-upper-right" srsName="urn:x-ogc:def:crs:EPSG::4326">
+            <gml:pos>11 21</gml:pos>
+        </gml:Point>
+    </msr:cornerPoints>
+    <msr:cornerPoints>
+        <gml:Point gml:id="cornerPoint-lower-right" srsName="urn:x-ogc:def:crs:EPSG::4326">
+            <gml:pos>12 22</gml:pos>
+        </gml:Point>
+    </msr:cornerPoints>
+    <msr:cornerPoints>
+        <gml:Point gml:id="cornerPoint-lower_left" srsName="urn:x-ogc:def:crs:EPSG::4326">
+            <gml:pos>13 23</gml:pos>
+        </gml:Point>
+    </msr:cornerPoints>
+    <msr:pointInPixel>
+        <msr:MD_PixelOrientationCode>centre</msr:MD_PixelOrientationCode>
+    </msr:pointInPixel>
+</msr:MD_Georectified>

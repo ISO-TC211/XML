@@ -10,7 +10,7 @@
         <cit:partyIdentifier>
             <mcc:MD_Identifier>
                 <mcc:code>
-                    <gco:CharacterString>/mdb:MD_Metadata/mdb:contact/cit:CI_Responsibility/cit:party/cit:CI_Organisation/cit:partyIdentifier/mcc:MD_Identifier/mcc:code/gco:CharacterString</gco:CharacterString>
+                    <gco:CharacterString>mcc:code/gco:CharacterString</gco:CharacterString>
                 </mcc:code>
             </mcc:MD_Identifier>
         </cit:partyIdentifier>
