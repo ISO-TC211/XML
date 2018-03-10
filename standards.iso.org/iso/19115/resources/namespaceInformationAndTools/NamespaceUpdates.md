@@ -1,4 +1,4 @@
-# Namespace Updates
+# Namespace Updates - 2018-03-06
 
 ## Namespace Table
 Five base namespaces have been updated to new versions: ./19115/-3/msr/2.0, ./19115/-3/mrc/2.0, ./19115/-3/mrl/2.0, ./19115/-3/mac/2.0, ./19115/-3/cit/2.0 
@@ -97,3 +97,4 @@ The current instance document header is:
    http://standards.iso.org/iso/19115/-3/msr/2.0 ../../../ISOTC211-XML/XML/standards.iso.org/19115/-3/msr/2.0/msr.xsd
    http://standards.iso.org/iso/19115/-3/cit/2.0 ../../../ISOTC211-XML/XML/standards.iso.org/19115/-3/cit/2.0/cit.xsd">
 ```
+
