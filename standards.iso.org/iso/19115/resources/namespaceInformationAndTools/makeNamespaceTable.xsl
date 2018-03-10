@@ -10,12 +10,13 @@
       <xd:p><xd:b>Created on:</xd:b>February 27, 2013</xd:p>
       <xd:p><xd:b>Revised on:</xd:b>August 4, 2014</xd:p>
       <xd:p><xd:b>Revised on:</xd:b>February 28, 2018</xd:p>
+      <xd:p><xd:b>Revised on:</xd:b>March 10, 2018 - added header information</xd:p>
       <xd:p><xd:b>Author:</xd:b>rehabermann@me.com</xd:p>
       <xd:p>This stylesheets reads ISOSchema.xml and uses writes standard namespace description files.</xd:p>
       <xd:p>It assumes a schema directory hierarchy like
-        schemaRootDirectory/namespace/version/workingVersionDate/namespace.xsd</xd:p>
-      <xd:p>and writes index.html files into the namespace directories
-        (schemaRootDirectory/namespace/version/workingVersionDate/index.html)</xd:p>
+        schemaRootDirectory/standard/version/namespace/version/workingVersionDate/namespace.xsd</xd:p>
+      <xd:p>The output is written into ../namespaceSummary.html (this location is specified externally in the
+      transform command or Oxygen Project file)</xd:p>
     </xd:desc>
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
@@ -39,13 +40,17 @@
   <xsl:strip-space elements="*"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:variable name="TransformName" select="'makeNamespaceTable'"/>
-  <xsl:variable name="TransformVersion" select="'2018-02-28'"/>
+  <xsl:variable name="TransformVersion" select="'2018-03-10'"/>
   <xsl:template match="/">
     <html>
       <head>
         <title>ISO Namespaces</title>
       </head>
       <body>
+        <h1>ISO TC211 Namespace Summary</h1>
+        <p>This table summarizes the namespaces used in the XML implementation of <a href="https://committee.iso.org/home/tc211">ISO TC211</a> Standards for Geospatial Metadata. 
+          The current official versions of these namespaces are located at <a href="http://standards.iso.org/iso">standards.iso.org</a>. Working versions
+          and information are at the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>.</p>
         <table border="1" cellpadding="3">
           <tr>
             <th>Standard Prefix</th>
