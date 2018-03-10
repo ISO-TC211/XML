@@ -3,7 +3,7 @@
 ## Namespace Table
 Five base namespaces have been updated to new versions: ./19115/-3/msr/2.0, ./19115/-3/mrc/2.0, ./19115/-3/mrl/2.0, ./19115/-3/mac/2.0, ./19115/-3/cit/2.0 
 
-### Update the XML file that contains informtion about the namespaces (__ISONamespaceInformation.xml__):
+### Update the XML file that contains information about the namespaces (__ISONamespaceInformation.xml__):
 1. Version 2 of cit, mac, md1, md2, mda, mdb, mds, mdt, mrc, mrl, msr added
 
 
@@ -37,6 +37,25 @@ find . -type d -name 2.0 -print
 ./19115/-3/mrl/2.0  
 ./19115/-3/msr/2.0  
 ./19115/-3/srv/2.0  
+
+## Creating the Namespace Summary
+The namespace summary is an html file (standards.iso.org/iso/19115/-3/resources/namespaceSummary.html. It contains information from the standards.iso.org/iso/19115/-3/resources/namespaceInformationAndTools/ISONamespaceInformation.xml file converted to html using standards.iso.org/iso/19115/-3/resources/namespaceInformationAndTools/makdNamespaceTable.xsl. This xsl has several input parameters:  
+
+__Parameter schemaRootDirectory__:  
+This is the root of the schema directories.  
+Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org/iso 
+
+__Parameter standard__:  
+This is a space delimited list of the schemaStandardNumbers to be included in the output.  
+Namespaces whose schemaStandardNumber is in this list will be included in the output.  
+Example: 19115-3 19157-2 19110 19111 19135
+
+__Parameter workingVersionDate__:  
+This is the date associated with a working version of the schema. It is in the format /YYYY-MM-DD. 
+NOTE THE SLASH INCLUDED BEFORE THE DATE
+Example: /2014-12-25
+
+The output of this transform is written into standards.iso.org/iso/19115/-3/resources//namespaceSummary.html which is the summary of all namespaces.  
 
 ## Codelist files
 The transform ISOTC211-XML/XML/standards.iso.org/iso/19115/resources/transforms/CT_CodelistCatalougue2HTML.xsl is used to create html versions of the codelist.xml files in each nemespace directory. This should be done before the index.html files are created so that the codelist.xml and codelist.html files will be included in the index files.
