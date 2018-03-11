@@ -3,6 +3,8 @@ Working ISO TC211 XML Schema Repository
 
 XML schema, transforms, schematron rules, and examples for ISO TC211 Metadata Standards
 
+__201803 Update__ Schema and namespace changes related to the ISO 19115-1 and ISO 19157 Ammendments, and the ISO 19115-2 Revision were included in this repository early in March 2018. We are working with ISO to migrate these changes to standards.iso.org as soon as possible. Please submit issues to this repository if you find problems with these updates. The wiki page Namespace Updates 2018 03 describes the changes.
+
 This repository contains draft XML schema and related documents for the ISO TC211 metadata (ISO 19115-1) 
 and data quality (ISO 19157). These are not final schemas for these standards but may be suitable for 
 initial testing and familiarization. They are provided here to support those kinds of use cases 
