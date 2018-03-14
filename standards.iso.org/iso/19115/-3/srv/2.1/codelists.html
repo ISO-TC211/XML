@@ -1,0 +1,91 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><a name="top"></a><h1>Codelist Catalog</h1>
+   <p>This report describes the ISO TC211 codelist catalogs, the codelists they contain, and the values and definitions of the codes.</p>
+   <p> 
+      Please contact <a href="mailto:rehabermann@me.com">Ted Habermann</a> if you have questions or suggestions.
+   </p>
+   <h2>Catalog</h2><b>Name: </b>Codelists from the Metadata for Services (srv) Namespace<br/><b>Scope: </b>Codelists from the Metadata for Services (srv) Namespace<br/><b>Field of application: </b>ISO TC211 Metadata Standards<br/><b>Version: </b>0.1<br/><b>Date: </b>2017-09-10<br/><b>Number of CodeLists: </b>2<br/><b>Number of items: </b>6
+   <hr/>
+   <h2>Codelists</h2><a href="SV_CouplingType"></a><h2>
+                  SV_CouplingType
+               : 
+   </h2><b>Description: </b>
+               type of coupling between service and associated data (if exists)
+            <br/><b>CodeSpace: </b>http://standards.iso.org/iso/19115/-3/srv/2.0<br/><b>Number of items: </b>3
+   <table width="95%" border="1" cellpadding="2" cellspacing="2">
+      <tr>
+         <th valign="top">Entry</th>
+         <th valign="top">Definition</th>
+      </tr>
+      <tr>
+         <td valign="top">
+            loose
+            
+         </td>
+         <td valign="top">
+            service instance is loosely coupled with a data instance, i.e. no MD_DataIdentification class has to be described
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            mixed
+            
+         </td>
+         <td valign="top">
+            service instance is mixed coupled with a data instance, i.e. MD_DataIdentification describes the associated data instance
+            and additionally the service instance might work with other external data instances
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            tight
+            
+         </td>
+         <td valign="top">
+            service instance is tightly coupled with a data instance, i.e. MD_DataIdentification class MUST be described
+            
+         </td>
+      </tr>
+   </table><a href="#top">top</a><a href="SV_ParameterDirection"></a><h2>
+                  SV_ParameterDirection
+               : 
+   </h2><b>Description: </b>
+               class of information to which the referencing entity applies
+            <br/><b>CodeSpace: </b>http://standards.iso.org/iso/19115/-3/srv/2.0<br/><b>Number of items: </b>3
+   <table width="95%" border="1" cellpadding="2" cellspacing="2">
+      <tr>
+         <th valign="top">Entry</th>
+         <th valign="top">Definition</th>
+      </tr>
+      <tr>
+         <td valign="top">
+            in
+            
+         </td>
+         <td valign="top">
+            the parameter is an input parameter to the service instance
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            out
+            
+         </td>
+         <td valign="top">
+            the parameter is an output parameter to the service instance
+            
+         </td>
+      </tr>
+      <tr>
+         <td valign="top">
+            in/out
+            
+         </td>
+         <td valign="top">
+            the parameter is both an input and output parameter to the service instance
+            
+         </td>
+      </tr>
+   </table><a href="#top">top</a><hr/><i>Stylesheet: CT_CodelistHTML.xsl Version: 2017-09-10</i></html>

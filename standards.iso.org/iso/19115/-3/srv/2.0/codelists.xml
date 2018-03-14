@@ -34,6 +34,182 @@
    </cat:locale>
    <!--============================= Codelists =======================================-->
    <cat:codelistItem>
+      <cat:CT_Codelist id="DCPList">
+         <cat:identifier>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">DCPList</gco:ScopedName>
+         </cat:identifier>
+         <cat:name>
+            <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">DCPList</gco:ScopedName>
+         </cat:name>
+         <cat:definition>
+            <gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString>
+         </cat:definition>
+         <cat:description>
+            <gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString>
+         </cat:description>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_XML">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">XML</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">XML</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Extensible Markup Language</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Extensible Markup Language</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_CORBA">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">CORBA</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">CORBA</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Common Object Request Broker Architecture</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Common Object Request Broker Architecture</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_JAVA">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">JAVA</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">JAVA</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Object-oriented programming language</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Object-oriented programming language</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_COM">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">COM</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">COM</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Component Object Model</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Component Object Model</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_SQL">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SQL</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SQL</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Structured Query Language</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Structured Query Language</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_SOAP">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SOAP</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SOAP</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Simple Object Access Protocol</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Simple Object Access Protocol</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_Z3950">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">Z3950</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">Z3950</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>ISO 23950 </gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>ISO 23950 </gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_HTTP">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">HTTP</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">HTTP</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>HyperText Transfer Protocol</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>HyperText Transfer Protocol</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_FTP">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">FTP</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">FTP</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>File Transfer Protocol</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>File Transfer Protocol</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+         <cat:codeEntry>
+            <cat:CT_CodelistValue id="DCPList_WebServices">
+               <cat:identifier>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">WebServices</gco:ScopedName>
+               </cat:identifier>
+               <cat:name>
+                  <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">WebServices</gco:ScopedName>
+               </cat:name>
+               <cat:definition>
+                  <gco:CharacterString>Web service</gco:CharacterString>
+               </cat:definition>
+               <cat:description>
+                  <gco:CharacterString>Web service</gco:CharacterString>
+               </cat:description>
+            </cat:CT_CodelistValue>
+         </cat:codeEntry>
+      </cat:CT_Codelist>
+   </cat:codelistItem>
+   <cat:codelistItem>
       <cat:CT_Codelist id="SV_CouplingType">
          <cat:identifier>
             <gco:ScopedName codeSpace="http://standards.iso.org/iso/19115/-3/srv/2.0">SV_CouplingType</gco:ScopedName>
