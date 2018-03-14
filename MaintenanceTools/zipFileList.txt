@@ -42,7 +42,6 @@
 ../standards.iso.org/iso/19115/-3/msr/1.0/msr.zip
 ../standards.iso.org/iso/19115/-3/msr/2.0/msr.zip
 ../standards.iso.org/iso/19115/-3/srv/2.0/srv.zip
-../standards.iso.org/iso/19115/-3/srv/2.1/srv.zip
 ../standards.iso.org/iso/19115/19115.zip
 ../standards.iso.org/iso/19115/19115AllNamespaces.zip
 ../standards.iso.org/iso/19115/resources/resources.zip

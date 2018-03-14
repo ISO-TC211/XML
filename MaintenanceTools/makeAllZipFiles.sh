@@ -63,7 +63,6 @@ pushd ../standards.iso.org/iso/19115/-3/mrs/1.0;	zip mrs.zip *; popd
 pushd ../standards.iso.org/iso/19115/-3/msr/1.0;	zip msr.zip *; popd
 pushd ../standards.iso.org/iso/19115/-3/msr/2.0;	zip msr.zip *; popd
 pushd ../standards.iso.org/iso/19115/-3/srv/2.0;	zip srv.zip *; popd
-pushd ../standards.iso.org/iso/19115/-3/srv/2.1;	zip srv.zip *; popd
 pushd ../standards.iso.org/iso/19115/resources;	zip -r resources.zip *; popd
 # 
 # create the zip files in 19135 namespaces
