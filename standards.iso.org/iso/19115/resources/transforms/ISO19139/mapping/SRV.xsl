@@ -75,6 +75,13 @@
             <srv:distributedComputingPlatform gco:nilReason="missing"/>
           </xsl:otherwise>
         </xsl:choose>
+        
+        <!-- operationDescription is missing - corrected Ted Habermann 20180617 -->
+        <xsl:call-template name="writeCharacterStringElement">
+          <xsl:with-param name="elementName" select="'srv:operationDescription'"/>
+          <xsl:with-param name="nodeWithStringToWrite" select="srvold:SV_OperationMetadata/srvold:operationDescription"/>
+        </xsl:call-template>
+        
         <xsl:call-template name="writeCharacterStringElement">
           <xsl:with-param name="elementName" select="'srv:invocationName'"/>
           <xsl:with-param name="nodeWithStringToWrite" select="srvold:SV_OperationMetadata/srvold:invocationName"/>
