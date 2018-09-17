@@ -100,7 +100,7 @@
           </element>
           <element name="time" type="gco:DateTime_PropertyType">
             <annotation>
-              <documentation>Description: Time the event occured shortName: evtTime</documentation>
+              <documentation>Description: Time the event occurred shortName: evtTime</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="relatedPass" type="mac:MI_PlatformPass_PropertyType"/>

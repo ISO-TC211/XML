@@ -105,7 +105,7 @@ shortName: evtSeq</documentation>
           </element>
           <element name="time" type="gco:DateTime_PropertyType">
             <annotation>
-              <documentation>Description: Time the event occured
+              <documentation>Description: Time the event occurred
 shortName: evtTime</documentation>
             </annotation>
           </element>

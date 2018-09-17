@@ -101,7 +101,7 @@ shortName: DetailProcStep</documentation>
   </complexType>
   <element name="LE_ProcessStepReport" substitutionGroup="gco:AbstractObject" type="mrl:LE_ProcessStepReport_Type">
     <annotation>
-      <documentation>Description: Report of what occured during the process step
+      <documentation>Description: Report of what occurred during the process step
 shortName: ProcStepRep</documentation>
     </annotation>
   </element>
