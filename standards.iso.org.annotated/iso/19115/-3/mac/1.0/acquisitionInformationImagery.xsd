@@ -235,7 +235,7 @@ shortName: trgtExtent</documentation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sensingInstrument" type="mac:MI_Instrument_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="pass" type="mac:MI_PlatformPass_PropertyType"/>
-          <element maxOccurs="unbounded" name="objectiveOccurence" type="mac:MI_Event_PropertyType"/>
+          <element maxOccurs="unbounded" name="objectiveOccurrence" type="mac:MI_Event_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>

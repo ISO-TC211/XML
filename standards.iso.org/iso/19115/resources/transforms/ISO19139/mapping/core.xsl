@@ -433,9 +433,9 @@
       </xsl:element>
     </xsl:element>
   </xsl:template>
-  <xsl:template match="gmi:objectiveOccurance" mode="from19139to19115-3">
+  <xsl:template match="gmi:objectiveOccurrence" mode="from19139to19115-3">
     <!-- This element is mis-spelled in the 19115-2 schema -->
-    <xsl:element name="mac:objectiveOccurence">
+    <xsl:element name="mac:objectiveOccurrence">
       <xsl:apply-templates select="@*" mode="from19139to19115-3"/>
       <xsl:value-of select="."/>
     </xsl:element>
