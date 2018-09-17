@@ -524,7 +524,7 @@
           </element>
           <element maxOccurs="unbounded" name="recipient" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
-              <documentation>Description: person(s), or body(ies), to recieve results of requirement shortName: recipient</documentation>
+              <documentation>Description: person(s), or body(ies), to receive results of requirement shortName: recipient</documentation>
             </annotation>
           </element>
           <element name="priority" type="mac:MI_PriorityCode_PropertyType">
