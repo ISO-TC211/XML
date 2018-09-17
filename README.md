@@ -19,7 +19,7 @@ The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>
 
 A zip archive of the complete official schema is available at http://standards.iso.org/iso/19115/19115AllNamespaces.zip.
 
-Summary information about all of these namespaces is avaialble at http://standards.iso.org/iso/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
+Summary information about all of these namespaces is available at http://standards.iso.org/iso/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
 
 ## Package Diagram
 UML Package Diagrams show dependencies between the current namespace and others as well as the entities defined in each namespace.
