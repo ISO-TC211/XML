@@ -59,7 +59,7 @@
           </element>
           <element name="code" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>The alphanumeric value that uniquely identifies the referenced resource. If the identifer has a permanent URI, then use the gmx:Anchor field instead of gco:CharacterString field.</documentation>
+              <documentation>The alphanumeric value that uniquely identifies the referenced resource. If the identifier has a permanent URI, then use the gmx:Anchor field instead of gco:CharacterString field.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="codeSpace" type="gco:CharacterString_PropertyType">
