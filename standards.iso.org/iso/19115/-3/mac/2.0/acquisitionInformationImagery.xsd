@@ -207,7 +207,7 @@
   </complexType>
   <element name="MI_Objective" substitutionGroup="gco:AbstractObject" type="mac:MI_Objective_Type">
     <annotation>
-      <documentation>Description: Describes the characteristics, spatial and temportal extent of the intended object to be observed shortName: TargetId</documentation>
+      <documentation>Description: Describes the characteristics, spatial and temporal extent of the intended object to be observed shortName: TargetId</documentation>
     </annotation>
   </element>
   <complexType name="MI_Objective_Type">
