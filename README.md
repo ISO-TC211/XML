@@ -12,6 +12,46 @@ without any expectation for persistence.
 
 The current version of the official schema are at <http://standards.iso.org/iso>. These official schemas are also in the standards.iso.org directory of this repository. The directory standards.iso.org/iso includes a sub-directory for each ISO Standard.
 
+# ISO Schema Repository Update
+The schemas developed in this repository that include recent changes have been migrated to the Official ISO Schema Repository at http://standards.iso.org on September 18, 2018. These migrated schemas have been tested by validating a metadata record that includes all of the XML changes with the namespaces shown below. If you identify problems or unexpected behaviors, please add an issue to this repository. Thanks for your patience and help.
+
+Namespace block:
+
+```
+<mdb:MD_Metadata 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" 
+xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" 
+xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
+xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
+xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" 
+xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" 
+xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
+xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0" 
+xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" 
+xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0" 
+xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0" 
+xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" 
+
+xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" 
+xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0" 
+xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" 
+xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 http://standards.iso.org/iso/19115/-3/mdt/2.0/mdt.xsd">
+</mdb:MD_Metadata>
+```
+
 # The ISO TC211 Schema Repository
 The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/NamespacePrefix/Version. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0> or
