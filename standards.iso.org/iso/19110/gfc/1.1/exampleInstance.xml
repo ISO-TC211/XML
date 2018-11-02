@@ -43,7 +43,7 @@
 	<gfc:producer>
 		<cit:CI_Responsibility>
 		    <cit:role>
-		        <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+		        <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codeList.xml#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
 		    </cit:role>
 		    <cit:party>
 		        <cit:CI_Organisation>
@@ -203,7 +203,7 @@
 		                                                <gco:Date>2010</gco:Date>
 		                                            </cit:date>
 		                                            <cit:dateType>
-		                                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+		                                                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
 		                                            </cit:dateType>
 		                                        </cit:CI_Date>
 		                                    </cit:date>
@@ -226,7 +226,7 @@
 		                                        <gco:Date>1997-06-01</gco:Date>
 		                                    </cit:date>
 		                                    <cit:dateType>
-		                                        <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+		                                        <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
 		                                    </cit:dateType>
 		                                </cit:CI_Date>
 		                            </cit:date>
@@ -371,7 +371,7 @@
 		                                        <gco:Date>1997-06-01</gco:Date>
 		                                    </cit:date>
 		                                    <cit:dateType>
-		                                        <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+		                                        <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
 		                                    </cit:dateType>
 		                                </cit:CI_Date>
 		                            </cit:date>
