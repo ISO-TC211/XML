@@ -1,0 +1,53 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Metadata Common Classes (MCC) Version: 1.0</title>
+   </head>
+   <body>
+      <h1>Metadata Common Classes (MCC) Version: 1.0</h1><img src="mcc.png"><h2>Description</h2>
+      <p>MCC 1.0 is an XML Schema implementation derived from ISO ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.6.4.  It includes abstract classes shared by multiple namespaces and is required in order to enable
+         modularization of the XML implementation. The XML schema was encoded using the rules described in ISO/TS 19139:2007, Clause 8 and implementation approach from ISO/TS19115-3, Clause
+         8.
+      </p>
+      <h2>Sample XML files for mcc 1.0</h2>
+      <h2>CodeLists for mcc 1.0</h2><a href="codelists.html">codelists.html</a> <a href="codelists.xml">codelists.xml</a> 
+      <h2>XML Namespace for mcc 1.0</h2>
+      <p>The namespace URI for mcc 1.0 is <b>http://standards.iso.org/iso/19115/-3/mcc/1.0</b>.
+      </p>
+      <h2>XML Schema for mcc 1.0</h2>
+      <p><b><a href="mcc.xsd">mcc.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the mcc 1.0 namespace or by XML Schema documents importing the mcc 1.0 namespace. This XML schema includes (indirectly) all the implemented concepts of
+         the mcc namespace, but it
+         does not contain the declaration of any types.
+      </p>
+      <p><i>NOTE: The XML Schema for mcc 1.0 are available <a href="mcc.zip">here</a>. A zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3
+            and related standards is also <a href="http://standards.iso.org/iso/19115/19115AllNamespaces.zip">available</a>.</i></p>
+      <h2>Related XML Schema for mcc 1.0</h2>
+      <p><b><a href="AbstractCommonClasses.xsd">AbstractCommonClasses.xsd</a></b> implements the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.6.4. It was created using the encoding rules defined in ISO 19118, ISO
+         19139, and the implementation approach described in ISO 19115-3 and contains the following
+         classes (codeLists are bold): Abstract_AcquisitionInformation, Abstract_ApplicationSchemaInformation, Abstract_Citation, Abstract_Constraints, Abstract_ContentInformation, Abstract_Distribution, Abstract_Extent, Abstract_Format, Abstract_LineageInformation, Abstract_MaintenanceInformation, Abstract_Metadata, Abstract_MetadataExtension, Abstract_OnlineResource, Abstract_Platform, Abstract_PortrayalCatalogueInformation, Abstract_ReferenceSystem, Abstract_ResourceDescription, Abstract_Responsibility, Abstract_SpatialRepresentation, Abstract_SpatialResolution, Abstract_StandardOrderProcess, Abstract_TypedDate, and Abstract_Parameter
+      </p>
+      <p><b><a href="commonClasses.xsd">commonClasses.xsd</a></b> implements the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.6.4. It was created using the encoding rules defined in ISO 19118, ISO
+         19139, and the implementation approach described in ISO 19115-3 and contains the following
+         classes (codeLists are bold): MD_BrowseGraphic, MD_Identifier, <b>MD_ProgressCode</b>, MD_Scope, <b>MD_ScopeCode</b>, MD_ScopeDescription, <b>MD_SpatialRepresentationTypeCode</b>, and URI
+      </p>
+      <h2>Related XML Namespaces for mcc 1.0</h2> The mcc 1.0 namespace imports these other namespaces: 
+      <table border="1" cellpadding="3" cellspacing="3">
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Geographic COmmon</td>
+            <td>gco</td>
+            <td><a href="http://standards.iso.org/iso/19115/-3/gco/1.0">http://standards.iso.org/iso/19115/-3/gco/1.0</a></td>
+            <td>../../../../19115/-3/gco/1.0/gco.xsd</td>
+         </tr>
+      </table>
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p><font size="small" face="italic">Written by writeHTMLFiles Version: 2015-06-06 at 2018-03-10T10:56:57.622-07:00</font></p>
+   </body>
+</html>
