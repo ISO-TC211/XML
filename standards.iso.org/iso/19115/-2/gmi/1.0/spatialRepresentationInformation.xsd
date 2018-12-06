@@ -7,7 +7,13 @@
 	<!-- ================================== Imports ================================== -->
 	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"/>
 	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd"/>	
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://www.opengis.net/gml/3.2"/>
+	<!-- 
+		The GML schema location was changed from http://www.opengis.net/gml/3.2 to in order to be consistent with other schemas in the ISO 19115-2 set.
+		The correct GML schema are imported in gco/basicTypes.xsd, so they may not be required here.
+		Change <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://www.opengis.net/gml/3.2"/> to	
+	-->
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
+	
 	<xs:include schemaLocation="acquisitionInformation.xsd"/>
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
