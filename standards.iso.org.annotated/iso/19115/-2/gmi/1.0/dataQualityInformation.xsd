@@ -119,7 +119,7 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 	<!-- =========================================================================== -->
 	<xs:complexType name="LE_ProcessStepReport_Type">
 		<xs:annotation>
-			<xs:documentation>Description: Report of what occured during the process step - shortName: ProcStepRep</xs:documentation>
+			<xs:documentation>Description: Report of what occurred during the process step - shortName: ProcStepRep</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">

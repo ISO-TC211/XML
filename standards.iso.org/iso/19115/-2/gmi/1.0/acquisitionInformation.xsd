@@ -217,7 +217,7 @@ xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/
 	<!-- =========================================================================== -->
 	<xs:complexType name="MI_Objective_Type">
 		<xs:annotation>
-			<xs:documentation>Description: Describes the characteristics, spatial and temportal extent of the intended object to be observed  - shortName: TargetId</xs:documentation>
+			<xs:documentation>Description: Describes the characteristics, spatial and temporal extent of the intended object to be observed  - shortName: TargetId</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">

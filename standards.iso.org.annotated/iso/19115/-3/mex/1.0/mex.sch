@@ -17,14 +17,14 @@
     Rule: MD_ExtendedElementInformation
     Ref: {if dataType notEqual codelist, enumeration, or codelistElement, 
           then
-          obligation, maximumOccurence and domainValue are mandatory}
+          obligation, maximumOccurrence and domainValue are mandatory}
   -->
   <sch:diagnostics>
     <sch:diagnostic id="rule.mex.datatypedetails-maxocc-failure-en"
       xml:lang="en">
       Extended element information "<sch:value-of select="$name"/>"
       of type "<sch:value-of select="$dataType"/>"
-      does not specified max occurence.</sch:diagnostic>
+      does not specified max occurrence.</sch:diagnostic>
     <sch:diagnostic id="rule.mex.datatypedetails-maxocc-failure-fr"
       xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -35,7 +35,7 @@
       xml:lang="en">
       Extended element information "<sch:value-of select="$name"/>"
       of type "<sch:value-of select="$dataType"/>"
-      has max occurence: "<sch:value-of select="$maximumOccurrence"/>".
+      has max occurrence: "<sch:value-of select="$maximumOccurrence"/>".
     </sch:diagnostic>
     <sch:diagnostic id="rule.mex.datatypedetails-maxocc-success-fr"
       xml:lang="fr">
@@ -74,7 +74,7 @@
   <sch:pattern id="rule.mex.datatypedetails">
     <sch:title xml:lang="en">Extended element information 
       which are not codelist, enumeration or codelistElement 
-      MUST specified max occurence and domain value</sch:title>
+      MUST specified max occurrence and domain value</sch:title>
     <sch:title xml:lang="fr">Un élément d'extension qui n'est
       ni une codelist, ni une énumération, ni un élément de codelist
       DOIT préciser le nombre maximum d'occurences 
