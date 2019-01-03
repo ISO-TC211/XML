@@ -8,7 +8,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="
-    http://schemas.isotc211.org/19110/gfc/1.1 https://raw.githubusercontent.com/ISO-TC211/XML/master/standards.iso.org/19110/gfc/1.1/gfc.xsd">
+    http://schemas.isotc211.org/19110/gfc/1.1 gfc.xsd">
 	<cat:name>
 		<gco:CharacterString>RoadsBridgesCatalogue</gco:CharacterString>
 	</cat:name>
@@ -475,7 +475,7 @@
 						<gco:CharacterString>0..*</gco:CharacterString>
 					</gfc:cardinality>
 					<gfc:type>
-						<gfc:FC_RoleType codeList="http://standards.iso.org/.../Codelists.xml#FC_RoleType" codeListValue="ordinary"/>
+						<gfc:FC_RoleType codeList="http://schemas.isotc211.org/19110/gfc/1.1/codelists.xml#FC_RoleType" codeListValue="ordinary"/>
 					</gfc:type>
 					<gfc:isOrdered>
 						<gco:Boolean>false</gco:Boolean>
@@ -499,7 +499,7 @@
 						<gco:CharacterString>0..*</gco:CharacterString>
 					</gfc:cardinality>
 					<gfc:type>
-						<gfc:FC_RoleType codeList="http://standards.iso.org/.../Codelists.xml#FC_RoleType" codeListValue="ordinary"/>
+						<gfc:FC_RoleType codeList="http://schemas.isotc211.org/19110/gfc/1.1/codelists.xml" codeListValue="ordinary"/>
 					</gfc:type>
 					<gfc:isOrdered>
 						<gco:Boolean>false</gco:Boolean>
