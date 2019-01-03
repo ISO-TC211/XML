@@ -6,13 +6,10 @@
 # run this script from the namespace root/MaintenanceTools
 # 
 # All references to standards.iso.org/iso are replaced by http://schemas.isotc211.org
+# The find commands used here can be tested using the findSchemaAdnXMLDFiles.sh
 #
-# test find 
 # edit all schema files to change the repository location
-find . -name "*.xsd" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
+#find . -name "*.xsd" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
 #
 # edit all xml files to change the repository location
-find . -name "*.xml" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
-#
-# delete the backup files created by editng the schema
-#find ../ -name "*.bak" -delete
+#find . -name "*.xml" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
