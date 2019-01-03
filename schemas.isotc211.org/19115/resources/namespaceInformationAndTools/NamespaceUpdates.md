@@ -1,4 +1,12 @@
-# Namespace Updates - 2018-03-06
+# Namespace Updates
+##2019-01-03
+Migration of schemas from standards.iso.org/iso to schemas.isotc211.org
+The namespace information file (__ISONamespaceInformation.xml__) does not contain standards.iso.org/iso... so it looks like no change is required there. There are <location> elements that were updated by the general migration script to <location>http://schemas.isotc211.org</location>.
+
+Run the makeNamespaceTable.xsl on __ISONamespaceInformation.xml__ to create ../namespaceSummary.html. This is the oxygen transform scenario titled "Write  ISO Namespace Table" with the location of the xsl file adjusted to the schemas.isotc211.org version. 
+ 
+
+##2018-03-06
 
 ## Namespace Table
 Five base namespaces have been updated to new versions: ./19115/-3/msr/2.0, ./19115/-3/mrc/2.0, ./19115/-3/mrl/2.0, ./19115/-3/mac/2.0, ./19115/-3/cit/2.0 

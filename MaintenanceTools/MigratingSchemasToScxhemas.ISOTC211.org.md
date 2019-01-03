@@ -12,7 +12,7 @@ The script **testMigrateNamespacesToISOTC211.sh** can be used to test the sed sc
 All references to standards.iso.org/iso are replaced by http://schemas.isotc211.org  
 Note that this assumes that the iso directory is removed from the paths to these files
 
-#First Run:
+#Run Migration Scripts
 got error:  
 sed: RE error: illegal byte sequence  
 sed: RE error: illegal byte sequence  
@@ -51,6 +51,9 @@ xsi:schemaLocation="http://schemas.isotc211.org/19157/-2/dqm/1.0 file:/Users/ted
 _Fixed these by hand_
 
 Made several small fixes by hand then searched all \*.xsd and \*.xml file for standards.iso.org/iso without finding anything. Searching for standards.iso.org finds only references to http://standards.iso.org/ittf/PubliclyAvailableStandards.
+
+# Namespace description files
+See the file schemas.isotc211.org/19115/resources/namespaceInformationAndTools/NamespaceUpdates.md
 
 
 

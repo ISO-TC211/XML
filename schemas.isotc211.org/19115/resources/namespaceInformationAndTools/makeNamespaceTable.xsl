@@ -11,7 +11,8 @@
       <xd:p><xd:b>Revised on:</xd:b>August 4, 2014</xd:p>
       <xd:p><xd:b>Revised on:</xd:b>February 28, 2018</xd:p>
       <xd:p><xd:b>Revised on:</xd:b>March 10, 2018 - added header information</xd:p>
-      <xd:p><xd:b>Author:</xd:b>rehabermann@me.com</xd:p>
+      <xd:p><xd:b>Revised on:</xd:b>January 3, 2019 - changed standards.iso.org/iso to schemas.isotc211.org</xd:p>      
+      <xd:p><xd:b>Author:</xd:b>ted.habermann@gmail.com</xd:p>
       <xd:p>This stylesheets reads ISOSchema.xml and uses writes standard namespace description files.</xd:p>
       <xd:p>It assumes a schema directory hierarchy like
         schemaRootDirectory/standard/version/namespace/version/workingVersionDate/namespace.xsd</xd:p>
@@ -21,7 +22,7 @@
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
     This is the root of the schema directories. 
-    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org/iso 
+    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/schemas.isotc211.org/iso 
   -->
   <xsl:param name="schemaRootDirectory"/>
   <!-- Parameter standard:
@@ -40,7 +41,7 @@
   <xsl:strip-space elements="*"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:variable name="TransformName" select="'makeNamespaceTable'"/>
-  <xsl:variable name="TransformVersion" select="'2018-03-10'"/>
+  <xsl:variable name="TransformVersion" select="'2019-01-03'"/>
   <xsl:template match="/">
     <html>
       <head>
@@ -49,7 +50,7 @@
       <body>
         <h1>ISO TC211 Namespace Summary</h1>
         <p>This table summarizes the namespaces used in the XML implementation of <a href="https://committee.iso.org/home/tc211">ISO TC211</a> Standards for Geospatial Metadata. 
-          The current official versions of these namespaces are located at <a href="http://standards.iso.org/iso">standards.iso.org</a>. Working versions
+          The current official versions of these namespaces are located at <a href="http://schemas.isotc211.org">schemas.isotc211.org</a>. Working versions
           and information are at the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>.</p>
         <table border="1" cellpadding="3">
           <tr>
@@ -144,6 +145,7 @@
                 <xsl:value-of select="UMLPackage"/>
               </td>
               <td>
+                <!-- XML Schema -->
                 <xsl:element name="a">
                   <xsl:attribute name="href" select="concat($namespaceURL,'/',prefix,'.xsd')"/>
                   <xsl:value-of select="concat(prefix,'.xsd')"/>

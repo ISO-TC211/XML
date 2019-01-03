@@ -10,10 +10,12 @@
   There are several stylesheets that write those files: makeNamespaceTable.xsl creates the summary table and
   writeHTMLFiles.xsl write the index files. See those stylesheets for information about parameters.
   
-  Author: Ted Habermann, thabermann@hdfgroup.org, April 2015
+  Author: Ted Habermann, ted.habermann@gmail.com, April 2015
   
   Updated 20180228 for schema updates related to 19115-2 Revision, 19115-1 and 19157 Ammendments
   Version 2 of cit, mac, md1, md2, mda, mdb, mds, mdt, mrc, mrl, msr added
+  
+  Updated 20190103 for schema migration to schemas.isotc211.org
   
 -->
 <ISOSchema>
