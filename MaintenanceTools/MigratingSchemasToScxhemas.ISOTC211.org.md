@@ -7,5 +7,7 @@ There are 126 XML files
 
 Note that these files are no longer in an iso directory under schemas.isotc211.org. That directory was removed 2019-01-03.
 
-
-
+##Testing the sed scripts
+The script **testMigrateNamespacesToISOTC211.sh** can be used to test the sed scripts on files in the MaintenanceTools.sh directory. This script uses the same sed scripts as the migrateNamespacesToISOTC211.sh script but the paths in the find commands are different, . vs. ../schemas.isotc211.org.  
+All references to standards.iso.org/iso are replaced by http://schemas.isotc211.org  
+Note that this assumes that the iso directory is removed from the paths to these files

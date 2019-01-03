@@ -3,23 +3,23 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="CI_TelephoneTypeCode"
   xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
   <description>type of telephone</description>
-  <identifier codeSpace="http://standards.iso.org/iso/19115/-3/cit/1.0">CI_TelephoneTypeCode</identifier>
+  <identifier codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_TelephoneTypeCode</identifier>
   <dictionaryEntry>
     <Definition gml:id="CI_TelephoneTypeCode_voice">
       <description>telephone provides voice service</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/cit/1.0">voice</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">voice</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="CI_TelephoneTypeCode_fax">
       <description>telephone provides facsimile service</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/cit/1.0">fax</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">fax</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="CI_TelephoneTypeCode_sms">
       <description>telephone provides sms service</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/cit/1.0">sms</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">sms</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

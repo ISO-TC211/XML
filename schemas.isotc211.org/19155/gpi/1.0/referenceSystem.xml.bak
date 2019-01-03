@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferenceSystem xmlns="http://standards.iso.org/19155/iso/gpi/1.0/" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="rs1" xsi:schemaLocation="http://standards.iso.org/19155/gpi/1.0/ pi_schema20150513.xsd">
+    <gml:identifier codeSpace="http://piReferenceSystemRegistry.net/">park-registry.net</gml:identifier>
+    <!-- simple example -->
+    <PI gml:id="PI01">
+        <rs>park-registry.net</rs>
+        <value>Hibiya Park</value>
+    </PI>
+    <!-- example with "linkedPI" -->
+    <PI gml:id="PI02">
+        <value>Yoyogi Park</value>
+        <linkedPI xlink:href="http://sample.net/jp13_park_centroids.xml#pt327"/>
+    </PI>
+</ReferenceSystem>
+
+

@@ -2,26 +2,26 @@
   <description>Description: mechanism of activation&#13;
 shortName: TriggerCode&#13;
 </description>
-  <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mac/1.0">MI_TriggerCode</identifier>
+  <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">MI_TriggerCode</identifier>
   <dictionaryEntry>
     <Definition gml:id="_12420_19004">
       <description>Description: Event due to external stimuli&#13;
 Code: 001</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mac/1.0">automatic</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">automatic</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12420_19005">
       <description>Description: Event manually instigated&#13;
 Code: 002</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mac/1.0">manual</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">manual</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12420_19006">
       <description>Description: Event instigated by planned stimuli&#13;
 Code: 003</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mac/1.0">preProgrammed</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">preProgrammed</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" 
-  xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" 
-  elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mrc/2.0" version="1.0">
+  xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:mrc="http://schemas.isotc211.org/19115/-3/mrc/2.0" 
+  xmlns:mac="http://schemas.isotc211.org/19115/-3/mac/2.0" 
+  elementFormDefault="qualified" targetNamespace="http://schemas.isotc211.org/19115/-3/mrc/2.0" version="1.0">
   <include schemaLocation="content.xsd"/>
   <include schemaLocation="mrc.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/mac/2.0" schemaLocation="../../../../19115/-3/mac/2.0/mac.xsd"/>
+  <import namespace="http://schemas.isotc211.org/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://schemas.isotc211.org/19115/-3/mac/2.0" schemaLocation="../../../../19115/-3/mac/2.0/mac.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="MI_Band" substitutionGroup="mrc:MD_Band" type="mrc:MI_Band_Type">
     <annotation>

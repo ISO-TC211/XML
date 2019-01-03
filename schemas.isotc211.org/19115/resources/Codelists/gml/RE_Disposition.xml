@@ -5,26 +5,26 @@
 &lt;Attribute&gt;disposition[0..1]&lt;/Attribute&gt;&#13;
 &lt;Type&gt;RE_Disposition&lt;/Type&gt;&#13;
 &lt;UsedBy&gt;</description>
-  <identifier codeSpace="http://standards.iso.org/iso/19135/-2/reg/1.0">RE_Disposition</identifier>
+  <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">RE_Disposition</identifier>
   <dictionaryEntry>
     <Definition gml:id="_9344_12326">
       <description>
       </description>
-      <identifier codeSpace="http://standards.iso.org/iso/19135/-2/reg/1.0">withdrawn</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">withdrawn</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9344_12327">
       <description>
       </description>
-      <identifier codeSpace="http://standards.iso.org/iso/19135/-2/reg/1.0">accepted</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">accepted</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9344_12328">
       <description>
       </description>
-      <identifier codeSpace="http://standards.iso.org/iso/19135/-2/reg/1.0">notAccepted</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">notAccepted</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

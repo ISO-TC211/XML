@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="../preservation.xsl"?>
+<gpm:GP_PreservationMetadata xmlns:gpm="http://schemas.isotc211.org/19165/gpm/1.0" 
+	xmlns:cat="http://schemas.isotc211.org/19115/-3/cat/1.0" 
+	xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/1.0" 
+	xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0"
+	xmlns:gcx="http://schemas.isotc211.org/19115/-3/gcx/1.0" xmlns:gex="http://schemas.isotc211.org/19115/-3/gex/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://schemas.isotc211.org/19115/-3/gts"  
+	xmlns:mac="http://schemas.isotc211.org/19115/-3/mac/1.0" xmlns:mai="http://schemas.isotc211.org/19115/-3/mai/1.0" 
+	xmlns:mas="http://schemas.isotc211.org/19115/-3/mas/1.0" xmlns:mcc="http://schemas.isotc211.org/19115/-3/mcc/1.0" 
+	xmlns:mco="http://schemas.isotc211.org/19115/-3/mco/1.0" xmlns:mda="http://schemas.isotc211.org/19115/-3/mda/1.0" 
+	xmlns:mdb="http://schemas.isotc211.org/19115/-3/mdb/1.0" xmlns:mdq="http://schemas.isotc211.org/19157/-2/mdq/1.0" 
+	xmlns:mds="http://schemas.isotc211.org/19115/-3/mds/1.0" xmlns:mdt="http://schemas.isotc211.org/19115/-3/mdt/1.0" 
+	xmlns:mex="http://schemas.isotc211.org/19115/-3/mex/1.0" xmlns:mic="http://schemas.isotc211.org/19115/-3/mic/1.0" 
+	xmlns:mil="http://schemas.isotc211.org/19115/-3/mil/1.0" xmlns:mmi="http://schemas.isotc211.org/19115/-3/mmi/1.0" 
+	xmlns:mpc="http://schemas.isotc211.org/19115/-3/mpc/1.0" xmlns:mrc="http://schemas.isotc211.org/19115/-3/mrc/1.0" 
+	xmlns:mrd="http://schemas.isotc211.org/19115/-3/mrd/1.0" xmlns:mri="http://schemas.isotc211.org/19115/-3/mri/1.0" 
+	xmlns:mrl="http://schemas.isotc211.org/19115/-3/mrl/1.0" xmlns:mrs="http://schemas.isotc211.org/19115/-3/mrs/1.0" 
+	xmlns:msr="http://schemas.isotc211.org/19115/-3/msr/1.0" xmlns:srv="http://schemas.isotc211.org/19115/-3/srv/2.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://schemas.isotc211.org/19165/gpm/1.0 ../gpm.xsd">
+	<mdb:metadataIdentifier>
+		<mcc:MD_Identifier>
+			<mcc:code>
+				<gco:CharacterString>of5mv60sd0f279110s1r100ca5</gco:CharacterString>
+			</mcc:code>
+		</mcc:MD_Identifier>
+	</mdb:metadataIdentifier>
+	<mdb:defaultLocale>
+		<lan:PT_Locale>
+			<lan:language>
+				<lan:LanguageCode codeList="codeListLocation#LanguageCode" codeListValue="ca">ca</lan:LanguageCode>
+			</lan:language>
+			<lan:characterEncoding>
+				<lan:MD_CharacterSetCode codeList="codeListLocation#MD_CharacterSetCode" codeListValue=""/>
+			</lan:characterEncoding>
+		</lan:PT_Locale>
+	</mdb:defaultLocale>
+	<mdb:metadataScope>
+		<mdb:MD_MetadataScope>
+			<mdb:resourceScope>
+				<mcc:MD_ScopeCode codeList="codeListLocation#MD_ScopeCode" codeListValue=""/>
+			</mdb:resourceScope>
+		</mdb:MD_MetadataScope>
+	</mdb:metadataScope>
+	<mdb:contact>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="originator">originator</cit:CI_RoleCode>
+			</cit:role>
+			<cit:party>
+				<cit:CI_Organisation>
+					<cit:name>

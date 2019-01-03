@@ -14,7 +14,6 @@
 # 
 # All references to standards.iso.org/iso are replaced by http://schemas.isotc211.org
 # Note that this assumes that the iso directory is removed from the paths to these files
-# The find commands used here can be tested using the findSchemaAdnXMLDFiles.sh
 #
 # edit all schema files to change the repository location
 find . -name "*.xsd" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;

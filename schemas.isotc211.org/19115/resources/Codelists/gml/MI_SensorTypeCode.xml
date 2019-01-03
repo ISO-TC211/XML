@@ -7,5 +7,5 @@
 &lt;Type&gt;MI_SensorTypeCode&lt;/Type&gt;&#13;
 &lt;UsedBy&gt;&#13;
 </description>
-  <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mac/1.0">MI_SensorTypeCode</identifier>
+  <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">MI_SensorTypeCode</identifier>
 </Dictionary>

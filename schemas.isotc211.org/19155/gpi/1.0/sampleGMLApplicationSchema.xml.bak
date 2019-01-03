@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dataset xmlns="http://sample.net/sample" xmlns:gml="http://www.opengis.net/gml/3.2" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xsi:schemaLocation="http://sample.net/sample sample_appschema">
+    <!--
+        Sample application data based on the GML application schema in sampleGMLApplicationSchema.xsd
+    -->
+    <Park gml:id="pk">
+        <LandmarkName gml:id="lm001">
+            <name>Hibiya Park</name>
+            <linkedPI xlink:href="http://park-registry.net/pidata.xmll#PI01"/>
+        </LandmarkName>
+        <area xlink:href="sf1"/>
+    </Park>
+    <Shop gml:id="sp">
+        <name>Hibiya Restaurant</name>
+        <telNumber>+81-3-1234-5678</telNumber>
+        <LandmarkPosition gml:id="lm02">
+            <pos>
+                <gml:Point gml:id="pt328" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                    <gml:coordinates>35.674393, 139.756522</gml:coordinates>
+                </gml:Point>
+            </pos>
+            <linkedPI xlink:href="http://park-registry.net/pidata.xmll#PI02"/>
+        </LandmarkPosition>
+    </Shop>
+    <gml:Surface gml:id="sf1">
+        <gml:patches>
+            <gml:PolygonPatch>
+                <gml:exterior>
+                    <gml:Ring>
+                        <gml:curveMember xlink:href="cv1"/>
+                    </gml:Ring>
+                </gml:exterior>
+            </gml:PolygonPatch>
+        </gml:patches>
+    </gml:Surface>
+    <gml:Point gml:id="pt1">
+        <gml:pos>35.673824 139.756163</gml:pos>
+    </gml:Point>
+    <gml:Curve gml:id="cv1">
+        <gml:segments>
+            <gml:LineStringSegment>
+                <gml:pos>35.6733163 139.7577562</gml:pos>
+                <gml:pos>35.6746498 139.7587111</gml:pos>
+                <gml:pos>35.6766972 139.7551579</gml:pos>
+                <gml:pos>35.6723144 139.7530255</gml:pos>
+                <gml:pos>35.6710583 139.7559275</gml:pos>
+                <gml:pos>35.6733163 139.7577562</gml:pos>
+            </gml:LineStringSegment>
+        </gml:segments>
+    </gml:Curve>
+</Dataset>

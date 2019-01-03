@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdt:MX_Aggregate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/2.0"
- xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
- xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
- xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
- xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdt/2.0 mdt.xsd
- http://standards.iso.org/iso/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd
- http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
- http://standards.iso.org/iso/19115/-3/mda/2.0 ../../mda/2.0/mda.xsd
- http://standards.iso.org/iso/19115/-3/mdb/2.0 ../../mdb/2.0/mdb.xsd
- http://standards.iso.org/iso/19115/-3/mrl/2.0 ../../mrl/2.0/mrl.xsd">
+ xmlns:mda="http://schemas.isotc211.org/19115/-3/mda/2.0"
+ xmlns:mdb="http://schemas.isotc211.org/19115/-3/mdb/2.0" xmlns:mcc="http://schemas.isotc211.org/19115/-3/mcc/1.0" xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0"
+ xmlns:mdt="http://schemas.isotc211.org/19115/-3/mdt/2.0" xmlns:mri="http://schemas.isotc211.org/19115/-3/mri/1.0" xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0"
+ xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/1.0"
+ xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mdt/2.0 mdt.xsd
+ http://schemas.isotc211.org/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd
+ http://schemas.isotc211.org/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
+ http://schemas.isotc211.org/19115/-3/mda/2.0 ../../mda/2.0/mda.xsd
+ http://schemas.isotc211.org/19115/-3/mdb/2.0 ../../mdb/2.0/mdb.xsd
+ http://schemas.isotc211.org/19115/-3/mrl/2.0 ../../mrl/2.0/mrl.xsd">
     <!-- 
         This sample record demonstrates some of the structures available in the Metadata Application conformance class 
     -->
@@ -77,7 +77,7 @@
                         </mdb:MD_Metadata>
                     </mda:has>
                     <mdt:datasetCatalogue>
-                        <CT_CodelistCatalogue xmlns="http://standards.iso.org/iso/19115/-3/cat/1.0">
+                        <CT_CodelistCatalogue xmlns="http://schemas.isotc211.org/19115/-3/cat/1.0">
                             <name></name>
                             <scope></scope>
                             <versionNumber></versionNumber>

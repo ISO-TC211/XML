@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
-   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mds/1.0 ../../mds/2.0/mds.xsd
-   http://standards.iso.org/iso/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd
-   http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mac/2.0/mac.xsd
-   http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
-   http://standards.iso.org/iso/19110/gfc/1.1 ../../../../19110/gfc/1.1/gfc.xsd">
+<mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mcc="http://schemas.isotc211.org/19115/-3/mcc/1.0" xmlns:mdb="http://schemas.isotc211.org/19115/-3/mdb/2.0" xmlns:gfc="http://schemas.isotc211.org/19110/gfc/1.1" xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/2.0"
+   xmlns:cat="http://schemas.isotc211.org/19115/-3/cat/1.0" xmlns:mac="http://schemas.isotc211.org/19115/-3/mac/2.0" xmlns:mrc="http://schemas.isotc211.org/19115/-3/mrc/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mds/1.0 ../../mds/2.0/mds.xsd
+   http://schemas.isotc211.org/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd
+   http://schemas.isotc211.org/19115/-3/mrc/2.0 ../../mac/2.0/mac.xsd
+   http://schemas.isotc211.org/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
+   http://schemas.isotc211.org/19110/gfc/1.1 ../../../../19110/gfc/1.1/gfc.xsd">
    <!-- have to provide schema location for gfc to get concrete implementation of FeatureCatalog to include inline -->
    <mdb:metadataIdentifier/>
    <mdb:contact/>
@@ -20,7 +20,7 @@
          <mrc:attributeGroup>
             <mrc:MD_AttributeGroup id="MD_AttributeGroupTarget">
                <mrc:contentType>
-                  <mrc:MD_CoverageContentTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="physicalMeasurement">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
+                  <mrc:MD_CoverageContentTypeCode codeList="http://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="physicalMeasurement">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
                </mrc:contentType>
                <mrc:attribute>
                   <mrc:MD_SampleDimension>
@@ -135,7 +135,7 @@
          <mrc:attributeGroup>
             <mrc:MD_AttributeGroup>
                <mrc:contentType>
-                  <mrc:MD_CoverageContentTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="referenceInformation">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
+                  <mrc:MD_CoverageContentTypeCode codeList="http://schemas.isotc211.org/19115/resources/Codelist/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="referenceInformation">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
                </mrc:contentType>
                <mrc:attribute>
                   <mrc:MD_SampleDimension>

@@ -3,13 +3,13 @@
 FGDC: Band_Boundry_Definition&#13;
 shortName: BndDef&#13;
 </description>
-  <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mrc/1.0">MI_BandDefinition</identifier>
+  <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mrc/1.0">MI_BandDefinition</identifier>
   <dictionaryEntry>
     <Definition gml:id="_12495_19303">
       <description>Description: TBD&#13;
 FGDC: 3db&#13;
 Code: 001</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mrc/1.0">3db</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mrc/1.0">3db</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
@@ -17,7 +17,7 @@ Code: 001</description>
       <description>Description: width of a distribution equal to the distance between the outer two points on the distribution having power level half of that at the peak&#13;
 FGDC: half maximum&#13;
 Code: 002</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mrc/1.0">halfMaximum</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mrc/1.0">halfMaximum</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
@@ -26,7 +26,7 @@ Code: 002</description>
 FGDC: 50 %&#13;
 definitionSource: STDI-0002, VERSION 2.1, 16 November 2000&#13;
 Code: 003</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mrc/1.0">fiftyPercent</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mrc/1.0">fiftyPercent</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
@@ -34,7 +34,7 @@ Code: 003</description>
       <description>Description: TBD&#13;
 FGDC: 1/e&#13;
 Code: 004</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mrc/1.0">oneOverE</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mrc/1.0">oneOverE</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
@@ -42,7 +42,7 @@ Code: 004</description>
       <description>Description: TBD&#13;
 FGDC: equivalent width&#13;
 Code: 005</description>
-      <identifier codeSpace="http://standards.iso.org/iso/19115/-3/mrc/1.0">equivalentWidth</identifier>
+      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mrc/1.0">equivalentWidth</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- In this case, a point instance "gml:id="pt327" should be declared in “http://sample.net/jp13_park_centroids.xml” -->
+<!-- point instance from larger GML file (jp13_park_centroids.xml) -->
+<gml:Point gml:id="pt327" srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+    <gml:descriptionReference xlink:href="http://park-registry.net/pidata.xmll#PI01"/>
+    <gml:coordinates>35.674393, 139.756522</gml:coordinates>
+</gml:Point>

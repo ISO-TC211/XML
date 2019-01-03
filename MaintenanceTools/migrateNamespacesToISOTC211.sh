@@ -10,7 +10,7 @@
 # The find commands used here can be tested using the findSchemaAdnXMLDFiles.sh
 #
 # edit all schema files to change the repository location
-find . -name "*.xsd" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
+find ../schemas.isotc211.org -name "*.xsd" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
 #
 # edit all xml files to change the repository location
-find . -name "*.xml" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
+find ../schemas.isotc211.org -name "*.xml" -exec sed -E -i .bak -f migrateNamespacesToISOTC211.sed {} \;
