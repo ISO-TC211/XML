@@ -52,9 +52,18 @@ _Fixed these by hand_
 
 Made several small fixes by hand then searched all \*.xsd and \*.xml file for standards.iso.org/iso without finding anything. Searching for standards.iso.org finds only references to http://standards.iso.org/ittf/PubliclyAvailableStandards.
 
+#Sample File Validation
+Created sample file pointing to local schemas. It validated.
+
 # Namespace description files
 See the file schemas.isotc211.org/19115/resources/namespaceInformationAndTools/NamespaceUpdates.md
 
+Created new schemas.isotc211.org/19115/resources/namespaceSummary.html... Checking columns:  
+Standard Prefix: pointing to local files  
+Namespace URI: pointing to schemas.isotc211.org
+Thumbnail: pointing to local files  
+XML Schema: pointing to schemas.isotc211.org  
+XML Schema Included: pointing to schemas.isotc211.org  
 
 
 
