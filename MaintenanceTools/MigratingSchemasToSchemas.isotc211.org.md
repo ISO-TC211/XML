@@ -65,5 +65,8 @@ Thumbnail: pointing to local files
 XML Schema: pointing to schemas.isotc211.org  
 XML Schema Included: pointing to schemas.isotc211.org  
 
+#Namespace HTML files
+These files have local links to the schemas
+
 
 

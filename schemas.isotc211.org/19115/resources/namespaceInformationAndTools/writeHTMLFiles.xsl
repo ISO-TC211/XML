@@ -7,8 +7,9 @@
       </xd:p>
       <xd:p><xd:b>Version:</xd:b>0.1</xd:p>
       <xd:p><xd:b>Created on:</xd:b>February 27, 2013</xd:p>
-      <xd:p><xd:b>Modified on:</xd:b> January 4, 2014, 2014</xd:p>
-      <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
+      <xd:p><xd:b>Modified on:</xd:b> January 4, 2014</xd:p>
+      <xd:p><xd:b>Modified on:</xd:b> January 4, 2019 for migration of schemas to schemas.isotc211.org</xd:p>     
+      <xd:p><xd:b>Author:</xd:b>ted.habermann@gmail.com</xd:p>
       <xd:p>This stylesheets reads ISONamespaceInformation.xml and writes standard namespace description files into a filesystem with the ISO namespace structure.</xd:p>
       <xd:p>It assumes a schema directory hierarchy like schemaRootDirectory/standard/version/namespace/version/namespace.xsd</xd:p>
       <xd:p>and writes index.html files into the namespace directories (schemaRootDirectory/standard/version/namespace/version/index.html)</xd:p>
@@ -16,7 +17,7 @@
   </xd:doc>
   <!-- Parameter schemaRootDirectory:
     This is the root of the schema directories. 
-    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/standards.iso.org/iso
+    Example: /Users/tedhabermann/GitRepositories/ISOTC211-XML/XML/schemas.isotc211.org
   -->
   <xsl:param name="schemaRootDirectory"/>
   <!-- Parameter standard:
@@ -32,7 +33,7 @@
   -->
   <xsl:param name="workingVersionDate"/>
   <xsl:variable name="TransformName" select="'writeHTMLFiles'"/>
-  <xsl:variable name="TransformVersion" select="'2015-06-06'"/>
+  <xsl:variable name="TransformVersion" select="'2019-01-04'"/>
   <xsl:key name="namespaceTitleLookup" match="namespace" use="prefix"/>
   <xsl:output method="html"/>
   <xsl:strip-space elements="*"/>
@@ -103,7 +104,7 @@
             <p>
               <i>NOTE: The XML Schema for <xsl:value-of select="$namespaceVersion"/> are available <xsl:element name="a">
                 <xsl:attribute name="href" select="concat(prefix,'.zip')"/>here</xsl:element>. A zip archive including all the XML Schema Implementations defined in ISO/TS 19115-3 and related standards is also <xsl:element name="a">
-                <xsl:attribute name="href" select="'http://standards.iso.org/iso/19115/19115AllNamespaces.zip'"/>available</xsl:element>.</i>
+                <xsl:attribute name="href" select="'http://schemas.isotc211.org/19115/19115AllNamespaces.zip'"/>available</xsl:element>.</i>
             </p>
             <xsl:variable name="otherSchemaList" as="xs:string*">
               <xsl:for-each select="document($schemaFile)/*/xs:include">
