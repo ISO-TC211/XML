@@ -46,3 +46,30 @@ Same validation error occurs.
 Try changing mdt.xsd to mda.xsd (one layer down the hierarchy). Now we get the same error, but it is classes in mda.xsd that are repeated.
 
 Try changing mdt.xsd to md2.xsd (one more layer down the hierarchy). Now the document is valid.
+
+## Validate record with schemas.isotc211.org schema
+The ISOTC211 schema repository was migrated to schemas.isotc211.org on 2019-01-04 and the file **MD\_MetadataPathsValidWith19115-2Revisions_19115-1Paths.schemas.isotc211.org.xml** was created to test the new schemas. Decided to start at the lower namespaces and work up to see where the problem starts...
+
+**xsi:schemaLocation="http://schemas.isotc211.org/19115/-3/mdb/2.0 http://schemas.isotc211.org/19115/-3/mdb/2.0/mdb.xsd** - 36 errors  
+I get the expected errors about mcc not existing, but I also get a bunch of errors like:  
+System ID: https://schemas.isotc211.org/19115/-3/mdb/2.0/metadataBase.xsd
+Main validation file: /Users/tedhabermann/GitRepositories/MetadataPaths/19115-1/xml/MD_MetadataPathsValidWith19115-2Revisions_19115-1Paths.schemas.isotc211.org.xml
+Schema: http://schemas.isotc211.org/19115/-3/mdb/2.0/mdb.xsd
+Engine name: Xerces
+Severity: error
+Description: sch-props-correct.2: A schema cannot contain two global components with the same name; this schema contains two occurrences of 'http://schemas.isotc211.org/19115/-3/mdb/2.0,MD_Metadata'.
+Start location: 12:17
+End location: 12:30
+URL: http://www.w3.org/TR/xmlschema-1/#sch-props-correct
+
+**Problem**  
+
+```
+The file https://schemas.isotc211.org/19115/-3/mdb/2.0/mdb.xsd defines the cit namespace as
+xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/1.0" 
+but then imports 
+<import namespace="http://schemas.isotc211.org/19115/-3/cit/2.0" 
+schemaLocation="../../../../19115/-3/cit/2.0/cit.xsd"/>```
+
+I searched all of the schemas for xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/1.0" and found that this is the only Version 2.0 schema that imports cit/1.0/cit.xsd.
+
