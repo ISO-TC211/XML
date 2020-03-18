@@ -5,8 +5,8 @@
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 11-15-2006 15:20:33 ====== </xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
-	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../gmd/identification.xsd"/>
-	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="../../19139/-/gmd/1.0/identification.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../../19139/1/gco/1.0/gco.xsd"/>
 	<xs:include schemaLocation="../srv/serviceModel.xsd"/>
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
