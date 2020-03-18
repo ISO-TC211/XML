@@ -10,10 +10,10 @@ and data quality (ISO 19157). These are not final schemas for these standards bu
 initial testing and familiarization. They are provided here to support those kinds of use cases 
 without any expectation for persistence.
 
-The current version of the official schema are at <http://standards.iso.org/iso>. These official schemas are also in the standards.iso.org directory of this repository. The directory standards.iso.org/iso includes a sub-directory for each ISO Standard.
+The current version of the official schema are at <https://schemas.isotc211.org>. These official schemas are also in the standards.iso.org directory of this repository. The directory schemas.isotc211.org includes a sub-directory for each ISO Standard that has an XML schema .
 
 # ISO Schema Repository Update
-The schemas developed in this repository that include recent changes have been migrated to the Official ISO Schema Repository at http://standards.iso.org on September 18, 2018. These migrated schemas have been tested by validating a metadata record that includes all of the XML changes with the namespaces shown below. If you identify problems or unexpected behaviors, please add an issue to this repository. Thanks for your patience and help.
+The schemas developed in this repository that include recent changes have been migrated to the Official ISO Schema Repository at https://schemas.isotc211.org on September 18, 2018. These migrated schemas have been tested by validating a metadata record that includes all of the XML changes with the namespaces shown below. If you identify problems or unexpected behaviors, please add an issue to this repository. Thanks for your patience and help.
 
 Namespace block:
 
@@ -53,13 +53,12 @@ xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 http://standar
 ```
 
 # The ISO TC211 Schema Repository
-The ISO TC211 XML Schema repository is located at <http://standards.iso.org/iso>. Each part of each standard has a directory like: http://standards.iso.org/iso/StandardNumber/PartNumber/NamespacePrefix/Version. For example:
-<http://standards.iso.org/iso/19115/-3/cit/1.0> or
-<http://standards.iso.org/iso/19157/-2/mdq/1.0>. Comments, suggestions, change requests and revisions are managed in this repository, i.e. [ISO TC211 Git Repository](https://github.com/ISO-TC211/XML).
+The ISO TC211 XML Schema repository is located at <https://schemas.isotc211.org>. Each part of each standard has a directory like: https://schemas.isotc211.org/StandardNumber/PartNumber/NamespacePrefix/Version. For example:
+<https://schemas.isotc211.org/19115/-3/cit/1.0> or
+<https://schemas.isotc211.org/19157/-2/mdq/1.0>. Comments, suggestions, change requests and revisions are managed in this repository, i.e. [ISO TC211 Git Repository](https://github.com/ISO-TC211/XML).
 
-A zip archive of the complete official schema is available at http://standards.iso.org/iso/19115/19115AllNamespaces.zip.
 
-Summary information about all of these namespaces is avaialble at http://standards.iso.org/iso/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
+Summary information about all of these namespaces is avaialble at https://schemas.isotc211.org/19115/resources/namespaceSummary.html. Each namespace directory in the repository has an index file that provides information relevant to the namespace and links. These files are described below.
 
 ## Package Diagram
 UML Package Diagrams show dependencies between the current namespace and others as well as the entities defined in each namespace.
@@ -73,10 +72,12 @@ If the namespace includes codelists, an xml (codelists.xml) and html (codelists.
 The standard location for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/xxx/Version. For example:
 <http://standards.iso.org/iso/19115/-3/cit/1.0> or
 <http://standards.iso.org/iso/19157/-2/mdq/1.0>.
+As new schemas are developed the namespace location will adopt the new schema location URL
+         https://schemas.isotc211.org/StandardNumber/PartNumber/xxx/Version
 ## Schema Location
-The standard schema for namespace xxx is http://standards.iso.org/iso/StandardNumber/PartNumber/xxx/Version/xxx.xsd. For example:
-<http://standards.iso.org/iso/19115/-3/cit/1.0/cit.xsd> or
-<http://standards.iso.org/iso/19157/-2/mdq/1.0/mdq.xsd>.
+The standard schema for namespace xxx is https://schemas.isotc211.org/StandardNumber/PartNumber/xxx/Version/xxx.xsd. For example:
+<https://schemas.isotc211.org/19115/-3/cit/1.0/cit.xsd> or
+<https://schemas.isotc211.org/19157/-2/mdq/1.0/mdq.xsd>.
 These XML schema include (indirectly) all the implemented concepts of the xxx namespace, but they do not contain the declaration of any types.
 ## Related Schema
 The xxx.xsd files reference other schemas that define the types included in the namespace. These usually have more descriptive names than xxx.xsd, e.g. citation.xsd.
