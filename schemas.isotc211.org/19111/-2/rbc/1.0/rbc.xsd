@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" 
+  xmlns:rbc="https://schemas.isotc211.org/19111/-2/rbc/1.0" 
+  elementFormDefault="qualified" 
+  targetNamespace="https://schemas.isotc211.org/19111/-2/rbc/1.0" version="1.0">
+  <include schemaLocation="./rbcStubs.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

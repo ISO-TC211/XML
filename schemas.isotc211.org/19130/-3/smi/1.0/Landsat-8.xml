@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SD_SensorModel xmlns="https://schemas.isotc211.org/19130/-3/smi/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation=
+    "https://schemas.isotc211.org/19130/-3/smi smi.xsd">
+    
+    <forImageId>
+        <identifier xmlns="http://www.opengis.net/sensorml/2.0">
+            <Term>
+                <label>imageID</label>
+                <value>LC80150532020003LGN00</value>
+            </Term>
+        </identifier>
+    </forImageId>
+    
+    <trueReplacementModel>
+        <SD_TrueReplacementModel>
+            <accuracy>
+                <DQ_GriddedDataPositionalAccuracy xmlns="https://schemas.isotc211.org/19157/-2/mdq">
+                    <result>
+                        <DQ_QuantitativeResult>
+                            <value>
+                                <Record xmlns="https://schemas.isotc211.org/19103/-/gco">
+                                    <field>
+                                        <Field>       
+                                            <value>
+                                                <CharacterString>393000e1.+00</CharacterString>
+                                            </value>
+                                            <type>
+                                                <FieldType>
+                                                    <fieldName>
+                                                        <CharacterString>absoluteCalibrationConstant</CharacterString>
+                                                    </fieldName>
+                                                    <fieldType>
+                                                        <TypeName>
+                                                            <aName>
+                                                                <CharacterString>double</CharacterString>
+                                                            </aName>
+                                                        </TypeName>
+                                                    </fieldType>
+                                                </FieldType>
+                                            </type>
+                                        </Field>
+                                    </field>
+                                    
+                                </Record>
+                               </value>
+                        </DQ_QuantitativeResult>
+                    </result>
+                </DQ_GriddedDataPositionalAccuracy>
+            </accuracy>
+            <regionOfValidity>
+                <CV_GridPoint>
+                    <gridCoord xmlns="https://schemas.isotc211.org/19123/-1/cis">
+                        <coordValues>PointLongitude: -84.68507
+                            PointLatitude: 11.16687</coordValues>
+                    </gridCoord> 
+                </CV_GridPoint>
+                <CV_GridPoint>
+                    <gridCoord xmlns="https://schemas.isotc211.org/19123/-1/cis">
+                        <coordValues>PointLongitude: -82.98286
+                            PointLatitude: 10.80635</coordValues>
+                    </gridCoord>                           
+                </CV_GridPoint>
+                <CV_GridPoint>
+                    <gridCoord xmlns="https://schemas.isotc211.org/19123/-1/cis">
+                        <coordValues> PointLongitude: -83.36406
+                            PointLatitude: 9.06862</coordValues>
+                    </gridCoord>
+                </CV_GridPoint>
+                <CV_GridPoint>
+                    <gridCoord xmlns="https://schemas.isotc211.org/19123/-1/cis">
+                        <coordValues>  PointLongitude: -85.05687
+                            PointLatitude: 9.43177</coordValues>
+                    </gridCoord>   
+                </CV_GridPoint>
+                <CV_GridPoint>
+                    <gridCoord xmlns="https://schemas.isotc211.org/19123/-1/cis">
+                        <coordValues>   PointLongitude: -84.02152
+                            PointLatitude: 10.12223</coordValues>
+                    </gridCoord>          
+                </CV_GridPoint>
+            </regionOfValidity>
+                       
+            <fitAsGrid>
+                
+                <SD_TRMAsGrid>
+                    <gcp xmlns="https://schemas.isotc211.org/19115/-1/msr">
+                        <MI_GCP>
+                            <geographicCoordinates>
+                                <Point xmlns="http://www.opengis.net/gml/3.2">
+                                    <coordinates>
+                                        38.9198140 -76.4661200
+                                    </coordinates>
+                                </Point>
+                            </geographicCoordinates>
+                        </MI_GCP>
+                        
+                    </gcp>
+                    
+                    <collectionIdentification xmlns="https://schemas.isotc211.org/19115/-1/msr">
+                        <Integer xmlns="https://schemas.isotc211.org/19103/-/gco">1</Integer>
+                    </collectionIdentification>
+                    <collectionName xmlns="https://schemas.isotc211.org/19115/-1/msr">
+                        <CharacterString xmlns="https://schemas.isotc211.org/19103/-/gco">Landsat_8_OLI_TIRS_C1</CharacterString>
+                    </collectionName>
+                    
+                    <coordinateReferenceSystem xmlns="https://schemas.isotc211.org/19115/-1/msr">
+                        <MD_ReferenceSystem xmlns="https://schemas.isotc211.org/19115/-1/mrs">
+                            <referenceSystemIdentifier>
+                                <MD_Identifier xmlns="https://schemas.isotc211.org/19115/-1/mcc">
+                                    <code>
+                                        <MD_ReferenceSystemTypeCode xmlns="https://schemas.isotc211.org/19115/-1/mrs" codeList="compoundGeographic2DVertical" codeListValue="EPSG:4326"/>
+                                    </code>
+                                </MD_Identifier>
+                            </referenceSystemIdentifier>
+                        </MD_ReferenceSystem>
+                    </coordinateReferenceSystem>
+                    
+                    <dimension>
+                        <Integer xmlns="https://schemas.isotc211.org/19103/-/gco">3</Integer>
+                    </dimension>
+                    <interpolation>cubic</interpolation>
+                    
+                </SD_TRMAsGrid>
+                
+            </fitAsGrid>
+            <controlPointRepository>
+                <SD_GCPRepository>
+                    <accessInformation>
+                        <CI_Contact xmlns="https://schemas.isotc211.org/19115/-1/cit">
+                            <onlineResource>
+                                <CI_OnlineResource>
+                                    <linkage>
+                                        <CharacterString xmlns="https://schemas.isotc211.org/19103/-/gco">https://landsat.usgs.gov/gcp</CharacterString>
+                                    </linkage>
+                                </CI_OnlineResource>
+                            </onlineResource>
+                        </CI_Contact>      
+                    </accessInformation>
+                    <accessRestricted>
+                        <Boolean xmlns="https://schemas.isotc211.org/19103/-/gco">true</Boolean>
+                    </accessRestricted>     
+                </SD_GCPRepository>
+            </controlPointRepository>                   
+        </SD_TrueReplacementModel>   
+    </trueReplacementModel>  
+</SD_SensorModel>
