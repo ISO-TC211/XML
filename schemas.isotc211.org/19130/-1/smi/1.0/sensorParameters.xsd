@@ -6,7 +6,7 @@
     xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
     xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
     xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" 
-    xmlns:mac="https://schemas.isotc211.org/19115/-3/mac/2.0" 
+    xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" 
     xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
     xmlns:swe="http://www.opengis.net/swe/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
