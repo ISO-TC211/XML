@@ -17,7 +17,7 @@
     <!-- ============================================================== -->
     <!-- Elements and types                                             -->
     <!-- ============================================================== -->
-    <complexType name="CV_CommonPointRuleType_PropertyType">
+     <complexType name="CV_CommonPointRule_PropertyType">
         <sequence minOccurs="0">
             <element ref="gmlcov:CV_CommonPointRule"/>
         </sequence>
@@ -25,8 +25,8 @@
         <attribute ref="gco:nilReason"/>
     </complexType>
     <element name="CV_CommonPointRule" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
-        <element name="commonPointRule" type="gmlcov:CV_CommonPointRuleType"/>
-        <simpleType name="CV_CommonPointRuleType">
+        <element name="commonPointRule" type="gmlcov:CV_CommonPointRule_Type"/>
+        <simpleType name="CV_CommonPointRule_Type">
             <restriction base="string">
                 <enumeration value="average"/>
                 <enumeration value="low"/>
@@ -36,9 +36,9 @@
                 <enumeration value="end"/>
             </restriction>
         </simpleType>
-        <!--  ...................................................................................
-   -->
-        <complexType name="CV_InterpolationMethod_PropertyType">
+        <!--  ................................................................................... -->
+  
+       <complexType name="CV_InterpolationMethod_PropertyType">
             <sequence minOccurs="0">
                 <element ref="gmlcov:CV_InterpolationMethod"/>
             </sequence>
@@ -59,7 +59,32 @@
                     <enumeration value="barycentric"/>
                 </restriction>
             </simpleType>
-            <!-- =========================================================== -->
+
+    <!--  ................................................................................... -->
+    <element name="CV_SequenceType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation></documentation>
+        </annotation>
+    </element>
+    <complexType name="CV_SequenceType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="gmlcov:CV_SequenceType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <!--   
+            <simpleType name="CV_SequenceType_Type">
+                <restriction base="string">
+                    <enumeration value="linear"/>
+                    <enumeration value="boustrophedonic"/>
+                    <enumeration value="CantorDiagonal"/>
+                    <enumeration value="spiral"/>
+                    <enumeration value="Morton"/>
+                    <enumeration value="Hilbert"/>
+                </restriction>
+            </simpleType>
+-->
+    <!-- =========================================================== -->
        <!-- =========================================================== -->
     <!-- =========================================================== -->
     <!-- =========================================================== -->
