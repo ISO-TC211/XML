@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/3"
+  xmlns:dqc="https://schemas.isotc211.org/19157/-2/dqc/3"
+  xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/3"
+  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/3"
+  xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/3"
+  xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/3" 
+  elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19115/-1/mdb/3" 
+  version="1.0">
+  <annotation>
+    <documentation>Wrapper namespace to support Catalog Service implementations</documentation>
+  </annotation>
+  <include schemaLocation="metadataBase.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/cit/3"
+    schemaLocation="../../../../19115/-1/cit/3.0/cit.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19157/-2/dqc/3"
+    schemaLocation="../../../../19157/-2/dqc/3.0/dqc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/lan/3"
+    schemaLocation="../../../../19115/-1/lan/3.0/lan.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/3"
+    schemaLocation="../../../../19115/-1/mcc/3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mri/3"
+    schemaLocation="../../../../19115/-1/mri/3.0/mri.xsd"/>
+  <!-- need to import gex because bounding box is mandatory if metadataScope is dataset -->
+  <import namespace="https://schemas.isotc211.org/19115/-1/gex/3"
+    schemaLocation="../../../../19115/-1/gex/3.0/gex.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

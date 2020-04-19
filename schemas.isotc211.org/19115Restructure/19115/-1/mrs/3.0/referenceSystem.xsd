@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1" 
+  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/3" 
+  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/3" 
+  xmlns:rbc="https://schemas.isotc211.org/19111/-2/rbc/1" 
+  elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19115/-1/mrs/3" 
+  version="1.0">
+  <include schemaLocation="mrs.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19111/-2/rbc/1" schemaLocation="../../../../19111/-3/rbc/3.0/rbc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1" schemaLocation="../../../../19103/-/gco/1.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/3" schemaLocation="../../../../19115/-1/mcc/3.0/mcc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="MD_ReferenceSystem" substitutionGroup="mcc:Abstract_ReferenceSystem" type="mrs:MD_ReferenceSystem_Type">
+    <annotation>
+      <documentation>information about the reference system</documentation>
+    </annotation>
+  </element>
+  <complexType name="MD_ReferenceSystem_Type">
+    <complexContent>
+      <extension base="mcc:Abstract_ReferenceSystem_Type">
+        <sequence>
+          <element minOccurs="0" name="referenceSystemIdentifier" type="mcc:MD_Identifier_PropertyType">
+            <annotation>
+              <documentation>identifier and codespace for reference systeme.g. EPSG::4326</documentation>
+              <documentation>Condition: At least one of referenceSystemIdentifier or crs is required</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="crs" type="rbc:RS_CRS_PropertyType">
+            <annotation>
+              <documentation>full description of the coordinate reference system to which a coordinate set is referenced</documentation>
+              <documentation>Condition: At least one of referenceSystemIdentifier or crs is required</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="coordinateEpoch" type="rbc:RS_DataEpoch_PropertyType">
+            <annotation>
+              <documentation>epoch at which a coordinate set to a dynamic CRS is valid</documentation>
+              <documentation>Condition: Reqired if the CRS is dynamic, otherwise should not be given</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="referenceSystemType" type="mrs:MD_ReferenceSystemTypeCode_PropertyType">
+            <annotation>
+              <documentation>type of reference system identifiede.g. geographic2D</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MD_ReferenceSystem_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mrs:MD_ReferenceSystem"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <element name="MD_ReferenceSystemTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <annotation>
+      <documentation>defines type of reference system used</documentation>
+    </annotation>
+  </element>
+  <complexType name="MD_ReferenceSystemTypeCode_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mrs:MD_ReferenceSystemTypeCode"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+</schema>

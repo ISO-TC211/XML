@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:pre="https://schemas.isotc211.org/19135/-2/pre/3" elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19135/-2/pre/3" version="1.0">
+  <include schemaLocation="abstract.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

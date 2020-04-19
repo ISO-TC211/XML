@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:cat="https://schemas.isotc211.org/19115/-1/cat/3"
+  xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1"
+  xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/3"
+  xmlns:mdt="https://schemas.isotc211.org/19115/-1/mdt/3" 
+  elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19115/-1/mdt/3" 
+  version="1.0">
+  <annotation>
+    <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;required to implement data
+      transfer packages with bundled metadata, data files, and registries defining package
+      content&lt;/font&gt;.</documentation>
+  </annotation>
+  <include schemaLocation="metadataTransfer.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/cat/3"
+    schemaLocation="../../../../19115/-1/cat/3.0/cat.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gcx/1"
+    schemaLocation="../../../../19103/-/gcx/1.0/gcx.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mda/3"
+    schemaLocation="../../../../19115/-1/mda/3.0/mda.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>
