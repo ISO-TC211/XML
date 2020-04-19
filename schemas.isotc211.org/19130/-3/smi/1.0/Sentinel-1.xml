@@ -210,14 +210,12 @@
                             </smi:arrayOrigin>
                             <smi:detectorShape>
                                 <!-- check if smi:SD_ShapeCode should be a codelist -->
-                               <smi:SD_ShapeCode>square</smi:SD_ShapeCode>
+                                <smi:SD_ShapeCode codeList="https://schemas.isotc211.org.19130/-3/smi/codelists.xml#SD_ShapeCode" codeListValue="square">square</smi:SD_ShapeCode>
+                                <!-- <smi:SD_ShapeCode>square</smi:SD_ShapeCode> -->
                             </smi:detectorShape>
-                            <smi:detectorSize>
-                                <smi:Length>
+                             <smi:detectorSize>
                                     <!-- https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Instrument -->
-                                    <gco:Length uom="meter">12</gco:Length>
-                                </smi:Length>
-    
+                                    <gco:Length uom="meter">12</gco:Length>    
                             </smi:detectorSize>
                             <smi:numberOfDimensions>                                
                                 <gco:Integer>2</gco:Integer>
@@ -254,7 +252,8 @@
                             </smi:gsdCRS>                           
                             <smi:referenceSurface>
                                 <!-- check if smi:SD_SurfaceCode should be a codelist -->
-                                <smi:SD_SurfaceCode>ground</smi:SD_SurfaceCode>
+                                <smi:SD_SurfaceCode codeList="https://schemas.isotc211.org.19130/-3/smi/codelists.xml#SD_SurfaceCode" codeListValue="ground">ground</smi:SD_SurfaceCode>
+                                <!-- <smi:SD_SurfaceCode>ground</smi:SD_SurfaceCode> -->
                             </smi:referenceSurface>                          
                             <smi:rowSpacing>
                                 <gco:Distance uom="meter">14.007</gco:Distance>
@@ -312,11 +311,13 @@
                             </smi:grpPosition>                         
                             <smi:orientation>
                                 <!-- check if smi:SD_SAROrientationCode should be a codelist -->
-                                <smi:SD_SAROrientationCode>right</smi:SD_SAROrientationCode>
+                                <smi:SD_SAROrientationCode codeList="https://schemas.isotc211.org.19130/-3/smi/codelists.xml#SD_SAROrientationCode" codeListValue="right">ground</smi:SD_SAROrientationCode>
+                                <!-- <smi:SD_SAROrientationCode>right</smi:SD_SAROrientationCode> -->
                             </smi:orientation>
                             <smi:collectionMode>
                                 <!-- check if smi:SE_SARCollectionMode should be a codelist -->
-                                <smi:SE_SARCollectionMode>scan</smi:SE_SARCollectionMode>
+                                <smi:SE_SARCollectionMode codeList="https://schemas.isotc211.org.19130/-3/smi/codelists.xml#SE_SARCollectionMode" codeListValue="scan">scan</smi:SE_SARCollectionMode>
+                                <!-- <smi:SE_SARCollectionMode>scan</smi:SE_SARCollectionMode> -->
                             </smi:collectionMode>                          
                         </smi:SE_SAROperation>
                     </smi:systemAndOperation>
@@ -386,7 +387,8 @@
     </smi:physicalSensorModel>
     
     <smi:sensorDataModeling>
-        <smi:SE_DataModelingMethod>notApplicable</smi:SE_DataModelingMethod>
+        <smi:SE_DataModelingMethod codeList="https://schemas.isotc211.org.19130/-3/smi/codelists.xml#SE_DataModelingMethod" codeListValue="notApplicable">notApplicable</smi:SE_DataModelingMethod>
+        <!-- <smi:SE_DataModelingMethod>notApplicable</smi:SE_DataModelingMethod> -->
     </smi:sensorDataModeling>
 
     <smi:sensorManufacturer>

@@ -284,15 +284,18 @@
                             <documentation>shape of a detector</documentation>
                         </annotation>
                     </element>
-                    <element name="detectorSize" maxOccurs="2">
+                    <!-- <element name="detectorSize" maxOccurs="2"> -->
+                    <element name="detectorSize" maxOccurs="2" type="gco:Length_PropertyType">
                         <annotation>
                             <documentation>size of a detector in a detector array dimension specified by detectorDimensionName</documentation>
                         </annotation>
+<!--                        
                         <complexType>
                             <sequence>
-                                <element name="Length" minOccurs="1" maxOccurs="2" type="gco:Length_PropertyType"/>
+                                <element name="length" minOccurs="1" maxOccurs="2" type="gco:Length_PropertyType"/>
                             </sequence>
                         </complexType>
+                        -->
                     </element>
                     <element name="distortion" type="smi:SD_Distortion_PropertyType" minOccurs="0">
                         <annotation>
@@ -310,7 +313,7 @@
                         </annotation>
                         <complexType>
                             <sequence>
-                                <element name="Vector" minOccurs="1" maxOccurs="2" type="swe:VectorType"/>
+                                <element name="Vector" minOccurs="1" maxOccurs="2" type="swe:VectorPropertyType"/>
                             </sequence>
                         </complexType>
                     </element>             

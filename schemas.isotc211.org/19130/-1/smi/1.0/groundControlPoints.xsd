@@ -219,7 +219,7 @@
                         </annotation>
                         <complexType>
                             <sequence>
-                                <element name="Vector" type="swe:VectorType" minOccurs="2" maxOccurs="3"/>
+                                <element name="Vector" type="swe:VectorPropertyType" minOccurs="2" maxOccurs="3"/>
                             </sequence>
                         </complexType>
                     </element>

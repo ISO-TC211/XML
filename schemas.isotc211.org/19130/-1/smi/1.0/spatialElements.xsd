@@ -85,7 +85,7 @@
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>
     </complexType>
-    <element name="SD_OrbitMeasuredLocation" type="smi:SD_EarthMeasuredLocation_Type" substitutionGroup="smi:SD_Position">
+    <element name="SD_OrbitMeasuredLocation" type="smi:SD_OrbitMeasuredLocation_Type" substitutionGroup="smi:SD_Position">
         <annotation>
             <documentation>location given by position in orbit</documentation>
         </annotation>

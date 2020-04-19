@@ -83,7 +83,7 @@
     <!--  ...................................................................................
    -->
     <!-- Refer to ISO 19123/- -->
-    <!-- <xs:element name="interpolationType" type="igd:CV_InterpolationMethod"/>
+    <xs:element name="interpolationType" type="igd:CV_InterpolationMethod"/>
     <xs:simpleType name="CV_InterpolationMethod">
         <xs:restriction base="xs:string">
             <xs:enumeration value="nearestneighbor"/>
@@ -96,7 +96,7 @@
             <xs:enumeration value="lostarea"/>
             <xs:enumeration value="barycentric"/>
         </xs:restriction>
-    </xs:simpleType> -->
+    </xs:simpleType> 
     <!--   .............................................................................                                                        
     -->
     <xs:element name="IE_Georectified" type="igd:IE_GeorectifiedType"/>
