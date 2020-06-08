@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1" 
-  xmlns:gmw="https://schemas.isotc211.org/19103/-/gmw/1" 
+  xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1" 
   xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/3" 
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/3" 
   elementFormDefault="qualified" 
   targetNamespace="https://schemas.isotc211.org/19115/-2/mac/3" 
   version="1.0">
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1" schemaLocation="../../../../19103/-/gco/1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gmw/1" schemaLocation="../../../../19103/-/gmw/1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1" schemaLocation="../../../../19136/-/gmw/1.0/gmw.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/3" schemaLocation="../../../../19115/-1/mcc/3.0/mcc.xsd"/>
   <include schemaLocation="event.xsd"/>
   <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation" type="mac:MI_AcquisitionInformation_Type">
@@ -448,7 +450,7 @@
               <documentation>Description: unique name of the pass shortName: passId</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="extent" type="gmw:GM_Object_PropertyType">
+          <element minOccurs="0" name="extent" type="gml:GeometryPropertyType">
             <annotation>
               <documentation>Description: Area covered by the pass shortName: passExt</documentation>
             </annotation>

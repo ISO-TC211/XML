@@ -2,9 +2,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:gmw="https://schemas.isotc211.org/19103/-/gmw/1"
+	xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1"
 	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1"
-	targetNamespace="https://schemas.isotc211.org/19103/-/gmw/1" 
+	targetNamespace="https://schemas.isotc211.org/19136/-/gmw/1" 
 	elementFormDefault="qualified"
 	version="2014-12-25">
 

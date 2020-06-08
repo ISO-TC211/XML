@@ -2,17 +2,19 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
 xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2" 
 xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1" 
-xmlns:gmw="https://schemas.isotc211.org/19103/-/gmw/1"  
+xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1"
 xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/3" 
 xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/3" 
 xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/3"
+xmlns:gml="http://www.opengis.net/gml/3.2"
 elementFormDefault="qualified" 
 targetNamespace="https://schemas.isotc211.org/19115/-1/mrc/3"
 version="1.0">
   <include schemaLocation="../../../../19115/-2/mrc/3.0/contentInformationImagery.xsd"/>
   <include schemaLocation="mrc.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1" schemaLocation="../../../../19103/-/gco/1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gmw/1" schemaLocation="../../../../19103/-/gmw/1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1" schemaLocation="../../../../19136/-/gmw/1.0/gmw.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/fcc/2" schemaLocation="../../../../19110/-/fcc/2.0/fcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/3" schemaLocation="../../../../19115/-1/lan/3.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/3" schemaLocation="../../../../19115/-1/mcc/3.0/mcc.xsd"/>
@@ -50,12 +52,7 @@ version="1.0">
         <sequence>
           <element minOccurs="0" name="boundMax" type="gco:Real_PropertyType"/>
           <element minOccurs="0" name="boundMin" type="gco:Real_PropertyType"/>
-          <element minOccurs="0" name="boundUnits" type="gmw:UomLength_PropertyType"/>
-          <element minOccurs="0" name="peakResponse" type="gco:Real_PropertyType">
-            <annotation>
-              <documentation>wavelength at which the response is the highest</documentation>
-            </annotation>
-          </element>
+          <element minOccurs="0" name="boundUnits" type="gmw:UnitOfMeasure_PropertyType"/>
           <element minOccurs="0" name="toneGradation" type="gco:Integer_PropertyType">
             <annotation>
               <documentation>number of discrete numerical values in the grid data</documentation>
@@ -65,7 +62,7 @@ version="1.0">
       </extension>
     </complexContent>
   </complexType>
-  <complexType name="MD_Band_PropertyType">
+   <complexType name="MD_Band_PropertyType">
     <sequence minOccurs="0">
       <element ref="mrc:MD_Band"/>
     </sequence>

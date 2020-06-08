@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1" 
+  xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1"
   xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/3"
-  xmlns:gmw="https://schemas.isotc211.org/19103/-/gmw/1" 
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/3" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
   targetNamespace="https://schemas.isotc211.org/19115/-1/gex/3"
   elementFormDefault="qualified" 
   version="1.0">
@@ -11,8 +12,10 @@
   xmlns:gts="http://www.isotc211.org/2005/gts"
   xmlns:rce="https://schemas.isotc211.org/19111/rce/1.0" -->
   <!-- <include schemaLocation="gex.xsd"/>-->
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1" schemaLocation="../../../../19136/-/gmw/1.0/gmw.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1" schemaLocation="../../../../19103/-/gco/1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gmw/1" schemaLocation="../../../../19103/-/gmw/1.0/gmw.xsd"/>
+  <!-- <import namespace="https://schemas.isotc211.org/19136/-/gmw/1" schemaLocation="../../../../19136/-/gmw/1.0/gmw.xsd"/> -->
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/3" schemaLocation="../../../../19115/-1/mcc/3.0/mcc.xsd"/>
   <!--  <import namespace="https://schemas.isotc211.org/19111/rce/1.0" schemaLocation="../../../../19111/rce/1.0/rce.xsd"/>-->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -25,7 +28,7 @@
     <complexContent>
       <extension base="gex:AbstractEX_GeographicExtent_Type">
         <sequence>
-          <element maxOccurs="unbounded" name="polygon" type="gmw:GM_Object_PropertyType">
+          <element maxOccurs="unbounded" name="polygon" type="gml:GeometryPropertyType">
             <annotation>
               <documentation>sets of points defining the bounding polygon or any other GM_Object geometry (point, line or polygon)</documentation>
             </annotation>
@@ -194,7 +197,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="extent" type="gmw:TM_Primitive_PropertyType">
+          <element name="extent" type="gml:TimePrimitivePropertyType">
             <annotation>
               <documentation>period for the content of the resource</documentation>
             </annotation>
@@ -230,7 +233,7 @@
             </annotation>
           </element>
           <element minOccurs="0" name="verticalCRSId" type="mcc:Abstract_ReferenceSystem_PropertyType"/>
-          <element minOccurs="0" name="verticalCRS" type="gmw:SC_CRS_PropertyType"/>
+          <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType"/>
         </sequence>
       </extension>
     </complexContent>

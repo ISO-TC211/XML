@@ -357,12 +357,12 @@ This gcoBase.xsd schema provides:
         <xs:complexContent>
             <xs:extension base="gco:AbstractObject_Type">
                 <xs:sequence>
-                    <xs:element name="value" minOccurs="1" maxOccurs="unbounded" type="gco:CharacterString_PropertyType">
+                    <xs:element name="value" type="gco:CharacterString_PropertyType">
                         <xs:annotation>
-                            <xs:documentation>Memebrs of a list of field types of a record</xs:documentation>
+                            <xs:documentation>Memebers of a list of field types of a record</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="type" minOccurs="1" maxOccurs="unbounded" type="gco:FieldType_PropertyType">
+                    <xs:element name="type" minOccurs="0" maxOccurs="1" type="gco:FieldType_PropertyType">
                         <xs:annotation>
                             <xs:documentation>Memebrs of a list of field types of a record</xs:documentation>
                         </xs:annotation>

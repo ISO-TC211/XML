@@ -4,7 +4,6 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1"
   xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2"
   xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:gmw="https://schemas.isotc211.org/19103/-/gmw/1"
   xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/3"
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/3"
   elementFormDefault="qualified"
@@ -19,8 +18,6 @@
     schemaLocation="../../../../19115/-1/lan/3.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/3"
     schemaLocation="../../../../19115/-1/mcc/3.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gmw/1"
-    schemaLocation="../../../../19103/-/gmw/1.0/gmw.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- SMR 2015-02-07 change gml:CodeType to gco:CodeType for 2014-12-25 build; UnitOfMeasure is in gmw, not gco so change that too -->
@@ -332,7 +329,7 @@
                 attribute within the feature catalogue.</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="valueMeasurementUnit" type="gmw:UnitOfMeasure_PropertyType">
+          <element minOccurs="0" name="valueMeasurementUnit" type="gml:UnitDefinitionType">
             <annotation>
               <documentation>Unit of measure used for this feature attribute.</documentation>
             </annotation>

@@ -1,0 +1,188 @@
+GEX
+<complexType name="EX_BoundingPolygon_Type">
+    <complexContent>
+      <extension base="gex:AbstractEX_GeographicExtent_Type">
+        <sequence>
+          <element maxOccurs="unbounded" name="polygon" type="gmw:GM_Object_PropertyType">
+            <annotation>
+MAC   
+  <complexType name="MI_PlatformPass_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+            ...
+          <element minOccurs="0" name="extent" type="gmw:GM_Object_PropertyType">
+            <annotation>
+              <documentation>Description: Area covered by the pass shortName: passExt</documentation>
+            </annotation>           
+MRC
+    <complexType name="MD_Band_Type">
+    <complexContent>
+      <extension base="mrc:MD_SampleDimension_Type">
+        <sequence>
+            ...
+          <element minOccurs="0" name="boundUnits" type="gmw:UomLength_PropertyType"/>
+          
+            <element minOccurs="0" name="units" type="gmw:UnitOfMeasure_PropertyType">
+            <annotation>
+              <documentation>units of data in each dimension included in the resource. Note that the type of this is UnitOfMeasure and that it is restricted to UomLength in the MD_Band class.</documentation>
+            </annotation>
+MRI
+  <complexType name="MD_Usage_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+            ...
+          <element maxOccurs="unbounded" minOccurs="0" name="usageDateTime" type="gmw:TM_Primitive_PropertyType">
+MRL
+  <complexType name="LI_ProcessStep_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+            ...
+          <element minOccurs="0" name="stepDateTime" type="gmw:TM_Primitive_PropertyType">
+            <annotation>
+              <documentation>date, time, range or period of process step</documentation>
+MSR
+  <complexType name="MD_Georectified_Type">
+    <complexContent>
+      <extension base="msr:MD_GridSpatialRepresentation_Type">
+        <sequence>
+            ...
+           <element maxOccurs="4" minOccurs="2" name="cornerPoints" type="gmw:GM_Point_PropertyType">
+            <annotation>
+              <documentation>earth location in the coordinate system defined by the Spatial Reference System and the grid coordinate of the cells at opposite ends of grid coverage along two diagonals in the grid spatial dimensions. There are four corner points in a georectified grid; at least two corner points along one diagonal are required. The first corner point corresponds to the origin of the grid.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="centrePoint" type="gmw:GM_Point_PropertyType">
+            <annotation>
+              <documentation>earth location in the coordinate system defined by the Spatial Reference System and the grid coordinate of the cell halfway between opposite ends of the grid in the spatial dimensions</documentation>
+            </annotation>
+
+  <complexType name="MI_GCP_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <element name="geographicCoordinates" type="gmw:GM_Point_PropertyType"/>
+MDQ          
+   <complexType name="DQ_QuantitativeResult_Type">
+    <complexContent>
+      <extension base="mdq:AbstractDQ_Result_Type">
+        <sequence>
+            ...
+          <element minOccurs="0" name="valueUnit" type="gmw:UnitOfMeasure_PropertyType">
+            <annotation>
+              <documentation>value unit for reporting a data quality result</documentation>
+            </annotation>
+          </element>
+                      
+gmw:GM_Object_PropertyType
+gmw:UnitOfMeasure_PropertyType
+gmw:GM_Point_PropertyType
+gmw:TM_Primitive_PropertyType
+
+GMW
+	<xs:complexType name="UnitOfMeasure_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gml:UnitDefinition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	GML
+        <element name="unitOfMeasure" type="gml:UnitOfMeasureType">
+		  <annotation>
+			<documentation>The element gml:unitOfMeasure is a property element to refer to a unit of measure. This is an empty element which carries a reference to a unit of measure definition.</documentation>
+		  </annotation>
+        </element>
+        <complexType name="UnitOfMeasureType">
+            <sequence/>
+            <attribute name="uom" type="gml:UomIdentifier" use="required"/>
+        </complexType>
+        <element name="UnitDefinition" type="gml:UnitDefinitionType" substitutionGroup="gml:Definition">
+            <annotation>
+                <documentation>A gml:UnitDefinition is a general definition of a unit of measure. 
+                        This generic element is used only for units for which no relationship with other units or units systems is known.
+                        The content model of gml:UnitDefinition adds three additional properties to 
+                           gml:Definition, gml:quantityType, gml:quantityTypeReference and gml:catalogSymbol.  
+                        The gml:catalogSymbol property optionally gives the short symbol used for this unit. 
+                        This element is usually used when the relationship of this unit to other units or units systems is unknown.
+                 </documentation>
+            </annotation>
+	</element>
+GMW
+	<xs:complexType name="TM_Primitive_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gml:AbstractTimePrimitive"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+GMW
+	<xs:complexType name="GM_Point_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gml:Point"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+    GML
+        <element name="AbstractTimeObject" type="gml:AbstractTimeObjectType" abstract="true" substitutionGroup="gml:AbstractGML">
+		  <annotation>
+			<documentation>gml:AbstractTimeObject acts as the head of a substitution group for all temporal primitives and complexes.</documentation>
+		  </annotation>
+        </element>
+        <complexType name="AbstractTimeObjectType" abstract="true">
+            <complexContent>
+                <extension base="gml:AbstractGMLType"/>
+            </complexContent>
+    	</complexType>
+        <element name="AbstractTimePrimitive" type="gml:AbstractTimePrimitiveType" abstract="true" substitutionGroup="gml:AbstractTimeObject">
+    		<annotation>
+                <documentation>gml:AbstractTimePrimitive acts as the head of a substitution group for geometric and topological temporal primitives.</documentation>
+            </annotation>
+        </element>
+        <complexType name="AbstractTimePrimitiveType" abstract="true">
+            <complexContent>
+                <extension base="gml:AbstractTimeObjectType">
+                    <sequence>
+                        <element name="relatedTime" type="gml:RelatedTimeType" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                </extension>
+            </complexContent>
+        </complexType>
+GEX
+<complexType name="EX_BoundingPolygon_Type">
+    <complexContent>
+      <extension base="gex:AbstractEX_GeographicExtent_Type">
+        <sequence>
+          <element maxOccurs="unbounded" name="polygon" type="gmw:GM_Object_PropertyType">
+            <annotation>
+GMW
+	<xs:complexType name="GM_Object_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gml:AbstractGeometry"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+    GML
+    	<element name="AbstractGeometry" type="gml:AbstractGeometryType" abstract="true" substitutionGroup="gml:AbstractGML">
+		  <annotation>
+			<documentation>The AbstractGeometry element is the abstract head of the substitution group for all geometry elements of GML. This includes pre-defined and user-defined geometry elements. Any geometry element shall be a direct or indirect extension/restriction of AbstractGeometryType and shall be directly or indirectly in the substitution group of AbstractGeometry.</documentation>
+		  </annotation>
+	    </element>
+        <complexType name="AbstractGeometryType" abstract="true">
+		  <annotation>
+			<documentation>All geometry elements are derived directly or indirectly from this abstract supertype. 
+			         A geometry element may have an identifying attribute (gml:id), one or more names (elements identifier and name) and a description (elements description and descriptionReference) . It may be associated with a spatial reference system (attribute group gml:SRSReferenceGroup).
+                      The following rules shall be adhered to:
+                        -	Every geometry type shall derive from this abstract type.
+                        -	Every geometry element (i.e. an element of a geometry type) shall be directly or indirectly in the substitution group of AbstractGeometry.</documentation>
+		  </annotation>
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<attributeGroup ref="gml:SRSReferenceGroup"/>
+			</extension>
+		</complexContent>
+	</complexType>
