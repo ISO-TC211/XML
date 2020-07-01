@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/2.1"
+  xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.1"
+  xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/2.1"
+  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/2.1"
+  xmlns:md1="https://schemas.isotc211.org/19115/-1/md1/2.1"
+  xmlns:mds="https://schemas.isotc211.org/19115/-1/mds/2.1"
+  xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/2.1"
+  targetNamespace="https://schemas.isotc211.org/19115/-1/md1/2.1"
+  elementFormDefault="qualified"
+  version="2.1.0"
+    >
+  <annotation>
+    <documentation>Namespace &lt;font color="#1f497d"&gt;that identifies conformance class that
+      allows extended types (gcx) in metadata records&lt;/font&gt;</documentation>
+  </annotation>
+  <include schemaLocation="metadataWExtendedType.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.1"
+    schemaLocation="../../../../19103/-/gcx/1.1.0/gcx.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mds/2.1"
+    schemaLocation="../../../../19115/-1/mds/2.1.0/mds.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>
