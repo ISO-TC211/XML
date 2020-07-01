@@ -2,8 +2,8 @@
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
-    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
-  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.0"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.1"

@@ -2,9 +2,9 @@
 <schema 
   xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
-    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:igd="https://schemas.isotc211.org/19163/-2/igd/1.1"
-  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/2.1"
   xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -14,8 +14,8 @@
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.1"
     version="1.1.0"
     >
-    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
+    <include schemaLocation="../../../../19130/-3/smi/1.0.0/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.0.0/groundControlPoints.xsd"/>
     <import namespace="https://schemas.isotc211.org/19163/-2/igd/1.1" schemaLocation="../../../../19163/-2/igd/1.1.0/IE_ImageryAndGriddedData.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>

@@ -2,8 +2,8 @@
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
-    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
-  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.0"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
@@ -23,9 +23,9 @@
     <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1" schemaLocation="../../../../19115/-2/mac/2.1.0/mac.xsd"/>
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.1" schemaLocation="../../../../19157/-/mdq/1.1.0/mdq.xsd"/> 
     
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/codeList.xsd"/> 
-    <include schemaLocation="../../../../19130/-2/smi/1.1.0/codeList.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/spatialElements.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.0.0/codeList.xsd"/> 
+    <include schemaLocation="../../../../19130/-2/smi/1.0.0/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.0.0/spatialElements.xsd"/>
      
     <!-- ================== 19130-2  ==================== -->
     <!-- ================== dynamics ==================== -->
