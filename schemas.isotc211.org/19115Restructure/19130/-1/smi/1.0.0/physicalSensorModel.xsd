@@ -8,7 +8,7 @@
   xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/2.1"    
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
   xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
-    version="1.1.0"
+    version="1.0.0"
     >
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/3.1.0/gridPoint.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>

@@ -13,8 +13,8 @@
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+  version="1.0.0"
     >
-
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.1" schemaLocation="../../../../19157/-/mdq/1.1.0/mdq.xsd"/>   
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
     <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="../../../../19115/-1/cit/2.1.0/cit.xsd"/>

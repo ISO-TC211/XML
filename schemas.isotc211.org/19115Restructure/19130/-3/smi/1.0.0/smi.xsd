@@ -4,7 +4,9 @@
     elementFormDefault="qualified"
     targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.0"
-  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1">
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+  version="1.0.0"
+    >
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" 
         schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
     <include schemaLocation="../../../../19130/-1/smi/1.0.0/codeList.xsd"/>

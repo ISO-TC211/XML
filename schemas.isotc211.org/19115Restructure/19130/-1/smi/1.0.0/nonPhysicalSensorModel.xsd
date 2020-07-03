@@ -12,7 +12,7 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
   xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.1"
-    version="1.1.0"
+    version="1.0.0"
     >
     <include schemaLocation="../../../../19130/-3/smi/1.0.0/smi.xsd"/>
     <include schemaLocation="../../../../19130/-1/smi/1.0.0/groundControlPoints.xsd"/>
