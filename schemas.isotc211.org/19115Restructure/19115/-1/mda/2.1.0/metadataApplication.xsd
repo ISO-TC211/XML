@@ -14,8 +14,7 @@
   <import namespace="https://schemas.isotc211.org/19115/-1/mdb/2.1"
     schemaLocation="../../../../19115/-1/mdb/2.1.0/mdb.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element abstract="true" name="AbstractDS_Aggregate" substitutionGroup="mda:AbstractDS_Resource"
-    type="mda:AbstractDS_Aggregate_Type">
+  <element abstract="true" name="AbstractDS_Aggregate" substitutionGroup="mda:AbstractDS_Resource" type="mda:AbstractDS_Aggregate_Type" id="ISO19115-1.006">
     <annotation>
       <documentation>collection of resources</documentation>
     </annotation>
@@ -25,7 +24,7 @@
       <extension base="mda:AbstractDS_Resource_Type">
         <sequence>
           <element maxOccurs="unbounded" name="composedOf"
-            type="mda:AbstractDS_Resource_PropertyType"/>
+            type="mda:AbstractDS_Resource_PropertyType" id="ISO19115-1.006_ISO19115-1.007"/>
         </sequence>
       </extension>
     </complexContent>
@@ -37,7 +36,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_DataSet" substitutionGroup="mda:AbstractDS_Resource" type="mda:DS_DataSet_Type">
+  <element name="DS_DataSet" substitutionGroup="mda:AbstractDS_Resource" type="mda:DS_DataSet_Type" id="ISO19115-1.004">
     <annotation>
       <documentation>identifiable collection of data</documentation>
     </annotation>
@@ -56,8 +55,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_Initiative" substitutionGroup="mda:AbstractDS_Aggregate"
-    type="mda:DS_Initiative_Type">
+  <element name="DS_Initiative" substitutionGroup="mda:AbstractDS_Aggregate" type="mda:DS_Initiative_Type" id="ISO19115-1.010">
     <annotation>
       <documentation>collection of associated resources related by their participation in a common
         initiative</documentation>
@@ -77,8 +75,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_OtherAggregate" substitutionGroup="mda:AbstractDS_Aggregate"
-    type="mda:DS_OtherAggregate_Type">
+  <element name="DS_OtherAggregate" substitutionGroup="mda:AbstractDS_Aggregate" type="mda:DS_OtherAggregate_Type" id="ISO19115-1.008">
     <annotation>
       <documentation>collection of resource associated through inspecified means</documentation>
     </annotation>
@@ -97,7 +94,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_Platform" substitutionGroup="mda:DS_Series" type="mda:DS_Platform_Type">
+  <element name="DS_Platform" substitutionGroup="mda:DS_Series" type="mda:DS_Platform_Type" id="ISO19115-1.012">
     <annotation>
       <documentation>collection of associated resources produced from the same sensor
         platform</documentation>
@@ -117,8 +114,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_ProductionSeries" substitutionGroup="mda:DS_Series"
-    type="mda:DS_ProductionSeries_Type">
+  <element name="DS_ProductionSeries" substitutionGroup="mda:DS_Series" type="mda:DS_ProductionSeries_Type" id="ISO19115-1.014">
     <annotation>
       <documentation>collection of associated resources produced to the same production
         specification</documentation>
@@ -138,8 +134,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="AbstractDS_Resource" substitutionGroup="gco:AbstractObject"
-    type="mda:AbstractDS_Resource_Type">
+  <element abstract="true" name="AbstractDS_Resource" substitutionGroup="gco:AbstractObject" type="mda:AbstractDS_Resource_Type" id="ISO19115-1.001">
     <annotation>
       <documentation>an identifiable asset or means that fulfils a requirement</documentation>
     </annotation>
@@ -148,7 +143,8 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element maxOccurs="unbounded" name="has" type="mdb:MD_Metadata_PropertyType"/>
+          <element maxOccurs="unbounded" name="has" type="mdb:MD_Metadata_PropertyType" id="ISO19115-1.004_ISO19115-1.015"/>
+          <element minOccurs="0" maxOccurs="unbounded" name="partOf" type="mda:AbstractDS_Aggregate_PropertyType" id="ISO19115-1.004_ISO19115-1.006"/>
         </sequence>
       </extension>
     </complexContent>
@@ -160,7 +156,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_Sensor" substitutionGroup="mda:DS_Series" type="mda:DS_Sensor_Type">
+  <element name="DS_Sensor" substitutionGroup="mda:DS_Series" type="mda:DS_Sensor_Type" id="ISO19115-1.013">
     <annotation>
       <documentation>collection of associated resources produced by the same sensor</documentation>
     </annotation>
@@ -179,7 +175,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DS_Series" substitutionGroup="mda:AbstractDS_Aggregate" type="mda:DS_Series_Type">
+  <element name="DS_Series" substitutionGroup="mda:AbstractDS_Aggregate" type="mda:DS_Series_Type" id="ISO19115-1.011">
     <annotation>
       <documentation>collection of resource related by a common heritage adhering to a common
         specification</documentation>
@@ -199,7 +195,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="SV_Service" substitutionGroup="mda:AbstractDS_Resource" type="mda:SV_Service_Type">
+  <element name="SV_Service" substitutionGroup="mda:AbstractDS_Resource" type="mda:SV_Service_Type" id="ISO19115-1.005">
     <annotation>
       <documentation>resource is a service</documentation>
     </annotation>
