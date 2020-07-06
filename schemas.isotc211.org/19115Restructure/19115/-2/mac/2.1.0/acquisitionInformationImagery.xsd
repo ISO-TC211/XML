@@ -15,7 +15,7 @@
   <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
   <include schemaLocation="event.xsd"/>
-  <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation" type="mac:MI_AcquisitionInformation_Type">
+  <element name="MI_AcquisitionInformation" substitutionGroup="mcc:Abstract_AcquisitionInformation" type="mac:MI_AcquisitionInformation_Type" id="ISO19115-2.003">
     <annotation>
       <documentation>Description: Designations for the measuring instruments and their bands, the platform carrying them, and the mission to which the data contributes FGDC: Platform_and_Instrument_Identification, Mission_Information shortName: PltfrmInstId</documentation>
     </annotation>
