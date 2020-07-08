@@ -19,64 +19,46 @@
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
     schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element name="MD_MaintenanceFrequencyCode" substitutionGroup="gco:CharacterString"
-    type="gco:CodeListValue_Type">
-    <annotation>
-      <documentation>frequency with which modifications and deletions are made to the data after it
-        is first produced</documentation>
-    </annotation>
-  </element>
-  <complexType name="MD_MaintenanceFrequencyCode_PropertyType">
-    <sequence minOccurs="0">
-      <element ref="mmi:MD_MaintenanceFrequencyCode"/>
-    </sequence>
-    <attribute ref="gco:nilReason"/>
-  </complexType>
-  <element name="MD_MaintenanceInformation" substitutionGroup="mcc:Abstract_MaintenanceInformation"
-    type="mmi:MD_MaintenanceInformation_Type">
+  <!-- =========================================================================== -->
+  <element name="MD_MaintenanceInformation" substitutionGroup="mcc:Abstract_MaintenanceInformation" type="mmi:MD_MaintenanceInformation_Type" id="ISO19115-1.140">
     <annotation>
       <documentation>information about the scope and frequency of updating</documentation>
     </annotation>
   </element>
+  <!-- ........................................................................ -->
   <complexType name="MD_MaintenanceInformation_Type">
     <complexContent>
       <extension base="mcc:Abstract_MaintenanceInformation_Type">
         <sequence>
-          <element minOccurs="0" name="maintenanceAndUpdateFrequency"
-            type="mmi:MD_MaintenanceFrequencyCode_PropertyType">
+          <element minOccurs="0" name="maintenanceAndUpdateFrequency" type="mmi:MD_MaintenanceFrequencyCode_PropertyType" id="ISO19115-1.141_ISO19115-1.MD_MaintenanceFrequencyCode">
             <annotation>
               <documentation>frequency with which changes and additions are made to the resource
                 after the initial resource is completed</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="maintenanceDate"
-            type="mcc:Abstract_TypedDate_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="maintenanceDate" type="mcc:Abstract_TypedDate_PropertyType" id="ISO19115-1.142_ISO19115-1.402">
             <annotation>
               <documentation>date information associated with maintenance of
                 resource</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="userDefinedMaintenanceFrequency"
-            type="gco:TM_PeriodDuration_PropertyType">
+          <element minOccurs="0" name="userDefinedMaintenanceFrequency" type="gco:TM_PeriodDuration_PropertyType" id="ISO19115-1.143_TM_PeriodDuration">
             <annotation>
               <documentation>maintenance period other than those defined</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="maintenanceScope"
-            type="mcc:MD_Scope_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="maintenanceScope" type="mcc:MD_Scope_PropertyType" id="ISO19115-1.144_ISO19115-1.420">
             <annotation>
               <documentation>information about the scope and extent of maintenance</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="maintenanceNote"
-            type="gco:CharacterString_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="maintenanceNote" type="gco:CharacterString_PropertyType" id="ISO19115-1.145_ISO19103.CharacterString">
             <annotation>
               <documentation>information regarding specific requirements for maintaining the
                 resource</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="contact"
-            type="mcc:Abstract_Responsibility_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="contact" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-1.146_ISO19115-1.376">
             <annotation>
               <documentation>identification of, and means of communicating with, person(s) and
                 organisation(s) with responsibility for maintaining the metadata</documentation>
@@ -86,6 +68,7 @@
       </extension>
     </complexContent>
   </complexType>
+  <!-- ........................................................................ -->
   <complexType name="MD_MaintenanceInformation_PropertyType">
     <sequence minOccurs="0">
       <element ref="mmi:MD_MaintenanceInformation"/>
@@ -93,4 +76,20 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
+  <!-- =========================================================================== -->
+  <!-- =========================================================================== -->
+  <element name="MD_MaintenanceFrequencyCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <annotation>
+      <documentation>frequency with which modifications and deletions are made to the data after it
+        is first produced</documentation>
+    </annotation>
+  </element>
+  <!-- ........................................................................ -->
+  <complexType name="MD_MaintenanceFrequencyCode_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mmi:MD_MaintenanceFrequencyCode"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =========================================================================== -->
 </schema>
