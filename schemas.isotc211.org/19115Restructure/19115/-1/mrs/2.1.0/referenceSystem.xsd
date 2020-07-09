@@ -14,6 +14,8 @@
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <!-- =========================================================================== -->
+  <!-- ........................................................................ -->
   <element name="MD_ReferenceSystem" substitutionGroup="mcc:Abstract_ReferenceSystem" type="mrs:MD_ReferenceSystem_Type">
     <annotation>
       <documentation>information about the reference system</documentation>
