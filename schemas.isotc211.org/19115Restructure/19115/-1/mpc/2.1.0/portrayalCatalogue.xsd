@@ -14,19 +14,18 @@
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
     schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element name="MD_PortrayalCatalogueReference"
-    substitutionGroup="mcc:Abstract_PortrayalCatalogueInformation"
-    type="mpc:MD_PortrayalCatalogueReference_Type">
+  <!-- =========================================================================== -->
+  <element name="MD_PortrayalCatalogueReference" substitutionGroup="mcc:Abstract_PortrayalCatalogueInformation" type="mpc:MD_PortrayalCatalogueReference_Type" id="ISO19115-1.235">
     <annotation>
       <documentation>information identifying the portrayal catalogue used</documentation>
     </annotation>
   </element>
+  <!-- ........................................................................ -->
   <complexType name="MD_PortrayalCatalogueReference_Type">
     <complexContent>
       <extension base="mcc:Abstract_PortrayalCatalogueInformation_Type">
         <sequence>
-          <element maxOccurs="unbounded" name="portrayalCatalogueCitation"
-            type="mcc:Abstract_Citation_PropertyType">
+          <element maxOccurs="unbounded" name="portrayalCatalogueCitation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.236_ISO19115-1.361">
             <annotation>
               <documentation>bibliographic reference to the portrayal catalogue
                 cited</documentation>
@@ -35,6 +34,7 @@
         </sequence>
       </extension>
     </complexContent>
+    <!-- ........................................................................ -->
   </complexType>
   <complexType name="MD_PortrayalCatalogueReference_PropertyType">
     <sequence minOccurs="0">
@@ -43,4 +43,5 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
+  <!-- =========================================================================== -->
 </schema>
