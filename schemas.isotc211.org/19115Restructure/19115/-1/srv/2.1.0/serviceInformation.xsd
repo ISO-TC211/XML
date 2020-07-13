@@ -235,6 +235,22 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
+          <!-- Order Change -->
+          <!-- 
+            <element minOccurs="0" name="scopedName" type="gco:ScopedName_PropertyType" id="ISO19115-1.331_ISO19103.ScopedName">
+            <annotation>
+              <documentation>scoped identifier of the resource in the context of the given service
+                instance NOTE: name of the resources (i.e. dataset) as it is used by a service
+                instance (e.g. layer name or featureTypeName).</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="resourceReference" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.332_ISO19115-1.361">
+            <annotation>
+              <documentation>reference to the dataset on which the service operates</documentation>
+            </annotation>
+          </element><element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.334_ISO19115-1.312"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="resource" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.333_ISO19115-1.042"/>
+           -->
           <element minOccurs="0" name="scopedName" type="gco:ScopedName_PropertyType" id="ISO19115-1.331_ISO19103.ScopedName">
             <annotation>
               <documentation>scoped identifier of the resource in the context of the given service
