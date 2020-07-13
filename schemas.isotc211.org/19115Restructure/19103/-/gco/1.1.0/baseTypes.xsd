@@ -222,6 +222,16 @@ This gcoBase.xsd schema provides:
 		</xs:sequence>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="CharacterString_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence>
+					<xs:element ref="gco:CharacterString" id="ISO19103.characterString_ISO19103.CharacterString"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<!-- =========================================================================== -->
 	<!-- ........................................................................ -->
 	<xs:element name="Boolean" type="xs:boolean"/>
