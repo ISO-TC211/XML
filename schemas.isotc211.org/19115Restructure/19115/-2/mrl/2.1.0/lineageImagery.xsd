@@ -91,6 +91,55 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
+          <!-- Order Change -->
+          <!-- 
+          <element name="identifier" type="mcc:MD_Identifier_PropertyType">
+            <annotation>
+              <documentation>Description: Information to identify the processing package that produced the data FGDC: Processing_Identifiers Position: 1 shortName: procInfoId</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="softwareReference" type="mcc:Abstract_Citation_PropertyType">
+            <annotation>
+              <documentation>Description: Reference to document describing processing software FGDC: Processing_Software_Reference Position: 2 shortName: procInfoSwRef</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="procedureDescription" type="gco:CharacterString_PropertyType">
+            <annotation>
+              <documentation>Description: Additional details about the processing procedures FGDC: Processing_Procedure_Description Position: 3 shortName: procInfoDesc</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="documentation" type="mcc:Abstract_Citation_PropertyType">
+            <annotation>
+              <documentation>Description: Reference to documentation describing the processing FGDC: Processing_Documentation Position: 4 shortName: procInfoDoc</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="runTimeParameters" type="gco:CharacterString_PropertyType">
+            <annotation>
+              <documentation>Description: Parameters to control the processing operations, entered at run time FGDC: Command_Line_Processing_Parameter Position: 5 shortName: procInfoParam</documentation>
+            </annotation>
+          </element>
+          <element name="parameter" type="mrl:LE_ProcessParameter_PropertyType" minOccurs="0" maxOccurs="unbounded">
+            <annotation>
+              <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
+            </annotation>
+          </element>
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1">
+            <annotation>
+              <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
+            </annotation>
+          </element>
+          <element name="otherProperty" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1">
+            <annotation>
+              <documentation>instance of otherPropertyType that defines attributes not explicitly included in LE_Processing</documentation>
+            </annotation>
+          </element>
+                 <element minOccurs="0" maxOccurs="unbounded" name="algarithum" type="mrl:LE_Algorithm_PropertyType">
+            <annotation>
+                  <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
+            </annotation>
+          </element>
+
+            -->
           <!-- <element maxOccurs="unbounded" minOccurs="0" name="algorithm" type="mrl:LE_Algorithm_PropertyType"/> -->
           <element name="identifier" type="mcc:MD_Identifier_PropertyType" id="ISO19115-2.116_ISO19115-1.431">
             <annotation>
@@ -224,6 +273,12 @@
     <complexContent>
       <extension base="mrl:LI_ProcessStep_Type">
         <sequence>
+          <!-- Order Change -->
+          <!--
+          <element minOccurs="0" name="processingInformation" type="mrl:LE_Processing_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="report" type="mrl:LE_ProcessStepReport_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="output" type="mrl:LE_Source_PropertyType"/>
+           -->
           <element maxOccurs="unbounded" minOccurs="0" name="output" type="mrl:LE_Source_PropertyType" id="ISO19115-2.134_ISO19115-2.141"/>
           <element minOccurs="0" name="processingInformation" type="mrl:LE_Processing_PropertyType" id="ISO19115-2.135_ISO19115-2.115"/>
           <element maxOccurs="unbounded" minOccurs="0" name="report" type="mrl:LE_ProcessStepReport_PropertyType" id="ISO19115-2.136_ISO19115-2.137"/>

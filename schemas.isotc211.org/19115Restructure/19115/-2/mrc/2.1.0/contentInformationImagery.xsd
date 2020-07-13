@@ -24,7 +24,7 @@
     <complexContent>
       <extension base="mrc:MD_Band_Type">
         <sequence>
-          <element minOccurs="0" name="bandBoundaryDefinition" type="mrc:MI_BandDefinition_PropertyType" id="ISO19115-2.159_ISO19115-2.MI_BandDefinition">
+           <element minOccurs="0" name="bandBoundaryDefinition" type="mrc:MI_BandDefinition_PropertyType" id="ISO19115-2.159_ISO19115-2.MI_BandDefinition">
             <annotation>
               <documentation>Description: Designation of criterion for defining maximum and minimum wavelengths for a spectral band FGDC: Band_Boundry_Definition Position: 1 shortName: bBndDef</documentation>
             </annotation>

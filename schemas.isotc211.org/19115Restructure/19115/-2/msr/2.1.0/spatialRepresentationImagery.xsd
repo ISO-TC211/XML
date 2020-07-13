@@ -105,6 +105,13 @@ Position: 3</documentation>
     <complexContent>
       <extension base="msr:AbstractMI_GeolocationInformation_Type">
         <sequence>
+          <!-- Order Change -->
+          <!-- 
+          <element maxOccurs="unbounded" name="gcp" type="msr:MI_GCP_PropertyType"/>
+          <element name="collectionIdentification" type="gco:Integer_PropertyType"/>
+          <element name="collectionName" type="gco:CharacterString_PropertyType"/>
+          <element name="coordinateReferenceSystem" type="mcc:Abstract_ReferenceSystem_PropertyType"/>
+            -->
           <element name="collectionIdentification" type="gco:Integer_PropertyType" id="ISO19115-2.151_ISO19103.Integer"/>
           <element name="collectionName" type="gco:CharacterString_PropertyType" id="ISO19115-2.152_ISO19103.CharacterString"/>
           <element name="coordinateReferenceSystem" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-2.153_ISO19115-1.179"/>
