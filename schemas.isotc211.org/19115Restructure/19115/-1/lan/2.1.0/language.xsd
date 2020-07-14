@@ -46,9 +46,8 @@
   <!-- =========================================================================== -->
   <!-- hand craft, copy from gmd freeText.xsd, following ISO 19139 -->
   <!--  <element name="LocalisedCharacterString" substitutionGroup="gco:AbstractObject" type="lan:LocalisedCharacterString_Type"/> -->
-  <!-- <element name="LocalisedCharacterString" type="lan:LocalisedCharacterString_Type" substitutionGroup="gco:CharacterString" id="ISO19115-1.445"/> -->
-  <!--   
-   <complexType name="LocalisedCharacterString_Type">
+  <element name="LocalisedCharacterString" type="lan:LocalisedCharacterString_Type" substitutionGroup="gco:CharacterString" id="ISO19115-1.445"/>
+    <complexType name="LocalisedCharacterString_Type">
     <simpleContent>
       <extension base="string">
         <attribute name="id" type="ID"/>
@@ -56,9 +55,11 @@
       </extension>
     </simpleContent>
   </complexType>
-  -->
+  <!--   
   <element name="LocalisedCharacterString" type="lan:LocalisedCharacterString_Type" id="ISO19115-1.445"/>
+ -->
   <!-- ........................................................................ -->  
+  <!--
     <complexType name="LocalisedCharacterString_Type">
     <complexContent>
       <extension base="gco:CharacterString_Type">
@@ -68,6 +69,7 @@
       </extension>
     </complexContent>
   </complexType>
+   -->
   <!-- ........................................................................ -->
   <complexType name="LocalisedCharacterString_PropertyType">
     <sequence minOccurs="0">
