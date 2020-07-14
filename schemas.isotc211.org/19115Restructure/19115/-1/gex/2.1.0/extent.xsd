@@ -247,8 +247,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <!-- Order Change -->
-          <!-- 
+          <!-- Order Change to align with UML implementation model sequenceNumber-->
           <element name="minimumValue" type="gco:Real_PropertyType" id="ISO19115-1.357_ISO19103.Real">
             <annotation>
               <documentation>lowest vertical extent contained in the resource</documentation>
@@ -259,22 +258,9 @@
               <documentation>highest vertical extent contained in the resource</documentation>
             </annotation>
           </element>
-           <element minOccurs="0" name="verticalCRSId" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-1.360_ISO19115-1.179"/>
-            <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType" id="ISO19115-1.359_CRS"/>
-           -->
-          <element name="minimumValue" type="gco:Real_PropertyType" id="ISO19115-1.357_ISO19103.Real">
-            <annotation>
-              <documentation>lowest vertical extent contained in the resource</documentation>
-            </annotation>
-          </element>
-          <element name="maximumValue" type="gco:Real_PropertyType" id="ISO19115-1.358_ISO19103.Real">
-            <annotation>
-              <documentation>highest vertical extent contained in the resource</documentation>
-            </annotation>
-          </element>
-           <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType" id="ISO19115-1.359_CRS"/>
           <element minOccurs="0" name="verticalCRSId" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-1.360_ISO19115-1.179"/>
-        </sequence>
+          <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType" id="ISO19115-1.359_CRS"/>
+         </sequence>
       </extension>
     </complexContent>
   </complexType>

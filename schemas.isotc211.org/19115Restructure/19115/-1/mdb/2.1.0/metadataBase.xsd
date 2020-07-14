@@ -32,9 +32,8 @@
     <complexContent>
       <extension base="mcc:Abstract_Metadata_Type">
         <sequence>
-          <!-- Order Change -->
-          <!-- 
-           <element minOccurs="0" name="metadataIdentifier" type="mcc:MD_Identifier_PropertyType" id="ISO19115-1.016_ISO19115-1.431"/>
+          <!-- Order Change to align with UML implementation model sequenceNumber-->
+         <element minOccurs="0" name="metadataIdentifier" type="mcc:MD_Identifier_PropertyType" id="ISO19115-1.016_ISO19115-1.431"/>
           <element minOccurs="0" name="defaultLocale" type="lan:PT_Locale_PropertyType" id="ISO19115-1.017_ISO19115-1.447">
             <annotation>
               <documentation>Provides information about an alternatively used localized character
@@ -84,62 +83,7 @@
           <element maxOccurs="unbounded" minOccurs="0" name="contentInfo" type="mcc:Abstract_ContentInformation_PropertyType" id="ISO19115-1.030_ISO19115-1.182"/>
           <element maxOccurs="unbounded" minOccurs="0" name="distributionInfo" type="mcc:Abstract_Distribution_PropertyType" id="ISO19115-1.031_ISO19115-1.237"/>
           <element maxOccurs="unbounded" minOccurs="0" name="dataQualityInfo" type="dqc:Abstract_DataQuality_PropertyType" id="ISO19115-1.032_ISO19157.001"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType" id="ISO19115-1.033_ISO19115-1.235"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="mcc:Abstract_Constraints_PropertyType" id="ISO19115-1.034_ISO19115-1.098"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType" id="ISO19115-1.035_ISO19115-1.292"/>
-          <element minOccurs="0" name="metadataMaintenance" type="mcc:Abstract_MaintenanceInformation_PropertyType" id="ISO19115-1.036_ISO19115-1.140"/>
-           <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType" id="ISO19115-2.031_ISO19115-2.002"/>
           <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType" id="ISO19115-1.037_ISO19115-1.118"/>
-          -->
-          <element minOccurs="0" name="metadataIdentifier" type="mcc:MD_Identifier_PropertyType" id="ISO19115-1.016_ISO19115-1.431"/>
-          <element minOccurs="0" name="defaultLocale" type="lan:PT_Locale_PropertyType" id="ISO19115-1.017_ISO19115-1.447">
-            <annotation>
-              <documentation>Provides information about an alternatively used localized character
-                string for a linguistic extension</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="parentMetadata" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.018_ISO19115-1.361">
-            <annotation>
-              <documentation>Identifier and onlineResource for a parent metadata
-                record</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" name="contact" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-1.019_ISO19115-1.376">
-            <annotation>
-              <documentation>party responsible for the metadata information</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" name="dateInfo" type="mcc:Abstract_TypedDate_PropertyType" id="ISO19115-1.020_ISO19115-1.402">
-            <annotation>
-              <documentation>Date(s) other than creation dateEG: expiry date</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataStandard" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.021_ISO19115-1.361">
-            <annotation>
-              <documentation>Citation for the standards to which the metadata
-                conforms</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataProfile" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.022_ISO19115-1.361"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="alternativeMetadataReference" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.023_ISO19115-1.361">
-            <annotation>
-              <documentation>unique Identifier and onlineResource for alternative
-                metadata</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="otherLocale" type="lan:PT_Locale_PropertyType" id="ISO19115-1.024_ISO19115-1.447"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataLinkage" type="mcc:Abstract_OnlineResource_PropertyType" id="ISO19115-1.025_ISO19115-1.405">
-            <annotation>
-              <documentation>online location where the metadata is available</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="spatialRepresentationInfo" type="mcc:Abstract_SpatialRepresentation_PropertyType" id="ISO19115-1.026_ISO19115-1.147"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="referenceSystemInfo" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-1.027_ISO19115-1.179"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataExtensionInfo" type="mcc:Abstract_MetadataExtension_PropertyType" id="ISO19115-1.028_ISO19115-1.275"/>
-          <element maxOccurs="unbounded" name="identificationInfo" type="mcc:Abstract_ResourceDescription_PropertyType" id="ISO19115-1.029_ISO19115-1.042"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="contentInfo" type="mcc:Abstract_ContentInformation_PropertyType" id="ISO19115-1.030_ISO19115-1.182"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="distributionInfo" type="mcc:Abstract_Distribution_PropertyType" id="ISO19115-1.031_ISO19115-1.237"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="dataQualityInfo" type="dqc:Abstract_DataQuality_PropertyType" id="ISO19115-1.032_ISO19157.001"/>
           <element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType" id="ISO19115-1.033_ISO19115-1.235"/>
           <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="mcc:Abstract_Constraints_PropertyType" id="ISO19115-1.034_ISO19115-1.098"/>
           <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType" id="ISO19115-1.035_ISO19115-1.292"/>
@@ -147,8 +91,6 @@
           <!-- Inconsistency between ISO 19115-1 Conceptual model and ISO 19115-3 Implementation model for ISO 19115-1 and ISO 19115-2.
           This inconsistency remove the concept of MI_Metadata -->
           <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType" id="ISO19115-2.031_ISO19115-2.002"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType" id="ISO19115-1.037_ISO19115-1.118"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataScope" type="mdb:MD_MetadataScope_PropertyType" id="ISO19115-1.038_ISO19115-1.039"/>
         </sequence>
       </extension>
     </complexContent>
