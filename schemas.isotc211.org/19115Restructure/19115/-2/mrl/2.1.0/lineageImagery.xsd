@@ -146,22 +146,22 @@
               <documentation>Description: Information to identify the processing package that produced the data FGDC: Processing_Identifiers Position: 1 shortName: procInfoId</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" maxOccurs="unbounded" name="softwareReference" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.117_ISO19115-1.361">
+          <element name="softwareReference" minOccurs="0" maxOccurs="unbounded" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.117_ISO19115-1.361">
             <annotation>
               <documentation>Description: Reference to document describing processing software FGDC: Processing_Software_Reference Position: 2 shortName: procInfoSwRef</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="procedureDescription" type="gco:CharacterString_PropertyType" id="ISO19115-2.118_ISO19103.CharacterString">
+          <element name="procedureDescription" minOccurs="0" type="gco:CharacterString_PropertyType" id="ISO19115-2.118_ISO19103.CharacterString">
             <annotation>
               <documentation>Description: Additional details about the processing procedures FGDC: Processing_Procedure_Description Position: 3 shortName: procInfoDesc</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="documentation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.119_ISO19115-1.361">
+          <element name="documentation" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.119_ISO19115-1.361">
             <annotation>
               <documentation>Description: Reference to documentation describing the processing FGDC: Processing_Documentation Position: 4 shortName: procInfoDoc</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="runTimeParameters" type="gco:CharacterString_PropertyType" id="ISO19115-2.120_ISO19103.CharacterString">
+          <element name="runTimeParameters" minOccurs="0" type="gco:CharacterString_PropertyType" id="ISO19115-2.120_ISO19103.CharacterString">
             <annotation>
               <documentation>Description: Parameters to control the processing operations, entered at run time FGDC: Command_Line_Processing_Parameter Position: 5 shortName: procInfoParam</documentation>
             </annotation>
@@ -279,9 +279,9 @@
           <element maxOccurs="unbounded" minOccurs="0" name="report" type="mrl:LE_ProcessStepReport_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="output" type="mrl:LE_Source_PropertyType"/>
            -->
-          <element maxOccurs="unbounded" minOccurs="0" name="output" type="mrl:LE_Source_PropertyType" id="ISO19115-2.134_ISO19115-2.141"/>
-          <element minOccurs="0" name="processingInformation" type="mrl:LE_Processing_PropertyType" id="ISO19115-2.135_ISO19115-2.115"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="report" type="mrl:LE_ProcessStepReport_PropertyType" id="ISO19115-2.136_ISO19115-2.137"/>
+          <element name="output" minOccurs="0" maxOccurs="unbounded" type="mrl:LE_Source_PropertyType" id="ISO19115-2.134_ISO19115-2.141"/>
+          <element name="processingInformation" minOccurs="0" type="mrl:LE_Processing_PropertyType" id="ISO19115-2.135_ISO19115-2.115"/>
+          <element name="report" minOccurs="0" maxOccurs="unbounded" type="mrl:LE_ProcessStepReport_PropertyType" id="ISO19115-2.136_ISO19115-2.137"/>
         </sequence>
       </extension>
     </complexContent>
@@ -310,12 +310,12 @@
               <documentation>Description: Name of the processing report shortName: procRepName</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-2.139_ISO19103.CharacterString">
+          <element name="description" minOccurs="0" type="gco:CharacterString_PropertyType" id="ISO19115-2.139_ISO19103.CharacterString">
             <annotation>
               <documentation>Description: Textual description of what occurred during the process step shortName: procRepDesc</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="fileType" type="gco:CharacterString_PropertyType" id="ISO19115-2.140_ISO19103.CharacterString">
+          <element name="fileType" minOccurs="0" type="gco:CharacterString_PropertyType" id="ISO19115-2.140_ISO19103.CharacterString">
             <annotation>
               <documentation>Description: Type of file that contains that processing report shortName: procRepFilTyp</documentation>
             </annotation>
@@ -343,12 +343,12 @@
     <complexContent>
       <extension base="mrl:LI_Source_Type">
         <sequence>
-          <element minOccurs="0" name="processedLevel" type="mcc:MD_Identifier_PropertyType" id="ISO19115-2.142_ISO19115-1.431">
+          <element name="processedLevel" minOccurs="0" type="mcc:MD_Identifier_PropertyType" id="ISO19115-2.142_ISO19115-1.431">
             <annotation>
               <documentation>Description: Processing level of the source data shortName: procLevel</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="resolution" type="mrl:LE_NominalResolution_PropertyType" id="ISO19115-2.143_ISO19115-2.112">
+          <element name="resolution" minOccurs="0" type="mrl:LE_NominalResolution_PropertyType" id="ISO19115-2.143_ISO19115-2.112">
             <annotation>
               <documentation>Description: Distance between two adjacent pixels shortName: procResol</documentation>
             </annotation>

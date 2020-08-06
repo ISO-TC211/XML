@@ -34,7 +34,7 @@ Position: 3</documentation>
     <complexContent>
       <extension base="msr:MD_Georectified_Type">
         <sequence>
-          <element maxOccurs="unbounded" minOccurs="0" name="checkPoint" type="msr:MI_GCP_PropertyType" id="ISO19115-2.144_ISO19115-2.155"/>
+          <element name="checkPoint" maxOccurs="unbounded" minOccurs="0" type="msr:MI_GCP_PropertyType" id="ISO19115-2.144_ISO19115-2.155"/>
         </sequence>
       </extension>
     </complexContent>
@@ -61,11 +61,7 @@ Position: 3</documentation>
     <complexContent>
       <extension base="msr:MD_Georeferenceable_Type">
         <sequence>
-          <!-- Remove extra element -->
-          <!--
-          <element minOccurs="0" name="platformParameters" type="mcc:Abstract_Platform_PropertyType"/>
-          -->
-          <element maxOccurs="unbounded" name="geolocationInformation" type="msr:AbstractMI_GeolocationInformation_PropertyType" id="ISO19115-2.147_ISO19115-2.148"/>
+          <element name="geolocationInformation" maxOccurs="unbounded" type="msr:AbstractMI_GeolocationInformation_PropertyType" id="ISO19115-2.147_ISO19115-2.148"/>
         </sequence>
       </extension>
     </complexContent>
@@ -85,7 +81,7 @@ Position: 3</documentation>
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element maxOccurs="unbounded" minOccurs="0" name="qualityInfo" type="dqc:Abstract_DataQuality_PropertyType" id="ISO19115-2.149_ISO19157.001"/>
+          <element name="qualityInfo" maxOccurs="unbounded" minOccurs="0" type="dqc:Abstract_DataQuality_PropertyType" id="ISO19115-2.149_ISO19157.001"/>
         </sequence>
       </extension>
     </complexContent>
@@ -115,7 +111,7 @@ Position: 3</documentation>
           <element name="collectionIdentification" type="gco:Integer_PropertyType" id="ISO19115-2.151_ISO19103.Integer"/>
           <element name="collectionName" type="gco:CharacterString_PropertyType" id="ISO19115-2.152_ISO19103.CharacterString"/>
           <element name="coordinateReferenceSystem" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-2.153_ISO19115-1.179"/>
-          <element maxOccurs="unbounded" name="gcp" type="msr:MI_GCP_PropertyType" id="ISO19115-2.154_ISO19115-2.155"/>
+          <element name="gcp" maxOccurs="unbounded" type="msr:MI_GCP_PropertyType" id="ISO19115-2.154_ISO19115-2.155"/>
         </sequence>
       </extension>
     </complexContent>
@@ -136,7 +132,7 @@ Position: 3</documentation>
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <element name="geographicCoordinates" type="gml:PointPropertyType" id="ISO19115-2.157_ISO19103.DirectPosition"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="accuracyReport" type="dqc:Abstract_QualityElement_PropertyType" id="ISO19115-2.156_ISO19157.005"/>
+          <element name="accuracyReport" maxOccurs="unbounded" minOccurs="0" type="dqc:Abstract_QualityElement_PropertyType" id="ISO19115-2.156_ISO19157.005"/>
         </sequence>
       </extension>
     </complexContent>

@@ -73,18 +73,18 @@
           <element maxOccurs="unbounded" minOccurs="0" name="acquisitionRequirement" type="mac:MI_Requirement_PropertyType"/>
           <element minOccurs="0" name="environmentalConditions" type="mac:MI_EnvironmentalRecord_PropertyType"/>
           -->       
-          <element maxOccurs="unbounded" minOccurs="0" name="scope" type="mcc:MD_Scope_PropertyType" id="ISO19115-2.004_ISO19115-1.420">
+          <element name="scope" maxOccurs="unbounded" minOccurs="0" type="mcc:MD_Scope_PropertyType" id="ISO19115-2.004_ISO19115-1.420">
             <annotation>
               <documentation>the specific data to which the acquisition information applies</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionPlan" type="mac:MI_Plan_PropertyType" id="ISO19115-2.005_ISO19115-2.054"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionRequirement" type="mac:MI_Requirement_PropertyType" id="ISO19115-2.006_ISO19115-2.084"/>
-          <element maxOccurs="1" minOccurs="0" name="environmentalConditions" type="mac:MI_EnvironmentalRecord_PropertyType" id="ISO19115-2.007_ISO19115-2.012"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="instrument" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.008_ISO19115-2.019"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="objective" type="mac:MI_Objective_PropertyType" id="ISO19115-2.009_ISO19115-2.031"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="operation" type="mac:MI_Operation_PropertyType" id="ISO19115-2.010_ISO19115-2.040"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="platform" type="mac:MI_Platform_PropertyType" id="ISO19115-2.011_ISO19115-2.069"/>
+          <element name="acquisitionPlan" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Plan_PropertyType" id="ISO19115-2.005_ISO19115-2.054"/>
+          <element name="acquisitionRequirement" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Requirement_PropertyType" id="ISO19115-2.006_ISO19115-2.084"/>
+          <element name="environmentalConditions" maxOccurs="1" minOccurs="0" type="mac:MI_EnvironmentalRecord_PropertyType" id="ISO19115-2.007_ISO19115-2.012"/>
+          <element name="instrument" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.008_ISO19115-2.019"/>
+          <element name="objective" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Objective_PropertyType" id="ISO19115-2.009_ISO19115-2.031"/>
+          <element name="operation" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Operation_PropertyType" id="ISO19115-2.010_ISO19115-2.040"/>
+          <element name="platform" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Platform_PropertyType" id="ISO19115-2.011_ISO19115-2.069"/>
         </sequence>
       </extension>
     </complexContent>
@@ -134,8 +134,7 @@
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <!-- Order Change -->
-          <!--
-            <element maxOccurs="unbounded" minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
+           <!-- <element maxOccurs="unbounded" minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>Description: complete citation of the instrument FGDC: Instrument_Full_Name Position: 1 shortName: instNam Conditional: if shortName not specified</documentation>
             </annotation>
@@ -165,13 +164,13 @@
             <annotation>
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
-          </element>
-          <!-- <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/> -->
-          <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-          <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-
-            -->
-          <element maxOccurs="unbounded" minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.020_ISO19115-1.361">
+          </element> -->
+          <!-- Removed "content" consistent with discussion OMIYA 2019-12-09 
+          <element name="content" type="mcc:Abstract_ContentInformation_PropertyType" maxOccurs="1" minOccurs="0"/> -->
+          <!-- <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/> -->
+          <!-- Elements reordered to match ISO 19115-2:2014 -->
+          <element name="citation" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.020_ISO19115-1.361">
             <annotation>
               <documentation>Description: complete citation of the instrument FGDC: Instrument_Full_Name Position: 1 shortName: instNam Conditional: if shortName not specified</documentation>
             </annotation>
@@ -186,7 +185,7 @@
               <documentation>Description: Code describing the type of instrument shortName: instType</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-2.023_ISO19103.CharacterString">
+          <element name="description" minOccurs="0" type="gco:CharacterString_PropertyType" id="ISO19115-2.023_ISO19103.CharacterString">
             <annotation>
               <documentation>Description: Textual description of the instrument shortName: instDesc</documentation>
             </annotation>
@@ -196,16 +195,14 @@
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in MI_Platform</documentation>
             </annotation>
           </element>
-            <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19115-2.025_ISO19103.RecordType">
+          <element name="otherPropertyType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19115-2.025_ISO19103.RecordType">
             <annotation>
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
           </element>
-           <element minOccurs="0" name="mountedOn" type="mac:MI_Platform_PropertyType" id="ISO19115-2.026_ISO19115-2.069"/>
+          <element name="mountedOn" minOccurs="0" type="mac:MI_Platform_PropertyType" id="ISO19115-2.026_ISO19115-2.069"/>
           <element name="sensor" type="mac:MI_Sensor_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19115-2.027_ISO19115-2.029"/>
           <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19115-2.028_ISO19115-2.093"/>
-          <!-- Removed "content" consistent with discussion OMIYA 2019-12-09 -->
-          <!--  <element name="content" type="mac:MI_Instrument_PropertyType" maxOccurs="1" minOccurs="0" id="ISO19115-2.02?_ISO19115-2.019"/> -->
         </sequence>
       </extension>
     </complexContent>
@@ -226,7 +223,7 @@
     <complexContent>
       <extension base="mac:MI_Instrument_Type">
         <sequence>
-          <element maxOccurs="unbounded" minOccurs="0" name="hosted" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.029_ISO19115-2.19"/>
+          <element name="hosted" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.029_ISO19115-2.19"/>
         </sequence>
       </extension>
     </complexContent>
@@ -383,17 +380,17 @@
             </annotation>
           </element>
           -->
-          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-2.041_ISO19103.CharacterString">
+          <element name="description" minOccurs="0" type="gco:CharacterString_PropertyType" id="ISO19115-2.041_ISO19103.CharacterString">
             <annotation>
               <documentation>Description: Description of the mission on which the platform observations are part and the objectives of that mission FGDC: Mission_Description Position: 3 shortName: mssnDesc</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.042_ISO19115-1.361">
+          <element name="citation" minOccurs="0" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.042_ISO19115-1.361">
             <annotation>
               <documentation>Description: character string by which the mission is known FGDC: Mission_Name Position: 1 shortName: pltMssnNam NITF_ACFTA:AC_MSN_ID</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="identifier" type="mcc:MD_Identifier_PropertyType" id="ISO19115-2.043_ISO19115-1.431">
+          <element name="identifier" minOccurs="0" type="mcc:MD_Identifier_PropertyType" id="ISO19115-2.043_ISO19115-1.431">
             <annotation>
               <documentation>Description: character string by which the mission is known FGDC: Mission_Name Position: 1 shortName: pltMssnNam NITF_ACFTA:AC_MSN_ID</documentation>
             </annotation>
@@ -403,7 +400,7 @@
               <documentation>Description: status of the data acquisition FGDC: Mission_Start_Date Position: 4 shortName: mssnStatus</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="type" type="mac:MI_OperationTypeCode_PropertyType" id="ISO19115-2.045_ISO19115-2.MI_OperationTypeCode">
+          <element name="type" minOccurs="0" type="mac:MI_OperationTypeCode_PropertyType" id="ISO19115-2.045_ISO19115-2.MI_OperationTypeCode">
             <annotation>
               <documentation>Description: status of the data acquisition FGDC: Mission_Start_Date Position: 4 shortName: mssnStatus</documentation>
             </annotation>
@@ -418,16 +415,16 @@
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="childOperation" type="mac:MI_Operation_PropertyType" id="ISO19115-2.048_ISO19115-2.040"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="objective" type="mac:MI_Objective_PropertyType" id="ISO19115-2.049_ISO19115-2.031"/>
+          <element name="childOperation" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Operation_PropertyType" id="ISO19115-2.048_ISO19115-2.040"/>
+          <element name="objective" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Objective_PropertyType" id="ISO19115-2.049_ISO19115-2.031"/>
           <element name="parentOperation" type="mac:MI_Operation_PropertyType" minOccurs="0" id="ISO19115-2.050_ISO19115-2.040"/>
-          <element minOccurs="0" name="plan" type="mac:MI_Plan_PropertyType" id="ISO19115-2.051_ISO19115-2.054"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="platform" type="mac:MI_Platform_PropertyType" id="ISO19115-2.052_ISO19115-2.069">
+          <element name="plan" minOccurs="0" type="mac:MI_Plan_PropertyType" id="ISO19115-2.051_ISO19115-2.054"/>
+          <element name="platform" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Platform_PropertyType" id="ISO19115-2.052_ISO19115-2.069">
             <annotation>
               <documentation>Description: Platform (or platforms) used in the operation.</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="significantEvent" type="mac:MI_Event_PropertyType" id="ISO19115-2.053_ISO19115-2.060"/>
+          <element name="significantEvent" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Event_PropertyType" id="ISO19115-2.053_ISO19115-2.060"/>
           
         </sequence>
       </extension>
@@ -488,7 +485,7 @@
           <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 
           -->
-           <element minOccurs="0" name="type" type="mac:MI_GeometryTypeCode_PropertyType" id="ISO19115-2.055_ISO19115-2.MI_GeometryTypeCode">
+          <element name="type" minOccurs="0" type="mac:MI_GeometryTypeCode_PropertyType" id="ISO19115-2.055_ISO19115-2.MI_GeometryTypeCode">
             <annotation>
               <documentation>Description: manner of sampling geometry the planner expects for collection of the objective data Postion: 2 shortName: planType</documentation>
             </annotation>
@@ -503,8 +500,8 @@
               <documentation>Description: Identification of authority requesting target collection Postion: 1 shortName: planReqId</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="operation" type="mac:MI_Operation_PropertyType" id="ISO19115-2.058_ISO19115-2.040"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="satisfiedRequirement" type="mac:MI_Requirement_PropertyType" id="ISO19115-2.059_ISO19115-2.084"/>
+          <element name="operation" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Operation_PropertyType" id="ISO19115-2.058_ISO19115-2.040"/>
+          <element name="satisfiedRequirement" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Requirement_PropertyType" id="ISO19115-2.059_ISO19115-2.084"/>
         </sequence>
       </extension>
     </complexContent>
@@ -584,9 +581,9 @@
               <documentation>Description: Time the event occured shortName: evtTime</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="expectedObjective" type="mac:MI_Objective_PropertyType" id="ISO19115-2.066_ISO19115-2.031"/>
-          <element minOccurs="0" name="relatedPass" type="mac:MI_PlatformPass_PropertyType" id="ISO19115-2.067_ISO19115-2.077"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="relatedInstrument" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.068_ISO19115-2.019"/>
+          <element name="expectedObjective" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Objective_PropertyType" id="ISO19115-2.066_ISO19115-2.031"/>
+          <element name="relatedPass" minOccurs="0" type="mac:MI_PlatformPass_PropertyType" id="ISO19115-2.067_ISO19115-2.077"/>
+          <element name="relatedInstrument" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.068_ISO19115-2.019"/>
          </sequence>
       </extension>
     </complexContent>
@@ -625,7 +622,7 @@
               <documentation>Description: Narrative description of the platform supporting the instrument FGDC: Platform_Description Position: 2 shortName: pltfrmDesc</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="sponsor" type="mcc:Abstract_Responsibility_PropertyType"  id="ISO19115-2.073_ISO19115-1.376">
+          <element name="sponsor" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_Responsibility_PropertyType"  id="ISO19115-2.073_ISO19115-1.376">
             <annotation>
               <documentation>Description: organization responsible for building, launch, or operation of the platform FGDC: Platform_Sponsor Position: 6 shortName: pltfrmSpnsr</documentation>
             </annotation>
@@ -640,7 +637,7 @@
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="instrument" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.076_ISO19115-2.019"/>
+          <element name="instrument" maxOccurs="unbounded" type="mac:MI_Instrument_PropertyType" id="ISO19115-2.076_ISO19115-2.019"/>
           <!-- remove as not in UML or data dictionary -->
           <!--
           <element name="history" type="mac:MI_InstrumentationEventList_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
@@ -673,12 +670,12 @@
               <documentation>Description: unique name of the pass shortName: passId</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="extent" type="gml:GeometryPropertyType" id="ISO19115-2.079_ISO19115-1.335">
+          <element name="extent" minOccurs="0" type="gml:GeometryPropertyType" id="ISO19115-2.079_ISO19115-1.335">
             <annotation>
               <documentation>Description: Area covered by the pass shortName: passExt</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="relatedEvent" type="mac:MI_Event_PropertyType" id="ISO19115-2.080_ISO19115-2.R060"/>
+          <element name="relatedEvent" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Event_PropertyType" id="ISO19115-2.080_ISO19115-2.R060"/>
         </sequence>
       </extension>
     </complexContent>
@@ -735,7 +732,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="citation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.085_ISO19115-1.361">
+          <element name="citation" minOccurs="0" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.085_ISO19115-1.361">
             <annotation>
               <documentation>Description: identification of reference or guidance material for the requirement shortName: reqRef</documentation>
             </annotation>
@@ -745,12 +742,12 @@
               <documentation>Description: unique name, or code, for the requirement shortName: reqId</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="requestor" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-2.087_ISO19115-1.376">
+          <element name="requestor" maxOccurs="unbounded" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-2.087_ISO19115-1.376">
             <annotation>
               <documentation>Description: origin of requirement shortName: requestor</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="recipient" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-2.088_ISO19115-1.376">
+          <element name="recipient" maxOccurs="unbounded" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-2.088_ISO19115-1.376">
             <annotation>
               <documentation>Description: person(s), or body(ies), to recieve results of requirement shortName: recipient</documentation>
             </annotation>
@@ -770,7 +767,7 @@
               <documentation>Description: date and time after which collection is no longer valid shortName: reqExpire</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="satisifiedPlan" type="mac:MI_Plan_PropertyType" id="ISO19115-2.092_ISO19115-2.054"/>
+          <element name="satisifiedPlan" maxOccurs="unbounded" minOccurs="0" type="mac:MI_Plan_PropertyType" id="ISO19115-2.092_ISO19115-2.054"/>
         </sequence>
       </extension>
     </complexContent>
@@ -794,27 +791,27 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" maxOccurs="unbounded" name="citation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.094_ISO19115-1.361">
+          <element name="citation" minOccurs="0" maxOccurs="unbounded" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.094_ISO19115-1.361">
             <annotation>
               <documentation>citation of the instrumentation event list</documentation>
             </annotation>
           </element>
-          <element minOccurs="1" maxOccurs="1" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-2.095_ISO19103.CharacterString">
+          <element name="description" minOccurs="1" maxOccurs="1" type="gco:CharacterString_PropertyType" id="ISO19115-2.095_ISO19103.CharacterString">
             <annotation>
               <documentation>description of the language and characterset used for the instrumentation event list</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" maxOccurs="1" name="locale" type="lan:PT_Locale_PropertyType" id="ISO19115-2.096_ISO19115-1.447">
+          <element name="locale" minOccurs="0" maxOccurs="1" type="lan:PT_Locale_PropertyType" id="ISO19115-2.096_ISO19115-1.447">
             <annotation>
               <documentation>description of the language and character set used for the instrumentation event list</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" maxOccurs="unbounded" name="constraints" type="mco:MD_Constraints_PropertyType" id="ISO19115-2.097_ISO19115-1.098">
+          <element name="constraints" minOccurs="0" maxOccurs="unbounded" type="mco:MD_Constraints_PropertyType" id="ISO19115-2.097_ISO19115-1.098">
             <annotation>
               <documentation>use and access constraints</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" maxOccurs="unbounded" name="instrumentEvent" type="mac:MI_InstrumentEvent_PropertyType" id="ISO19115-2.098_ISO19115-2.099">
+          <element name="instrumentEvent" minOccurs="0" maxOccurs="unbounded" type="mac:MI_InstrumentEvent_PropertyType" id="ISO19115-2.098_ISO19115-2.099">
             <annotation>
               <documentation>event(s) in the list of events</documentation>
             </annotation>
@@ -842,27 +839,27 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" maxOccurs="unbounded" name="citation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.100_ISO19115-1.361">
+          <element name="citation" minOccurs="0" maxOccurs="unbounded" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-2.100_ISO19115-1.361">
             <annotation>
               <documentation>citation of the instrumentation event</documentation>
             </annotation>
           </element>
-          <element minOccurs="1" maxOccurs="1" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-2.101_ISO19103.CharacterString">
+          <element name="description" minOccurs="1" maxOccurs="1" type="gco:CharacterString_PropertyType" id="ISO19115-2.101_ISO19103.CharacterString">
             <annotation>
               <documentation>description of the instrumentation event</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" maxOccurs="unbounded" name="extent" type="gex:EX_Extent_PropertyType" id="ISO19115-2.102_ISO19115-1.335">
+          <element name="extent" minOccurs="0" maxOccurs="unbounded" type="gex:EX_Extent_PropertyType" id="ISO19115-2.102_ISO19115-1.335">
             <annotation>
               <documentation>extent for the instrumentation event</documentation>
             </annotation>
           </element>
-          <element minOccurs="1" maxOccurs="1" name="type" type="mac:MI_EventTypeCode_PropertyType" id="ISO19115-2.103_ISO19115-2.MI_EventTypeCode">
+          <element name="type" minOccurs="1" maxOccurs="1" type="mac:MI_EventTypeCode_PropertyType" id="ISO19115-2.103_ISO19115-2.MI_EventTypeCode">
             <annotation>
               <documentation>type for the instrumentation event</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" maxOccurs="unbounded" name="revisionHistory" type="mac:MI_Revision_PropertyType" id="ISO19115-2.104_ISO19115-2.105">
+          <element name="revisionHistory" minOccurs="0" maxOccurs="unbounded" type="mac:MI_Revision_PropertyType" id="ISO19115-2.104_ISO19115-2.105">
             <annotation>
               <documentation>history of revisions to the instrumentation event</documentation>
             </annotation>
@@ -890,17 +887,17 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="1" maxOccurs="1" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-2.106_ISO19103.CharacterString">
+          <element name="description" minOccurs="1" maxOccurs="1" type="gco:CharacterString_PropertyType" id="ISO19115-2.106_ISO19103.CharacterString">
             <annotation>
               <documentation>description of the revision</documentation>
             </annotation>
           </element>
-          <element minOccurs="1" maxOccurs="unbounded" name="responsibleParty" type="cit:CI_Responsibility_PropertyType" id="ISO19115-2.107_ISO19115-1.376">
+          <element name="responsibleParty" minOccurs="1" maxOccurs="unbounded" type="cit:CI_Responsibility_PropertyType" id="ISO19115-2.107_ISO19115-1.376">
             <annotation>
               <documentation>individual or organisation responsible for the revision</documentation>
             </annotation>
           </element>
-          <element minOccurs="1" maxOccurs="unbounded" name="dateInfo" type="cit:CI_Date_PropertyType" id="ISO19115-2.108_ISO19115-1.402">
+          <element name="dateInfo" minOccurs="1" maxOccurs="unbounded" type="cit:CI_Date_PropertyType" id="ISO19115-2.108_ISO19115-1.402">
             <annotation>
               <documentation>type for the instrumentation event</documentation>
             </annotation>
