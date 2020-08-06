@@ -248,9 +248,15 @@
               <documentation>reference to the dataset on which the service operates</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.334_ISO19115-1.312"/>
+ <!-- moved to 334 -->
+          <!-- <element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.334_ISO19115-1.312"/> -->
+           <!-- moved to 333 -->
+          <!-- <element maxOccurs="unbounded" minOccurs="0" name="resource" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.333_ISO19115-1.042"/> -->
+          <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
           <element maxOccurs="unbounded" minOccurs="0" name="resource" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.333_ISO19115-1.042"/>
-          </sequence>
+          <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
+          <element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.334_ISO19115-1.312"/>
+        </sequence>
       </extension>
     </complexContent>
   </complexType>
