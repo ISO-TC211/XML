@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lan:PT_FreeText 
+    xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+    xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/lan/1.3 language.xsd">
+    <lan:textGroup xlink:type="simple">
+        <lan:LocalisedCharacterString>aaa</lan:LocalisedCharacterString>
+    </lan:textGroup>
+</lan:PT_FreeText>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="21.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="\QtestXSD20200817.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="testXSD20200817.xpr">
+        <folder path="."/>
+    </projectTree>
+</project>

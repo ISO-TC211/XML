@@ -5,12 +5,12 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1" 
   xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1.1" 
   xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.1" 
-  xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/2.1" 
-  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/2.1" 
-  xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/2.1"
-  xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/2.1"
-  xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/2.1"
-  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/2.1"
+  xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3" 
+  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
+  xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+  xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3"
+  xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
   elementFormDefault="qualified" 
   targetNamespace="https://schemas.isotc211.org/19115/-2/mac/2.1" 
   version="2.1.0"
@@ -18,12 +18,12 @@
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/2.1" schemaLocation="../../../../19115/-1/mdb/2.1.0/mdb.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1" schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mco/2.1" schemaLocation="../../../../19115/-1/mco/2.1.0/mco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/gex/2.1" schemaLocation="../../../../19115/-1/gex/2.1.0/gex.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="../../../../19115/-1/cit/2.1.0/cit.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/1.3" schemaLocation="../../../../19115/-1/mdb/1.3.0/mdb.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mco/1.3" schemaLocation="../../../../19115/-1/mco/1.3.0/mco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/gex.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
   <include schemaLocation="event.xsd"/>
 <!-- Added for completenes - match ISO 19115-2:2019 -->
   <complexType name="MI_Metadata_PropertyType">
