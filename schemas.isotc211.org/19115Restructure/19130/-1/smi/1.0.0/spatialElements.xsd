@@ -271,7 +271,7 @@
     <element name="matrixElements" type="smi:attitudeMatrix_Type"/>
     <complexType name="attitudeMatrix_Type">
         <sequence>
-            <element name="r3" type="gco:Real_PropertyType">
+            <element name="r1c1" type="gco:Real_PropertyType">
                 <annotation>
                     <documentation>r means row and c means column</documentation>
                 </annotation>
@@ -304,12 +304,12 @@
         <complexContent>
             <extension base="sml:PhysicalComponentType">
                 <sequence>
-                    <element name="acceleration" minOccurs="0" type="swe:QualityPropertyType">
+                    <element name="acceleration" minOccurs="0" type="swe:QuantityPropertyType">
                         <annotation>
                             <documentation>rate of change of velocity of the body</documentation>
                         </annotation>
                     </element>
-                    <element name="angularAcceleration" minOccurs="0" type="swe:QualityPropertyType">
+                    <element name="angularAcceleration" minOccurs="0" type="swe:QuantityPropertyType">
                         <annotation>
                             <documentation>rate of change of the angular velocity of the
                                 body</documentation>

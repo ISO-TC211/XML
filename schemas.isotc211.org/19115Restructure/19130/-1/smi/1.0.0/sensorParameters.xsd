@@ -497,7 +497,7 @@
         <complexContent>
             <extension base="sml:SimpleProcessType">
                 <sequence>
-                    <element name="instFiedlOfView" type="gco:Angle_PropertyType"/>
+                    <element name="instFieldOfView" type="gco:Angle_PropertyType"/>
                     <element name="swathFieldOfView" type="gco:Angle_PropertyType"/>
                 </sequence>
             </extension>
@@ -520,7 +520,7 @@
         <complexContent>
             <extension base="smi:SD_OpticsOperation_Type">
                 <sequence>
-                    <element name="pixelcanDuration" type="gco:TM_PeriodDuration_PropertyType"/>
+                    <element name="pixelScanDuration" type="gco:TM_PeriodDuration_PropertyType"/>
                     <element name="scanDuration" type="gco:TM_PeriodDuration_PropertyType"/> 
                     <element name="scanAngleFunction" type="smi:SD_ScanAngleFunction_PropertyType"/>
                 </sequence>
@@ -645,7 +645,7 @@
                         <documentation>principal point of best symmetry, the centre of the circles of equal distortions of the lens</documentation>
                     </annotation>
                 </element>
-                <element name="qualityOfPrincPointOfsymmetry" type="mdq:DQ_QuantitativeAttributeAccuracy_PropertyType">
+                <element name="qualityOfPrincPointOfSymmetry" type="mdq:DQ_QuantitativeAttributeAccuracy_PropertyType">
                     <annotation>
                         <documentation>accuracy of the principal point of symmetry</documentation>
                     </annotation>

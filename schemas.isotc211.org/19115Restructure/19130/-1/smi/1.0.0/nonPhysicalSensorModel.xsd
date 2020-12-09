@@ -173,7 +173,7 @@
     </complexType>
     <element name="SD_TrueReplacementModel" type="smi:SD_TrueReplacementModel_Type">
         <annotation>
-            <documentation>information describing the Ture Replacement Model</documentation>
+            <documentation>information describing the True Replacement Model</documentation>
         </annotation>
     </element>
     <complexType name="SD_TrueReplacementModel_Type">
