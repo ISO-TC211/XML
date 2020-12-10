@@ -866,7 +866,7 @@
     
     <complexType name="SE_ATExteriorOrientation_PropertyType">
         <sequence minOccurs="0">
-            <element ref="smi:SE_ATCheckPoint"/>
+            <element ref="smi:SE_ATExteriorOrientation"/>
         </sequence>
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>
