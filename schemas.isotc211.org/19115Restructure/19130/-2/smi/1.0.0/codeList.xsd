@@ -190,7 +190,7 @@
     <simpleType name="SE_SonarDeploymentType_Type">
         <restriction base="string">
             <enumeration value="hullMounted"/>
-            <enumeration value="poleMounted"/>
+            <enumeration value="offset"/>
             <enumeration value="Towed"/>
         </restriction>
     </simpleType>

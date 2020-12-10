@@ -219,7 +219,7 @@
                     <documentation>date and time original laser pulse is sent</documentation>
                 </annotation>
             </element>
-            <element name="pulseReturntime" type="gco:DateTime_PropertyType" maxOccurs="unbounded">
+            <element name="pulseReturnTime" type="gco:DateTime_PropertyType" maxOccurs="unbounded">
                 <annotation>
                     <documentation>date and time return laser pulse is received</documentation>
                 </annotation>
@@ -622,7 +622,7 @@
                         </annotation>
                         <complexType>
                             <sequence>
-                                <element name="Distance" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="unbounded"></element>
+                                <element name="draft" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="unbounded"></element>
                             </sequence>
                         </complexType>
                     </element>
