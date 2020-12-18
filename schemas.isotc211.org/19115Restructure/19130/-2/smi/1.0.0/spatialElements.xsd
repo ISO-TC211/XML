@@ -87,7 +87,7 @@
                     </element>
                     <element name="settlement" type="gco:Angle_PropertyType" minOccurs="0">
                         <annotation>
-                            <documentation/>
+                            <documentation>general lowering in level of a moving vessel, relative to what its level would be were it motionless, due to the regional depression of the surface water in which the ship moves</documentation>
                         </annotation>
                     </element>
                     <element name="squat" type="gco:Length_PropertyType" minOccurs="0">
