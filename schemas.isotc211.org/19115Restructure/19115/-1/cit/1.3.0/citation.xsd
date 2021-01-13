@@ -409,7 +409,7 @@
               <documentation>detailed text description of what the online resource is/does</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="function" type="cit:CI_OnLineFunctionCode_PropertyType" id="ISO19115-1.411_ISO19115-1.CI_nLineFunctionCode">
+          <element minOccurs="0" name="function" type="cit:CI_OnLineFunctionCode_PropertyType" id="ISO19115-1.411_ISO19115-1.CI_OnLineFunctionCode">
             <annotation>
               <documentation>code for function performed by the online resource</documentation>
             </annotation>
