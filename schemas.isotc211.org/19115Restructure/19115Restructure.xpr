@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="21.1">
+<project>
     <meta>
         <filters directoryPatterns="" filePatterns="\Q19115Restructure.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
         <options/>

@@ -317,7 +317,7 @@
               <documentation>brief description of the resource and/or resource series usage</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="usageDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.087_TimePrimative">
+          <element maxOccurs="unbounded" minOccurs="0" name="usageDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.087_TimePrimitive">
             <annotation>
               <documentation>date and time of the first use or range of uses of the resource and/or resource series</documentation>
             </annotation>
