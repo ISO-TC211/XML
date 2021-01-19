@@ -447,7 +447,7 @@
     <restriction base="string">
       <enumeration value="farming">
         <annotation>
-          <documentation>rearing of animals and/or cultivation of plantsExamples: agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock</documentation>
+          <documentation>rearing of animals and/or cultivation of plants Examples: agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock</documentation>
         </annotation>
       </enumeration>
       <enumeration value="biota">
@@ -472,7 +472,7 @@
       </enumeration>
       <enumeration value="elevation">
         <annotation>
-          <documentation>height above or below a vertical datumExamples: altitude, bathymetry, digital elevation models, slope, derived products</documentation>
+          <documentation>height above or below a vertical datum Examples: altitude, bathymetry, digital elevation models, slope, derived products</documentation>
         </annotation>
       </enumeration>
       <enumeration value="environment">
@@ -537,7 +537,7 @@
       </enumeration>
       <enumeration value="utilitiesCommunication">
         <annotation>
-          <documentation>energy, water and waste systems and communications infrastructure and servicesExamples: hydroelectricity, geothermal, solar and nuclear sources of energy, water purification and distribution, sewage collection and disposal, electricity and gas distribution, data communication, telecommunication, radio, communication networks</documentation>
+          <documentation>energy, water and waste systems and communications infrastructure and services Examples: hydroelectricity, geothermal, solar and nuclear sources of energy, water purification and distribution, sewage collection and disposal, electricity and gas distribution, data communication, telecommunication, radio, communication networks</documentation>
         </annotation>
       </enumeration>
       <enumeration value="extraTerrestrial">
