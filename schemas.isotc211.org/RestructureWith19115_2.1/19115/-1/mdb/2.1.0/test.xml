@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/2.1"
+    xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/2.1"
+    xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.1"
+    xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/2.1"
+    xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/2.1"
+    xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/2.1" 
+    xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/2.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+    xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.1"
+    xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.1" 
+    xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.1" 
+    xmlns:cat="https://schemas.isotc211.org/19115/-3/cat/1.1"
+    xsi:schemaLocation="
+    https://schemas.isotc211.org/19115/-1/mdb/2.1 ../../../../19115/-1/mdb/2.1.0/mdb.xsd
+    https://schemas.isotc211.org/19115/-1/mcc/2.1 ../../../../19115/-1/mcc/2.1.0/mcc.xsd
+    https://schemas.isotc211.org/19115/-1/mcc/2.1 ../../../../19115/-1/mcc/2.1.0/commonClasses.xsd
+    https://schemas.isotc211.org/19115/-1/mrc/2.1 ../../../../19115/-1/mrc/2.1.0/mrc.xsd
+    https://schemas.isotc211.org/19115/-3/cat/1.1 ../../../../19115/-3/cat/1.1.0/cat.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.1 ../../../../19103/-/gco/1.1.0/gco.xsd
+    https://schemas.isotc211.org/19103/-/gcx/1.1 ../../../../19103/-/gcx/1.1.0/gcx.xsd
+    https://schemas.isotc211.org//19110/-/fcc/2.1 ../../../../19110/-/fcc/2.1.0/fcc.xsd
+    https://schemas.isotc211.org//19110/-/gfc/2.1 ../../../../19110/-/gfc/2.1.0/gfc.xsd
+    https://schemas.isotc211.org/19115/-3/cat/1.1 ../../../../19115/-3/cat/1.1.0/cat.xsd"
+    >
+    <mdb:contact></mdb:contact>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date><gco:Date>2020</gco:Date></cit:date>
+            <cit:dateType><cit:CI_DateTypeCode codeList="" codeListValue=""></cit:CI_DateTypeCode></cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:identificationInfo><mri:MD_DataIdentification>
+        <mri:citation></mri:citation>
+        <mri:abstract></mri:abstract>
+        <mri:descriptiveKeywords><mri:MD_Keywords>
+            <mri:keyword><gco:CharacterString>word</gco:CharacterString></mri:keyword>
+            <mri:keywordClass><mri:MD_KeywordClass>
+                <mri:className></mri:className>
+                <mri:conceptIdentifier><gcx:URI>https://my.favourite.uri</gcx:URI></mri:conceptIdentifier>
+                <mri:ontology></mri:ontology>
+            </mri:MD_KeywordClass></mri:keywordClass>
+        </mri:MD_Keywords></mri:descriptiveKeywords>
+        <mri:resourceSpecificUsage>
+            <mri:MD_Usage>
+                <mri:specificUsage></mri:specificUsage>
+                <mri:usageDateTime>
+                    <gml:TimePeriod>
+                        <gml:description></gml:description>
+                        <gml:begin></gml:begin>
+                        <gml:end></gml:end>
+                    </gml:TimePeriod>
+                </mri:usageDateTime>
+            </mri:MD_Usage>
+        </mri:resourceSpecificUsage>
+    </mri:MD_DataIdentification></mdb:identificationInfo>
+    <mdb:contentInfo>
+        <mrc:MD_FeatureCatalogue>
+            <mrc:featureCatalogue>
+                <gfc:FC_FeatureCatalogue>
+                    <cat:name></cat:name>
+                    <cat:scope></cat:scope>
+                    <cat:versionNumber></cat:versionNumber>
+                    <cat:versionDate></cat:versionDate>
+                    <gfc:producer></gfc:producer>
+                </gfc:FC_FeatureCatalogue>
+            </mrc:featureCatalogue>
+        </mrc:MD_FeatureCatalogue>
+    </mdb:contentInfo>
+</mdb:MD_Metadata>
