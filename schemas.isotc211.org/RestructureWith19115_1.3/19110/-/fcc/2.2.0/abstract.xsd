@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:cat="https://schemas.isotc211.org/19115/-3/cat/1.2" 
+  elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19110/-/fcc/2.2"
+  version="2.2.0"
+  >
+  <include schemaLocation="../../../../19110/-/fcc/2.2.0/fcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-3/cat/1.2" schemaLocation="../../../../19115/-3/cat/1.2.0/cat.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element abstract="true" name="Abstract_FeatureCatalogue" substitutionGroup="cat:AbstractCT_Catalogue"
+    type="fcc:Abstract_FeatureCatalogue_Type"/>
+  <complexType abstract="true" name="Abstract_FeatureCatalogue_Type">
+    <complexContent>
+      <extension base="cat:AbstractCT_Catalogue_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Abstract_FeatureCatalogue_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="fcc:Abstract_FeatureCatalogue"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <element abstract="true" name="Abstract_FeatureType" substitutionGroup="gco:AbstractObject"
+    type="fcc:Abstract_FeatureType_Type"/>
+  <complexType abstract="true" name="Abstract_FeatureType_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Abstract_FeatureType_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="fcc:Abstract_FeatureType"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+</schema>

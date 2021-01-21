@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <meta>
+        <filters directoryPatterns="" filePatterns="\QRestructureWith19115_1.3.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="RestructureWith19115_1.3.xpr">
+        <folder path="."/>
+    </projectTree>
+</project>
