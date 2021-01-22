@@ -30,10 +30,10 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="citation" type="mcc:Abstract_Citation_PropertyType"/>
+          <element name="citation" minOccurs="0" maxOccurs="unbounded" type="mcc:Abstract_Citation_PropertyType"/>
           <element name="description" type="gco:CharacterString_PropertyType"/>
           <element maxOccurs="1" minOccurs="0" name="locale" type="lan:PT_Locale_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints"
+          <element maxOccurs="unbounded" minOccurs="0" name="constraints"
             type="mcc:Abstract_Constraints_PropertyType"/>
           <element name="instrumentationEvent" type="mac:MI_InstrumentationEvent_PropertyType"
             minOccurs="1" maxOccurs="unbounded"/>
@@ -65,7 +65,7 @@
           <element name="extent" type="mcc:Abstract_Extent_PropertyType" minOccurs="0"
             maxOccurs="unbounded"/>
           <element name="type" type="mac:MI_InstrumentationEventTypeCode_PropertyType" minOccurs="1"
-            maxOccurs="unbounded"/>
+            maxOccurs="1"/>
           <element name="revisionHistory" type="mac:MI_Revision_PropertyType" minOccurs="0"
             maxOccurs="unbounded"/>
         </sequence>

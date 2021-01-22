@@ -181,7 +181,7 @@
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
           </element>
-          <element name="algarithum" minOccurs="0" maxOccurs="unbounded" type="mrl:LE_Algorithm_PropertyType" id="ISO19115-2.123_ISO19115-2.109">
+          <element name="algorithum" minOccurs="0" maxOccurs="unbounded" type="mrl:LE_Algorithm_PropertyType" id="ISO19115-2.123_ISO19115-2.109">
             <annotation>
               <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
             </annotation>
@@ -239,7 +239,7 @@
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
           </element>
-          <element name="value" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19115-2.131_ISO19103.Record">
+          <element name="value" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19115-2.131_ISO19103.Record">
             <annotation>
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in LE_Processing</documentation>
             </annotation>

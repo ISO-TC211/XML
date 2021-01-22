@@ -607,7 +607,7 @@
     <complexContent>
       <extension base="mcc:Abstract_Platform_Type">
         <sequence>
-          <element name="citation" type="mcc:Abstract_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19115-2.070_ISO19115-1.361">
+          <element name="citation" type="mcc:Abstract_Citation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19115-2.070_ISO19115-1.361">
             <annotation>
               <documentation>Description: complete citation of the platform FGDC: Platform_Full_Name Position: 3 shortName: pltNam Conditional: if shortName not specified</documentation>
             </annotation>
@@ -811,7 +811,7 @@
               <documentation>use and access constraints</documentation>
             </annotation>
           </element>
-          <element name="instrumentEvent" minOccurs="0" maxOccurs="unbounded" type="mac:MI_InstrumentEvent_PropertyType" id="ISO19115-2.098_ISO19115-2.099">
+          <element name="instrumentationEvent" minOccurs="0" maxOccurs="unbounded" type="mac:MI_InstrumentEvent_PropertyType" id="ISO19115-2.098_ISO19115-2.099">
             <annotation>
               <documentation>event(s) in the list of events</documentation>
             </annotation>
