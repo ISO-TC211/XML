@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema targetNamespace="http://www.opengis.net/gmlcov/1.0" 
-    xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" version="1.0.2" xml:lang="en">
+<schema
+    targetNamespace="http://www.opengis.net/gmlcov/1.0" 
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    version="3.1.0"
+    xml:lang="en"
+    >
     <annotation>
         <appinfo>grids.xsd</appinfo>
         <documentation>This XML Schema Document encodes extensions to GML 3.2.1 for grids that are referenced by a Transformation, named "ReferencedGridByTransformation". This document also extends the alternatives allowed in gml:ParameterValueType as expected to be needed by such Transformations.

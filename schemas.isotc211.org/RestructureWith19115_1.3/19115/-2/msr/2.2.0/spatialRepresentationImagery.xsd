@@ -34,7 +34,7 @@ Position: 3</documentation>
     <complexContent>
       <extension base="msr:MD_Georectified_Type">
         <sequence>
-          <element name="checkPoint" maxOccurs="unbounded" minOccurs="0" type="msr:MI_GCP_PropertyType" id="ISO19115-2.144_ISO19115-2.155"/>
+          <element name="checkPoint" maxOccurs="unbounded" minOccurs="0" type="msr:MI_GCP_PropertyType" id="ISO19115-2.145_ISO19115-2.155"/>
         </sequence>
       </extension>
     </complexContent>
@@ -131,8 +131,8 @@ Position: 3</documentation>
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="geographicCoordinates" type="gml:PointPropertyType" id="ISO19115-2.157_ISO19103.DirectPosition"/>
-          <element name="accuracyReport" maxOccurs="unbounded" minOccurs="0" type="dqc:Abstract_QualityElement_PropertyType" id="ISO19115-2.156_ISO19157.005"/>
+          <element name="geographicCoordinates" type="gml:PointPropertyType" id="ISO19115-2.156_ISO19103.DirectPosition"/>
+          <element name="accuracyReport" maxOccurs="unbounded" minOccurs="0" type="dqc:Abstract_QualityElement_PropertyType" id="ISO19115-2.157_ISO19157.005"/>
         </sequence>
       </extension>
     </complexContent>

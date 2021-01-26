@@ -7,7 +7,7 @@
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
-  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.1"
   xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.0"
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.1"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
@@ -21,7 +21,7 @@
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="../../../../19115/-2/mac/2.2.0/mac.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1" schemaLocation="../../../../19115/-2/mac/2.1.0/mac.xsd"/>
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.1" schemaLocation="../../../../19157/-/mdq/1.1.0/mdq.xsd"/>
     <include schemaLocation="../../../../19130/-1/smi/1.0.0/codeList.xsd"/>
     <include schemaLocation="../../../../19130/-2/smi/1.0.0/codeList.xsd"/>
@@ -271,7 +271,7 @@
     <element name="matrixElements" type="smi:attitudeMatrix_Type"/>
     <complexType name="attitudeMatrix_Type">
         <sequence>
-            <element name="r3" type="gco:Real_PropertyType">
+            <element name="r1c1" type="gco:Real_PropertyType">
                 <annotation>
                     <documentation>r means row and c means column</documentation>
                 </annotation>
@@ -304,12 +304,12 @@
         <complexContent>
             <extension base="sml:PhysicalComponentType">
                 <sequence>
-                    <element name="acceleration" minOccurs="0" type="swe:QualityPropertyType">
+                    <element name="acceleration" minOccurs="0" type="swe:QuantityPropertyType">
                         <annotation>
                             <documentation>rate of change of velocity of the body</documentation>
                         </annotation>
                     </element>
-                    <element name="angularAcceleration" minOccurs="0" type="swe:QualityPropertyType">
+                    <element name="angularAcceleration" minOccurs="0" type="swe:QuantityPropertyType">
                         <annotation>
                             <documentation>rate of change of the angular velocity of the
                                 body</documentation>

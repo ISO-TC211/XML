@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/1.3"
   xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3" 
   elementFormDefault="qualified"
@@ -9,10 +9,8 @@
   version="1.3.0"
     >
   <include schemaLocation="mda.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/1.3"
-    schemaLocation="../../../../19115/-1/mdb/1.3.0/mdb.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/1.3" schemaLocation="../../../../19115/-1/mdb/1.3.0/mdb.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractDS_Aggregate" substitutionGroup="mda:AbstractDS_Resource" type="mda:AbstractDS_Aggregate_Type" id="ISO19115-1.006">
     <annotation>

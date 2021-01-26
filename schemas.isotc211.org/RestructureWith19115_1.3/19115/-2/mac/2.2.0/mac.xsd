@@ -7,6 +7,5 @@
   elementFormDefault="qualified"
   targetNamespace="https://schemas.isotc211.org/19115/-2/mac/2.2"
   version="2.2.0"> 
-  <include schemaLocation="../../../../19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd"/>
-  <include schemaLocation="../../../../19115/-2/mac/2.2.0/event.xsd"/>  
+  <include schemaLocation="../../../../19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd"/> 
 </schema>

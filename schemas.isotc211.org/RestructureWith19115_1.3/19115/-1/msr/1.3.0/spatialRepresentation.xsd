@@ -67,7 +67,7 @@
               <documentation>number of independent spatial-temporal axes</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="axisDimensionProperties" type="msr:MD_Dimension_PropertyType" id="ISO19115-1.150_19115-1.170">
+          <element maxOccurs="unbounded" minOccurs="1" name="axisDimensionProperties" type="msr:MD_Dimension_PropertyType" id="ISO19115-1.150_19115-1.170">
             <annotation>
               <documentation>information about spatial-temporal axis properties</documentation>
             </annotation>
@@ -315,7 +315,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_DimensionNameTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_DimensionNameTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.17">
     <annotation>
       <documentation>name of the dimension</documentation>
     </annotation>
@@ -328,7 +328,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_CellGeometryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_CellGeometryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.12">
     <annotation>
       <documentation>code indicating the geometry represented by the grid cell value</documentation>
     </annotation>
@@ -341,7 +341,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_GeometricObjectTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_GeometricObjectTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.18">
     <annotation>
       <documentation>name of point or vector objects used to locate zero-, one-, two-, or three-dimensional spatial locations in the dataset</documentation>
     </annotation>
@@ -354,7 +354,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_PixelOrientationCode" substitutionGroup="gco:CharacterString" type="msr:MD_PixelOrientationCode_Type">
+  <element name="MD_PixelOrientationCode" substitutionGroup="gco:CharacterString" type="msr:MD_PixelOrientationCode_Type" id="ISO19115-1.B.3.24">
     <annotation>
       <documentation>point in a pixel corresponding to the Earth location of the pixel</documentation>
     </annotation>
@@ -400,7 +400,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_TopologyLevelCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_TopologyLevelCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.31">
     <annotation>
       <documentation>degree of complexity of the spatial relationships</documentation>
     </annotation>

@@ -149,7 +149,7 @@
   </complexType>
   <!-- =========================================================================== -->
   <!-- =========================================================================== -->
-  <element name="MI_BandDefinition" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MI_BandDefinition" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-2.B.30">
     <annotation>
       <documentation>Description: Designation of criterion for defining maximum and minimum wavelengths for a spectral band FGDC: Band_Boundry_Definition shortName: BndDef</documentation>
     </annotation>
@@ -162,7 +162,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MI_PolarisationOrientationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MI_PolarisationOrientationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-2.B.37">
     <annotation>
       <documentation>Description: polarisation of the antenna relative to the waveform shortName: PolarOrienCode</documentation>
     </annotation>
@@ -175,7 +175,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
    <!-- =========================================================================== -->
-  <element name="MI_TransferFunctionTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MI_TransferFunctionTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="IS019115-2.B.40">
     <annotation>
       <documentation>Description: transform function to be used when scaling a physical value for a given element shortName: XfrFuncTypeCode</documentation>
     </annotation>

@@ -5,7 +5,7 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1" 
   elementFormDefault="qualified" 
   targetNamespace="https://schemas.isotc211.org/19157/-/dqc/1.1" 
-  version="1.0">
+  version="1.1.0">
   <include schemaLocation="dqc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
           schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>

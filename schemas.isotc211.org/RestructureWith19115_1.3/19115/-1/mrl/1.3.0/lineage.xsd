@@ -73,7 +73,7 @@
               <documentation>requirement or purpose for the process step</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="stepDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.127_TM_TimePrimative">
+          <element minOccurs="0" name="stepDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.127_TM_TimePrimitive">
             <annotation>
               <documentation>date, time, range or period of process step</documentation>
             </annotation>

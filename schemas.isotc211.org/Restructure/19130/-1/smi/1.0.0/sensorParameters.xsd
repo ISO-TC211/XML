@@ -5,10 +5,10 @@
     targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.0"
   xmlns:sml="http://www.opengis.net/sensorml/2.0"
-  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
-  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
-  xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3" 
-  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2" 
+  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/2.1"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/2.1"
+  xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/2.1" 
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.1" 
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.1" 
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2"
@@ -17,10 +17,10 @@
     >
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.1" schemaLocation="../../../../19157/-/mdq/1.1.0/mdq.xsd"/>   
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="../../../../19115/-1/mrs/1.3.0/mrs.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="../../../../19115/-2/mac/2.2.0/mac.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="../../../../19115/-1/mrc/1.3.0/mrc.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="../../../../19115/-1/cit/2.1.0/cit.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/2.1" schemaLocation="../../../../19115/-1/mrs/2.1.0/mrs.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1" schemaLocation="../../../../19115/-2/mac/2.1.0/mac.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrc/2.1" schemaLocation="../../../../19115/-1/mrc/2.1.0/mrc.xsd"/>
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
      <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -497,7 +497,7 @@
         <complexContent>
             <extension base="sml:SimpleProcessType">
                 <sequence>
-                    <element name="instFiedlOfView" type="gco:Angle_PropertyType"/>
+                    <element name="instFieldOfView" type="gco:Angle_PropertyType"/>
                     <element name="swathFieldOfView" type="gco:Angle_PropertyType"/>
                 </sequence>
             </extension>
@@ -520,7 +520,7 @@
         <complexContent>
             <extension base="smi:SD_OpticsOperation_Type">
                 <sequence>
-                    <element name="pixelcanDuration" type="gco:TM_PeriodDuration_PropertyType"/>
+                    <element name="pixelScanDuration" type="gco:TM_PeriodDuration_PropertyType"/>
                     <element name="scanDuration" type="gco:TM_PeriodDuration_PropertyType"/> 
                     <element name="scanAngleFunction" type="smi:SD_ScanAngleFunction_PropertyType"/>
                 </sequence>
@@ -645,7 +645,7 @@
                         <documentation>principal point of best symmetry, the centre of the circles of equal distortions of the lens</documentation>
                     </annotation>
                 </element>
-                <element name="qualityOfPrincPointOfsymmetry" type="mdq:DQ_QuantitativeAttributeAccuracy_PropertyType">
+                <element name="qualityOfPrincPointOfSymmetry" type="mdq:DQ_QuantitativeAttributeAccuracy_PropertyType">
                     <annotation>
                         <documentation>accuracy of the principal point of symmetry</documentation>
                     </annotation>

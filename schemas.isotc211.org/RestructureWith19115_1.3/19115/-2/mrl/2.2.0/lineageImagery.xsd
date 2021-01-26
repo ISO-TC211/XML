@@ -181,7 +181,7 @@
               <documentation>type of other property description (i.e. netcdf/variable in ncml.xsd or AdditionalAttribute in ECHO)</documentation>
             </annotation>
           </element>
-          <element name="algarithum" minOccurs="0" maxOccurs="unbounded" type="mrl:LE_Algorithm_PropertyType" id="ISO19115-2.123_ISO19115-2.109">
+          <element name="algorithum" minOccurs="0" maxOccurs="unbounded" type="mrl:LE_Algorithm_PropertyType" id="ISO19115-2.123_ISO19115-2.109">
             <annotation>
               <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
             </annotation>
@@ -366,7 +366,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="LE_ParameterDirection" substitutionGroup="gco:CharacterString" type="mrl:LE_ParameterDirection_Type">
+  <element name="LE_ParameterDirection" substitutionGroup="gco:CharacterString" type="mrl:LE_ParameterDirection_Type" id="ISO19115-2.B.36">
     <annotation>
       <documentation>direction of parameter (in, out, in/out)</documentation>
     </annotation>

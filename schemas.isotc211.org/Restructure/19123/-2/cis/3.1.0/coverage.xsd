@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema targetNamespace="http://www.opengis.net/gmlcov/1.0"
-    xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:swe="http://www.opengis.net/swe/2.0"
-    xmlns="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified" version="1.0.2">
+<schema
+    targetNamespace="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    version="3.1.0"
+    >
     <annotation>
         <appinfo>coverage.xsd</appinfo>
         <documentation>Component of GML 3.2.1 Application Schema for Coverages.

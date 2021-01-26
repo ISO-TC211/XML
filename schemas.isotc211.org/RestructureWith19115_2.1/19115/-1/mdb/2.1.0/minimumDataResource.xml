@@ -48,6 +48,20 @@
                 </gex:EX_GeographicDescription></gex:geographicElement>
             </gex:EX_Extent>
             </mri:extent>
+            <mri:descriptiveKeywords><mri:MD_Keywords>
+                <mri:keyword></mri:keyword>
+                <mri:keywordClass><mri:MD_KeywordClass>
+                    <mri:className></mri:className>
+                    <mri:conceptIdentifier><gcx:URI></gcx:URI></mri:conceptIdentifier>
+                    <mri:ontology></mri:ontology>
+                    
+                </mri:MD_KeywordClass></mri:keywordClass>
+            </mri:MD_Keywords></mri:descriptiveKeywords>
             
     </mri:MD_DataIdentification></mdb:identificationInfo>
+    <mdb:distributionInfo><mrd:MD_Distribution><mrd:transferOptions><mrd:MD_DigitalTransferOptions><mrd:onLine><cit:CI_OnlineResource>
+        <cit:linkage><gco:CharacterString>URL</gco:CharacterString></cit:linkage>
+        <cit:protocol><gco:CharacterString></gco:CharacterString></cit:protocol>
+        <
+    </cit:CI_OnlineResource></mrd:onLine></mrd:MD_DigitalTransferOptions></mrd:transferOptions></mrd:MD_Distribution></mdb:distributionInfo>
 </mdb:MD_Metadata>

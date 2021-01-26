@@ -99,7 +99,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_Identifier" substitutionGroup="gco:AbstractObject" type="mcc:MD_Identifier_Type">
+  <element name="MD_Identifier" substitutionGroup="gco:AbstractObject" type="mcc:MD_Identifier_Type" id="ISO19115-1.431_ABSTRACT">
     <annotation>
       <documentation>value uniquely identifying an object within a namespace</documentation>
     </annotation>
@@ -109,7 +109,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="authority" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.424_ISO19115-1.361">
+          <element minOccurs="0" name="authority" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.432_ISO19115-1.361">
             <annotation>
               <documentation>Citation for the code namespace and optionally the person or party
                 responsible for maintenance of that namespace</documentation>
@@ -174,14 +174,12 @@
             </annotation>
           </element>
           <element minOccurs="0" name="fileType" type="gco:CharacterString_PropertyType" id="ISO19115-1.440_ISO19103.CharacterString"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="imageConstraints"
-            type="mcc:Abstract_Constraints_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="imageConstraints" type="mcc:Abstract_Constraints_PropertyType" id="ISO19115-1.441_ISO19115-1.098">
             <annotation>
               <documentation>restriction on access and/or use of browse graphic</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="linkage"
-            type="mcc:Abstract_OnlineResource_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="linkage" type="mcc:Abstract_OnlineResource_PropertyType" id="ISO19115-1.442_ISO19115-1.405">
             <annotation>
               <documentation>link to browse graphic</documentation>
             </annotation>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1" 
-  xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.1" 
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+  xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2" 
   xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1.1" 
   xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3" 
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
@@ -14,8 +14,8 @@
     >
 <!--  <include schemaLocation="mri.xsd"/>-->
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.1" schemaLocation="../../../../19103/-/gcx/1.1.0/gcx.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
   <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/>
   <!--  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/> -->
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
@@ -321,7 +321,7 @@
               <documentation>brief description of the resource and/or resource series usage</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="usageDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.087_TimePrimative">
+          <element maxOccurs="unbounded" minOccurs="0" name="usageDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.087_TimePrimitive">
             <annotation>
               <documentation>date and time of the first use or range of uses of the resource and/or resource series</documentation>
             </annotation>
@@ -399,7 +399,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_KeywordTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_KeywordTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.20">
     <annotation>
       <documentation>methods used to group similar keywords</documentation>
     </annotation>
@@ -412,7 +412,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="DS_AssociationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="DS_AssociationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.8">
     <annotation>
       <documentation>justification for the correlation of two resources</documentation>
     </annotation>
@@ -425,7 +425,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="DS_InitiativeTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="DS_InitiativeTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.810">
     <annotation>
       <documentation>type of aggregation activity in which resources are related</documentation>
     </annotation>
@@ -438,7 +438,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
    <!-- =========================================================================== -->
-  <element name="MD_TopicCategoryCode" substitutionGroup="gco:CharacterString" type="mri:MD_TopicCategoryCode_Type">
+  <element name="MD_TopicCategoryCode" substitutionGroup="gco:CharacterString" type="mri:MD_TopicCategoryCode_Type" id="ISO19115-1.B.3.30">
     <annotation>
       <documentation>high-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive. NOTE: It is understood there are overlaps between general categories and the user is encouraged to select the one most appropriate.</documentation>
     </annotation>
@@ -451,7 +451,7 @@
     <restriction base="string">
       <enumeration value="farming">
         <annotation>
-          <documentation>rearing of animals and/or cultivation of plantsExamples: agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock</documentation>
+          <documentation>rearing of animals and/or cultivation of plants Examples: agriculture, irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and livestock</documentation>
         </annotation>
       </enumeration>
       <enumeration value="biota">
@@ -476,7 +476,7 @@
       </enumeration>
       <enumeration value="elevation">
         <annotation>
-          <documentation>height above or below a vertical datumExamples: altitude, bathymetry, digital elevation models, slope, derived products</documentation>
+          <documentation>height above or below a vertical datum Examples: altitude, bathymetry, digital elevation models, slope, derived products</documentation>
         </annotation>
       </enumeration>
       <enumeration value="environment">
@@ -541,7 +541,7 @@
       </enumeration>
       <enumeration value="utilitiesCommunication">
         <annotation>
-          <documentation>energy, water and waste systems and communications infrastructure and servicesExamples: hydroelectricity, geothermal, solar and nuclear sources of energy, water purification and distribution, sewage collection and disposal, electricity and gas distribution, data communication, telecommunication, radio, communication networks</documentation>
+          <documentation>energy, water and waste systems and communications infrastructure and services Examples: hydroelectricity, geothermal, solar and nuclear sources of energy, water purification and distribution, sewage collection and disposal, electricity and gas distribution, data communication, telecommunication, radio, communication networks</documentation>
         </annotation>
       </enumeration>
       <enumeration value="extraTerrestrial">

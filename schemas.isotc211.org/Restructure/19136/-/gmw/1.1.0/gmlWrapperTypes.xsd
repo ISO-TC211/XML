@@ -3,7 +3,7 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:gml="http://www.opengis.net/gml/3.2"
 	xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1.1"
-	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
 	targetNamespace="https://schemas.isotc211.org/19136/-/gmw/1.1" 
 	elementFormDefault="qualified"
 	version="2014-12-25">
@@ -14,19 +14,14 @@
 		<xs:documentation>Geographic COmmon (GCO) extensible markup language is a component of the
 			XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
 			19139:2007. GCO includes all the definitions of
-			https://schemas.isotc211.org/19103/-/gco/1.1" namespace. The root document of this
+			https://schemas.isotc211.org/19103/-/gco/1.2" namespace. The root document of this
 			namespace is the file gco.xsd. This basicTypes.xsd schema implements concepts from the
 			"basic types" package of ISO/TS 19103.</xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
-	<!-- <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/> -->
-	<xs:import namespace="http://www.opengis.net/gml/3.2"
-		schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-	<xs:import namespace="http://www.w3.org/1999/xlink"
-		schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-	<!--	<xs:include schemaLocation="gco.xsd"/>-->
-	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-		schemaLocation="../../../../19103/-/gco/1.1.0/baseTypes.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>
 
 
 	<!-- ============================= Units of Measure ============================ -->

@@ -61,7 +61,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_ReferenceSystemTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_ReferenceSystemTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.26">
     <annotation>
       <documentation>defines type of reference system used</documentation>
     </annotation>

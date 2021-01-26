@@ -276,7 +276,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_MediumFormatCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_MediumFormatCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.22">
     <annotation>
       <documentation>method used to write to the medium</documentation>
     </annotation>

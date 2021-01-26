@@ -7,7 +7,7 @@
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
-  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.1"
   xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.0"
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.1"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
@@ -21,7 +21,7 @@
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="../../../../19115/-2/mac/2.2.0/mac.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1" schemaLocation="../../../../19115/-2/mac/2.1.0/mac.xsd"/>
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.1" schemaLocation="../../../../19157/-/mdq/1.1.0/mdq.xsd"/> 
     
     <include schemaLocation="../../../../19130/-1/smi/1.0.0/codeList.xsd"/> 
@@ -87,7 +87,7 @@
                     </element>
                     <element name="settlement" type="gco:Angle_PropertyType" minOccurs="0">
                         <annotation>
-                            <documentation/>
+                            <documentation>general lowering in level of a moving vessel, relative to what its level would be were it motionless, due to the regional depression of the surface water in which the ship moves</documentation>
                         </annotation>
                     </element>
                     <element name="squat" type="gco:Length_PropertyType" minOccurs="0">
@@ -866,7 +866,7 @@
     
     <complexType name="SE_ATExteriorOrientation_PropertyType">
         <sequence minOccurs="0">
-            <element ref="smi:SE_ATCheckPoint"/>
+            <element ref="smi:SE_ATExteriorOrientation"/>
         </sequence>
         <attributeGroup ref="gco:ObjectReference"/>
         <attribute ref="gco:nilReason"/>

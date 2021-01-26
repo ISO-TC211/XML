@@ -75,7 +75,7 @@
           </element>
           <element minOccurs="0" name="ISBN" type="gco:CharacterString_PropertyType" id="ISO19115-1.372_ISO19103.CharacterString">
             <annotation>
-              <documentation>international Standard Book Number</documentation>
+              <documentation>International Standard Book Number</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="ISSN" type="gco:CharacterString_PropertyType" id="ISO19115-1.373_ISO19103.CharacterString">
@@ -409,7 +409,7 @@
               <documentation>detailed text description of what the online resource is/does</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="function" type="cit:CI_OnLineFunctionCode_PropertyType" id="ISO19115-1.411_ISO19115-1.CI_nLineFunctionCode">
+          <element minOccurs="0" name="function" type="cit:CI_OnLineFunctionCode_PropertyType" id="ISO19115-1.411_ISO19115-1.CI_OnLineFunctionCode">
             <annotation>
               <documentation>code for function performed by the online resource</documentation>
             </annotation>
@@ -447,7 +447,7 @@
               <documentation>name of the series, or aggregate resource, of which the resource is a part</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="issueIdentification" type="gco:CharacterString_PropertyType" id="ISO19115-1.4151_ISO19103.CharacterString">
+          <element minOccurs="0" name="issueIdentification" type="gco:CharacterString_PropertyType" id="ISO19115-1.415_ISO19103.CharacterString">
             <annotation>
               <documentation>information identifying the issue of the series</documentation>
             </annotation>

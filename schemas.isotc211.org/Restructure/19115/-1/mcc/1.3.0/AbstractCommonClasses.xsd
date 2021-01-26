@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
   targetNamespace="https://schemas.isotc211.org/19115/-1/mcc/1.3"
   elementFormDefault="qualified"
    version="1.3.0"
   >
   <include schemaLocation="mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_AcquisitionInformation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_AcquisitionInformation_Type"/>
   <complexType abstract="true" name="Abstract_AcquisitionInformation_Type">
