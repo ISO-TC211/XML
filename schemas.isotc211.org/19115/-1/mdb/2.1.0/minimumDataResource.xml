@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata 
+    xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/2.1"
+    xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/2.1"
+    xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/2.1"
+    xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/2.1"
+    xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/2.1"
+    xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/2.1" 
+    xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/2.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+    xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.1"
+    xsi:schemaLocation="
+    https://schemas.isotc211.org/19115/-1/mdb/2.1 ../../../../19115/-1/mdb/2.1.0/mdb.xsd
+    https://schemas.isotc211.org/19115/-1/mrd/2.1 ../../../../19115/-1/mrd/2.1.0/mrd.xsd
+    https://schemas.isotc211.org/19115/-1/mri/2.1 ../../../../19115/-1/mri/2.1.0/mri.xsd
+    https://schemas.isotc211.org/19115/-1/gex/2.1 ../../../../19115/-1/gex/2.1.0/gex.xsd
+    https://schemas.isotc211.org/19115/-1/srv/2.1 ../../../../19115/-1/srv/2.1.0/srv.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.1 ../../../../19103/-/gco/1.1.0/gco.xsd
+    https://schemas.isotc211.org/19103/-/gcx/1.1 ../../../../19103/-/gcx/1.1.0/gcx.xsd"
+    > 
+    <mdb:contact><cit:CI_Responsibility>
+        <cit:role><cit:CI_RoleCode codeList="CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>
+        <cit:party><cit:CI_Individual>
+            <cit:positionName><gco:CharacterString>Resources Manager</gco:CharacterString></cit:positionName>
+        </cit:CI_Individual></cit:party>
+    </cit:CI_Responsibility>
+    </mdb:contact>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date><gco:Date>2020</gco:Date></cit:date>
+            <cit:dateType><cit:CI_DateTypeCode codeList="CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>
+        <mri:citation><cit:CI_Citation>
+            <cit:title><gco:CharacterString>Name of the resource</gco:CharacterString></cit:title>
+        </cit:CI_Citation></mri:citation>
+        <mri:abstract><gco:CharacterString>Description of the resource</gco:CharacterString></mri:abstract>
+            <mri:extent>
+                <gex:EX_Extent>
+                <gex:geographicElement><gex:EX_GeographicDescription>
+                    <gex:geographicIdentifier><mcc:MD_Identifier>
+                        <mcc:code><gco:CharacterString>Earth</gco:CharacterString></mcc:code>
+                    </mcc:MD_Identifier></gex:geographicIdentifier>
+                </gex:EX_GeographicDescription></gex:geographicElement>
+            </gex:EX_Extent>
+            </mri:extent>
+            <mri:descriptiveKeywords><mri:MD_Keywords>
+                <mri:keyword></mri:keyword>
+                <mri:keywordClass><mri:MD_KeywordClass>
+                    <mri:className></mri:className>
+                    <mri:conceptIdentifier><gcx:URI></gcx:URI></mri:conceptIdentifier>
+                    <mri:ontology></mri:ontology>
+                    
+                </mri:MD_KeywordClass></mri:keywordClass>
+            </mri:MD_Keywords></mri:descriptiveKeywords>
+            
+    </mri:MD_DataIdentification></mdb:identificationInfo>
+    <mdb:distributionInfo><mrd:MD_Distribution><mrd:transferOptions><mrd:MD_DigitalTransferOptions><mrd:onLine><cit:CI_OnlineResource>
+        <cit:linkage><gco:CharacterString>URL</gco:CharacterString></cit:linkage>
+        <cit:protocol><gco:CharacterString></gco:CharacterString></cit:protocol>
+    </cit:CI_OnlineResource></mrd:onLine></mrd:MD_DigitalTransferOptions></mrd:transferOptions></mrd:MD_Distribution></mdb:distributionInfo>
+</mdb:MD_Metadata>
