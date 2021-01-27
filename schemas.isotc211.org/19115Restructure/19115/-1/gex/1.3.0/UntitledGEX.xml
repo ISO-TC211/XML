@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gex:EX_BoundingPolygon xmlns:gex="http://www.isotc211.org/2005/gmd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.isotc211.org/2005/gmd extent.xsd">
-    <gex:polygon xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple"></gex:polygon>
-</gex:EX_BoundingPolygon>

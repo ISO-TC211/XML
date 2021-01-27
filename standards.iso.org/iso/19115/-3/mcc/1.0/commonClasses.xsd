@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  elementFormDefault="qualified"
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" version="1.0">
   <include schemaLocation="mcc.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element name="MD_BrowseGraphic" substitutionGroup="gco:AbstractObject" type="mcc:MD_BrowseGraphic_Type">
+  <element name="MD_BrowseGraphic" substitutionGroup="gco:AbstractObject"
+    type="mcc:MD_BrowseGraphic_Type">
     <annotation>
-      <documentation>graphic that provides an illustration of the dataset (should include a legend for the graphic, if applicable)</documentation>
+      <documentation>graphic that provides an illustration of the dataset (should include a legend
+        for the graphic, if applicable)</documentation>
     </annotation>
   </element>
   <complexType name="MD_BrowseGraphic_Type">
@@ -13,7 +21,8 @@
         <sequence>
           <element name="fileName" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>name of the file that contains a graphic that provides an illustration of the dataset</documentation>
+              <documentation>name of the file that contains a graphic that provides an illustration
+                of the dataset</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="fileDescription" type="gco:CharacterString_PropertyType">
@@ -22,12 +31,14 @@
             </annotation>
           </element>
           <element minOccurs="0" name="fileType" type="gco:CharacterString_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="imageConstraints" type="mcc:Abstract_Constraints_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="imageConstraints"
+            type="mcc:Abstract_Constraints_PropertyType">
             <annotation>
               <documentation>restriction on access and/or use of browse graphic</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="linkage" type="mcc:Abstract_OnlineResource_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="linkage"
+            type="mcc:Abstract_OnlineResource_PropertyType">
             <annotation>
               <documentation>link to browse graphic</documentation>
             </annotation>
@@ -54,12 +65,14 @@
         <sequence>
           <element minOccurs="0" name="authority" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
-              <documentation>Citation for the code namespace and optionally the person or party responsible for maintenance of that namespace</documentation>
+              <documentation>Citation for the code namespace and optionally the person or party
+                responsible for maintenance of that namespace</documentation>
             </annotation>
           </element>
           <element name="code" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>alphanumeric value identifying an instance in the namespace e.g. EPSG::4326</documentation>
+              <documentation>alphanumeric value identifying an instance in the namespace e.g.
+                EPSG::4326</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="codeSpace" type="gco:CharacterString_PropertyType">
@@ -74,7 +87,9 @@
           </element>
           <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>natural language description of the meaning of the code value E.G for codeSpace = EPSG, code = 4326: description = WGS-84" to "for codeSpace = EPSG, code = EPSG::4326: description = WGS-84</documentation>
+              <documentation>natural language description of the meaning of the code value E.G for
+                codeSpace = EPSG, code = 4326: description = WGS-84" to "for codeSpace = EPSG, code
+                = EPSG::4326: description = WGS-84</documentation>
             </annotation>
           </element>
         </sequence>
@@ -88,7 +103,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_ProgressCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_ProgressCode" substitutionGroup="gco:CharacterString"
+    type="gco:CodeListValue_Type">
     <annotation>
       <documentation>status of the resource</documentation>
     </annotation>
@@ -113,8 +129,10 @@
               <documentation>description of the scope</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="extent" type="mcc:Abstract_Extent_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="levelDescription" type="mcc:MD_ScopeDescription_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="extent"
+            type="mcc:Abstract_Extent_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="levelDescription"
+            type="mcc:MD_ScopeDescription_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -137,9 +155,11 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_ScopeDescription" substitutionGroup="gco:AbstractObject" type="mcc:MD_ScopeDescription_Type">
+  <element name="MD_ScopeDescription" substitutionGroup="gco:AbstractObject"
+    type="mcc:MD_ScopeDescription_Type">
     <annotation>
-      <documentation>description of the class of information covered by the information</documentation>
+      <documentation>description of the class of information covered by the
+        information</documentation>
     </annotation>
   </element>
   <complexType name="MD_ScopeDescription_Type">
@@ -148,12 +168,14 @@
         <choice>
           <element name="attributes" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>instances of attribute types to which the information applies</documentation>
+              <documentation>instances of attribute types to which the information
+                applies</documentation>
             </annotation>
           </element>
           <element name="features" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>instances of feature types to which the information applies</documentation>
+              <documentation>instances of feature types to which the information
+                applies</documentation>
             </annotation>
           </element>
           <element name="featureInstances" type="gco:CharacterString_PropertyType">
@@ -173,7 +195,8 @@
           </element>
           <element name="other" type="gco:CharacterString_PropertyType">
             <annotation>
-              <documentation>class of information that does not fall into the other categories to which the information applies</documentation>
+              <documentation>class of information that does not fall into the other categories to
+                which the information applies</documentation>
             </annotation>
           </element>
         </choice>
@@ -187,7 +210,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="MD_SpatialRepresentationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_SpatialRepresentationTypeCode" substitutionGroup="gco:CharacterString"
+    type="gco:CodeListValue_Type">
     <annotation>
       <documentation>method used to represent geographic information in the resource</documentation>
     </annotation>
@@ -200,7 +224,8 @@
   </complexType>
   <element name="URI" substitutionGroup="gco:AbstractObject" type="mcc:URI_Type">
     <annotation>
-      <documentation>Uniform Resource Identifier (URI), is a compact string of characters used to identify or name a resource</documentation>
+      <documentation>Uniform Resource Identifier (URI), is a compact string of characters used to
+        identify or name a resource</documentation>
     </annotation>
   </element>
   <complexType name="URI_Type">
