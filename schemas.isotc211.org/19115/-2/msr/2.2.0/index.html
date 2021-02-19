@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Metadata for Spatial Representation (MSR) [Imagery] Version: 2.2</title>
+      <style>
+						h1 { font-family: Arial; color: DarkBlue; font-size: 14pt; font-weight:bold; }
+						body { font-family: Arial; color: black; font-size: 10pt;}
+						td { font-family: Arial; color: black; font-size: 10pt;}
+						table, th, td {border: 1px solid black; padding: 2px; border-spacing: 1px;}
+						.paraSmall {font-size: 0.7em; font-style: italic;}
+						.metagroup { font-family: Arial; color: #0099FF; font-size: 10pt; font-weight:bold; }
+					</style>
+   </head>
+   <body>
+      <h1>Metadata for Spatial Representation (MSR) [ISO 19115-2] Version: 2.2</h1>
+      <img title="Classes in the msr namespace" alt="UML diagram of Metadata for Resource Spatial Representation classes in the mrc namespace focusing on ISO 19115-2" width="750" src="./19115-2.msr.SpatialRepresentationImageryClassesWeb.png"/>
+      <h2>Description</h2>
+      <p>
+         MSR 2.2 is an XML Schema implementation derived from ISO ISO 19115-2:2019 (Ed2), Geographic Information - Metadata - Part 2: Extensions for acquisition and processing, Clause 6.3.4.
+         The MRL 2.2 schema is an extension of MRL 1.3 as defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundametals.
+         It includes additional elements for describing lineage, processes and sources. 
+         The XML schema was encoded using the rules described in ISO/TS 19139:2007.
+      </p>
+      <h2>XML Namespace for Metadata for Spatial Representation (MSR) [ISO 19115-2]</h2>
+      <p>The namespace URI for Metadata for Spatial Representation (MSR) [ISO 19115-2] is derived from ISO 19115-1 <b>https://schemas.isotc211.org/19115/-1/mrl/1.3</b>.
+      </p>
+      <h2>XML Schema for mrl 1.3</h2>
+      <p>
+         <b><a href="../../../../19115/-1/msr/1.3.0/msr.xsd">https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the mrl 1.3 namespace or by XML Schema documents importing the msr 1.3 namespace. 
+         The schema <a href="../../../../19115/-1/msr/1.3.0/msr.xsd">https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd</a> forms the basis for ISO 19115 Metadata for Spatial Representation definitions from both ISO 19115-1 and ISO 19115-2.
+         This XML schema includes (indirectly) all the implemented concepts of the mrc namespace, but it does not contain the declaration of any types.
+      </p>
+      <h2>Related XML Schema for mrl 1.3</h2>
+      <p>
+         <b><a href="../../../../19115/-1/msr/1.3.0/spatialRepresentation.xsd">https://schemas.isotc211.org/19115/-1/msr/1.3.0/spatialRepresentation.xsd</a></b> implements the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals AMENDMENT 1, Clause 6.5.7.
+         Details about <a href="../../../../19115/-1/msr/1.3.0/spatialRepresentation.xsd">https://schemas.isotc211.org/19115/-1/msr/1.3.0/spatialRepresentation.xsd</a> can be accessed from <a href="../../../../19115/-1/msr/1.3.0">https://schemas.isotc211.org/19115/-1/msr/1.3.0</a>.
+      </p>
+      <p>
+         <b><a href="../../../../19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd">spatialRepresentationImagery.xsd"</a></b> implements the UML conceptual schema defined in ISO 19115-2, Geographic Information - - Metadata - Part 2: Extensions for acquisition and processing, Clause 6.3.4. 
+         <a href="../../../../19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd">spatialRepresentationImagery.xsd"</a> 
+         MI_Georectified inherits attribues from ISO 19115-1:Spatial Representation:MD_Georectified, 
+         and MI_Georeferenceable inherits from tribues ISO 19115-1:Spatial Representation:MD_Georeferenceable.
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd">https://schemas.isotc211.org/19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd</a> contains the folowing classes:
+      <ul>
+         <li>MI_Georectified</li>
+         <li>MI_Georeferenceable</li>
+         <li>AbstractMI_GeolocationInformation</li>
+         <li>MI_GCPCollection</li>
+         <li>MI_GCP</li>
+      </ul>
+      <h2>Related XML Namespaces for msr 2.2</h2> The msr 2.2 namespace imports these other namespaces: 
+      cit
+      mrs
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Data Quality Common Classes<br/>in its own right and also by inheritance</td>
+            <td>dqc</td>
+            <td><a href="https://schemas.isotc211.org/19157/-/dqc/1.2">https://schemas.isotc211.org/19157/-/dqc/1.2</a></td>
+            <td>../../../../19157/-/dqc/1.2.0/dqc.xsd</td>
+         </tr>
+         <tr>
+            <td>Geographic Common Objects<br/>in its own right and also by inheritance</td>
+            <td>gco</td>
+            <td><a href="https://schemas.isotc211.org/19103/-/gco/1.2.0">https://schemas.isotc211.org/19103/-/gco/1.2</a></td>
+            <td>../../../../19103/-/gco/1.2.0/gco.xsd</td>
+         </tr>
+         <tr>
+            <td>Geographic Markup Wrappers<br/>by inheritance</td>
+            <td>gmw</td>
+            <td><a href="https://schemas.isotc211.org/19103/-/gmw/1.2.0">https://schemas.isotc211.org/19136/-/gmw/1.2</a></td>
+            <td>../../../../19136/-/gmw/1.2.0/gmw.xsd</td>
+         </tr>
+         <tr>
+            <td>Geospatial MetaLanguage<br/>by inheritance</td>
+            <td>gml</td>
+            <td><a href="http://schemas.opengis.net/gml/3.2.1/gml.xsd">http://schemas.opengis.net/gml/3.2</a></td>
+            <td>http://schemas.opengis.net/gml/3.2.1/gml.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Common Classes<br/>by inheritance</td>
+            <td>mcc</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mcc/1.3.0">https://schemas.isotc211.org/19115/-1/mcc/1.3</a></td>
+            <td>../../../../19115/-1/mcc/1.3.0/mcc.xsd</td>
+         </tr>
+         <tr>
+            <td>metadata for CITation and responsibility<br/>by inheritance</td>
+            <td>cit</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/cit/1.3.0">https://schemas.isotc211.org/19115/-1/cit/1.3</a></td>
+            <td>../../../../19115/-1/cit/1.3.0/cit.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Reference Systems<br/>in its own right</td>
+            <td>mrs</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mrs/1.3.0">https://schemas.isotc211.org/19115/-1/mrs/1.3</a></td>
+            <td>../../../../19115/-1/mrs/1.3.0/mrs.xsd</td>
+         </tr>
+      </table>
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p class="paraSmall">Written by hand. Version: 2021-02-17</p>
+   </body>
+</html>

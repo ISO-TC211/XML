@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+AUTHOR : IGN (France) contact: nicolas.lesage@ign.fr
+DATE: 2007-07-07
+PURPOSE : Creation
+DESCRIPTION : Sample ISO 19115-2 Codelist Catalogue
+
+AUTHOR : IGN (France) contact: nicolas.lesage@ign.fr
+DATE: 2011-12-08
+PURPOSE : Correction of errors identified by ISO/TC 211 XML Maintenance group
+DESCRIPTION : Sample ISO 19115-2 Codelist Catalogue
+	1)	Description of leftCircular value of MI_PolarizationOrientationCode was truncated.
+		Changed to "polarisation of the sensor oriented in the left circular plane in relation to swath direction"
+	2)	Descriptions of theta and phi values of MI_PolarizationOrientationCode included question mark in brackets
+		=> Removal of question mark in brackets
+	3) Lack of an xlink namespace declaration
+-->
+<CT_CodelistCatalogue xmlns="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xlink http://schemas.opengis.net/xlink/1.0.0/xlinks.xsd http://www.isotc211.org/2005/gco http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gco/gco.xsd http://www.isotc211.org/2005/gmx http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmx/gmx.xsd http://www.opengis.net/gml/3.2 http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd">
+	<!--=====Catalogue description=====-->
+	<name>
+		<gco:CharacterString>gmiCodelists</gco:CharacterString>
+	</name>
+	<scope>
+		<gco:CharacterString>Codelists for description of metadata datasets compliant with ISO/TC 211 19115-2:2007, ISO/TS 19139:2007 and ISO 19139-2</gco:CharacterString>
+	</scope>
+	<fieldOfApplication>
+		<gco:CharacterString>GMI (and imported) namespace</gco:CharacterString>
+	</fieldOfApplication>
+	<versionNumber>
+		<gco:CharacterString>0.0</gco:CharacterString>
+	</versionNumber>
+	<versionDate>
+		<gco:Date>2011-07-07</gco:Date>
+	</versionDate>
+	<!--============================================================================-->
+	<!--============================================================================-->
+	<!--============================= Codelists =======================================-->
+	<!--=== MI_BandDefinition ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_BandDefinition">
+			<gml:description>designation of criterion for defining maximum and minimum wavelengths for a spectral band</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_BandDefinition</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_BandDefinition_3dB">
+					<gml:description>width of a distribution equal to the distance between the outer two points on the distribution having power level half of that at the peak</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">3dB</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_BandDefinition_halfMaximum">
+					<gml:description>width of a distribution equal to the distance between the outer two points on the distribution having power level half of that at the peak</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">halfMaximum</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_BandDefinition_fiftyPercent">
+					<gml:description>full spectral width of a spectral power density measured at 50% of its peak height</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">fiftyPercent</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_BandDefinition_oneOverE">
+					<gml:description>width of a distribution equal to the distance between the outer two points on the distribution having power level 1/e that of the peak</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">oneOverE</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_BandDefinition_equivalentWidth">
+					<gml:description>width of a band with full sensitivity or absorption at every wavelength that detects or absorbs the same amount of energy as the band described</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">equivalentWidth</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_ContextCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_ContextCode">
+			<gml:description>designation of criterion for defining the context of the scanning process event</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_ContextCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_ContextCode_acquisition">
+					<gml:description>event related to a specific collection</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">acquisition</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_ContextCode_pass">
+					<gml:description>event related to a sequence of collections</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">pass</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_ContextCode_wayPoint">
+					<gml:description>event related to a navigational manoeuvre</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">wayPoint</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_GeometryTypeCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_GeometryTypeCode">
+			<gml:description>geometric description of the collection</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_GeometryTypeCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_GeometryTypeCode_point">
+					<gml:description>single geographic point of interest</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">point</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_GeometryTypeCode_linear">
+					<gml:description>extended collection in a single vector</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">linear</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_GeometryTypeCode_areal">
+					<gml:description>collection of a geographic area defined by a polygon (coverage)</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">areal</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_GeometryTypeCode_strip">
+					<gml:description>series of linear collections grouped by way points</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">strip</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_ObjectiveTypeCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_ObjectiveTypeCode">
+			<gml:description>temporal persistence of collection objective</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_ObjectiveTypeCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_ObjectiveTypeCode_instantaneousCollection">
+					<gml:description>single instance of collection</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">instantaneousCollection</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_ObjectiveTypeCode_persistentView">
+					<gml:description>multiple instances of collection</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">persistentView</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_ObjectiveTypeCode_survey">
+					<gml:description>collection over specified domain</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">survey</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_OperationTypeCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_OperationTypeCode">
+			<gml:description>code indicating whether the data contained in this packet is real (originates from live-fly or other non-simulated operational sources), simulated (originates from target simulator sources), or synthesized (a mix of real and simulated data).</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_OperationTypeCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_OperationTypeCode_real">
+					<gml:description>originates from live-fly or other non-simulated operational source</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">real</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_OperationTypeCode_simulated">
+					<gml:description>originates from target simulator sources</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">simulated</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_OperationTypeCode_synthesized">
+					<gml:description>mix of real and simulated data</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">synthesized</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_PolarizationOrientationCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_PolarizationOrientationCode">
+			<gml:description>polarisation of the antenna relative to the waveform</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_PolarizationOrientationCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PolarizationOrientationCode_horizontal">
+					<gml:description>polarisation of the sensor oriented in the horizontal plane in relation to swath direction</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">horizontal</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PolarizationOrientationCode_vertical">
+					<gml:description>polarisation of the sensor oriented in the vertical plane in relation to swath direction</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">vertical</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PolarizationOrientationCode_leftCircular">
+					<gml:description>polarisation of the sensor oriented in the left circular plane in relation to swath direction</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">leftCircular</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PolarizationOrientationCode_rightCircular">
+					<gml:description>polarisation of the sensor oriented in the right circular plane in relation to swath direction</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">rightCircular</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PolarizationOrientationCode_theta">
+					<gml:description>polarisation of the sensor oriented in the angle between +90 ° and 0 ° parallel to swath direction</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">theta</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PolarizationOrientationCode_phi">
+					<gml:description>polarisation of the sensor oriented in the +90 ° and 0 ° perpendicular to swath direction</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">phi</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_PriorityCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_PriorityCode">
+			<gml:description>ordered list of priorities</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_PriorityCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PriorityCode_critical">
+					<gml:description>decisive importance</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">critical</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PriorityCode_highImportance">
+					<gml:description>requires resources to be made available</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">highImportance</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PriorityCode_mediumImportance">
+					<gml:description>normal operation priority</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">mediumImportance</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_PriorityCode_lowImportance">
+					<gml:description>to be completed when resources are available</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">lowImportance</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_SequenceCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_SequenceCode">
+			<gml:description>temporal relation of activation</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_SequenceCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_SequenceCode_start">
+					<gml:description>beginning of a collection</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">start</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_SequenceCode_end">
+					<gml:description>end of a collection</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">end</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_SequenceCode_instantaneous">
+					<gml:description>collection without a significant duration</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">instantaneous</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== TYPE ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_TransferFunctionTypeCode">
+			<gml:description>transform function to be used when scaling a physical value for a given element</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_TransferFunctionTypeCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_TransferFunctionTypeCode_linear">
+					<gml:description>function used for transformation is first order polynomial</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">linear</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_TransferFunctionTypeCode_logarithmic">
+					<gml:description>function used for transformation is logarithmic</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">logarithmic</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_TransferFunctionTypeCode_exponential">
+					<gml:description>function used for transformation is exponential</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">exponential</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== MI_TriggerCode ===-->
+	<codelistItem>
+		<CodeListDictionary gml:id="MI_TriggerCode">
+			<gml:description>mechanism of activation</gml:description>
+			<gml:identifier codeSpace="ISOTC211/19115-2">MI_TriggerCode</gml:identifier>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_TriggerCode_automatic">
+					<gml:description>event due to external stimuli</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">automatic</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_TriggerCode_manual">
+					<gml:description>event manually instigated</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">manual</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+			<codeEntry>
+				<CodeDefinition gml:id="MI_TriggerCode_preProgrammed">
+					<gml:description>event instigated by planned internal stimuli</gml:description>
+					<gml:identifier codeSpace="ISOTC211/19115-2">preProgrammed</gml:identifier>
+				</CodeDefinition>
+			</codeEntry>
+		</CodeListDictionary>
+	</codelistItem>
+	<!--=== EOF ===-->
+</CT_CodelistCatalogue>

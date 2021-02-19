@@ -136,8 +136,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_DatatypeCode" substitutionGroup="gco:CharacterString"
-    type="gco:CodeListValue_Type">
+  <element name="MD_DatatypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
       <documentation>datatype of element or entity</documentation>
     </annotation>
@@ -150,8 +149,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_ObligationCode" substitutionGroup="gco:CharacterString"
-    type="mex:MD_ObligationCode_Type">
+  <element name="MD_ObligationCode" substitutionGroup="gco:CharacterString" type="mex:MD_ObligationCode_Type">
     <annotation>
       <documentation>obligation of the element or entity</documentation>
     </annotation>

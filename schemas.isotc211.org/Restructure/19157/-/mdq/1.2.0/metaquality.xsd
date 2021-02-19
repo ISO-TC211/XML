@@ -8,7 +8,7 @@
     version="1.2.0"
   >
   <include schemaLocation="mdq.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DQ_Confidence" substitutionGroup="mdq:AbstractDQ_Metaquality"
     type="mdq:DQ_Confidence_Type">

@@ -9,8 +9,8 @@
   version="2.0">
   <include schemaLocation="serviceInformation.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mri/2.1"
-    schemaLocation="../../../../19115/-1/mri/2.1.0/mri.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mri/2.1.0/mri.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

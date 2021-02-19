@@ -14,10 +14,10 @@
   </annotation>
   <!--  <include schemaLocation="mmi.xsd"/>-->
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <!-- <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/>-->
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
+  <!-- <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd"/>-->
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MD_MaintenanceInformation" substitutionGroup="mcc:Abstract_MaintenanceInformation" type="mmi:MD_MaintenanceInformation_Type" id="ISO19115-1.140">

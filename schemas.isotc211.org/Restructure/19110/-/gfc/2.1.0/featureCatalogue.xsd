@@ -13,13 +13,13 @@
   >
   <include schemaLocation="gfc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1"
-    schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19110/-/fcc/2.1.0/fcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1"
-    schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- SMR 2015-02-07 change gml:CodeType to gco:CodeType for 2014-12-25 build; UnitOfMeasure is in gmw, not gco so change that too -->

@@ -10,7 +10,7 @@
   >
   <include schemaLocation="mcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MD_Scope" substitutionGroup="gco:AbstractObject" type="mcc:MD_Scope_Type" id="ISO19115-2.420">

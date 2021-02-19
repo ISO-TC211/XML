@@ -19,31 +19,31 @@
     elementFormDefault="qualified"
 	version="2.1.0">
 	<import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-		schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1"
-		schemaLocation="../../../../19115/-1/cit/2.1.0/citation.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/cit/2.1.0/citation.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mrl/2.1"
-		schemaLocation="../../../../19115/-1/mrl/2.1.0/lineage.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mrl/2.1.0/lineage.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mco/2.1"
-		schemaLocation="../../../../19115/-1/mco/2.1.0/constraints.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mco/2.1.0/constraints.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19157/-/mdq/1.1"
-		schemaLocation="../../../../19157/-/mdq/1.1.0/dataQualityElement.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.1.0/dataQualityElement.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mas/2.1"
-		schemaLocation="../../../../19115/-1/mas/2.1.0/applicationSchema.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mas/2.1.0/applicationSchema.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mrc/2.1"
-		schemaLocation="../../../../19115/-1/mrc/2.1.0/content.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/2.1.0/content.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mri/2.1"
-		schemaLocation="../../../../19115/-1/mri/2.1.0/identification.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mri/2.1.0/identification.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-		schemaLocation="../../../../19115/-1/mcc/2.1.0/commonClasses.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/commonClasses.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/gex/2.1"
-		schemaLocation="../../../../19115/-1/gex/2.1.0/extent.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/gex/2.1.0/extent.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1"
-		schemaLocation="../../../../19115/-1/lan/2.1.0/language.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/language.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mmi/2.1"
-		schemaLocation="../../../../19115/-1/mmi/2.1.0/maintenance.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mmi/2.1.0/maintenance.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mrs/2.1"
-		schemaLocation="../../../../19115/-1/mrs/2.1.0/referenceSystem.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mrs/2.1.0/referenceSystem.xsd"/>
 	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 	<!--manual changes have been applied to the automatically generated xsd file from ShapeChange-->
 	<element name="AbbreviationEntry" type="dps:AbbreviationEntry_Type"

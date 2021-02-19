@@ -12,13 +12,13 @@
    >
   <include schemaLocation="reg.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1"
-    schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19135/-2/pre/1.1"
-    schemaLocation="../../../../19135/-2/pre/1.1.0/pre.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19135/-2/pre/1.1.0/pre.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="RE_AdditionInformation"
     substitutionGroup="reg:AbstractRE_ProposalManagementInformation"

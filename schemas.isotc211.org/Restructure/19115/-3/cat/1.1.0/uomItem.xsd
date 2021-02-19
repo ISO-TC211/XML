@@ -4,9 +4,9 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1" elementFormDefault="qualified"
   targetNamespace="https://schemas.isotc211.org/19115/-3/cat/1.1" 
   version="1.1.0">
-  <include schemaLocation="../../../../19115/-3/cat/1.1.0/cat.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19115/-3/cat/1.1.0/cat.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="CT_UnitOfMeasure" substitutionGroup="cat:AbstractCT_Item"
     type="cat:CT_UnitOfMeasure_Type"/>

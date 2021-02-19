@@ -10,11 +10,11 @@
   version="2.0">
   <include schemaLocation="srv.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mri/2.1"
-    schemaLocation="../../../../19115/-1/mri/2.1.0/mri.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mri/2.1.0/mri.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="SV_ServiceIdentification" substitutionGroup="mri:AbstractMD_Identification" type="srv:SV_ServiceIdentification_Type" id="ISO19115-1.300">

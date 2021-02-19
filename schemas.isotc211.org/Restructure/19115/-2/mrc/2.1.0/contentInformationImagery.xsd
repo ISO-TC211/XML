@@ -8,10 +8,10 @@
   targetNamespace="https://schemas.isotc211.org/19115/-1/mrc/2.1" 
   version="2.1.0"
     >
-  <include schemaLocation="../../../../19115/-1/mrc/2.1.0/content.xsd"/>
-  <include schemaLocation="../../../../19115/-1/mrc/2.1.0/mrc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1" schemaLocation="../../../../19115/-2/mac/2.1.0/mac.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/2.1.0/content.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/2.1.0/mrc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1" schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.1.0/mac.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MI_Band" substitutionGroup="mrc:MD_Band" type="mrc:MI_Band_Type" id="ISO19115-2.158">

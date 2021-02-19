@@ -9,9 +9,9 @@
     xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
     xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/2.1"
     xsi:schemaLocation="
-    https://schemas.isotc211.org/19115/-1/mdb/2.1 ../../../../19115/-1/mdb/2.1.0/mdb.xsd
-    https://schemas.isotc211.org/19115/-1/srv/2.1 ../../../../19115/-1/srv/2.1.0/srv.xsd
-    https://schemas.isotc211.org/19103/-/gco/1.1 ../../../../19103/-/gco/1.1.0/gco.xsd"
+    https://schemas.isotc211.org/19115/-1/mdb/2.1 https://schemas.isotc211.org/19115/-1/mdb/2.1.0/mdb.xsd
+    https://schemas.isotc211.org/19115/-1/srv/2.1 https://schemas.isotc211.org/19115/-1/srv/2.1.0/srv.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.1 https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"
     >
     <mdb:contact><cit:CI_Responsibility>
         <cit:role><cit:CI_RoleCode codeList="CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>

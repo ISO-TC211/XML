@@ -29,7 +29,7 @@
  xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/2.1"
  xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.1"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="https://schemas.isotc211.org/19130/-3/smi/1.0 ../../../../19130/-3/smi/1.0.0/smi.xsd">
+ xsi:schemaLocation="https://schemas.isotc211.org/19130/-3/smi/1.0 https://schemas.isotc211.org/19130/-3/smi/1.0.0/smi.xsd">
     <smi:forImageID>
         <sml:identifier>
             <sml:Term>

@@ -13,15 +13,15 @@
     >
   <include schemaLocation="mdb.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.1"
-    schemaLocation="../../../../19103/-/gcx/1.1.0/gcx.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gcx/1.1.0/gcx.xsd"/>
   <import namespace="https://schemas.isotc211.org/19157/-/dqc/1.1"
-    schemaLocation="../../../../19157/-/dqc/1.1.0/dqc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19157/-/dqc/1.1.0/dqc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1"
-    schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MD_Metadata" substitutionGroup="mcc:Abstract_Metadata" type="mdb:MD_Metadata_Type" id="ISO19115-1.015">

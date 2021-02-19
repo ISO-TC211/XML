@@ -203,7 +203,7 @@
   </complexType>
   <!-- =========================================================================== -->
   <!-- =========================================================================== -->
-  <element name="MD_ClassificationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_ClassificationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.13">
     <annotation>
       <documentation>name of the handling restrictions on the resource</documentation>
     </annotation>
@@ -216,7 +216,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="MD_RestrictionCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="MD_RestrictionCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19115-1.B.3.27">
     <annotation>
       <documentation>limitation(s) placed upon the access or use of the data</documentation>
     </annotation>

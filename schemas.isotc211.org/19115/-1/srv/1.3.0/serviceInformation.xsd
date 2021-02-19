@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema
-  xmlns="http://www.w3.org/2001/XMLSchema"
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
   xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
-  xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/1.3"
-  elementFormDefault="qualified"
-  targetNamespace="https://schemas.isotc211.org/19115/-1/srv/1.3"
-  version="2.0">
+  xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/1.3" elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19115/-1/srv/1.3" version="2.0">
   <include schemaLocation="srv.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3" schemaLocation="../../../../19115/-1/mri/1.3.0/mri.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2"
+    schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+    schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3"
+    schemaLocation="../../../../19115/-1/mri/1.3.0/mri.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
-  <element name="SV_ServiceIdentification" substitutionGroup="mri:AbstractMD_Identification" type="srv:SV_ServiceIdentification_Type" id="ISO19115-1.300">
+  <element name="SV_ServiceIdentification" substitutionGroup="mri:AbstractMD_Identification" type="srv:SV_ServiceIdentification_Type" id="ISO19115-1.300">
     <annotation>
       <documentation>identification of capabilities which a service provider makes available to a
         service user through a set of interfaces that define a behaviour - See ISO 19119 for further
@@ -26,12 +26,13 @@
     <complexContent>
       <extension base="mri:AbstractMD_Identification_Type">
         <sequence>
-          <element name="serviceType" type="gco:GenericName_PropertyType" id="ISO19115-1.301_ISO19103.GenericName">
+          <element name="serviceType" type="gco:GenericName_PropertyType"
+            id="ISO19115-1.301_ISO19103.GenericName">
             <annotation>
               <documentation>a service type name, E.G. 'discovery', 'view', 'download', 'transformation', or 'invoke'</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="serviceTypeVersion" type="gco:CharacterString_PropertyType" id="ISO19115-1.302_ISO19103.CharacterString">
+          <element maxOccurs="unbounded" minOccurs="0" name="serviceTypeVersion" type="gco:CharacterString_PropertyType" id="ISO19115-1.302_ISO19103.CharacterString">
             <annotation>
               <documentation>provide for searching based on the version of serviceType. For example,
                 we may only be interested in OGC Catalogue V1.1 services. If version is maintained
@@ -39,36 +40,37 @@
                 regardless of the version</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="accessProperties" type="mcc:Abstract_StandardOrderProcess_PropertyType" id="ISO19115-1.303_ISO19115-1.268">
+          <element minOccurs="0" name="accessProperties" type="mcc:Abstract_StandardOrderProcess_PropertyType" id="ISO19115-1.303_ISO19115-1.268">
             <annotation>
               <documentation>information about the availability of the service, including, 'fees'
                 'planned' 'available date and time' 'ordering instructions'
                 'turnaround'</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="couplingType" type="srv:SV_CouplingType_PropertyType" id="ISO19115-1.304_ISO19115-1.SV_CouplingType">
+          <element minOccurs="0" name="couplingType" type="srv:SV_CouplingType_PropertyType"
+            id="ISO19115-1.304_ISO19115-1.SV_CouplingType">
             <annotation>
               <documentation>type of coupling between service and associated data (if
                 exists)</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="coupledResource" type="srv:SV_CoupledResource_PropertyType" id="ISO19115-1.305_ISO19115-1.330">
+          <element maxOccurs="unbounded" minOccurs="0" name="coupledResource" type="srv:SV_CoupledResource_PropertyType" id="ISO19115-1.305_ISO19115-1.330">
             <annotation>
               <documentation>further description of the data coupling in the case of tightly coupled
                 services</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="operatedDataset" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.306_ISO19115-1.361">
+          <element maxOccurs="unbounded" minOccurs="0" name="operatedDataset" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.306_ISO19115-1.361">
             <annotation>
               <documentation>provides a reference to the dataset on which the service
                 operates</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="profile" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.307_ISO19115-1.361"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="serviceStandard" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.308_ISO19115-1.361"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="containsOperations" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.309_ISO19115-1.312"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="operatesOn" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.310_ISO19115-1.041"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="containsChain" type="srv:SV_OperationChainMetadata_PropertyType" id="ISO19115-1.311_ISO19115-1.320"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="profile" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.307_ISO19115-1.361"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="serviceStandard" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.308_ISO19115-1.361"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="containsOperations" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.309_ISO19115-1.312"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="operatesOn" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.310_ISO19115-1.041"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="containsChain" type="srv:SV_OperationChainMetadata_PropertyType" id="ISO19115-1.311_ISO19115-1.320"/>
         </sequence>
       </extension>
     </complexContent>
@@ -82,7 +84,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="SV_OperationMetadata" substitutionGroup="gco:AbstractObject" type="srv:SV_OperationMetadata_Type" id="ISO19115-1.312">
+  <element name="SV_OperationMetadata" substitutionGroup="gco:AbstractObject" type="srv:SV_OperationMetadata_Type" id="ISO19115-1.312">
     <annotation>
       <documentation>describes the signature of one and only one method provided by the
         service</documentation>
@@ -93,36 +95,39 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="operationName" type="gco:CharacterString_PropertyType" id="ISO19115-1.313_ISO19103.CharacterString">
+          <element name="operationName" type="gco:CharacterString_PropertyType"
+            id="ISO19115-1.313_ISO19103.CharacterString">
             <annotation>
               <documentation>a unique identifier for this interface</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="distributedComputingPlatform" type="srv:DCPList_PropertyType" id="ISO19115-1.314_ISO19115-1.DCPList">
+          <element maxOccurs="unbounded" name="distributedComputingPlatform" type="srv:DCPList_PropertyType" id="ISO19115-1.314_ISO19115-1.DCPList">
             <annotation>
               <documentation>distributed computing platforms on which the operation has been
                 implemented</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="operationDescription" type="gco:CharacterString_PropertyType" id="ISO19115-1.315_ISO19103.CharacterString">
+          <element minOccurs="0" name="operationDescription" type="gco:CharacterString_PropertyType"
+            id="ISO19115-1.315_ISO19103.CharacterString">
             <annotation>
               <documentation>free text description of the intent of the operation and the results of
                 the operation</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="invocationName" type="gco:CharacterString_PropertyType" id="ISO19115-1.316_ISO19103.CharacterString">
+          <element minOccurs="0" name="invocationName" type="gco:CharacterString_PropertyType"
+            id="ISO19115-1.316_ISO19103.CharacterString">
             <annotation>
               <documentation>the name used to invoke this interface within the context of the DCP.
                 The name is identical for all DCPs.</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="connectPoint" type="mcc:Abstract_OnlineResource_PropertyType" id="ISO19115-1.317_ISO19115-1.405">
+          <element maxOccurs="unbounded" name="connectPoint" type="mcc:Abstract_OnlineResource_PropertyType" id="ISO19115-1.317_ISO19115-1.405">
             <annotation>
               <documentation>handle for accessing the service interface</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="parameter" type="srv:SV_Parameter_PropertyType" id="ISO19115-1.318_ISO19115-1.324"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="dependsOn" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.319_ISO19103.312"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="parameter" type="srv:SV_Parameter_PropertyType" id="ISO19115-1.318_ISO19115-1.324"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="dependsOn" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.319_ISO19103.312"/>
         </sequence>
       </extension>
     </complexContent>
@@ -136,7 +141,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="SV_OperationChainMetadata" substitutionGroup="gco:AbstractObject" type="srv:SV_OperationChainMetadata_Type" id="ISO19115-1.320">
+  <element name="SV_OperationChainMetadata" substitutionGroup="gco:AbstractObject" type="srv:SV_OperationChainMetadata_Type" id="ISO19115-1.320">
     <annotation>
       <documentation>Operation Chain Information</documentation>
     </annotation>
@@ -146,18 +151,20 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="name" type="gco:CharacterString_PropertyType" id="ISO19115-1.321_ISO19103.CharacterString">
+          <element name="name" type="gco:CharacterString_PropertyType"
+            id="ISO19115-1.321_ISO19103.CharacterString">
             <annotation>
               <documentation>the name, as used by the service for this chain</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-1.322_ISO19103.CharacterString">
+          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType"
+            id="ISO19115-1.322_ISO19103.CharacterString">
             <annotation>
               <documentation>a narrative explanation of the services in the chain and resulting
                 output</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.323_ISO19115-1.312"/>
+          <element maxOccurs="unbounded" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.323_ISO19115-1.312"/>
         </sequence>
       </extension>
     </complexContent>
@@ -171,7 +178,8 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="SV_Parameter" substitutionGroup="gco:AbstractObject" type="srv:SV_Parameter_Type" id="ISO19115-1.324">
+  <element name="SV_Parameter" substitutionGroup="gco:AbstractObject" type="srv:SV_Parameter_Type"
+    id="ISO19115-1.324">
     <annotation>
       <documentation>parameter information</documentation>
     </annotation>
@@ -181,28 +189,33 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="name" type="gco:MemberName_PropertyType" id="ISO19115-1.325_ISO19103.MemberName">
+          <element name="name" type="gco:MemberName_PropertyType"
+            id="ISO19115-1.325_ISO19103.MemberName">
             <annotation>
               <documentation>the name, as used by the service for this parameter</documentation>
             </annotation>
           </element>
-          <element name="direction" type="srv:SV_ParameterDirection_PropertyType" id="ISO19115-1.326_ISO19115-1.SV_ParameterDirection">
+          <element name="direction" type="srv:SV_ParameterDirection_PropertyType"
+            id="ISO19115-1.326_ISO19115-1.SV_ParameterDirection">
             <annotation>
               <documentation>indication if the parameter is an input to the service, an output or
                 both</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-1.327_ISO19103.CharacterString">
+          <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType"
+            id="ISO19115-1.327_ISO19103.CharacterString">
             <annotation>
               <documentation>a narrative explanation of the role of the parameter</documentation>
             </annotation>
           </element>
-          <element name="optionality" type="gco:Boolean_PropertyType" id="ISO19115-1.328_ISO19103.Boolean">
+          <element name="optionality" type="gco:Boolean_PropertyType"
+            id="ISO19115-1.328_ISO19103.Boolean">
             <annotation>
               <documentation>indication if the parameter is required</documentation>
             </annotation>
           </element>
-          <element name="repeatability" type="gco:Boolean_PropertyType" id="ISO19115-1.329_ISO19103.Boolean">
+          <element name="repeatability" type="gco:Boolean_PropertyType"
+            id="ISO19115-1.329_ISO19103.Boolean">
             <annotation>
               <documentation>indication if more than one value of the parameter may be
                 provided</documentation>
@@ -221,38 +234,40 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="SV_CoupledResource" substitutionGroup="gco:AbstractObject" type="srv:SV_CoupledResource_Type" id="ISO19115-1.330">
+  <element name="SV_CoupledResource" substitutionGroup="gco:AbstractObject" type="srv:SV_CoupledResource_Type" id="ISO19115-1.330">
     <annotation>
       <documentation>links a given operationName (mandatory attribute of SV_OperationMetadata) with
         a data set identified by an 'identifier'</documentation>
     </annotation>
   </element>
   <!-- ........................................................................ -->
-   <complexType name="SV_CoupledResource_Type">
+  <complexType name="SV_CoupledResource_Type">
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <!-- Order Change to align with UML implementation model sequenceNumber -->
-           <element minOccurs="0" name="scopedName" type="gco:ScopedName_PropertyType" id="ISO19115-1.331_ISO19103.ScopedName">
+          <element minOccurs="0" name="scopedName" type="gco:ScopedName_PropertyType"
+            id="ISO19115-1.331_ISO19103.ScopedName">
             <annotation>
               <documentation>scoped identifier of the resource in the context of the given service
                 instance NOTE: name of the resources (i.e. dataset) as it is used by a service
                 instance (e.g. layer name or featureTypeName).</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="resourceReference" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.332_ISO19115-1.361">
+          <element maxOccurs="unbounded" minOccurs="0" name="resourceReference" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.332_ISO19115-1.361">
             <annotation>
               <documentation>reference to the dataset on which the service operates</documentation>
             </annotation>
           </element>
- <!-- moved to 334 -->
+          <!-- moved to 334 -->
           <!-- <element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.334_ISO19115-1.312"/> -->
-           <!-- moved to 333 -->
+          <!-- moved to 333 -->
           <!-- <element maxOccurs="unbounded" minOccurs="0" name="resource" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.333_ISO19115-1.042"/> -->
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
-          <element maxOccurs="unbounded" minOccurs="0" name="resource" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.333_ISO19115-1.042"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="resource" type="mri:MD_DataIdentification_PropertyType" id="ISO19115-1.333_ISO19115-1.042"/>
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
-          <element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType" id="ISO19115-1.334_ISO19115-1.312"/>
+          <element minOccurs="0" name="operation" type="srv:SV_OperationMetadata_PropertyType"
+            id="ISO19115-1.334_ISO19115-1.312"/>
         </sequence>
       </extension>
     </complexContent>
@@ -279,7 +294,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="SV_CouplingType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+  <element name="SV_CouplingType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
       <documentation>class of information to which the referencing entity applies</documentation>
     </annotation>
@@ -292,7 +307,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <!-- =========================================================================== -->
-  <element name="SV_ParameterDirection" substitutionGroup="gco:CharacterString" type="srv:SV_ParameterDirection_Type">
+  <element name="SV_ParameterDirection" substitutionGroup="gco:CharacterString" type="srv:SV_ParameterDirection_Type">
     <annotation>
       <documentation>class of information to which the referencing entity applies</documentation>
     </annotation>

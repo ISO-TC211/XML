@@ -11,9 +11,9 @@
   version="2.1.0"
   >
   <include schemaLocation="featureCatalogue.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="../../../../19115/-1/cit/2.1.0/cit.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1" schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/2.1.0/cit.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="https://schemas.isotc211.org/19110/-/fcc/2.1.0/fcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/lan.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

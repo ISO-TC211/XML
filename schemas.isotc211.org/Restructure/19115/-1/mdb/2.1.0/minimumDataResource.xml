@@ -12,13 +12,13 @@
     xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
     xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.1"
     xsi:schemaLocation="
-    https://schemas.isotc211.org/19115/-1/mdb/2.1 ../../../../19115/-1/mdb/2.1.0/mdb.xsd
-    https://schemas.isotc211.org/19115/-1/mrd/2.1 ../../../../19115/-1/mrd/2.1.0/mrd.xsd
-    https://schemas.isotc211.org/19115/-1/mri/2.1 ../../../../19115/-1/mri/2.1.0/mri.xsd
-    https://schemas.isotc211.org/19115/-1/gex/2.1 ../../../../19115/-1/gex/2.1.0/gex.xsd
-    https://schemas.isotc211.org/19115/-1/srv/2.1 ../../../../19115/-1/srv/2.1.0/srv.xsd
-    https://schemas.isotc211.org/19103/-/gco/1.1 ../../../../19103/-/gco/1.1.0/gco.xsd
-    https://schemas.isotc211.org/19103/-/gcx/1.1 ../../../../19103/-/gcx/1.1.0/gcx.xsd"
+    https://schemas.isotc211.org/19115/-1/mdb/2.1 https://schemas.isotc211.org/19115/-1/mdb/2.1.0/mdb.xsd
+    https://schemas.isotc211.org/19115/-1/mrd/2.1 https://schemas.isotc211.org/19115/-1/mrd/2.1.0/mrd.xsd
+    https://schemas.isotc211.org/19115/-1/mri/2.1 https://schemas.isotc211.org/19115/-1/mri/2.1.0/mri.xsd
+    https://schemas.isotc211.org/19115/-1/gex/2.1 https://schemas.isotc211.org/19115/-1/gex/2.1.0/gex.xsd
+    https://schemas.isotc211.org/19115/-1/srv/2.1 https://schemas.isotc211.org/19115/-1/srv/2.1.0/srv.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.1 https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd
+    https://schemas.isotc211.org/19103/-/gcx/1.1 https://schemas.isotc211.org/19103/-/gcx/1.1.0/gcx.xsd"
     > 
     <mdb:contact><cit:CI_Responsibility>
         <cit:role><cit:CI_RoleCode codeList="CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode></cit:role>

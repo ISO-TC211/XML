@@ -11,14 +11,14 @@
   targetNamespace="https://schemas.isotc211.org/19110/-/gfc/2.2"
   version="2.2.0"
   >
-  <include schemaLocation="../../../../19110/-/gfc/2.2.0/gfc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19110/-/gfc/2.2.0/gfc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.2"
- schemaLocation="../../../../19110/-/fcc/2.2.0/fcc.xsd"/>
+ schemaLocation="https://schemas.isotc211.org/19110/-/fcc/2.2.0/fcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3"
- schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+ schemaLocation="https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3"
- schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+ schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- SMR 2015-02-07 change gml:CodeType to gco:CodeType for 2014-12-25 build; UnitOfMeasure is in gmw, not gco so change that too -->

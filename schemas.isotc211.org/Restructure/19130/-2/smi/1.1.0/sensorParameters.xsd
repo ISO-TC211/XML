@@ -13,21 +13,21 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   version="1.1.0"
     >
-    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>   
-    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>   
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>   
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/baseTypes.xsd"/>   
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="../../../../19115/-1/mrc/1.3.0/mrc.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd"/>
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="../../../../19115/-1/mrs/1.3.0/mrs.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/codeList.xsd"/>
-    <include schemaLocation="../../../../19130/-2/smi/1.1.0/codeList.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/nonPhysicalSensorModel.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/spatialElements.xsd"/>
-    <include schemaLocation="../../../../19130/-2/smi/1.1.0/spatialElements.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/19130/-1/smi/1.1.0/nonPhysicalSensorModel.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd"/>
     
     <!-- ======================== 19130-2 ======================= -->
     <!-- ========================   SAR   =======================-->

@@ -12,13 +12,13 @@
    >
   <include schemaLocation="mdq.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.1"
-    schemaLocation="../../../../19103/-/gcx/1.1.0/gcx.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gcx/1.1.0/gcx.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mrd/2.1"
-    schemaLocation="../../../../19115/-1/mrd/2.1.0/mrd.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mrd/2.1.0/mrd.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="QE_CoverageResult" substitutionGroup="mdq:AbstractDQ_Result"
     type="mdq:QE_CoverageResult_Type">

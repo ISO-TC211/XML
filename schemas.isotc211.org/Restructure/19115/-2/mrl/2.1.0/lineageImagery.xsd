@@ -9,10 +9,10 @@
   targetNamespace="https://schemas.isotc211.org/19115/-1/mrl/2.1" 
   version="2.1.0"
     >
-  <include schemaLocation="../../../../19115/-1/mrl/2.1.0/mrl.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/srv/2.1" schemaLocation="../../../../19115/-1/srv/2.1.0/srv.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19115/-1/mrl/2.1.0/mrl.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/srv/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/srv/2.1.0/srv.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="LE_Algorithm" substitutionGroup="gco:AbstractObject" type="mrl:LE_Algorithm_Type" id="ISO19115-2.109">

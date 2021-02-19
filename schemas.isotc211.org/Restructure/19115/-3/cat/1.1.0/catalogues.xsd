@@ -9,11 +9,11 @@
   <annotation>
     <documentation>Handcrafted</documentation>
   </annotation>
-  <include schemaLocation="../../../../19115/-3/cat/1.1.0/cat.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19115/-3/cat/1.1.0/cat.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1"
-    schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/lan.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="AbstractCT_Catalogue" substitutionGroup="gco:AbstractObject"
     type="cat:AbstractCT_Catalogue_Type"/>

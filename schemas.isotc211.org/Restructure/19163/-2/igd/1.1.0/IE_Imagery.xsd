@@ -11,17 +11,17 @@
     elementFormDefault="qualified"
     version="1.2.0">
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/2.1"
-		schemaLocation="../../../../19115/-1/gex/2.1.0/extent.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/gex/2.1.0/extent.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/2.1"
-		schemaLocation="../../../../19115/-1/mrc/2.1.0/content.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/2.1.0/content.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mri/2.1"
-		schemaLocation="../../../../19115/-1/mri/2.1.0/identification.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-1/mri/2.1.0/identification.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1"
-		schemaLocation="../../../../19115/-2/mac/2.1.0/acquisitionInformationImagery.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.1.0/acquisitionInformationImagery.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/2.1"
-		schemaLocation="../../../../19115/-2/mrl/2.1.0/lineageImagery.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19115/-2/mrl/2.1.0/lineageImagery.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-		schemaLocation="../../../../19103/-/gco/1.1.0/baseTypes.xsd"/>
+		schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/baseTypes.xsd"/>
 	<xs:include schemaLocation="./IE_ImageryAndGriddedData.xsd"/>
 	<!--........................................................................................................
 -->

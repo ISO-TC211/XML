@@ -11,11 +11,11 @@
    >
   <include schemaLocation="mdq.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19157/-/dqc/1.1"
-    schemaLocation="../../../../19157/-/dqc/1.1.0/dqc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19157/-/dqc/1.1.0/dqc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1"
-    schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DQ_AbsoluteExternalPositionalAccuracy"
     substitutionGroup="mdq:AbstractDQ_PositionalAccuracy"

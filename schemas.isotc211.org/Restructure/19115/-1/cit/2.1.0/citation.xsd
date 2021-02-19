@@ -9,8 +9,8 @@
   version="2.1.0"
   >
   <include schemaLocation="cit.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="CI_Citation" substitutionGroup="mcc:Abstract_Citation" type="cit:CI_Citation_Type" id="ISO19115-1.361">

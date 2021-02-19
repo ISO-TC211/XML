@@ -10,7 +10,7 @@
       new schema. Anchor, FileName, MimeFileType; all in substitution group for CharacterString to
       support Web environments.</documentation>
   </annotation>
-  <include schemaLocation="../../../../19103/-/gcx/1.2.0/extendedTypes.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/19103/-/gcx/1.2.0/extendedTypes.xsd"/>
 
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

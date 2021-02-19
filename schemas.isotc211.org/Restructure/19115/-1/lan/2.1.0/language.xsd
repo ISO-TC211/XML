@@ -10,9 +10,9 @@
   >
   <include schemaLocation="lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1"
-    schemaLocation="../../../../19115/-1/cit/2.1.0/cit.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19115/-1/cit/2.1.0/cit.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- hand-craft adjustments starting at line 29 and 71. ShapeChange does not have rules for 
   implementing language localisation according to ISO19139  -->

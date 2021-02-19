@@ -9,7 +9,7 @@
   >
   <include schemaLocation="mcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-    schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
+    schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_AcquisitionInformation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_AcquisitionInformation_Type"/>
   <complexType abstract="true" name="Abstract_AcquisitionInformation_Type">

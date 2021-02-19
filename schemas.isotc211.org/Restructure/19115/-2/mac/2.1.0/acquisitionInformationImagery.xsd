@@ -16,14 +16,14 @@
   version="2.1.0"
     >
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="../../../../19115/-1/mcc/2.1.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/2.1" schemaLocation="../../../../19115/-1/mdb/2.1.0/mdb.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1" schemaLocation="../../../../19115/-1/lan/2.1.0/lan.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mco/2.1" schemaLocation="../../../../19115/-1/mco/2.1.0/mco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/gex/2.1" schemaLocation="../../../../19115/-1/gex/2.1.0/gex.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="../../../../19115/-1/cit/2.1.0/cit.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.1" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.1.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/2.1.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mdb/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/mdb/2.1.0/mdb.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/lan/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/lan/2.1.0/lan.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mco/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/mco/2.1.0/mco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/gex/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/gex/2.1.0/gex.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/2.1.0/cit.xsd"/>
 <!-- Added for completenes - match ISO 19115-2:2019 -->
   <complexType name="MI_Metadata_PropertyType">
     <sequence minOccurs="0">
