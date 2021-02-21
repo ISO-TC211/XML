@@ -358,14 +358,12 @@
                 <sequence>
                     <element name="trueHeading" type="gco:Angle_PropertyType">
                         <annotation>
-                            <documentation>actual direction in which the platform is travelling
-                                relative to North</documentation>
+                            <documentation>actual direction in which the platform is travelling relative to North</documentation>
                         </annotation>
                     </element>
                     <element name="yaw" type="gco:Angle_PropertyType">
                         <annotation>
-                            <documentation>offset between the true heading and the direction of the
-                                platform positive x-axis</documentation>
+                            <documentation>offset between the true heading and the direction of the platform positive x-axis</documentation>
                         </annotation>
                     </element>
                 </sequence>
