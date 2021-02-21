@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>CATalogue (CAT) Version: 1.2.0</title>
+      <style>
+						h1 { font-family: Arial; color: DarkBlue; font-size: 14pt; font-weight:bold; }
+						body { font-family: Arial; color: black; font-size: 10pt;}
+						td { font-family: Arial; color: black; font-size: 10pt;}
+						table, th, td {border: 1px solid black; padding: 2px; border-spacing: 1px;}
+						.paraSmall {font-size: 0.7em; font-style: italic;}
+						.metagroup { font-family: Arial; color: #0099FF; font-size: 10pt; font-weight:bold; }
+					</style>
+   </head>
+   
+
+   <body>
+      <h1>CATalogue (CAT) Version: 1.2.0</h1><img src="cat.png" alt=""><h2>Description</h2>
+      <p>CAT 1.2.0 is an XML Schema implementation derived from ISO 19139:2007, Geographic Information - Metadata - XML Schema Implementation.  
+         It includes elements for codelist catalogues, and example catalogues. 
+         The XML schema was encoded using the rules described in ISO/TS 19139:2007.
+      </p>
+      <h2>XML Namespace for cat 1.2</h2>
+      <p>The namespace URI for cat 1.2 is <b>http://schemas.isotc211.org/19139/-/cat/1.2</b>.
+      </p>
+      <h2>XML Schema for cat 1.2</h2>
+      <p>
+         <b><a href="../../../../19139/-/cat/1.2.0/cat.xsd">cat.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the cat 1.2 namespace or by XML Schema documents importing the cat 1.2 namespace. 
+         This XML schema includes (indirectly) all the implemented concepts of the cat namespace, but it does not contain the declaration of any types.
+      </p>
+      <h2>Related XML Schema for cat 1.2</h2>
+      <p>
+         <b><a href="../../../../19139/-/cat/1.2.0/catalogues.xsd">catalogues.xsd</a></b> implements the UML conceptual schema defined in ISO 19139:2007, Geographic Information - Metadata - XML Schema Implementation, Clause 7.4.4. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19139/-/cat/1.2.0/catalogues.xsd">https://schemas.isotc211.org/19139/-/cat/1.2.0/catalogues.xsd</a> contains the folowing classes:
+      <ul>
+         <li>AbstractCT_Catalogue</li>
+         <li>AbstractCT_Item</li>
+      </ul>
+   
+      <p>
+         <b><a href="../../../../19139/-/cat/1.2.0/codelistItem.xsd">codelistItem.xsd</a></b> implements the UML conceptual schema defined in ISO 19139:2007, Geographic Information - Metadata - XML Schema Implementation, Clause 9.8.7. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19139/-/cat/1.2.0/codelistItem.xsd">https://schemas.isotc211.org/19139/-/cat/1.2.0/codelistItem.xsd</a> contains the folowing classes:
+      <ul>
+         <li>CT_CodelistCatalogue</li>
+         <li>CT_Codelist</li>
+         <li>CT_CodelistValue</li>
+      </ul>
+      
+      <p>
+         <b><a href="../../../../19139/-/cat/1.2.0/crsItem.xsd">crsItem.xsd</a></b> implements the UML conceptual schema defined in ISO 19139:2007, Geographic Information - Metadata - XML Schema Implementation, Clause 9.8.9. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19139/-/cat/1.2.0/crsItem.xsd">https://schemas.isotc211.org/19139/-/cat/1.2.0/crsItem.xsd</a> contains the folowing classes:<ul>
+         <li>CT_CrsCatalogue</li>
+         <li>CT_CRS</li>
+         <li>CT_CoordinateSystem</li>
+         <li>CT_CoordinateSystemAxis</li>
+         <li>CT_Datum</li>
+         <li>CT_Ellipsoid</li>
+         <li>CT_PrimeMeridian</li>
+         <li>CT_Operation</li>
+         <li>CT_OperationMethod</li>
+         <li>CT_OperationParameters</li>
+      </ul>
+ <p><b><a href="uomItem.xsd">uomItem.xsd</a></b> implements the UML conceptual schema defined in ISO 19139:2007, Geographic Information - Metadata - XML Schema Implementation, Clause 9.8.8. 
+    It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19139/-/cat/1.2.0/uomItem.xsd">https://schemas.isotc211.org/19139/-/cat/1.2.0/uomItem.xsd</a> contains the folowing classes:
+      <ul>
+         <li>CT_UnitOfMeasure</li>
+         <li>CT_UomCatalogue</li>
+      </ul>
+      <h2>Related XML Namespaces for cat 1.2</h2> The cat 1.2 namespace imports these other namespaces: 
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Geographic COmmon</td>
+            <td>gco</td>
+            <td><a href="http://schemas.isotc211.org/19115/-3/gco/1.2">https://schemas.isotc211.org/19103/-/gco/1.2</a></td>
+            <td>../../../../19103/-/gco/1.2.0/gco.xsd</td>
+         </tr>
+         <tr>
+            <td>Language localization</td>
+            <td>lan</td>
+            <td><a href="http://schemas.isotc211.org/19115/-3/lan/1.0">https://schemas.isotc211.org/19115/-1/lan/1.3</a></td>
+            <td>../../../../19115/-1/lan/1.3.0/lan.xsd</td>
+         </tr>
+      </table>
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p class="paraSmall">&#169; ISO. Written by hands Version: 2010-02-19</p>
+   </body>
+</html>

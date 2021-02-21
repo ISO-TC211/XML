@@ -271,7 +271,7 @@
     <element name="matrixElements" type="smi:attitudeMatrix_Type"/>
     <complexType name="attitudeMatrix_Type">
         <sequence>
-            <element name="r3" type="gco:Real_PropertyType">
+            <element name="r1c1" type="gco:Real_PropertyType">
                 <annotation>
                     <documentation>r means row and c means column</documentation>
                 </annotation>
