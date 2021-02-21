@@ -1,4 +1,4 @@
-<!DOCTYPE html><html>
+﻿<!DOCTYPE html><html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Sensor Model Implementation (SMI) Version: 1.1</title>
@@ -14,17 +14,16 @@
    <body>
       <h1>Sensor Model Implementation Version: 1.1</h1>
       <!--
-      <img title="Classes in the ISO 19130-1 smi namespace" alt="UML diagram of Sensor Model Implementation classes in the cit namespace" width="750" src="./19130-1.smi.SensorDataClassesWeb.png"/>
+      <img title="Classes in the ISO 19130-1 smi namespace" alt="UML diagram of Sensor Model Implementation classes in the sim namespace" width="750" src="./19130-1.smi.SnsrDta.SnsrModlClassesWeb.png"/>
       -->
-     <img title="Codelist(s) in the ISO 19130-1 smi namespace" alt="UML diagram of Sensor Model Implementation codelists in the cit namespace" width="600" src="./19130-1.smi.SensorDataCodelistsWeb.png"/>
-       <h2>Description</h2>
+        <h2>Description</h2>
       <p>SMI 1.1 is an XML Schema implementation derived from ISO ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals. 
          The XML schema was encoded using the rules described in ISO/TS 19139:2007.
       </p>
        <h2>XML Namespace for smi 1.1</h2>
       <p>The namespace URI for smi 1.1 is <b>https://schemas.isotc211.org/19130/-3/smi/1.1</b>.
       </p>
-      <h2>XML Schema for sim 1.1</h2>
+      <h2>XML Schema for smi 1.1</h2>
       <p>
          <b><a href="../../../../19130/-3/smi/1.1.0/smi.xsd">https://schemas.isotc211.org/19130/-3/smi/1.1.0/smi.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
          in the smi 1.1 namespace or by XML Schema documents importing the smi 1.1 namespace. 
@@ -37,7 +36,9 @@
          <b><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd</a></b> implements the UML conceptual schema defined in ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals, Clause 7.2.
          It was created using the encoding rules defined in ISO 19118, ISO 19139.
       </p>
-      <a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd</a> contains the folowing class:<ul>
+
+      <img title="Classes in the ISO 19130-1 smi namespace" alt="UML diagram of Sensor Model Implementation classes in the sim namespace" width="750" src="./19130-1.smi.SnsrDta.SnsrMdlClassWeb.png"/>
+      <br/><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd</a> contains the folowing class:<ul>
          <li>SD_SensorModel</li>
       </ul>
       <h3>Ground Control Points</h3>
@@ -45,7 +46,10 @@
          <b><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd</a></b> implements the UML conceptual schema defined in ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals, Clause 7.4.
          It was created using the encoding rules defined in ISO 19118, ISO 19139.
       </p>
-      <a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd</a> contains the folowing classes:<ul>
+
+      <img title="Classes in the ISO 19130-1 smi namespace, ground control points" alt="UML diagram of Sensor Model Implementation classes in the sim namespace, ground control points" width="750" src="./19130-1.smi.SnsrDta.GrndCntrlPntsClassWeb.png"/>
+      
+      <br/><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd</a> contains the folowing classes:<ul>
          <li>SD_GCPRepository</li>
          <li>SD_LocationGCP</li>
          <li>SD_ImageIdentifiableGCP</li>
@@ -58,16 +62,17 @@
          <b><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd</a></b> implements the UML conceptual schema defined in ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals, Clause 8.4.
          It was created using the encoding rules defined in ISO 19118, ISO 19139.
       </p>
-      <a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd</a> contains the folowing classes:<ul>
+      <img title="Classes in the ISO 19130-1 smi namespace, physical sensor model" alt="UML diagram of Sensor Model Implementation classes in the sim namespace, physical sensor model" width="750" src="./19130-1.smi.SnsrDta.PhsclSnsrMdlClassWeb.png"/>
+      <br/><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd</a> contains the folowing classes:<ul>
          <li>SD_PhysicalSensorModel</li>
-         <li>CV_GridPoint</li>
       </ul>
       <h3>Spatial Elements</h3>
       <p>
          <b><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd</a></b> implements the UML conceptual schema defined in ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals, Clause 8.6.
          It was created using the encoding rules defined in ISO 19118, ISO 19139.
       </p>
-      <a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd</a> contains the folowing classes:<ul>
+      <img title="Classes in the ISO 19130-1 smi namespace, non-physical sensor model" alt="UML diagram of Sensor Model Implementation classes in the sim namespace, non-physical sensor model" width="750" src="./19130-1.smi.SnsrDta.NonPhsclSnsrMdlClassWeb.png"/>
+      <br/><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd</a> contains the folowing classes:<ul>
          <li>SD_Position</li>
          <li>SD_EarthMeasuredLocation</li>
          <li>SD_OrbitMeasuredLocation</li>
@@ -77,7 +82,6 @@
          <li>SD_Dynamics</li>
          <li>SD_PlatformDynamics</li>
          <li>SD_PositionAndOrientation</li>
-         <li>CRS</li>
          <li>SD_PlatformParameters</li>
       </ul>
       <h3>Sensor Parmeters</h3>
@@ -85,13 +89,13 @@
          <b><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd</a></b> implements the UML conceptual schema defined in ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals, Clause 8.5.
          It was created using the encoding rules defined in ISO 19118, ISO 19139.
       </p>
-      <a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd</a> contains the folowing classes:<ul>
+      <img title="Classes in the ISO 19130-1 smi namespace, sensor parameters" alt="UML diagram of Sensor Model Implementation classes in the sim namespace, sensor parameters" width="750" src="./19130-1.smi.SnrsDta.SnsrParamClassWeb.png"/>
+      <br/><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd</a> contains the folowing classes:<ul>
          <li>SD_Sensor</li>
          <li>SD_Calibration</li>
          <li>SD_GSD</li>
          <li>SD_AzimuthMeasure</li>
          <li>SD_DetectorArray</li>
-         <li>SD_ArrayDimension</li>
          <li>SD_ArrayDimension</li>
          <li>SD_SensorSystemAndOperation</li>
          <li>SD_Microwave</li>
@@ -103,7 +107,6 @@
          <li>SD_PushbroomOperation</li>
          <li>SD_ScanAngleFunction</li>
          <li>SD_ScanAngleTime</li>
-         <li>TM_IntervalLength</li>
          <li>SD_Distortion</li>
          <li>SD_DistortionPolynomial</li>
          <li>SD_DistortionTable</li>
@@ -130,7 +133,8 @@
          <b><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd</a></b> implements the codelists from the UML conceptual schema defined in ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning - Part 1: Fundamentals.
          It was created using the encoding rules defined in ISO 19118, ISO 19139.
       </p>
-      <a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd</a> contains the folowing codelists/enumerations:
+      <img title="Codelist(s) in the ISO 19130-1 smi namespace" alt="UML diagram of Sensor Model Implementation codelists in the sim namespace" width="600" src="./19130-1.smi.SnsrDta.CodelistsWeb.png"/>
+      <br/><a href="https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd">https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd</a> contains the folowing codelists/enumerations:
       <ul>
          <li>SD_ShapeCode</li>
          <li>SD_SurfaceCode</li>
@@ -166,7 +170,7 @@
          </tr>
          <tr>
             <td>Metadata for ACquisition</td>
-            <td>cit</td>
+            <td>mac</td>
             <td><a href="https://schemas.isotc211.org/19115/-2/mac/2.2.0">https://schemas.isotc211.org/19115/-2/mac/2.2</a></td>
             <td>../../../../19115/-2/mac/2.2.0/mac.xsd</td>
          </tr>
