@@ -46,7 +46,7 @@
 
   <xsl:template name="characterStringSubstitutions">
     <xsl:param name="parentElement"/>
-    <!-- This template takes a parent of a gcoold:CharacterString element and writes out the child for several possible substitutions  -->
+    <!-- This template takes a parent of a gcoold:CharacterString element and writes out the child for several possible substitutions   -->
     <xsl:apply-templates select="$parentElement/@*" mode="from19139to19115-3"/>
     <xsl:for-each select="$parentElement/*">
       <xsl:choose>
@@ -183,10 +183,13 @@
         <xsl:when test="ancestor-or-self::gmd:EX_Extent">
           <xsl:text>gex</xsl:text>
         </xsl:when>
+        <!-- add MD_MD_VectorSpatialRepresentation to test SMR 2019-09-02 -->
         <xsl:when
           test="ancestor-or-self::gmd:MD_Georectified or ancestor-or-self::gmi:MI_Georectified
           or ancestor-or-self::gmd:MD_Georeferenceable or ancestor-or-self::gmi:MI_Georeferenceable
-          or ancestor-or-self::gmd:MD_GridSpatialRepresentation or ancestor-or-self::gmd:MD_ReferenceSystem
+          or ancestor-or-self::gmd:MD_GridSpatialRepresentation 
+          or ancestor-or-self::gmd:MD_VectorSpatialRepresentation 
+          or ancestor-or-self::gmd:MD_ReferenceSystem
           or name()=gmi:MI_Metadata">
           <xsl:text>msr</xsl:text>
         </xsl:when>
@@ -275,7 +278,6 @@
       <xsl:apply-templates mode="from19139to19115-3"/>
     </xsl:element>
   </xsl:template>
-
 
   <!-- collectiveTitle was dropped in 19115-1.
     If it exists in /gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:collectiveTitle,

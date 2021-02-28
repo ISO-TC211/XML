@@ -18,7 +18,7 @@
       attribute or a CI_Citation with a title. -->
   <xsl:param name="isParentIdentifierDefinedWithUUIDAttribute" select="true()" as="xs:boolean"/>
   <!--
-    root element templates
+    root element templates 
   -->
   <xsl:template match="gmd:fileIdentifier" priority="5" mode="from19139to19115-3">
     <!--
@@ -67,22 +67,27 @@
       <xsl:apply-templates select="@*" mode="from19139to19115-3"/>
       <lan:PT_Locale>
         <xsl:copy-of select="gmd:PT_Locale/@*"/>
+     <!-- handle multiple language codes -->
+        <xsl:for-each select = "
+          gcoold:CharacterString |
+          gmd:LanguageCode/@codeListValue |
+          gmd:PT_Locale/gmd:languageCode/gmd:LanguageCode/@codeListValue">
         <xsl:call-template name="writeCodelistElement">
           <xsl:with-param name="elementName" select="'lan:language'"/>
           <xsl:with-param name="codeListName" select="'lan:LanguageCode'"/>
           <xsl:with-param name="codeListValue"
-            select="
-            gcoold:CharacterString |
-            gmd:LanguageCode/@codeListValue |
-            gmd:PT_Locale/gmd:languageCode/gmd:LanguageCode/@codeListValue"/>
+            select="."/>
         </xsl:call-template>
+        </xsl:for-each>
         <xsl:choose>
           <xsl:when test="../gmd:characterSet">
+            <xsl:for-each select = "../gmd:characterSet/gmd:MD_CharacterSetCode/@codeListValue">
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'lan:characterEncoding'"/>
               <xsl:with-param name="codeListName" select="'lan:MD_CharacterSetCode'"/>
-              <xsl:with-param name="codeListValue" select="../gmd:characterSet/gmd:MD_CharacterSetCode/@codeListValue"/>
+              <xsl:with-param name="codeListValue" select="."/>
             </xsl:call-template>
+            </xsl:for-each>
           </xsl:when>
           <xsl:otherwise>
             <lan:characterEncoding gco:nilReason="unknown"/>
@@ -299,21 +304,29 @@
             <xsl:with-param name="elementName" select="'mri:purpose'"/>
             <xsl:with-param name="nodeWithStringToWrite" select="gmd:purpose"/>
           </xsl:call-template>
+
           <xsl:call-template name="writeCharacterStringElement">
             <xsl:with-param name="elementName" select="'mri:credit'"/>
             <xsl:with-param name="nodeWithStringToWrite" select="gmd:credit"/>
           </xsl:call-template>
+          <!-- SMR modify to handle multiple status values (schema valid, even if they don't make sense...-->
+          <xsl:for-each select="gmd:status/gmd:MD_ProgressCode/@codeListValue">
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'mri:status'"/>
-              <xsl:with-param name="codeListValue" select="gmd:status/gmd:MD_ProgressCode/@codeListValue"/>
+              <xsl:with-param name="codeListValue" select="."/>
               <xsl:with-param name="codeListName" select="'mcc:MD_ProgressCode'"/>
             </xsl:call-template>
+          </xsl:for-each>
           <xsl:apply-templates select="gmd:pointOfContact" mode="from19139to19115-3"/>
+          
+          <!-- SMR modify to handle multiple spatialRepresentation values (schema valid, even if they don't make sense...-->  
+          <xsl:for-each select = "gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode/@codeListValue">
             <xsl:call-template name="writeCodelistElement">
               <xsl:with-param name="elementName" select="'mri:spatialRepresentationType'"/>
               <xsl:with-param name="codeListName" select="'mcc:MD_SpatialRepresentationTypeCode'"/>
-              <xsl:with-param name="codeListValue" select="gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode/@codeListValue"/>
+              <xsl:with-param name="codeListValue" select="."/>
             </xsl:call-template>
+          </xsl:for-each>
           <xsl:apply-templates select="gmd:spatialResolution" mode="from19139to19115-3"/>
           <!-- This is here to handle early adopters of temporalResolution -->
           <xsl:apply-templates select="gmd:temporalResolution" mode="from19139to19115-3"/>
