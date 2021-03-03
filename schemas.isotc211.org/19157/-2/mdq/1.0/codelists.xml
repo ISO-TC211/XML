@@ -5,9 +5,9 @@
  -->
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
- xmlns:cat="http://schemas.isotc211.org/19115/-3/cat/1.0"
- xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+ xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Data Quality (mdq) Namespace</gco:CharacterString>
@@ -27,10 +27,10 @@
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codelist="http://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+            <lan:LanguageCode codeList="https://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codelist="http://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+            <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
    </cat:locale>
@@ -39,10 +39,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="DQ_EvaluationMethodTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19157/-2/mdq/1.0">DQ_EvaluationMethodTypeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19157/-2/mdq/1.0">DQ_EvaluationMethodTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19157/-2/mdq/1.0">DQ_EvaluationMethodTypeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19157/-2/mdq/1.0">DQ_EvaluationMethodTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>description of the evaluation method and procedure applied</gco:CharacterString>
@@ -53,7 +53,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQ_EvaluationMethodTypeCode_directInternal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19157/-2/mdq/1.0">directInternal</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19157/-2/mdq/1.0">directInternal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>method of evaluating the quality of a dataset based on inspection of items within the dataset, where all data required is internal to the dataset being evaluated</gco:CharacterString>
@@ -63,7 +63,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQ_EvaluationMethodTypeCode_directExternal">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19157/-2/mdq/1.0">directExternal</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19157/-2/mdq/1.0">directExternal</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>method of evaluating the quality of a dataset based on inspection of items within the dataset, where reference data external to the dataset being evaluated is required</gco:CharacterString>
@@ -73,7 +73,7 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="DQ_EvaluationMethodTypeCode_indirect">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19157/-2/mdq/1.0">indirect</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19157/-2/mdq/1.0">indirect</gco:ScopedName>
                </cat:identifier>
                <cat:definition>
                   <gco:CharacterString>method of evaluating the quality of a dataset based on external knowledge</gco:CharacterString>

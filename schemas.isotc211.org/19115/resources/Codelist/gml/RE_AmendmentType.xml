@@ -5,19 +5,19 @@
 &lt;Attribute&gt;amendmentType&lt;/Attribute&gt;&#13;
 &lt;Type&gt;RE_AmendmentType&lt;/Type&gt;&#13;
 &lt;UsedBy&gt;</description>
-  <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">RE_AmendmentType</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">RE_AmendmentType</identifier>
   <dictionaryEntry>
     <Definition gml:id="_9350_12348">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">supersession</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">supersession</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9350_12349">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">retirement</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">retirement</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:mdb="http://schemas.isotc211.org/19115/-3/mdb/2.0"
- xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0"
- xmlns:mcc="http://schemas.isotc211.org/19115/-3/mcc/1.0"
- xmlns:mri="http://schemas.isotc211.org/19115/-3/mri/1.0"
- xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0"
- xmlns:cit="http://schemas.isotc211.org/19115/-3/cit/2.0"
+   xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+   xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+   xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
  xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mdt/2.0/mdt.xsd ">
    <!-- 
    This is a sample metadata record for the minimal metadata conformance class.

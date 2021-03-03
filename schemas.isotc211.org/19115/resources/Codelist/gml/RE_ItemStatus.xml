@@ -5,33 +5,33 @@
 &lt;Attribute&gt;status&lt;/Attribute&gt;&#13;
 &lt;Type&gt;RE_ItemStatus&lt;/Type&gt;&#13;
 &lt;UsedBy&gt;</description>
-  <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">RE_ItemStatus</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">RE_ItemStatus</identifier>
   <dictionaryEntry>
     <Definition gml:id="_9352_12354">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">notValid</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">notValid</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9352_12355">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">valid</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">valid</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9352_12356">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">superseded</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">superseded</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9352_12357">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">retired</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">retired</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

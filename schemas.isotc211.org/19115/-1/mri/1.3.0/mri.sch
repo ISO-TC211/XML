@@ -229,18 +229,14 @@
   </sch:diagnostics>
   
   <sch:pattern id="rule.mri.defaultlocalewhenhastext">
-    <sch:title xml:lang="en">Resource language</sch:title>
-    <sch:title xml:lang="fr">Langue de la ressource</sch:title>
-    
     <!-- 
-    QUESTION-TODO: "includes textual information" may not be easy to define.
-    Imagery will not. Could we consider that this rule applies to 
-    a resource having a feature catalog ? For services ?
-    
-    Here the context define that the rule applies to DataIdentification
+     Here the context define that the rule applies to DataIdentification
     having FeatureCatalog siblings.
     -->
-    <sch:rule context="//mri:MD_DataIdentification[
+    <sch:title xml:lang="en">Resource language in relation to Content</sch:title>
+    <sch:title xml:lang="fr">Langue de la ressource en relation avec le contenu</sch:title>
+    
+     <sch:rule context="//mri:MD_DataIdentification[
       ../../mdb:contentInfo/mrc:MD_FeatureCatalogue or
       ../../mdb:contentInfo/mrc:MD_FeatureCatalogueDescription]">
       
@@ -260,6 +256,51 @@
     </sch:rule>
   </sch:pattern>
   
+  <sch:diagnostics>
+    <sch:diagnostic id="rule.mri.defaultlocalewhenhastext2-failure-en"
+      xml:lang="en">Resource language MUST be defined when the resource
+      includes textual information.</sch:diagnostic>
+    <sch:diagnostic id="rule.mri.defaultlocalewhenhastext2-failure-fr"
+      xml:lang="fr">La langue de la resource DOIT être renseignée
+      lorsque la ressource contient des informations textuelles.</sch:diagnostic>
+    
+    <sch:diagnostic id="rule.mri.defaultlocalewhenhastext2-success-en"
+      xml:lang="en">Number of resource language: 
+      <sch:value-of select="count($resourceLanguages2)"/>.</sch:diagnostic>
+    <sch:diagnostic id="rule.mri.defaultlocalewhenhastext2-success-fr"
+      xml:lang="fr">Nombre de langues de la ressource :
+      <sch:value-of select="count($resourceLanguages2)"/>.</sch:diagnostic>
+  </sch:diagnostics>
+  
+  <sch:pattern id="rule.mri.defaultlocalewhenhasPresFormtext">
+    <sch:title xml:lang="en">Resource language in relation to Presentation Format</sch:title>
+    <sch:title xml:lang="fr">Langue de la ressource en relation avec le format de présentation</sch:title>
+    
+    <!-- 
+     Here the context define that the rule applies to DataIdentification
+    having FeatureCatalog siblings.
+    -->
+    <sch:rule context="//mri:MD_DataIdentification/mri:citation/cit:CI_Citation/cit:presentationForm/cit:CI_PresentationFormCode/@codeListValue[
+      substring(.,1,8) = 'document' or 
+      substring (.,1,5) = 'table' or
+      substring (.,1,3) = 'map'  
+      ]">
+      
+      <sch:let name="resourceLanguages2" 
+        value="mri:defaultLocale/lan:PT_Locale/
+        lan:language/lan:LanguageCode/@codeListValue[. != '']"/>
+      <sch:let name="hasAtLeastOneLanguage2" 
+        value="count($resourceLanguages2) > 0"/>
+      
+      <sch:assert test="$hasAtLeastOneLanguage2"
+        diagnostics="rule.mri.defaultlocalewhenhastext2-failure-en 
+        rule.mri.defaultlocalewhenhastext2-failure-fr"/>
+      
+      <sch:report test="$hasAtLeastOneLanguage2"
+        diagnostics="rule.mri.defaultlocalewhenhastext2-success-en 
+        rule.mri.defaultlocalewhenhastext2-success-fr"/>
+    </sch:rule>
+  </sch:pattern>
   
   
   <!--

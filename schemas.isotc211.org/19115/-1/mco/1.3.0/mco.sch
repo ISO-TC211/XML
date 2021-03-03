@@ -14,11 +14,10 @@
   <sch:diagnostics>
     <sch:diagnostic id="rule.mco-releasability-failure-en"
       xml:lang="en">
-      The releasabilty does not define addresse or statement.</sch:diagnostic>
+      The releasabilty defines neither addressee nor statement.</sch:diagnostic>
     <sch:diagnostic id="rule.mco-releasability-failure-fr"
       xml:lang="fr">
-      La possibilité de divulgation ne définit pas de 
-      destinataire ou d'indication.</sch:diagnostic>
+      La possibilité de divulgation ne définit ni le destinataire ni la déclaration.</sch:diagnostic>
     
     <sch:diagnostic id="rule.mco-releasability-success-en"
       xml:lang="en">
@@ -106,12 +105,18 @@
   </sch:diagnostics>
   
   <sch:pattern id="rule.mco-legalconstraintdetails">
-    <sch:title xml:lang="en">Legal constraint MUST
-      specified an access, use or other constraint or
-      use limitation or releasability</sch:title>
-    <sch:title xml:lang="fr">Une contrainte légale DOIT
-      définir un type de contrainte (d'accès, d'utilisation ou autre)
-      ou bien une limite d'utilisation ou une possibilité de divulgation</sch:title>
+    <sch:title xml:lang="en">Legal constraint MUST specify at least on of - 
+      an access constraint, 
+      use constraint, 
+      other constraint,  
+      use limitation, or 
+      releasability</sch:title>
+    <sch:title xml:lang="fr">La contrainte légale DOIT spécifier au moins l'un des éléments suivants - 
+      une contrainte d'accès, 
+      une contrainte d'utilisation, 
+      une autre contrainte, 
+      une limitation d'utilisation ou 
+      une possibilité de libération</sch:title>
     
     <sch:rule context="//mco:MD_LegalConstraints">
       
@@ -166,13 +171,12 @@
   <sch:diagnostics>
     <sch:diagnostic id="rule.mco-legalconstraint-other-failure-en"
       xml:lang="en">
-      The legal constraint does not specified other constraints
-      while access and use constraint is set to other restriction.</sch:diagnostic>
+      The legal constraint - other constraints defines while neither
+      access contsraints nor use constraint are set to other restrictions</sch:diagnostic>
     <sch:diagnostic id="rule.mco-legalconstraint-other-failure-fr"
       xml:lang="fr">
-      La contrainte légale ne précise pas les autres contraintes
-      bien que les contraintes d'accès ou d'usage indiquent 
-      que d'autres restrictions s'appliquent.</sch:diagnostic>
+      La contrainte légale - les autres contraintes définissent alors que ni
+      les contraintes d'accès ni les contraintes d'utilisation ne sont définies sur d'autres restrictions..</sch:diagnostic>
     
     <sch:diagnostic id="rule.mco-legalconstraint-other-success-en"
       xml:lang="en">

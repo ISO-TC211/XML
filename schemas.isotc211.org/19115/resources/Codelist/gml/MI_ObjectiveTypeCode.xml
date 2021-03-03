@@ -2,26 +2,26 @@
   <description>Description: temporal persistence of collection objective&#13;
 shortName: ObjTypeCode&#13;
 </description>
-  <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">MI_ObjectiveTypeCode</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">MI_ObjectiveTypeCode</identifier>
   <dictionaryEntry>
     <Definition gml:id="_12408_18963">
       <description>Description: single instance of collection&#13;
 Code: 001</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">instantaneousCollection</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">instantaneousCollection</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12408_18964">
       <description>Description: multiple instances of collection&#13;
 Code: 002</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">persistentView</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">persistentView</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12408_18965">
       <description>Description: comparative collection&#13;
 Code: 003</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">survey</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">survey</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

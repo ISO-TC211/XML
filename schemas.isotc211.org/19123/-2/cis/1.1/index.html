@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Schemas for coverage geometry and functions - Coverage Implementation Schema (CIS) Version: 1.1.0</title>
+      <style>
+						h1 { font-family: Arial; color: DarkBlue; font-size: 14pt; font-weight:bold; }
+						body { font-family: Arial; color: black; font-size: 10pt;}
+						td { font-family: Arial; color: black; font-size: 10pt;}
+						table, th, td {border: 1px solid black; padding: 2px; border-spacing: 1px;}
+						.paraSmall {font-size: 0.7em; font-style: italic;}
+						.metagroup { font-family: Arial; color: #0099FF; font-size: 10pt; font-weight:bold; }
+					</style>
+   </head>
+   
+
+   <body>
+      <h1>Schemas for coverage geometry and functions - Coverage Implementation Schema (CIS) Version: 1.1.0</h1>
+      <img title="Classes in the 19123-2:2018 gmlCov namespace" alt="UML diagram of Schemas for coverage geometry and function classes in the ISO 19123-2 gmlCov namespace" width="750" src="./AppSchmaCoverages.png"/>
+      <h2>Description</h2>
+      <p>Schemas for coverage geometry and functions - Coverage Implementation Schema (CIS) is an XML Schema implementation derived from ISO 19123-2, Schemas for coverage geometry and functions Part 2: Coverage Implermentation schema.  
+         It includes elements for delivering information about spatial coverages. 
+         The XML schema was encoded using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <h2>XML Namespace for CIS 1.1</h2>
+      <p>The namespace URI for CIS 1.1 is <b>http://www.opengis.net/gmlcov/1.0</b>.
+      </p>
+      <h2>XML Schema for ISO 19123-2 CIS 1.1</h2>
+      <p>
+         <b><a href="../../../../19123/-2/cis/1.1.0/1.1.0/gmlCovAll.xsd">gmlCovAll.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the gmlCov namespace or by XML Schema documents importing the gmlCov 1.0 namespace. 
+         This XML schema includes (indirectly) all the implemented concepts of the gmlCov namespace, but it does not contain the declaration of any types.
+      </p>
+      <h2>Related XML Schema for ISO 19123-2 CIS 1.1</h2>
+      <p>
+         <b><a href="../../../../19123/-2/cis/1.1.0/grids.xsd">grids.xsd</a></b> implements very limited of the UML conceptual schema defined in ISO 191123 Geographic Information - Schemas for coverage geometry and functions Part 2: Coverage implementation schema. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19123/-2/cis/1.1.0/grids.xsd">https://schemas.isotc211.org/19123/-2/cis/1.1.0/grids.xsd</a> contains the folowing classes:
+      <ul>
+         <li>AbstractReferenceableGrid</li>
+         <li>ParameterValue</li>
+         <li>SimpleMultiPoint</li>
+      </ul>
+      <p>
+         <b><a href="../../../../19123/-/cis/1.1.0/coverage.xsd">coverage.xsd</a></b> implements very limited of the UML conceptual schema defined in ISO 191123 Geographic Information - Schemas for coverage geometry and functions Part 2: Coverage implementation schema, Clause 8.4. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19123/-2/cis/1.1.0/coverage.xsd">https://schemas.isotc211.org/19123/-2/cis/1.1.0/coverage.xsd</a> contains the folowing classes:
+      <ul>
+         <li>AbstractCoverage</li>
+         <li>Extension</li>
+         <li>AbstractDiscreteCoverage</li>
+         <li>AbstractContinuousCoverage</li>
+         <li>MultiPointCoverage</li>
+         <li>MultiCurveCoverage</li>
+         <li>MultiSurfaceCoverage</li>
+         <li>MultiSolidCoverage</li>
+         <li>GridCoverage</li>
+         <li>RectifiedGridCoverage</li>
+         <li>ReferenceableGridCoverage</li>
+      </ul> 
+      <h2>Related XML Namespaces for ISO 19123-2 CIS 1.1</h2> 
+      The ISO 19123-2 gmlCov 1.1 namespace imports these other namespaces: 
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Geospatial Meta-Language</td>
+            <td>gml</td>
+            <td><a href="http://www.opengis.net/gml/3.2">http://www.opengis.net/gml/3.2</a></td>
+            <td>http://www.opengis.net/gml/3.2.1/gml.xsd</td>
+         </tr>
+         <tr>
+            <td>Sensor Web Enablement</td>
+            <td>swe</td>
+            <td><a href="http://www.opengis.net/swe/2.0">http://www.opengis.net/swe/2.0</a></td>
+            <td>http://schemas.opengis.net/sweCommon/2.0/swe.xsd</td>
+         </tr>
+      </table>
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p class="paraSmall">&#169; ISO. Written by hands Version: 2010-02-25/p>
+   </body>
+</html>

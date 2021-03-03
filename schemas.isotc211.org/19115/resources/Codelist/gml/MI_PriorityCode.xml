@@ -2,33 +2,33 @@
   <description>Description: ordered list of priorities&#13;
 shortName: PriCode&#13;
 </description>
-  <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">MI_PriorityCode</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">MI_PriorityCode</identifier>
   <dictionaryEntry>
     <Definition gml:id="_12421_19007">
       <description>Description: of decisive importance&#13;
 Code: 001</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">critical</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">critical</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12421_19008">
       <description>Description: requires resources to be made available&#13;
 Code: 002</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">highImportance</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">highImportance</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12421_19009">
       <description>Description: normal operation priority&#13;
 Code: 003</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">mediumImportance</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">mediumImportance</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_12421_19010">
       <description>Description: to be completed when resources are available&#13;
 Code: 004</description>
-      <identifier codeSpace="http://schemas.isotc211.org/19115/-3/mac/1.0">lowImportance</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19115/-3/mac/1.0">lowImportance</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>

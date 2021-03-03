@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd" 
-   xmlns:cat="http://schemas.isotc211.org/19115/-3/cat/1.0" xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" 
-   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0"
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
    xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
@@ -23,10 +23,10 @@
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codelist="http://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+            <lan:LanguageCode codeList="https://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codelist="http://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+            <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
    </cat:locale>
@@ -34,10 +34,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_DateTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_DateTypeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_DateTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_DateTypeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_DateTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>identification of when a given event occurred</gco:CharacterString>
@@ -48,10 +48,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_creation">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">creation</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">creation</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">creation</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">creation</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when the resource was brought into existence</gco:CharacterString>
@@ -64,10 +64,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_publication">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">publication</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">publication</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">publication</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">publication</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when the resource was issued</gco:CharacterString>
@@ -80,10 +80,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_revision">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">revision</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">revision</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">revision</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">revision</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when the resource was examined or re-examined and improved or amended</gco:CharacterString>
@@ -96,10 +96,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_expiry">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">expiry</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">expiry</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">expiry</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">expiry</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource expires </gco:CharacterString>
@@ -112,10 +112,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_lastUpdate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">lastUpdate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">lastUpdate</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">lastUpdate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">lastUpdate</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource was last updated</gco:CharacterString>
@@ -128,10 +128,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_lastRevision">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">lastRevision</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">lastRevision</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">lastRevision</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">lastRevision</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource was last reviewed</gco:CharacterString>
@@ -144,10 +144,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_nextUpdate">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">nextUpdate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">nextUpdate</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">nextUpdate</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">nextUpdate</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource will be next updated</gco:CharacterString>
@@ -160,10 +160,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_unavailable">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">unavailable</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">unavailable</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">unavailable</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">unavailable</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource became not available or obtainable</gco:CharacterString>
@@ -176,10 +176,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_inForce">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">inForce</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">inForce</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">inForce</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">inForce</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource became in force</gco:CharacterString>
@@ -192,10 +192,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_adopted">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">adopted</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">adopted</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">adopted</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">adopted</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource was adopted</gco:CharacterString>
@@ -208,10 +208,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_deprecated">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">deprecated</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">deprecated</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">deprecated</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">deprecated</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource was deprecated</gco:CharacterString>
@@ -224,10 +224,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_superseded">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">superseded</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">superseded</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">superseded</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">superseded</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when resource was  superseded or replaced by another resource</gco:CharacterString>
@@ -240,10 +240,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_validityBegins">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">validityBegins</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">validityBegins</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">validityBegins</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">validityBegins</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>time at which the data are considered to become valid.  NOTE: There could be quite a delay between creation and validity begins</gco:CharacterString>
@@ -256,10 +256,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_validityExpires">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">validityExpires</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">validityExpires</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">validityExpires</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">validityExpires</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>time at which the data are no longer considered to be valid</gco:CharacterString>
@@ -272,10 +272,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_released">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">released</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">released</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">released</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">released</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>the date that the resource shall be released for public access</gco:CharacterString>
@@ -288,10 +288,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_DateTypeCode_distribution">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">distribution</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">distribution</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">distribution</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">distribution</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>date identifies when an instance of the resource was distributed</gco:CharacterString>
@@ -306,10 +306,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_OnLineFunctionCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_OnLineFunctionCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_OnLineFunctionCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_OnLineFunctionCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_OnLineFunctionCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>function performed by the resource</gco:CharacterString>
@@ -320,10 +320,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_download">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">download</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">download</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">download</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">download</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online instructions for transferring data from one storage device or system to another</gco:CharacterString>
@@ -336,10 +336,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_information">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">information</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">information</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">information</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">information</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online information about the resource</gco:CharacterString>
@@ -352,10 +352,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_offlineAccess">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">offlineAccess</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">offlineAccess</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">offlineAccess</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">offlineAccess</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online instructions for requesting the resource from the provider</gco:CharacterString>
@@ -368,10 +368,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_order">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">order</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">order</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">order</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">order</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online order process for obtaining the resource</gco:CharacterString>
@@ -384,10 +384,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_search">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">search</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">search</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">search</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">search</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online search interface for seeking out information about the resource</gco:CharacterString>
@@ -400,10 +400,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_completeMetadata">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">completeMetadata</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">completeMetadata</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">completeMetadata</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">completeMetadata</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>complete metadata provided</gco:CharacterString>
@@ -416,10 +416,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_browseGraphic">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">browseGraphic</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">browseGraphic</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">browseGraphic</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">browseGraphic</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>browse graphic provided</gco:CharacterString>
@@ -432,10 +432,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_upload">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">upload</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">upload</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">upload</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">upload</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online resource upload capability provided</gco:CharacterString>
@@ -448,10 +448,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_emailService">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">emailService</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">emailService</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">emailService</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">emailService</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online email service provided</gco:CharacterString>
@@ -464,10 +464,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_browsing">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">browsing</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">browsing</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">browsing</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">browsing</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online browsing provided</gco:CharacterString>
@@ -480,10 +480,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_OnLineFunctionCode_fileAccess">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">fileAccess</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">fileAccess</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">fileAccess</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">fileAccess</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>online file access provided</gco:CharacterString>
@@ -498,10 +498,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_PresentationFormCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_PresentationFormCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_PresentationFormCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_PresentationFormCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_PresentationFormCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>mode in which the data are represented</gco:CharacterString>
@@ -512,10 +512,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_documentDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">documentDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">documentDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">documentDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">documentDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>digital representation of a primarily textual item (can contain illustrations also)</gco:CharacterString>
@@ -528,10 +528,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_documentHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">documentHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">documentHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">documentHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">documentHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>representation of a primarily textual item (can contain illustrations also) on paper, photographic material, or other media</gco:CharacterString>
@@ -544,10 +544,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_imageDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">imageDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">imageDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">imageDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">imageDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>likeness of natural or man-made features, objects, and activities acquired through the sensing of visual or any other segment of the electromagnetic spectrum by sensors, such as thermal infrared, and high resolution radar and stored in digital format</gco:CharacterString>
@@ -560,10 +560,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_imageHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">imageHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">imageHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">imageHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">imageHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>likeness of natural or man-made features, objects, and activities acquired through the sensing of visual or any other segment of the electromagnetic spectrum by sensors, such as thermal infrared, and high resolution radar and reproduced on paper, photographic material, or other media for use directly by the human user</gco:CharacterString>
@@ -576,10 +576,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_mapDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">mapDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">mapDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">mapDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">mapDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>map represented in raster or vector form</gco:CharacterString>
@@ -592,10 +592,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_mapHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">mapHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">mapHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">mapHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">mapHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>map printed on paper, photographic material, or other media for use directly by the human user</gco:CharacterString>
@@ -608,10 +608,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_modelDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">modelDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">modelDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">modelDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">modelDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>multi-dimensional digital representation of a feature, process, etc.</gco:CharacterString>
@@ -624,10 +624,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_modelHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">modelHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">modelHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">modelHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">modelHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>3-dimensional, physical model</gco:CharacterString>
@@ -640,10 +640,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_profileDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">profileDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">profileDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">profileDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">profileDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>vertical cross-section in digital form</gco:CharacterString>
@@ -656,10 +656,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_profileHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">profileHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">profileHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">profileHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">profileHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>vertical cross-section printed on paper, etc.</gco:CharacterString>
@@ -672,10 +672,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_tableDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">tableDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">tableDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">tableDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">tableDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>digital representation of facts or figures systematically displayed, especially in columns</gco:CharacterString>
@@ -688,10 +688,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_tableHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">tableHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">tableHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">tableHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">tableHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>representation of facts or figures systematically displayed, especially in columns, printed on paper, photographic material, or other media</gco:CharacterString>
@@ -704,10 +704,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_videoDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">videoDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">videoDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">videoDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">videoDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>digital video recording</gco:CharacterString>
@@ -720,10 +720,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_videoHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">videoHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">videoHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">videoHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">videoHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>video recording on film</gco:CharacterString>
@@ -736,10 +736,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_audioDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">audioDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">audioDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">audioDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">audioDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>digital audio recording</gco:CharacterString>
@@ -752,10 +752,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_audioHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">audioHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">audioHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">audioHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">audioHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>audio recording delivered by analog media, such as a magnetic tape</gco:CharacterString>
@@ -768,10 +768,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_multimediaDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">multimediaDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">multimediaDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">multimediaDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">multimediaDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>information representation using simultaneously various digital modes for text, sound, image</gco:CharacterString>
@@ -784,10 +784,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_multimediaHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">multimediaHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">multimediaHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">multimediaHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">multimediaHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>information representation using simultaneously various analog modes for text, sound, image</gco:CharacterString>
@@ -800,10 +800,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_physicalSample">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">physicalSample</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">physicalSample</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">physicalSample</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">physicalSample</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>a physical object, e.g. Rock or mineral sample, microscope  slide</gco:CharacterString>
@@ -816,10 +816,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_diagramDigital">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">diagramDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">diagramDigital</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">diagramDigital</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">diagramDigital</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>information represented graphically by charts such as pie chart, bar chart, and other type of diagrams and recorded in digital format</gco:CharacterString>
@@ -832,10 +832,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_PresentationFormCode_diagramHardcopy">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">diagramHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">diagramHardcopy</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">diagramHardcopy</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">diagramHardcopy</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>information represented graphically by charts such as pie chart, bar chart, and other type of diagrams and printed on paper, phototographic material, or other media</gco:CharacterString>
@@ -850,10 +850,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_RoleCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_RoleCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_RoleCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_RoleCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_RoleCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>function performed by the responsible party</gco:CharacterString>
@@ -864,10 +864,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_resourceProvider">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">resourceProvider</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">resourceProvider</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">resourceProvider</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">resourceProvider</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party that supplies the resource</gco:CharacterString>
@@ -880,10 +880,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_custodian">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">custodian</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">custodian</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">custodian</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">custodian</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource</gco:CharacterString>
@@ -896,10 +896,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_owner">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">owner</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">owner</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">owner</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">owner</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party that owns the resource</gco:CharacterString>
@@ -912,10 +912,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_user">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">user</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">user</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">user</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">user</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who uses the resource</gco:CharacterString>
@@ -928,10 +928,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_distributor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">distributor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">distributor</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">distributor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">distributor</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who distributes the resource</gco:CharacterString>
@@ -944,10 +944,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_originator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">originator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">originator</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">originator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">originator</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who created the resource</gco:CharacterString>
@@ -960,10 +960,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_pointOfContact">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">pointOfContact</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">pointOfContact</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">pointOfContact</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">pointOfContact</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who can be contacted for acquiring knowledge about or acquisition of the resource</gco:CharacterString>
@@ -976,10 +976,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_principalInvestigator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">principalInvestigator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">principalInvestigator</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">principalInvestigator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">principalInvestigator</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>key party responsible for gathering information and conducting research</gco:CharacterString>
@@ -992,10 +992,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_processor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">processor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">processor</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">processor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">processor</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who has processed the data in a manner such that the resource has been modified</gco:CharacterString>
@@ -1008,10 +1008,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_publisher">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">publisher</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">publisher</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">publisher</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">publisher</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who published the resource</gco:CharacterString>
@@ -1024,10 +1024,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_author">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">author</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">author</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">author</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">author</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who authored the resource</gco:CharacterString>
@@ -1040,10 +1040,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_sponsor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">sponsor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">sponsor</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">sponsor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">sponsor</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who speaks for the resource</gco:CharacterString>
@@ -1056,10 +1056,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_coAuthor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">coAuthor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">coAuthor</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">coAuthor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">coAuthor</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who jointly authors the resource</gco:CharacterString>
@@ -1072,10 +1072,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_collaborator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">collaborator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">collaborator</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">collaborator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">collaborator</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who assists with the generation of the resource other than the principal investigator</gco:CharacterString>
@@ -1088,10 +1088,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_editor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">editor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">editor</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">editor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">editor</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who reviewed or modified the resource to improve the content</gco:CharacterString>
@@ -1104,10 +1104,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_mediator">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">mediator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">mediator</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">mediator</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">mediator</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>a class of entity that mediates access to the resource and for whom the resource is intended or useful</gco:CharacterString>
@@ -1120,10 +1120,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_rightsHolder">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">rightsHolder</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">rightsHolder</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">rightsHolder</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">rightsHolder</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party owning or managing rights over the resource</gco:CharacterString>
@@ -1136,10 +1136,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_contributor">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">contributor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">contributor</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">contributor</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">contributor</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party contributing to the resource</gco:CharacterString>
@@ -1152,10 +1152,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_funder">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">funder</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">funder</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">funder</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">funder</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party providing monetary support for the resource</gco:CharacterString>
@@ -1168,10 +1168,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_RoleCode_stakeholder">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">stakeholder</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">stakeholder</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">stakeholder</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">stakeholder</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>party who has an interest in the resource or the use of the resource</gco:CharacterString>
@@ -1186,10 +1186,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="CI_TelephoneTypeCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_TelephoneTypeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_TelephoneTypeCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">CI_TelephoneTypeCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">CI_TelephoneTypeCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>type of telephone</gco:CharacterString>
@@ -1200,10 +1200,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_TelephoneTypeCode_voice">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">voice</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">voice</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">voice</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">voice</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>telephone provides voice service</gco:CharacterString>
@@ -1216,10 +1216,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_TelephoneTypeCode_fax">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">fax</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">fax</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">fax</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">fax</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>telephone provides facsimile service</gco:CharacterString>
@@ -1232,10 +1232,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="CI_TelephoneTypeCode_sms">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">sms</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">sms</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/cit/1.0">sms</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/cit/1.0">sms</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>telephone provides sms service</gco:CharacterString>

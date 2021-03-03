@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-  <sch:ns prefix="cit" uri="http://standards.iso.org/iso/19115/-3/cit/1.0"/>
-  <sch:ns prefix="gex" uri="http://standards.iso.org/iso/19115/-3/gex/1.0"/>
-  <sch:ns prefix="gco" uri="http://standards.iso.org/iso/19115/-3/gco/1.0"/>
+  <sch:ns prefix="cit" uri="http://standards.iso.org/iso/19115/-1/cit/1.3"/>
+  <sch:ns prefix="gex" uri="http://standards.iso.org/iso/19115/-1/gex/1.3"/>
+  <sch:ns prefix="gco" uri="http://standards.iso.org/iso/19115/-1/gco/1.3"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     
@@ -18,9 +18,9 @@
     -->
   <sch:diagnostics>
     <sch:diagnostic id="rule.gex.extenthasoneelement-failure-en"
-      xml:lang="en">The extent does not contain a description or a geographicElement.</sch:diagnostic>
+      xml:lang="en">The extent does not contain a description nor one or more of (geographicElement or temporalElement or verticalElement).</sch:diagnostic>
     <sch:diagnostic id="rule.gex.extenthasoneelement-failure-fr"
-      xml:lang="fr">L'étendue ne contient aucun élement.</sch:diagnostic>
+      xml:lang="fr">L'étendue ne contient pas de description ni un ou plusieurs de (GeographicElement ou temporalElement ou verticalElement)</sch:diagnostic>
     
     <sch:diagnostic id="rule.gex.extenthasoneelement-desc-success-en"
       xml:lang="en">The extent contains a description.</sch:diagnostic>
@@ -55,8 +55,8 @@
   </sch:diagnostics>
   
   <sch:pattern id="rule.gex.extenthasoneelement">
-    <sch:title xml:lang="en">Extent MUST have one description or one geographic, temporal or vertical element</sch:title>
-    <sch:title xml:lang="fr">Une étendue DOIT avoir une description ou un élément géographique, temporel ou vertical</sch:title>
+    <sch:title xml:lang="en">Extent MUST have a description or one or more geographic, temporal or vertical element</sch:title>
+    <sch:title xml:lang="fr">L'étendue DOIT avoir une description ou un ou plusieurs éléments géographiques, temporels ou verticaux</sch:title>
     
     <sch:rule context="//gex:EX_Extent">
       
@@ -128,36 +128,35 @@
   -->
   <sch:diagnostics>
     <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-failure-en"
-      xml:lang="en">The vertical extent does not contains CRS or CRS identifier.</sch:diagnostic>
+      xml:lang="en">The vertical extent contains neither a vertical CRS nor a vertical CRS identifier.</sch:diagnostic>
     <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-failure-fr"
-      xml:lang="fr">L'étendue verticale ne contient pas de CRS ou d'identifiant de CRS.</sch:diagnostic>
+      xml:lang="fr">L'étendue verticale ne contient ni un CRS vertical ni un identifiant CRS vertical.</sch:diagnostic>
     
     <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-success-en"
-      xml:lang="en">The vertical extent contains CRS information.</sch:diagnostic>
+      xml:lang="en">The vertical extent contains vertical CRS information.</sch:diagnostic>
     <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-success-fr"
-      xml:lang="fr">L'étendue verticale contient les informations sur le CRS.</sch:diagnostic>
+      xml:lang="fr">L'étendue verticale contient les informations sur le CRS vertical.</sch:diagnostic>
   </sch:diagnostics>
   
   <sch:pattern id="rule.gex.verticalhascrsorcrsid">
-    <sch:title xml:lang="en">Vertical element MUST contains a CRS or CRS identifier</sch:title>
-    <sch:title xml:lang="fr">Une étendue verticale DOIT contenir un CRS ou un identifiant de CRS</sch:title>
+    <sch:title xml:lang="en">Vertical element MUST contains a vertical CRS or a vertiacl CRS identifier</sch:title>
+    <sch:title xml:lang="fr">Une étendue verticale DOIT contenir un CRS vertical ou un identifiant de CRS vertical</sch:title>
     
     <sch:rule context="//gex:EX_VerticalExtent">
       
-      <sch:let name="crs" value="gex:verticalCRS"/>
-      <sch:let name="crsId" value="gex:verticalCRSId"/>
-      <sch:let name="hasCrsOrCrsId" 
-        value="count($crs) + count($crsId) > 0"/>
+      <sch:let name="vertCRS" value="gex:verticalCRS"/>
+      <sch:let name="vertCRSId" value="gex:verticalCRSId"/>
+      <sch:let name="hasVertCrsOrVertCrsId" 
+        value="count($vertCRS) + count($vertCRSId) > 0"/>
       
-      <sch:assert test="$hasCrsOrCrsId"
+      <sch:assert test="$hasVertCrsOrVertCrsId"
         diagnostics="rule.gex.verticalhascrsorcrsid-failure-en 
                      rule.gex.verticalhascrsorcrsid-failure-fr"/>
       
-      <sch:report test="$hasCrsOrCrsId"
+      <sch:report test="$hasVertCrsOrVertCrsId"
         diagnostics="rule.gex.verticalhascrsorcrsid-success-en 
                      rule.gex.verticalhascrsorcrsid-success-fr"/>
     </sch:rule>
   </sch:pattern>
   
-  
-</sch:schema>
+ </sch:schema>

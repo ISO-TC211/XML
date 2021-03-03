@@ -1,0 +1,135 @@
+<!DOCTYPE html><html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Metadata for Resource Identification (MRI) Version: 1.3</title>
+      <style>
+						h1 { font-family: Arial; color: DarkBlue; font-size: 14pt; font-weight:bold; }
+						body { font-family: Arial; color: black; font-size: 10pt;}
+						td { font-family: Arial; color: black; font-size: 10pt;}
+						table, th, td {border: 1px solid black; padding: 2px; border-spacing: 1px;}
+						.paraSmall {font-size: 0.7em; font-style: italic;}
+						.metagroup { font-family: Arial; color: #0099FF; font-size: 10pt; font-weight:bold; }
+					</style>
+   </head>
+   <body>
+      <h1>Metadata for Resource Identification (MRI) Version: 1.3</h1>
+      <img title="Classes in the mri namespace" alt="UML diagram of Metadata for Resource Identification classes in the mri namespace" width="750" src="./IdentificationClass.png"/>
+      <img title="Codelists in the mri namespace" alt="UML diagram of Metadata for Resource Identification codelists in the mri namespace" width="750" src="./19115/-1/mri/1.3/IdentificationCodelist.png"/>
+      <h2>Description</h2>
+      <p>
+         MRI 1.3 is an XML Schema implementation derived from ISO ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.5.3.  
+         It includes elements for identifying resources. The XML schema was encoded using the rules described in ISO/TS 19139:2007.
+      </p>
+      <h2>XML Namespace for mri 1.3</h2>
+      <p>The namespace URI for mri 1.3 is <b>https://schemas.isotc211.org/19115/-1/mri/1.3</b>.</p>
+      <h2>XML Schema for mri 1.3</h2>
+      <p>
+         <b><a href="../../../../19115/-1/mri/1.3.0/mri.xsd">mri.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the mri 1.3 namespace or by XML Schema documents importing the mri 1.3 namespace. 
+         This XML schema includes (indirectly) all the implemented concepts of the mri namespace, but it does not contain the declaration of any types.
+      </p>
+       <h2>Related XML Schema for mri 1.3</h2>
+      <p>
+         <b><a href="../../../../19115/-1/mri/1.3.0/identification.xsd">identification.xsd</a></b> implements the UML conceptual schema defined in ISO 19115-1, Geographic Information - Metadata - Part 1: Fundamentals, Clause 6.5.3. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd">https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd</a> contains the folowing classes:
+      <ul>
+         <li>AbstractMD_Identification</li>
+         <li>MD_DataIdentification</li>
+         <li>MD_Keywords</li>
+         <li>MD_KeywordClass</li>
+         <li>MD_RepresentativeFraction</li>
+         <li>MD_Resolution</li>
+         <li>MD_Usage</li>
+         <li>MD_AssociatedResource</li>
+      </ul>
+      <a href="https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd">https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd</a> contains references to the folowing codelists:
+      <ul>
+          <li>MD_KeywordTypeCode</li>
+         <li>DS_AssociationTypeCode</li>
+         <li>DS_InitiativeTypeCode</li>
+         <li>MD_TopicCategoryCode</li>
+      </ul>
+      <h2>Related XML Namespaces for mri 1.3</h2> The mri 1.3 namespace imports these other namespaces: 
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+         <tr>
+            <td>Geographic Common Objects</td>
+            <td>gco</td>
+            <td><a href="https://schemas.isotc211.org/19103/-/gco/1.2.0">https://schemas.isotc211.org/19103/-/gco/1.2</a></td>
+            <td>../../../../19103/-/gco/1.2/gco.xsd</td>
+         </tr>
+         <tr>
+            <td>Geographic Common Extended</td>
+            <td>gcx</td>
+            <td><a href="https://schemas.isotc211.org/19103/-/gcx/1.2.0">https://schemas.isotc211.org/19103/-/gcx/1.2</a></td>
+            <td>../../../../19103/-/gcx/1.2/gcx.xsd</td>
+         </tr>
+         <tr>
+            <td>Geographic Markup Wrappers</td>
+            <td>gmw</td>
+            <td><a href="https://schemas.isotc211.org/19163/-/gmw/1.1.0">https://schemas.isotc211.org/19163/-/gmw/1.1</a></td>
+            <td>../../../../19163/-/gmw/1.1/gmw.xsd</td>
+         </tr>
+         <tr>
+            <td>LANguage localization</td>
+            <td>lan</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/lan/1.3.0">https://schemas.isotc211.org/19115/-1/lan/1.3</a></td>
+            <td>../../../../19115/-1/lan/1.3.0/lan.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Common Classes</td>
+            <td>mcc</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mcc/1.3.0">https://schemas.isotc211.org/19115/-1/mcc/1.3</a></td>
+            <td>../../../../19115/-1/mcc/1.3.0/mcc.xsd</td>
+         </tr>
+         <tr>
+            <td>CITataion and Responsibility</td>
+            <td>cit</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/cit/1.3.0">https://schemas.isotc211.org/19115/-1/cit/1.3</a></td>
+            <td>../../../../19115/-1/cit/1.3.0/cit.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Spatial Representation</td>
+            <td>mcc</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/msr/1.3.0">https://schemas.isotc211.org/19115/-1/msr/1.3</a></td>
+            <td>../../../../19115/-1/msr/1.3.0/msr.xsd</td>
+         </tr>
+         <tr>
+            <td>Geograpgic EXtent</td>
+            <td>gex</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/gex/1.3.0">https://schemas.isotc211.org/19115/-1/gex/1.3</a></td>
+            <td>../../../../19115/-1/gex/1.3.0/gex.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Maintenance Information</td>
+            <td>mmi</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mir/1.3.0">https://schemas.isotc211.org/19115/-1/mmi/1.3</a></td>
+            <td>../../../../19115/-1/mmi/1.3.0/mmi.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata Resource Distribution</td>
+            <td>mmi</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mrd/1.3.0">https://schemas.isotc211.org/19115/-1/mrd/1.3</a></td>
+            <td>../../../../19115/-1/mrd/1.3.0/mrd.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata COnstraints</td>
+            <td>mco</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mco/1.3.0">https://schemas.isotc211.org/19115/-1/mco/1.3</a></td>
+            <td>../../../../19115/-1/mco/1.3.0/mco.xsd</td>
+         </tr>
+      </table>
+      <h2>Schematron Validation Rules for mri 1.3</h2> Schematron rules for validating instance documents of the mri 1.3 namespace are in <a href="mri.sch">mri.sch</a>. Other schematron rule sets that are
+      required for a complete validation are: gco.sch, gmw.sch, lan.sch, mcc.sch, lan.sch, and mcc.sch
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p class="paraSmall">Written by hand. Version: 2021-02-16</p>
+   </body>
+</html>

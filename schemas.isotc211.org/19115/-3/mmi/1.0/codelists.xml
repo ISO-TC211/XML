@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
-   xmlns:cat="http://schemas.isotc211.org/19115/-3/cat/1.0"
-   xmlns:gco="http://schemas.isotc211.org/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:lan="http://schemas.isotc211.org/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+   xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Maintenance Information (mex) Namespace</gco:CharacterString>
@@ -23,10 +23,10 @@
    <cat:locale>
       <lan:PT_Locale>
          <lan:language>
-            <lan:LanguageCode codelist="http://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
+            <lan:LanguageCode codeList="https://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#LanguageCode" codeListValue="eng">eng</lan:LanguageCode>
          </lan:language>
          <lan:characterEncoding>
-            <lan:MD_CharacterSetCode codelist="http://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+            <lan:MD_CharacterSetCode codeList="https://schemas.isotc211.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
          </lan:characterEncoding>
       </lan:PT_Locale>
    </cat:locale>
@@ -34,10 +34,10 @@
    <cat:codelistItem>
       <cat:CT_Codelist id="MD_MaintenanceFrequencyCode">
          <cat:identifier>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">MD_MaintenanceFrequencyCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">MD_MaintenanceFrequencyCode</gco:ScopedName>
          </cat:identifier>
          <cat:name>
-            <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">MD_MaintenanceFrequencyCode</gco:ScopedName>
+            <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">MD_MaintenanceFrequencyCode</gco:ScopedName>
          </cat:name>
          <cat:definition>
             <gco:CharacterString>frequency with which modifications and deletions are made to the data after it is first produced</gco:CharacterString>
@@ -48,10 +48,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_continual">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">continual</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">continual</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">continual</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">continual</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is repeatedly and frequently updated</gco:CharacterString>
@@ -64,10 +64,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_daily">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">daily</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">daily</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">daily</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">daily</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated each day</gco:CharacterString>
@@ -80,10 +80,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_weekly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">weekly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">weekly</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">weekly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">weekly</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated on a weekly basis</gco:CharacterString>
@@ -96,10 +96,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_fortnightly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">fortnightly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">fortnightly</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">fortnightly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">fortnightly</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated every two weeks</gco:CharacterString>
@@ -112,10 +112,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_monthly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">monthly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">monthly</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">monthly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">monthly</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated each month</gco:CharacterString>
@@ -128,10 +128,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_quarterly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">quarterly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">quarterly</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">quarterly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">quarterly</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated every three months</gco:CharacterString>
@@ -144,10 +144,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_biannually">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">biannually</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">biannually</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">biannually</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">biannually</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated twice each year</gco:CharacterString>
@@ -160,10 +160,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_annually">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">annually</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">annually</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">annually</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">annually</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated every year</gco:CharacterString>
@@ -176,10 +176,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_asNeeded">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">asNeeded</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">asNeeded</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">asNeeded</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">asNeeded</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated as deemed necessary</gco:CharacterString>
@@ -192,10 +192,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_irregular">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">irregular</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">irregular</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">irregular</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">irregular</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated in intervals that are uneven in duration</gco:CharacterString>
@@ -208,10 +208,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_notPlanned">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">notPlanned</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">notPlanned</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">notPlanned</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">notPlanned</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>there are no plans to update the data</gco:CharacterString>
@@ -224,10 +224,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_unknown">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">unknown</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">unknown</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">unknown</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">unknown</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>frequency of maintenance for the data is not known</gco:CharacterString>
@@ -240,10 +240,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_periodic">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">periodic</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">periodic</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">periodic</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">periodic</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated at regular intervals</gco:CharacterString>
@@ -256,10 +256,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_semimonthly">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">semimonthly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">semimonthly</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">semimonthly</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">semimonthly</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource updated twice a monthly</gco:CharacterString>
@@ -272,10 +272,10 @@
          <cat:codeEntry>
             <cat:CT_CodelistValue id="MD_MaintenanceFrequencyCode_biennially">
                <cat:identifier>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">biennially</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">biennially</gco:ScopedName>
                </cat:identifier>
                <cat:name>
-                  <gco:ScopedName codeSpace="http://schemas.isotc211.org/19115/-3/mmi/1.0">biennially</gco:ScopedName>
+                  <gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">biennially</gco:ScopedName>
                </cat:name>
                <cat:definition>
                   <gco:CharacterString>resource is updated every 2 years</gco:CharacterString>

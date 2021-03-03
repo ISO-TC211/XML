@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-  <sch:ns prefix="cit" uri="http://standards.iso.org/iso/19115/-3/cit/1.0"/>
-  <sch:ns prefix="mri" uri="http://standards.iso.org/iso/19115/-3/mri/1.0"/>
-  <sch:ns prefix="mdb" uri="http://standards.iso.org/iso/19115/-3/mdb/1.0"/>
-  <sch:ns prefix="mcc" uri="http://standards.iso.org/iso/19115/-3/mcc/1.0"/>
-  <sch:ns prefix="lan" uri="http://standards.iso.org/iso/19115/-3/lan/1.0"/>
-  <sch:ns prefix="gco" uri="http://standards.iso.org/iso/19115/-3/gco/1.0"/>
+  <sch:ns prefix="cit" uri="http://standards.iso.org/iso/19115/-1/cit/1.3"/>
+  <sch:ns prefix="mri" uri="http://standards.iso.org/iso/19115/-1/mri/1.3"/>
+  <sch:ns prefix="mdb" uri="http://standards.iso.org/iso/19115/-1/mdb/1.3"/>
+  <sch:ns prefix="mcc" uri="http://standards.iso.org/iso/19115/-1/mcc/1.3"/>
+  <sch:ns prefix="lan" uri="http://standards.iso.org/iso/19115/-1/lan/1.3"/>
+  <sch:ns prefix="gco" uri="http://standards.iso.org/iso/19115/-1/gco/1.3"/>
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     
@@ -16,48 +16,47 @@
     Rule: Check root element. 
     Ref: N/A
   -->
+
   <sch:diagnostics>
     <sch:diagnostic 
       id="rule.mdb.root-element-failure-en"
-      xml:lang="en">The root element must be MD_Metadata.</sch:diagnostic>
+      xml:lang="en">There MUST be a MD_Metadata.</sch:diagnostic>
     <sch:diagnostic 
       id="rule.mdb.root-element-failure-fr"
-      xml:lang="fr">Modifier l'élément racine du document pour que ce 
-      soit un élément MD_Metadata.</sch:diagnostic>
+      xml:lang="fr">Il DOIT y avoir un MD_Metadata.</sch:diagnostic>
 
     <sch:diagnostic 
       id="rule.mdb.root-element-success-en"
-      xml:lang="en">Root element MD_Metadata found.</sch:diagnostic>
+      xml:lang="en">Element MD_Metadata found.</sch:diagnostic>
     <sch:diagnostic 
       id="rule.mdb.root-element-success-fr"
-      xml:lang="fr">Élément racine MD_Metadata défini.</sch:diagnostic>
+      xml:lang="fr">Élément MD_Metadata défini.</sch:diagnostic>
   </sch:diagnostics>
   
   <sch:pattern id="rule.mdb.root-element">
-    <sch:title xml:lang="en">Metadata document root element</sch:title>
-    <sch:title xml:lang="fr">Élément racine du document</sch:title>
+    <sch:title xml:lang="en">MD_Metadata element documented</sch:title>
+    <sch:title xml:lang="fr">Élément MD_Metadata documenté</sch:title>
     
     <sch:p xml:lang="en">A metadata instance document conforming to 
-      this specification SHALL have a root MD_Metadata element 
-      defined in the http://standards.iso.org/iso/19115/-3/mdb/1.0 namespace.</sch:p>
+      this specification SHALL have a MD_Metadata element 
+      defined in the http://standards.iso.org/iso/19115/-1/mdb/1.3 namespace.</sch:p>
     <sch:p xml:lang="fr">Une fiche de métadonnées conforme au standard
-      ISO19115-1 DOIT avoir un élément racine MD_Metadata (défini dans l'espace
-      de nommage http://standards.iso.org/iso/19115/-3/mdb/1.0).</sch:p>
+      ISO19115-1 DOIT avoir un élément MD_Metadata (défini dans l'espace
+      de nommage http://standards.iso.org/iso/19115/-1/mdb/1.3).</sch:p>
     <sch:rule context="/">
-      <sch:let name="hasOneMD_MetadataElement" 
-               value="count(/mdb:MD_Metadata) = 1"/>
+      <sch:let name="hasMD_MetadataElement" 
+               value="count(.//mdb:MD_Metadata) >= 1"/>
       
-      <sch:assert test="$hasOneMD_MetadataElement"
+      <sch:assert test="$hasMD_MetadataElement"
       diagnostics="rule.mdb.root-element-failure-en 
                    rule.mdb.root-element-failure-fr"/>
       
-      <sch:report test="$hasOneMD_MetadataElement"
+      <sch:report test="$hasMD_MetadataElement"
         diagnostics="rule.mdb.root-element-success-en 
                      rule.mdb.root-element-success-fr"/>
     </sch:rule>
   </sch:pattern>
-  
-  
+
   
   
   <!-- 

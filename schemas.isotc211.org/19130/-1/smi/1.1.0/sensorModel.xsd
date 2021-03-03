@@ -34,7 +34,7 @@
         <complexContent>
             <extension base="msr:AbstractMI_GeolocationInformation_Type">
                 <sequence>
-                    <element name="forImageId" type="sml:IdentifierListType">
+                    <element name="forImageID" type="sml:IdentifierListType">
                         <annotation>
                             <documentation>identification for image to which the sensor model
                                 applies</documentation>

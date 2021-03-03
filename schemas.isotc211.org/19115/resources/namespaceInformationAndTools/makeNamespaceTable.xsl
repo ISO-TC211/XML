@@ -53,7 +53,7 @@
       </head>
       <body>
         <h1>ISO TC211 Namespace Summary</h1>
-        <p>This table summarizes the namespaces used in the XML implementation of <a href="https://committee.iso.org/home/tc211">ISO TC211</a> Standards for Geospatial Metadata. The current official versions of these namespaces are located at <a href="http://schemas.isotc211.org">schemas.isotc211.org</a>. Working versions and information are at the <a href="https://github.com/ISO-TC211/XML">ISO
+        <p>This table summarizes the namespaces used in the XML implementation of <a href="https://committee.iso.org/home/tc211">ISO TC211</a> Standards for Geospatial Metadata. The current official versions of these namespaces are located at <a href="https://schemas.isotc211.org">schemas.isotc211.org</a>. Working versions and information are at the <a href="https://github.com/ISO-TC211/XML">ISO
             TC211 Git Repository</a>.</p>
         <table border="1" cellpadding="3">
           <tr>

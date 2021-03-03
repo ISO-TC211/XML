@@ -16,7 +16,7 @@
   xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
     version="1.1.0"
     >
-    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/3.1.0/gridPoint.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/1.1.0/gridPoint.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>
     <import namespace="https://schemas.isotc211.org/19163/-2/igd/1.2" schemaLocation="../../../../19163/-2/igd/1.2.0/igd.xsd"/>

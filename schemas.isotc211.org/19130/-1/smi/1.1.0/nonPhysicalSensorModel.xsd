@@ -22,8 +22,8 @@
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
     <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="../../../../19115/-1/msr/1.3.0/msr.xsd"/>
-    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/3.1.0/codeLists.xsd"/>
-    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/3.1.0/gridPoint.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/1.1.0/codeLists.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/1.1.0/gridPoint.xsd"/>
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>

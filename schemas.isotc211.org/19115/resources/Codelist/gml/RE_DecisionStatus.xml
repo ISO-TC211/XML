@@ -5,26 +5,26 @@
 &lt;Attribute&gt;status&lt;/Attribute&gt;&#13;
 &lt;Type&gt;RE_DecisionStatus&lt;/Type&gt;&#13;
 &lt;UsedBy&gt;</description>
-  <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">RE_DecisionStatus</identifier>
+  <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">RE_DecisionStatus</identifier>
   <dictionaryEntry>
     <Definition gml:id="_9338_12313">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">pending</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">pending</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9338_12314">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">tentative</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">tentative</identifier>
     </Definition>
   </dictionaryEntry>
   <dictionaryEntry>
     <Definition gml:id="_9338_12315">
       <description>
       </description>
-      <identifier codeSpace="http://schemas.isotc211.org/19135/-2/reg/1.0">final</identifier>
+      <identifier codeSpace="https://schemas.isotc211.org/19135/-2/reg/1.0">final</identifier>
     </Definition>
   </dictionaryEntry>
 </Dictionary>
