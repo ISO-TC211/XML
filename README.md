@@ -62,7 +62,7 @@ Summary information about all of these namespaces is avaialble at https://schema
 
 ## Package Diagram
 UML Package Diagrams show dependencies between the current namespace and others as well as the entities defined in each namespace.
-##Description
+## Description
 The Description includes information about the ISO Standard implemented in the namespace and general information about the purpose and content of the namespace.
 ## Sample XML Files
 Each namespace directory includes sample XML files for the namespace and for demonstrating related schematron rules. The namespace sample files are called xxx.xml (for namespace xxx). The schematron rule examples include xxx_valid.xml and xxx_invalid.xml examples for each schematron rule.

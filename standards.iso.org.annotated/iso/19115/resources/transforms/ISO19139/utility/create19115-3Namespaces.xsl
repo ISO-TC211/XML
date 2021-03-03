@@ -4,7 +4,7 @@
   exclude-result-prefixes="xs"
   version="2.0">
   <xsl:template name="add-iso19115-3-namespaces">
-    <!-- new namespaces -->
+    <!-- new namespaces  -->
     <xsl:namespace name="xsi" select="'http://www.w3.org/2001/XMLSchema-instance'"/>
     <!-- Namespaces that include concepts outside of metadata -->
     <!-- Catalog (ISO 19115-3) -->
@@ -61,5 +61,6 @@
     <!-- external namespaces -->
     <xsl:namespace name="gml" select="'http://www.opengis.net/gml/3.2'"/>
     <xsl:namespace name="xlink" select="'http://www.w3.org/1999/xlink'"/>
+    <xsl:namespace name="xsi" select="'http://www.w3.org/2001/XMLSchema-instance'"/>
   </xsl:template>
 </xsl:stylesheet>

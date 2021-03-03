@@ -86,6 +86,16 @@
         </xd:ul>
       </xd:p>
       <xd:p><xd:b>Author:</xd:b>thabermann@hdfgroup.org</xd:p>
+      <xd:p>
+        <xd:b>Version 2019-09-02</xd:b>
+        <xd:ul>
+          <xd:li>handle multiple status and spatialRepresentation allowed by ISO19115; add schema location pointing to mds: version 1.0 to make validation of output easier.  </xd:li>
+        </xd:ul>
+        <xd:ul>
+          <xd:li>NOTE: if want to use mds: version 2.0, have to update the namespace declaration in default.xsl </xd:li>
+        </xd:ul>
+      </xd:p>
+      <xd:p><xd:b>Author:</xd:b>smrTucson@gmail.com</xd:p>
     </xd:desc>
   </xd:doc>
 
@@ -108,6 +118,7 @@
       <xsl:element name="mdb:MD_Metadata">
         <!-- new namespaces -->
         <xsl:call-template name="add-iso19115-3-namespaces"/>
+        <xsl:attribute name="xsi:schemaLocation" select="'http://standards.iso.org/iso/19115/-3/mds/1.0 https://schemas.isotc211.org/19115/-3/mds/1.0/mds.xsd'"/>
 
         <xsl:apply-templates select="gmd:fileIdentifier" mode="from19139to19115-3"/>
         <xsl:apply-templates select="gmd:language" mode="from19139to19115-3"/>
