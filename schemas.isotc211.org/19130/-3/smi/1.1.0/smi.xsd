@@ -19,6 +19,7 @@
     <include schemaLocation="../../../../19130/-2/smi/1.1.0/sensorModel.xsd"/>
     <include schemaLocation="../../../../19130/-2/smi/1.1.0/sensorParameters.xsd"/>
     <include schemaLocation="../../../../19130/-2/smi/1.1.0/spatialElements.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/1.1.0/codeLists.xsd"/>
     
     <!-- ...................... -->
     

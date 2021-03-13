@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gpi="http://standards.iso.org/iso/19155/gpi/1.0" 
-  elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19155/gpi/1.0" version="1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gpi="http://standards.iso.org/19155/iso/gpi/1.0" 
+  elementFormDefault="qualified" 
+  targetNamespace="http://standards.iso.org/19155/iso/gpi/1.0" 
+  version="1.0">
   <annotation>
     <documentation>
       gpi.xsd is the XML Schema document to be referenced by XML documents containing XML elements 
@@ -9,5 +12,5 @@
       the declaration of any types.
     </documentation>
   </annotation>
-  <include schemaLocation="placeIdentifier.xsd"/>
+  <include schemaLocation="../../../../schemas.isotc211.org/19155/gpi/1.0//placeIdentifier.xsd"/>
 </schema>

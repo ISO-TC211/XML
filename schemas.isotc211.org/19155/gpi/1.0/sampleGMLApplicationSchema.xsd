@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:ex="http://sample.net/sample" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sample.net/sample" elementFormDefault="qualified" version="1.0">
-    <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/>
+<xsd:schema 
+	xmlns:ex="http://sample.net/sample" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:sch="http://www.ascc.net/xml/schematron" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://sample.net/sample" 
+	elementFormDefault="qualified" 
+	version="1.0">
+    <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <!-- When a user wants to make a link from his/her application schema to PI specified in this international standard, the 
         user should define an element to refer PI in his/her application schema. A sample GML application schema which contains 
         two features that refer PI as one of their properties is shown in the listing below.

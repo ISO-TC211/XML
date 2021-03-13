@@ -87,8 +87,7 @@
 			<xs:enumeration value="RelativeRadiometricCalibration"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!--........................................................................................................
--->
+	<!--........................................................................................................ -->
 	<xs:element name="IE_OpticalImage" type="igd:IE_OpticalImageType"/>
 	<xs:complexType name="IE_OpticalImageType">
 		<xs:complexContent>
@@ -100,8 +99,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!--........................................................................................................
--->
+	<!--........................................................................................................ -->
 	<xs:element name="opticalImageType" type="igd:IE_OpticalImageTypeCode"/>
 	<xs:simpleType name="IE_OpticalImageTypeCode">
 		<xs:restriction base="xs:string">

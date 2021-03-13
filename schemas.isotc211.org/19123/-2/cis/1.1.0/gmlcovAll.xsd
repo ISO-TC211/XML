@@ -18,6 +18,8 @@
     <!-- ========================================================= -->
     <!-- Includes and imports                                      -->
     <!-- ========================================================= -->
-    <include schemaLocation="coverage.xsd"/>
-    <include schemaLocation="grids.xsd"/>
+    <include schemaLocation="../../../../19123/-2/cis/1.1.0/coverage.xsd"/>
+    <include schemaLocation="../../../../19123/-2/cis/1.1.0/grids.xsd"/>
+    <include schemaLocation="../../../../19123/-/cis/1.1.0/codeLists.xsd"/>
+    <include schemaLocation="../../../../19123/-/cis/1.1.0/gridPoint.xsd"/>
 </schema>

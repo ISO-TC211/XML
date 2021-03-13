@@ -3,7 +3,7 @@
   xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified"
     targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
-  xmlns:igd="https://schemas.isotc211.org/19163/-2/igd/1.2"
+  xmlns:igd="https://schemas.isotc211.org/19163/-1/igd/1.1"
   xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
@@ -12,24 +12,22 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
-    version="1.1.0"
-    >
+  version="1.1.0">
     <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
     <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19163/-2/igd/1.2" schemaLocation="../../../../19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19163/-1/igd/1.1" schemaLocation="../../../../19163/-1/igd/1.1.0/IE_ImageryAndGriddedData.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
     <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="../../../../19115/-1/msr/1.3.0/msr.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/1.1.0/codeLists.xsd"/>
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="../../../../19123/-/cis/1.1.0/gridPoint.xsd"/>
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
-  
-    
-    <!-- ================== Fitting Function ================= -->
+<!-- ================== Fitting Function ================= -->
     <complexType name="SD_FittingFunction_PropertyType">
         <sequence minOccurs="0">
             <element ref="smi:SD_FittingFunction"/>
@@ -246,7 +244,7 @@
         <complexContent>
             <extension base="smi:SD_GriddedGCPCollection_Type">
                 <sequence>
-                    <element name="interpolation" type="smi:CV_InterpolationMethod_PropertyType">
+                    <element name="interpolation" type="gmlcov:CV_InterpolationMethod_PropertyType">
                         <annotation>
                             <documentation>method to interpolate the location between
                                 GCPs</documentation>
@@ -256,15 +254,15 @@
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="CV_InterpolationMethod_PropertyType">
+  <!-- <complexType name="CV_InterpolationMethod_PropertyType">
         <sequence minOccurs="0">
             <element ref="smi:CV_InterpolationMethod"/>
         </sequence>
         <attribute ref="gco:nilReason"/>
     </complexType>
     <element name="CV_InterpolationMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
-    
-    <!-- ============= Correspondence Model ============== -->
+    -->
+  <!-- ============= Correspondence Model ============== -->
     <complexType name="SD_CorrespondenceModel_PropertyType">
         <sequence minOccurs="0">
             <element ref="smi:SD_CorrespondenceModel"/>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Image and Gridded Data (IGD) Version 1.2.0</title>
+      <style>
+						h1 { font-family: Arial; color: DarkBlue; font-size: 14pt; font-weight:bold; }
+						body { font-family: Arial; color: black; font-size: 10pt;}
+						td { font-family: Arial; color: black; font-size: 10pt;}
+						table, th, td {border: 1px solid black; padding: 2px; border-spacing: 1px;}
+						.paraSmall {font-size: 0.7em; font-style: italic;}
+						.metagroup { font-family: Arial; color: #0099FF; font-size: 10pt; font-weight:bold; }
+					</style>
+   </head>
+   
+
+   <body>
+      <h1>Image and Gridded Data (IGD) Version 1.2.0</h1>
+      <img title="Overview of classes in the igd namespace" alt="Overview UML diagram of classes from Metadata for Data Quality (IGD) in the igd namespace" width="750" src="./igdStandardsPackageRelationships.png"/>
+      <h2>Description</h2>
+      <p>Image and Gridded Data (IGD) is an XML Schema implementation of abstract classes for ISO 19163, Geographic Information - Content components and encoding rules for imagery and gridded Data.  
+         It includes elements for defining geometry and functions for coverages. 
+         The XML schema was encoded using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <h2>XML Namespace for Image and Gridded Data (IGD) Version: 1.2</h2>
+      <p>The namespace URI for Image and Gridded Data (IGD) Version 1.2.0 is <b>https://schemas.isotc211.org/19163/-2/igd/1.2</b>.
+      </p>
+      <h2>XML Schema for Image and Gridded Data (IGD) Version 1.2.0</h2>
+      <p>
+         <b><a href="../../../../19163/-2/igd/1.2.0/igd.xsd">igd.xsd</a></b> is the XML Schema document to be referenced by XML documents containing XML elements
+         in the igd namespace or by XML Schema documents importing the igd 1.2 namespace. 
+         This XML schema includes (indirectly) all the implemented concepts of the igd namespace, but it does not contain the declaration of any types.
+      </p>
+        <h2>Related XML Schema for igd 1.2</h2>
+      <p>
+         <b><a href="../../../../19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd</a></b> implements the UML conceptual schema defined in ISO 19163, Geographic Information - - Content components and encoding rules for imagery and gridded Data. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+       </p>
+      <a href="https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd</a> contains the folowing classes:
+      <ul>
+         <li>CV_AbstractCoverage</li>
+      <li>CV_CommonPointRule</li>
+      <li>SC_CRS</li>
+      <li>IE_ImageryAndGriddedData</li>
+      <li>CV_InterpolationMethod</li>
+      <li>IE_Georectified</li>
+      <li>IE_LocationGCP</li>
+      <li>IE_Georeferenceable</li>
+      <li>SD_SensorModel</li>
+      <li>SD_GCPRepository</li>
+      <li>SD_ImageIdentifiableGCP</li>
+      <li>SD_GCPLocation</li>
+      <li>CV_GridCoordinates</li>
+      </ul>
+      <a href="https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ImageryAndGriddedData.xsd</a> contains the folowing codelist/enumerations:
+      <ul>
+         <li>IE_GeolocationSourceCode</li>
+      <li>IE_GeometricCorrectionModelCode</li>
+      </ul>
+      <p>
+         <b><a href="../../../../19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd</a></b> implements the UML conceptual schema defined in ISO 19163, Geographic Information - - Content components and encoding rules for imagery and gridded Data. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_ThematicGriddedData.xsd</a> contains the folowing classes:
+      <ul>
+         <li>IE_ThematicGriddedData</li>
+      <li>IE_CategoricalGriddedData</li>
+      <li>IE_NumericalGriddedData</li>
+      <li>IE_CategoricalValueAndColour</li>
+      <li>IE_ColourPalette</li>
+      </ul>
+       <p>
+         <b><a href="../../../../19163/-2/igd/1.2.0/IE_Imagery.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd</a></b> implements the UML conceptual schema defined in ISO 19163, Geographic Information - - Content components and encoding rules for imagery and gridded Data. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+      </p>
+      <a href="https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd</a> contains the folowing classes:
+      <ul>
+         <li>IE_MosaicElement</li>
+      <li>IE_Imagery</li>
+      <li>IE_OpticalImage</li>
+      <li>IE_ActiveMWData</li>
+      <li>IE_PassiveMWData</li>
+      <li>IE_SARData</li>
+      <li>IE_SARComplexData</li>
+      <li>IE_SARDopplerCentroidParameter</li>
+      <li>IE_OrbitParameter</li>
+      <li>IE_SARAmplitudeData</li>
+      <li>IE_RadiometerData</li>
+      <li>IE_PMWBand</li>
+      <li>IE_PMWChannelInfo</li>
+      <li>IE_SyntheticImage</li>
+      <li>IE_SimulatedImage</li>
+      <li>IE_FusedImage</li>
+      <li>IE_SARSensor</li> 
+      </ul>
+      <a href="https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/IE_Imagery.xsd</a> contains the folowing codelist/enumerations:
+      <ul>
+         <li>IE_ProcessingActionCode</li>
+      <li>IE_RadiometricCalibrationTypeCode</li>
+      <li>IE_OpticalImageTypeCode</li>
+      <li>IE_OpticalSensorTypeCode</li>
+      <li>IE_SARImagingModeCode</li>
+      <li>IE_SARComplexLayerCode</li>
+      <li>IE_PMWScanningModeCode</li>
+      <li>IE_PMWBandNameCode</li>
+      <li>IE_PMWApertureTypeCode</li>
+      <li>IE_ChannelPropertyCode</li>
+   </ul>
+      <p>
+         <b><a href="../../../../19163/-2/igd/1.2.0/dataQualityElement.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/dataQualityElement.xsd</a></b> implements the UML conceptual schema defined in ISO 19163, Geographic Information - Data Quality. 
+         It was created using the encoding rules defined in ISO 19118, ISO 19139.
+         <img title="Classes in the data quality elements schema of igd namespace" alt="UML diagram of classes in the data quality elements schema from Metadata for Data Quality (IGD) in the igd namespace" width="750" src="./igdElementsClass.png"/>
+      </p>
+      <a href="https://schemas.isotc211.org/19163/-2/igd/1.2.0/dataQualityElement.xsd">https://schemas.isotc211.org/19163/-2/igd/1.2.0/dataQualityElement.xsd</a> contains the folowing classes:
+      <ul>
+         <li>DQ_AbsoluteExternalPositionalAccuracy</li>
+         <li>DQ_AccuracyOfATimeMeasurement</li>
+         <li>AbstractDQ_Completeness</li>
+         <li>DQ_CompletenessCommission</li>
+         <li>DQ_CompletenessOmission</li>
+         <li>DQ_ConceptualConsistency</li>
+         <li>DQ_DataInspection</li>
+         <li>DQ_DataQuality</li>
+         <li>DQ_DomainConsistency</li>
+         <li>AbstractDQ_Element</li>
+         <li>DQ_FormatConsistency</li>
+         <li>DQ_GriddedDataPositionalAccuracy</li>
+         <li>AbstractDQ_LogicalConsistency</li>
+         <li>DQ_MeasureReference</li>
+         <li>DQ_NonQuantitativeAttributeCorrectness</li>
+         <li>AbstractDQ_PositionalAccuracy</li>
+         <li>DQ_QuantitativeAttributeAccuracy</li>
+         <li>DQ_RelativeInternalPositionalAccuracy</li>
+         <li>DQ_StandaloneQualityReportInformation</li>
+         <li>DQ_TemporalConsistency</li>
+         <li>AbstractDQ_TemporalQuality</li>
+         <li>DQ_TemporalValidity</li>
+         <li>AbstractDQ_ThematicAccuracy</li>
+         <li>DQ_ThematicClassificationCorrectness</li>
+         <li>DQ_TopologicalConsistency</li>
+         <li>DQ_UsabilityElement</li>
+      </ul>
+        <h2>Related XML Namespaces for ISO 19163 IGD 1.2</h2> 
+      The IGD 1.2.0 imports these other namespaces: 
+       <table>
+         <tr>
+            <th>Name</th>
+            <th>Standard Prefix</th>
+            <th>Namespace Location</th>
+            <th>Schema Location</th>
+         </tr>
+            <tr>
+            <td>Geographic Common Objects</td>
+            <td>gco</td>
+            <td><a href="https://schemas.isotc211.org/19103/-/gco/1.2.0">https://schemas.isotc211.org/19103/-/gco/1.2</a></td>
+            <td>../../../../19103/-/gco/1.2.0/gco.xsd</td>
+         </tr>
+         <tr>
+            <td>CITataion and responsibility</td>
+            <td>cit</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/cit/1.3">https://schemas.isotc211.org/19115/-1/cit/1.3</a></td>
+            <td>../../../../19115/-1/cit/1.3.0/cit.xsd</td>
+         </tr>
+         <tr>
+            <td>Geographic EXtent</td>
+            <td>gex</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/gex/1.3">https://schemas.isotc211.org/19115/-1/gex/1.3</a></td>
+            <td>../../../../19115/-1/gex/1.3.0/gex.xsd</td>
+         </tr>
+         <tr>
+            <td>Metadata for Resource Identification</td>
+            <td>mri</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mri/1.3">https://schemas.isotc211.org/19115/-1/mri/1.3</a></td>
+            <td>../../../../19115/-1/mri/1.3.0/mri.xsd</td>
+         </tr>
+         <tr>
+             <td>Metadata for Spatial Representation</td>
+             <td>msr</td>
+             <td><a href="https://schemas.isotc211.org/19115/-1/msr/1.3">https://schemas.isotc211.org/19115/-1/msr/1.3</a></td>
+             <td>../../../../19115/-1/msr/1.3.0/msr.xsd</td>
+          </tr>
+          <tr>
+             <td>Metadata Resource Content</td>
+             <td>mrc</td>
+             <td><a href="https://schemas.isotc211.org/19115/-1/mrc/1.3">https://schemas.isotc211.org/19115/-1/mrc/1.3</a></td>
+             <td>../../../../19115/-1/mrc/1.3.0/mrc.xsd</td>
+          </tr>
+         <tr>
+            <td>Metadata fgor ACquisuition</td>
+            <td>mac</td>
+            <td><a href="https://schemas.isotc211.org/19115/-2/mac/2.2">https://schemas.isotc211.org/19115/-2/mac/2.2</a></td>
+            <td>../../../../19115/-2/mac/2.2.0/mac.xsd</td>
+         </tr>
+         <tr>
+             <td>Gegraphic Markup Language</td>
+             <td>gml</td>
+             <td><a href="http://schemas.opengis.net/gml/3.2">http://schemas.opengis.net/gml/3.2</a></td>
+             <td>http://schemas.opengis.net/gml/3.2.1/gml.xsd</td>
+          </tr>
+           <tr>
+              <td>Gegraphic Markup language Wrapper</td>
+              <td>gml</td>
+              <td><a href="https://schemas.isotc211.org/19136/-/gmw/1.1">https://schemas.isotc211.org/19136/-/gmw/1.1</a></td>
+              <td>https://schemas.isotc211.org/19136/-/gmw/1.1.0/gmw.xsd</td>
+           </tr>
+         <tr>
+            <td>Application Schema for Coverages</td>
+            <td>gmlcov</td>
+            <td><a href="http://schemas.opengis.net/gmlcov/1.0">http://schemas.opengis.net/gmlcov/1.0</a></td>
+            <td>http://schemas.opengis.net/gmlcov/1.0/coverage.xsd</td>
+         </tr>
+      </table>
+      <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
+      <hr>
+      <p class="paraSmall">&#169; ISO. Written by hands Version: 2010-02-26/p>
+   </body>
+</html>

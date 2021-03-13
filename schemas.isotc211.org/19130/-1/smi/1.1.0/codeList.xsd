@@ -10,6 +10,7 @@
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
     version="1.1.0"
     >
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>   
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>   
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>

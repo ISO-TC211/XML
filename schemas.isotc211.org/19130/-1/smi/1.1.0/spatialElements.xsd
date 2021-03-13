@@ -23,6 +23,7 @@
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
     <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="../../../../19115/-2/mac/2.2.0/mac.xsd"/>
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
     <include schemaLocation="../../../../19130/-1/smi/1.1.0/codeList.xsd"/>
     <include schemaLocation="../../../../19130/-2/smi/1.1.0/codeList.xsd"/>
     <include schemaLocation="../../../../19130/-2/smi/1.1.0/spatialElements.xsd"/>
