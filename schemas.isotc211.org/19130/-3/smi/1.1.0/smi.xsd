@@ -5,6 +5,7 @@
     targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
   xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
   version="1.1.0"
     >
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
