@@ -3,7 +3,7 @@
   xmlns="http://www.w3.org/2001/XMLSchema" 
 xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.2" 
 xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
-xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1.1"
+xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
 xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3" 
 xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
 xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
@@ -16,7 +16,7 @@ version="1.3.0"
   <include schemaLocation="mrc.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1" schemaLocation="../../../../19136/-/gmw/1.1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="../../../../19136/-1/gmw/1.1.0/gmw.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.2" schemaLocation="../../../../19110/-/fcc/2.2.0/fcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
