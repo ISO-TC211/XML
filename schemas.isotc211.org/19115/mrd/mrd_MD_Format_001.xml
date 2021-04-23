@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mrd:MD_Format xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mrd/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mrd/1.3.0/distribution.xsd">
+    <mrd:formatSpecificationCitation><cit:CI_Citation>
+        <cit:title></cit:title>
+    </cit:CI_Citation></mrd:formatSpecificationCitation>
+    <mrd:amendmentNumber><gco:CharacterString>version 1</gco:CharacterString></mrd:amendmentNumber>
+    <mrd:fileDecompressionTechnique><gco:CharacterString>gzip</gco:CharacterString></mrd:fileDecompressionTechnique>
+    <mrd:medium><mrd:MD_Medium></mrd:MD_Medium></mrd:medium>
+    <mrd:formatDistributor><mrd:MD_Distributor>
+        <mrd:distributorContact><cit:CI_Responsibility>
+            <cit:role></cit:role>
+            <cit:party></cit:party>
+        </cit:CI_Responsibility></mrd:distributorContact>
+    </mrd:MD_Distributor></mrd:formatDistributor>
+</mrd:MD_Format>

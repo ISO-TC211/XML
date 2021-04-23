@@ -65,6 +65,9 @@
           <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="mcc:Abstract_Constraints_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType"/>
           <element minOccurs="0" name="metadataMaintenance" type="mcc:Abstract_MaintenanceInformation_PropertyType"/>
+          <!-- Add missing reference -->
+          <element minOccurs="0" maxOccurs="unbounded" name="describes" type="mda:AbstractDS_Resource_PropertyType"/>
+          <!-- end add missing reference -->
           <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType"/>
         </sequence>
       </extension>

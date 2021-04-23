@@ -18,7 +18,8 @@
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
     
     <!-- =============== 19130-2 ==================== -->
-    <element name="SE_ATDimensionType" substitutionGroup="gco:CharacterString" type="smi:SE_ATDimensionType_Type">
+    <element name="SE_ATDimensionType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATDimensionType" substitutionGroup="gco:CharacterString" type="smi:SE_ATDimensionType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -39,7 +40,8 @@
     </simpleType>
     
     
-    <element name="SE_ATMeasType" substitutionGroup="gco:CharacterString" type="smi:SE_ATMeasType_Type">
+    <element name="SE_ATMeasType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATMeasType" substitutionGroup="gco:CharacterString" type="smi:SE_ATMeasType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -67,7 +69,8 @@
     </simpleType>
     
     
-    <element name="SE_ATPointType" substitutionGroup="gco:CharacterString" type="smi:SE_ATPointType_Type">
+    <element name="SE_ATPointType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATPointType" substitutionGroup="gco:CharacterString" type="smi:SE_ATPointType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -101,7 +104,8 @@
     </simpleType>
     
     
-    <element name="SE_ATStatisticType" substitutionGroup="gco:CharacterString" type="smi:SE_ATStatisticType_Type">
+    <element name="SE_ATStatisticType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATStatisticType" substitutionGroup="gco:CharacterString" type="smi:SE_ATStatisticType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -132,7 +136,8 @@
         </restriction>
     </simpleType>
     
-    <element name="SE_DataModelingMethod" substitutionGroup="gco:CharacterString" type="smi:SE_DataModelingMethod_Type">
+    <element name="SE_DataModelingMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_DataModelingMethod" substitutionGroup="gco:CharacterString" type="smi:SE_DataModelingMethod_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -156,7 +161,8 @@
     </simpleType>
 
 
-    <element name="SE_SARCollectionMode" substitutionGroup="gco:CharacterString" type="smi:SE_SARCollectionMode_Type">
+    <element name="SE_SARCollectionMode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SARCollectionMode" substitutionGroup="gco:CharacterString" type="smi:SE_SARCollectionMode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -176,7 +182,8 @@
     </simpleType>
     
     
-    <element name="SE_SonarDeploymentType" substitutionGroup="gco:CharacterString" type="smi:SE_SonarDeploymentType_Type">
+    <element name="SE_SonarDeploymentType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SonarDeploymentType" substitutionGroup="gco:CharacterString" type="smi:SE_SonarDeploymentType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -196,7 +203,8 @@
     </simpleType>
     
     
-    <element name="SE_SonarMode" substitutionGroup="gco:CharacterString" type="smi:SE_SonarMode_Type">
+    <element name="SE_SonarMode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SonarMode" substitutionGroup="gco:CharacterString" type="smi:SE_SonarMode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -218,7 +226,8 @@
     </simpleType>
     
     
-    <element name="SE_SonarType" substitutionGroup="gco:CharacterString" type="smi:SE_SonarMode_Type">
+    <element name="SE_SonarType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SonarType" substitutionGroup="gco:CharacterString" type="smi:SE_SonarMode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -237,7 +246,8 @@
     </simpleType>
     
 
-    <element name="SE_TideAdjustType" substitutionGroup="gco:CharacterString" type="smi:SE_TideAdjustType_Type">
+    <element name="SE_TideAdjustType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_TideAdjustType" substitutionGroup="gco:CharacterString" type="smi:SE_TideAdjustType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -256,7 +266,8 @@
     </simpleType>
     
     
-    <element name="SE_InSARCollectionModeType" substitutionGroup="gco:CharacterString" type="smi:SE_InSARCollectionModeType_Type">
+    <element name="SE_InSARCollectionModeType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_InSARCollectionModeType" substitutionGroup="gco:CharacterString" type="smi:SE_InSARCollectionModeType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -275,7 +286,8 @@
     </simpleType>
     
     
-    <element name="SE_InSARTransmitReceiveType" substitutionGroup="gco:CharacterString" type="smi:SE_InSARTransmitReceiveType_Type">
+    <element name="SE_InSARTransmitReceiveType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_InSARTransmitReceiveType" substitutionGroup="gco:CharacterString" type="smi:SE_InSARTransmitReceiveType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -294,7 +306,8 @@
     </simpleType> 
 
 
-    <element name="SE_ATErrorType" substitutionGroup="gco:CharacterString" type="smi:SE_ATErrorType_Type">
+    <element name="SE_ATErrorType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATErrorType" substitutionGroup="gco:CharacterString" type="smi:SE_ATErrorType_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -313,7 +326,8 @@
     </simpleType>
 
 
-    <element name="SE_ATPeripheralDevice" substitutionGroup="gco:CharacterString" type="smi:SE_ATPeripheralDevice_Type">
+    <element name="SE_ATPeripheralDevice" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATPeripheralDevice" substitutionGroup="gco:CharacterString" type="smi:SE_ATPeripheralDevice_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>

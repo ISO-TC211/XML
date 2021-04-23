@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cit:CI_Individual xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/cit/1.3.0/citation.xsd">
+ <cit:name><gco:CharacterString>Smith, Joe</gco:CharacterString></cit:name>
+ <cit:contactInfo><cit:CI_Contact xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/cit/1.3.0/citation.xsd">
+  <cit:phone>
+   <cit:CI_Telephone>
+    <cit:number>
+     <gco:CharacterString>19021234567</gco:CharacterString>
+    </cit:number>
+    <cit:numberType>
+     <cit:CI_TelephoneTypeCode codeList="telephoneTypeCodes" codeListValue="business"/>
+    </cit:numberType>
+   </cit:CI_Telephone>
+  </cit:phone>
+  <cit:address>
+   <cit:CI_Address xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+    xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+    xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/cit/1.3.0/citation.xsd">
+    <cit:deliveryPoint>
+     <gco:CharacterString>1 Challenger Drive</gco:CharacterString>
+    </cit:deliveryPoint>
+    <cit:city>
+     <gco:CharacterString>Dartmouth</gco:CharacterString>
+    </cit:city>
+    <cit:administrativeArea>
+     <gco:CharacterString>Nova Scotia</gco:CharacterString>
+    </cit:administrativeArea>
+    <cit:postalCode>
+     <gco:CharacterString>B2Y4A2</gco:CharacterString>
+    </cit:postalCode>
+    <cit:country>
+     <gco:CharacterString>Canada</gco:CharacterString>
+    </cit:country>
+    <cit:electronicMailAddress>
+     <gco:CharacterString>tobias.spears@dfo-mpo.gc.ca</gco:CharacterString>
+    </cit:electronicMailAddress>
+   </cit:CI_Address>
+  </cit:address>
+  <cit:onlineResource>
+   <cit:CI_OnlineResource>
+    <cit:linkage>
+     <gco:CharacterString>https://www.google.ca</gco:CharacterString>
+    </cit:linkage>
+    <cit:protocol>
+     <gco:CharacterString>http GET</gco:CharacterString>
+    </cit:protocol>
+    <cit:applicationProfile>
+     <gco:CharacterString>Sample application profile</gco:CharacterString>
+    </cit:applicationProfile>
+    <cit:name>
+     <gco:CharacterString>Sample online resource</gco:CharacterString>
+    </cit:name>
+    <cit:description>
+     <gco:CharacterString>Sample description</gco:CharacterString>
+    </cit:description>
+    <cit:function>
+     <cit:CI_OnLineFunctionCode codeList="onlineFunctionCodes" codeListValue="GET">GET</cit:CI_OnLineFunctionCode>
+    </cit:function>
+    <cit:protocolRequest>
+     <gco:CharacterString>HTTP</gco:CharacterString>
+    </cit:protocolRequest>
+   </cit:CI_OnlineResource>
+  </cit:onlineResource>
+ </cit:CI_Contact></cit:contactInfo>
+ <cit:partyIdentifier><mcc:MD_Identifier>
+  <mcc:code><gco:CharacterString>117</gco:CharacterString></mcc:code>
+  <mcc:codeSpace><gco:CharacterString>localCodeSpace</gco:CharacterString></mcc:codeSpace>
+  <mcc:version><gco:CharacterString>1.0</gco:CharacterString></mcc:version>
+  <mcc:description><gco:CharacterString>Employee ID</gco:CharacterString></mcc:description>
+ </mcc:MD_Identifier></cit:partyIdentifier>
+ <cit:positionName>
+  <gco:CharacterString>Sample position</gco:CharacterString>
+ </cit:positionName>
+</cit:CI_Individual>

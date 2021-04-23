@@ -18,7 +18,7 @@
    xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
    xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
    xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
-   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 http://standards.iso.org/iso/19115/-3/mda/2.0/mda.xsd">
+   xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/2.0 https://schemas.isotc211.org/19115/-3/mda/2.0/mda.xsd">
    <!-- 
    This is a sample metadata record for the complete metadata conformance class.
    It contains required elements from the mdb, mcc (cit, gco), lan, mri,

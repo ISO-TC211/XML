@@ -17,7 +17,7 @@
 	<!-- ================================== Imports ================================== -->
 	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="https://schemas.isotc211.org/19139/-/gmd/1.0/citation.xsd"/>
 	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="https://schemas.isotc211.org/19139/-/gco/1.0/gco.xsd"/>
-	<xs:import namespace="http://www.isotc211.org/2005/gmx"schemaLocation="https://schemas.isotc211.org/19139/-/gmx/1.0/gmx.xsd"/>
+	<xs:import namespace="http://www.isotc211.org/2005/gmx" schemaLocation="https://schemas.isotc211.org/19139/-/gmx/1.0/gmx.xsd"/>
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
 	<!-- ================================== Classes ================================= -->

@@ -21,7 +21,8 @@
     
     <!-- =============== 19130-1 ==================== -->
     
-    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="smi:SD_ShapeCode_Type">
+    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <!--    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="smi:SD_ShapeCode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -41,8 +42,8 @@
         </restriction>
     </simpleType>
     
-    
-    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="smi:SD_SurfaceCode_Type">
+    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="smi:SD_SurfaceCode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -63,7 +64,8 @@
     </simpleType>
     
      
-    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="smi:SD_SAROrientationCode_Type">
+    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="smi:SD_SAROrientationCode_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>
@@ -82,7 +84,8 @@
     </simpleType>
     
     
-    <element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="smi:SD_RotationSequence_Type">
+    <element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--<element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="smi:SD_RotationSequence_Type"> -->
         <annotation>
             <documentation>function performed by the responsible party</documentation>
         </annotation>

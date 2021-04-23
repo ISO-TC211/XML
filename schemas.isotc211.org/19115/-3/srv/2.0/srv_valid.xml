@@ -35,11 +35,11 @@
          <!-- Valid for rule.srv.harresourcereforresource -->
          <srv:coupledResource>
             <srv:SV_CoupledResource>
-               <srv:resource uuidref="MD02"/>
+               <srv:resource xlink:href="MD02"/>
             </srv:SV_CoupledResource>
          </srv:coupledResource>
          <!-- Valid for rule.srv.operateddataset -->
-         <srv:operatedDataset uuidref="MD01"/>
+         <srv:operatedDataset xlink:href="MD01"/>
          <!-- Valid for rule rule.srv.chainoroperations -->
          <srv:containsOperations>
             <srv:SV_OperationMetadata>
@@ -66,7 +66,7 @@
          <mri:abstract/>
          <srv:serviceType/>
          <!-- Valid for rule.srv.operateddataset -->
-         <srv:operatesOn uuidref="MD01"/>
+         <srv:operatesOn xlink:href="MD01"/>
       </srv:SV_ServiceIdentification>
    </mdb:identificationInfo>
 </mdb:MD_Metadata>

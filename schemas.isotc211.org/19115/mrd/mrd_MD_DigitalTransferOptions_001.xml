@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mrd:MD_DigitalTransferOptions xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+ xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mrd/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mrd/1.3.0/distribution.xsd">
+<mrd:unitsOfDistribution><gco:CharacterString>byte</gco:CharacterString></mrd:unitsOfDistribution>
+ <mrd:transferSize><gco:Real>1000</gco:Real></mrd:transferSize>
+  <mrd:onLine><cit:CI_OnlineResource>
+   <cit:linkage></cit:linkage>
+  </cit:CI_OnlineResource></mrd:onLine>
+ <mrd:onLine><cit:CI_OnlineResource>
+  <cit:linkage></cit:linkage>
+ </cit:CI_OnlineResource></mrd:onLine>
+ <mrd:offLine><mrd:MD_Medium></mrd:MD_Medium></mrd:offLine>
+ <mrd:transferFrequency><gco:TM_PeriodDuration>P5Y2M10D</gco:TM_PeriodDuration></mrd:transferFrequency>
+ <mrd:distributionFormat><mrd:MD_Format>
+  <mrd:formatSpecificationCitation></mrd:formatSpecificationCitation>
+ </mrd:MD_Format></mrd:distributionFormat>
+</mrd:MD_DigitalTransferOptions>

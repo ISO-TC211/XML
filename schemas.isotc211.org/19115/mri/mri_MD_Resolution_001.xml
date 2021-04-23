@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mri:MD_Resolution xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+ xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+ xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+ xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mri/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mri/1.3.0/identification.xsd">
+    <!--<mri:distance><gco:Distance uom="meter">10</gco:Distance></mri:distance>-->
+    <!--<mri:angularDistance><gco:Angle uom="degrees">45</gco:Angle></mri:angularDistance>-->
+    <!--<mri:equivalentScale><mri:MD_RepresentativeFraction>
+        <mri:denominator><gco:Integer>20</gco:Integer></mri:denominator>
+    </mri:MD_RepresentativeFraction></mri:equivalentScale>-->
+    <!--<mri:levelOfDetail><gco:CharacterString>foot</gco:CharacterString></mri:levelOfDetail>-->
+    <mri:vertical><gco:Distance uom="meter">100</gco:Distance></mri:vertical>
+</mri:MD_Resolution>

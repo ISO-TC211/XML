@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mrd:MD_Distribution xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+ xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mrd/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mrd/1.3.0/distribution.xsd">
+ <mrd:description><gco:CharacterString></gco:CharacterString></mrd:description>
+ <mrd:distributionFormat><mrd:MD_Format>
+  <mrd:formatSpecificationCitation></mrd:formatSpecificationCitation>
+ </mrd:MD_Format></mrd:distributionFormat>
+ <mrd:distributor><mrd:MD_Distributor>
+  <mrd:distributorContact></mrd:distributorContact>
+ </mrd:MD_Distributor></mrd:distributor>
+ <mrd:transferOptions><mrd:MD_DigitalTransferOptions></mrd:MD_DigitalTransferOptions></mrd:transferOptions>
+</mrd:MD_Distribution>

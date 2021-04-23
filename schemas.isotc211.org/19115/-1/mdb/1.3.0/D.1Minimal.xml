@@ -31,35 +31,35 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-    https://schemas.isotc211.org/19103/-/gco/1.2 ../../../../19103/-/gco/1.2.0/gco.xsd
-    https://schemas.isotc211.org/19103/-/gcx/1.2 ../../../../19103/-/gcx/1.2.0/gcx.xsd
-    https://schemas.isotc211.org/19110/-/fcc/2.2 ../../../../19110/-/fcc/2.2.0/fcc.xsd
-    https://schemas.isotc211.org/19110/-/gfc/2.2 ../../../../19110/-/gfc/2.2.0/gfc.xsd
-    https://schemas.isotc211.org/19111/-/rbc/3.1 ../../../../19111/-/rbc/3.1.0/rbc.xsd
-    https://schemas.isotc211.org/19115/-1/cit/1.3 ../../../../19115/-1/cit/1.3.0/cit.xsd
-    https://schemas.isotc211.org/19115/-1/gex/1.3 ../../../../19115/-1/gex/1.3.0/gex.xsd
-    https://schemas.isotc211.org/19115/-1/lan/1.3 ../../../../19115/-1/lan/1.3.0/lan.xsd
-    https://schemas.isotc211.org/19115/-2/mac/2.2 ../../../../19115/-2/mac/2.2.0/mac.xsd
-    https://schemas.isotc211.org/19115/-1/mas/1.3 ../../../../19115/-1/mas/1.3.0/mas.xsd
-    https://schemas.isotc211.org/19115/-1/mcc/1.3 ../../../../19115/-1/mcc/1.3.0/mcc.xsd
-    https://schemas.isotc211.org/19115/-1/mco/1.3 ../../../../19115/-1/mco/1.3.0/mco.xsd
-    https://schemas.isotc211.org/19115/-1/mda/1.3 ../../../../19115/-1/mda/1.3.0/mda.xsd
-    https://schemas.isotc211.org/19115/-1/mdb/1.3 ../../../../19115/-1/mdb/1.3.0/mdb.xsd
-    https://schemas.isotc211.org/19115/-1/mmi/1.3 ../../../../19115/-1/mmi/1.3.0/mmi.xsd
-    https://schemas.isotc211.org/19115/-1/mpc/1.3 ../../../../19115/-1/mpc/1.3.0/mpc.xsd
-    https://schemas.isotc211.org/19115/-1/mrc/1.3 ../../../../19115/-1/mrc/1.3.0/mrc.xsd
-    https://schemas.isotc211.org/19115/-1/mrc/1.3 ../../../../19115/-2/mrc/2.2.0/contentInformationImagery.xsd
-    https://schemas.isotc211.org/19115/-1/mrd/1.3 ../../../../19115/-1/mrd/1.3.0/mrd.xsd
-    https://schemas.isotc211.org/19115/-1/mri/1.3 ../../../../19115/-1/mri/1.3.0/mri.xsd
-    https://schemas.isotc211.org/19115/-1/mrl/1.3 ../../../../19115/-1/mrl/1.3.0/mrl.xsd
-    https://schemas.isotc211.org/19115/-1/mrl/1.3 ../../../../19115/-2/mrl/2.2.0/lineageImagery.xsd
-    https://schemas.isotc211.org/19115/-1/mrs/1.3 ../../../../19115/-1/mrs/1.3.0/mrs.xsd
-    https://schemas.isotc211.org/19115/-1/msr/1.3 ../../../../19115/-1/msr/1.3.0/msr.xsd
-    https://schemas.isotc211.org/19115/-1/msr/1.3 ../../../../19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd
-    https://schemas.isotc211.org/19115/-1/srv/1.3 ../../../../19115/-1/srv/1.3.0/srv.xsd
-    https://schemas.isotc211.org/19136/-1/gmw/1.1 ../../../../19136/-1/gmw/1.1.0/gmw.xsd
-    https://schemas.isotc211.org/19157/-/dqc/1.2 ../../../../19157/-/dqc/1.2.0/dqc.xsd
-    https://schemas.isotc211.org/19157/-/mdq/1.2 ../../../../19157/-/mdq/1.2.0/mdq.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.2 https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd
+    https://schemas.isotc211.org/19103/-/gcx/1.2 https://schemas.isotc211.org/19103/-/gcx/1.2.0/gcx.xsd
+    https://schemas.isotc211.org/19110/-/fcc/2.2 https://schemas.isotc211.org/19110/-/fcc/2.2.0/fcc.xsd
+    https://schemas.isotc211.org/19110/-/gfc/2.2 https://schemas.isotc211.org/19110/-/gfc/2.2.0/gfc.xsd
+    https://schemas.isotc211.org/19111/-/rbc/3.1 https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd
+    https://schemas.isotc211.org/19115/-1/cit/1.3 https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd
+    https://schemas.isotc211.org/19115/-1/gex/1.3 https://schemas.isotc211.org/19115/-1/gex/1.3.0/gex.xsd
+    https://schemas.isotc211.org/19115/-1/lan/1.3 https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd
+    https://schemas.isotc211.org/19115/-2/mac/2.2 https://schemas.isotc211.org/19115/-2/mac/2.2.0/mac.xsd
+    https://schemas.isotc211.org/19115/-1/mas/1.3 https://schemas.isotc211.org/19115/-1/mas/1.3.0/mas.xsd
+    https://schemas.isotc211.org/19115/-1/mcc/1.3 https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd
+    https://schemas.isotc211.org/19115/-1/mco/1.3 https://schemas.isotc211.org/19115/-1/mco/1.3.0/mco.xsd
+    https://schemas.isotc211.org/19115/-1/mda/1.3 https://schemas.isotc211.org/19115/-1/mda/1.3.0/mda.xsd
+    https://schemas.isotc211.org/19115/-1/mdb/1.3 https://schemas.isotc211.org/19115/-1/mdb/1.3.0/mdb.xsd
+    https://schemas.isotc211.org/19115/-1/mmi/1.3 https://schemas.isotc211.org/19115/-1/mmi/1.3.0/mmi.xsd
+    https://schemas.isotc211.org/19115/-1/mpc/1.3 https://schemas.isotc211.org/19115/-1/mpc/1.3.0/mpc.xsd
+    https://schemas.isotc211.org/19115/-1/mrc/1.3 https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd
+    https://schemas.isotc211.org/19115/-1/mrc/1.3 https://schemas.isotc211.org/19115/-2/mrc/2.2.0/contentInformationImagery.xsd
+    https://schemas.isotc211.org/19115/-1/mrd/1.3 https://schemas.isotc211.org/19115/-1/mrd/1.3.0/mrd.xsd
+    https://schemas.isotc211.org/19115/-1/mri/1.3 https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.xsd
+    https://schemas.isotc211.org/19115/-1/mrl/1.3 https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.xsd
+    https://schemas.isotc211.org/19115/-1/mrl/1.3 https://schemas.isotc211.org/19115/-2/mrl/2.2.0/lineageImagery.xsd
+    https://schemas.isotc211.org/19115/-1/mrs/1.3 https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd
+    https://schemas.isotc211.org/19115/-1/msr/1.3 https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd
+    https://schemas.isotc211.org/19115/-1/msr/1.3 https://schemas.isotc211.org/19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd
+    https://schemas.isotc211.org/19115/-1/srv/1.3 https://schemas.isotc211.org/19115/-1/srv/1.3.0/srv.xsd
+    https://schemas.isotc211.org/19136/-1/gmw/1.1 https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmw.xsd
+    https://schemas.isotc211.org/19157/-/dqc/1.2 https://schemas.isotc211.org/19157/-/dqc/1.2.0/dqc.xsd
+    https://schemas.isotc211.org/19157/-/mdq/1.2 https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd
     http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
     ">
     <mdb:contact>

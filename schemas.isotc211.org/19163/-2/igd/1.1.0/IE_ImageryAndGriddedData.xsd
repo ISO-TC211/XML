@@ -6,7 +6,7 @@
   xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/2.1"
   xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/2.1"
   xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/2.1"
-  xmlns:gmw="https://schemas.isotc211.org/19136/-/gmw/1.1"
+  xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
   xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.1"
   xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/2.1"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
@@ -25,8 +25,8 @@
         schemaLocation="../../../../19115/-1/msr/2.1.0/msr.xsd"/>
     <xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/2.1"
         schemaLocation="../../../../19115/-1/cit/2.1.0/citation.xsd"/>
-    <xs:import namespace="https://schemas.isotc211.org/19136/-/gmw/1.1"
-        schemaLocation="../../../../19136/-/gmw/1.1.1/gmlWrapperTypes.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+        schemaLocation="../../../../19136/-1/gmw/1.1.1/gmlWrapperTypes.xsd"/>
     <xs:import namespace="https://schemas.isotc211.org/19115/-2/mac/2.1"
         schemaLocation="../../../../19115/-2/mac/2.1.0/acquisitionInformationImagery.xsd"/>
     <xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/2.1"

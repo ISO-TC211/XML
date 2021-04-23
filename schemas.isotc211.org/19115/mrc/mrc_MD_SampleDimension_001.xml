@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mrc:MD_SampleDimension xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3"
+ xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+ xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.1"
+ xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3"
+ xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+ xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+ xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+ xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.1"
+ xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.1"
+ xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.1"
+ xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+ xmlns:rce="https://schemas.isotc211.org/19111/rce/1.0"
+ xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mrc/1.3.0/content.xsd">
+<mrc:maxValue><gco:Real>1</gco:Real></mrc:maxValue>
+ <mrc:minValue><gco:Real>2</gco:Real></mrc:minValue>
+ <mrc:units><gml:BaseUnit gml:id="m">
+  <gml:identifier codeSpace="">metre</gml:identifier>
+  <gml:unitsSystem/>
+ </gml:BaseUnit></mrc:units>
+ <mrc:scaleFactor><gco:Real>1</gco:Real></mrc:scaleFactor>
+ <mrc:offset><gco:Real>0</gco:Real></mrc:offset>
+ <mrc:meanValue><gco:Real>1.5</gco:Real></mrc:meanValue>
+ <mrc:numberOfValues><gco:Integer>2</gco:Integer></mrc:numberOfValues>
+ <mrc:standardDeviation><gco:Real>0.5</gco:Real></mrc:standardDeviation>
+ <mrc:otherPropertyType><gco:RecordType>
+  <gco:fieldType></gco:fieldType>
+ </gco:RecordType></mrc:otherPropertyType>
+ <mrc:otherProperty></mrc:otherProperty>
+ <mrc:bitsPerValue><gco:Integer>4</gco:Integer></mrc:bitsPerValue>
+ <mrc:rangeElementDescription><mrc:MI_RangeElementDescription>
+  <mrc:name></mrc:name>
+  <mrc:definition></mrc:definition>
+  <mrc:rangeElement></mrc:rangeElement>
+ </mrc:MI_RangeElementDescription></mrc:rangeElementDescription>
+</mrc:MD_SampleDimension>

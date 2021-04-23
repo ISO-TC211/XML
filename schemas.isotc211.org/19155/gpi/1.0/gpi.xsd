@@ -12,5 +12,5 @@
       the declaration of any types.
     </documentation>
   </annotation>
-  <include schemaLocation="../../../../schemas.isotc211.org/19155/gpi/1.0//placeIdentifier.xsd"/>
+  <include schemaLocation="../../../../schemas.isotc211.org/19155/gpi/1.0/placeIdentifier.xsd"/>
 </schema>

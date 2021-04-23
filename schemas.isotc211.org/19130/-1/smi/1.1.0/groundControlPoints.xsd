@@ -27,7 +27,7 @@
     <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
     <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
     <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="../../../../19115/-1/mrs/1.3.0/mrs.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="../../../../19115/-2/msr/1.3.0/spatialRepresentationImagery.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="../../../../19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
     <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
 

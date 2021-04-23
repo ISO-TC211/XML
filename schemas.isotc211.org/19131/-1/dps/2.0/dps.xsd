@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:dps="http://standards.iso.org/iso/19131/dps/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0" xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0" xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" targetNamespace="http://standards.iso.org/iso/19131/dps/1.0" elementFormDefault="qualified" version="1.0rc">
-	<import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/gco/1.0/gco.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/cit/1.0/citation.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mrl/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mrl/1.0/lineage.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mco/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mco/1.0/constraints.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19157/-2/mdq/1.0" schemaLocation="http://standards.iso.org/iso/19157/-2/mdq/1.0/dataQualityElement.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mas/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mas/1.0/applicationSchema.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mrc/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mrc/1.0/content.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mri/1.0/identification.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mcc/1.0/commonClasses.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/gex/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/gex/1.0/extent.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/lan/1.0/language.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mmi/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mmi/1.0/maintenance.xsd"/>
-	<import namespace="http://standards.iso.org/iso/19115/-3/mrs/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mrs/1.0/referenceSystem.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/1.0/citation.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mrl/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mrl/1.0/lineage.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mco/1.0/constraints.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19157/-2/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/mdq/1.0/dataQualityElement.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mas/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mas/1.0/applicationSchema.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mrc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mrc/1.0/content.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mri/1.0/identification.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/commonClasses.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/gex/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gex/1.0/extent.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/lan/1.0/language.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mmi/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mmi/1.0/maintenance.xsd"/>
+	<import namespace="http://standards.iso.org/iso/19115/-3/mrs/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mrs/1.0/referenceSystem.xsd"/>
 	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 	<!--manual changes have been applied to the automatically generated xsd file from ShapeChange-->
 	<element name="AbbreviationEntry" type="dps:AbbreviationEntry_Type" substitutionGroup="gco:AbstractObject">

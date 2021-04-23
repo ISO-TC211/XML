@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cit:CI_OnlineResource xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/cit/1.3.0/citation.xsd">
+    <cit:linkage><gco:CharacterString>https://127.0.0.1</gco:CharacterString></cit:linkage>
+    <cit:protocol><gco:CharacterString>http</gco:CharacterString></cit:protocol>
+    <cit:applicationProfile><gco:CharacterString>Custom REST service</gco:CharacterString></cit:applicationProfile>
+    <cit:name><gco:CharacterString>Sample data access service</gco:CharacterString></cit:name>
+    <cit:description><gco:CharacterString>This is a sample data access service</gco:CharacterString></cit:description>
+    <cit:function><cit:CI_OnLineFunctionCode codeList="onLineFunctionCodes" codeListValue="GET">get</cit:CI_OnLineFunctionCode></cit:function>
+    <cit:protocolRequest><gco:CharacterString>http GET</gco:CharacterString></cit:protocolRequest>
+</cit:CI_OnlineResource>

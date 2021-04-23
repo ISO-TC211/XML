@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	targetNamespace="http://www.opengis.net/gmlcov/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.0/rbc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.0/rbcStubs.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="../../../../19115/-1/mrl/1.3.0/mrl.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:include schemaLocation="cov.xsd"/>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_CoverageByGeometryValuePair_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_CoverageByGeometryValuePair"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_CoverageByGeometryValuePair" type="gmlcov:CV_CoverageByGeometryValuePair_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_CoverageByGeometryValuePair_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_SegmentedCurveCoverage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_SegmentedCurveCoverage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_SegmentedCurveCoverage" substitutionGroup="gmlcov:CV_MultiCurveCoverage" type="gmlcov:CV_SegmentedCurveCoverage_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_SegmentedCurveCoverage_Type">
+		<xs:complexContent>
+			<xs:extension base="gmlcov:CV_MultiCurveCoverage_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_QuadrilateralGridCoverage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_QuadrilateralGridCoverage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_QuadrilateralGridCoverage" substitutionGroup="gmlcov:CV_GeneralGridCoverage" type="gmlcov:CV_QuadrilateralGridCoverage_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_QuadrilateralGridCoverage_Type">
+		<xs:complexContent>
+			<xs:extension base="gmlcov:CV_GeneralGridCoverage_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_ThiessenPolygonCoverage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_ThiessenPolygonCoverage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_ThiessenPolygonCoverage" substitutionGroup="gmlcov:CV_MultiSurfaceCoverage" type="gmlcov:CV_ThiessenPolygonCoverage_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_ThiessenPolygonCoverage_Type">
+		<xs:complexContent>
+			<xs:extension base="gmlcov:CV_MultiSurfaceCoverage_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_HexagonalGridCoverage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_HexagonalGridCoverage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_HexagonalGridCoverage" substitutionGroup="gmlcov:CV_GeneralGridCoverage" type="gmlcov:CV_HexagonalGridCoverage_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_HexagonalGridCoverage_Type">
+		<xs:complexContent>
+			<xs:extension base="gmlcov:CV_GeneralGridCoverage_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_TinCoverage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_TinCoverage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_TinCoverage" substitutionGroup="gmlcov:CV_MultiSurfaceCoverage" type="gmlcov:CV_TinCoverage_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_TinCoverage_Type">
+		<xs:complexContent>
+			<xs:extension base="gmlcov:CV_MultiSurfaceCoverage_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<!-- ========================================== -->
+	<xs:complexType name="CV_Coordinate_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_Coordinate"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_Coordinate" type="gmlcov:CV_Coordinate"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_Coordinate">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_Extent_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_Extent"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_Extent" type="gmlcov:CV_Extent_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_Extent_Type">
+		<xs:sequence>
+			<xs:element name="crs" type="rbc:RS_CRS_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lowerBounds" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="upperBounds" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== -->
+	<xs:complexType name="CV_ValueSet_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gmlcov:CV_ValueSet"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CV_ValueSet" type="gmlcov:CV_ValueSet_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CV_ValueSet_Type">
+		<xs:sequence>
+			<xs:element name="value" type="gco:Record_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== -->
+	
+</xs:schema>

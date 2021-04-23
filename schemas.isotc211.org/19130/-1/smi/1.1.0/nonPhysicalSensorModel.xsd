@@ -254,7 +254,8 @@
             </extension>
         </complexContent>
     </complexType>
-  <!-- <complexType name="CV_InterpolationMethod_PropertyType">
+  <!-- 
+      <complexType name="CV_InterpolationMethod_PropertyType">
         <sequence minOccurs="0">
             <element ref="smi:CV_InterpolationMethod"/>
         </sequence>

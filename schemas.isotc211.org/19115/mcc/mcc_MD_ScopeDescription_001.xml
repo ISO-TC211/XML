@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mcc:MD_ScopeDescription xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mcc/1.3.0/commonClasses.xsd">
+<mcc:attributes><gco:CharacterString>attribute_1,attribute_2</gco:CharacterString></mcc:attributes>
+</mcc:MD_ScopeDescription>

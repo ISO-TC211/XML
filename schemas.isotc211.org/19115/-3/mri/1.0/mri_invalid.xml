@@ -33,7 +33,7 @@
          <mri:associatedResource>
             <mri:MD_AssociatedResource>
                <mri:associationType></mri:associationType>
-               <mri:metadataReference uuidref=""/>
+               <mri:metadataReference xlink:href=""/>
             </mri:MD_AssociatedResource>
          </mri:associatedResource>
          <mri:associatedResource>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mri:MD_DataIdentification 
+ xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.1"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+ xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+ xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+ xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+ xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://schemas.isotc211.org/19115/-1/mri/1.3 file:/F:/Code_GitHub_ISO/XML_19115-3/schemas.isotc211.org/19115Restructure/19115/-1/mri/1.3.0/identification.xsd">
+    <mri:citation><cit:CI_Citation>
+        <cit:title><gco:CharacterString>Sample citation</gco:CharacterString></cit:title>
+    </cit:CI_Citation></mri:citation>
+    <mri:abstract><gco:CharacterString>Sample abstract</gco:CharacterString></mri:abstract>
+    <mri:purpose><gco:CharacterString>Sample purpose</gco:CharacterString></mri:purpose>
+    <mri:credit></mri:credit>
+    <mri:status></mri:status>
+    <mri:pointOfContact></mri:pointOfContact>
+    <mri:spatialRepresentationType></mri:spatialRepresentationType>
+    <mri:spatialResolution></mri:spatialResolution>
+    <mri:temporalResolution></mri:temporalResolution>
+    <mri:topicCategory></mri:topicCategory>
+    <mri:extent></mri:extent>
+    <mri:additionalDocumentation></mri:additionalDocumentation>
+    <mri:processingLevel></mri:processingLevel>
+    <mri:resourceMaintenance></mri:resourceMaintenance>
+    <mri:graphicOverview></mri:graphicOverview>
+    <mri:resourceFormat></mri:resourceFormat>
+    <mri:descriptiveKeywords></mri:descriptiveKeywords>
+    <mri:resourceSpecificUsage></mri:resourceSpecificUsage>
+    <mri:resourceConstraints></mri:resourceConstraints>
+    <mri:associatedResource></mri:associatedResource>
+    <mri:defaultLocale></mri:defaultLocale>
+    <mri:otherLocale></mri:otherLocale>
+    <mri:environmentDescription></mri:environmentDescription>
+    <mri:supplementalInformation></mri:supplementalInformation>
+</mri:MD_DataIdentification>

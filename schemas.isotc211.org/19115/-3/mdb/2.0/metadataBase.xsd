@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
-  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
-  xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" elementFormDefault="qualified" 
-  targetNamespace="http://standards.iso.org/iso/19115/-3/mdb/2.0" version="1.0">
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" 
+  xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/2.0"
+  elementFormDefault="qualified" 
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mdb/2.0" 
+  version="2.1">
   <include schemaLocation="mdb.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mda/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mda/2.0/mda.xsd"/>
   <import namespace="http://standards.iso.org/iso/19157/-2/dqc/1.0" schemaLocation="https://schemas.isotc211.org/19157/-2/dqc/1.0/dqc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
@@ -64,12 +72,23 @@
           <element maxOccurs="unbounded" minOccurs="0" name="contentInfo" type="mcc:Abstract_ContentInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="distributionInfo" type="mcc:Abstract_Distribution_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="dataQualityInfo" type="dqc:Abstract_DataQuality_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType"/>
+          <!-- 
+            <element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="mcc:Abstract_Constraints_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType"/>
           <element minOccurs="0" name="metadataMaintenance" type="mcc:Abstract_MaintenanceInformation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType"/>
-          <!-- <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType"/> -->
+          -->
+          <!-- reinstate previous -->
+          <element maxOccurs="unbounded" minOccurs="0" name="resourceLineage" type="mcc:Abstract_LineageInformation_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="portrayalCatalogueInfo" type="mcc:Abstract_PortrayalCatalogueInformation_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="metadataConstraints" type="mcc:Abstract_Constraints_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="applicationSchemaInfo" type="mcc:Abstract_ApplicationSchemaInformation_PropertyType"/>
+          <element minOccurs="0" name="metadataMaintenance" type="mcc:Abstract_MaintenanceInformation_PropertyType"/>
+          <!-- Add missing reference -->
+          <element minOccurs="0" maxOccurs="unbounded" name="describes" type="mda:AbstractDS_Resource_PropertyType"/>
+          <!-- end add missing reference -->
+          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>

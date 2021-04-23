@@ -43,12 +43,12 @@
                      </cit:title>
                   </cit:CI_Citation>
                </srv:resourceReference>
-               <srv:resource uuidref="MD022"/>
+               <srv:resource xlink:href="MD022"/>
             </srv:SV_CoupledResource>
          </srv:coupledResource>
          <!-- Invalid for rule rule.srv.chainoroperations -->
          <!-- Invalid for rule.srv.operateddataset -->
-         <srv:operatedDataset uuidref="MD01"/>
+         <srv:operatedDataset xlink:href="MD01"/>
          <srv:containsOperations>
             <srv:SV_OperationMetadata>
                <srv:operationName>
@@ -58,7 +58,7 @@
                <srv:connectPoint/>
             </srv:SV_OperationMetadata>
          </srv:containsOperations>
-         <srv:operatesOn uuidref="MD01"/>
+         <srv:operatesOn xlink:href="MD01"/>
          <srv:containsChain>
             <srv:SV_OperationChainMetadata>
                <srv:name>

@@ -15,7 +15,8 @@
 			gco:ObjectProperties and gco:nilReason attributes as originally specified in ISO19139 in
 			the gco, gss, gsr and gts namespaces. Elements from the ISO19139 gco namespace that do
 			not have dependencies on gml are specified in the
-			https://schemas.isotc211.org/19103/-/gco/1.2 namespace in the ISO19115-3 implementation
+			https://schemas.isotc211.org/19103/-/gco/1.2 namespace in the new ISO19115-3 implementation
+			which places each component into a directory structure associated with the standard that defines its attributes.
 		</xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->

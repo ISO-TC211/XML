@@ -6,7 +6,7 @@
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 10-13-2006 11:14:05 ====== </xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
-	<xs:include schemaLocation="../srv/serviceMetadata.xsd"/>
+	<xs:include schemaLocation="../../srv/1.0/serviceMetadata.xsd"/>
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
 	<!-- ================================== Classes ================================= -->

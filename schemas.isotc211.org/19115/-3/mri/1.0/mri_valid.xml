@@ -87,12 +87,12 @@
          <mri:associatedResource>
             <mri:MD_AssociatedResource>
                <mri:associationType></mri:associationType>
-               <mri:metadataReference uuidref="MD01"/>
+               <mri:metadataReference xlink:href="MD01"/>
             </mri:MD_AssociatedResource>
          </mri:associatedResource>
          <mri:associatedResource>
             <mri:MD_AssociatedResource>
-               <mri:name uuidref="MD02"/>
+               <mri:name xlink:href="MD02"/>
                <mri:associationType></mri:associationType>
             </mri:MD_AssociatedResource>
          </mri:associatedResource>
