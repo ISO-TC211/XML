@@ -60,9 +60,9 @@
         diagnostics="rule.cit.individualnameandposition-failure-en 
                      rule.cit.individualnameandposition-failure-fr"/>
       
-      <sch:report test="$hasName or $hasPosition"
+      <!-- <sch:report test="$hasName or $hasPosition"
         diagnostics="rule.cit.individualnameandposition-success-en 
-                     rule.cit.individualnameandposition-success-fr"/>
+                     rule.cit.individualnameandposition-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -110,9 +110,9 @@
         diagnostics="rule.cit.organisationnameandlogo-failure-en 
                      rule.cit.organisationnameandlogo-failure-fr"/>
       
-      <sch:report test="$hasName or $hasLogo"
+      <!-- <sch:report test="$hasName or $hasLogo"
         diagnostics="rule.cit.organisationnameandlogo-success-en 
-                     rule.cit.organisationnameandlogo-success-fr"/>
+                     rule.cit.organisationnameandlogo-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   <sch:diagnostics>
@@ -199,24 +199,24 @@
         diagnostics="rule.gex.extenthasoneelement-failure-en 
         rule.gex.extenthasoneelement-failure-fr"/>
       
-      <sch:report test="count($description)"
+      <!-- <sch:report test="count($description)"
         diagnostics="rule.gex.extenthasoneelement-desc-success-en 
-        rule.gex.extenthasoneelement-desc-success-fr"/>
-      <sch:report test="count($geographicId)"
+        rule.gex.extenthasoneelement-desc-success-fr"/> -->
+      <!-- <sch:report test="count($geographicId)"
         diagnostics="rule.gex.extenthasoneelement-id-success-en 
-        rule.gex.extenthasoneelement-id-success-fr"/>
-      <sch:report test="count($geographicBox)"
+        rule.gex.extenthasoneelement-id-success-fr"/> -->
+      <!-- <sch:report test="count($geographicBox)"
         diagnostics="rule.gex.extenthasoneelement-box-success-en 
-        rule.gex.extenthasoneelement-box-success-fr"/>
-      <sch:report test="count($geographicPoly)"
+        rule.gex.extenthasoneelement-box-success-fr"/> -->
+      <!-- <sch:report test="count($geographicPoly)"
         diagnostics="rule.gex.extenthasoneelement-poly-success-en 
-        rule.gex.extenthasoneelement-poly-success-fr"/>
-      <sch:report test="count($temporal)"
+        rule.gex.extenthasoneelement-poly-success-fr"/> -->
+      <!-- <sch:report test="count($temporal)"
         diagnostics="rule.gex.extenthasoneelement-temporal-success-en 
-        rule.gex.extenthasoneelement-temporal-success-fr"/>
-      <sch:report test="count($vertical)"
+        rule.gex.extenthasoneelement-temporal-success-fr"/> -->
+      <!-- <sch:report test="count($vertical)"
         diagnostics="rule.gex.extenthasoneelement-vertical-success-en 
-        rule.gex.extenthasoneelement-vertical-success-fr"/>
+        rule.gex.extenthasoneelement-vertical-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -252,9 +252,9 @@
         diagnostics="rule.gex.verticalhascrsorcrsid-failure-en 
         rule.gex.verticalhascrsorcrsid-failure-fr"/>
       
-      <sch:report test="$hasCrsOrCrsId"
+      <!-- <sch:report test="$hasCrsOrCrsId"
         diagnostics="rule.gex.verticalhascrsorcrsid-success-en 
-        rule.gex.verticalhascrsorcrsid-success-fr"/>
+        rule.gex.verticalhascrsorcrsid-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   <sch:diagnostics>
@@ -311,13 +311,13 @@
         diagnostics="rule.mco-releasability-failure-en 
         rule.mco-releasability-failure-fr"/>
       
-      <sch:report test="count($addressee)"
+      <!-- <sch:report test="count($addressee)"
         diagnostics="rule.mco-releasability-success-en 
-        rule.mco-releasability-success-fr"/>
+        rule.mco-releasability-success-fr"/> -->
       
-      <sch:report test="count($statement)"
+      <!-- <sch:report test="count($statement)"
         diagnostics="rule.mco-releasability-statement-success-en 
-        rule.mco-releasability-statement-success-fr"/>
+        rule.mco-releasability-statement-success-fr"/> -->
       
     </sch:rule>
   </sch:pattern>
@@ -397,9 +397,9 @@
         diagnostics="rule.mco-legalconstraintdetails-failure-en 
         rule.mco-legalconstraintdetails-failure-fr"/>
       
-      <sch:report test="$hasDetails"
+      <!-- <sch:report test="$hasDetails"
         diagnostics="rule.mco-legalconstraintdetails-success-en 
-        rule.mco-legalconstraintdetails-success-fr"/>
+        rule.mco-legalconstraintdetails-success-fr"/> -->
       
     </sch:rule>
   </sch:pattern>
@@ -457,9 +457,9 @@
         diagnostics="rule.mco-legalconstraint-other-failure-en 
         rule.mco-legalconstraint-other-failure-fr"/>
       
-      <sch:report test="$hasOtherConstraints"
+      <!-- <sch:report test="$hasOtherConstraints"
         diagnostics="rule.mco-legalconstraint-other-success-en 
-        rule.mco-legalconstraint-other-success-fr"/>
+        rule.mco-legalconstraint-other-success-fr"/> -->
       
     </sch:rule>
   </sch:pattern>
@@ -508,9 +508,9 @@
         diagnostics="rule.mdb.root-element-failure-en 
         rule.mdb.root-element-failure-fr"/>
       
-      <sch:report test="$hasOneMD_MetadataElement"
+      <!-- <sch:report test="$hasOneMD_MetadataElement"
         diagnostics="rule.mdb.root-element-success-en 
-        rule.mdb.root-element-success-fr"/>
+        rule.mdb.root-element-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -572,9 +572,9 @@
         diagnostics="rule.mdb.defaultlocale-failure-en
         rule.mdb.defaultlocale-failure-fr"/>
       
-      <sch:report test="$hasEncoding"
+      <!-- <sch:report test="$hasEncoding"
         diagnostics="rule.mdb.defaultlocale-success-en
-        rule.mdb.defaultlocale-success-fr"/>
+        rule.mdb.defaultlocale-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -654,9 +654,9 @@
         diagnostics="rule.mdb.scope-name-failure-en
         rule.mdb.scope-name-failure-fr"/>
       
-      <sch:report test="$hasScopeCodeName or $hasNilReason"
+      <!-- <sch:report test="$hasScopeCodeName or $hasNilReason"
         diagnostics="rule.mdb.scope-name-success-en
-        rule.mdb.scope-name-success-fr"/>
+        rule.mdb.scope-name-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -713,9 +713,9 @@
       <sch:assert test="$hasAtLeastOneCreationDate"
         diagnostics="rule.mdb.create-date-failure-en
         rule.mdb.create-date-failure-fr"/>
-      <sch:report test="$hasAtLeastOneCreationDate"
+      <!-- <sch:report test="$hasAtLeastOneCreationDate"
         diagnostics="rule.mdb.create-date-success-en
-        rule.mdb.create-date-success-fr"/>
+        rule.mdb.create-date-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
    <!--
@@ -814,9 +814,9 @@
         diagnostics="rule.mex.datatypedetails-maxocc-failure-en 
                      rule.mex.datatypedetails-maxocc-failure-fr"/>
       
-      <sch:report test="$hasMaximumOccurrence"
+      <!-- <sch:report test="$hasMaximumOccurrence"
         diagnostics="rule.mex.datatypedetails-maxocc-success-en 
-                     rule.mex.datatypedetails-maxocc-success-fr"/>
+                     rule.mex.datatypedetails-maxocc-success-fr"/> -->
       
       
       <sch:let name="domainValue" 
@@ -829,9 +829,9 @@
         diagnostics="rule.mex.datatypedetails-domain-failure-en 
                      rule.mex.datatypedetails-domain-failure-fr"/>
       
-      <sch:report test="$hasDomainValue"
+      <!-- <sch:report test="$hasDomainValue"
         diagnostics="rule.mex.datatypedetails-domain-success-en 
-                     rule.mex.datatypedetails-domain-success-fr"/>
+                     rule.mex.datatypedetails-domain-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -885,9 +885,9 @@
         diagnostics="rule.mex.conditional-failure-en 
                      rule.mex.conditional-failure-fr"/>
       
-      <sch:report test="$hasCondition"
+      <!-- <sch:report test="$hasCondition"
         diagnostics="rule.mex.conditional-success-en 
-                     rule.mex.conditional-success-fr"/>
+                     rule.mex.conditional-success-fr"/> -->
       
     </sch:rule>
   </sch:pattern>
@@ -989,9 +989,9 @@
         diagnostics="rule.mex.mandatorycode-failure-en 
                      rule.mex.mandatorycode-failure-fr"/>
       
-      <sch:report test="$hasCode"
+      <!-- <sch:report test="$hasCode"
         diagnostics="rule.mex.mandatorycode-success-en 
-                     rule.mex.mandatorycode-success-fr"/>
+                     rule.mex.mandatorycode-success-fr"/> -->
       
       
       
@@ -1005,9 +1005,9 @@
         diagnostics="rule.mex.mex.mandatoryconceptname-failure-en 
                      rule.mex.mex.mandatoryconceptname-failure-fr"/>
       
-      <sch:report test="$hasConceptName"
+      <!-- <sch:report test="$hasConceptName"
         diagnostics="rule.mex.mex.mandatoryconceptname-success-en 
-                     rule.mex.mex.mandatoryconceptname-success-fr"/>
+                     rule.mex.mex.mandatoryconceptname-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1083,13 +1083,13 @@
         diagnostics="rule.mmi-updatefrequency-failure-en 
         rule.mmi-updatefrequency-failure-fr"/>
       
-      <sch:report test="count($userDefinedMaintenanceFrequency)"
+      <!-- <sch:report test="count($userDefinedMaintenanceFrequency)"
         diagnostics="rule.mmi-updatefrequency-user-success-en 
-        rule.mmi-updatefrequency-user-success-fr"/>
+        rule.mmi-updatefrequency-user-success-fr"/> -->
       
-      <sch:report test="count($maintenanceAndUpdateFrequency)"
+      <!-- <sch:report test="count($maintenanceAndUpdateFrequency)"
         diagnostics="rule.mmi-updatefrequency-success-en 
-        rule.mmi-updatefrequency-success-fr"/>
+        rule.mmi-updatefrequency-success-fr"/> -->
       
     </sch:rule>
   </sch:pattern>
@@ -1178,15 +1178,15 @@
         diagnostics="rule.mrc.sampledimension-failure-en 
         rule.mrc.sampledimension-failure-fr"/>
       
-      <sch:report test="count($max)"
+      <!-- <sch:report test="count($max)"
         diagnostics="rule.mrc.sampledimension-max-success-en 
-        rule.mrc.sampledimension-max-success-fr"/>
-      <sch:report test="count($min)"
+        rule.mrc.sampledimension-max-success-fr"/> -->
+      <!-- <sch:report test="count($min)"
         diagnostics="rule.mrc.sampledimension-min-success-en 
-        rule.mrc.sampledimension-min-success-fr"/>
-      <sch:report test="count($mean)"
+        rule.mrc.sampledimension-min-success-fr"/> -->
+      <!-- <sch:report test="count($mean)"
         diagnostics="rule.mrc.sampledimension-mean-success-en 
-        rule.mrc.sampledimension-mean-success-fr"/>
+        rule.mrc.sampledimension-mean-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1241,9 +1241,9 @@
         diagnostics="rule.mrc.bandunit-failure-en 
         rule.mrc.bandunit-failure-fr"/>
       
-      <sch:report test="$hasUnits"
+      <!-- <sch:report test="$hasUnits"
         diagnostics="rule.mrc.bandunit-success-en 
-        rule.mrc.bandunit-success-fr"/>
+        rule.mrc.bandunit-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   <sch:ns prefix="mrd" uri="http://standards.iso.org/iso/19115/-3/mrd/1.0"/>
@@ -1293,9 +1293,9 @@
         diagnostics="rule.mrd.mediumunit-failure-en 
         rule.mrd.mediumunit-failure-fr"/>
       
-      <sch:report test="$hasUnits"
+      <!-- <sch:report test="$hasUnits"
         diagnostics="rule.mrd.mediumunit-success-en 
-        rule.mrd.mediumunit-success-fr"/>
+        rule.mrd.mediumunit-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
     <!--
@@ -1377,12 +1377,12 @@
                      rule.mri.datasetextent-failure-fr"/>
       
       <!-- TODO: Improve reporting when having multiple elements -->
-      <sch:report test="count($geodescription) > 0"
+      <!-- <sch:report test="count($geodescription) > 0"
         diagnostics="rule.mri.datasetextentdesc-success-en 
-                     rule.mri.datasetextentdesc-success-fr"/>
-      <sch:report test="count($geobox) > 0"
+                     rule.mri.datasetextentdesc-success-fr"/> -->
+      <!-- <sch:report test="count($geobox) > 0"
         diagnostics="rule.mri.datasetextentbox-success-en 
-                     rule.mri.datasetextentbox-success-fr"/>
+                     rule.mri.datasetextentbox-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1432,9 +1432,9 @@
         diagnostics="rule.mri.topicategoryfordsandseries-failure-en 
                      rule.mri.topicategoryfordsandseries-failure-fr"/>
       
-      <sch:report test="$hasTopics"
+      <!-- <sch:report test="$hasTopics"
         diagnostics="rule.mri.topicategoryfordsandseries-success-en 
-                     rule.mri.topicategoryfordsandseries-success-fr"/>
+                     rule.mri.topicategoryfordsandseries-success-fr"/> -->
       
     </sch:rule>
   </sch:pattern>
@@ -1489,9 +1489,9 @@
          diagnostics="rule.mri.associatedresource-failure-en 
                       rule.mri.associatedresource-failure-fr"/>
       
-      <sch:report test="$hasName or $hasMdRef"
+      <!-- <sch:report test="$hasName or $hasMdRef"
         diagnostics="rule.mri.associatedresource-success-en 
-                     rule.mri.associatedresource-success-fr"/>
+                     rule.mri.associatedresource-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1543,9 +1543,9 @@
         diagnostics="rule.mri.defaultlocalewhenhastext-failure-en 
         rule.mri.defaultlocalewhenhastext-failure-fr"/>
       
-      <sch:report test="$hasAtLeastOneLanguage"
+      <!-- <sch:report test="$hasAtLeastOneLanguage"
         diagnostics="rule.mri.defaultlocalewhenhastext-success-en 
-        rule.mri.defaultlocalewhenhastext-success-fr"/>
+        rule.mri.defaultlocalewhenhastext-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1617,9 +1617,9 @@
         diagnostics="rule.mri.servicetaxonomy-failure-en 
                      rule.mri.servicetaxonomy-failure-fr"/> -->
       
-      <sch:report test="$hasAtLeastOneTaxonomy"
+      <!-- <sch:report test="$hasAtLeastOneTaxonomy"
         diagnostics="rule.mri.servicetaxonomy-success-en 
-                     rule.mri.servicetaxonomy-success-fr"/>
+                     rule.mri.servicetaxonomy-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
    <!--
@@ -1670,9 +1670,9 @@
         diagnostics="rule.srv.chainoroperations-failure-en 
                      rule.srv.chainoroperations-failure-fr"/>
       
-      <sch:report test="$hasChainOrOperation"
+      <!-- <sch:report test="$hasChainOrOperation"
         diagnostics="rule.srv.chainoroperations-success-en 
-                     rule.srv.chainoroperations-success-fr"/>
+                     rule.srv.chainoroperations-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1726,9 +1726,9 @@
         diagnostics="rule.srv.coupledresource-failure-en 
                      rule.srv.coupledresource-failure-fr"/>
       
-      <sch:report test="$hasCouplingType"
+      <!-- <sch:report test="$hasCouplingType"
         diagnostics="rule.srv.coupledresource-success-en 
-                     rule.srv.coupledresource-success-fr"/>
+                     rule.srv.coupledresource-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1768,9 +1768,9 @@
         diagnostics="rule.srv.operateddataset-failure-en 
                      rule.srv.operateddataset-failure-fr"/>
       
-      <sch:report test="not($hasOperatesOn)"
+      <!-- <sch:report test="not($hasOperatesOn)"
         diagnostics="rule.srv.operateddataset-success-en 
-                     rule.srv.operateddataset-success-fr"/>
+                     rule.srv.operateddataset-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1812,9 +1812,9 @@
         diagnostics="rule.srv.operatesononly-failure-en 
                      rule.srv.operatesononly-failure-fr"/>
       
-      <sch:report test="not($hasOperatedDataset)"
+      <!-- <sch:report test="not($hasOperatedDataset)"
         diagnostics="rule.srv.operatesononly-success-en 
-                     rule.srv.operatesononly-success-fr"/>
+                     rule.srv.operatesononly-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1857,9 +1857,9 @@
         diagnostics="rule.srv.harresourcereforresource-failure-en 
                      rule.srv.harresourcereforresource-failure-fr"/>
       
-      <sch:report test="$hasResourceReferenceOrResource"
+      <!-- <sch:report test="$hasResourceReferenceOrResource"
         diagnostics="rule.srv.harresourcereforresource-success-en 
-                     rule.srv.harresourcereforresource-success-fr"/>
+                     rule.srv.harresourcereforresource-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1903,9 +1903,9 @@
         diagnostics="rule.srv.coupledresourceonlyresource-failure-en 
                      rule.srv.coupledresourceonlyresource-failure-fr"/>
       
-      <sch:report test="not($hasResourceReference)"
+      <!-- <sch:report test="not($hasResourceReference)"
         diagnostics="rule.srv.coupledresourceonlyresource-success-en 
-                     rule.srv.coupledresourceonlyresource-success-fr"/>
+                     rule.srv.coupledresourceonlyresource-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
   
@@ -1945,10 +1945,10 @@
       <sch:assert test="not($hasResource)"
         diagnostics="rule.srv.coupledresourceonlyresourceref-failure-en 
                      rule.srv.coupledresourceonlyresourceref-failure-fr"/>
-      
-      <sch:report test="not($hasResource)"
+     
+   <!-- <sch:report test="not($hasResource)"
         diagnostics="rule.srv.coupledresourceonlyresourceref-success-en 
-                     rule.srv.coupledresourceonlyresourceref-success-fr"/>
+                     rule.srv.coupledresourceonlyresourceref-success-fr"/> -->
     </sch:rule>
   </sch:pattern>
 
