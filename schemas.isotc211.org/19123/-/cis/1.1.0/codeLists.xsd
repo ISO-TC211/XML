@@ -15,7 +15,6 @@
      <include schemaLocation="../../../../19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
      <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>
     
     <!-- ============================================================== -->
     <!-- Elements and types                                             -->

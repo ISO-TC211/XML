@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://schemas.isotc211.org/19139/-/cat/1.2 ../19139/-/cat/1.2.0/cat.xsd
-    https://schemas.isotc211.org/19103/-/gco/1.2 ../19103/-/gco/1.2.0/gco.xsd
+    xsi:schemaLocation="https://schemas.isotc211.org/19139/-/cat/1.2 https://schemas.isotc211.org/19139/-/cat/1.2.0/cat.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.2 https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd
     http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd"
     xmlns:cat="https://schemas.isotc211.org/19139/-/cat/1.2"
     xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
@@ -66,9 +66,9 @@
                         <cat:CT_Codelist id="ISO19130-1.smi.SD_ShapeCode">
                             <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">SD_ShapeCode</gco:ScopedName></cat:identifier>
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">SD_ShapeCode</gco:ScopedName></cat:name>
-                            <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                            <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_circular">
+                            <cat:definition><gco:CharacterString>shape</gco:CharacterString></cat:definition>
+                            <cat:description><gco:CharacterString>shape</gco:CharacterString></cat:description>
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_circular">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_ShapeCode_circular">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">circular</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">circular</gco:ScopedName></cat:name>
@@ -76,7 +76,7 @@
                                     <cat:description><gco:CharacterString>circle</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_square">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_square">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_ShapeCode_square">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">square</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">square</gco:ScopedName></cat:name>
@@ -84,7 +84,7 @@
                                     <cat:description><gco:CharacterString>square</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_rectangular">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_rectangular">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_ShapeCode_rectangular">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">rectangular</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">rectangular</gco:ScopedName></cat:name>
@@ -92,7 +92,7 @@
                                     <cat:description><gco:CharacterString>rectangle</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_elliptical">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_ShapeCode_elliptical">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_ShapeCode_rectangellipticalular">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">elliptical</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.16">elliptical</gco:ScopedName></cat:name>
@@ -107,9 +107,9 @@
                         <cat:CT_Codelist id="ISO19130-1.smi.SD_SurfaceCode">
                             <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">SD_SurfaceCode</gco:ScopedName></cat:identifier>
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">SD_SurfaceCode</gco:ScopedName></cat:name>
-                            <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                            <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_ground">
+                            <cat:definition><gco:CharacterString>Surface onto which the SAR image is projected</gco:CharacterString></cat:definition>
+                            <cat:description><gco:CharacterString>Surface onto which the SAR image is projected</gco:CharacterString></cat:description>
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_ground">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_SurfaceCode_ground">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">ground</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">ground</gco:ScopedName></cat:name>
@@ -117,7 +117,7 @@
                                     <cat:description><gco:CharacterString>ground</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_inflatedEllipsoid">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_inflatedEllipsoid">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_SurfaceCode_inflatedEllipsoid">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">inflatedEllipsoid</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">inflatedEllipsoid</gco:ScopedName></cat:name>
@@ -125,7 +125,7 @@
                                     <cat:description><gco:CharacterString>inflated ellipsoid</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_ortho">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_ortho">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_SurfaceCode_ortho">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">ortho</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">ortho</gco:ScopedName></cat:name>
@@ -133,7 +133,7 @@
                                     <cat:description><gco:CharacterString>orthorectified surface</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_slant">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SurfaceCode_slant">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_SurfaceCode_slant">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">slant</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">slant</gco:ScopedName></cat:name>
@@ -148,9 +148,9 @@
                         <cat:CT_Codelist id="ISO19130-1.smi.SD_SAROrientationCode">
                             <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">SD_SAROrientationCode</gco:ScopedName></cat:identifier>
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">SD_SAROrientationCode</gco:ScopedName></cat:name>
-                            <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                            <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SAROrientationCode_left">
+                            <cat:definition><gco:CharacterString>Orientation of SAR antenna on the platform</gco:CharacterString></cat:definition>
+                            <cat:description><gco:CharacterString>Orientation of SAR antenna on the platform</gco:CharacterString></cat:description>
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SAROrientationCode_left">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_SAROrientationCode_left">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">left</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">left</gco:ScopedName></cat:name>
@@ -158,7 +158,7 @@
                                     <cat:description><gco:CharacterString>antenna on left side of the platform</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SAROrientationCode_right">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_SAROrientationCode_right">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_SAROrientationCode_right">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">right</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">right</gco:ScopedName></cat:name>
@@ -173,9 +173,9 @@
                         <cat:CT_Codelist id="ISO19130-1.smi.SD_RotationSequence">
                             <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">SD_RotationSequence</gco:ScopedName></cat:identifier>
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.17">SD_RotationSequence</gco:ScopedName></cat:name>
-                            <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                            <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_XYZ">
+                            <cat:definition><gco:CharacterString>sequence of rotations used in the description of angular attitude</gco:CharacterString></cat:definition>
+                            <cat:description><gco:CharacterString>sequence of rotations used in the description of angular attitude</gco:CharacterString></cat:description>
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_XYZ">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_RotationSequence_XYZ">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">XYZ</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">XYZ</gco:ScopedName></cat:name>
@@ -183,7 +183,7 @@
                                     <cat:description><gco:CharacterString>rotation around X axis first, then Y, then Z</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_XZY">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_XZY">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_RotationSequence_XZY">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">XZY</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">XZY</gco:ScopedName></cat:name>
@@ -191,7 +191,7 @@
                                     <cat:description><gco:CharacterString>rotation around X axis first, then Z, then Y</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_YXZ">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_YXZ">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_RotationSequence_YXZ">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">YXZ</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">YXZ</gco:ScopedName></cat:name>
@@ -199,7 +199,7 @@
                                     <cat:description><gco:CharacterString>rotation around Y axis first, then X, then Z</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_YZX">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_YZX">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_RotationSequence_YZX">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">YZX</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">YZX</gco:ScopedName></cat:name>
@@ -207,7 +207,7 @@
                                     <cat:description><gco:CharacterString>rotation around Y axis first, then Z, then X</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_ZXY">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_ZXY">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_RotationSequence_ZXY">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">ZXY</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">ZXY</gco:ScopedName></cat:name>
@@ -215,7 +215,7 @@
                                     <cat:description><gco:CharacterString>rotation around Z axis first, then X, then Y</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_ZYX">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-1.smi.SD_RotationSequence_ZYX">
                                 <cat:CT_CodelistValue id="ISO19130-1.smi.SD_RotationSequence_ZYX">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">ZYX</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-1/1/clause#B.18">ZYX</gco:ScopedName></cat:name>
@@ -251,7 +251,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">SE_ATDimensionType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_x">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_x">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATDimensionType_x">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">x</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">x</gco:ScopedName></cat:name>
@@ -259,7 +259,7 @@
                                     <cat:description><gco:CharacterString>error in x-dimension</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_xy">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_xy">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATDimensionType_xy">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">xy</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">xy</gco:ScopedName></cat:name>
@@ -267,7 +267,7 @@
                                     <cat:description><gco:CharacterString>error in xy-plane</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_y">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_y">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATDimensionType_y">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">y</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">y</gco:ScopedName></cat:name>
@@ -275,7 +275,7 @@
                                     <cat:description><gco:CharacterString>error in y-dimension</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_z">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATDimensionType_z">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATDimensionType_z">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">z</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.1">z</gco:ScopedName></cat:name>
@@ -292,7 +292,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.2">SE_ATErrorType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_rms">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_rms">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATErrorType_rms">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.2">rms</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.2">rms</gco:ScopedName></cat:name>
@@ -300,7 +300,7 @@
                                     <cat:description><gco:CharacterString>Root Mean Square error</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_sigma">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_sigma">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATErrorType_sigma">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.2">sigma</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.2">sigma</gco:ScopedName></cat:name>
@@ -317,7 +317,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.3">SE_ATMeasType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATMeasType_automatic">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATMeasType_automatic">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATMeasType_automatic">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.3">automatic</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.3">automatic</gco:ScopedName></cat:name>
@@ -325,7 +325,7 @@
                                     <cat:description><gco:CharacterString>point positions are determined by an automatic process</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_manual">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_manual">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATErrorType_manual">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.3">manual</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.3">manual</gco:ScopedName></cat:name>
@@ -342,7 +342,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">SE_ATPointType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATPointType_checkPoint">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATPointType_checkPoint">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATPointType_checkPoint">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">checkPoint</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">checkPoint</gco:ScopedName></cat:name>
@@ -350,7 +350,7 @@
                                     <cat:description><gco:CharacterString>Ground Control Point applied as Check Point</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_controlPoint">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_controlPoint">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATErrorType_controlPoint">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">controlPoint</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">controlPoint</gco:ScopedName></cat:name>
@@ -358,7 +358,7 @@
                                     <cat:description><gco:CharacterString>Ground Control Point applied as Ground Control Point</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_shadedimage">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATErrorType_shadedimage">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATErrorType_shadedimage">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">shadedimage</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.4">shadedimage</gco:ScopedName></cat:name>
@@ -375,7 +375,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">SE_ATStatisticType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATStatisticType_image">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATStatisticType_image">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATStatisticType_image">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">image</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">image</gco:ScopedName></cat:name>
@@ -383,7 +383,7 @@
                                     <cat:description><gco:CharacterString>statistical attributes valid for a single image</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATStatisticType_strip">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATStatisticType_strip">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATStatisticType_strip">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">strip</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">strip</gco:ScopedName></cat:name>
@@ -391,7 +391,7 @@
                                     <cat:description><gco:CharacterString>statistical attributes valid for a single strip</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATStatisticType_block">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATStatisticType_block">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATStatisticType_block">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">block</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.5">block</gco:ScopedName></cat:name>
@@ -409,7 +409,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">SE_DataModelingMethod</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_absoluteValue">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_absoluteValue">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_absoluteValue">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">absoluteValue</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">absoluteValue</gco:ScopedName></cat:name>
@@ -417,7 +417,7 @@
                                     <cat:description><gco:CharacterString>absoluteValue</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_basicSequentialModeling">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_basicSequentialModeling">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_basicSequentialModeling">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">basicSequentialModeling</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">basicSequentialModeling</gco:ScopedName></cat:name>
@@ -425,7 +425,7 @@
                                     <cat:description><gco:CharacterString>basicSequentialModeling</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_collectionPlane">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_collectionPlane">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_collectionPlane">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">collectionPlane</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">collectionPlane</gco:ScopedName></cat:name>
@@ -433,7 +433,7 @@
                                     <cat:description><gco:CharacterString>collectionPlane</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_rectifiedImage">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_rectifiedImage">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_rectifiedImage">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">rectifiedImage</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">rectifiedImage</gco:ScopedName></cat:name>
@@ -441,7 +441,7 @@
                                     <cat:description><gco:CharacterString>rectifiedImage</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_reserved">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_reserved">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_reserved">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">reserved</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">reserved</gco:ScopedName></cat:name>
@@ -449,7 +449,7 @@
                                     <cat:description><gco:CharacterString>reserved</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_vectorModeling">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_vectorModeling">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_vectorModeling">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">vectorModeling</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">vectorModeling</gco:ScopedName></cat:name>
@@ -457,7 +457,7 @@
                                     <cat:description><gco:CharacterString>vectorModeling</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_notApplicable">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_DataModelingMethod_notApplicable">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_DataModelingMethod_notApplicable">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">notApplicable</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.6">notApplicable</gco:ScopedName></cat:name>
@@ -474,7 +474,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">SE_SARCollectionMode</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>way in which SAR operates</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SARCollectionMode_scan">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SARCollectionMode_scan">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SARCollectionMode_scan">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">scan</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">scan</gco:ScopedName></cat:name>
@@ -482,7 +482,7 @@
                                     <cat:description><gco:CharacterString>beam is steering to illuminated strip of terrain that can be at any angle with respect to the direction of motion</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SARCollectionMode_spotlight">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SARCollectionMode_spotlight">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SARCollectionMode_spotlight">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">spotlight</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">spotlight</gco:ScopedName></cat:name>
@@ -490,7 +490,7 @@
                                     <cat:description><gco:CharacterString>antenna is steered to keep approximately the same ground area illuminated by the beam</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SARCollectionMode_stripmap">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SARCollectionMode_stripmap">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SARCollectionMode_stripmap">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">stripmap</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.7">stripmap</gco:ScopedName></cat:name>
@@ -507,23 +507,23 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">SE_SonarDeploymentType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>location of sonar relative to platform</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>location of sonar relative to platform</gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarDeploymentType_hullMounted">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarDeploymentType_hullMounted">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarDeploymentType_hullMounted">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">hullMounted</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">hullMounted</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>sensor is mounted (attached) to the hull of a vessel</gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString>sensor is mounted (attached) to the hull of a vessel</gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>sensor that is mounted (attached) to the hull of a vessel</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>sensor that is mounted (attached) to the hull of a vessel</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarDeploymentType_offset">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarDeploymentType_offset">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarDeploymentType_offset">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">offset</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">offset</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>sensor is mounted on a pole which is attached to the vessel</gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString>sensor is mounted on a pole which is attached to the vessel</gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>sensor that is mounted on a pole which is attached to the vessel</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>sensor that is mounted on a pole which is attached to the vessel</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarDeploymentType_towed">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarDeploymentType_towed">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarDeploymentType_towed">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">towed</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.8">towed</gco:ScopedName></cat:name>
@@ -540,44 +540,66 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SE_SonarMode</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>method of operation of sonar</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>method of operation of sonar</gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_MultiBeam">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_MultiBeam">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarMode_SD_MultiBeam">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_MultiBeam</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_MultiBeam</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>sonar system that emits multiple “beams” of sound waves in a fan-shaped
+                                        pattern to produce a swath of sounding data in a single pass over an area of
+                                        the seafloor</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>sonar system that emits multiple “beams” of sound waves in a fan-shaped
+                                        pattern to produce a swath of sounding data in a single pass over an area of
+                                        the seafloor</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_SideScan">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_SideScan">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarMode_SD_SideScan">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_SideScan</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_SideScan</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>fixed acoustic beams that are directed (in water) perpendicularly to the
+                                        direction of travel in order to scan the bottom and generate a record of the
+                                        bottom configuration</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>fixed acoustic beams that are directed (in water) perpendicularly to the
+                                        direction of travel in order to scan the bottom and generate a record of the
+                                        bottom configuration</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_SingleBeam">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_SingleBeam">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarMode_SD_SingleBeam">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_SingleBeam</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_SingleBeam</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>echosounders that use one emitting and receiving “transducer”, which
+                                        releases a series of energy pulses ensonifying a small area underneath the
+                                        platform</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>echosounders that use one emitting and receiving “transducer”, which
+                                        releases a series of energy pulses ensonifying a small area underneath the
+                                        platform</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_Sweep">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_Sweep">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarMode_SD_Sweep">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_Sweep</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_Sweep</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>several single beam transducers operating simulatenously, sequentially or in
+                                        interleave phase and measurement of the amplitude is used for target
+                                        detection</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>several single beam transducers operating simulatenously, sequentially or in
+                                        interleave phase and measurement of the amplitude is used for target
+                                        detection</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_ScanningProfiler">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarMode_SD_ScanningProfiler">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarMode_SD_ScanningProfiler">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_ScanningProfiler</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.9">SD_ScanningProfiler</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
-                                    <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
+                                    <cat:definition><gco:CharacterString>profiler comprises a small transducer array mounted on an electro-mechanical
+                                        stepper motor operate at much higher frequencies than echo sounders and
+                                        consequently have much reduced ranges and very little material penetrative
+                                        capability</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>profiler comprises a small transducer array mounted on an electro-mechanical
+                                        stepper motor operate at much higher frequencies than echo sounders and
+                                        consequently have much reduced ranges and very little material penetrative
+                                        capability</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
                         </cat:CT_Codelist>
@@ -589,7 +611,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.10">SE_SonarType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>class of sonar</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>class of sonar</gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarType_active">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarType_active">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarType_active">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.10">active</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.10">active</gco:ScopedName></cat:name>
@@ -597,7 +619,7 @@
                                     <cat:description><gco:CharacterString>transmits and receives sound waves</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarType_passive">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_SonarType_passive">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_SonarType_passive">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.10">passive</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.10">passive</gco:ScopedName></cat:name>
@@ -614,7 +636,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.11">SE_TideAdjustType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_TideAdjustType_prediction">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_TideAdjustType_prediction">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_TideAdjustType_prediction">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.11">prediction</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.11">prediction</gco:ScopedName></cat:name>
@@ -622,7 +644,7 @@
                                     <cat:description><gco:CharacterString>predicted tidal heights (relative to chart datum) calculated using historical tidal values, for a fixed location</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_TideAdjustType_realtime">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_TideAdjustType_realtime">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_TideAdjustType_realtime">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.11">realtime</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.11">realtime</gco:ScopedName></cat:name>
@@ -639,7 +661,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.12">SE_InSARCollectionModeType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>InSAR data collection modes</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>InSAR data collection modes</gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARCollectionModeType_pingPongMode">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARCollectionModeType_pingPongMode">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_InSARCollectionModeType_pingPongMode">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.12">pingPongMode</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.12">pingPongMode</gco:ScopedName></cat:name>
@@ -647,7 +669,7 @@
                                     <cat:description><gco:CharacterString>ping pong mode</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARCollectionModeType_standardMode">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARCollectionModeType_standardMode">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_InSARCollectionModeType_standardMode">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.12">standardMode</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.12">standardMode</gco:ScopedName></cat:name>
@@ -664,7 +686,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.13">SE_InSARTransmitReceiveType</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>InSAR antenna transmit / receive arrangement</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>InSAR antenna transmit / receive arrangement</gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARTransmitReceiveType_firstAntennaTransmit">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARTransmitReceiveType_firstAntennaTransmit">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_InSARTransmitReceiveType_firstAntennaTransmit">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.13">firstAntennaTransmit</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.13">firstAntennaTransmit</gco:ScopedName></cat:name>
@@ -672,7 +694,7 @@
                                     <cat:description><gco:CharacterString>first antenna used for transmit</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARTransmitReceiveType_secondAntennaTransmit">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_InSARTransmitReceiveType_secondAntennaTransmit">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_InSARTransmitReceiveType_secondAntennaTransmit">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.13">secondAntennaTransmit</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.13">firstAnsecondAntennaTransmittennaTransmit</gco:ScopedName></cat:name>
@@ -689,7 +711,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.14">SE_ATPeripheralDevice</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>InSAR antenna transmit / receive arrangement</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>InSAR antenna transmit / receive arrangement</gco:CharacterString></cat:description>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATPeripheralDevice_gnss">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATPeripheralDevice_gnss">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATPeripheralDevice_gnss">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.14">gnss</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.14">gnss</gco:ScopedName></cat:name>
@@ -697,7 +719,7 @@
                                     <cat:description><gco:CharacterString>gnss</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry  uuidref="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATPeripheralDevice_imu">
+                            <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19130-2.smi.SE_ATPeripheralDevice_imu">
                                 <cat:CT_CodelistValue id="ISO19130-2.smi.SE_ATPeripheralDevice_imu">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.14">imu</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19130/-2/1/clause#B.2.1.14">imu</gco:ScopedName></cat:name>

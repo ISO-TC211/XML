@@ -622,8 +622,7 @@
          </cat:codeEntry>
                         <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.cit.CI_DateTypeCode_publication">
             <cat:CT_CodelistValue id="ISO19115-1.cit.CI_DateTypeCode_publication">
-               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.2"
-                     >publication</gco:ScopedName></cat:identifier>
+               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.2">publication</gco:ScopedName></cat:identifier>
                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.2"
                      >publication</gco:ScopedName></cat:name>
                <cat:definition><gco:CharacterString>date identifies when the resource was
@@ -2206,38 +2205,38 @@
                <!--============================= Codelists  for Metadata for Spatial Representation =======================================-->
                <cat:codelistItem xlink:title="Code list items for Date Type from the Metadata for Spatial Representation (msr) Namespace">
                   <cat:CT_Codelist id="ISO19115-1.msr.MD_CellGeometryCode">
-               <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_CellGeometryCode</gco:ScopedName></cat:identifier>
-               <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_CellGeometryCode</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">MD_CellGeometryCode</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">MD_CellGeometryCode</gco:ScopedName></cat:name>
                <cat:definition><gco:CharacterString>code indicating the geometry represented by the grid cell value</gco:CharacterString></cat:definition>
                <cat:description><gco:CharacterString>code indicating the geometry represented by the grid cell value</gco:CharacterString></cat:description>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_CellGeometryCode_point">
                   <cat:CT_CodelistValue id="ISO19115-1.msr.MD_CellGeometryCode_point">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">point</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">point</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">point</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">point</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>each cell represents a point</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>each cell represents a point</gco:CharacterString></cat:description>
                   </cat:CT_CodelistValue>
                </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_CellGeometryCode_area">
                   <cat:CT_CodelistValue id="ISO19115-1.msr.MD_CellGeometryCode_area">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">area</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">area</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">area</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">area</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>each cell represents an area</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>each cell represents an area</gco:CharacterString></cat:description>
                   </cat:CT_CodelistValue>
                </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_CellGeometryCode_voxel">
                   <cat:CT_CodelistValue id="ISO19115-1.msr.MD_CellGeometryCode_voxel">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">voxel</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">voxel</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">voxel</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">voxel</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>each cell represents a volumetric measurement on a regular grid in three dimensional space</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>each cell represents a volumetric measurement on a regular grid in three dimensional space</gco:CharacterString></cat:description>
                   </cat:CT_CodelistValue>
                </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_CellGeometryCode_stratum">
                   <cat:CT_CodelistValue id="ISO19115-1.msr.MD_CellGeometryCode_stratum">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">stratum</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">stratum</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">stratum</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.12">stratum</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>height range for a single point vertical profile</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>height range for a single point vertical profile</gco:CharacterString></cat:description>
                   </cat:CT_CodelistValue>
@@ -2246,70 +2245,70 @@
                </cat:codelistItem>
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.msr.MD_DimensionNameTypeCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_DimensionNameTypeCode</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_DimensionNameTypeCode</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">MD_DimensionNameTypeCode</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">MD_DimensionNameTypeCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>name of the dimension</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>name of the dimension</gco:CharacterString></cat:description>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_row">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_row">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">row</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">row</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">row</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">row</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>ordinate (y) axis</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>ordinate (y) axis</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_column">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_column">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">column</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">column</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">column</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">column</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>abscissa (x) axis</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>abscissa (x) axis</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_vertical">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_vertical">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">vertical</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">vertical</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">vertical</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">vertical</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>vertical (z) axis</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>vertical (z) axis</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_track">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_track">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">track</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">track</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">track</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">track</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>along the direction of motion of the scan point</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>along the direction of motion of the scan point</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_crossTrack">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_crossTrack">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">crossTrack</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">crossTrack</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">crossTrack</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">crossTrack</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>perpendicular to the direction of motion of the scan point</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>perpendicular to the direction of motion of the scan point</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_line">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_line">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">line</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">line</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">line</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">line</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>scan line of a sensor</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>scan line of a sensor</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_sample">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_sample">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">sample</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">sample</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">sample</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">sample</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>element along a scan line</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>element along a scan line</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_DimensionNameTypeCode_time">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_DimensionNameTypeCode_time">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">time</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">time</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">time</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.17">time</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>duration</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>duration</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
@@ -2318,54 +2317,54 @@
                </cat:codelistItem>
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.msrMD_GeometricObjectTypeCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_GeometricObjectTypeCode</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_GeometricObjectTypeCode</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">MD_GeometricObjectTypeCode</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">MD_GeometricObjectTypeCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>name of point or vector objects used to locate zero-, one-, two-, or three-dimensional spatial locations in the dataset</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>name of point or vector objects used to locate zero-, one-, two-, or three-dimensional spatial locations in the dataset</gco:CharacterString></cat:description>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_GeometricObjectTypeCode_complex">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_GeometricObjectTypeCode_complex">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">complex</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">complex</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">complex</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">complex</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>set of geometric primitives such that their boundaries can be represented as a union of other primitives</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>set of geometric primitives such that their boundaries can be represented as a union of other primitives</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_GeometricObjectTypeCode_composite">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_GeometricObjectTypeCode_composite">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">composite</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">composite</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">composite</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">composite</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>connected set of curves, solids or surfaces</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>connected set of curves, solids or surfaces</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_GeometricObjectTypeCode_curve">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_GeometricObjectTypeCode_curve">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">curve</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">curve</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">curve</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">curve</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>bounded, 1-dimensional geometric primitive, representing the continuous image of a line</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>bounded, 1-dimensional geometric primitive, representing the continuous image of a line</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_GeometricObjectTypeCode_point">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_GeometricObjectTypeCode_point">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">point</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">point</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">point</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">point</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>zero-dimensional geometric primitive, representing a position but not having an extent</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>zero-dimensional geometric primitive, representing a position but not having an extent</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_GeometricObjectTypeCode_solid">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_GeometricObjectTypeCode_solid">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">solid</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">solid</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">solid</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">solid</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>bounded, connected 3-dimensional geometric primitive, representing the continuous image of a region of space</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>bounded, connected 3-dimensional geometric primitive, representing the continuous image of a region of space</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_GeometricObjectTypeCode_surface">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_GeometricObjectTypeCode_surface">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">surface</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">surface</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">surface</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.18">surface</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>bounded, connected 2-dimensional geometric primitive, representing the continuous image of a region of a plane</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>bounded, connected 2-dimensional geometric primitive, representing the continuous image of a region of a plane</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
@@ -2374,78 +2373,78 @@
                </cat:codelistItem>
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.msrMD_TopologyLevelCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_TopologyLevelCode</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">MD_TopologyLevelCode</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">MD_TopologyLevelCode</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">MD_TopologyLevelCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>degree of complexity of the spatial relationships</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>degree of complexity of the spatial relationships</gco:CharacterString></cat:description>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_geometryOnly">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_geometryOnly">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">geometryOnly</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">geometryOnly</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">geometryOnly</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="v">geometryOnly</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>geometry objects without any additional structure which describes topology</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>geometry objects without any additional structure which describes topology</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_topology1D">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_topology1D">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">topology1D</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">topology1D</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">topology1D</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">topology1D</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>1-dimensional topological complex; commonly called 'chain-node' topology</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>1-dimensional topological complex; commonly called 'chain-node' topology</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_planarGraph">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_planarGraph">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">planarGraph</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">planarGraph</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">planarGraph</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">planarGraph</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>1-dimensional topological complex that is planar. (A planar graph is a graph that can be drawn in a plane in such a way that no two edges intersect except at a vertex.)</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>1-dimensional topological complex that is planar. (A planar graph is a graph that can be drawn in a plane in such a way that no two edges intersect except at a vertex.)</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_fullPlanarGraph">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_fullPlanarGraph">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">fullPlanarGraph</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">fullPlanarGraph</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">fullPlanarGraph</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">fullPlanarGraph</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>2-dimensional topological complex that is planar. (A 2-dimensional topological complex is commonly called 'full topology' in a cartographic 2D environment.)</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>2-dimensional topological complex that is planar. (A 2-dimensional topological complex is commonly called 'full topology' in a cartographic 2D environment.)</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_surfaceGraph">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_surfaceGraph">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">surfaceGraph</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">surfaceGraph</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">surfaceGraph</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">surfaceGraph</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>1-dimensional topological complex that is isomorphic to a subset of a surface. (A geometric complex is isomorphic to a topological complex if their elements are in a one-to-one, dimensional-and boundary-preserving correspondence to one another.)</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>1-dimensional topological complex that is isomorphic to a subset of a surface. (A geometric complex is isomorphic to a topological complex if their elements are in a one-to-one, dimensional-and boundary-preserving correspondence to one another.)</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_fullSurfaceGraph">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_fullSurfaceGraph">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">fullSurfaceGraph</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">fullSurfaceGraph</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">fullSurfaceGraph</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">fullSurfaceGraph</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>2-dimensional topological complex that is isomorphic to a subset of a surface</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>2-dimensional topological complex that is isomorphic to a subset of a surface</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_topology3D">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_topology3D">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">topology3D</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">topology3D</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">topology3D</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">topology3D</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>3-dimensional topological complex. (A topological complex is a collection of topological primitives that are closed under the boundary operations.)</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>3-dimensional topological complex. (A topological complex is a collection of topological primitives that are closed under the boundary operations.)</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_fullTopology3D">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_fullTopology3D">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">fullTopology3D</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">fullTopology3D</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">fullTopology3D</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">fullTopology3D</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>complete coverage of a 3D Euclidean coordinate space</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>complete coverage of a 3D Euclidean coordinate space</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.msr.MD_TopologyLevelCode_abstract">
                         <cat:CT_CodelistValue id="ISO19115-1.msr.MD_TopologyLevelCode_abstract">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">abstract</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/msr/1.0">abstract</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.31">abstract</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="hhttps://standards.iso.org/19115/-1/1/clause#B.3.31">abstract</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>topological complex without any specified geometric realisation </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>topological complex without any specified geometric realisation </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
@@ -2476,78 +2475,78 @@
                <!--============================= Codelists  for Metadata for Constraints =======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mco.MD_ClassificationCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">MD_ClassificationCode</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">MD_ClassificationCode</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">MD_ClassificationCode</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">MD_ClassificationCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>name of the handling restrictions on the resource</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>name of the handling restrictions on the resource</gco:CharacterString></cat:description>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_unclassified">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_unclassified">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">unclassified</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">unclassified</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">unclassified</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">unclassified</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>available for general disclosure</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>available for general disclosure</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_restricted">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_restricted">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">restricted</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">restricted</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">restricted</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">restricted</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>not for general disclosure</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>not for general disclosure</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_confidential">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_confidential">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">confidential</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">confidential</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">confidential</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">confidential</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>available for someone who can be entrusted with information</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>available for someone who can be entrusted with information</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_secret">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_secret">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">secret</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">secret</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">secret</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">secret</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>kept or meant to be kept private, unknown, or hidden from all but a select group of people</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>kept or meant to be kept private, unknown, or hidden from all but a select group of people</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_topSecret">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_topSecret">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">topSecret</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">topSecret</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">topSecret</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">topSecret</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>of the highest secrecy</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>of the highest secrecy</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_SBU">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_SBU">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">SBU</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">SBU</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">SBU</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">SBU</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>although unclassified, requires strict controls over its distribution</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>although unclassified, requires strict controls over its distribution</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_forOfficialUseOnly">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_forOfficialUseOnly">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">forOfficialUseOnly</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">forOfficialUseOnly</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">forOfficialUseOnly</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">forOfficialUseOnly</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>unclassified information that is to be used only for official purposes determined by the designating body</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>unclassified information that is to be used only for official purposes determined by the designating body</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_protected">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_protected">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">protected</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">protected</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">protected</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">protected</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>compromise of the information could cause damage</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>compromise of the information could cause damage</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_ClassificationCode_limitedDistribution">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_ClassificationCode_limitedDistribution">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">limitedDistribution</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">limitedDistribution</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">limitedDistribution</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.13">limitedDistribution</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>desimination limited by designating body</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>desimination limited by designating body</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
@@ -2562,136 +2561,136 @@
                      <cat:description><gco:CharacterString>limitation(s) placed upon the access or use of the data</gco:CharacterString></cat:description>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_copyright">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_copyright">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">copyright</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">copyright</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">copyright</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">copyright</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>exclusive right to the publication, production, or sale of the rights to a literary, dramatic, musical, or artistic work, or to the use of a commercial print or label, granted by law for a specified period of time to an author, composer, artist, distributor</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>exclusive right to the publication, production, or sale of the rights to a literary, dramatic, musical, or artistic work, or to the use of a commercial print or label, granted by law for a specified period of time to an author, composer, artist, distributor</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_patent">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_patent">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">patent</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">patent</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">patent</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">patent</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>government has granted exclusive right to make, sell, use or license an invention or discovery</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>government has granted exclusive right to make, sell, use or license an invention or discovery</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_patentPending">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_patentPending">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">patentPending</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">patentPending</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">patentPending</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">patentPending</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>produced or sold information awaiting a patent</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>produced or sold information awaiting a patent</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_trademark">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_trademark">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">trademark</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">trademark</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">trademark</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">trademark</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>a name, symbol, or other device identifying a product, officially registered and legally restricted to the use of the owner or manufacturer</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>a name, symbol, or other device identifying a product, officially registered and legally restricted to the use of the owner or manufacturer</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_licence">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_licence">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licence</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licence</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licence</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licence</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>formal permission to do something</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>formal permission to do something</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_intellectualPropertyRights">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_intellectualPropertyRights">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">intellectualPropertyRights</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">intellectualPropertyRights</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">intellectualPropertyRights</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">intellectualPropertyRights</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>rights to financial benefit from and control of distribution of non-tangible property that is a result of creativity</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>rights to financial benefit from and control of distribution of non-tangible property that is a result of creativity</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_restricted">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_restricted">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">restricted</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">restricted</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">restricted</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">restricted</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>withheld from general circulation or disclosure</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>withheld from general circulation or disclosure</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_otherRestrictions">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_otherRestrictions">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">otherRestrictions</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">otherRestrictions</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">otherRestrictions</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">otherRestrictions</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>limitation not listed</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>limitation not listed</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_unrestricted">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_unrestricted">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">unrestricted</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">unrestricted</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">unrestricted</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">unrestricted</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>no constraints exist</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>no constraints exist</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_licenceUnrestricted">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_licenceUnrestricted">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licenceUnrestricted</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licenceUnrestricted</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licenceUnrestricted</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licenceUnrestricted</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>formal permission not required to use the resource</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>formal permission not required to use the resource</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_licenceEndUser">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_licenceEndUser">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licenceEndUser</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licenceEndUser</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licenceEndUser</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licenceEndUser</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>formal permission required for a person or an entity to use the resource and that may differ from the person that orders or purchases it</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>formal permission required for a person or an entity to use the resource and that may differ from the person that orders or purchases it</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_licenceDistributor">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_licenceDistributor">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licenceDistributor</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">licenceDistributor</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licenceDistributor</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">licenceDistributor</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>formal permission required for a person or an entity to commercialize or distribute the resource</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>formal permission required for a person or an entity to commercialize or distribute the resource</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_private">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_private">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">private</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">private</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">private</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">private</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>protects rights of individual  or organisations from observation, intrusion, or attention of others </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>protects rights of individual  or organisations from observation, intrusion, or attention of others </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_statutory">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_statutory">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">statutory</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">statutory</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">statutory</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">statutory</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>prescribed by law</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>prescribed by law</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_confidential">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_confidential">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">confidential</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">confidential</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">confidential</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">confidential</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>not available to the public contains information that could be prejudicial to a commercial, industrial, or national interest</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>not available to the public contains information that could be prejudicial to a commercial, industrial, or national interest</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_SBU">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_SBU">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">SBU</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">SBU</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">SBU</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">SBU</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>although unclassified, requires strict controls over its distribution. </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>although unclassified, requires strict controls over its distribution. </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.mco.MD_RestrictionCode_in-confidence">
                         <cat:CT_CodelistValue id="ISO19115-1.mco.MD_RestrictionCode_in-confidence">
-                           <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">in-confidence</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mco/1.0">in-confidence</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">in-confidence</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.27">in-confidence</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>with trust</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>with trust</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
@@ -2723,7 +2722,7 @@
                <!--============================= Codelists  for Metadata for Resource Content =======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mrc.MD_CoverageContentTypeCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mrc/1.0">MD_CoverageContentTypeCode</gco:ScopedName></cat:identifier>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.15">MD_CoverageContentTypeCode</gco:ScopedName></cat:identifier>
                      <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mrc/1.0">MD_CoverageContentTypeCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>specific type of information represented in the cell</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>specific type of information represented in the cell</gco:CharacterString></cat:description>
@@ -2795,7 +2794,7 @@
                </cat:codelistItem>
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mrc.MD_ImagingConditionCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mrc/1.0">MD_ImagingConditionCode</gco:ScopedName></cat:identifier>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.19">MD_ImagingConditionCode</gco:ScopedName></cat:identifier>
                      <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mrc/1.0">MD_ImagingConditionCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>code which indicates conditions which may affect the image</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>code which indicates conditions which may affect the image</gco:CharacterString></cat:description>
@@ -2913,7 +2912,7 @@
                <!--============================= Codelists  for Metadata Extension =======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mex.MD_DatatypeCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mex/1.0">MD_DatatypeCode</gco:ScopedName></cat:identifier>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.16">MD_DatatypeCode</gco:ScopedName></cat:identifier>
                      <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mex/1.0">MD_DatatypeCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>datatype of element or entity</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>datatype of element or entity</gco:CharacterString></cat:description>
@@ -3041,7 +3040,7 @@
                </cat:codelistItem>
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mex.MD_ObligationCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mex/1.0">MD_ObligationCode</gco:ScopedName></cat:identifier>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.23">MD_ObligationCode</gco:ScopedName></cat:identifier>
                      <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mex/1.0">MD_ObligationCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>obligation of the element or entity</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>obligation of the element or entity</gco:CharacterString></cat:description>
@@ -3095,7 +3094,7 @@
                <!--============================= Codelists  for Metadata for Maintenance Information =======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mmi.MD_MaintenanceFrequencyCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">MD_MaintenanceFrequencyCode</gco:ScopedName></cat:identifier>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.21">MD_MaintenanceFrequencyCode</gco:ScopedName></cat:identifier>
                      <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mmi/1.0">MD_MaintenanceFrequencyCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>frequency with which modifications and deletions are made to the data after it is first produced</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>frequency with which modifications and deletions are made to the data after it is first produced</gco:CharacterString></cat:description>
@@ -3245,7 +3244,7 @@
                <!--============================= Codelists  for Metadata for Resource Distribution =======================================-->
                <cat:codelistItem>
                   <cat:CT_Codelist id="ISO19115-1.mrd.MD_MediumFormatCode">
-                     <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mrd/1.0">MD_MediumFormatCode</gco:ScopedName></cat:identifier>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.22">MD_MediumFormatCode</gco:ScopedName></cat:identifier>
                      <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mrd/1.0">MD_MediumFormatCode</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>method used to write to the medium</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>method used to write to the medium</gco:CharacterString></cat:description>
@@ -3331,7 +3330,7 @@
                <!--============================= Codelists  for Metadata for Common Classes =======================================-->
    <cat:codelistItem>
       <cat:CT_Codelist id="ISO19115-1.mcc.MD_ProgressCode">
-         <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mcc/1.0">MD_ProgressCode</gco:ScopedName></cat:identifier>
+         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.25">MD_ProgressCode</gco:ScopedName></cat:identifier>
          <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mcc/1.0">MD_ProgressCode</gco:ScopedName></cat:name>
          <cat:definition><gco:CharacterString>status of the resource</gco:CharacterString></cat:definition>
          <cat:description><gco:CharacterString>status of the resource</gco:CharacterString></cat:description>
@@ -3483,7 +3482,7 @@
    </cat:codelistItem>
    <cat:codelistItem>
       <cat:CT_Codelist id="ISO19115-1.mcc.MD_ScopeCode">
-         <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mcc/1.0">MD_ScopeCode</gco:ScopedName></cat:identifier>
+         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.28">MD_ScopeCode</gco:ScopedName></cat:identifier>
          <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mcc/1.0">MD_ScopeCode</gco:ScopedName></cat:name>
          <cat:definition><gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString></cat:definition>
          <cat:description><gco:CharacterString>class of information to which the referencing entity applies</gco:CharacterString></cat:description>
@@ -3699,7 +3698,7 @@
    </cat:codelistItem>
    <cat:codelistItem>
       <cat:CT_Codelist id="ISO19115-1.mcc.MD_SpatialRepresentationTypeCode">
-         <cat:identifier><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mcc/1.0">MD_SpatialRepresentationTypeCode</gco:ScopedName></cat:identifier>
+         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19115/-1/1/clause#B.3.29">MD_SpatialRepresentationTypeCode</gco:ScopedName></cat:identifier>
          <cat:name><gco:ScopedName codeSpace="https://schemas.isotc211.org/19115/-3/mcc/1.0">MD_SpatialRepresentationTypeCode</gco:ScopedName></cat:name>
          <cat:definition><gco:CharacterString>method used to represent geographic information in the resource</gco:CharacterString></cat:definition>
          <cat:description><gco:CharacterString>method used to represent geographic information in the resource</gco:CharacterString></cat:description>
@@ -4804,10 +4803,10 @@
                     <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
                     <cat:locale><lan:PT_Locale>
                         <lan:language><lan:LanguageCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
+                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
                             codeListValue="eng">eng</lan:LanguageCode></lan:language>
                         <lan:characterEncoding><lan:MD_CharacterSetCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
+                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
                             codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <!--   ............................................................................. -->
@@ -4987,10 +4986,10 @@
                     <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
                     <cat:locale><lan:PT_Locale>
                         <lan:language><lan:LanguageCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
+                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
                             codeListValue="eng">eng</lan:LanguageCode></lan:language>
                         <lan:characterEncoding><lan:MD_CharacterSetCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
+                           codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
                             codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <!--   ............................................................................. -->
@@ -5524,10 +5523,10 @@
                </cat:versionDate>
                <cat:locale><lan:PT_Locale>
                      <lan:language><lan:LanguageCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
+                        codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
                      <lan:characterEncoding><lan:MD_CharacterSetCode
-                           codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
+                        codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                   </lan:PT_Locale></cat:locale>
                <cat:codelistItem xlink:title="Code list items for Geolocation source from the Imagery and Gidded Data (igd) Namespace">
