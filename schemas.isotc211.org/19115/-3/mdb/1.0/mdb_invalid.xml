@@ -89,7 +89,8 @@
    </mdb:dateInfo>
    
    <!-- Invalid for rule.mdb.create-date : an empty creation date-->
-   <mdb:dateInfo>
+ <!--
+    <mdb:dateInfo>
       <cit:CI_Date>
          <cit:date>
             <gco:DateTime></gco:DateTime>
@@ -100,7 +101,7 @@
          </cit:dateType>
       </cit:CI_Date>
    </mdb:dateInfo>
-   
+   -->
    <!-- mdb:identificationInfo required for schema validation -->
    <mdb:identificationInfo gco:nilReason="inapplicable"/>
    

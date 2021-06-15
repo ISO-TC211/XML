@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cit:party xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
-    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+<cit:CI_Responsibility xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
     xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdt/1.0 ../../mdt/2.0/mdt.xsd 
     http://standards.iso.org/iso/19115/-3/cit/2.0 cit.xsd">
+    <cit:role/>
+    <cit:party>
     <cit:CI_Organisation>
         <cit:name/>
         <cit:contactInfo/>
@@ -16,5 +20,6 @@
         </cit:partyIdentifier>
         <cit:individual/>
     </cit:CI_Organisation>
-</cit:party>
+    </cit:party>
+</cit:CI_Responsibility>
 

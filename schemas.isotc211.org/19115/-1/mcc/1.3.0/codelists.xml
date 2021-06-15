@@ -6,7 +6,7 @@
    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
    xmlns:gml="https://www.opengis.net/gml/3.2"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xsi:schemaLocation="https://schemas.isotc211.org/19139/-/cat/1.2 ../../../-3/cat/1.2.0/cat.xsd"
+   xsi:schemaLocation="https://schemas.isotc211.org/19139/-/cat/1.2 ../../../../19139/-/cat/1.2.0/cat.xsd"
    >
    <!--=====Catalogue description=====-->
    <cat:name>

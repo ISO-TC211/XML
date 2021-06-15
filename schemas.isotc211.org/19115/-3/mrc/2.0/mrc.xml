@@ -15,7 +15,7 @@
    http://standards.iso.org/iso/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd
    http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mac/2.0/mac.xsd
    http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
-   http://standards.iso.org/iso/19110/1/gfc/2.1 ../../../../19110/gfc/2.1.0/gfc.xsd">
+   http://standards.iso.org/iso/19110/1/gfc/2.1 ../../../../19110/-/gfc/2.1.0/gfc.xsd">
    <!-- have to provide schema location for gfc to get concrete implementation of FeatureCatalog to include inline -->
    <mdb:metadataIdentifier/>
    <mdb:contact/>
@@ -215,13 +215,15 @@
                      <mrc:nominalSpatialResolution>
                         <gco:Real>555</gco:Real>
                      </mrc:nominalSpatialResolution>
-                     <mrc:sensor>
+                     <mrc:transferFunctionType></mrc:transferFunctionType>
+                     <mrc:detectedPolarisation></mrc:detectedPolarisation>
+                     <!-- <mrc:sensor>
                         <mac:MI_Sensor>
                            <mac:identifier/>
                            <mac:type/>
                            <mac:hosted/>
                         </mac:MI_Sensor>
-                     </mrc:sensor>
+                     </mrc:sensor> -->
                   </mrc:MI_Band>
                </mrc:attribute>
             </mrc:MD_AttributeGroup>

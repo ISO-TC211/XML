@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdt:MX_Aggregate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<mdt:MX_Aggregate 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/2.0"
- xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
- xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+ xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+ xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
  xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mdt/2.0 mdt.xsd
+ http://standards.iso.org/iso/19115/-3/cat/1.0 ../../cat/1.0/cat.xsd
  http://standards.iso.org/iso/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd
  http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
  http://standards.iso.org/iso/19115/-3/mda/2.0 ../../mda/2.0/mda.xsd
@@ -77,13 +84,13 @@
                         </mdb:MD_Metadata>
                     </mda:has>
                     <mdt:datasetCatalogue>
-                        <CT_CodelistCatalogue xmlns="https://schemas.isotc211.org/19115/-3/cat/1.0">
-                            <name></name>
-                            <scope></scope>
-                            <versionNumber></versionNumber>
-                            <versionDate></versionDate>
-                            <codelistItem></codelistItem>
-                        </CT_CodelistCatalogue>
+                        <cat:CT_CodelistCatalogue xmlns="https://schemas.isotc211.org/19115/-3/cat/1.0">
+                            <cat:name></cat:name>
+                            <cat:scope></cat:scope>
+                            <cat:versionNumber></cat:versionNumber>
+                            <cat:versionDate></cat:versionDate>
+                            <cat:codelistItem></cat:codelistItem>
+                        </cat:CT_CodelistCatalogue>
                     </mdt:datasetCatalogue>
                     <mdt:supportFile/>
                     <mdt:supportFile/>

@@ -151,7 +151,7 @@
                             </smi:SD_ArrayDimension>
                             </smi:arrayDimensions>
                             <smi:arrayOrigin>-6.268154000450000e+06 -1.556287232414000e+06</smi:arrayOrigin>
-                            <smi:detectorShape><smi:SD_ShapeCode>square</smi:SD_ShapeCode></smi:detectorShape>
+                            <smi:detectorShape><smi:SD_ShapeCode codeList="SD_ShapeCode" codeListValue="square">square</smi:SD_ShapeCode></smi:detectorShape>
                             <smi:detectorSize>
                                 <smi:Length><gco:Length uom="meter">12</gco:Length></smi:Length>
                             </smi:detectorSize>
@@ -178,7 +178,7 @@
                                     </mcc:MD_Identifier></mrs:referenceSystemIdentifier>
                                 </mrs:MD_ReferenceSystem>
                             </smi:gsdCRS>
-                            <smi:referenceSurface><smi:SD_SurfaceCode>ground</smi:SD_SurfaceCode></smi:referenceSurface>
+                            <smi:referenceSurface><smi:SD_SurfaceCode codeList="SD_SurfaceCode" codeListValue="ground" >ground</smi:SD_SurfaceCode></smi:referenceSurface>
                             <smi:rowSpacing><gco:Distance uom="meter">14.007</gco:Distance></smi:rowSpacing>
                         </smi:SD_GSD>
                     </smi:gsdProperties>
@@ -206,8 +206,8 @@
                             <smi:collectionStartTime><gco:DateTime>2019-07-30T00:40:07.493268Z</gco:DateTime></smi:collectionStartTime>
                             <smi:collectionEndTime><gco:DateTime>2019-07-30T00:40:25.335497Z</gco:DateTime></smi:collectionEndTime>
                             <smi:grpPosition>2.033676575195040e+01 -9.933794692601427e+01</smi:grpPosition>
-                            <smi:orientation><smi:SD_SAROrientationCode>right</smi:SD_SAROrientationCode></smi:orientation>
-                            <smi:collectionMode><smi:SE_SARCollectionMode>scan</smi:SE_SARCollectionMode></smi:collectionMode>
+                            <smi:orientation><smi:SD_SAROrientationCode codeList="SD_SAROrientationCode" codeListValue="right">right</smi:SD_SAROrientationCode></smi:orientation>
+                            <smi:collectionMode><smi:SE_SARCollectionMode codeList="SE_SARCollectionMod" codeListValue="scan">scan</smi:SE_SARCollectionMode></smi:collectionMode>
                         </smi:SE_SAROperation>
                     </smi:systemAndOperation>
                 </smi:SD_SensorParameters>
@@ -250,6 +250,6 @@
             </smi:controlPointRespository>
         </smi:SD_PhysicalSensorModel>
     </smi:physicalSensorModel>
-    <smi:sensorDataModeling><smi:SE_DataModelingMethod>notApplicable</smi:SE_DataModelingMethod></smi:sensorDataModeling>
+    <smi:sensorDataModeling><smi:SE_DataModelingMethod codeList="SE_DataModelingMethod" codeListValue="notApplicable">notApplicable</smi:SE_DataModelingMethod></smi:sensorDataModeling>
     <smi:sensorManufacturer><gco:CharacterString>EADS Astrium GmbH of Germany</gco:CharacterString></smi:sensorManufacturer>
 </smi:SE_SensorModel>

@@ -9,8 +9,8 @@
     xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mrl/2.0 ../../mds/2.0/mds.xsd
-    http://standards.iso.org/iso/19115/-3/cit/2.0 ../../cit/2.0/cit.xsd">
+    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mrl/2.0 ../../../../19115/-3/mds/2.0/mds.xsd
+    http://standards.iso.org/iso/19115/-3/cit/2.0 ../../../../19115/-3/cit/2.0/cit.xsd">
     <mrl:statement>
         <gco:CharacterString>mrl:statement/gco:CharacterString</gco:CharacterString>
     </mrl:statement>
@@ -171,13 +171,8 @@
             <mrl:description/>
             <mrl:processingInformation>
                 <mrl:LE_Processing>
-                    <mrl:algorithm>
-                        <mrl:LE_Algorithm>
-                            <mrl:citation/>
-                            <mrl:description/>
-                        </mrl:LE_Algorithm>
-                    </mrl:algorithm>
-                    <mrl:identifier/>
+                    <mrl:identifier></mrl:identifier>
+                      
                     <mrl:softwareReference/>
                     <mrl:procedureDescription/>
                     <mrl:documentation/>
@@ -229,6 +224,13 @@
                     </mrl:parameter>
                     <mrl:otherPropertyType/>
                     <mrl:otherProperty/>
+                    <mrl:algorithm>
+                        <mrl:LE_Algorithm>
+                            <mrl:citation/>
+                            <mrl:description/>
+                        </mrl:LE_Algorithm>
+                    </mrl:algorithm>
+                    
                 </mrl:LE_Processing>
             </mrl:processingInformation>
         </mrl:LE_ProcessStep>

@@ -4,11 +4,14 @@
     xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
     xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
     xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
-    xmlns:cit="v/19115/-3/cit/1.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="
-    https://schemas.isotc211.org/19110/gfc/1.1 gfc.xsd">
+    https://schemas.isotc211.org/19110/gfc/1.1 gfc.xsd
+    http://standards.iso.org/iso/19115/-3/mcc/1.0 http://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"
+	>
 	<cat:name>
 		<gco:CharacterString>RoadsBridgesCatalogue</gco:CharacterString>
 	</cat:name>
