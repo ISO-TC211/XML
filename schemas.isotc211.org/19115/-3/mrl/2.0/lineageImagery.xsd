@@ -174,7 +174,7 @@
               <documentation>instance of otherPropertyType that defines attributes not explicitly included in LE_Processing</documentation>
             </annotation>
           </element>
-                 <element minOccurs="0" maxOccurs="unbounded" name="algarithum" type="mrl:LE_Algorithm_PropertyType">
+                 <element minOccurs="0" maxOccurs="unbounded" name="algorithm" type="mrl:LE_Algorithm_PropertyType">
             <annotation>
                   <documentation>details of the methodology by which geographic information was derived from the instrument reading</documentation>
             </annotation>

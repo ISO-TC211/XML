@@ -5,8 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     gml:id="rs1" 
-    xsi:schemaLocation="http://standards.iso.org/19155/gpi/1.0/ pi_schema20150513.xsd">
-    <gml:identifier codeSpace="http://piReferenceSystemRegistry.net/">park-registry.net</gml:identifier>
+    xsi:schemaLocation="http://standards.iso.org/19155/gpi/1.0/ gpi.xsd">
+    <!--     xsi:schemaLocation="http://standards.iso.org/19155/gpi/1.0/ pi_schema20150513.xsd"> -->
+     <gml:identifier codeSpace="http://piReferenceSystemRegistry.net/">park-registry.net</gml:identifier>
     <!-- simple example -->
     <PI gml:id="PI01">
         <rs>park-registry.net</rs>

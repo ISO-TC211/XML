@@ -4,6 +4,7 @@
  xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" 
  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
  xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0"
+ xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
  xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1">
    <mdb:metadataIdentifier></mdb:metadataIdentifier>
    <mdb:contact></mdb:contact>
@@ -19,6 +20,10 @@
       <mrc:MD_FeatureCatalogue>
          <mrc:featureCatalogue>
             <gfc:FC_FeatureCatalogue>
+               <cat:name></cat:name>
+               <cat:scope></cat:scope>
+               <cat:versionNumber></cat:versionNumber>
+               <cat:versionDate></cat:versionDate>
                <gfc:producer></gfc:producer>
             </gfc:FC_FeatureCatalogue>
          </mrc:featureCatalogue>
@@ -38,11 +43,13 @@
                
                <!-- Invalid for rule.mrc.sampledimension -->
                <mrc:attribute>
+ <!-- 
                   <mrc:MD_SampleDimension>
                      <mrc:maxValue>
                         <gco:Real></gco:Real>
                      </mrc:maxValue>
                   </mrc:MD_SampleDimension>
+-->
                </mrc:attribute>
                <mrc:attribute>
                   <mrc:MD_SampleDimension>
@@ -54,13 +61,13 @@
                <!-- Invalid for rule.mrc.bandunit -->
                <mrc:attribute>
                   <mrc:MD_Band>
-                     <mrc:boundMin>
-                        <gco:Real>0</gco:Real>
-                     </mrc:boundMin>
                      <mrc:boundMax>
                         <gco:Real>1.0</gco:Real>
                      </mrc:boundMax>
-                  </mrc:MD_Band>
+                     <mrc:boundMin>
+                        <gco:Real>0</gco:Real>
+                     </mrc:boundMin>
+                   </mrc:MD_Band>
                </mrc:attribute>
             </mrc:MD_AttributeGroup>
          </mrc:attributeGroup>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CT_CodelistCatalogue xmlns="http://standards.iso.org/iso/19115/-3/cat/1.0" 
-   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" 
-   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml32="http://www.opengis.net/gml/3.2" 
+<cat:CT_CodelistCatalogue xmlns="http://standards.iso.org/iso/19115/-3/cat/1.0" 
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2" 
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml32="http://www.opengis.net/gml/3.2" 
    xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" 
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 https://schemas.isotc211.org/19115/-3/cat/1.0/cat.xsd
    http://standards.iso.org/iso/19115/-3/gco/1.0 https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd
-   http://www.opengis.net/gml/3.2 http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd
+   http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
    http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
    <!--
       This codelist catalog was created during 2017-09 by Ted Habermann several problems were identified in the earlier version:
@@ -5975,4 +5977,4 @@
          </cat:codeEntry>
       </cat:CT_Codelist>
    </cat:codelistItem>
-</CT_CodelistCatalogue>
+</cat:CT_CodelistCatalogue>

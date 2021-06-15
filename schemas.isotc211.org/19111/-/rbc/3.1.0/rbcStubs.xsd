@@ -137,7 +137,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" maxOccurs="unbounded" name="referenceSystem" type="rbc:EngineeringCRS_PropertyType">
+          <element minOccurs="0" maxOccurs="unbounded" name="referenceSystem" type="rbc:RS_EngineeringCRS_PropertyType">
             <annotation>
               <documentation>Add a definition for each component of ISO 19111:2019 that is required</documentation>
             </annotation>

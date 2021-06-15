@@ -53,12 +53,12 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element name="averageAirTemperature" type="gco:Real_PropertyType"/>
-          <element name="maxRelativeHumidity" type="gco:Real_PropertyType"/>
-          <element name="maxAltitude" type="gco:Real_PropertyType"/>
-          <element name="meterologicalConditions" type="gco:CharacterString_PropertyType"/>
-          <element name="solarAzimuth" type="gco:Real_PropertyType"/>
-          <element name="solarElevation" type="gco:Real_PropertyType"/>          
+          <element name="averageAirTemperature" minOccurs="0" type="gco:Real_PropertyType"/>
+          <element name="maxRelativeHumidity" minOccurs="0" type="gco:Real_PropertyType"/>
+          <element name="maxAltitude" minOccurs="0" type="gco:Real_PropertyType"/>
+          <element name="meterologicalConditions" minOccurs="0" type="gco:CharacterString_PropertyType"/>
+          <element name="solarAzimuth" minOccurs="0" type="gco:Real_PropertyType"/>
+          <element name="solarElevation" minOccurs="0" type="gco:Real_PropertyType"/>          
         </sequence>
       </extension>
     </complexContent>

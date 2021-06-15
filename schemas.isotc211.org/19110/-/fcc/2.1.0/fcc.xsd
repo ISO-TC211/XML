@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.1" 
+  xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.1" 
+  elementFormDefault="qualified" 
+  targetNamespace="https://schemas.isotc211.org/19110/-/fcc/2.1" 
+  version="2.1.0">
+  <include schemaLocation="abstract.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="../../../../19110/-/gfc/2.1.0/gfc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

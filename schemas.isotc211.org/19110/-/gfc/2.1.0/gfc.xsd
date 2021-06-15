@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.1" 
+  xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.1" 
+  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" 
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" 
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+  elementFormDefault="qualified" 
+  targetNamespace="https://schemas.isotc211.org/19110/-/gfc/2.1" 
+  version="2.2.0"
+  >
+  <include schemaLocation="../../../../19110/-/gfc/2.1.0/featureCatalogue.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/cit/2.0" schemaLocation="../../../../19115/-3/cit/2.0/cit.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+</schema>

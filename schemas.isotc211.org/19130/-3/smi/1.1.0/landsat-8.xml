@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SE_SensorModel xmlns:igd="https://schemas.isotc211.org/19163/-2/igd/1.2"
-    xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
-    xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
-    xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+     xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
     xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
     xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
     xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
     xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
-    xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
-    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+     xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
     xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
     xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/1.3"
-    xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3"
-    xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3"
     xmlns:xlink="http://www.w3.org/1999/xlink" 
     xmlns:swe="http://www.opengis.net/swe/2.0"
     xmlns:sml="http://www.opengis.net/sensorml/2.0" 
-    xmlns:gsr="http://www.isotc211.org/2005/gsr"
-    xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.2"
-    xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.2"
-    xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
-    xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
     xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
-    xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
     xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
-    xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2"
-    xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://schemas.isotc211.org/19130/-3/smi/1.1"
     xsi:schemaLocation="https://schemas.isotc211.org/19130/-3/smi/1.1 ../../../../19130/-3/smi/1.1.0/smi.xsd">
@@ -140,7 +126,7 @@
                         <gco:Integer>3</gco:Integer>
                     </dimension>
                     <interpolation>
-                        <CV_InterpolationMethod codeList="interpolationType" codeListValue="cubic">cubic</CV_InterpolationMethod>
+                        <gmlcov:CV_InterpolationMethod codeList="interpolationType" codeListValue="cubic">cubic</gmlcov:CV_InterpolationMethod>
                     </interpolation>
                 </SD_TRMAsGrid>
             </fitAsGrid>

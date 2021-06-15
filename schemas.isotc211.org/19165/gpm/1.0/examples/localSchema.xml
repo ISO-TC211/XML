@@ -3,21 +3,36 @@
 <gpm:GP_PreservationMetadata xmlns:gpm="http://standards.iso.org/iso/19165/gpm/1.0" 
 	xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" 
 	xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" 
-	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
-	xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
-	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://standards.iso.org/iso/19115/-3/gts"  
-	xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0" xmlns:mai="http://standards.iso.org/iso/19115/-3/mai/1.0" 
-	xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
-	xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0" xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" 
-	xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
-	xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/1.0" xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/1.0" 
-	xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0" xmlns:mic="http://standards.iso.org/iso/19115/-3/mic/1.0" 
-	xmlns:mil="http://standards.iso.org/iso/19115/-3/mil/1.0" xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" 
-	xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0" 
-	xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
-	xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0" xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" 
-	xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+	xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+    xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gts="http://standards.iso.org/iso/19115/-3/gts"  
+	xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/1.0"
+    xmlns:mai="http://standards.iso.org/iso/19115/-3/mai/1.0" 
+	xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
+	xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+    xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" 
+	xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+    xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" 
+	xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/1.0"
+    xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/1.0" 
+	xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+    xmlns:mic="http://standards.iso.org/iso/19115/-3/mic/1.0" 
+	xmlns:mil="http://standards.iso.org/iso/19115/-3/mil/1.0"
+    xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" 
+	xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+    xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0" 
+	xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+    xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" 
+	xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+    xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" 
+	xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
+    xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://standards.iso.org/iso/19165/gpm/1.0 ../gpm.xsd">
 	<mdb:metadataIdentifier>
 		<mcc:MD_Identifier>
@@ -161,7 +176,7 @@
 			</cit:citedResponsibleParty>
 		</cit:CI_Citation>
 	</mdb:alternativeMetadataReference>
-	<mdb:spatialRepresentationInfo>
+	<!-- <mdb:spatialRepresentationInfo>
 		<msr:MD_Georectified>
 			<msr:numberOfDimensions>
 				<gco:Integer>2</gco:Integer>
@@ -218,7 +233,7 @@
 				<gco:CharacterString>La dimensió columna de la imatge correspon a l'eix X (Est) del sistema de referència de coordenades i el seu valor creix d'oest a est. La dimensió fila correspon a l'eix Y (Nord) i el seu valor creix de nord a sud.</gco:CharacterString>
 			</msr:transformationDimensionMapping>
 		</msr:MD_Georectified>
-	</mdb:spatialRepresentationInfo>
+	</mdb:spatialRepresentationInfo> -->
 	<mdb:referenceSystemInfo>
 		<mrs:MD_ReferenceSystem id="ID0004">
 			<mrs:referenceSystemIdentifier>
@@ -563,10 +578,10 @@
 			</mri:graphicOverview>
 			<mri:resourceFormat>
 				<gpm:GP_Format>
-					<mrd:formatSpecificationCitation/>
+					<!-- <mrd:formatSpecificationCitation></mrd:formatSpecificationCitation>
 					<mrd:amendmentNumber/>
 					<mrd:fileDecompressionTechnique/>
-					<mrd:medium/>
+					<mrd:medium/>  -->
 					<gpm:formatSpecificationParticularities/>
 				</gpm:GP_Format>
 			</mri:resourceFormat>
@@ -680,7 +695,9 @@
 	<mdb:contentInfo>
 		<mrc:MD_CoverageDescription>
 			<mrc:attributeDescription>
-				<gco:RecordType xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Color RGB</gco:RecordType>
+				<gco:RecordType xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">Color RGB</gco:RecordType>
 			</mrc:attributeDescription>
 			<mrc:attributeGroup>
 				<mrc:MD_AttributeGroup>
@@ -698,7 +715,9 @@
 								</gco:MemberName>
 							</mrc:sequenceIdentifier>
 							<mrc:description>
-								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Vermell. Límits espectrals calculats segons FWHM.</gco:CharacterString>
+								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">Vermell. Límits espectrals calculats segons FWHM.</gco:CharacterString>
 							</mrc:description>
 							<mrc:maxValue>
 								<gco:Real>676.38</gco:Real>
@@ -733,7 +752,9 @@
 								</gco:MemberName>
 							</mrc:sequenceIdentifier>
 							<mrc:description>
-								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Verd. Límits espectrals calculats segons FWHM.</gco:CharacterString>
+								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">Verd. Límits espectrals calculats segons FWHM.</gco:CharacterString>
 							</mrc:description>
 							<mrc:maxValue>
 								<gco:Real>595.98</gco:Real>
@@ -768,7 +789,9 @@
 								</gco:MemberName>
 							</mrc:sequenceIdentifier>
 							<mrc:description>
-								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Blau. Límits espectrals calculats segons FWHM.</gco:CharacterString>
+								<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">Blau. Límits espectrals calculats segons FWHM.</gco:CharacterString>
 							</mrc:description>
 							<mrc:maxValue>
 								<gco:Real>513.87</gco:Real>
@@ -876,25 +899,31 @@
 					</mrd:distributionOrderProcess>
 					<mrd:distributorFormat>						
 						<gpm:GP_Format>
-							<mrd:formatSpecificationCitation>
+							<!-- <mrd:formatSpecificationCitation>
 								<cit:CI_Citation>
 									<cit:title>
-										<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">MrSID</gco:CharacterString>
+										<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">MrSID</gco:CharacterString>
 									</cit:title>
 									<cit:alternateTitle/>
 									<cit:date gco:nilReason="unknown"/>
 									<cit:edition>
-										<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">Generation 3 (MG3)</gco:CharacterString>
+										<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">Generation 3 (MG3)</gco:CharacterString>
 									</cit:edition>
 									<cit:identifier>
 										<mcc:MD_Identifier>
 											<mcc:code>
-												<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd" xmlns:gmd="http://standards.iso.org/iso/19165//gmd" xmlns:gml="http://www.opengis.net/gml">MrSID</gco:CharacterString>
+												<gco:CharacterString xmlns="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gmd="http://standards.iso.org/iso/19165//gmd"
+    xmlns:gml="http://www.opengis.net/gml">MrSID</gco:CharacterString>
 											</mcc:code>
 										</mcc:MD_Identifier>
 									</cit:identifier>
 								</cit:CI_Citation>
-							</mrd:formatSpecificationCitation>
+							</mrd:formatSpecificationCitation> -->
 							<gpm:formatSpecificationParticularities>
 								<cit:CI_Citation>
 									<cit:title>
