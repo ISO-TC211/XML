@@ -32,7 +32,7 @@
     <xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/2.1"
         schemaLocation="../../../../19115/-2/mrl/2.1.0/lineageImagery.xsd"/>
     <xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.1"
-        schemaLocation="../../../../19103/-/gco/1.1.0/baseTypes.xsd"/>
+        schemaLocation="../../../../19103/-/gco/1.1.0/gco.xsd"/>
     <xs:import namespace="http://www.opengis.net/gmlcov/1.0"
         schemaLocation="http://schemas.opengis.net/gmlcov/1.0/coverage.xsd"/>
     <!--  ..........................................................................

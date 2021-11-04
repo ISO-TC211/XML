@@ -9,7 +9,6 @@
 	version="2.1.0"
 	>
 	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 	<xs:element name="Axis" type="sps:Axis_Type"/>
@@ -33,9 +32,9 @@
 		<xs:complexContent>
 			<xs:extension base="sps:SpatialAxis_Type">
 				<xs:sequence>
-					<xs:element name="ellipsoidal height" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="geodetic latitude" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="geodetic longitude" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="ellipsoidalHeight" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="geodeticLatitude" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="geodeticLongitude" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

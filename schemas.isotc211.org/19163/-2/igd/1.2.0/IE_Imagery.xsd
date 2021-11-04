@@ -16,7 +16,7 @@
 	<xs:import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="../../../../19115/-2/mac/2.2.0/acquisitionInformationImagery.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="../../../../19115/-1/mrl/1.3.0/lineage.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="../../../../19115/-2/mrl/2.2.0/lineageImagery.xsd"/>
-	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/baseTypes.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
 	<xs:include schemaLocation="./IE_ImageryAndGriddedData.xsd"/>
 	<!--........................................................................................................ -->
 	<xs:complexType name="IE_Imagery_PropertyType">

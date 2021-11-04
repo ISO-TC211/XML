@@ -91,13 +91,13 @@
           <element name="resourceLineage" maxOccurs="unbounded" minOccurs="0" type="mcc:Abstract_LineageInformation_PropertyType" id="ISO19115-1.037_ISO19115-1.118"/>
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
           <element name="metadataScope" maxOccurs="unbounded" minOccurs="0" type="mdb:MD_MetadataScope_PropertyType" id="ISO19115-1.038_ISO19115-1.039"/>
-          <!-- Inconsistency between ISO 19115-1 Conceptual model and ISO 19115-3 Implementation model for ISO 19115-1 and ISO 19115-2.
-          This inconsistency remove the concept of MI_Metadata -->
-          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType" id="ISO19115-2.031_ISO19115-2.002"/>
           <!-- Inconsistency between ISO 19115-1 Conceptual model/UML diagram Figure 1 and ISO 19115-3 Implementation model for ISO 19115-1 and ISO 19115-2.
           This inconsistency remove the concept of MI_Metadata -->
           <element maxOccurs="unbounded" minOccurs="0" name="describes" type="mdb:MD_Metadata_PropertyType" id="ISO19115-1.038.x_ISO19115-1.001"/>
-        </sequence>
+          <!-- Inconsistency between ISO 19115-1 Conceptual model and ISO 19115-3 Implementation model for ISO 19115-1 and ISO 19115-2.
+          This inconsistency remove the concept of MI_Metadata -->
+          <element maxOccurs="unbounded" minOccurs="0" name="acquisitionInformation" type="mcc:Abstract_AcquisitionInformation_PropertyType" id="ISO19115-2.031_ISO19115-2.002"/>
+         </sequence>
       </extension>
     </complexContent>
   </complexType>
