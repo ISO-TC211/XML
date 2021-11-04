@@ -265,7 +265,7 @@
           <!-- moved to 359 -->
           <!-- <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType" id="ISO19115-1.359_CRS"/> -->
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
-          <element minOccurs="0" name="verticalCRS" type="rbc:RS_CRS_PropertyType" id="ISO19115-1.359_ISO19111.Table12"/>
+          <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType" id="ISO19115-1.359_ISO19111.Table12"/>
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
           <element minOccurs="0" name="verticalCRSId" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-1.360_ISO19115-1.179"/>
          </sequence>

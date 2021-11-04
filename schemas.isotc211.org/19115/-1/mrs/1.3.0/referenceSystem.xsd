@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema 
-  xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
-  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
-  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3" 
-  xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+  xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
+  xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
   elementFormDefault="qualified"
-  targetNamespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" 
-  version="1.3.0"
-    >
+  targetNamespace="https://schemas.isotc211.org/19115/-1/mrs/1.3"
+  version="1.3.0">
   <include schemaLocation="mrs.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.0/rbc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/gex.xsd"/>
   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
@@ -27,20 +29,27 @@
         <sequence>
           <element minOccurs="0" name="referenceSystemIdentifier" type="mcc:MD_Identifier_PropertyType" id="ISO19115-1.180_ISO19115-1.431">
             <annotation>
-              <documentation>identifier and codespace for reference systeme.g. EPSG::4326</documentation>
-              <documentation>Condition: At least one of referenceSystemIdentifier or crs is required</documentation>
+              <documentation>identifier and codespace for reference systeme.g.
+                EPSG::4326</documentation>
+              <documentation>Condition: At least one of referenceSystemIdentifier or crs is
+                required</documentation>
             </annotation>
           </element>
+          <element minOccurs="0" name="crs" type="gml:CRSPropertyType" id="ISO19115-1.180.1_ISO19111.CRS"/>
+          <!--
           <element minOccurs="0" name="crs" type="rbc:RS_CRS_PropertyType" id="ISO19115-1.180.1_ISO19111.CRS">
             <annotation>
               <documentation>full description of the coordinate reference system to which a coordinate set is referenced</documentation>
               <documentation>Condition: At least one of referenceSystemIdentifier or crs is required</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="coordinateEpoch" type="rbc:RS_DataEpoch_PropertyType" id="ISO19115-1.180.2_ISO19111.DataEpoch">
+          -->
+          <element minOccurs="0" name="coordinateEpoch" type="rbc:DataEpoch_PropertyType" id="ISO19115-1.180.2_ISO19111.DataEpoch">
             <annotation>
-              <documentation>epoch at which a coordinate set to a dynamic CRS is valid</documentation>
-              <documentation>Condition: Reqired if the CRS is dynamic, otherwise should not be given</documentation>
+              <documentation>epoch at which a coordinate set to a dynamic CRS is
+                valid</documentation>
+              <documentation>Condition: Reqired if the CRS is dynamic, otherwise should not be
+                given</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="referenceSystemType" type="mrs:MD_ReferenceSystemTypeCode_PropertyType" id="ISO19115-1.181_ISO19115-1.MD_ReferenceSystemTypeCode">

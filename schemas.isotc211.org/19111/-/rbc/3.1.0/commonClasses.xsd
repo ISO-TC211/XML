@@ -28,7 +28,7 @@
 	<xs:annotation>
 		<xs:documentation>The Common classes  package contains attributes common to several objects used in spatial referencing by coordinates.</xs:documentation>
 	</xs:annotation>
-	<!-- ========================================== -->
+	<!-- ========================================== Table 5 -->
 	<xs:complexType name="IdentifiedObject_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="rbc:IdentifiedObject"/>
@@ -44,14 +44,14 @@
 			<xs:documentation>identifications of a CRS-related object</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="identifier" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="name" type="mcc:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>primary name by which this object is identified</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identifier" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="alias" type="gco:GenericName_PropertyType" minOccurs="0" maxOccurs="unbounded">
@@ -66,7 +66,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- ========================================== -->
+	<!-- ========================================== Table 7 -->
 	<xs:complexType name="ObjectDomain_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="rbc:ObjectDomain"/>
@@ -97,7 +97,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- ========================================== -->
+	<!-- ========================================== Table 6 -->
 	<xs:complexType name="ObjectUsage_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="rbc:ObjectUsage"/>
