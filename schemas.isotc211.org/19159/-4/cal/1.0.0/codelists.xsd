@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0" version="1.0.0">
+
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+
+    <element name="CA_CalibrationType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type" id="ISO19159-4.CA_CalibrationType">
+        <annotation>
+            <documentation>Type of calibration dedicated to certain senor.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_CalibrationType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_CalibrationType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_ColdEndType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Type of the colder target when applying vicarious calibration.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_ColdEndType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_ColdEndType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_ColdTargetType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Type of the colder target of the microwave radiometer on-board calibration.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_ColdTargetType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_ColdTargetType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_HotEndType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Type of the warmer target when applying vicarious calibration.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_HotEndType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_HotEndType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_HotTargetType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Type of the warmer target of the microwave radiometer on-board calibration, usually working at the ambient temperature.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_HotTargetType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_HotTargetType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_LandCoverType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Type of the land cover classification.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_LandCoverType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_LandCoverType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+     
+    <element name="CA_ObservationType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type" id="ISO19159-4.CA_ObservationType">
+        <annotation>
+            <documentation>Type of observation manner of the microwave radiometer, usually relative to the geometry configuration and the target being observed.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_ObservationType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_ObservationType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_PayloadOperatingStatus" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Payload operating status of the satellite microwave radiometer.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_PayloadOperatingStatus_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_PayloadOperatingStatus"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_PolarizationMode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Polarization mode of the microwave radiometer TB measurement to be calibrated.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_PolarizationMode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_PolarizationMode"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="CA_ReceiverType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type" id="ISO19159-4.CA_ReceiverType">
+        <annotation>
+            <documentation>Receiver type of the microwave radiometer.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_ReceiverType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_ReceiverType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+       
+    <element name="CA_TBTrueValueType" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type">
+        <annotation>
+            <documentation>Type of the true value used in TB calibration/validation.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="CA_TBTrueValueType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_TBTrueValueType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+</schema>

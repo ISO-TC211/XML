@@ -48,7 +48,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- .......................................... -->
-	<xs:element name="DirectPosition" type="gss:DirectPosition_Type"/>
+	<xs:element name="DirectPosition" type="gml:DirectPositionType"/>
 	<!-- .......................................... -->
 	<xs:complexType name="DirectPosition_Type">
 		<xs:annotation>

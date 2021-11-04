@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0" version="1.0.0">
+    <include schemaLocation="cal.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>    
+    
+    <element name="CA_GeometricPosition" type="cal:CA_GeometricPosition_Type" id="ISO19159-4.47" substitutionGroup="gco:AbstractObject">
+    <annotation>
+        <documentation>Information related to the geometric correction of the microwave radiometer system</documentation>
+    </annotation>    
+    </element>
+    
+    <complexType name="CA_GeometricPosition_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="satelliteAttachmentInformation" type="cal:CA_SatelliteAttachmentInformation_PropertyType" id="ISO19159-4.48_ISO19159-4.36" minOccurs="1" maxOccurs="1">
+                        <annotation>
+                            <documentation>
+                                Satellite attachment information.
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="microwaveRadiometerViewingAngle" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.49_ISO19103.Angle">
+                        <annotation>
+                            <documentation>
+                                Microwave radiometer viewing angle with respect to the platform.
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="microwaveRadiometerIncidentAngle" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.50_ISO19103.Angle">
+                        <annotation>
+                            <documentation>
+                                Microwave radiometer incident angle with respect to the earth surface.
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="microwaveRadiometerPixelSize"  type="gco:Real_PropertyType" minOccurs="2" maxOccurs="2" id="ISO19159-4.51_ISO19103.Real">
+                        <annotation>
+                            <documentation>
+                                Microwave radiometer pixel size (expressed in the elevation resolution multiple the azimuth resolution).    
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="microwaveRadiometerSamplingInterval" type="gco:Real_PropertyType" id="ISO19159-4.52_ISO19103.Real" minOccurs="1" maxOccurs="1">
+                        <annotation>
+                            <documentation>
+                                Microwave radiometer sampling interval between the successive samples in a scan.
+                            </documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="CA_GeometricPosition_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_GeometricPosition"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+</schema>
