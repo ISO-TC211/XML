@@ -670,7 +670,7 @@
               <documentation>Description: unique name of the pass shortName: passId</documentation>
             </annotation>
           </element>
-          <element name="extent" minOccurs="0" type="gml:GeometryPropertyType" id="ISO19115-2.079_ISO19115-1.335">
+          <element name="extent" minOccurs="0" type="gex:EX_Extent_PropertyType" id="ISO19115-2.079_ISO19115-1.335">
             <annotation>
               <documentation>Description: Area covered by the pass shortName: passExt</documentation>
             </annotation>
