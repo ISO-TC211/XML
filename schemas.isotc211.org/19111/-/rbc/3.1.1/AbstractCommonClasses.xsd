@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+  targetNamespace="https://schemas.isotc211.org/19111/-/rbc/3.1"
+  elementFormDefault="qualified"
+   version="1.3.0"
+  >
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+   <!-- =============================== -->
+  <element abstract="true" name="Abstract_DataEpoch" substitutionGroup="gco:AbstractObject" type="rbc:Abstract_DataEpoch_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_DataEpoch_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_DataEpoch_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_DataEpoch"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_IdentifiedObject" substitutionGroup="gco:AbstractObject" type="rbc:Abstract_IdentifiedObject_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_IdentifiedObject_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_IdentifiedObject_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_IdentifiedObject"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_ObjectDomain" substitutionGroup="gco:AbstractObject" type="rbc:Abstract_ObjectDomain_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_ObjectDomain_Type">
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_ObjectDomain_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_ObjectDomain"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_ObjectUsage" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_ObjectUsage_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_ObjectUsage_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_ObjectUsage_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_ObjectUsage"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_CRS" substitutionGroup="rbc:Abstract_ObjectUsage" type="rbc:Abstract_CRS_Type"/>
+  <!-- _______________________________ -->
+  <complexType abstract="true" name="Abstract_CRS_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_ObjectUsage_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _______________________________ -->
+  <complexType name="Abstract_CRS_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_CRS"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_Domain" substitutionGroup="rbc:Abstract_ObjectUsage" type="rbc:Abstract_Domain_Type"/>
+  <!-- _______________________________ -->
+  <complexType abstract="true" name="Abstract_Domain_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_ObjectUsage_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _______________________________ -->
+  <complexType name="Abstract_Domain_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_Domain"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_DomainEnsemble" substitutionGroup="rbc:Abstract_ObjectUsage" type="rbc:Abstract_DomainEnsemble_Type"/>
+  <!-- _______________________________ -->
+  <complexType abstract="true" name="Abstract_DomainEnsemble_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_ObjectUsage_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _______________________________ -->
+  <complexType name="Abstract_DomainEnsemble_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_DomainEnsemble"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_CoordinateOperation" substitutionGroup="rbc:Abstract_ObjectUsage" type="rbc:Abstract_CoordinateOperation_Type"/>
+  <!-- _______________________________ -->
+  <complexType abstract="true" name="Abstract_CoordinateOperation_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_ObjectUsage_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _______________________________ -->
+  <complexType name="Abstract_CoordinateOperation_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_CoordinateOperation"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_CoordinateSystem" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_CoordinateSystem_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_CoordinateSystem_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_CoordinateSystem_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_CoordinateSystem"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_CoordinateSystemAxis" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_CoordinateSystemAxis_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_CoordinateSystemAxis_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_CoordinateSystemAxis_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_CoordinateSystemAxis"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_OperationMethod" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_OperationMethod_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_OperationMethod_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_OperationMethod_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_OperationMethod"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_GeneralOperationParameter" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_GeneralOperationParameter_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_GeneralOperationParameter_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_GeneralOperationParameter_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_GeneralOperationParameter"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_DefiningParameter" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_DefiningParameter_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_DefiningParameter_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_DefiningParameter_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_DefiningParameter"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_Ellipsoid" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_Ellipsoid_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_Ellipsoid_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_Ellipsoid_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_Ellipsoid"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+  <element abstract="true" name="Abstract_PrimeMeridian" substitutionGroup="rbc:Abstract_IdentifiedObject" type="rbc:Abstract_PrimeMeridian_Type" />
+  <!-- _________________________________________ -->
+  <complexType abstract="true" name="Abstract_PrimeMeridian_Type">
+    <complexContent>
+      <extension base="rbc:Abstract_IdentifiedObject_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- _________________________________________ -->
+  <complexType name="Abstract_PrimeMeridian_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="rbc:Abstract_PrimeMeridian"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =============================== -->
+</schema>

@@ -4,7 +4,7 @@
 	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
 	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
 	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/2.0" 
+	xmlns:rbc="https://schemas.isotc211.org/19107/-/gss/2.0" 
 	elementFormDefault="qualified" 
 	targetNamespace="https://schemas.isotc211.org/19107/-/gss/2.0"
 	version="0.1.0">

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19111/-/rbc/3.1"
+	version="3.1.0">
+	<xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/gex.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:annotation>
+		<xs:documentation>The Coordinate Reference System package describes the data elements, relationships and associated metadata required for spatial referencing by coordinates.</xs:documentation>
+	</xs:annotation>
+	<!-- ========================================== Table 8 -->
+	<xs:complexType name="CRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:CRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CRS" substitutionGroup="rbc:ObjectUsage" type="rbc:CRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CRS_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system which is usually single but may be compound</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:ObjectUsage_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 9 -->
+	<xs:complexType name="SingleCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:SingleCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="SingleCRS" substitutionGroup="rbc:CRS" type="rbc:SingleCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="SingleCRS_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system consisting of one coordinate system and either one datum or one datum ensemble</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:CRS_Type">
+				<xs:sequence>
+					<xs:element name="coordinateSystem" type="rbc:GeodeticCS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>coordinate system that is a component of this single coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="datum" type="rbc:Datum_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation><xs:documentation>datum that is a component of this single coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="datumEnsemble" type="rbc:DatumEnsemble_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation><xs:documentation>datum ensemble that is a component of this single coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 10 -->
+	<xs:complexType name="GeodeticCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:GeodeticCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeodeticCRS" substitutionGroup="rbc:SingleCRS" type="rbc:GeodeticCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeodeticCRS_Type">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system associated with a geodetic reference frame and a three-dimensional Cartesian or spherical coordinate system
+				Note: If the geodetic reference frame is dynamic then the geodetic CRS is dynamic, else it is static.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleCRS_Type">
+				<xs:sequence>
+					<xs:element name="velocityModel" type="rbc:PointMotionOperation_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>velocity model or deformation grid that is applied to this vertical coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 11 -->
+	<xs:complexType name="GeographicCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:GeographicCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeographicCRS" substitutionGroup="rbc:GeodeticCRS" type="rbc:GeographicCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeographicCRS_Type">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system associated with a geodetic reference frame and a two- or three-dimensional ellipsoidal coordinate system 
+				Note: If the geodetic reference frame is dynamic then the geographic CRS is dynamic, else it is static.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeodeticCRS_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 12 -->
+	<xs:complexType name="VerticalCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:VerticalCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="VerticalCRS" substitutionGroup="rbc:SingleCRS" type="rbc:VerticalCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="VerticalCRS_Type">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system having a vertical reference frame and a one-dimensional vertical coordinate system used for recording gravity-related heights or depths; vertical CRSs make use of the direction of gravity to define the concept of height or depth, but the relationship with gravity may not be straightforward. 
+				Note 1: If the vertical reference frame is dynamic then the vertical CRS is dynamic, else it is static. 
+				Note 2: Ellipsoidal heights cannot be captured in a vertical coordinate reference system. They exist only as an inseparable part of a 3D coordinate tuple defined in a geographic 3D coordinate reference system.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleCRS_Type">
+				<xs:sequence>
+					<xs:element name="geoidModel" type="rbc:Transformation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>geoid model or height correction model that is associated with this vertical coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="velocityModel" type="rbc:PointMotionOperation_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>velocity model or deformation grid that is applied to this vertical coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 13 -->
+	<xs:complexType name="ParametricCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:ParametricCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="ParametricCRS" substitutionGroup="rbc:SingleCRS" type="rbc:ParametricCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="ParametricCRS_Type">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system having a parametric datum and a one-dimensional parametric coordinate system which uses parameter values or functions</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleCRS_Type">
+				<xs:sequence>
+					<!-- <xs:element name="coordinateSystem" type="rbc:ParametricCS_PropertyType" minOccurs="1" maxOccurs="1"/> control type with Schematron -->
+					<!-- <xs:element name="datum" type="rbc:ParametricDatum_PropertyType" minOccurs="0" maxOccurs="1"/> control type with Schematron -->
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 14 -->
+	<xs:complexType name="EngineeringCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:EngineeringCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EngineeringCRS" substitutionGroup="rbc:SingleCRS" type="rbc:EngineeringCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EngineeringCRS_Type">
+		<xs:annotation>
+			<xs:documentation>contextually local coordinate reference system associated with an engineering datum and which is applied either to activities on or near the surface of the Earth without geodetic corrections, or on moving platforms such as road vehicles, vessels, aircraft or spacecraft, or as the internal CRS of an image</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleCRS_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 15 -->
+	<xs:complexType name="TemporalCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:TemporalCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TemporalCRS" type="rbc:TemporalCRS_Type" substitutionGroup="rbc:SingleCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TemporalCRS_Type">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system associated with a temporal datum and a one-dimensional temporal coordinate system</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleCRS_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>		
+	</xs:complexType>
+	<!-- ========================================== Table 16 -->
+	<xs:complexType name="DerivedCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedCRS" substitutionGroup="rbc:SingleCRS" type="rbc:DerivedCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedCRS_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>single coordinate reference system that is defined through the application of a specified coordinate conversion to the definition of a previously established single coordinate reference system referred to as the base CRS
+				Note:  A derived coordinate reference system inherits its datum (or datum ensemble) from its base CRS. The coordinate conversion between the base and derived coordinate reference system is implemented using the parameters and formula(s) specified in the definition of the coordinate conversion.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleCRS_Type">
+				<xs:sequence>
+					<xs:element name="baseCRS" type="rbc:SingleCRS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system that is the baseCRS for this derived coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="derivingConversion" type="rbc:Conversion_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>conversion that is a component of this derived coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 17 -->
+	<xs:complexType name="ProjectedCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:ProjectedCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="ProjectedCRS" substitutionGroup="rbc:DerivedCRS" type="rbc:ProjectedCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="ProjectedCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has a geodetic (usually geographic) coordinate reference system as its base CRS, thereby inheriting a geodetic reference frame, is converted using a map projection, and has a Cartesian coordinate system, usually two-dimensional but may be three-dimensional
+				Note: In the 3D case the base geographic CRSs ellipsoidal height is passed through unchanged and forms the vertical axis of the projected CRS's Cartesian coordinate system.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:DerivedCRS_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 18 -->
+	<xs:complexType name="DerivedProjectedCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedProjectedCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedProjectedCRS" substitutionGroup="rbc:DerivedCRS" type="rbc:DerivedProjectedCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedProjectedCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has a projected coordinate reference system as its base CRS, thereby inheriting a geodetic reference frame, but also inheriting the distortion characteristics of the base projected CRS</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:DerivedCRS_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  Table 19 -->
+	<xs:complexType name="DerivedGeodeticCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedGeodeticCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedGeodeticCRS" type="rbc:DerivedGeodeticCRS_Type" substitutionGroup="rbc:GeodeticCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedGeodeticCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has either a geodetic or a geographic coordinate reference system as its base CRS, thereby inheriting a geodetic reference frame, and associated with a 3D Cartesian or spherical coordinate system</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeodeticCRS_Type">
+				<xs:sequence>
+					<!-- elements that would have been inherited from DerivedCRS -->
+					<xs:element name="baseCRS" type="rbc:SingleCRS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system that is the baseCRS for this derived coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="derivingConversion" type="rbc:Conversion_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>conversion that is a component of this derived coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 20 -->
+	<xs:complexType name="DerivedGeographicCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedGeographicCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedGeographicCRS" type="rbc:GeographicCRS_Type" substitutionGroup="rbc:GeographicCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedGeographicCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has either a geodetic or a geographic coordinate reference system as its base CRS, thereby inheriting a geodetic reference frame, and an ellipsoidal coordinate system
+				Note: A derived geographic CRS can be based on a geodetic CRS only if that geodetic CRS definition includes an ellipsoid.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeographicCRS_Type">
+				<xs:sequence>
+					<!-- elements that would have been inherited from DerivedCRS -->
+					<xs:element name="baseCRS" type="rbc:SingleCRS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system that is the baseCRS for this derived coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="derivingConversion" type="rbc:Conversion_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>conversion that is a component of this derived coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 21 -->
+	<xs:complexType name="DerivedVerticalCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedVerticalCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedVerticalCRS" type="rbc:DerivedVerticalCRS_Type" substitutionGroup="rbc:VerticalCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedVerticalCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has a vertical coordinate reference system as its base CRS, thereby inheriting a vertical reference frame, and a vertical coordinate system</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:VerticalCRS_Type">
+				<xs:sequence>
+					<!-- elements that would have been inherited from DerivedCRS -->
+					<xs:element name="baseCRS" type="rbc:SingleCRS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system that is the baseCRS for this derived coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="derivingConversion" type="rbc:Conversion_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>conversion that is a component of this derived coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 22 -->
+	<xs:complexType name="DerivedParametricCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedParametricCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedParametricCRS" type="rbc:DerivedParametricCRS_Type" substitutionGroup="rbc:ParametricCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedParametricCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has a parametric coordinate reference system as its base CRS, thereby inheriting a parametric datum, and a parametric coordinate system</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:ParametricCRS_Type">
+				<xs:sequence>
+					<!-- elements that would have been inherited from DerivedCRS -->
+					<xs:element name="baseCRS" type="rbc:SingleCRS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system that is the baseCRS for this derived coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="derivingConversion" type="rbc:Conversion_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>conversion that is a component of this derived coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 23 -->
+	<xs:complexType name="DerivedEngineeringCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedEngineeringCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedEngineeringCRS" type="rbc:DerivedEngineeringCRS_Type" substitutionGroup="rbc:EngineeringCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedEngineeringCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has an engineering coordinate reference system as its base CRS, thereby inheriting an engineering datum, and is associated with one of the coordinate system types within the engineeringCS class</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:EngineeringCRS_Type">
+				<xs:sequence>
+					<!-- elements that would have been inherited from DerivedCRS -->
+					<xs:element name="baseCRS" type="rbc:SingleCRS_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system that is the baseCRS for this derived coordinate reference system</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="derivingConversion" type="rbc:Conversion_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>conversion that is a component of this derived coordinate reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 24 -->
+	<xs:complexType name="DerivedTemporalCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DerivedTemporalCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DerivedTemporalCRS" type="rbc:DerivedTemporalCRS_Type" substitutionGroup="rbc:TemporalCRS"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DerivedTemporalCRS_Type">
+		<xs:annotation>
+			<xs:documentation>derived coordinate reference system which has a temporal coordinate reference system as its base CRS, thereby inheriting a temporal datum, and is associated with a temporal coordinate system</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:TemporalCRS_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 25 -->
+	<xs:complexType name="CompoundCRS_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:CompoundCRS"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CompoundCRS" substitutionGroup="rbc:CRS" type="rbc:CompoundCRS_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CompoundCRS_Type">
+		<xs:annotation>
+			<xs:documentation>coordinate reference system describing the position of points through two or more independent single coordinate reference systems
+				Note: two coordinate reference systems are independent of each other if coordinate values in one cannot be converted or transformed into coordinate values in the other.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:CRS_Type">
+				<xs:sequence>
+					<xs:element name="componentReferenceSystem" type="rbc:SingleCRS_PropertyType" minOccurs="2" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+</xs:schema>

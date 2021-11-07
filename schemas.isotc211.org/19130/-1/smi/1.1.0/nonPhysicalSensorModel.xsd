@@ -14,8 +14,8 @@
   xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
   version="1.1.0">
     <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
-    <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19163/-1/igd/1.1" schemaLocation="../../../../19163/-1/igd/1.1.0/IE_ImageryAndGriddedData.xsd"/>
+    
+     <import namespace="https://schemas.isotc211.org/19163/-1/igd/1.1" schemaLocation="../../../../19163/-1/igd/1.1.0/IE_ImageryAndGriddedData.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>

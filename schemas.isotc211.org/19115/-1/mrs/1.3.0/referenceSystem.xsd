@@ -35,15 +35,12 @@
                 required</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="crs" type="gml:CRSPropertyType" id="ISO19115-1.180.1_ISO19111.CRS"/>
-          <!--
           <element minOccurs="0" name="crs" type="rbc:RS_CRS_PropertyType" id="ISO19115-1.180.1_ISO19111.CRS">
             <annotation>
               <documentation>full description of the coordinate reference system to which a coordinate set is referenced</documentation>
               <documentation>Condition: At least one of referenceSystemIdentifier or crs is required</documentation>
             </annotation>
           </element>
-          -->
           <element minOccurs="0" name="coordinateEpoch" type="rbc:DataEpoch_PropertyType" id="ISO19115-1.180.2_ISO19111.DataEpoch">
             <annotation>
               <documentation>epoch at which a coordinate set to a dynamic CRS is

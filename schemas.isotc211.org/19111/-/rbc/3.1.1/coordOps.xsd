@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/2.0" 
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2"
+	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19111/-/rbc/3.1"
+	version="3.1.0">
+	<xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
+	<xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/AbstractCommonClasses.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19107/-/gss/2.0" schemaLocation="../../../../19107/-/gss/2.0.0/gss.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/gex.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+		<xs:annotation>
+		<xs:documentation>The Coordinate Operations package describes the information required to transform or convert coordinates form one coordinate reference system to another.</xs:documentation>
+	</xs:annotation>
+	<!-- ========================================== -->
+
+	<!-- ========================================== Table 65 -->
+	<xs:complexType name="CoordinateOperation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:CoordinateOperation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CoordinateOperation" substitutionGroup="rbc:ObjectUsage" type="rbc:CoordinateOperation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CoordinateOperation_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>mathematical operation (a) on coordinates that transforms or converts them from one coordinate reference system to another coordinate reference system, or (b) that decribes the change of coordinate values within one coordinate reference system due to the motion of the point between one coordinate epoch and another coordinate epoch
+				Note: Many but not all coordinate operations (from CRS A to CRS B) also uniquely define the inverse coordinate operation (from CRS B to CRS A). In some cases, the coordinate operation method algorithm for the inverse coordinate operation is the same as for the forward algorithm, but the signs of some coordinate operation parameter values have to be reversed. In other cases, different algorithms are required for the forward and inverse coordinate operations, but the same coordinate operation parameter values are used. If (some) entirely different parameter values are needed, a different coordinate operation shall be defined.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:ObjectUsage_Type">
+				<xs:sequence>
+					<xs:element name="operationVersion" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>version of the coordinate transformation (i.e. instantiation due to the stochastic nature of the parameters) 
+								Condition: Mandatory when describing a coordinate transformation or point motion operation, and should not be supplied for a coordinate conversion.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="coordinateOperationAccuracy" type="mdq:AbstractDQ_PositionalAccuracy_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>estimate(s) of the impact of this coordinate operation on point accuracy
+								Note: Gives position error estimates for target coordinates of this coordinate operation, assuming no errors in source coordinates.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sourceCRS" type="rbc:Abstract_CRS_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>coordinate reference system to which the coordinate set input into this coordinate operation is referenced</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="targetCRS" type="rbc:Abstract_CRS_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation><xs:documentation>coordinate reference system to which the coordinate set output from this coordinate operation is referenced</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="interpolationCRS" type="rbc:Abstract_CRS_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>"coordinate reference system to which gridded data files are referenced which this coordinate operation uses to  transform coordinates between two other coordinate reference systems
+								Note: InterpolationCRS is only used when it is different from both sourceCRS and targetCRS."</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sourceCoordinateEpoch" type="rbc:DataEpoch_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>coordinate epoch of the coordinate set input into this coordinate operation</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="targetCoordinateEpoch" type="rbc:DataEpoch_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>coordinate epoch of the coordinate set output from this coordinate operation</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Not in standard ========================================== Table 66-->
+	<xs:complexType name="PassThroughOperation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:PassThroughOperation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="PassThroughOperation" substitutionGroup="rbc:CoordinateOperation" type="rbc:PassThroughOperation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="PassThroughOperation_Type">
+		<xs:annotation>
+			<xs:documentation>specification of a subset of coordinate tuples that is subject to a coordinate operation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:CoordinateOperation_Type">
+				<xs:sequence>
+					<xs:element name="modifiedCoordinate" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>ordered sequence of positive integers defining the positions in a source coordinate tuple of the coordinates affected by this pass-through operation</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="coordOperation" type="rbc:Abstract_CoordinateOperation_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>subset of a coordinate tuple that the coordinate operation will operate upon</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 67 -->
+	<xs:complexType name="ConcatenatedOperation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:ConcatenatedOperation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="ConcatenatedOperation" substitutionGroup="rbc:CoordinateOperation" type="rbc:ConcatenatedOperation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="ConcatenatedOperation_Type">
+		<xs:annotation>
+			<xs:documentation>ordered sequence of two or more single coordinate operations
+				Note: The sequence of coordinate operations is constrained by the requirement that the source coordinate reference system of step (n + 1) shall be the same as the target coordinate reference system of step (n). The source coordinate reference system of the first step and the target coordinate reference system of the last step are the source and target coordinate reference system associated with the concatenated coordinate operation. For a concatenated coordinate operation sequence of n coordinate operations: 
+				source CRS (concatenated coordinate operation) = source CRS (coordinate operation step 1) 
+				target CRS (coordinate operation step i) = source CRS (coordinate operation step i + 1); i = 1 ...(n - 1) 
+				target CRS (concatenated coordinate operation) = target CRS (coordinate operation step n) 
+				Instead of a forward coordinate operation, an inverse coordinate operation may be used for one or more of the coordinate operation steps mentioned above, if the inverse coordinate operation is uniquely defined by the forward coordinate operation method.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:CoordinateOperation_Type">
+				<xs:sequence>
+					<xs:element name="coordOperation" type="rbc:Abstract_CoordinateOperation_PropertyType" minOccurs="2" maxOccurs="unbounded">
+						<xs:annotation><xs:documentation>coordinate operation that is a step in the sequence forming this concatenated coordinate operation</xs:documentation></xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 68 -->
+	<xs:complexType name="SingleOperation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:SingleOperation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="SingleOperation" substitutionGroup="rbc:CoordinateOperation" type="rbc:SingleOperation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="SingleOperation_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>single (not concatenated) coordinate operation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:CoordinateOperation_Type">
+				<xs:sequence>
+					<xs:element name="method" type="rbc:Abstract_OperationMethod_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>algorithm or procedure used by this single operation</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="parameterValue" type="rbc:GeneralParameterValue_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>parameter value or parameter value group used by this single operation</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 69 -->
+	<xs:complexType name="Transformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:Transformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Transformation" substitutionGroup="rbc:SingleOperation" type="rbc:Transformation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Transformation_Type">
+		<xs:annotation>
+			<xs:documentation>mathematical operation on coordinates in which parameters are empirically derived from data containing the coordinates of a series of points in both coordinate reference systems
+				Note: This computational process is usually “over-determined”, allowing derivation of error (or accuracy) estimates for the coordinate transformation. Also, the stochastic nature of the parameters may result in multiple (different) versions of the same coordinate transformations between the same source and target CRSs. Any single coordinate operation in which the input and output coordinates are referenced to different datums (reference frames) will be a coordinate transformation.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleOperation_Type">
+				<xs:sequence>
+					<xs:element name="operationVersion" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>version of the coordinate transformation (i.e. instantiation due to the stochastic nature of the parameters)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 70 -->
+	<xs:complexType name="Conversion_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:Conversion"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Conversion" substitutionGroup="rbc:SingleOperation" type="rbc:Conversion_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Conversion_Type">
+		<xs:annotation>
+			<xs:documentation>mathematical operation on coordinates in which the parameter values are defined rather than empirically derived; application of the coordinate conversion introduces no error into output coordinates
+				Note: The best-known example of a coordinate conversion is a map projection. For coordinate conversions the output coordinates are referenced to the same datum as are the input coordinates.
+				Coordinate conversions forming a component of a derived CRS have a source CRS and a target CRS that are NOT specified through the source and target associations, but through associations from DerivedCRS to SingleCRS.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleOperation_Type">
+				<xs:sequence>
+					<xs:element name="operationVersion" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="0">
+						<xs:annotation>
+							<xs:documentation>(not applicable) 
+								Note: This attribute is not used in a coordinate conversion.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 71 -->
+	<xs:complexType name="PointMotionOperation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:PointMotionOperation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="PointMotionOperation" substitutionGroup="rbc:SingleOperation" type="rbc:PointMotionOperation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="PointMotionOperation_Type">
+		<xs:annotation>
+			<xs:documentation>
+				mathematical operation that decribes the change of coordinate values within one coordinate reference system due to the motion of the point between one coordinate epoch and another coordinate epoch 
+				Note: In this document the motion is due to tectonic plate movement or deformation.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:SingleOperation_Type">
+				<xs:sequence>
+					<xs:element name="operationVersion" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								version of the point motion operation (i.e. instantiation due to the stochastic nature of the parameters) 
+								Note: This attribute is mandatory in a point motion operation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 72 -->
+	<xs:complexType name="OperationMethod_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:OperationMethod"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="OperationMethod" substitutionGroup="rbc:IdentifiedObject" type="rbc:OperationMethod_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="OperationMethod_Type">
+		<xs:annotation>
+			<xs:documentation>method (algorithm or procedure) used to perform the coordinate operation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:IdentifiedObject_Type">
+				<xs:sequence>
+					<xs:element name="formulaReference" type="rbc:Formula_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>formula(s) or procedure used by this coordinate operation method
+								Note: This may be a reference to a publication. Note that the operation method may not be analytic, in which case this attribute references or contains the procedure, not an analytic formula.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="parameter" type="rbc:Abstract_GeneralOperationParameter_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation><xs:documentation>parameter or parameter group used by this coordinate operation method</xs:documentation></xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 73 -->
+	<xs:complexType name="Formula_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:Formula"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Formula" type="rbc:Formula_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Formula_Type">
+		<xs:annotation>
+			<xs:documentation>specification of the coordinate operation method formula</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="formula" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>formula(s) or procedure used by the coordinate operation method</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="formulaCitation" type="mcc:Abstract_Citation_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>reference to a publication giving the formula(s) or procedure used by the coordinate operation method</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<!-- ========================================== Table 74 -->
+	<xs:complexType name="GeneralOperationParameter_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:GeneralOperationParameter"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeneralOperationParameter" substitutionGroup="rbc:IdentifiedObject" type="rbc:GeneralOperationParameter_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeneralOperationParameter_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>definition of a parameter or group of parameters used by a coordinate operation method</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:IdentifiedObject_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 75 -->
+	<xs:complexType name="OperationParameterGroup_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:OperationParameterGroup"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="OperationParameterGroup" substitutionGroup="rbc:GeneralOperationParameter" type="rbc:OperationParameterGroup_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="OperationParameterGroup_Type">
+		<xs:annotation>
+			<xs:documentation>definition of a group of related parameters used by a coordinate operation method</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeneralOperationParameter_Type">
+				<xs:sequence>
+					<xs:element name="minimumOccurs" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>minimum number of times that values for this parameter group or parameter is required
+								Note: If this attribute is omitted, the minimum number is one.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="maximumOccurs" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>maximum number of times that values for this parameter group or parameter can be included
+								Note: If this attribute is omitted, the maximum number is one.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="parameter" type="rbc:Abstract_GeneralOperationParameter_PropertyType" minOccurs="2" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 76 -->
+	<xs:complexType name="OperationParameter_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:OperationParameter"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="OperationParameter" substitutionGroup="rbc:GeneralOperationParameter" type="rbc:OperationParameter_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="OperationParameter_Type">
+		<xs:annotation>
+			<xs:documentation>definition of a parameter used by a coordinate operation method
+				Note: Most parameter values are numeric, but other types of parameter values are possible.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeneralOperationParameter_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 77 -->
+	<xs:complexType name="GeneralParameterValue_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:GeneralParameterValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeneralParameterValue" type="rbc:GeneralParameterValue_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeneralParameterValue_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>parameter value or group of parameter values</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="parameter" type="rbc:Abstract_GeneralOperationParameter_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 78 -->
+	<xs:complexType name="ParameterValueGroup_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:ParameterValueGroup"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="ParameterValueGroup" substitutionGroup="rbc:GeneralParameterValue" type="rbc:ParameterValueGroup_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="ParameterValueGroup_Type">
+		<xs:annotation>
+			<xs:documentation>group of related parameter values
+				Note: The same group can be repeated more than once in a coordinate operation or higher level ParameterValueGroup, if those instances contain different values of one or more ParameterValues which suitably distinguish among those groups.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeneralParameterValue_Type">
+				<xs:sequence>
+					<xs:element name="parameterValue" type="rbc:GeneralParameterValue_PropertyType" minOccurs="2" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>value in this value group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="group" type="rbc:OperationParameterGroup_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>parameter group associated with this value group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 79 -->
+	<xs:complexType name="OperationParameterValue_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:OperationParameterValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="OperationParameterValue" substitutionGroup="rbc:GeneralParameterValue" type="rbc:OperationParameterValue_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="OperationParameterValue_Type">
+		<xs:annotation>
+			<xs:documentation>parameter value, ordered sequence of values, or reference to a file of parameter values</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeneralParameterValue_Type">
+				<xs:sequence>
+					<xs:element name="parameterValue" type="rbc:ParameterValue_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>value of the coordinate operation parameter</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 80 -->
+	<xs:complexType name="ParameterValue_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:ParameterValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="ParameterValue" type="rbc:ParameterValue_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="ParameterValue_Type">
+		<xs:annotation>
+			<xs:documentation>value of the coordinate operation parameter</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="value" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>numeric value of the coordinate operation parameter with its associated unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stringValue" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>string value of a coordinate operation parameter
+						Note: A string value does not have an associated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="integerValue" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>positive integer value of a coordinate operation parameter, usually used for a count
+						Note: An integer value does not have an associated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="booleanValue" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>boolean value of a coordinate operation parameter
+						Note: A Boolean value does not have an associated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="valueList" type="gco:Measure_PropertyType" minOccurs="2" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>ordered collection, i.e. sequence, of two or more numeric values of a coordinate operation parameter list, where each value has the same associated unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="integerValueList" type="gco:Integer_PropertyType" minOccurs="2" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>ordered collection, i.e. sequence, of two or more integer values of a coordinate operation parameter list, usually used for counts
+						Note: These integer values do not have an associated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="valueFile" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>reference to a file or an identified part of a file containing one or more parameter values" and note changed to "Note: The referenced file or part of a file can reference another part of the same or different files, as allowed in XML documents</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="valueFileCitation" type="mcc:Abstract_Citation_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>citation for a reference to a file or an identified part of a file containing one or more parameter values
+						Note: The referenced file or part of a file can reference another part of the same or different files, as allowed in XML documents</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="geographicObject" type="rbc:GeographicObject_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>identifier of a geographic feature of which the coordinates are used as operation parameters</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<!-- ========================================== Table 81 Realization of 19107:"Geometry" -->
+	<xs:complexType name="GeographicObject_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:GeographicObject"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeographicObject" type="rbc:GeographicObject_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeographicObject_Type">
+		<xs:annotation>
+			<xs:documentation>identification of an object used as a parameter in a coordinate transformation, point motion operation or coordinate conversion</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- from 19107 TransfiniteSetOfDirectPositions -->
+			<xs:element name="contains" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<!-- from 19107 Geometry -->
+			<xs:element name="asBoolean" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="asData" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="asGML" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="asText" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="boundary" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="centroid" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="closure" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="convexHull" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="coordinateDimension" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="envelope" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="isCycle" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="isEmpty" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="isSimple" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="isValid" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="maximalComplex" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="mbRegion" type="gss:MBRegion_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="metadata" type="gcx:URI_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="representativePoint" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="rsid" type="gss:RSID_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="spatialDimension" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="topographicDimension" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="containingGeometry" type="rbc:GeographicObject_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="containedGeometry" type="rbc:GeographicObject_PropertyType" minOccurs="0" maxOccurs="unbounded"/>					
+			<xs:element name="buffer" type="rbc:GeographicObject_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dimension" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="distanceGeometry" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="distancePosition" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="equalGeometricReferenceSurface" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="equalGeometry" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="transform" type="rbc:GeographicObject_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<!-- from 19111 GeographicObject -->
+			<xs:element name="identifier" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>identifier of the geographic object</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 82 -->
+	<xs:complexType name="RegisterOperations_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:RegisterOperations"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="RegisterOperations" type="rbc:RegisterOperations_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="RegisterOperations_Type">
+		<xs:annotation>
+			<xs:documentation>operations supported in the Coordinate Operations package</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- 
+				<xs:element name="authority" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>citation used by this register operation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			-->
+			<xs:element name="findCoordinateOperations" type="rbc:Abstract_CoordinateOperation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>operation to find any coordinate operations for which the given CRSs are the source and target, in that order 
+						Note: This is the reverse navigation for the associations Source and Target from CoordinateOperation to Coordinate Reference Systems::CRS.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="findCoordinateOperation" type="rbc:Abstract_CoordinateOperation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>operation to extract Coordinate Operation details from a registry</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="findCoordinateReferenceSystem" type="rbc:Abstract_CRS_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>operation to extract Coordinate Operation details from a registry</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="areMembersOfSameEnsemble" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>operation to determine whether two coordinate reference systems are members of one ensemble
+						Note: If this returns true then for low accuracy purposes coordinate sets referenced to these CRSs may be merged without coordinate transformation. 
+						The attribute 'DatumEnsemble.ensembleAccuracy'  gives some indication of the inaccuracy introduced through such merger.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== -->
+
+</xs:schema>

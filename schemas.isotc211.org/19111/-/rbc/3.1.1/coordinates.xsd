@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19111/-/rbc/3.1"
+	version="3.1.0">
+	<xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/gex.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<!-- ========================================== Table 2 -->
+	<xs:complexType name="CoordinateMetadata_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:CoordinateMetadata"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CoordinateMetadata" type="rbc:CoordinateMetadata_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CoordinateMetadata_Type">
+		<xs:annotation>
+			<xs:documentation>metadata required to reference coordinates</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="crsID" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>identifier of the coordinate reference system to which a coordinate set is referenced</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="crs" type="rbc:Abstract_CRS_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>full definition of the coordinate reference system to which a coordinate set is referenced</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coordinateEpoch" type="rbc:DataEpoch_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>epoch at which a coordinate set referenced to a dynamic CRS is valid 
+Note: Required if the CRS is dynamic, otherwise should no be given.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 3 -->
+	<xs:complexType name="CoordinateSet_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:CoordinateSet"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="CoordinateSet" type="rbc:CoordinateSet_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="CoordinateSet_Type">
+		<xs:annotation>
+			<xs:documentation>description of the coordinate tuples in a coordinate set 
+				Note: A single coordinate tuple is treated as a special case of coordinate set containing only one member.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="coordinateTuple" type="gml:DirectPositionType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>position described by a coordinate tuple</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coordinateMetadata" type="rbc:CoordinateMetadata_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation><xs:documentation>coordinate metadata to which this coordinate set is referenced</xs:documentation></xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 4 -->
+	<xs:complexType name="DataEpoch_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DataEpoch"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DataEpoch" type="rbc:DataEpoch_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DataEpoch_Type">
+		<xs:annotation>
+			<xs:documentation>time attribute of a coordinate set that is referenced to a dynamic CRS</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="coordinateEpoch" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>date at which coordinates are referenced to a dynamic coordinate reference system, expressed as a decimal year in the Gregorian calendar
+Example: 2017-03-25 in the Gregorian calendar is epoch 2017.23.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== -->
+</xs:schema>

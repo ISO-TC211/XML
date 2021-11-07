@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2"
+	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19111/-/rbc/3.1"
+	version="3.1.0">
+	<xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
+	<xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/AbstractCommonClasses.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/mdq.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/cit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/gex.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	
+	<xs:annotation>
+		<xs:documentation>The Datum package contains the information required to relate the position of the origin, the scale and the orientation of a coordinate system to the Earth or another physical or virtual object.</xs:documentation>
+	</xs:annotation>
+
+	<!-- ========================================== Table 50 -->
+	<xs:complexType name="Datum_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:Datum"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Datum" substitutionGroup="rbc:ObjectUsage" type="rbc:Datum_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Datum_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>specification of the relationship of a coordinate system to an object, thus creating a coordinate reference system
+				Note: For geodetic and vertical coordinate reference systems, it relates a coordinate system to the Earth. With other types of coordinate reference systems, the datum may relate the coordinate system to another physical or virtual object. A datum uses a parameter or set of parameters that determine the location of the origin of the coordinate reference system. Each datum subtype can be associated with only specific types of coordinate reference systems.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:ObjectUsage_Type">
+				<xs:sequence>
+					<xs:element name="anchorDefinition" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>description, possibly including coordinates of an identified point or points, of the relationship used to anchor a coordinate system to the Earth or alternate object 
+								Note: For modern geodetic reference frames the anchor may be a set of station coordinates; if the reference frame is dynamic it will also include coordinate velocities. For a traditional geodetic datum, the anchor may be a point known as the fundamental point, which is traditionally the point where the relationship between geoid and ellipsoid is defined, together with a direction from that point.
+								- For a vertical reference frame the anchor may be the zero level at one or more defined locations or a conventionally defined surface. 
+								- For an engineering datum, the anchor may be an identified physical point with the orientation defined relative to the object.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="publicationDate" type="gco:Date_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>date on which the datum definition was published</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="conventionalRS" type="rbc:Abstract_IdentifiedObject_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>name, identifier, alias and remarks for the terrestrial reference system or vertical reference system realized by this reference frame
+								Examples: "ITRS" for ITRF88 through ITRF2008 and ITRF2014, or "EVRS" for EVRF2000 and EVRF2007.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 51 -->
+	<xs:complexType name="GeodeticReferenceFrame_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:GeodeticReferenceFrame"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeodeticReferenceFrame" substitutionGroup="rbc:Datum" type="rbc:GeodeticReferenceFrame_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeodeticReferenceFrame_Type">
+		<xs:annotation>
+			<xs:documentation>definition of the position, scale and orientation of a geocentric Cartesian 3D coordinate system relative to the Earth
+				Note 1: It may also identify a defined ellipsoid (or sphere) that approximates the shape of the Earth and which is centred on and aligned to this geocentric coordinate system. 
+				Older geodetic datums define the location and orientation of a defined ellipsoid (or sphere) that approximates the shape of the earth.
+				Note 2: In 19111:2007 this class was called GeodeticDatum.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:Datum_Type">
+				<xs:sequence>
+					<xs:element name="ellipsoid" type="rbc:Abstract_Ellipsoid_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="primeMeridian" type="rbc:Abstract_PrimeMeridian_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 52 -->
+	<xs:complexType name="DynamicGeodeticReferenceFrame_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DynamicGeodeticReferenceFrame"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DynamicGeodeticReferenceFrame" substitutionGroup="rbc:GeodeticReferenceFrame" type="rbc:DynamicGeodeticReferenceFrame_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DynamicGeodeticReferenceFrame_Type">
+		<xs:annotation>
+			<xs:documentation>geodetic reference frame in which some of the parameters describe time evolution of defining station coordinates
+				Example: defining station coordinates having linear velocities to account for crustal motion.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:GeodeticReferenceFrame_Type">
+				<xs:sequence>
+					<xs:element name="frameReferenceEpoch" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>epoch to which the coordinates of stations defining the dynamic geodetic reference frame are referenced, expressed as a decimal year in the Gregorian calendar
+								Example: 2016,47.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 53 -->
+	<xs:complexType name="PrimeMeridian_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:PrimeMeridian"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="PrimeMeridian" substitutionGroup="rbc:IdentifiedObject" type="rbc:PrimeMeridian_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="PrimeMeridian_Type">
+		<xs:annotation>
+			<xs:documentation>origin meridian from which longitude values are determined 
+				Note: The default value for prime meridian name is “Greenwich”. When the default applies, the value for the greenwichLongitude shall be 0 (degrees).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:IdentifiedObject_Type">
+				<xs:sequence>
+					<xs:element name="greenwichLongitude" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>longitude of the prime meridian measured from the internationally-recognised reference meridian ('Greenwich meridian'), positive eastward
+								Note 1: Default value: 0 degrees. 
+								Note 2: If the value of the prime meridian name is “Greenwich” then the value of greenwichLongitude is required to be 0 degrees.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 54 -->
+	<xs:complexType name="Ellipsoid_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:Ellipsoid"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Ellipsoid" substitutionGroup="rbc:IdentifiedObject" type="rbc:Ellipsoid_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Ellipsoid_Type">
+		<xs:annotation>
+			<xs:documentation>geometric reference surface embedded in 3D Euclidean space formed by an ellipse that is rotated about a main axis
+				Note: For the Earth the ellipsoid is bi-axial with rotation about the polar axis. This results in an oblate ellipsoid with the midpoint of the foci located at the nominal centre of the Earth.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:IdentifiedObject_Type">
+				<xs:sequence>
+					<xs:element name="semiMajorAxis" type="gco:Length_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>length of the semi-major axis of the ellipsoid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="secondDefiningParameter" type="rbc:SecondDefiningParameter_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>definition of the second parameter that describes the shape of this ellipsoid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="semiMedianAxis" type="gco:Length_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>length of the semi-median axis of a triaxial ellipsoid
+								Note: This parameter is not required for a biaxial ellipsoid.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 55 -->
+	<xs:complexType name="SecondDefiningParameter_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:SecondDefiningParameter"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="SecondDefiningParameter" type="rbc:SecondDefiningParameter_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="SecondDefiningParameter_Type">
+		<xs:annotation>
+			<xs:documentation>definition of the second parameter that defines the shape of a biaxial ellipsoid, or the third parameter that defines a triaxial ellipsoid
+Note: A biaxial ellipsoid requires two defining parameters: a semi-major axis and inverse flattening or a semi-major axis and a semi-minor axis. When the reference body is a sphere rather than an ellipsoid, only a single defining parameter is required, namely the radius of the sphere; in that case, the semi-major axis “degenerates” into the radius of the sphere.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="inverseFlattening" type="gco:Scale_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>inverse flattening value of the ellipsoid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="semiMinorAxis" type="gco:Length_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>length of the semi-minor axis of the ellipsoid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isSphere" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>ellipsoid is degenerate and is actually a sphere
+						Note: The sphere is completely defined by the semi-major axis, which is the radius of the sphere. This attribute has the value “true” if the figure is a sphere.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 56 -->
+	<xs:complexType name="VerticalReferenceFrame_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:VerticalReferenceFrame"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="VerticalReferenceFrame" substitutionGroup="rbc:Datum" type="rbc:VerticalReferenceFrame_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="VerticalReferenceFrame_Type">
+		<xs:annotation>
+			<xs:documentation>textual description and/or a set of parameters identifying a particular reference level surface used as a zero-height or zero-depth surface, including its position with respect to the Earth
+				Note: In 19111:2007 this class was called VerticalDatum.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:Datum_Type">
+				<xs:sequence>
+					<xs:element name="realizationMethod" type="rbc:RealizationMethod_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>method through which this vertical reference frame is realized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 57 -->
+	<xs:complexType name="RealizationMethod_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:RealizationMethod"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="RealizationMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="RealizationMethod_Type">
+		<xs:annotation>
+			<xs:documentation>specification of the method by which the vertical reference frame is realized</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="geoid" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>realization is through a geoid height model or a height correction model
+						Note: This is applied to a specified geodetic CRS. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="levelling" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>realization is by adjustment of a levelling network fixed to one or more tide gauges</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tidal" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>realization is through a tidal model or by tidal predictions</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 58 -->
+	<xs:complexType name="DynamicVerticalReferenceFrame_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DynamicVerticalReferenceFrame"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DynamicVerticalReferenceFrame" substitutionGroup="rbc:VerticalReferenceFrame" type="rbc:DynamicVerticalReferenceFrame_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DynamicVerticalReferenceFrame_Type">
+		<xs:annotation>
+			<xs:documentation>vertical reference frame in which some of the defining parameters have time dependency
+				Example: Defining station heights have velocity to account for post-glacial isostatic rebound motion.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:VerticalReferenceFrame_Type">
+				<xs:sequence>
+					<xs:element name="frameReferenceEpoch" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>epoch to which the coordinates of stations defining the dynamic vertical reference frame are referenced, expressed as a decimal year in the Gregorian calendar
+								Example: 2016,47.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 59 -->
+	<xs:complexType name="ParametricDatum_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:ParametricDatum"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="ParametricDatum" type="rbc:ParametricDatum_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="ParametricDatum_Type">
+		<xs:annotation>
+			<xs:documentation>textual description and/or a set of parameters identifying a particular reference surface used as the origin of a parametric coordinate system, including its position with respect to the Earth</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="datumDefiningDefinition" type="rbc:Abstract_DefiningParameter_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>parameter used to define the parametric datum</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 60 -->
+	<xs:complexType name="DefiningParameter_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DefiningParameter"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DefiningParameter" substitutionGroup="rbc:IdentifiedObject" type="rbc:DefiningParameter_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DefiningParameter_Type">
+		<xs:annotation>
+			<xs:documentation>parameter value, an ordered sequence of values, or a reference to a file of parameter values that define a paramtric datum</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:IdentifiedObject_Type">
+				<xs:sequence>
+					<xs:element name="parameterValue" type="rbc:ParameterValue_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>value of the datum-defining parameter</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 61 -->
+	<xs:complexType name="EngineeringDatum_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:EngineeringDatum"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EngineeringDatum" substitutionGroup="rbc:Datum" type="rbc:EngineeringDatum_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EngineeringDatum_Type">
+		<xs:annotation>
+			<xs:documentation>definition of the origin and orientation of an engineering coordinate reference system
+				Note: The origin can be fixed with respect to the Earth (such as a defined point at a construction site), or be a defined point on a moving vehicle (such as on a ship or satellite), or a defined point of an image.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:Datum_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 62 -->
+	<xs:complexType name="TemporalDatum_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:TemporalDatum"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TemporalDatum" type="rbc:TemporalDatum_Type" substitutionGroup="rbc:Datum"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TemporalDatum_Type">
+		<xs:annotation>
+			<xs:documentation>definition of the relationship of a temporal coordinate system to an object
+				Note: The object is normally time on the Earth.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:Datum_Type">
+				<xs:sequence>
+					<xs:element name="origin" type="gco:DateTime_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>date and time to which temporal coordinates are referenced, expressed in conformance with ISO 8601</xs:documentation></xs:annotation>
+					</xs:element>
+					<xs:element name="calendar" type="rbc:Calendar_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation><xs:documentation>calendar to which the temporal origin is referenced
+							Note: Default value is prolepticGregorian</xs:documentation></xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== Table 63 -->
+	<xs:complexType name="Calendar_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:Calendar"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Calendar" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" default="prolepticGregorian"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Calendar_Type">
+		<xs:annotation>
+			<xs:documentation>specification of the calendar to which a temporal origin is referenced</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="prolepticGregorian" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>proleptic Gregorian calendar as defined in ISO 8601
+						Note: This is the default value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Table 64 -->
+	<xs:complexType name="DatumEnsemble_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rbc:DatumEnsemble"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DatumEnsemble" substitutionGroup="rbc:ObjectUsage" type="rbc:DatumEnsemble_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DatumEnsemble_Type">
+		<xs:annotation>
+			<xs:documentation>A collection of two or more datums (or if geodetic or vertical, a collection of two or more reference frames) that are realizations of one Conventional Reference System and which for all but the highest accuracy requirements may be considered to be insignificantly different from each other.
+				
+				Note: Within the datum ensemble every frame or datum is constrained to be a realization of the same reference system.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="rbc:ObjectUsage_Type">
+				<xs:sequence>
+					<xs:element name="ensembleAccuracy" type="mdq:AbstractDQ_PositionalAccuracy_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>inaccuracy introduced through use of this collection of reference frames or datums
+								Note: It is an indication of the differences in coordinate values at all points between the various realizations that have been grouped into this datum ensemble.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="datum" type="rbc:Datum_PropertyType" minOccurs="2" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>datum or reference frame which is a member of this datum ensemble</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================== -->
+</xs:schema>
