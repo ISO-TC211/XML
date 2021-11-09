@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:aip="https://schemas.isotc211.org/19160/-4/aip/2.8"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19160/-4/aip/2.8" 
+	version="2.8.0">
+	<xs:include schemaLocation="aip.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ======================================== -->
+	<xs:complexType name="Construct_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Construct"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Construct" substitutionGroup="aip:PostalAddressComponent" type="aip:Construct_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Construct_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;postal address&gt; postal address component (4.13) combining postal address elements (4.16) which together form a logical portion of a postal address (4.12)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence>
+					<xs:element name="Element" type="aip:Element_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Element_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Element"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Element" substitutionGroup="aip:PostalAddressComponent" type="aip:Element_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Element_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;postal address&gt; postal address component (4.13) that has a well-defined conceptual meaning with significance for customer or postal processing purposes and is not itself made up of subordinate components</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Segment_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Segment"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Segment" substitutionGroup="aip:PostalAddressComponent" type="aip:Segment_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Segment_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;postal address&gt; postal address component (4.13) comprising a named group of related postal address constructs (4.14) and/or postal address elements (4.16) with a specific defined function</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence>
+					<xs:element name="Construct" type="aip:Construct_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Element" type="aip:Element_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:aip="https://schemas.isotc211.org/19160/-4/aip/2.8"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19160/-4/aip/2.8" 
+	version="2.8.0">
+	<xs:include schemaLocation="aip.xsd"/>
+	<xs:include schemaLocation="commonClasses.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ======================================== -->
+	<xs:complexType name="PostalAddress_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:PostalAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="PostalAddress" substitutionGroup="aip:Address" type="aip:PostalAddress_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="PostalAddress_Type">
+		<xs:annotation>
+			<xs:documentation>address (4.1), possibly inclusive of the explicit identity of an addressee (4.3), where the addressable object (4.2) is an actual or potential delivery point (4.6) for a postal item (4.23)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:Address_Type">
+				<xs:sequence>
+					<xs:element name="postalAddressComponent" type="aip:PostalAddressComponent_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="rendition" type="aip:RenderedAddress_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="specification" type="aip:Template_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="PostalAddressComponent_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:PostalAddressComponent"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="PostalAddressComponent" substitutionGroup="aip:AddressComponent" type="aip:PostalAddressComponent_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="PostalAddressComponent_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>constituent part of a postal address (4.12)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressComponent_Type">
+				<xs:sequence>
+					<xs:element name="componentValue" type="aip:ComplexName_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Value of component.</xs:documentation>
+						</xs:annotation></xs:element>
+					<xs:element name="level" type="aip:LevelConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies an identifier that allows to distinguish between hierarchical instances of an element.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="position" type="aip:PositionConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies an identifier that allows to distinguish between non-hierarchical instances of an element.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="segment" type="aip:SegmentType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Identifies a segment to which an instance of component belongs.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="UCode" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies a U-code assigned to an element.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+</xs:schema>
