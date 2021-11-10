@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	xmlns="https://schemas.isotc211.org/19160/-4/aip/2.7"
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19160/-4/aip/2.7" 
+	version="2.7.3">
+	<!-- 
+This W3C XML schema defines version 2.7.3 of the Postal Address Template Description Language (PATDL).
+ -->
+	<xs:element name="patdl.2.7.3.xml">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="identifier" type="identifierType"/>
+				<xs:element name="contentDefinition" type="contentDefinitionType"
+					maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--    -->
+	<xs:complexType name="identifierType">
+		<xs:sequence>
+			<xs:element ref="referenceKey"/>
+			<xs:element name="elementIdentifier" type="elementIdentifierType" maxOccurs="unbounded"/>
+			<xs:element name="elementDefiner" type="elementDefinerType" maxOccurs="unbounded"/>
+			<xs:element name="elementDescriptor" type="elementDescriptorType" maxOccurs="unbounded"/>
+			<xs:element name="renditionInstruction" type="renditionInstructionType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="templateSelectionData" type="templateSelectionDataType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="elementIdentifierType">
+		<xs:sequence>
+			<xs:element ref="type"/>
+			<xs:element ref="prefix" minOccurs="0"/>
+			<xs:element ref="language" minOccurs="0"/>
+			<xs:element ref="system"/>
+			<xs:element ref="version"/>
+			<xs:element ref="source"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="elementDefinerType">
+		<xs:sequence>
+			<xs:element ref="type"/>
+			<xs:element ref="prefix" minOccurs="0"/>
+			<xs:element ref="language"/>
+			<xs:element ref="system" minOccurs="0"/>
+			<xs:element ref="version" minOccurs="0"/>
+			<xs:element ref="source"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="elementDescriptorType">
+		<xs:sequence>
+			<xs:element ref="type"/>
+			<xs:element ref="prefix" minOccurs="0"/>
+			<xs:element ref="language"/>
+			<xs:element ref="system" minOccurs="0"/>
+			<xs:element ref="version" minOccurs="0"/>
+			<xs:element ref="source"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="renditionInstructionType">
+		<xs:sequence>
+			<xs:element ref="type"/>
+			<xs:element ref="prefix" minOccurs="0"/>
+			<xs:element ref="language"/>
+			<xs:element ref="system"/>
+			<xs:element ref="version"/>
+			<xs:element ref="source"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="templateSelectionDataType">
+		<xs:choice>
+			<xs:element name="unconditionalTemplateIdentifier" type="templateIdentifierType"/>
+			<xs:element name="conditionalTemplateData" type="conditionalTemplateDataType"
+				maxOccurs="unbounded"/>
+			<xs:element ref="inputTemplateIdentifier"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="conditionalTemplateDataType">
+		<xs:sequence>
+			<xs:element name="useTemplateIdentifier" type="templateIdentifierType"/>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="category"/>
+				<xs:element ref="value" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="templateIdentifierType">
+		<xs:sequence>
+			<xs:element ref="templateType"/>
+			<xs:element ref="countryCode"/>
+			<xs:element ref="userId"/>
+			<xs:element ref="templateSeqNum"/>
+			<xs:element ref="templateVersion"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="contentDefinitionType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="templateName"/>
+			<xs:element name="templateIdentifier" type="templateIdentifierType"/>
+			<xs:element ref="defaultDelimiter"/>
+			<xs:element ref="defaultSeparator"/>
+			<xs:element ref="defaultSequencer"/>
+			<xs:element ref="defaultCollector"/>
+			<xs:element name="externalEntityData" type="externalEntityDataType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="userPreferences" type="userPreferencesType"/>
+			<xs:element name="addressMetadata" type="addressMetadataType"/>
+			<xs:element name="triggerConditions" type="triggerConditionsType"/>
+			<xs:element name="lineData" type="lineDataType" maxOccurs="unbounded"/>
+			<xs:element name="combineData" type="combineDataType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="externalEntityDataType">
+		<xs:sequence>
+			<xs:element name="templateIdentifier" type="templateIdentifierType" minOccurs="0"/>
+			<xs:element ref="entityId"/>
+			<xs:element ref="entityType"/>
+			<xs:element ref="entityReference"/>
+			<xs:element ref="entitySystem"/>
+			<xs:element ref="entityVersion"/>
+			<xs:element name="entityDataStructure" type="entityDataStructureType"/>
+			<xs:element name="entityArguments" type="entityArgumentsType"/>
+			<xs:element ref="entityPriority" minOccurs="0"/>
+			<xs:element ref="entityLocation" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="entityDataStructureType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="elementId"/>
+			<xs:element ref="posStart" minOccurs="0"/>
+			<xs:element ref="posLength" minOccurs="0"/>
+			<xs:element ref="dataMode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="entityArgumentsType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="parameterName"/>
+			<xs:element ref="parameterValue" minOccurs="0"/>
+			<xs:element ref="dataMode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--   -->
+	<xs:complexType name="userPreferencesType">
+		<xs:sequence>
+			<xs:element name="linePreference" type="linePreferenceType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="componentPreference" type="componentPreferenceType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="suppressLine" type="suppressLineType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="suppressComponent" type="suppressComponentType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element ref="applicationParameter" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="characterSet" minOccurs="0"/>
+			<xs:element name="verticalVsHorizontal" type="verticalVsHorizontalType" minOccurs="0"/>
+			<xs:element name="qualityThreshold" type="qualityThresholdType" minOccurs="0"/>
+			<xs:element ref="maxLines" minOccurs="0"/>
+			<xs:element ref="maxCharacters" minOccurs="0"/>
+			<xs:element ref="preserveBlankLines" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="linePreferenceType">
+		<xs:sequence>
+			<xs:element name="lineName" type="lineNameType"/>
+			<xs:element ref="typeOfPreference"/>
+			<xs:element name="lineName" type="lineNameType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="lineNameType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="lineNumber" type="xs:integer" use="required"/>
+				<xs:attribute name="excludeFromMaxLines">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Y"/>
+							<xs:enumeration value="N"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="directionality">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="LTR"/>
+							<xs:enumeration value="RTL"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="componentPreferenceType">
+		<xs:sequence>
+			<xs:element ref="componentId"/>
+			<xs:element ref="typeOfPreference"/>
+			<xs:element ref="componentId"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="suppressLineType">
+		<xs:sequence>
+			<xs:element name="lineName" type="lineNameType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="suppressComponentType">
+		<xs:sequence>
+			<xs:element ref="componentId"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="verticalVsHorizontalType">
+		<xs:sequence>
+			<xs:element ref="typeOfPreference"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="qualityThresholdType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="parameterName"/>
+			<xs:element ref="parameterValue"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="addressMetadataType">
+		<xs:sequence>
+			<xs:element ref="addressLanguage" maxOccurs="unbounded"/>
+			<xs:element ref="addressScript" maxOccurs="unbounded"/>
+			<xs:element name="addressFormat" type="addressFormatType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element ref="despatchingCountry" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="deliveringCountry" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="addressFormatType">
+		<xs:sequence>
+			<xs:element ref="addressFormatTypeNumber"/>
+			<xs:element ref="addressFormatTypeDescription"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="triggerConditionsType">
+		<xs:sequence>
+			<xs:element ref="preCondition" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="lineSelect" type="lineSelectType" minOccurs="0" maxOccurs="unbounded"
+			/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="lineSelectType">
+		<xs:sequence>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element ref="isPopulated"/>
+					<xs:element ref="isNotPopulated"/>
+					<xs:element ref="hasValue"/>
+					<xs:element ref="hasNotValue"/>
+					<xs:element ref="containsValue"/>
+					<xs:element ref="hasPreference"/>
+					<xs:element ref="hasResult"/>
+					<xs:element ref="matchesRegex"/>
+				</xs:choice>
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element name="lineName" type="lineNameType"/>
+					<xs:element ref="componentId" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:sequence>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="defaultCase"/>
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element name="lineName" type="lineNameType"/>
+					<xs:element ref="componentId" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:sequence>
+			<xs:element name="lineSelectReport" type="lineSelectReportType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="lineSelectReportType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="parameterName"/>
+			<xs:element ref="parameterValue"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="lineDataType">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="lineName" type="lineNameType"/>
+			<xs:element name="lineComponent" type="lineComponentType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="lineComponentType">
+		<xs:sequence>
+			<xs:element ref="componentId"/>
+			<xs:element ref="priority"/>
+			<xs:element ref="alignment" minOccurs="0"/>
+			<xs:element ref="immovable" minOccurs="0"/>
+			<xs:element ref="notCompressible" minOccurs="0"/>
+			<xs:choice minOccurs="0">
+				<xs:element ref="requiredIfSelected"/>
+				<xs:element ref="groupRequiredIfSelected"/>
+			</xs:choice>
+			<xs:element name="renditionCommand" type="renditionCommandType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="renditionOperator" type="renditionOperatorType"/>
+				<xs:element name="elementData" type="elementDataType"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="renditionCommandType">
+		<xs:sequence>
+			<xs:element ref="cmdId"/>
+			<xs:element ref="cmdPriority"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="renditionOperatorType">
+		<xs:sequence>
+			<xs:element ref="operatorId"/>
+			<xs:element ref="posStart" minOccurs="0"/>
+			<xs:element ref="posLength" minOccurs="0"/>
+			<xs:element ref="fldText" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="elementDataType">
+		<xs:sequence>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="elementId"/>
+				<xs:element ref="elementDef" minOccurs="0"/>
+				<xs:element ref="elementDesc" minOccurs="0"/>
+			</xs:sequence>
+			<xs:choice minOccurs="0">
+				<xs:element ref="requiredIfSelected"/>
+				<xs:element ref="groupRequiredIfSelected"/>
+			</xs:choice>
+			<xs:element ref="migrationPrecedence" minOccurs="0"/>
+			<xs:element ref="posStart" minOccurs="0"/>
+			<xs:element ref="posLength" minOccurs="0"/>
+			<xs:element ref="canPunctuateAfter" minOccurs="0"/>
+			<xs:element name="renditionCommand" type="renditionCommandType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="combineDataType">
+		<xs:sequence>
+			<xs:element name="combineGroupData" type="combineGroupDataType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="combineGroupDataType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="combineGroup"/>
+			<xs:element ref="combineLocationId"/>
+			<xs:element ref="combineLimit" minOccurs="0"/>
+			<xs:element name="combinePriorityData" type="combinePriorityDataType"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:complexType name="combinePriorityDataType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="combinePriority"/>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="combineComponentId" minOccurs="0"/>
+				<xs:element ref="combineOperatorId" minOccurs="0"/>
+				<xs:element ref="combineFldText" minOccurs="0"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<!--    -->
+	<xs:element name="alignment">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="L"/>
+				<xs:pattern value="C"/>
+				<xs:pattern value="R"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="addressFormatTypeNumber" type="xs:integer"/>
+	<xs:element name="addressFormatTypeDescription" type="xs:string"/>
+	<xs:element name="addressLanguage" type="xs:string"/>
+	<xs:element name="addressScript" type="xs:string"/>
+	<xs:element name="applicationParameter" type="xs:string"/>
+	<xs:element name="canPunctuateAfter">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="Y"/>
+				<xs:pattern value="N"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="category" type="xs:string"/>
+	<xs:element name="characterSet" type="xs:string"/>
+	<xs:element name="cmdId" type="xs:string"/>
+	<xs:element name="cmdPriority" type="xs:string"/>
+	<xs:element name="combineComponentId" type="xs:string"/>
+	<xs:element name="combineFldText" type="xs:string"/>
+	<xs:element name="combineGroup" type="xs:integer"/>
+	<xs:element name="combineLimit" type="xs:integer"/>
+	<xs:element name="combineLocationId" type="xs:string"/>
+	<xs:element name="combineOperatorId" type="xs:string"/>
+	<xs:element name="combinePriority" type="xs:integer"/>
+	<xs:element name="componentId" type="xs:string"/>
+	<xs:element name="containsValue" type="xs:string"/>
+	<xs:element name="countryCode" type="xs:string"/>
+	<xs:element name="dataMode" type="xs:string"/>
+	<xs:element name="defaultCase">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="defaultCollector" type="xs:string"/>
+	<xs:element name="defaultDelimiter" type="xs:string"/>
+	<xs:element name="defaultSeparator" type="xs:string"/>
+	<xs:element name="defaultSequencer" type="xs:string"/>
+	<xs:element name="deliveringCountry" type="xs:string"/>
+	<xs:element name="despatchingCountry" type="xs:string"/>
+	<xs:element name="elementDef" type="xs:string"/>
+	<xs:element name="elementDesc" type="xs:string"/>
+	<xs:element name="elementId" type="xs:string"/>
+	<xs:element name="entityId" type="xs:string"/>
+	<xs:element name="entityLocation" type="xs:string"/>
+	<xs:element name="entityPriority" type="xs:integer"/>
+	<xs:element name="entityReference" type="xs:string"/>
+	<xs:element name="entitySystem" type="xs:string"/>
+	<xs:element name="entityType" type="xs:string"/>
+	<xs:element name="entityVersion" type="xs:string"/>
+	<xs:element name="fldText" type="xs:string"/>
+	<xs:element name="groupRequiredIfSelected" type="xs:integer"/>
+	<xs:element name="hasPreference" type="xs:string"/>
+	<xs:element name="hasResult" type="xs:string"/>
+	<xs:element name="hasNotValue" type="xs:string"/>
+	<xs:element name="hasValue" type="xs:string"/>
+	<xs:element name="immovable">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="Y"/>
+				<xs:pattern value="N"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="inputTemplateIdentifier" type="xs:string"/>
+	<xs:element name="isNotPopulated" type="xs:string"/>
+	<xs:element name="isPopulated" type="xs:string"/>
+	<xs:element name="language" type="xs:string"/>
+	<xs:element name="matchesRegex" type="xs:string"/>
+	<xs:element name="maxCharacters" type="xs:integer"/>
+	<xs:element name="maxLines" type="xs:integer"/>
+	<xs:element name="migrationPrecedence" type="xs:integer"/>
+	<xs:element name="notCompressible">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="Y"/>
+				<xs:pattern value="N"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="notPopulated" type="xs:string"/>
+	<xs:element name="operatorId" type="xs:string"/>
+	<xs:element name="parameterName" type="xs:string"/>
+	<xs:element name="parameterValue" type="xs:string"/>
+	<xs:element name="posLength" type="xs:string"/>
+	<xs:element name="posStart" type="xs:string"/>
+	<xs:element name="preCondition" type="xs:string"/>
+	<xs:element name="prefix" type="xs:string"/>
+	<xs:element name="preserveBlankLines">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="Y"/>
+				<xs:pattern value="N"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="priority" type="xs:integer"/>
+	<xs:element name="referenceKey" type="xs:string"/>
+	<xs:element name="requiredIfSelected">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="Y"/>
+				<xs:pattern value="N"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="source" type="xs:string"/>
+	<xs:element name="system" type="xs:string"/>
+	<xs:element name="templateName" type="xs:string"/>
+	<xs:element name="templateSeqNum" type="xs:string"/>
+	<xs:element name="templateType" type="xs:string"/>
+	<xs:element name="templateVersion" type="xs:string"/>
+	<xs:element name="type" type="xs:string"/>
+	<xs:element name="typeOfPreference" type="xs:string"/>
+	<xs:element name="userId" type="xs:string"/>
+	<xs:element name="value" type="xs:string"/>
+	<xs:element name="version" type="xs:string"/>
+</xs:schema>
