@@ -4630,54 +4630,111 @@
                <!--   ............................................................................. -->
                <cat:codelistItem xlink:title="Code list items for CV_CommonPointRule from the  Schema for coverage geometry and functions — Fundamentals (gmlcov)  Namespace">
                   <cat:CT_Codelist id="ISO19123-1.1.gmlcov.CV_CommonPointRule">
-                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">CV_CommonPointRule</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">CV_CommonPointRule</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">CV_CommonPointRule</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">CV_CommonPointRule</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:description>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_average">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_average">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">average</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">average</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">average</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">average</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>Arithmetic average over the set returned by evaluate(p) </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>Arithmetic average over the set returned by evaluate(p) </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_low">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_low">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">low</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">low</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">low</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">low</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>Minimum value of the set returned by evaluate(p)</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>Minimum value of the set returned by evaluate(p)</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_high">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_high">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">high</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">high</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">high</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">high</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>Maximum value of the set returned by evaluate(p) </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>Maximum value of the set returned by evaluate(p) </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_all">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_all">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">all</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">all</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">all</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">all</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>The complete set returned by evaluate(p) </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>The complete set returned by evaluate(p) </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_start">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_start">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">start</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">start</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">start</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">start</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>Start Value of the second CV_ValueSegment (only applicable to Multi-Curve Coverages)</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>Start Value of the second CV_ValueSegment (only applicable to Multi-Curve Coverages)</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_end">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_end">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">end</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.7">end</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">end</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#5.6">end</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>End Value of the first CV_ValueSegment (only applicable to Multi-Curve Coverages) </gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>End Value of the first CV_ValueSegment (only applicable to Multi-Curve Coverages) </gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                  </cat:CT_Codelist>
+               </cat:codelistItem>
+               <!--  _______________________________________________________________________________________________________________ -->
+               <cat:codelistItem xlink:title="Code list items for CV_CommonPointRule from the  Schema for coverage geometry and functions — Fundamentals (gmlcov)  Namespace">
+                  <cat:CT_Codelist id="ISO19123-1.2.gmlcov.CV_CommonPointRule">
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">CV_CommonPointRule</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">CV_CommonPointRule</gco:ScopedName></cat:name>
+                     <cat:definition><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:definition>
+                     <cat:description><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:description>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_CommonPointRule_average">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_CommonPointRule_average">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">average</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">average</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>Arithmetic average over the set returned by evaluate(p) </gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>Arithmetic average over the set returned by evaluate(p) </gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_CommonPointRule_low">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_CommonPointRule_low">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">low</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">low</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>Minimum value of the set returned by evaluate(p)</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>Minimum value of the set returned by evaluate(p)</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_CommonPointRule_high">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_CommonPointRule_high">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">high</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">high</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>Maximum value of the set returned by evaluate(p) </gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>Maximum value of the set returned by evaluate(p) </gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_CommonPointRule_all">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_CommonPointRule_all">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">all</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">all</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>The complete set returned by evaluate(p) </gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>The complete set returned by evaluate(p) </gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_CommonPointRule_start">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_CommonPointRule_start">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">start</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">start</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>Start Value of the second CV_ValueSegment (only applicable to Multi-Curve Coverages)</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>Start Value of the second CV_ValueSegment (only applicable to Multi-Curve Coverages)</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_CommonPointRule_end">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_CommonPointRule_end">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">end</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#5.7">end</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>End Value of the first CV_ValueSegment (only applicable to Multi-Curve Coverages) </gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>End Value of the first CV_ValueSegment (only applicable to Multi-Curve Coverages) </gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
@@ -4687,82 +4744,143 @@
                <!--   ............................................................................. -->
                <cat:codelistItem xlink:title="Code list items for CV_InterpolationMethod from the  Schema for coverage geometry and functions — Fundamentals (gmlcov)  Namespace">
                   <cat:CT_Codelist id="ISO19123-1.1.gmlcov.CV_InterpolationMethod">
-                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">CV_InterpolationMethod</gco:ScopedName></cat:identifier>
-                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">CV_InterpolationMethod</gco:ScopedName></cat:name>
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">CV_InterpolationMethod</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">CV_InterpolationMethod</gco:ScopedName></cat:name>
                      <cat:definition><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:definition>
                      <cat:description><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:description>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_nearestNeighbor">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_nearestNeighbor">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">nearestNeighbor</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">nearestNeighbor</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">nearestNeighbor</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">nearestNeighbor</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>nearest-neighbour interpolation</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>nearest-neighbour interpolation</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_linear">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_linear">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">linear</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">linear</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">linear</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">linear</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>linear interpolation</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>linear interpolation</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_quadratic">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_quadratic">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">quadratic</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">quadratic</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">quadratic</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">quadratic</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>quadratic interpolation</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>quadratic interpolation</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_cubic">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_cubic">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">cubic</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">cubic</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">cubic</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">cubic</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>cubic interpolation</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>cubic interpolation</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_bilinear">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_bilinear">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">bilinear</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">bilinear</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">bilinear</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">bilinear</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>bilinear</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>bilinear</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
-                     <!--
                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_biquadratic">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_biquadratic">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">biquadratic</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">biquadratic</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">biquadratic</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">biquadratic</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>biquadratic</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>biquadratic</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
-                     -->
-                     <!--
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_bicubic">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_bicubic">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">bicubic</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">bicubic</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">bicubic</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">bicubic</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>bicubic</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>bicubic</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
-                     -->
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_lostarea">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_lostarea">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">lostArea</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">lostArea</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">lostArea</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">lostArea</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>lost-area interpolation</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>lost-area interpolation</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
                      </cat:codeEntry>
                      <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_InterpolationMethod_barycentric">
                         <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_barycentric">
-                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">barycentric</gco:ScopedName></cat:identifier>
-                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.1">barycentric</gco:ScopedName></cat:name>
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">barycentric</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#C.1">barycentric</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>barycentric interpolation</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>barycentric interpolation</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                  </cat:CT_Codelist>
+               </cat:codelistItem>
+               <!--  _______________________________________________________________________________________________________________ -->
+               <cat:codelistItem xlink:title="Code list items for CV_InterpolationMethod from the  Schema for coverage geometry and functions — Fundamentals (gmlcov)  Namespace">
+                  <cat:CT_Codelist id="ISO19123-1.2.gmlcov.CV_InterpolationMethod">
+                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">CV_InterpolationMethod</gco:ScopedName></cat:identifier>
+                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">CV_InterpolationMethod</gco:ScopedName></cat:name>
+                     <cat:definition><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:definition>
+                     <cat:description><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:description>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_nearestNeighbor">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_nearestNeighbor">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.2">nearestNeighbor</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.2">nearestNeighbor</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>nearest-neighbour interpolation</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>nearest-neighbour interpolation</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_linear">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_linear">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.2">linear</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">linear</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>linear interpolation</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>linear interpolation</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_quadratic">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_quadratic">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">quadratic</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">quadratic</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>quadratic interpolation</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>quadratic interpolation</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_cubic">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_cubic">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">cubic</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">cubic</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>cubic interpolation</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>cubic interpolation</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_bilinear">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_bilinear">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">bilinear</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">bilinear</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>bilinear</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>bilinear</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_lostarea">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_lostarea">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">lostArea</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">lostArea</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>lost-area interpolation</gco:CharacterString></cat:definition>
+                           <cat:description><gco:CharacterString>lost-area interpolation</gco:CharacterString></cat:description>
+                        </cat:CT_CodelistValue>
+                     </cat:codeEntry>
+                     <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.2.gmlcov.CV_InterpolationMethod_barycentric">
+                        <cat:CT_CodelistValue id="ISO19123-1.2.gmlcov.CV_InterpolationMethod_barycentric">
+                           <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">barycentric</gco:ScopedName></cat:identifier>
+                           <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#B.1">barycentric</gco:ScopedName></cat:name>
                            <cat:definition><gco:CharacterString>barycentric interpolation</gco:CharacterString></cat:definition>
                            <cat:description><gco:CharacterString>barycentric interpolation</gco:CharacterString></cat:description>
                         </cat:CT_CodelistValue>
