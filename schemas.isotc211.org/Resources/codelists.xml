@@ -4769,7 +4769,7 @@
                      </cat:codeEntry>
                   </cat:CT_Codelist>
                </cat:codelistItem>
-               <!--   ............................................................................. -->
+               <!--   ............................................................................. --> 
                <cat:codelistItem xlink:title="Code list items for CV_SequenceType from the  Schema for coverage geometry and functions — Fundamentals (gmlcov)  Namespace">
                   <cat:CT_Codelist id="ISO19123-1.2.gmlcov.CV_SequenceType">
                      <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/2/clause#D4.22">CV_SequenceType</gco:ScopedName></cat:identifier>
