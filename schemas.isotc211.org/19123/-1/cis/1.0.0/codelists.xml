@@ -67,13 +67,13 @@
                        <cat:CT_Codelist id="ISO19123-1.1.gmlcov.CV_CommonPointRule">
                             <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">CV_CommonPointRule</gco:ScopedName></cat:identifier>
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">CV_CommonPointRule</gco:ScopedName></cat:name>
-                            <cat:definition><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:definition>
+                           <cat:definition><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects (given some position p)</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>methods for handling cases where the DirectPosition input to the evaluate operation falls within two or more of the geometric objects</gco:CharacterString></cat:description>
                             <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19123-1.1.gmlcov.CV_CommonPointRule_average">
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_average">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">average</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">average</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>return the mean of the feature attribute values</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>Arithmetic average over the set returned by evaluate(p)</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>return the mean of the feature attribute values</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -81,7 +81,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_low">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">low</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">low</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>use the least of the feature attribute values</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>Minimum value of the set returned by evaluate(p)</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>use the least of the feature attribute values</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -89,7 +89,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_high">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">high</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">high</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>use the greatest of the feature attribute values</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>Maximum value of the set returned by evaluate(p)</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>use the greatest of the feature attribute values</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -97,7 +97,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_all">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">all</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">all</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>return all the feature attribute values that can be determined for the input DirectPosition</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>The complete set returned by evaluate(p)</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>return all the feature attribute values that can be determined for the input DirectPosition</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -105,7 +105,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_start">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">start</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">start</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>use the startValue of the second CV_ValueSegment</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>Start Value of the second CV_ValueSegment (only applicable to Multi-Curve Coverages)</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>use the startValue of the second CV_ValueSegment</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -113,7 +113,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_CommonPointRule_end">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">end</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#D.2.8">end</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>use the endValue of the second CV_ValueSegment</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>End Value of the first CV_ValueSegment (only applicable to Multi-Curve Coverages)</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>use the endValue of the second CV_ValueSegment</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -130,7 +130,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_nearestNeighbor">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.2">nearestNeighbor</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.2">nearestNeighbor</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>Nearest neighbour interpolation picks the value associated with the nearest Direct Position in the spatio-temporal domain of the coverage.</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>nearest-neighbour interpolation</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>Nearest neighbour interpolation picks the value associated with the nearest Direct Position in the spatio-temporal domain of the coverage.</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -138,7 +138,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_linear">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.3">linear</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.3">linear</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>Linear interpolation computes values between Direct Positions in any-dimensional domain sets through a linear polynomial.</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>linear interpolation</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>Linear interpolation computes values between Direct Positions in any-dimensional domain sets through a linear polynomial.</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -146,7 +146,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_quadratic">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.4">quadratic</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.4">quadratic</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>Quadratic interpolation computes values between Direct Positions in any-dimensional domain sets through a quadratic polynomial.</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>quadratic interpolation</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>Quadratic interpolation computes values between Direct Positions in any-dimensional domain sets through a quadratic polynomial.</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -154,7 +154,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_cubic">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.5">cubic</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.5">cubic</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>Cubic interpolation is used to interpolate along curves through a cubic polynomial.</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>cubic interpolation</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>Cubic interpolation is used to interpolate along curves through a cubic polynomial.</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -162,7 +162,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_barycentric">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.7">barycentric</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.7">barycentric</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>Barycentric interpolation computes range values based on a triangular formula.</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>barycentric interpolation</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>Barycentric interpolation computes range values based on a triangular formula.</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
@@ -170,7 +170,7 @@
                                 <cat:CT_CodelistValue id="ISO19123-1.1.gmlcov.CV_InterpolationMethod_lostArea">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.6">lostArea</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19123/-1/1/clause#B.6">lostArea</gco:ScopedName></cat:name>
-                                    <cat:definition><gco:CharacterString>Lost area interpolation extends a Multi Point coverage to a continuous function, f, defined on the convex hull of the domain of the point coverage.</gco:CharacterString></cat:definition>
+                                    <cat:definition><gco:CharacterString>lost-area interpolation</gco:CharacterString></cat:definition>
                                     <cat:description><gco:CharacterString>Lost area interpolation extends a Multi Point coverage to a continuous function, f, defined on the convex hull of the domain of the point coverage.</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
