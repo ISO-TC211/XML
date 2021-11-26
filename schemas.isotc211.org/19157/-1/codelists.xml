@@ -77,7 +77,7 @@
                             <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">EvaluationMethodTypeCode</gco:ScopedName></cat:name>
                             <cat:definition><gco:CharacterString>type of method for evaluating an identified data quality measure</gco:CharacterString></cat:definition>
                             <cat:description><gco:CharacterString>type of method for evaluating an identified data quality measure</gco:CharacterString></cat:description>
-                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.ValueStructure_directExternal">
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.EvaluationMethodTypeCode_directExternal">
                                 <cat:CT_CodelistValue id="ISO19157-1.1.mdq.EvaluationMethodTypeCode_directExternal">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">directExternal</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">directExternal</gco:ScopedName></cat:name>
@@ -85,7 +85,7 @@
                                     <cat:description><gco:CharacterString>method of evaluating the quality of a dataset based on inspection of items within the dataset, where reference data external to the dataset being evaluated is required</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.ValueStructure_directInternal">
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.EvaluationMethodTypeCode_directInternal">
                                 <cat:CT_CodelistValue id="ISO19157-1.1.mdq.EvaluationMethodTypeCode_directInternal">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">directInternal</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">directInternal</gco:ScopedName></cat:name>
@@ -93,7 +93,7 @@
                                     <cat:description><gco:CharacterString>method of evaluating the quality of a dataset based on inspection of items within the dataset, where reference data external to the dataset being evaluated is required</gco:CharacterString></cat:description>
                                 </cat:CT_CodelistValue>
                             </cat:codeEntry>
-                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.ValueStructure_indirect">
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.EvaluationMethodTypeCode_indirect">
                                 <cat:CT_CodelistValue id="ISO19157-1.1.mdq.EvaluationMethodTypeCode_indirect">
                                     <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">indirect</gco:ScopedName></cat:identifier>
                                     <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19157/-1/1/clause#C.3.2">indirect</gco:ScopedName></cat:name>
