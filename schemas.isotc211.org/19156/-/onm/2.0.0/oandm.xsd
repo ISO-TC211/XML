@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation>This model is a working draft of the ISO 19156 Edition 2</xs:documentation>
+	</xs:annotation>
+</xs:schema>

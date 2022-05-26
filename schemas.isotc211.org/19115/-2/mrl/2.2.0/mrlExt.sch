@@ -4,7 +4,7 @@
   <!--
     ISO 19115-3 base requirements for metadata instance documents
     
-    See ISO19115-1:2014(E) page 14, Figure 9 Lineage information classes
+    See ISO19115-2:2019(E) page 11, Figure 4 Lineage extension
   -->
   
   <!-- 
@@ -12,42 +12,42 @@
     Ref: {count(description + scope) > 0}
     -->
   <sch:diagnostics>
-    <sch:diagnostic id="rule.mrl-describeScope-failure-en"
+    <sch:diagnostic id="rule.mrlEx-describeScope-failure-en"
       xml:lang="en">
       The Source defines neither description nor scope.</sch:diagnostic>
-    <sch:diagnostic id="rule.mrl-describeScope-failure-fr"
+    <sch:diagnostic id="rule.mrlEx-describeScope-failure-fr"
       xml:lang="fr">
       La Source ne définit ni la description ni la portée.</sch:diagnostic>
     
-    <sch:diagnostic id="rule.mrl-describeScope-success-en"
+    <sch:diagnostic id="rule.mrlEx-describeScope-success-en"
       xml:lang="en">
       The source scope is defined: 
       "<sch:value-of select="normalize-space($scope)"/>".
     </sch:diagnostic>
-    <sch:diagnostic id="rule.mrl-describeScope-success-fr"
+    <sch:diagnostic id="rule.mrlEx-describeScope-success-fr"
       xml:lang="fr">
       La portée source est définie: "<sch:value-of select="normalize-space($scope)"/>".
     </sch:diagnostic>
     
-    <sch:diagnostic id="rule.mrl-describeScope-statement-success-en"
+    <sch:diagnostic id="rule.mrlEx-describeScope-statement-success-en"
       xml:lang="en">
       The source statement is
       "<sch:value-of select="normalize-space($description)"/>".
     </sch:diagnostic>
-    <sch:diagnostic id="rule.mrl-describeScope-statement-success-fr"
+    <sch:diagnostic id="rule.mrlEx-describeScope-statement-success-fr"
       xml:lang="fr">
       La description de la source est 
       "<sch:value-of select="normalize-space($description)"/>".
     </sch:diagnostic>
   </sch:diagnostics>
   
-  <sch:pattern id="rule.mrl-describeScope">
+  <sch:pattern id="rule.mrlEx-describeScope">
     <sch:title xml:lang="en">Releasability MUST
     specified an addresse or a statement</sch:title>
     <sch:title xml:lang="fr">La possibilité de divulgation 
       DOIT définir un destinataire ou une indication</sch:title>
     
-    <sch:rule context="//mrl:LI_Scope">
+    <sch:rule context="//mrl:LE_Source">
       
       <sch:let name="scope" 
         value="mrl:scope[normalize-space(.) != '']"/>
@@ -60,16 +60,16 @@
                count($description) > 0"/>
       
       <sch:assert test="$hasDescriptionOrScope"
-        diagnostics="rule.mrl-describeScope-failure-en 
-        rule.mrl-describeScope-failure-fr"/>
+        diagnostics="rule.mrlEx-describeScope-failure-en 
+        rule.mrlEx-describeScope-failure-fr"/>
       
       <sch:report test="count($scope)"
-        diagnostics="rule.mrl-describeScope-success-en 
-        rule.mrl-describeScope-success-fr"/>
+        diagnostics="rule.mrlEx-describeScope-success-en 
+        rule.mrlEx-describeScope-success-fr"/>
       
       <sch:report test="count($description)"
-        diagnostics="rule.mrl-describeScope-statement-success-en 
-        rule.mrl-describeScope-statement-success-fr"/>
+        diagnostics="rule.mrlEx-describeScope-statement-success-en 
+        rule.mrlEx-describeScope-statement-success-fr"/>
       
     </sch:rule>
   </sch:pattern>

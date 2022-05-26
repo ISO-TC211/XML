@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:crp="https://schemas.isotc211.org/19124/-1/crp/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+	targetNamespace="https://schemas.isotc211.org/19124/-1/crp/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">	
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ActiveMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ActiveMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ActiveMicrowave" type="crp:CA_ActiveMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ActiveMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that emit microwave radiation and observe the reflection</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_PostLaunchCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ActiveOptical_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ActiveOptical"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ActiveOptical" substitutionGroup="crp:CA_PostLaunchCalVal" type="crp:CA_ActiveOptical_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ActiveOptical_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that emit visible or IR-light and observe the reflection</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_PostLaunchCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_Analysis_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_Analysis"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_Analysis" substitutionGroup="crp:CA_ValidationProcess" type="crp:CA_Analysis_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_Analysis_Type">
+		<xs:annotation>
+			<xs:documentation>top level class for all calibration information of optical sensors</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_ValidationProcess_Type">
+				<xs:sequence>
+					<xs:element name="method" type="crp:CA_StatisticComputation" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>definition of the analysis-method</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_CalibrationValidation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_CalibrationValidation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_CalibrationValidation" substitutionGroup="mrc:AbstractMD_ContentInformation" type="crp:CA_CalibrationValidation_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_CalibrationValidation_Type">
+		<xs:annotation>
+			<xs:documentation>root entity that defines information about calibration and validation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="mrc:AbstractMD_ContentInformation_Type">
+				<xs:sequence>
+					<xs:element name="CA_Methods" type="crp:CA_Methods_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="CA_RefSources" type="crp:CA_RefSources_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_CategoricalProduct_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_CategoricalProduct"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_CategoricalProduct" substitutionGroup="crp:CA_DerivedProductCalVal" type="crp:CA_CategoricalProduct_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_CategoricalProduct_Type">
+		<xs:annotation>
+			<xs:documentation>class that deals with the validation of thematic products whose attribute values are categorical physically</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_DerivedProductCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_CrossCal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_CrossCal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_CrossCal" substitutionGroup="crp:CA_Methods" type="crp:CA_CrossCal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_CrossCal_Type">
+		<xs:annotation>
+			<xs:documentation>method to assess the consistency of observations across satellites</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_Methods_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataActiveMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataActiveMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataActiveMicrowave" substitutionGroup="crp:CA_RSDataCalVal" type="crp:CA_DataActiveMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataActiveMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>data products from active microwave sensors</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RSDataCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataActiveOptical_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataActiveOptical"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataActiveOptical" substitutionGroup="crp:CA_RSDataCalVal" type="crp:CA_DataActiveOptical_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataActiveOptical_Type">
+		<xs:annotation>
+			<xs:documentation>data products from optical sensors</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RSDataCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataIR_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataIR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataIR" substitutionGroup="crp:CA_RSDataCalVal" type="crp:CA_DataIR_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataIR_Type">
+		<xs:annotation>
+			<xs:documentation>data products from IR-sensors</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RSDataCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataPassiveMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataPassiveMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataPassiveMicrowave" substitutionGroup="crp:CA_RSDataCalVal" type="crp:CA_DataPassiveMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataPassiveMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>data products from passive microwave sensors</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RSDataCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataProductCalVal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataProductCalVal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataProductCalVal" substitutionGroup="crp:CA_CalibrationValidation" type="crp:CA_DataProductCalVal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataProductCalVal_Type">
+		<xs:annotation>
+			<xs:documentation>root class for information related to the calibration and validation of data products</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_CalibrationValidation_Type">
+				<xs:sequence>
+					<xs:element name="productLevel" type="mcc:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>information about the product level</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="has" type="crp:CA_SensorCalVal_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataSound_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataSound"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataSound" substitutionGroup="crp:CA_RSDataCalVal" type="crp:CA_DataSound_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataSound_Type">
+		<xs:annotation>
+			<xs:documentation>data products from instruments based on sound-measurements</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RSDataCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DataUV_VIS_NIR_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DataUV_VIS_NIR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DataUV_VIS_NIR" substitutionGroup="crp:CA_RSDataCalVal" type="crp:CA_DataUV_VIS_NIR_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DataUV_VIS_NIR_Type">
+		<xs:annotation>
+			<xs:documentation>data products from UV-, VIS-, and NIR-sensors</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RSDataCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_DerivedProductCalVal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_DerivedProductCalVal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_DerivedProductCalVal" substitutionGroup="crp:CA_DataProductCalVal" type="crp:CA_DerivedProductCalVal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_DerivedProductCalVal_Type">
+		<xs:annotation>
+			<xs:documentation>root class for derived data products</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_DataProductCalVal_Type">
+				<xs:sequence>
+					<xs:element name="calvalMaturityLevel" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Maturity of a data product. This concept describes the amount of abstraction from the raw data to a final usable product.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hasPlan" type="crp:CA_ValidationPlan_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="process" type="crp:CA_ValidationProcess_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_GoundRefSources_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_GoundRefSources"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_GoundRefSources" type="crp:CA_GoundRefSources_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_GoundRefSources_Type">
+		<xs:annotation>
+			<xs:documentation>root class for reference areas on the ground</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_IR_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_IR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_IR" substitutionGroup="crp:CA_PostLaunchCalVal" type="crp:CA_IR_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_IR_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that observe infrared radiation except near-infrared radiation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_PostLaunchCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ManMadeRefSources_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ManMadeRefSources"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ManMadeRefSources" substitutionGroup="crp:CA_GoundRefSources" type="crp:CA_ManMadeRefSources_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ManMadeRefSources_Type">
+		<xs:annotation>
+			<xs:documentation>reference areas that were built for calibration and validation purposes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_GoundRefSources_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_Methods_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_Methods"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_Methods" type="crp:CA_Methods_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_Methods_Type">
+		<xs:annotation>
+			<xs:documentation>root class that provides information about the methods for calibration and validation</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_NaturalRefSources_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_NaturalRefSources"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_NaturalRefSources" substitutionGroup="crp:CA_GoundRefSources" type="crp:CA_NaturalRefSources_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_NaturalRefSources_Type">
+		<xs:annotation>
+			<xs:documentation>reference areas that are not or only minimally modified compared to their original natural status</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_GoundRefSources_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_NumericalProduct_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_NumericalProduct"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_NumericalProduct" substitutionGroup="crp:CA_DerivedProductCalVal" type="crp:CA_NumericalProduct_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_NumericalProduct_Type">
+		<xs:annotation>
+			<xs:documentation>class that deals with the validation of thematic products whose attribute values are continuous physically</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_DerivedProductCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_OnBoard_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_OnBoard"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_OnBoard" substitutionGroup="crp:CA_Methods" type="crp:CA_OnBoard_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_OnBoard_Type">
+		<xs:annotation>
+			<xs:documentation>calibration source that provides the capability of periodically stimulating the sensor response with known and/or repeatable flux levels</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_Methods_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_PassiveMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_PassiveMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_PassiveMicrowave" substitutionGroup="crp:CA_PostLaunchCalVal" type="crp:CA_PassiveMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_PassiveMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that observe passively microwave radiation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_PostLaunchCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_PostLaunchCalVal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_PostLaunchCalVal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_PostLaunchCalVal" substitutionGroup="crp:CA_SensorCalVal" type="crp:CA_PostLaunchCalVal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_PostLaunchCalVal_Type">
+		<xs:annotation>
+			<xs:documentation>abstract class that covers the classes of post-launch calibration and validation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SensorCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_PreLaunchCalVal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_PreLaunchCalVal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_PreLaunchCalVal" substitutionGroup="crp:CA_SensorCalVal" type="crp:CA_PreLaunchCalVal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_PreLaunchCalVal_Type">
+		<xs:annotation>
+			<xs:documentation>abstract class that covers the classes of pre-launch calibration and validation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SensorCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_RefSources_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_RefSources"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_RefSources" type="crp:CA_RefSources_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_RefSources_Type">
+		<xs:annotation>
+			<xs:documentation>root class that provides information about the data sources</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="groundref" type="crp:CA_GoundRefSources_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_RSDataCalVal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_RSDataCalVal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_RSDataCalVal" substitutionGroup="crp:CA_DataProductCalVal" type="crp:CA_RSDataCalVal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_RSDataCalVal_Type">
+		<xs:annotation>
+			<xs:documentation>root class for data products from remotely sensed data</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_DataProductCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SensorCalVal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SensorCalVal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SensorCalVal" substitutionGroup="crp:CA_CalibrationValidation" type="crp:CA_SensorCalVal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SensorCalVal_Type">
+		<xs:annotation>
+			<xs:documentation>root class for sensor calibration and validation activities</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_CalibrationValidation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_Sound_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_Sound"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_Sound" substitutionGroup="crp:CA_PostLaunchCalVal" type="crp:CA_Sound_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_Sound_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that emit a sound and observe the reflection</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_PostLaunchCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesForActiveMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesForActiveMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesForActiveMicrowave" substitutionGroup="crp:CA_SourcesMicrowave" type="crp:CA_SourcesForActiveMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesForActiveMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>Active microwave instruments emit microwave radiation and receive the reflection. An example is SAR.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SourcesMicrowave_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesForActiveOptical_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesForActiveOptical"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesForActiveOptical" substitutionGroup="crp:CA_SourcesOptical" type="crp:CA_SourcesForActiveOptical_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesForActiveOptical_Type">
+		<xs:annotation>
+			<xs:documentation>Active optical instruments emit light and receive the reflection. An example is lidar.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SourcesOptical_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesForActiveSound_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesForActiveSound"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesForActiveSound" substitutionGroup="crp:CA_SourcesSound" type="crp:CA_SourcesForActiveSound_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesForActiveSound_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that emit a sound and receive the echo</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SourcesSound_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesForPassiveMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesForPassiveMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesForPassiveMicrowave" substitutionGroup="crp:CA_SourcesMicrowave" type="crp:CA_SourcesForPassiveMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesForPassiveMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>Passive microwave instruments receive the reflection from objects. An example is a microwave radiometer.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SourcesMicrowave_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesForPassiveOptical_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesForPassiveOptical"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesForPassiveOptical" substitutionGroup="crp:CA_SourcesOptical" type="crp:CA_SourcesForPassiveOptical_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesForPassiveOptical_Type">
+		<xs:annotation>
+			<xs:documentation>Passive optical instruments receive the reflection from objects which are illuminated mostly by the sun. An example is a camera.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SourcesOptical_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesForPassiveSound_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesForPassiveSound"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesForPassiveSound" substitutionGroup="crp:CA_SourcesSound" type="crp:CA_SourcesForPassiveSound_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesForPassiveSound_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that measure sound</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_SourcesSound_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesMicrowave_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesMicrowave"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesMicrowave" substitutionGroup="crp:CA_RefSources" type="crp:CA_SourcesMicrowave_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesMicrowave_Type">
+		<xs:annotation>
+			<xs:documentation>root class for microwave instruments as data sources</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RefSources_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesOptical_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesOptical"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesOptical" substitutionGroup="crp:CA_RefSources" type="crp:CA_SourcesOptical_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesOptical_Type">
+		<xs:annotation>
+			<xs:documentation>root class for optical instruments as data sources</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RefSources_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_SourcesSound_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_SourcesSound"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_SourcesSound" substitutionGroup="crp:CA_RefSources" type="crp:CA_SourcesSound_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_SourcesSound_Type">
+		<xs:annotation>
+			<xs:documentation>root class for sound instruments as data sources</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_RefSources_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_TrendCal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_TrendCal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_TrendCal" substitutionGroup="crp:CA_Methods" type="crp:CA_TrendCal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_TrendCal_Type">
+		<xs:annotation>
+			<xs:documentation>Sensor performance trending tracks long-term changes in sensor behaviour due to component aging and/or sensor contamination, and provides a means for their correction, if necessary. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_Methods_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_UV_VIS_NIR_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_UV_VIS_NIR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_UV_VIS_NIR" substitutionGroup="crp:CA_PostLaunchCalVal" type="crp:CA_UV_VIS_NIR_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_UV_VIS_NIR_Type">
+		<xs:annotation>
+			<xs:documentation>instruments that observe ultraviolet, visible, and near-infrared radiation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_PostLaunchCalVal_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValDataProduct_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValDataProduct"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValDataProduct" substitutionGroup="crp:CA_ValidationPlan" type="crp:CA_ValDataProduct_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValDataProduct_Type">
+		<xs:annotation>
+			<xs:documentation>information about the validation data product</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_ValidationPlan_Type">
+				<xs:sequence>
+					<xs:element name="measurementsBeforeLaunch" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating whether measurement before launch have been conducted</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="measurementsAfterLaunch" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating whether measurement after launch have been conducted</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="participationDiffGroups" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the participation of more than one group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="archivingOfData" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating a guaranteed long-term archiving of data</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="scaleDiffAcknowledged" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating an acknowledgement of the influence of scale differences</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="temporalErrorsQuantified" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating an assessment of temporal errors</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="spatialErrorsQuantified" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating an assessment of spatial errors</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sustainedFieldMeasOverLifeSensor" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating a commitment to sustained field measurements over the life of the sensor</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="simulationEstimatedAccuracy" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of a simulation of the estimated accuracy</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="assessedAccuracyAfterLaunch" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of a simulation of the estimated accuracy after launch</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="snowCover" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>percentage of snow-cover</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="iceCover" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>percentage of ice-cover</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="leafAreaIndex" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>dimensionless quantity that characterizes plant canopies</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="aerosolOpticalThickness" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>aerosol load, expressed in optical depth at a given wavelength (865 nm)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="waterVapour" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>relative humidity: how much water the air currently contains as compared to what it would contain if saturated</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="continuousOrDiscreteData" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the generation of long, continuous data</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="surfaceReflectanceVegetationIndex" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the option of determination of the vegetation index</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="primaryProductivity" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>rate at which energy is converted to organic substances by photosynthetic producers</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fire" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>number of fires</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="landCoverLandChange" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of the change of land cover</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="higherResolutionSensor" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the application of a higher resolution satellite sensor</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValHierarchy_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValHierarchy"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValHierarchy" substitutionGroup="crp:CA_ValidationPlan" type="crp:CA_ValHierarchy_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValHierarchy_Type">
+		<xs:annotation>
+			<xs:documentation>information about the validation hierarchy</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_ValidationPlan_Type">
+				<xs:sequence>
+					<xs:element name="stage1Val" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>product accuracy has been estimated using a small number of independent measurements</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="stage2Val" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>product accuracy has been assessed over a widely distributed set of locations and time periods</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="stage3Val" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>product accuracy has been assessed over a globally distributed set of locations and time periods</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="stage4Val" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>validation results for Stage 3 are systematically updated</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValidationPlan_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValidationPlan"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValidationPlan" type="crp:CA_ValidationPlan_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValidationPlan_Type">
+		<xs:annotation>
+			<xs:documentation>abstract root class for all classes related to the planning of a mission</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValidationProcess_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValidationProcess"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValidationProcess" type="crp:CA_ValidationProcess_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValidationProcess_Type">
+		<xs:annotation>
+			<xs:documentation>information about the validation process</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValRecomm_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValRecomm"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValRecomm" substitutionGroup="crp:CA_ValidationPlan" type="crp:CA_ValRecomm_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValRecomm_Type">
+		<xs:annotation>
+			<xs:documentation>information about further recommendations</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_ValidationPlan_Type">
+				<xs:sequence>
+					<xs:element name="onBoardRefSys" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of an on-board reference system</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="radCharacterizationMoon" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of a continued radiometric characterization of the moon</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="traceability" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the establishment of a traceability</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="documentationEachChannel" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of a documentation of each channel</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qualityAssessment" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the existence of a quality assessment</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="metadata" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the availability of metadata</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="estimateAccuracy" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating  the availability of an estimated accuracy</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wavelengthsInSolarSpectralRegion" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating whether the sensed wavelength is within the solar spectral region</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="calOfThermalSensingInstr" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the calibration of the thermal sensor</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValSiteRequirements_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValSiteRequirements"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValSiteRequirements" substitutionGroup="crp:CA_ValidationPlan" type="crp:CA_ValSiteRequirements_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValSiteRequirements_Type">
+		<xs:annotation>
+			<xs:documentation>information about the validation site requirements</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_ValidationPlan_Type">
+				<xs:sequence>
+					<xs:element name="accessibility" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating whether the site is accessible</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="facilities" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>description of the site facilities</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="longTermCommitment" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating a long-term commitment for using the site</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="homogeneity" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating a sufficient spectral homogeneity of the site</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="representativeBiomass" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating the site’s usability for determining biomass</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="complementaryToExisting" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating whether the site is complementary to another site</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_ValSteps_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_ValSteps"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_ValSteps" substitutionGroup="crp:CA_ValidationPlan" type="crp:CA_ValSteps_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_ValSteps_Type">
+		<xs:annotation>
+			<xs:documentation>information about the validation steps</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_ValidationPlan_Type">
+				<xs:sequence>
+					<xs:element name="instrCharacterization" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating that the instrument characterization is set</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sensorCalibration" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating that the sensor calibration is completed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="calVerification" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating that the calibration is verified</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dataQualityAssessment" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating that the data quality assessment is completed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dataProductVal" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>flag indicating that the data product is validated</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_VicCal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_VicCal"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_VicCal" substitutionGroup="crp:CA_Methods" type="crp:CA_VicCal_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CA_VicCal_Type">
+		<xs:annotation>
+			<xs:documentation>generic term indicating a calibration performed in a manner not directly connected to the satellite system under consideration</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="crp:CA_Methods_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CA_StatisticComputation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="crp:CA_StatisticComputation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CA_StatisticComputation" substitutionGroup="gco:CharacterString" type="crp:CA_StatisticComputation_Type"/>
+	<!-- ________________________________________ -->
+	<xs:simpleType name="CA_StatisticComputation_Type">
+		<xs:annotation>
+			<xs:documentation>enumeration class that specifies the statistical method that shall be applied for an analysis</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="averagedMeasurement">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bias">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.3.1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="conformalRootMeanSquareDeviation"/>
+			<xs:enumeration value="correlationPearsonR">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.6.1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="correlationRMSE">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.5.3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="correlationSNR">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.5.4.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="correlationSpearmanRank">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.6.2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="correlationUnknownTruth">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.5.2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="covariance">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.7.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="decompositionOfTheRMSD">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.4.2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="diffBetween2Samples">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="error">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="errorModel">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.5.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="intrinsicDiff"/>
+			<xs:enumeration value="kendallsTau">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.6.3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="medianDifference">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.3.2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mutualInformation">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.6.4.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="probDensityFunction">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.4.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rootMeanSquareDeviation">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.4.1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="timeSeries">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.7.1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="variance">
+				<xs:annotation>
+					<xs:documentation>The method is explained in section C.2.6.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ======================================== -->
+</xs:schema>

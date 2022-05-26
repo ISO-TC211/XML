@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="abstractObsCore.xsd"/>
+	<xs:element name="AbstractObservationCollectionType" type="AbstractObservationCollectionType"/>
+	<xs:complexType name="AbstractObservationCollectionType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>an empty codelist parent class for ObservationCollection classification schemes. All codelists used for classifying ObservationCollections SHALL be specialized from this class.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="CollectionTypeByMemberCharacteristicsSemantics" type="CollectionTypeByMemberCharacteristicsSemantics"/>
+	<xs:complexType name="CollectionTypeByMemberCharacteristicsSemantics">
+		<xs:annotation>
+			<xs:documentation>ObservationCollection classification scheme based on how the properties of the ObservationCharacteristics associated with role memberCharacteristics shall be related to the corresponding properties of the Observations associated with role member</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservationCollectionType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Deployment" type="Deployment"/>
+	<xs:complexType name="Deployment">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Observation Schema:Deployment interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractDeployment">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GenericDomainFeature" type="GenericDomainFeature"/>
+	<xs:complexType name="GenericDomainFeature">
+		<xs:annotation>
+			<xs:documentation>A concrete featureType to be utilized as featureOfInterest of an Observation.
+
+NOTE: This type is foreseen as a placeholder for specialized domain features in order to enable rapid prototyping.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="location" type="Geometry" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Location information pertaining to a feature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Host" type="Host"/>
+	<xs:complexType name="Host">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Observation Schema:Host interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractHost">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="location" type="Geometry" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Location information pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ObservableProperty" type="ObservableProperty"/>
+	<xs:complexType name="ObservableProperty">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Observation Schema:ObservableProperty interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservableProperty">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Observation" type="Observation"/>
+	<xs:complexType name="Observation">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Observation Schema:Observation interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservation">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ObservationCharacteristics" type="ObservationCharacteristics"/>
+	<xs:complexType name="ObservationCharacteristics">
+		<xs:annotation>
+			<xs:documentation>set of common characteristics used for describing one or more Observation</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservationCharacteristics">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ObservationCollection" type="ObservationCollection"/>
+	<xs:complexType name="ObservationCollection">
+		<xs:annotation>
+			<xs:documentation>A collection of Observations</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="collectionType" type="AbstractObservationCollectionType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>information on the type of the ObservationCollection</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="memberCharacteristics" type="ObservationCharacteristics" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Information on ObservationCharacteristics of Observations contained within the ObservationCollection</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="relatedCollection" type="ObservationCollection" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Another ObservationCollection the context ObservationCollection is related to</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ObservationTypeByResultType" type="ObservationTypeByResultType"/>
+	<xs:complexType name="ObservationTypeByResultType">
+		<xs:annotation>
+			<xs:documentation>Observation classification scheme based on the type of its result property</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservationType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Observer" type="Observer"/>
+	<xs:complexType name="Observer">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Observation Schema:Observer interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObserver">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="location" type="Geometry" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Location information pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ObservingCapability" type="ObservingCapability"/>
+	<xs:complexType name="ObservingCapability">
+		<xs:annotation>
+			<xs:documentation>Information on Observation(s) that could potentially be provided.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ObservationCharacteristics">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ObservingProcedure" type="ObservingProcedure"/>
+	<xs:complexType name="ObservingProcedure">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Observation Schema:ObservingProcedure interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservingProcedure">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:element name="SamplerClassification" type="SamplerClassification"/>
+	<xs:complexType name="SamplerClassification">
+		<xs:complexContent>
+			<xs:extension base="AbstractSamplerType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SampleTypeByMaterialClass" type="SampleTypeByMaterialClass"/>
+	<xs:complexType name="SampleTypeByMaterialClass">
+		<xs:annotation>
+			<xs:documentation>AirSample, WaterSample, RockSample, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractSampleType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

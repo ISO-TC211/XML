@@ -7,9 +7,9 @@
 	targetNamespace="https://schemas.isotc211.org/19124/-1/crp/1.0"
 	elementFormDefault="qualified"
 	version="1.0.0">	
-	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="../../../../19115/-1/mrc/1.3.0/mrc.xsd"/>
-	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
-	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation=".https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
 	<!-- ======================================== -->
 	<xs:complexType name="CA_Active_PropertyType">
 		<xs:sequence minOccurs="0">

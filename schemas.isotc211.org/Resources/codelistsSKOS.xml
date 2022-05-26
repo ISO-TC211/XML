@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:sdo="https://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   >
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities/control-body">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:isDefinedBy rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:prefLabel xml:lang="en">Control body</skos:prefLabel>
+      <skos:definition xml:lang="en">A control body is a group of technical experts appointed by a register owner to decide on the acceptability of proposals for changes to the content of a register.</skos:definition>
+      <skos:inScheme rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:topConceptOf rdf:resource="https://example.com/roles-responsibilities"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities/registry-manager">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:isDefinedBy rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:prefLabel xml:lang="en">Registry manager</skos:prefLabel>
+      <skos:definition xml:lang="en">A registry manager is a person or an organization responsible for the day-to-day management of a registry.</skos:definition>
+      <skos:inScheme rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:topConceptOf rdf:resource="https://example.com/roles-responsibilities"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities/register-owner">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:isDefinedBy rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:prefLabel xml:lang="en">Register owner</skos:prefLabel>
+      <skos:definition xml:lang="en">A register owner is an organization that: a) has established one or more registers; and b) has primary responsibility for the management, dissemination and intellectual content of those registers.</skos:definition>
+      <skos:inScheme rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:topConceptOf rdf:resource="https://example.com/roles-responsibilities"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities/submitting-organization">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:isDefinedBy rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:prefLabel xml:lang="en">Submitting organization</skos:prefLabel>
+      <skos:definition xml:lang="en">A submitting organization is an organization that is qualified under criteria determined by the register owner to propose changes to the content of a register.</skos:definition>
+      <skos:inScheme rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:topConceptOf rdf:resource="https://example.com/roles-responsibilities"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities/register-manager">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:isDefinedBy rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:prefLabel xml:lang="en">Register manager</skos:prefLabel>
+      <skos:definition xml:lang="en">A register manager is an organization that delegated by a register owner to manage a register.</skos:definition>
+      <skos:inScheme rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:topConceptOf rdf:resource="https://example.com/roles-responsibilities"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities/register-user">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:isDefinedBy rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:prefLabel xml:lang="en">Register user</skos:prefLabel>
+      <skos:definition xml:lang="en">Register users access a registry in order to use one or more of the registers held in that registry. Register users include any person or organization interested in accessing or influencing the content of a register.</skos:definition>
+      <skos:inScheme rdf:resource="https://example.com/roles-responsibilities"/>
+      <skos:topConceptOf rdf:resource="https://example.com/roles-responsibilities"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://committee.iso.org/home/tc211">
+      <rdf:type rdf:resource="https://schema.org/Organization"/>
+      <sdo:name>ISO Technical Committee 211 Geographic information/Geomatics</sdo:name>
+      <sdo:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://committee.iso.org/home/tc211</sdo:url>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/roles-responsibilities">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <skos:prefLabel xml:lang="en">19135-1 Roles for the management of registers</skos:prefLabel>
+      <skos:definition xml:lang="en">Roles defined by the standard ISO/DIS 19135-1 _Geographic information — Procedures for item registration_, Section 5 "Roles and responsibilities in the management of registers"</skos:definition>
+      <dcterms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.iso.org/standard/54721.html</dcterms:source>
+      <dcterms:creator rdf:resource="https://committee.iso.org/home/tc211"/>
+      <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-23</dcterms:created>
+      <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-23</dcterms:modified>
+      <dcterms:provenance>This vocabulary was generated manually from content within ISO/DIS 19135-1, rather than automaticallygenerated from UML versions of that document. This was done to ensure that role definitions were presented in a consistent manner, which may not have been possible with a direct UML translation.</dcterms:provenance>
+      <dcterms:publisher rdf:resource="https://example.com/unofficial"/>
+      <skos:hasTopConcept rdf:resource="https://example.com/roles-responsibilities/register-owner"/>
+      <skos:hasTopConcept rdf:resource="https://example.com/roles-responsibilities/register-manager"/>
+      <skos:hasTopConcept rdf:resource="https://example.com/roles-responsibilities/submitting-organization"/>
+      <skos:hasTopConcept rdf:resource="https://example.com/roles-responsibilities/control-body"/>
+      <skos:hasTopConcept rdf:resource="https://example.com/roles-responsibilities/registry-manager"/>
+      <skos:hasTopConcept rdf:resource="https://example.com/roles-responsibilities/register-user"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://example.com/unofficial">
+      <rdf:type rdf:resource="https://schema.org/Organization"/>
+      <sdo:name>Unofficial - no publisher</sdo:name>
+      <sdo:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.com/unofficial</sdo:url>
+   </rdf:Description>
+</rdf:RDF>

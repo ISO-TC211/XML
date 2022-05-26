@@ -107,6 +107,70 @@
             <td>https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd</td>
          </tr>
       </table>
+      <h2>Schematron Validation Rules for mrl 1.3 derived from ISO 19115-2</h2> 
+      Schematron rules for validating instance documents required for a complete validation are:
+      <table>
+         <tr>
+            <th>Package name</th>
+            <th>File name</th>
+            <th>Location</th>
+            <th>Constraint tested</th>
+         </tr>
+         <tr id="mrlExt.sch">
+            <td>Metadata for Resource Lineage - Extended</td>
+            <td>mrlExt.sch</td>
+            <td><a href="https://schemas.isotc211.org/19115/-2/mrl/2.2.0/mrlExt.sch">https://schemas.isotc211.org/19115/-2/mrl/2.2.0/ mrlExt.sch</a></td>
+            <td>
+               <ul>
+                  <li>LE_Source - count(description + scope) > 0</li>
+               </ul>
+            </td>
+         </tr>
+         <tr id="mrl.sch">
+            <td>Metadata for Resource Lineage</td>
+            <td>mrl.sch</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.sch">https://schemas.isotc211.org/19115/-1/mrl/1.3.0/ mrl.sch</a></td>
+            <td>
+               <ul>
+                  <li>LI_Source - count(description + scope) > 0</li>
+               </ul>
+            </td>
+         </tr>
+         <tr id="cit.sch">
+            <td>CITation and responsibility</td>
+            <td>cit.sch</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch">https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.sch</a></td>
+            <td>
+               <ul>
+                  <li>CI_Individual - count(name + positionName) > 0</li>
+                  <li>CI_organisation - count(name + logo) > 0</li>
+               </ul>
+            </td>
+         </tr>
+         <tr id="mri.sch">
+            <td>Metadata Resource Identification</td>
+            <td>mri.sch</td>
+            <td><a href="https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch">https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.sch</a></td>
+            <td>
+               <ul>
+                  <li>MD_MetadataScope/MD_Identification - MD_Metadata.metadataScope.MD_MetadataScope.resourceScope)=’dataset’
+                     implies count(extent.geographicElement.EX_GeographicBoundingBox +
+                     extent.geographicElement.EX_GeographicDescription) >= 1</li>
+                  <li>MD_MetadataScope/MD_Identification - MD_Metadata.metadataScope.MD_Scope.resourceScope) = (’dataset’ or ‘series’)
+                     implies topicCategory is mandatory</li>
+                  <li>MD_DataIdentification - defaultLocale documented if resource includes textual information (test atempt only)</li>
+                  <li>MD_DataIdentification - defaultLocale.PT_Locale.characterEncoding default value is UTF-8</li>
+                  <li>MD_AssociatedResource - count(name + metadataReference</li>
+                  <li>MD_Keywords/[SV_ServiceIdentification] - When the resource described is a service, 
+                     one instance of MD_Keyword shall refer to the service taxonomy defined in ISO 19119</li>
+               </ul>
+            </td>
+         </tr>
+      </table>
+      Other schematron rule sets that maybe required for a complete validation (optional direct from MD_Metadata or indirectly through associations) are: 
+      <ul>
+         <li>Metadata for Reference Systems <a href="https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.sch">https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.sch</a></li>
+      </ul>
       <h2>Working Versions</h2> When revisions to these schema become necessary, they will be managed in the <a href="https://github.com/ISO-TC211/XML">ISO TC211 Git Repository</a>. 
       <hr>
       <p class="paraSmall">Written by hand. Version: 2021-02-17</p>
