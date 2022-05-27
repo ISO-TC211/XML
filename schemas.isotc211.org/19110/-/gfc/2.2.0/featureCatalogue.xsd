@@ -576,7 +576,7 @@
                 definition.</documentation>
             </annotation>
           </element>
-          <element name="featureCatalogue" type="gco:ObjectReference_PropertyType">
+          <element name="featureCatalogue" type="gfc:FC_FeatureCatalogue_PropertyType" >
             <annotation>
               <documentation>The role that links this feature type to the feature catalogue that
                 contains it.</documentation>
