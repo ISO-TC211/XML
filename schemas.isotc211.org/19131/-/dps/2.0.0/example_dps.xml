@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Disclaimer:
+This is an informativ example XML encoding of the content in Annex D in ISO 19131:2022
+
+Please note: 
+Regarding the content: Only a subset of the optional elements are present in this example. There may be additional elements defined in the XML schema. This example aims to reflect the content in Annex D in ISO 19131:2022.-->
+<!-- <dps:DataProductSpecification 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:dps="https://schemas.isotc211.org/19131/-/dps/2.0" 
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3" 
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3" 
+	xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3" 
+	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2" 
+	xmlns:mas="https://schemas.isotc211.org/19115/-1/mas/1.3" 
+	xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3" 
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
+	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3" 
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3" 
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3" 
+	xmlns:mmi="https://schemas.isotc211.org/19115/-1/mmi/1.3" 
+	xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3" 
+	id="example_dps" 
+	uuid="https://schemas.isotc211.org/19131/-/dps/2.0.0/example_dps.xml" 
+	xsi:schemaLocation="https://schemas.isotc211.org/19131/-/dps/2.0 https://schemas.isotc211.org/19131/-/dps/2.0.0/dps.xsd
+	http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+	-->
+<dps:DataProductSpecification 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:dps="https://schemas.isotc211.org/19131/-/dps/2.0" 
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3" 
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3" 
+	xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3" 
+	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2" 
+	xmlns:mas="https://schemas.isotc211.org/19115/-1/mas/1.3" 
+	xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3" 
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
+	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3" 
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3" 
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3" 
+	xmlns:mmi="https://schemas.isotc211.org/19115/-1/mmi/1.3" 
+	xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3" 
+	id="example_dps" 
+	uuid="https://schemas.isotc211.org/19131/-/dps/2.0.0/example_dps.xml" 
+	xsi:schemaLocation="https://schemas.isotc211.org/19131/-/dps/2.0 ../../../../19131/-/dps/2.0.0/dps.xsd
+	http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd">
+	<!--xsi:schemaLocation="https://schemas.isotc211.org/19131/-/dps/2.0 dps.xsd"> -->
+
+	<dps:overview>
+		<gco:CharacterString>Change History
+			1.1 The data product can be delivered as a REST service.
+			1.0 First release of the data product specification.
+			Collaboration and review process
+			This data product specification has been produced by several municipalities in Sweden, and reviewed by system developers to assure that delivery is in a usable format so it can be combined with other datasets.
+			Conformance
+			This data product specification conforms to ISO 19131.</gco:CharacterString>
+	</dps:overview>
+	<dps:title>
+		<gco:CharacterString>Data product specification for Lamp post details and ownership</gco:CharacterString>
+	</dps:title>
+	<dps:versionedId>http://www.organisationA.tld/dps/lamp-post-details-v1.1</dps:versionedId>
+	<dps:date>
+		<cit:CI_Date>
+			<cit:date>
+				<gco:Date>2018-01-01</gco:Date>
+			</cit:date>
+			<cit:dateType>
+				<cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode>
+			</cit:dateType>
+		</cit:CI_Date>
+	</dps:date>
+	<dps:date>
+		<cit:CI_Date>
+			<cit:date>
+				<gco:Date>2018-10-15</gco:Date>
+			</cit:date>
+			<cit:dateType>
+				<cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/19115/-3/cit/1.0/codelists.xml#CI_DateTypeCode" codeListValue="lastUpdate">lastUpdate</cit:CI_DateTypeCode>
+			</cit:dateType>
+		</cit:CI_Date>
+	</dps:date>
+	<dps:language>
+		<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">eng</lan:LanguageCode>
+	</dps:language>
+	<dps:contact>
+		<cit:CI_Responsibility>
+			<cit:role/>
+			<cit:party>
+				<cit:CI_Organisation>
+					<cit:name>
+						<gco:CharacterString>Organization A</gco:CharacterString>
+					</cit:name>
+					<cit:contactInfo>
+						<cit:CI_Contact>
+							<cit:phone>
+								<cit:CI_Telephone>
+									<cit:number>
+										<gco:CharacterString>020 – 111 111</gco:CharacterString>
+									</cit:number>
+								</cit:CI_Telephone>
+							</cit:phone>
+							<cit:address>
+								<cit:CI_Address>
+									<cit:electronicMailAddress>
+										<gco:CharacterString>info@organisationA.tld</gco:CharacterString>
+									</cit:electronicMailAddress>
+								</cit:CI_Address>
+							</cit:address>
+							<cit:onlineResource>
+								<cit:CI_OnlineResource>
+									<cit:linkage>
+										<gco:CharacterString>http://organisationA.tld</gco:CharacterString>
+									</cit:linkage>
+									<cit:description>
+										<gco:CharacterString>Web site</gco:CharacterString>
+									</cit:description>
+								</cit:CI_OnlineResource>
+							</cit:onlineResource>
+						</cit:CI_Contact>
+					</cit:contactInfo>
+				</cit:CI_Organisation>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</dps:contact>
+	<dps:maintenance>
+		<gco:CharacterString>The data product specification is updated regularly and reviewed at least once every year.</gco:CharacterString>
+	</dps:maintenance>
+	<dps:webLocation>http://www.organisationA.tld/dps/lamp-post-details</dps:webLocation>
+	<dps:format>
+		<gco:CharacterString>application/pdf</gco:CharacterString>
+	</dps:format>
+	<dps:format>
+		<gco:CharacterString>text/xml</gco:CharacterString>
+	</dps:format>
+	<dps:handlingRestriction>
+		<mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/19115/-3/mco/1.0/codelists.xml#MD_ClassificationCode" codeListValue="Unclassified">Unclassified</mco:MD_ClassificationCode>
+	</dps:handlingRestriction>
+	<dps:identificationSection>
+		<dps:IdentificationSection>
+			<dps:title>
+				<gco:CharacterString>Lamp post details and ownership</gco:CharacterString>
+			</dps:title>
+			<dps:abstract>
+				<gco:CharacterString>This data product contains information about lamp posts, such as its position, type of light bulb, responsible party, and if it is functional or not (data collected from the general public).</gco:CharacterString>
+			</dps:abstract>
+			<dps:purpose>
+				<dps:Purpose>
+					<dps:useCase>
+						<dps:UseCase>
+							<dps:name>
+								<gco:CharacterString>Report lamp posts out-of-order (1.0)</gco:CharacterString>
+							</dps:name>
+							<dps:summary>
+								<gco:CharacterString>Someone sees a lamp post that is out-of-order and reports this to the responsible party.</gco:CharacterString>
+							</dps:summary>
+							<dps:goal>
+								<gco:CharacterString>The goal of this use case is that a non-functional lamp post is reported so that it can be repaired.</gco:CharacterString>
+							</dps:goal>
+							<dps:diagram>http://www.organisationA.tld/dps/lamp-postdetails/useCase1.png</dps:diagram>
+							<dps:actor>
+								<gco:CharacterString>General public</gco:CharacterString>
+							</dps:actor>
+							<dps:stakeholder>
+								<gco:CharacterString>General public</gco:CharacterString>
+							</dps:stakeholder>
+							<dps:stakeholder>
+								<gco:CharacterString>lamp post owner</gco:CharacterString>
+							</dps:stakeholder>
+							<dps:mainSuccessScenario>
+								<gco:CharacterString>1. User finds a lamp post out-of-order
+									2. User connects to the web service
+									3. User sends information about the non-functional lamp post</gco:CharacterString>
+							</dps:mainSuccessScenario>
+							<dps:trigger>
+								<gco:CharacterString>Someone sees a lamp post that is non-functional.</gco:CharacterString>
+							</dps:trigger>
+							<dps:precondition>
+								<gco:CharacterString>Lamp post out-of-order</gco:CharacterString>
+							</dps:precondition>
+							<dps:postcondition>
+								<gco:CharacterString>Lamp post reported as non-functional</gco:CharacterString>
+							</dps:postcondition>
+						</dps:UseCase>
+					</dps:useCase>
+					<dps:useCase>
+						<dps:UseCase>
+							<dps:name>
+								<gco:CharacterString>Report repaired lamp posts (1.3)</gco:CharacterString>
+							</dps:name>
+							<dps:summary>
+								<gco:CharacterString>The responsible party for a lamp post has been notified that a lamp post is out-of-order and sends someone to repair the lamp post. 
+									Once the lamp post has been repaired, its status is updated in the data set.</gco:CharacterString>
+							</dps:summary>
+							<dps:goal>
+								<gco:CharacterString>The goal of this use case is to update the data when a lamp post has been repaired.</gco:CharacterString>
+							</dps:goal>
+							<dps:diagram>http://www.organisationA.tld/dps/lamp-postdetails/useCase2.png</dps:diagram>
+							<dps:actor>
+								<gco:CharacterString>Lamp post repairer</gco:CharacterString>
+							</dps:actor>
+							<dps:stakeholder>
+								<gco:CharacterString>Lamp post owner</gco:CharacterString>
+							</dps:stakeholder>
+							<dps:stakeholder>
+								<gco:CharacterString>lamp post repairer</gco:CharacterString>
+							</dps:stakeholder>
+							<dps:mainSuccessScenario>
+								<gco:CharacterString>1. User connects to the web service
+									2. User requests information about non-functional lamp posts owned by themselves
+									3. User repairs the lamp post
+									4. User reports the lamp post as functional</gco:CharacterString>
+							</dps:mainSuccessScenario>
+							<dps:trigger>
+								<gco:CharacterString>Automatic notification of lamp post out-of-order</gco:CharacterString>
+							</dps:trigger>
+							<dps:trigger>
+								<gco:CharacterString>Manual request to the web service</gco:CharacterString>
+							</dps:trigger>
+							<dps:precondition>
+								<gco:CharacterString>Lamp post reported as non-functional</gco:CharacterString>
+							</dps:precondition>
+							<dps:postcondition>
+								<gco:CharacterString>Lamp post reported as functional</gco:CharacterString>
+							</dps:postcondition>
+						</dps:UseCase>
+					</dps:useCase>
+					<dps:summary>
+						<gco:CharacterString>The purpose of the data product is to make it possible for the general public to report lamp posts that are not functioning.
+							This information can be used by the responsible party to find lamp posts that needs to be repaired.</gco:CharacterString>
+					</dps:summary>
+				</dps:Purpose>
+			</dps:purpose>
+			<dps:topicCategory>
+				<mri:MD_TopicCategoryCode>structure</mri:MD_TopicCategoryCode>
+			</dps:topicCategory>
+			<dps:spatialRepresentationType>
+				<mcc:MD_SpatialRepresentationTypeCode codeList="https://standards.iso.org/iso/19115/-3/mcc/1.0/codelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode>
+			</dps:spatialRepresentationType>
+			<dps:supplementalInformation>
+				<gco:CharacterString>This data product is a REST service providing methods to report and find information about lamp posts. 
+					As such, it does not have a user interface, hence the use of the data product is not targeting end users, but application developers.
+					The WFS version of this data product is provided for backward compatibility. Anyone currently using the WFS version should change to the REST version.</gco:CharacterString>
+			</dps:supplementalInformation>
+			<dps:keyword>
+				<mri:keyword>
+					<gco:CharacterString>Place</gco:CharacterString>
+				</mri:keyword>
+			</dps:keyword>
+			<dps:restriction>
+				<mco:MD_Constraints>
+					<mco:useLimitation>
+						<gco:CharacterString>Not to be used whenever accurate position is required.</gco:CharacterString>
+					</mco:useLimitation>
+				</mco:MD_Constraints>
+			</dps:restriction>
+			<dps:restriction>
+				<mco:MD_LegalConstraints>
+					<mco:accessConstraints>
+						<mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/19115/-3/mco/1.0/codelists.xml#MD_RestrictionCode" codeListValue="unrestricted">unrestricted</mco:MD_RestrictionCode>
+					</mco:accessConstraints>
+					<mco:useConstraints>
+						<mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/19115/-3/mco/1.0/codelists.xml#MD_RestrictionCode" codeListValue="unrestricted">unrestricted</mco:MD_RestrictionCode>
+					</mco:useConstraints>
+				</mco:MD_LegalConstraints>
+			</dps:restriction>
+			<dps:restriction>
+				<mco:MD_SecurityConstraints>
+					<mco:classification>
+						<mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/19115/-3/mco/1.0/codelists.xml#MD_ClassificationCode" codeListValue="unclassified">unclassified</mco:MD_ClassificationCode>
+					</mco:classification>
+					<mco:userNote>
+						<gco:CharacterString>service is open for everyone</gco:CharacterString>
+					</mco:userNote>
+				</mco:MD_SecurityConstraints>
+			</dps:restriction>
+			<dps:extent>
+				<gex:EX_Extent>
+					<gex:description>
+						<gco:CharacterString>SE-H (ISO 3166-2:2013, published 2013)
+							Parts of Kalmar county, see section 3 (scopes) for detailed information.</gco:CharacterString>
+					</gex:description>
+				</gex:EX_Extent>
+			</dps:extent>
+		</dps:IdentificationSection>
+	</dps:identificationSection>
+	<dps:scopeSection>
+		<dps:ScopeSection>
+			<dps:scope>
+				<dps:SpecificationScope id="SpecificationScope.NybroMunicipality">
+					<!-- Please note: Ideally the scopeIdentification value below should be used for the id above. However, the value below contains whitespace which is not allowed as part of the id. Also it was considered useful to start the id with the instance's type, which will contribute to easier understanding when the id is reused other places in this document as part of an xlink.-->
+					<dps:scopeIdentification>
+						<gco:CharacterString>Nybro municipality</gco:CharacterString>
+					</dps:scopeIdentification>
+					<dps:level>
+						<mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/-3/mcc/1.0/codelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+					</dps:level>
+					<dps:levelName>
+						<gco:CharacterString>Nybro municipality</gco:CharacterString>
+					</dps:levelName>
+					<dps:extent>
+						<gex:EX_Extent>
+							<gex:description>
+								<gco:CharacterString>This scope covers the geographical extent of Nybro municipality.</gco:CharacterString>
+							</gex:description>
+						</gex:EX_Extent>
+					</dps:extent>
+				</dps:SpecificationScope>
+			</dps:scope>
+			<dps:scope>
+				<dps:SpecificationScope id="SpecificationScope.KalmarMunicipality">
+					<!-- Please note: Ideally the scopeIdentification value below should be used for the id above. However, the value below contains whitespace which is not allowed as part of the id. Also it was considered useful to start the id with the instance's type, which will contribute to easier understanding when the id is reused other places in this document as part of an xlink.-->
+					<dps:scopeIdentification>
+						<gco:CharacterString>Kalmar municipality</gco:CharacterString>
+					</dps:scopeIdentification>
+					<dps:level>
+						<mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/19115/-3/mcc/1.0/codelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode>
+					</dps:level>
+					<dps:levelName>
+						<gco:CharacterString>Kalmar municipality</gco:CharacterString>
+					</dps:levelName>
+					<dps:extent>
+						<gex:EX_Extent>
+							<gex:description>
+								<gco:CharacterString>This scope covers the geographical extent of Kalmar municipality.</gco:CharacterString>
+							</gex:description>
+						</gex:EX_Extent>
+					</dps:extent>
+				</dps:SpecificationScope>
+			</dps:scope>
+		</dps:ScopeSection>
+	</dps:scopeSection>
+	<dps:dataContentAndStructureSection>
+		<dps:DataContentAndStructureSection>
+			<dps:content>
+				<dps:DataContentAndStructure>
+					<dps:narrativeDescription>
+						<gco:CharacterString>The data product contains rather little information about lamp posts (class “Lamp post”), such as; 
+							  its identification, position, status (functional/non-functional), kind of light bulb, the owner/maintainer of the lamp post.
+							Users of the data product reports information (class Comment) about whether the lamp post is working or not. 
+							This may be along with a detailed comment.</gco:CharacterString>
+					</dps:narrativeDescription>
+					<dps:applicationSchema xlink:href="#MD_ApplicationSchemaInformation.SomethingNotContainedInThisExample"/>
+					<!-- Please note: For this type of content the textual example in the standard document refers to an annex. However, annexes are omitted in this XML example. Please refer to annex D in ISO 19131:2022-->
+					<dps:contentInformation/>
+					<!-- Please note: For this type of content the textual example in the standard document refers to an annex. However, annexes are omitted in this XML example. Please refer to annex D in ISO 19131:2022-->
+					<dps:contentScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:DataContentAndStructure>
+			</dps:content>
+			<dps:content>
+				<dps:DataContentAndStructure>
+					<dps:narrativeDescription>
+						<gco:CharacterString>The data product contains rather little information about lamp posts (class “Lamp post”), such as;
+							  its identification, position, status (functional/non-functional), kind of light bulb, the owner/maintainer of the lamp post.
+							Users of the data product reports information (class Comment) about whether the lamp post is working or not. This may be along with a detailed comment.</gco:CharacterString>
+					</dps:narrativeDescription>
+					<dps:applicationSchema xlink:href="#MD_ApplicationSchemaInformation.SomethingNotContainedInThisExample">
+						<!-- Please note: For this type of content the textual example in the standard document refers to an annex. However, annexes are omitted in this XML example. Please refer to annex D in ISO 19131:2022-->
+					</dps:applicationSchema>
+					<dps:contentInformation>
+						<!-- Please note: For this type of content the textual example in the standard document refers to an annex. However, annexes are omitted in this XML example. Please refer to annex D in ISO 19131:2022-->
+					</dps:contentInformation>
+					<dps:contentScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:DataContentAndStructure>
+			</dps:content>
+		</dps:DataContentAndStructureSection>
+	</dps:dataContentAndStructureSection>
+	<dps:referenceSystemSection>
+		<dps:ReferenceSystemSection>
+			<dps:referenceSystem>
+				<dps:ReferenceSystem>
+					<dps:spatialReferenceSystem>
+						<mrs:MD_ReferenceSystem>
+							<mrs:referenceSystemIdentifier>
+								<mcc:MD_Identifier>
+									<mcc:code>
+										<gco:CharacterString>EPSG:5845</gco:CharacterString>
+										<!-- Please note: The EPSG code above replaces the two separate codes in the textual example in the standard document. Please refer to annex D in ISO 19131:2022-->
+									</mcc:code>
+								</mcc:MD_Identifier>
+							</mrs:referenceSystemIdentifier>
+						</mrs:MD_ReferenceSystem>
+					</dps:spatialReferenceSystem>
+					<dps:temporalReferenceSystem>
+						<mrs:MD_ReferenceSystem>
+							<mrs:referenceSystemIdentifier>
+								<mcc:MD_Identifier>
+									<mcc:code>
+										<gco:CharacterString>UTC</gco:CharacterString>
+									</mcc:code>
+								</mcc:MD_Identifier>
+							</mrs:referenceSystemIdentifier>
+						</mrs:MD_ReferenceSystem>
+					</dps:temporalReferenceSystem>
+					<dps:referenceSystemScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:ReferenceSystem>
+			</dps:referenceSystem>
+			<dps:referenceSystem>
+				<dps:ReferenceSystem>
+					<dps:spatialReferenceSystem>
+						<mrs:MD_ReferenceSystem>
+							<mrs:referenceSystemIdentifier>
+								<mcc:MD_Identifier>
+									<mcc:code>
+										<gco:CharacterString>EPSG:5845</gco:CharacterString>
+										<!-- Please note: The EPSG code above replaces the two separate codes in the textual example in the standard document. Please refer to annex D in ISO 19131:2022-->
+									</mcc:code>
+								</mcc:MD_Identifier>
+							</mrs:referenceSystemIdentifier>
+						</mrs:MD_ReferenceSystem>
+					</dps:spatialReferenceSystem>
+					<dps:temporalReferenceSystem>
+						<mrs:MD_ReferenceSystem>
+							<mrs:referenceSystemIdentifier>
+								<mcc:MD_Identifier>
+									<mcc:code>
+										<gco:CharacterString>UTC</gco:CharacterString>
+									</mcc:code>
+								</mcc:MD_Identifier>
+							</mrs:referenceSystemIdentifier>
+						</mrs:MD_ReferenceSystem>
+					</dps:temporalReferenceSystem>
+					<dps:referenceSystemScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:ReferenceSystem>
+			</dps:referenceSystem>
+		</dps:ReferenceSystemSection>
+	</dps:referenceSystemSection>
+	<dps:dataQualitySection>
+		<dps:DataQualitySection>
+			<dps:dataQuality>
+				<dps:DataQuality>
+					<dps:dataQuality>
+						<dps:ConformanceQualityLevel>
+							<dps:requirementId>
+								<gco:CharacterString>Requirement 1</gco:CharacterString>
+							</dps:requirementId>
+							<dps:element>
+								<mdq:DQ_CompletenessOmission>
+									<mdq:measure>
+										<mdq:DQ_MeasureReference>
+											<mdq:nameOfMeasure>
+												<gco:CharacterString>Rate of missing items</gco:CharacterString>
+											</mdq:nameOfMeasure>
+										</mdq:DQ_MeasureReference>
+									</mdq:measure>
+									<mdq:result>
+										<mdq:DQ_QuantitativeResult>
+											<mdq:value>
+												<gco:Record>
+													<gco:field><gco:Field><gco:value><gco:CharacterString>0.10</gco:CharacterString></gco:value></gco:Field></gco:field>
+												</gco:Record>
+											</mdq:value>
+										</mdq:DQ_QuantitativeResult>
+									</mdq:result>
+								</mdq:DQ_CompletenessOmission>
+							</dps:element>
+						</dps:ConformanceQualityLevel>
+					</dps:dataQuality>
+					<dps:dataQuality>
+						<dps:ConformanceQualityLevel>
+							<dps:requirementId>
+								<gco:CharacterString>Requirement 2</gco:CharacterString>
+							</dps:requirementId>
+							<dps:element>
+								<mdq:DQ_DomainConsistency>
+									<mdq:measure>
+										<mdq:DQ_MeasureReference>
+											<mdq:nameOfMeasure>
+												<gco:CharacterString>Value domain conformance rate</gco:CharacterString>
+											</mdq:nameOfMeasure>
+										</mdq:DQ_MeasureReference>
+									</mdq:measure>
+									<mdq:result>
+										<mdq:DQ_QuantitativeResult>
+											<mdq:value>
+												<gco:Record>
+													<gco:field><gco:Field><gco:value><gco:CharacterString>0.99</gco:CharacterString></gco:value></gco:Field></gco:field>
+												</gco:Record>
+											</mdq:value>
+										</mdq:DQ_QuantitativeResult>
+									</mdq:result>
+								</mdq:DQ_DomainConsistency>
+							</dps:element>
+						</dps:ConformanceQualityLevel>
+					</dps:dataQuality>
+					<dps:dataQualityScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:DataQuality>
+			</dps:dataQuality>
+			<dps:dataQuality>
+				<dps:DataQuality>
+					<dps:dataQuality>
+						<dps:ConformanceQualityLevel>
+							<dps:requirementId>
+								<gco:CharacterString>Requirement 1</gco:CharacterString>
+							</dps:requirementId>
+							<dps:element>
+								<mdq:DQ_CompletenessOmission>
+									<mdq:measure>
+										<mdq:DQ_MeasureReference>
+											<mdq:nameOfMeasure>
+												<gco:CharacterString>Rate of missing items</gco:CharacterString>
+											</mdq:nameOfMeasure>
+										</mdq:DQ_MeasureReference>
+									</mdq:measure>
+									<mdq:result>
+										<mdq:DQ_QuantitativeResult>
+											<mdq:value>
+												<gco:Record>
+													<gco:field><gco:Field><gco:value><gco:CharacterString>0.10</gco:CharacterString></gco:value></gco:Field></gco:field>
+												</gco:Record>
+											</mdq:value>
+										</mdq:DQ_QuantitativeResult>
+									</mdq:result>
+								</mdq:DQ_CompletenessOmission>
+							</dps:element>
+						</dps:ConformanceQualityLevel>
+					</dps:dataQuality>
+					<dps:dataQuality>
+						<dps:ConformanceQualityLevel>
+							<dps:requirementId>
+								<gco:CharacterString>Requirement 2</gco:CharacterString>
+							</dps:requirementId>
+							<dps:element>
+								<mdq:DQ_DomainConsistency>
+									<mdq:measure>
+										<mdq:DQ_MeasureReference>
+											<mdq:nameOfMeasure>
+												<gco:CharacterString>Value domain conformance rate</gco:CharacterString>
+											</mdq:nameOfMeasure>
+										</mdq:DQ_MeasureReference>
+									</mdq:measure>
+									<mdq:result>
+										<mdq:DQ_QuantitativeResult>
+											<mdq:value>
+												<gco:Record>
+													<gco:field><gco:Field><gco:value><gco:CharacterString>0.99</gco:CharacterString></gco:value></gco:Field></gco:field>
+												</gco:Record>
+											</mdq:value>
+										</mdq:DQ_QuantitativeResult>
+									</mdq:result>
+								</mdq:DQ_DomainConsistency>
+							</dps:element>
+						</dps:ConformanceQualityLevel>
+					</dps:dataQuality>
+					<dps:dataQualityScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:DataQuality>
+			</dps:dataQuality>
+		</dps:DataQualitySection>
+	</dps:dataQualitySection>
+	<dps:dataCaptureAndProductionSection>
+		<dps:DataCaptureAndProductionSection>
+			<dps:dataCaptureAndProduction>
+				<dps:DataCaptureAndProduction>
+					<dps:dataCaptureAndProductionStatement>
+						<gco:CharacterString>Data about lamp posts was originally collected from a database that had not been updated for five years. 
+							The position was stored in another reference system; hence a transformation was needed.
+							Currently no further processing is needed to translate source information into the data product.</gco:CharacterString>
+					</dps:dataCaptureAndProductionStatement>
+					<dps:inclusionCriteria>
+						<gco:CharacterString>Only lamp posts maintained by the municipality itself are to be captured.
+							Lamp posts along road 731 are not to be captured (lamp posts permanently turned off).</gco:CharacterString>
+					</dps:inclusionCriteria>
+					<dps:dataCaptureAndProductionScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+					<dps:dataAcquisitionAndProcessing/>
+				</dps:DataCaptureAndProduction>
+			</dps:dataCaptureAndProduction>
+			<dps:dataCaptureAndProduction>
+				<dps:DataCaptureAndProduction>
+					<dps:dataCaptureAndProductionStatement>
+						<gco:CharacterString>Data about lamp posts was originally collected from an up-to-date data source.
+							Currently no further processing is needed to translate source information into the data product.</gco:CharacterString>
+					</dps:dataCaptureAndProductionStatement>
+					<dps:dataCaptureAndProductionScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+					<dps:dataAcquisitionAndProcessing/>
+				</dps:DataCaptureAndProduction>
+			</dps:dataCaptureAndProduction>
+		</dps:DataCaptureAndProductionSection>
+	</dps:dataCaptureAndProductionSection>
+	<dps:maintenanceSection>
+		<dps:MaintenanceSection>
+			<dps:maintenance>
+				<dps:Maintenance>
+					<dps:maintenanceAndUpdateStatement>
+						<gco:CharacterString>Data is continuously updated by the general public and lamp post owners.</gco:CharacterString>
+					</dps:maintenanceAndUpdateStatement>
+					<dps:maintenanceAndUpdateFrequency>
+						<dps:MaintenanceAndUpdateFrequency>
+							<dps:maintenanceAndUpdateFrequency>
+								<mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/19115/-3/mmi/1.0/codelists.xml#MD_MaintenanceFrequencyCode" codeListValue="continual">continual</mmi:MD_MaintenanceFrequencyCode>
+							</dps:maintenanceAndUpdateFrequency>
+						</dps:MaintenanceAndUpdateFrequency>
+					</dps:maintenanceAndUpdateFrequency>
+					<dps:maintenanceScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:Maintenance>
+			</dps:maintenance>
+			<dps:maintenance>
+				<dps:Maintenance>
+					<dps:maintenanceAndUpdateStatement>
+						<gco:CharacterString>Data is continuously updated by the general public and lamp post owners.</gco:CharacterString>
+					</dps:maintenanceAndUpdateStatement>
+					<dps:maintenanceAndUpdateFrequency>
+						<dps:MaintenanceAndUpdateFrequency>
+							<dps:maintenanceAndUpdateFrequency>
+								<mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/19115/-3/mmi/1.0/codelists.xml#MD_MaintenanceFrequencyCode" codeListValue="continual">continual</mmi:MD_MaintenanceFrequencyCode>
+							</dps:maintenanceAndUpdateFrequency>
+						</dps:MaintenanceAndUpdateFrequency>
+					</dps:maintenanceAndUpdateFrequency>
+					<dps:maintenanceScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:Maintenance>
+			</dps:maintenance>
+		</dps:MaintenanceSection>
+	</dps:maintenanceSection>
+	<dps:portrayalSection>
+		<dps:PortrayalSection>
+		</dps:PortrayalSection>
+	</dps:portrayalSection>
+	<dps:deliverySection>
+		<dps:DeliverySection>
+			<dps:delivery>
+				<dps:Delivery>
+					<dps:deliveryMedium>
+						<dps:DeliveryMedium>
+							<dps:unitsOfDelivery>
+								<gco:CharacterString>Feature</gco:CharacterString>
+							</dps:unitsOfDelivery>
+							<dps:transferSize>
+								<gco:Real>0.1</gco:Real>
+							</dps:transferSize>
+							<dps:otherDeliveryInformation>
+								<gco:CharacterString>REST service, see technical specification in annex D.</gco:CharacterString>
+							</dps:otherDeliveryInformation>
+						</dps:DeliveryMedium>
+					</dps:deliveryMedium>
+					<dps:deliveryFormat>
+						<dps:DeliveryFormat>
+							<dps:formatName>
+								<gco:CharacterString>GML</gco:CharacterString>
+							</dps:formatName>
+							<dps:version>
+								<gco:CharacterString>3.1.2</gco:CharacterString>
+							</dps:version>
+							<dps:specification>
+								<gco:CharacterString>Geographic information – Geography Markup Language, (GML) (ISO 19136:2007)</gco:CharacterString>
+							</dps:specification>
+							<dps:fileStructure>
+								<gco:CharacterString>https://namespace.organisationA.tld/schemas/lamp-postservice.xsd</gco:CharacterString>
+							</dps:fileStructure>
+							<dps:language>
+								<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="swe">swe</lan:LanguageCode>
+							</dps:language>
+							<dps:characterSet>
+								<lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets/character-sets.xhtml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+							</dps:characterSet>
+						</dps:DeliveryFormat>
+					</dps:deliveryFormat>
+					<dps:deliveryScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:Delivery>
+			</dps:delivery>
+			<dps:delivery>
+				<dps:Delivery>
+					<dps:deliveryMedium>
+						<dps:DeliveryMedium>
+							<dps:unitsOfDelivery>
+								<gco:CharacterString>Feature</gco:CharacterString>
+							</dps:unitsOfDelivery>
+							<dps:transferSize>
+								<gco:Real>0.1</gco:Real>
+							</dps:transferSize>
+							<dps:otherDeliveryInformation>
+								<gco:CharacterString>REST service, see technical specification in annex D.</gco:CharacterString>
+							</dps:otherDeliveryInformation>
+						</dps:DeliveryMedium>
+					</dps:deliveryMedium>
+					<dps:deliveryFormat>
+						<dps:DeliveryFormat>
+							<dps:formatName>
+								<gco:CharacterString>GeoJSON</gco:CharacterString>
+							</dps:formatName>
+							<dps:version>
+								<gco:CharacterString>1.0</gco:CharacterString>
+							</dps:version>
+							<dps:specification>
+								<gco:CharacterString>The GeoJSON Format, RFC 7946</gco:CharacterString>
+							</dps:specification>
+							<dps:fileStructure>
+								<gco:CharacterString>https://namespace.organisationA.tld/schemas/lamp-postservice. json</gco:CharacterString>
+							</dps:fileStructure>
+							<dps:language>
+								<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="swe">swe</lan:LanguageCode>
+							</dps:language>
+							<dps:characterSet>
+								<lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets/character-sets.xhtml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+							</dps:characterSet>
+						</dps:DeliveryFormat>
+					</dps:deliveryFormat>
+					<dps:deliveryScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:Delivery>
+			</dps:delivery>
+			<dps:delivery>
+				<dps:Delivery>
+					<dps:deliveryMedium>
+						<dps:DeliveryMedium>
+							<dps:unitsOfDelivery>
+								<gco:CharacterString>Not applicable</gco:CharacterString>
+							</dps:unitsOfDelivery>
+							<dps:transferSize>
+								<gco:Real>0.1</gco:Real>
+							</dps:transferSize>
+							<dps:deliveryService>
+								<dps:DeliveryService>
+									<dps:serviceEndpoint>http://organisationA.tld/lamps/wfs</dps:serviceEndpoint>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>SERVICE</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>WFS</gco:CharacterString>
+											</dps:value>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>VERSION</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>2.0.0</gco:CharacterString>
+											</dps:value>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>REQUEST</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>GetCapabilities|GetFeature</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>The operations GetCapabilities and GetFeature are available for this WFS service.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>TYPENAMES</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>LampPost</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>Only valid for operation GetFeature.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>BBOX</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>minx,miny,maxx,maxy</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>Comma-separated list of four numbers that indicate the minimum and maximum bounding coordinates.
+													The spatial reference system is specified by SRSNAME. 
+													Only valid for operation GetFeature.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>SRSNAME</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>urn:ogc:def:crs:EPSG::3006</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>SWEREF 99 TM is the only reference system supported. 
+													Only valid for operation GetFeature.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>OUTPUTFORMAT</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>GML3</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>GML</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+								</dps:DeliveryService>
+							</dps:deliveryService>
+						</dps:DeliveryMedium>
+					</dps:deliveryMedium>
+					<dps:deliveryFormat>
+						<dps:DeliveryFormat>
+							<dps:formatName>
+								<gco:CharacterString>WFS</gco:CharacterString>
+							</dps:formatName>
+							<dps:version>
+								<gco:CharacterString>2.0.0</gco:CharacterString>
+							</dps:version>
+							<dps:specification>
+								<gco:CharacterString>ISO 19142:2011</gco:CharacterString>
+							</dps:specification>
+							<dps:fileStructure>
+								<gco:CharacterString>http://schemas.opengis.net/wfs/2.0/wfs.xsd</gco:CharacterString>
+							</dps:fileStructure>
+							<dps:language>
+								<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="swe">swe</lan:LanguageCode>
+							</dps:language>
+							<dps:characterSet>
+								<lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets/character-sets.xhtml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+							</dps:characterSet>
+						</dps:DeliveryFormat>
+					</dps:deliveryFormat>
+					<dps:deliveryScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:Delivery>
+			</dps:delivery>
+			<dps:delivery>
+				<dps:Delivery>
+					<dps:deliveryMedium>
+						<dps:DeliveryMedium>
+							<dps:unitsOfDelivery>
+								<gco:CharacterString>Feature</gco:CharacterString>
+							</dps:unitsOfDelivery>
+							<dps:transferSize>
+								<gco:Real>0.1</gco:Real>
+							</dps:transferSize>
+							<dps:otherDeliveryInformation>
+								<gco:CharacterString>REST service, see technical specification in annex D.</gco:CharacterString>
+							</dps:otherDeliveryInformation>
+						</dps:DeliveryMedium>
+					</dps:deliveryMedium>
+					<dps:deliveryFormat>
+						<dps:DeliveryFormat>
+							<dps:formatName>
+								<gco:CharacterString>GML</gco:CharacterString>
+							</dps:formatName>
+							<dps:version>
+								<gco:CharacterString>3.1.2</gco:CharacterString>
+							</dps:version>
+							<dps:specification>
+								<gco:CharacterString>Geographic information – Geography Markup Language, (GML) (ISO 19136:2007)</gco:CharacterString>
+							</dps:specification>
+							<dps:fileStructure>
+								<gco:CharacterString>https://namespace.organisationA.tld/schemas/lamp-postservice.xsd</gco:CharacterString>
+							</dps:fileStructure>
+							<dps:language>
+								<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="swe">swe</lan:LanguageCode>
+							</dps:language>
+							<dps:characterSet>
+								<lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets/character-sets.xhtml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+							</dps:characterSet>
+						</dps:DeliveryFormat>
+					</dps:deliveryFormat>
+					<dps:deliveryScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:Delivery>
+			</dps:delivery>
+			<dps:delivery>
+				<dps:Delivery>
+					<dps:deliveryMedium>
+						<dps:DeliveryMedium>
+							<dps:unitsOfDelivery>
+								<gco:CharacterString>Feature</gco:CharacterString>
+							</dps:unitsOfDelivery>
+							<dps:transferSize>
+								<gco:Real>0.1</gco:Real>
+							</dps:transferSize>
+							<dps:otherDeliveryInformation>
+								<gco:CharacterString>REST service, see technical specification in annex D.</gco:CharacterString>
+							</dps:otherDeliveryInformation>
+						</dps:DeliveryMedium>
+					</dps:deliveryMedium>
+					<dps:deliveryFormat>
+						<dps:DeliveryFormat>
+							<dps:formatName>
+								<gco:CharacterString>GeoJSON</gco:CharacterString>
+							</dps:formatName>
+							<dps:version>
+								<gco:CharacterString>1.0</gco:CharacterString>
+							</dps:version>
+							<dps:specification>
+								<gco:CharacterString>The GeoJSON Format, RFC 7946</gco:CharacterString>
+							</dps:specification>
+							<dps:fileStructure>
+								<gco:CharacterString>https://namespace.organisationA.tld/schemas/lamp-postservice. json</gco:CharacterString>
+							</dps:fileStructure>
+							<dps:language>
+								<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="swe">swe</lan:LanguageCode>
+							</dps:language>
+							<dps:characterSet>
+								<lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets/character-sets.xhtml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+							</dps:characterSet>
+						</dps:DeliveryFormat>
+					</dps:deliveryFormat>
+					<dps:deliveryScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:Delivery>
+			</dps:delivery>
+			<dps:delivery>
+				<dps:Delivery>
+					<dps:deliveryMedium>
+						<dps:DeliveryMedium>
+							<dps:unitsOfDelivery>
+								<gco:CharacterString>Not applicable</gco:CharacterString>
+							</dps:unitsOfDelivery>
+							<dps:transferSize>
+								<gco:Real>0.1</gco:Real>
+							</dps:transferSize>
+							<dps:deliveryService>
+								<dps:DeliveryService>
+									<dps:serviceEndpoint>http://organisationA.tld/lamps/wfs</dps:serviceEndpoint>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>SERVICE</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>WFS</gco:CharacterString>
+											</dps:value>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>VERSION</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>2.0.0</gco:CharacterString>
+											</dps:value>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>REQUEST</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>GetCapabilities|GetFeature</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>The operations GetCapabilities and GetFeature are available for this WFS service.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>TYPENAMES</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>LampPost</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>Only valid for operation GetFeature.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>BBOX</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>minx,miny,maxx,maxy</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>Comma-separated list of four numbers that indicate the minimum and maximum bounding coordinates.
+													The spatial reference system is specified by SRSNAME. 
+													Only valid for operation GetFeature.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>SRSNAME</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>urn:ogc:def:crs:EPSG::3006</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>SWEREF 99 TM is the only reference system supported. 
+													Only valid for operation GetFeature.</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+									<dps:serviceProperty>
+										<dps:ServiceProperty>
+											<dps:type>
+												<gco:CharacterString>OUTPUTFORMAT</gco:CharacterString>
+											</dps:type>
+											<dps:value>
+												<gco:CharacterString>GML3</gco:CharacterString>
+											</dps:value>
+											<dps:note>
+												<gco:CharacterString>GML</gco:CharacterString>
+											</dps:note>
+										</dps:ServiceProperty>
+									</dps:serviceProperty>
+								</dps:DeliveryService>
+							</dps:deliveryService>
+						</dps:DeliveryMedium>
+					</dps:deliveryMedium>
+					<dps:deliveryFormat>
+						<dps:DeliveryFormat>
+							<dps:formatName>
+								<gco:CharacterString>WFS</gco:CharacterString>
+							</dps:formatName>
+							<dps:version>
+								<gco:CharacterString>2.0.0</gco:CharacterString>
+							</dps:version>
+							<dps:specification>
+								<gco:CharacterString>ISO 19142:2011</gco:CharacterString>
+							</dps:specification>
+							<dps:fileStructure>
+								<gco:CharacterString>http://schemas.opengis.net/wfs/2.0/wfs.xsd</gco:CharacterString>
+							</dps:fileStructure>
+							<dps:language>
+								<lan:LanguageCode codeList="https://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="swe">swe</lan:LanguageCode>
+							</dps:language>
+							<dps:characterSet>
+								<lan:MD_CharacterSetCode codeList="https://www.iana.org/assignments/character-sets/character-sets.xhtml" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+							</dps:characterSet>
+						</dps:DeliveryFormat>
+					</dps:deliveryFormat>
+					<dps:deliveryScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:Delivery>
+			</dps:delivery>
+		</dps:DeliverySection>
+	</dps:deliverySection>
+	<dps:metadataSection>
+		<dps:MetadataSection>
+			<dps:metadata>
+				<dps:Metadata>
+					<dps:specification>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>ISO 19115:2003, Geographic information – Metadata</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:Date>2003</gco:Date>
+									</cit:date>
+									<cit:dateType/>
+								</cit:CI_Date>
+							</cit:date>
+						</cit:CI_Citation>
+					</dps:specification>
+					<dps:element>
+						<dps:MetadataElement>
+							<dps:name>
+								<gco:CharacterString>MD_DataIdentification</gco:CharacterString>
+							</dps:name>
+							<dps:application>
+								<gco:CharacterString>It is mandatory to specify the owner of the data product. That is, the attribute pointOfContact of MD_DataIdentification is mandatory and shall at least include role = “owner”.</gco:CharacterString>
+							</dps:application>
+						</dps:MetadataElement>
+					</dps:element>
+					<dps:element>
+						<dps:MetadataElement>
+							<dps:name>
+								<gco:CharacterString>MD_MaintenanceInformation</gco:CharacterString>
+							</dps:name>
+							<dps:application>
+								<gco:CharacterString>It is mandatory to specify when the data product was last updated. That is, the attribute maintenanceDate in MD_MaintenanceInformation is mandatory.</gco:CharacterString>
+							</dps:application>
+						</dps:MetadataElement>
+					</dps:element>
+					<dps:encoding>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>ISO 19139-1:2019, Geographic information - XML schema implementation – Part 1: Encoding Rules</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:Date>2019</gco:Date>
+									</cit:date>
+									<cit:dateType/>
+								</cit:CI_Date>
+							</cit:date>
+						</cit:CI_Citation>
+					</dps:encoding>
+					<dps:metadataScope xlink:href="#SpecificationScope.NybroMunicipality"/>
+				</dps:Metadata>
+			</dps:metadata>
+			<dps:metadata>
+				<dps:Metadata>
+					<dps:specification>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>ISO 19115:2003, Geographic information – Metadata</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:Date>2003</gco:Date>
+									</cit:date>
+									<cit:dateType/>
+								</cit:CI_Date>
+							</cit:date>
+						</cit:CI_Citation>
+					</dps:specification>
+					<dps:element>
+						<dps:MetadataElement>
+							<dps:name>
+								<gco:CharacterString>MD_DataIdentification</gco:CharacterString>
+							</dps:name>
+							<dps:application>
+								<gco:CharacterString>It is mandatory to specify the owner of the data product. That is, the attribute pointOfContact of MD_DataIdentification is mandatory and shall at least include role = “owner”.</gco:CharacterString>
+							</dps:application>
+						</dps:MetadataElement>
+					</dps:element>
+					<dps:element>
+						<dps:MetadataElement>
+							<dps:name>
+								<gco:CharacterString>MD_MaintenanceInformation</gco:CharacterString>
+							</dps:name>
+							<dps:application>
+								<gco:CharacterString>It is mandatory to specify when the data product was last updated. That is, the attribute maintenanceDate in MD_MaintenanceInformation is mandatory.</gco:CharacterString>
+							</dps:application>
+						</dps:MetadataElement>
+					</dps:element>
+					<dps:encoding>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>ISO 19139-1:2019, Geographic information - XML schema implementation – Part 1: Encoding Rules</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:Date>2019</gco:Date>
+									</cit:date>
+									<cit:dateType/>
+								</cit:CI_Date>
+							</cit:date>
+						</cit:CI_Citation>
+					</dps:encoding>
+					<dps:metadataScope xlink:href="#SpecificationScope.KalmarMunicipality"/>
+				</dps:Metadata>
+			</dps:metadata>
+		</dps:MetadataSection>
+	</dps:metadataSection>
+	<dps:additionalInformationSection/>
+</dps:DataProductSpecification>
