@@ -56,7 +56,7 @@
 							<xs:documentation>definition of the fundamental concept for the data quality measure</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="description" type="dqm:MeasureDescription_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.084_ISO19157-1.1.102">
+					<xs:element name="description" type="dqm:MeasureDescription_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.084_ISO19157-1.1.102">
 						<xs:annotation>
 							<xs:documentation>description of the data quality measure, including all formulae and/or illustrations needed to establish the result of applying the measure</xs:documentation>
 						</xs:annotation>
@@ -81,12 +81,12 @@
 							<xs:documentation>Name of the data quality basic measure from which the data quality measure is derived.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sourceReference" type="dqm:SourceReference_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.089">
+					<xs:element name="sourceReference" type="dqm:SourceReference_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.089_ISO19157-1.1.106">
 						<xs:annotation>
 							<xs:documentation>Reference to the source of the data quality measure</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="parameter" type="dqm:BasicMeasure_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.090_ISO19157-1.1.091">
+					<xs:element name="parameter" type="dqm:MeasureParameter_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.090_ISO19157-1.1.096">
 						<xs:annotation>
 							<xs:documentation>Auxiliary variable used by the data quality measure, including its name, definition and optionally its description.</xs:documentation>
 						</xs:annotation>
@@ -175,7 +175,7 @@
 							<xs:documentation>value type of the data quality parameter (shall be one of the data types defined in ISO/TS 19103:2005)</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="valueStructure" type="dqm:ValueStructure_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.101_ISO19157-1.1.Table.C.13">
+					<xs:element name="valueStructure" type="dqm:ValueStructure_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.101_ISO19157-1.1.Table.C.14">
 						<xs:annotation>
 							<xs:documentation>structure of the data quality parameter</xs:documentation>
 						</xs:annotation>
@@ -210,6 +210,11 @@
 					<xs:documentation>illustration</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="formula" type="dqm:FormulaType_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.105_ISO19157-1.1.108">
+				<xs:annotation>
+					<xs:documentation>description of formulas for the quality measure</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =========================================================================== -->
@@ -221,20 +226,59 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="SourceReference" type="dqm:SourceReference_Type" id="ISO19157-1.1.105"/>
+	<xs:element name="SourceReference" type="dqm:SourceReference_Type" id="ISO19157-1.1.106"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="SourceReference_Type">
 		<xs:annotation>
 			<xs:documentation>reference to the source of the data quality measure</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="citation" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1">
+			<xs:element name="citation" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1"  id="ISO19157-1.1.107_ISO19115-1.1.361">
 				<xs:annotation>
 					<xs:documentation>reference to the source</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="FormulaType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="dqm:FormulaType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="FormulaType" type="dqm:FormulaType_Type" id="ISO19157-1.1.108"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="FormulaType_Type">
+		<xs:annotation>
+			<xs:documentation>description of the formula</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="key" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.109_ISO19103.1.CharacterString">
+				<xs:annotation>
+					<xs:documentation>explanation of the formula</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="language" type="dqm:FormulaLanguage_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.110_ISO19157-1.1.Table.C.15">
+				<xs:annotation>
+					<xs:documentation>explanation of the formula</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageVersion" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.111_ISO19103.1.CharacterString">
+				<xs:annotation>
+					<xs:documentation>version of the language</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mathematicalFormula" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.112_ISO19103.1.CharacterString">
+				<xs:annotation>
+					<xs:documentation>the formula in chosen language</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
 	<!-- =========================================================================== -->
 	<xs:complexType name="ValueStructure_PropertyType">
 		<xs:sequence minOccurs="0">
@@ -244,7 +288,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="ValueStructure" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19157-1.1.Table.C.13"/>
+	<xs:element name="ValueStructure" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19157-1.1.Table.C.14"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="ValueStructure">
 		<xs:annotation>
@@ -253,32 +297,65 @@
 		<xs:sequence>
 			<xs:element name="bag" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>finite, unordered collection of related items (objects or values) that may be repeated (ISO 19107:2003)</xs:documentation>
+					<xs:documentation>finite, unordered collection of related items (objects or values) that may be repeated (ISO 19103)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="coverage" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO 19123:2005)</xs:documentation>
+					<xs:documentation>feature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO 19123-1)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="matrix" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>rectangular array of numbers (ISO/TS 19129:2009)</xs:documentation>
+					<xs:documentation>rectangular array of numbers (ISO/TS 19129)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="sequence" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>finite, ordered collection of related items (objects or values) that may be repeated (ISO 19107:2003)</xs:documentation>
+					<xs:documentation>finite, ordered collection of related items (objects or values) that may be repeated (ISO 19103)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="set" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>unordered collection of related items (objects or values) with no repetition (ISO 19107:2003)</xs:documentation>
+					<xs:documentation>unordered collection of related items (objects or values) with no repetition (ISO 19103)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="table" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>an arrangement of data in which each item may be identified by means of arguments or keys (ISO/IEC 2382-4:1999)</xs:documentation>
+					<xs:documentation>an arrangement of data in which each item may be identified by means of arguments or keys (ISO/IEC 2382)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="FormulaLanguage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="dqm:FormulaLanguage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="FormulaLanguage" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" id="ISO19157-1.1.Table.C.15"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="FormulaLanguage">
+		<xs:annotation>
+			<xs:documentation>the coding language of the formula</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MathJSON" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>JSON-based format to represent math formulas (w3c.gituhub)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MathML" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>XML-based language for describing mathematical notation (mozilla.org)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OpenMath" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>extensible standard for representing the semantics of mathematical objects (openmath.org)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

@@ -93,7 +93,7 @@
 	<!-- ........................................................................ -->	
 	<xs:complexType name="ConformanceResult_Type">
 		<xs:annotation>
-			<xs:documentation>information about the outcome of evaluating the obtained value (or set of values) against a specified acceptable conformance quality level</xs:documentation>
+			<xs:documentation>information about the outcome of evaluating the obtained value (or set of values) against a specified acceptable conformance quality level </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_QualityResult_Type">
@@ -164,25 +164,13 @@
 				<xs:sequence>
 					<xs:element name="spatialRepresentationType" type="mcc:MD_SpatialRepresentationTypeCode_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.068_ISO19115-1.1.MD_SpatialRepresentationTypeCode">
 						<xs:annotation>
-							<xs:documentation>Description: method used to spatially represent the coverage result shortName: spaRepType</xs:documentation>
+							<xs:documentation>Description: method used to spatially represent the coverage result
+shortName: spaRepType</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="resultSpatialRepresentation" type="mcc:Abstract_SpatialRepresentation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.069_ISO19115-1.1.147">
-						<xs:annotation>
-							<xs:documentation>Provides the digital representation of data quality measures composing the coverage result</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="resultContent" type="mrc:MD_RangeDimension_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.070_ISO19115-1.1.210">
-						<xs:annotation>
-							<xs:documentation>provides the description of the content of the result coverage when the quality coverage is included with the resource being described. 
-								i.e. semantic definition of the data quality measures</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="resultFormat" type="mrd:MD_Format_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.071_ISO19115-1.1.254">
-						<xs:annotation>
-							<xs:documentation>provides information about the format of the result coverage data</xs:documentation>
-						</xs:annotation>
-					</xs:element>
+					<xs:element name="resultSpatialRepresentation" type="mcc:Abstract_SpatialRepresentation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.069_ISO19115-1.1.147"/>
+					<xs:element name="resultContent" type="mrc:MD_RangeDimension_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.070_ISO19115-1.1.210"/>
+					<xs:element name="resultFormat" type="mrd:MD_Format_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.071_ISO19115-1.1.254"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

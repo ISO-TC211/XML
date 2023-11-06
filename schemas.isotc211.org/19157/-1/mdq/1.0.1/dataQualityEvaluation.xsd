@@ -70,6 +70,27 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+	<xs:complexType name="FullInspection_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="mdq:FullInspection"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="FullInspection" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:FullInspection_Type" id="ISO19157-1.1.048"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="FullInspection_Type">
+		<xs:annotation>
+			<xs:documentation>full inspection</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
 	<xs:complexType name="Abstract_DataEvaluation_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="mdq:Abstract_DataEvaluation"/>
@@ -91,27 +112,6 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	<xs:complexType name="FullInspection_PropertyType">
-		<xs:sequence minOccurs="0">
-			<xs:element ref="mdq:FullInspection"/>
-		</xs:sequence>
-		<xs:attributeGroup ref="gco:ObjectReference"/>
-		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType>
-	<!-- ........................................................................ -->	
-	<xs:element name="FullInspection" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:FullInspection_Type" id="ISO19157-1.1.048"/>
-	<!-- ........................................................................ -->	
-	<xs:complexType name="FullInspection_Type">
-		<xs:annotation>
-			<xs:documentation>data quality evaluation tests every item specified by the data quality scope</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
-				<xs:sequence/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<!-- =========================================================================== -->
 	<xs:complexType name="SampleBasedInspection_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="mdq:SampleBasedInspection"/>
@@ -124,7 +124,7 @@
 	<!-- ........................................................................ -->	
 	<xs:complexType name="SampleBasedInspection_Type">
 		<xs:annotation>
-			<xs:documentation>data quality evaluation performed on a subsets of the geographic data defined by the data quality scope</xs:documentation>
+			<xs:documentation>sample based inspection</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
@@ -185,14 +185,14 @@
 			<xs:documentation>type of method for evaluating an identified data quality measure</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="directInternal" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>method of evaluating the quality of a dataset based on inspection of items within the dataset, where all data required is internal to the dataset being evaluated</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="directExternal" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>method of evaluating the quality of a dataset based on inspection of items within the dataset, where reference data external to the dataset being evaluated is required</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="directInternal" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>method of evaluating the quality of a dataset based on inspection of items within the dataset, where all data required is internal to the dataset being evaluated</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="indirect" type="xs:string" minOccurs="1" maxOccurs="1">
@@ -203,6 +203,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+	<!--
 	<xs:complexType name="IndirectEvaluation_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="mdq:IndirectEvaluation"/>
@@ -210,18 +211,27 @@
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
+	-->
 	<!-- ........................................................................ -->
-	<xs:element name="IndirectEvaluation" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:IndirectEvaluation_Type" id="ISO19157-1.1.Table.D.15"/>
+	<!-- <xs:element name="IndirectEvaluation" substitutionGroup="mdq:DataEvaluation" type="mdq:IndirectEvaluation_Type"/> -->
 	<!-- ........................................................................ -->
+	<!--
 	<xs:complexType name="IndirectEvaluation_Type">
 		<xs:annotation>
-			<xs:documentation>Data quality evaluation based on external knowledge or experience of the data product</xs:documentation>
+			<xs:documentation>indirect evaluation</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
-				<xs:sequence/>
+			<xs:extension base="mdq:DataEvaluation_Type">
+				<xs:sequence>
+					<xs:element name="deductiveSource" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>information on which data are used as sources in deductive evaluation method</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	-->
 	<!-- =========================================================================== -->
 </xs:schema>

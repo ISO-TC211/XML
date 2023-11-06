@@ -5,6 +5,7 @@
 	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
 	xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/1.3" 
 	xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0" 
+	xmlns:dqc="https://schemas.isotc211.org/19157/-1/dqc/1.0" 
 	targetNamespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" 
 	elementFormDefault="qualified" 
 	version="1.0.0"
@@ -13,6 +14,7 @@
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mda/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mda/1.3.0/mda.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-1/dqc/1.0" schemaLocation="../../dqc/1.0.0/dqc.xsd"/>
 	<xs:include schemaLocation="../../mdq/1.0.0/dataQualityResult.xsd"/>
 	<xs:include schemaLocation="../../mdq/1.0.0/dataQualityEvaluation.xsd"/>
 	<!-- =========================================================================== -->
@@ -24,22 +26,26 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="DataQuality" type="mdq:DataQuality_Type" id="ISO19157-1.1.001"/>
+	<xs:element name="DataQuality" type="mdq:DataQuality_Type"  substitutionGroup="dqc:AbstractDataQuality" id="ISO19157-1.1.001"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="DataQuality_Type">
 		<xs:annotation>
 			<xs:documentation>quality information for the data specified by a data quality scope </xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="scope" type="mcc:MD_Scope_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.002_ISO19115-1.1.420">
-				<xs:annotation>
-					<xs:documentation>the specific data to which the data quality information applies</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="report" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.003_ISO19157-1.1.005"/>
-			<!-- <xs:element name="QualityEvaluationReport" type="mdq:QualityEvaluationReportInformation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.004_ISO19157-1.1.072"/> -->
-			<xs:element name="qualityEvaluationReport" type="mdq:QualityEvaluationReportInformation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.004_ISO19157-1.1.072"/>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="dqc:AbstractDataQuality_Type">
+				<xs:sequence>
+					<xs:element name="scope" type="mcc:MD_Scope_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.002_ISO19115-1.1.420">
+						<xs:annotation>
+							<xs:documentation>the specific data to which the data quality information applies</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="report" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.003_ISO19157-1.1.005"/>
+					<!-- <xs:element name="QualityEvaluationReport" type="mdq:QualityEvaluationReportInformation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.004_ISO19157-1.1.072"/> -->
+					<xs:element name="qualityEvaluationReport" type="mdq:QualityEvaluationReportInformation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.004_ISO19157-1.1.072"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="Abstract_QualityElement_PropertyType">
@@ -50,35 +56,28 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_QualityElement" type="mdq:Abstract_QualityElement_Type" abstract="true" id="ISO19157-1.1.005"/>
+	<!-- <xs:element name="Abstract_QualityElement" type="mdq:Abstract_QualityElement_Type" substitutionGroup="dqc:AbstractQualityElement" abstract="true" id="ISO19157-1.1.005"/> -->
+	<xs:element name="Abstract_QualityElement" type="mdq:Abstract_QualityElement_Type" substitutionGroup="dqc:AbstractQualityElement" abstract="true" id="ISO19157-1.1.005"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Abstract_QualityElement_Type">
 		<xs:annotation>
 			<xs:documentation>aspect of quantitative quality information</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<!-- 
-			<xs:element name="standaloneQualityReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Clause in the standaloneQualityReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="QualityEvaluationReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.006_ISO19103.1.CharacterString">
-				<xs:annotation>
-					<xs:documentation>Clause in the QualityEvaluationReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			-->
-			<xs:element name="qualityEvaluationReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.006_ISO19103.1.CharacterString">
-				<xs:annotation>
-					<xs:documentation>Clause in the QualityEvaluationReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="measure" type="mdq:MeasureReference_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.007_ISO19157-1.1.035"/>
-			<xs:element name="evaluationMethod" type="mdq:Abstract_EvaluationMethod_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.008_ISO19157-1.1.039"/>
-			<xs:element name="result" type="mdq:Abstract_QualityResult_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.009_ISO19157-1.1.054"/>
-			<xs:element name="derivedElement" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.010_ISO19157-1.1.005"/>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="dqc:AbstractQualityElement_Type">
+				<xs:sequence>
+					<xs:element name="qualityEvaluationReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.006_ISO19103.1.CharacterString">
+						<xs:annotation>
+							<xs:documentation>Clause in the QualityEvaluationReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="measure" type="mdq:MeasureReference_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.007_ISO19157-1.1.035"/>
+					<xs:element name="evaluationMethod" type="mdq:Abstract_EvaluationMethod_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.008_ISO19157-1.1.039"/>
+					<xs:element name="result" type="mdq:Abstract_QualityResult_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.009_ISO19157-1.1.054"/>
+					<xs:element name="derivedElement" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.010_ISO19157-1.1.005"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="Abstract_Completeness_PropertyType">
@@ -270,6 +269,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
 	<xs:complexType name="AbsolutePositionalAccuracy_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="mdq:AbsolutePositionalAccuracy"/>
@@ -303,7 +303,7 @@
 	<!-- ........................................................................ -->
 	<xs:complexType name="RelativePositionalAccuracy_Type">
 		<xs:annotation>
-			<xs:documentation>closeness of the relative positions of features in the scope to their respective relative positions accepted as or being true</xs:documentation>
+			<xs:documentation>closeness of the relative positions of features in a related dataset to their respective relative positions accepted as true in a local coordinate reference system</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_PositionalAccuracy_Type">
@@ -333,6 +333,27 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+	<xs:complexType name="Abstract_ThematicAccuracy_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="mdq:Abstract_ThematicAccuracy"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Abstract_ThematicAccuracy" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_ThematicAccuracy_Type" abstract="true" id="ISO19157-1.1.023"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Abstract_ThematicAccuracy_Type">
+		<xs:annotation>
+			<xs:documentation>Accuracy of quantitative attributes and the correctness of non-quantitative attributes and of the classifications of features and their relationships</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="mdq:Abstract_QualityElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
 	<xs:complexType name="ThematicClassificationCorrectness_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="mdq:ThematicClassificationCorrectness"/>
@@ -341,14 +362,14 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="ThematicClassificationCorrectness" substitutionGroup="mdq:Abstract_ThematicQuality" type="mdq:ThematicClassificationCorrectness_Type" id="ISO19157-1.1.024"/>
+	<xs:element name="ThematicClassificationCorrectness" substitutionGroup="mdq:Abstract_ThematicAccuracy" type="mdq:ThematicClassificationCorrectness_Type" id="ISO19157-1.1.024"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="ThematicClassificationCorrectness_Type">
 		<xs:annotation>
 			<xs:documentation>comparison of the classes assigned to features or their attributes to a universe of discourse</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_ThematicQuality_Type">
+			<xs:extension base="mdq:Abstract_ThematicAccuracy_Type">
 				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
@@ -366,7 +387,7 @@
 	<!-- ........................................................................ -->
 	<xs:complexType name="NonQuantitativeAttributeCorrectness_Type">
 		<xs:annotation>
-			<xs:documentation>correctness of non-quantitative attributes</xs:documentation>
+			<xs:documentation>Measure of whether a non-quantitative attribute is correct or incorrect.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_ThematicQuality_Type">
@@ -387,31 +408,10 @@
 	<!-- ........................................................................ -->
 	<xs:complexType name="QuantitativeAttributeAccuracy_Type">
 		<xs:annotation>
-			<xs:documentation>accuracy of quantitative attributes </xs:documentation>
+			<xs:documentation>accuracy of the value of a quantitative attribute to a value accepted as or known to be true</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_ThematicQuality_Type">
-				<xs:sequence/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<!-- =========================================================================== -->
-	<xs:complexType name="TemporalConsistency_PropertyType">
-		<xs:sequence minOccurs="0">
-			<xs:element ref="mdq:TemporalConsistency"/>
-		</xs:sequence>
-		<xs:attributeGroup ref="gco:ObjectReference"/>
-		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType>
-	<!-- ........................................................................ -->
-	<xs:element name="TemporalConsistency" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:TemporalConsistency_Type"/>
-	<!-- ........................................................................ -->
-	<xs:complexType name="TemporalConsistency_Type">
-		<xs:annotation>
-			<xs:documentation>correctness of ordered events or sequences, if reported</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_TemporalQuality_Type">
 				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
@@ -450,7 +450,7 @@
 	<!-- ........................................................................ -->
 	<xs:complexType name="AccuracyOfATimeMeasurement_Type">
 		<xs:annotation>
-			<xs:documentation>correctness of the temporal references of an item (reporting of error in time measurement)</xs:documentation>
+			<xs:documentation>closeness of reported time measurements to values accepted as true</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_TemporalQuality_Type">
@@ -480,6 +480,27 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
+	<xs:complexType name="TemporalConsistency_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="mdq:TemporalConsistency"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="TemporalConsistency" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:TemporalConsistency_Type" id="ISO19157-1.1.029.5"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="TemporalConsistency_Type">
+		<xs:annotation>
+			<xs:documentation>correctness of ordered events or sequences, if reported</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="mdq:Abstract_TemporalQuality_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
 	<xs:complexType name="MeasureReference_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="mdq:MeasureReference"/>
@@ -495,9 +516,9 @@
 			<xs:documentation>reference to the measure used</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="measureDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.036_ISO19103.1.CharacterString">
+			<xs:element name="measureIdentification" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.036_ISO19115-1.1.431">
 				<xs:annotation>
-					<xs:documentation>description of the measure</xs:documentation>
+					<xs:documentation>Identifier of the measure, value uniquely identifying the measure within a namespace</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="nameOfMeasure" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.037_ISO19103.1.CharacterString">
@@ -505,9 +526,9 @@
 					<xs:documentation>name of the test applied to the data</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="measureIdentification" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.038_ISO19115-1.1.431">
+			<xs:element name="measureDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.038_ISO19103.1.CharacterString">
 				<xs:annotation>
-					<xs:documentation>Identifier of the measure, value uniquely identifying the measure within a namespace</xs:documentation>
+					<xs:documentation>description of the measure</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -528,7 +549,9 @@
 			<xs:documentation>reference to an external quality evaluation report</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361">
+			<!-- Inconsistent with there being a constraint on this attribute 
+				<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361"> -->
+			<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361">
 				<xs:annotation>
 					<xs:documentation>reference to the associated standalone quality report</xs:documentation>
 				</xs:annotation>
@@ -540,7 +563,7 @@
 			</xs:element>
 			<xs:element name="qualityEvaluationReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.075_ISO19103.1.CharacterString">
 				<xs:annotation>
-					<xs:documentation>clause in the QualityEvaluationReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described.</xs:documentation>
+					<xs:documentation>Reference to the original results in the quality evaluation report</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="elementReport" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.076_ISO19157-1.1.005"/>
