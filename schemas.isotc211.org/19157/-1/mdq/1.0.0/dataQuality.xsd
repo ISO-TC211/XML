@@ -66,15 +66,10 @@
 		<xs:complexContent>
 			<xs:extension base="dqc:AbstractQualityElement_Type">
 				<xs:sequence>
-					<xs:element name="qualityEvaluationReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.006_ISO19103.1.CharacterString">
-						<xs:annotation>
-							<xs:documentation>Clause in the QualityEvaluationReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="measure" type="mdq:MeasureReference_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.007_ISO19157-1.1.035"/>
-					<xs:element name="evaluationMethod" type="mdq:Abstract_EvaluationMethod_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.008_ISO19157-1.1.039"/>
-					<xs:element name="result" type="mdq:Abstract_QualityResult_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.009_ISO19157-1.1.054"/>
-					<xs:element name="derivedElement" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.010_ISO19157-1.1.005"/>
+					<xs:element name="measure" type="mdq:MeasureReference_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.006_ISO19157-1.1.034"/>
+					<xs:element name="evaluationMethod" type="mdq:Abstract_EvaluationMethod_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.007_ISO19157-1.1.038"/>
+					<xs:element name="result" type="mdq:Abstract_QualityResult_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.008_ISO19157-1.1.056"/>
+					<xs:element name="derivedElement" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.009_ISO19157-1.1.005"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -88,7 +83,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_Completeness" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_Completeness_Type" abstract="true" id="ISO19157-1.1.011"/>
+	<xs:element name="Abstract_Completeness" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_Completeness_Type" abstract="true" id="ISO19157-1.1.010"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Abstract_Completeness_Type">
 		<xs:annotation>
@@ -109,7 +104,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Commission" substitutionGroup="mdq:Abstract_Completeness" type="mdq:Commission_Type" id="ISO19157-1.1.012"/>
+	<xs:element name="Commission" substitutionGroup="mdq:Abstract_Completeness" type="mdq:Commission_Type" id="ISO19157-1.1.011"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Commission_Type">
 		<xs:annotation>
@@ -130,7 +125,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Omission" substitutionGroup="mdq:Abstract_Completeness" type="mdq:Omission_Type" id="ISO19157-1.1.013"/>
+	<xs:element name="Omission" substitutionGroup="mdq:Abstract_Completeness" type="mdq:Omission_Type" id="ISO19157-1.1.012"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Omission_Type">
 		<xs:annotation>
@@ -151,7 +146,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_LogicalConsistency" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_LogicalConsistency_Type" abstract="true" id="ISO19157-1.1.014"/>
+	<xs:element name="Abstract_LogicalConsistency" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_LogicalConsistency_Type" abstract="true" id="ISO19157-1.1.013"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Abstract_LogicalConsistency_Type">
 		<xs:annotation>
@@ -172,7 +167,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="ConceptualConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:ConceptualConsistency_Type" id="ISO19157-1.1.015"/>
+	<xs:element name="ConceptualConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:ConceptualConsistency_Type" id="ISO19157-1.1.014"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="ConceptualConsistency_Type">
 		<xs:annotation>
@@ -193,7 +188,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="DomainConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:DomainConsistency_Type" id="ISO19157-1.1.016"/>
+	<xs:element name="DomainConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:DomainConsistency_Type" id="ISO19157-1.1.015"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="DomainConsistency_Type">
 		<xs:annotation>
@@ -214,7 +209,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="FormatConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:FormatConsistency_Type" id="ISO19157-1.1.017"/>
+	<xs:element name="FormatConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:FormatConsistency_Type" id="ISO19157-1.1.016"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="FormatConsistency_Type">
 		<xs:annotation>
@@ -235,7 +230,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="TopologicalConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:TopologicalConsistency_Type" id="ISO19157-1.1.018"/>
+	<xs:element name="TopologicalConsistency" substitutionGroup="mdq:Abstract_LogicalConsistency" type="mdq:TopologicalConsistency_Type" id="ISO19157-1.1.017"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="TopologicalConsistency_Type">
 		<xs:annotation>
@@ -256,7 +251,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_PositionalAccuracy" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_PositionalAccuracy_Type" abstract="true" id="ISO19157-1.1.019"/>
+	<xs:element name="Abstract_PositionalAccuracy" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_PositionalAccuracy_Type" abstract="true" id="ISO19157-1.1.018"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Abstract_PositionalAccuracy_Type">
 		<xs:annotation>
@@ -278,7 +273,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="AbsolutePositionalAccuracy" substitutionGroup="mdq:Abstract_PositionalAccuracy" type="mdq:AbsolutePositionalAccuracy_Type" id="ISO19157-1.1.020"/>
+	<xs:element name="AbsolutePositionalAccuracy" substitutionGroup="mdq:Abstract_PositionalAccuracy" type="mdq:AbsolutePositionalAccuracy_Type" id="ISO19157-1.1.019"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="AbsolutePositionalAccuracy_Type">
 		<xs:annotation>
@@ -299,7 +294,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="RelativePositionalAccuracy" substitutionGroup="mdq:Abstract_PositionalAccuracy" type="mdq:RelativePositionalAccuracy_Type" id="ISO19157-1.1.021"/>
+	<xs:element name="RelativePositionalAccuracy" substitutionGroup="mdq:Abstract_PositionalAccuracy" type="mdq:RelativePositionalAccuracy_Type" id="ISO19157-1.1.020"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="RelativePositionalAccuracy_Type">
 		<xs:annotation>
@@ -320,7 +315,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="GriddedDataPositionalAccuracy" substitutionGroup="mdq:Abstract_PositionalAccuracy" type="mdq:GriddedDataPositionalAccuracy_Type" id="ISO19157-1.1.022"/>
+	<xs:element name="GriddedDataPositionalAccuracy" substitutionGroup="mdq:Abstract_PositionalAccuracy" type="mdq:GriddedDataPositionalAccuracy_Type" id="ISO19157-1.1.021"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="GriddedDataPositionalAccuracy_Type">
 		<xs:annotation>
@@ -341,9 +336,9 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_ThematicAccuracy" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_ThematicAccuracy_Type" abstract="true" id="ISO19157-1.1.023"/>
+	<xs:element name="Abstract_ThematicQuality" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_ThematicQuality_Type" abstract="true" id="ISO19157-1.1.022"/>
 	<!-- ........................................................................ -->
-	<xs:complexType name="Abstract_ThematicAccuracy_Type">
+	<xs:complexType name="Abstract_ThematicQuality_Type">
 		<xs:annotation>
 			<xs:documentation>Accuracy of quantitative attributes and the correctness of non-quantitative attributes and of the classifications of features and their relationships</xs:documentation>
 		</xs:annotation>
@@ -362,7 +357,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="ThematicClassificationCorrectness" substitutionGroup="mdq:Abstract_ThematicAccuracy" type="mdq:ThematicClassificationCorrectness_Type" id="ISO19157-1.1.024"/>
+	<xs:element name="ThematicClassificationCorrectness" substitutionGroup="mdq:Abstract_ThematicAccuracy" type="mdq:ThematicClassificationCorrectness_Type" id="ISO19157-1.1.023"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="ThematicClassificationCorrectness_Type">
 		<xs:annotation>
@@ -383,7 +378,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="NonQuantitativeAttributeCorrectness" substitutionGroup="mdq:Abstract_ThematicQuality" type="mdq:NonQuantitativeAttributeCorrectness_Type" id="ISO19157-1.1.025"/>
+	<xs:element name="NonQuantitativeAttributeCorrectness" substitutionGroup="mdq:Abstract_ThematicQuality" type="mdq:NonQuantitativeAttributeCorrectness_Type" id="ISO19157-1.1.024"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="NonQuantitativeAttributeCorrectness_Type">
 		<xs:annotation>
@@ -404,7 +399,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="QuantitativeAttributeAccuracy" substitutionGroup="mdq:Abstract_ThematicQuality" type="mdq:QuantitativeAttributeAccuracy_Type" id="ISO19157-1.1.026"/>
+	<xs:element name="QuantitativeAttributeAccuracy" substitutionGroup="mdq:Abstract_ThematicQuality" type="mdq:QuantitativeAttributeAccuracy_Type" id="ISO19157-1.1.025"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="QuantitativeAttributeAccuracy_Type">
 		<xs:annotation>
@@ -425,7 +420,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_TemporalQuality" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_TemporalQuality_Type" abstract="true" id="ISO19157-1.1.027"/>
+	<xs:element name="Abstract_TemporalQuality" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_TemporalQuality_Type" abstract="true" id="ISO19157-1.1.026"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Abstract_TemporalQuality_Type">
 		<xs:annotation>
@@ -446,7 +441,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="AccuracyOfATimeMeasurement" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:AccuracyOfATimeMeasurement_Type" id="ISO19157-1.1.028"/>
+	<xs:element name="AccuracyOfATimeMeasurement" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:AccuracyOfATimeMeasurement_Type" id="ISO19157-1.1.027"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="AccuracyOfATimeMeasurement_Type">
 		<xs:annotation>
@@ -467,7 +462,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="TemporalValidity" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:TemporalValidity_Type" id="ISO19157-1.1.029"/>
+	<xs:element name="TemporalValidity" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:TemporalValidity_Type" id="ISO19157-1.1.028"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="TemporalValidity_Type">
 		<xs:annotation>
@@ -488,7 +483,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="TemporalConsistency" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:TemporalConsistency_Type" id="ISO19157-1.1.029.5"/>
+	<xs:element name="TemporalConsistency" substitutionGroup="mdq:Abstract_TemporalQuality" type="mdq:TemporalConsistency_Type" id="ISO19157-1.1.028.5"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="TemporalConsistency_Type">
 		<xs:annotation>
@@ -509,24 +504,24 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="MeasureReference" type="mdq:MeasureReference_Type" id="ISO19157-1.1.035"/>
+	<xs:element name="MeasureReference" type="mdq:MeasureReference_Type" id="ISO19157-1.1.034"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="MeasureReference_Type">
 		<xs:annotation>
 			<xs:documentation>reference to the measure used</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="measureIdentification" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.036_ISO19115-1.1.431">
+			<xs:element name="measureIdentification" type="mcc:MD_Identifier_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.0356_ISO19115-1.1.431">
 				<xs:annotation>
 					<xs:documentation>Identifier of the measure, value uniquely identifying the measure within a namespace</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="nameOfMeasure" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.037_ISO19103.1.CharacterString">
+			<xs:element name="nameOfMeasure" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.036_ISO19103.1.CharacterString">
 				<xs:annotation>
 					<xs:documentation>name of the test applied to the data</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="measureDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.038_ISO19103.1.CharacterString">
+			<xs:element name="measureDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.037_ISO19103.1.CharacterString">
 				<xs:annotation>
 					<xs:documentation>description of the measure</xs:documentation>
 				</xs:annotation>
@@ -549,9 +544,10 @@
 			<xs:documentation>reference to an external quality evaluation report</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<!-- Inconsistent with there being a constraint on this attribute 
-				<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361"> -->
-			<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361">
+			<!-- Inconsistent with there being a constraint on this attribute UML and document have constraints suggesting [0..1] would be appropriate
+				UML has cardinality [1..1] -->
+				<!-- <xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361"> -->
+			<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.073_ISO19115-1.1.361">
 				<xs:annotation>
 					<xs:documentation>reference to the associated standalone quality report</xs:documentation>
 				</xs:annotation>
@@ -569,27 +565,6 @@
 			<xs:element name="elementReport" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.076_ISO19157-1.1.005"/>
 			<xs:element name="onlineResource" type="mda:AbstractDS_Resource_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.077_ISO19115-1.1.001"/>
 		</xs:sequence>
-	</xs:complexType>
-	<!-- =========================================================================== -->
-	<xs:complexType name="Abstract_ThematicQuality_PropertyType">
-		<xs:sequence minOccurs="0">
-			<xs:element ref="mdq:Abstract_ThematicQuality"/>
-		</xs:sequence>
-		<xs:attributeGroup ref="gco:ObjectReference"/>
-		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType>
-	<!-- ........................................................................ -->
-	<xs:element name="Abstract_ThematicQuality" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_ThematicQuality_Type" abstract="true"/>
-	<!-- ........................................................................ -->
-	<xs:complexType name="Abstract_ThematicQuality_Type">
-		<xs:annotation>
-			<xs:documentation>accuracy of quantitative attributes and the correctness of non-quantitative attributes and of the classifications of features and their relationships</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_QualityElement_Type">
-				<xs:sequence/>
-			</xs:extension>
-		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 </xs:schema>

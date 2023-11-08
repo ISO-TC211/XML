@@ -21,7 +21,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Abstract_Metaquality" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_Metaquality_Type"  abstract="true" id="ISO19157-1.1.030"/>
+	<xs:element name="Abstract_Metaquality" substitutionGroup="mdq:Abstract_QualityElement" type="mdq:Abstract_Metaquality_Type"  abstract="true" id="ISO19157-1.1.029"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Abstract_Metaquality_Type">
 		<xs:annotation>
@@ -30,7 +30,7 @@
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_QualityElement_Type">
 				<xs:sequence>
-					<xs:element name="relatedQualityElement" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.031_ISO19157-1.1.005">
+					<xs:element name="relatedQualityElement" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.030_ISO19157-1.1.005">
 						<xs:annotation>
 							<xs:documentation>the quality element where the metaquality information applies </xs:documentation>
 						</xs:annotation>
@@ -48,7 +48,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Confidence" substitutionGroup="mdq:Abstract_Metaquality" type="mdq:Confidence_Type" id="ISO19157-1.1.032"/>
+	<xs:element name="Confidence" substitutionGroup="mdq:Abstract_Metaquality" type="mdq:Confidence_Type" id="ISO19157-1.1.031"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Confidence_Type">
 		<xs:annotation>
@@ -69,7 +69,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Representativity" substitutionGroup="mdq:Abstract_Metaquality" type="mdq:Representativity_Type" id="ISO19157-1.1.033"/>
+	<xs:element name="Representativity" substitutionGroup="mdq:Abstract_Metaquality" type="mdq:Representativity_Type" id="ISO19157-1.1.032"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Representativity_Type">
 		<xs:annotation>
@@ -90,7 +90,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="Homogeneity" substitutionGroup="mdq:Abstract_Metaquality" type="mdq:Homogeneity_Type" id="ISO19157-1.1.034"/>
+	<xs:element name="Homogeneity" substitutionGroup="mdq:Abstract_Metaquality" type="mdq:Homogeneity_Type" id="ISO19157-1.1.033"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="Homogeneity_Type">
 		<xs:annotation>

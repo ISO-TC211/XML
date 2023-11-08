@@ -25,44 +25,44 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="Abstract_EvaluationMethod" type="mdq:Abstract_EvaluationMethod_Type" abstract="true" id="ISO19157-1.1.039"/>
+	<xs:element name="Abstract_EvaluationMethod" type="mdq:Abstract_EvaluationMethod_Type" abstract="true" id="ISO19157-1.1.038"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="Abstract_EvaluationMethod_Type">
 		<xs:annotation>
 			<xs:documentation>Description of the evaluation method and procedure applied</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.040_ISO19103.1.CharacterString">
+			<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.039_ISO19103.1.CharacterString">
 				<xs:annotation>
 					<xs:documentation>Name of the evaluation method</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="evaluationMethodDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.041_ISO19103.1.CharacterString">
+			<xs:element name="evaluationMethodDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.040_ISO19103.1.CharacterString">
 				<xs:annotation>
 					<xs:documentation>description of the evaluation method</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="evaluationMethodType" type="mdq:EvaluationMethodTypeCode_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.042_ISO19157-1.1.Table.C.13">
+			<xs:element name="evaluationMethodType" type="mdq:EvaluationMethodTypeCode_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.041_ISO19157-1.1.Table.C.13">
 				<xs:annotation>
 					<xs:documentation>type of method used to evaluate quality of the data</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="evaluationProcedure" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.043_ISO19115-1.1.361">
+			<xs:element name="evaluationProcedure" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.042_ISO19115-1.1.361">
 				<xs:annotation>
 					<xs:documentation>reference to the procedure information </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dateTime" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.044_ISO19103.1.DateTime">
+			<xs:element name="dateTime" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.043_ISO19103.1.DateTime">
 				<xs:annotation>
 					<xs:documentation>date or range of dates on which a data quality measure was applied</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="referenceDoc" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.045_ISO19115-1.1.361">
+			<xs:element name="referenceDoc" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.044_ISO19115-1.1.361">
 				<xs:annotation>
 					<xs:documentation>Information on documents which are referenced in developing and applying a data quality evaluation method</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="deductiveSource" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.046_ISO19103.1.CharacterString">
+			<xs:element name="deductiveSource" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.045_ISO19103.1.CharacterString">
 				<xs:annotation>
 					<xs:documentation>information on which data are used as sources in deductive evaluation method</xs:documentation>
 				</xs:annotation>
@@ -78,7 +78,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="Abstract_DataEvaluation" substitutionGroup="mdq:Abstract_EvaluationMethod" type="mdq:Abstract_DataEvaluation_Type" abstract="true" id="ISO19157-1.1.047"/>
+	<xs:element name="Abstract_DataEvaluation" substitutionGroup="mdq:Abstract_EvaluationMethod" type="mdq:Abstract_DataEvaluation_Type" abstract="true" id="ISO19157-1.1.046"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="Abstract_DataEvaluation_Type">
 		<xs:annotation>
@@ -99,7 +99,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="FullInspection" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:FullInspection_Type" id="ISO19157-1.1.048"/>
+	<xs:element name="FullInspection" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:FullInspection_Type" id="ISO19157-1.1.047"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="FullInspection_Type">
 		<xs:annotation>
@@ -120,7 +120,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="SampleBasedInspection" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:SampleBasedInspection_Type" id="ISO19157-1.1.049"/>
+	<xs:element name="SampleBasedInspection" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:SampleBasedInspection_Type" id="ISO19157-1.1.048"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="SampleBasedInspection_Type">
 		<xs:annotation>
@@ -129,22 +129,43 @@
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
 				<xs:sequence>
-					<xs:element name="samplingScheme" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.050_ISO19103.1.CharacterString">
+					<xs:element name="samplingScheme" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.049_ISO19103.1.CharacterString">
 						<xs:annotation>
 							<xs:documentation>information of the type of sampling scheme and description of the sampling procedure</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="lotDescription" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.051_ISO19103.1.CharacterString">
+					<xs:element name="lotDescription" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.050_ISO19103.1.CharacterString">
 						<xs:annotation>
 							<xs:documentation>information of how lots are defined</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="samplingRatio" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.052_ISO19103.1.CharacterString">
+					<xs:element name="samplingRatio" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.051_ISO19103.1.CharacterString">
 						<xs:annotation>
 							<xs:documentation>information on how many samples on average are extracted for inspection from each lot of population</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="IndirectEvaluation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="mdq:IndirectEvaluation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="IndirectEvaluation" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:IndirectEvaluation_Type" id="ISO19157-1.1.52"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="IndirectEvaluation_Type">
+		<xs:annotation>
+			<xs:documentation>Data quality evaluation based on external knowledge or experience of the data product</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
+				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -201,27 +222,6 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-	</xs:complexType>
-	<!-- =========================================================================== -->
-	<xs:complexType name="IndirectEvaluation_PropertyType">
-		<xs:sequence minOccurs="0">
-			<xs:element ref="mdq:IndirectEvaluation"/>
-		</xs:sequence>
-		<xs:attributeGroup ref="gco:ObjectReference"/>
-		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType>
-	<!-- ........................................................................ -->
-	<xs:element name="IndirectEvaluation" substitutionGroup="mdq:Abstract_DataEvaluation" type="mdq:IndirectEvaluation_Type" id="ISO19157-1.1.Table.D.15"/>
-	<!-- ........................................................................ -->
-	<xs:complexType name="IndirectEvaluation_Type">
-		<xs:annotation>
-			<xs:documentation>Data quality evaluation based on external knowledge or experience of the data product</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_DataEvaluation_Type">
-				<xs:sequence/>
-			</xs:extension>
-		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 </xs:schema>
