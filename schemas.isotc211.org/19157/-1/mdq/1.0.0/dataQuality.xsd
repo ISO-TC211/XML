@@ -328,9 +328,9 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	<xs:complexType name="Abstract_ThematicAccuracy_PropertyType">
+	<xs:complexType name="Abstract_ThematicQuality_PropertyType">
 		<xs:sequence minOccurs="0">
-			<xs:element ref="mdq:Abstract_ThematicAccuracy"/>
+			<xs:element ref="mdq:Abstract_ThematicQuality"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
@@ -357,14 +357,14 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="ThematicClassificationCorrectness" substitutionGroup="mdq:Abstract_ThematicAccuracy" type="mdq:ThematicClassificationCorrectness_Type" id="ISO19157-1.1.023"/>
+	<xs:element name="ThematicClassificationCorrectness" substitutionGroup="mdq:Abstract_ThematicQuality" type="mdq:ThematicClassificationCorrectness_Type" id="ISO19157-1.1.023"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="ThematicClassificationCorrectness_Type">
 		<xs:annotation>
 			<xs:documentation>comparison of the classes assigned to features or their attributes to a universe of discourse</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="mdq:Abstract_ThematicAccuracy_Type">
+			<xs:extension base="mdq:Abstract_ThematicQuality_Type">
 				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
