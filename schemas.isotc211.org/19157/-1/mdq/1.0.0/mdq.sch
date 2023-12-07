@@ -24,15 +24,19 @@
         
         <sch:diagnostic id="rule.mdq.measureIdentificationORnameOfMeasureANDmeasureDescription-success-en"
             xml:lang="en">measure identifier is  
-            "<sch:value-of select="normalize-space($measureIdentification)"/>"
-            and position
-            "<sch:value-of select="normalize-space($position)"/>"
+            "<sch:value-of select="normalize-space($measureId)"/>"
+            or measure name is
+            "<sch:value-of select="normalize-space($measureName)"/>"
+            and measure description is
+            "<sch:value-of select="normalize-space($measureDesc)"/>"
             .</sch:diagnostic>
         <sch:diagnostic id="rule.mdq.measureIdentificationORnameOfMeasureANDmeasureDescription-success-fr"
             xml:lang="fr">Le identifiant de mesure est  
-            "<sch:value-of select="normalize-space($measureIdentification)"/>"
-            ,sa fonction 
-            "<sch:value-of select="normalize-space($position)"/>"
+            "<sch:value-of select="normalize-space($measureId)"/>"
+            ,ou le nom de la mesure est 
+            "<sch:value-of select="normalize-space($measureName)"/>"
+            et la description de la mesure est
+            "<sch:value-of select="normalize-space($measureDesc)"/>"
             .</sch:diagnostic>
     </sch:diagnostics>
     
