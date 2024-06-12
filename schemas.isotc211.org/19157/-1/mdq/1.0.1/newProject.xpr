@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <meta>
+        <filters directoryPatterns="" filePatterns="\QnewProject.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="newProject.xpr">
+        <folder path="../../dqc/1.0.0/"/>
+        <folder path="../../dqm/1.0.0/"/>
+        <folder path="../1.0.0/"/>
+    </projectTree>
+</project>

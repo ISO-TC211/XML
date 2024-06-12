@@ -3,16 +3,19 @@
 	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
 	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3" 
 	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
+	xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/1.3" 
 	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3" 
 	xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3" 
 	xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0" 
 	targetNamespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" 
 	elementFormDefault="qualified" 
-	version="1.0.0"
+	version="1.0.1"
 	>
+	<xs:include schemaLocation="../../mdq/1.0.1/dataQuality.xsd"/>	
 	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mda/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mda/1.3.1/mda.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrd/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrd/1.3.0/mrd.xsd"/>
 	<!-- =========================================================================== -->
@@ -24,19 +27,19 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="Abstract_QualityResult" type="mdq:Abstract_QualityResult_Type" abstract="true" id="ISO19157-1.1.054"/>
+	<xs:element name="Abstract_QualityResult" type="mdq:Abstract_QualityResult_Type" abstract="true" id="ISO19157-1.1.055"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="Abstract_QualityResult_Type">
 		<xs:annotation>
 			<xs:documentation>generalization of more specific result classes</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="resultScope" type="mcc:MD_Scope_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.055_ISO19115-1.1.430">
+			<xs:element name="resultScope" type="mcc:MD_Scope_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.056_ISO19115-1.1.430">
 				<xs:annotation>
 					<xs:documentation>scope of the result</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dateTime" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.056_ISO19103.1.DateTime">
+			<xs:element name="dateTime" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.057_ISO19103.1.DateTime">
 				<xs:annotation>
 					<xs:documentation>date when the result was generated </xs:documentation>
 				</xs:annotation>
@@ -52,7 +55,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="QuantitativeResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:QuantitativeResult" id="ISO19157-1.1.057"/>
+	<xs:element name="QuantitativeResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:QuantitativeResult" id="ISO19157-1.1.058"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="QuantitativeResult">
 		<xs:annotation>
@@ -61,17 +64,17 @@
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_QualityResult_Type">
 				<xs:sequence>
-					<xs:element name="value" type="gco:Record_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.058_ISO19103.1.Record">
+					<xs:element name="value" type="gco:Record_PropertyType" minOccurs="1" maxOccurs="unbounded" id="ISO19157-1.1.059_ISO19103.1.Record">
 						<xs:annotation>
 							<xs:documentation>quantitative value or values, content determined by the evaluation procedure used, accordingly with the value type and valueStructure defined for the measure</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="valueUnit" type="gco:UomIdentifier_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.059_ISO19103.1.UomIdentifier">
+					<xs:element name="valueUnit" type="gco:UomIdentifier_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.060_ISO19103.1.UomIdentifier">
 						<xs:annotation>
 							<xs:documentation>value unit for reporting a data quality result</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="valueRecordType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-1.1.060_ISO19103.1.RecordType">
+					<xs:element name="valueRecordType" type="gco:RecordType_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-1.1.061_ISO19103.1.RecordType">
 						<xs:annotation>
 							<xs:documentation>value type for reporting a data quality result, depends of the implementation</xs:documentation>
 						</xs:annotation>
@@ -89,26 +92,26 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="ConformanceResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:ConformanceResult_Type" id="ISO19157-1.1.061"/>
+	<xs:element name="ConformanceResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:ConformanceResult_Type" id="ISO19157-1.1.062"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="ConformanceResult_Type">
 		<xs:annotation>
-			<xs:documentation>information about the outcome of evaluating the obtained value (or set of values) against a specified acceptable conformance quality level </xs:documentation>
+			<xs:documentation>information about the outcome of evaluating the obtained value (or set of values) against a specified acceptable conformance quality level</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_QualityResult_Type">
 				<xs:sequence>
-					<xs:element name="specification" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.062_ISO19115-1.1.361">
+					<xs:element name="specification" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.063_ISO19115-1.1.361">
 						<xs:annotation>
 							<xs:documentation>citation of data product specification or user requirement against which data is being evaluated</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="explanation" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.063_ISO19103.1.CharacterString">
+					<xs:element name="explanation" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.064_ISO19103.1.CharacterString">
 						<xs:annotation>
 							<xs:documentation>explanation of the meaning of conformance for this result</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="pass" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.064_ISO19103.1.Boolean">
+					<xs:element name="pass" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.065_ISO19103.1.Boolean">
 						<xs:annotation>
 							<xs:documentation>indication of the conformance result where 0 = fail and 1 = pass</xs:documentation>
 						</xs:annotation>
@@ -126,7 +129,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="DescriptiveResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:DescriptiveResult_Type" id="ISO19157-1.1.065"/>
+	<xs:element name="DescriptiveResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:DescriptiveResult_Type" id="ISO19157-1.1.066"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="DescriptiveResult_Type">
 		<xs:annotation>
@@ -135,7 +138,7 @@
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_QualityResult_Type">
 				<xs:sequence>
-					<xs:element name="statement" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.066_ISO19103.1.CharacterString">
+					<xs:element name="statement" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.067_ISO19103.1.CharacterString">
 						<xs:annotation>
 							<xs:documentation>textual expression of the descriptive result</xs:documentation>
 						</xs:annotation>
@@ -153,7 +156,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- ........................................................................ -->	
-	<xs:element name="CoverageResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:CoverageResult_Type" id="ISO19157-1.1.067"/>
+	<xs:element name="CoverageResult" substitutionGroup="mdq:Abstract_QualityResult" type="mdq:CoverageResult_Type" id="ISO19157-1.1.068"/>
 	<!-- ........................................................................ -->	
 	<xs:complexType name="CoverageResult_Type">
 		<xs:annotation>
@@ -162,18 +165,65 @@
 		<xs:complexContent>
 			<xs:extension base="mdq:Abstract_QualityResult_Type">
 				<xs:sequence>
-					<xs:element name="spatialRepresentationType" type="mcc:MD_SpatialRepresentationTypeCode_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.068_ISO19115-1.1.MD_SpatialRepresentationTypeCode">
+					<xs:element name="spatialRepresentationType" type="mcc:MD_SpatialRepresentationTypeCode_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.069_ISO19115-1.1.MD_SpatialRepresentationTypeCode">
 						<xs:annotation>
-							<xs:documentation>Description: method used to spatially represent the coverage result
-shortName: spaRepType</xs:documentation>
+							<xs:documentation>Description: method used to spatially represent the coverage result shortName: spaRepType</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="resultSpatialRepresentation" type="mcc:Abstract_SpatialRepresentation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.069_ISO19115-1.1.147"/>
-					<xs:element name="resultContent" type="mrc:MD_RangeDimension_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.070_ISO19115-1.1.210"/>
-					<xs:element name="resultFormat" type="mrd:MD_Format_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.071_ISO19115-1.1.254"/>
+					<xs:element name="resultSpatialRepresentation" type="mcc:Abstract_SpatialRepresentation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.070_ISO19115-1.1.147">
+						<xs:annotation>
+							<xs:documentation>Provides the digital representation of data quality measures composing the coverage result</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="resultContent" type="mrc:MD_RangeDimension_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.071_ISO19115-1.1.210">
+						<xs:annotation>
+							<xs:documentation>provides the description of the content of the result coverage when the quality coverage is included with the resource being described. 
+								i.e. semantic definition of the data quality measures</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="resultFormat" type="mrd:MD_Format_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.072_ISO19115-1.1.254">
+						<xs:annotation>
+							<xs:documentation>provides information about the format of the result coverage data</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="QualityEvaluationReportInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="mdq:QualityEvaluationReportInformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="QualityEvaluationReportInformation" type="mdq:QualityEvaluationReportInformation_Type" id="ISO19157-1.1.073"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="QualityEvaluationReportInformation_Type">
+		<xs:annotation>
+			<xs:documentation>reference to an external quality evaluation report</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="reportReference" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.074_ISO19115-1.1.361">
+				<xs:annotation>
+					<xs:documentation>reference to the associated standalone quality report</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="abstract" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.075_ISO19103.1.CharacterString">
+				<xs:annotation>
+					<xs:documentation>abstract for the associated standalone quality report</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qualityEvaluationReportDetails" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19157-1.1.076_ISO19103.1.CharacterString">
+				<xs:annotation>
+					<xs:documentation>clause in the QualityEvaluationReport where this data quality element or any related data quality element (original results in case of derivation or aggregation) is described.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="elementReport" type="mdq:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.077_ISO19157-1.1.005"/>
+			<xs:element name="onlineResource" type="mda:AbstractDS_Resource_PropertyType" minOccurs="0" maxOccurs="unbounded" id="ISO19157-1.1.078_ISO19115-1.1.001"/>
+		</xs:sequence>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 </xs:schema>

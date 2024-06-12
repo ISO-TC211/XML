@@ -3,7 +3,7 @@
   xmlns="http://www.w3.org/2001/XMLSchema" 
     elementFormDefault="qualified" 
     targetNamespace="https://schemas.isotc211.org/19163/-1/igd/1.1" 
-    version="1.1.0"
+    version="1.1.1"
     >
     <annotation>
         <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document the encoding scheme for the imagery and gridded data defined in ISO 19163-1.</documentation>
