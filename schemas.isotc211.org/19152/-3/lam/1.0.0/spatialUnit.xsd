@@ -1,0 +1,1928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lam="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	targetNamespace="https://schemas.isotc211.org/19152/-3/lam/1.0" elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>This package contains the classes defined as part of the MG_SpatialUnit
+			section. Fifteen classes, eight code lists and one datatype are defined: MG_Party,
+			MG_PartyMember, MG_PartyTypeList, and MG_GroupPartyTypeList. The Feature/Attribute
+			Spatial Unit structure makes use of the feature structure from ISO 19109 and 19110
+			implementing the Spatial Unit identified in part 1. The structure defined her aligns
+			with the geometry approach established in IHO S-100, including maintenance of the planar
+			graph topological constraint.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="./lam.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19152/-1/lad/1.0" schemaLocation="../../19152/-1/lad/1.0.0/lad.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_LocationReference_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_LocationReference"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_LocationReference" type="lam:MG_LocationReference_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_LocationReference_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_LocationReference Definition: This data type
+				describes a point location. Reference: IHO S-121 Definition Source: IHO S-121
+				Similarity to Source: generalization Remarks: A point location is described as a
+				string of text, even if it is numeric data, in exactly the same way that it is
+				described in the source legal document. A reference system may be associated,
+				although it is not necessarily available and may need to be inferred from the source
+				document.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="referenceSystem" type="rbc:RS_CRS_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: referenceSystem Data Type: CRS Definition:
+						The attribute "referenceSystem" allows a CoordinateReferencingSystem (CRS)
+						to optionally be specified at the "MG_AbstractAdditionalSpatialInformation" level.
+						Remarks: In many other geospatial data products the CRS is only defined at
+						the metadata level and applies for the whole data set; however, in this part
+						(part-3) it is necessary to detail it right down to the specific instances
+						of geometry since treaty points and lines may come from different sources
+						such as different treaties that may use different CRS. This attribute is
+						used in IHO S-121 and is registered as attribute value in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: generalized</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="textualPosition" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: textualPosition Data Type: CharacterString
+						Definition: This attribute defines a point coordinate value in a textual
+						format, in exactly the same way that it is described in the source legal
+						document. Remarks: This attribute is used in IHO S-121 and is registered as
+						an attribute value in the IHO register &lt;https://registry.iho.int/&gt; and
+						as such can be expanded within the IHO process. Reference: IHO S-121
+						Definition Source: IHO S-121 Similarity to Source:
+						generalized</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_AbstractAdditionalSpatialInformation_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_AbstractAdditionalSpatialInformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_AbstractAdditionalSpatialInformation" type="lam:MG_AbstractAdditionalSpatialInformation_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_AbstractAdditionalSpatialInformation_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Item Type: Class Domain: MG Name: MG_AbstractAdditionalSpatialInformation
+				Definition: This abstract class provides additional spatial information. It allows
+				for spatial attributes such as "Location by Text" that do not participate in the
+				geometry of the Geographic Information System (or GIS database). Reference: IHO
+				S-121 Definition Source: IHO S-121 Similarity to Source: restructured Remarks: This
+				supports "S100_GF_ThematicAttributeType". This allows for the description of the
+				attribute "Location by Text" and / or a position in a unique coordinate reference
+				system. That is, additional locations in other historical coordinate reference
+				systems, or textual descriptions may be used. For example, a historical coordinate
+				reference system may be defined in the text of a treaty (and is therefore the
+				"legal" text), even though it would need to be translated to a different coordinate
+				reference system to be used with other data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. This attribute provides a global unique
+								identifier to be used at the implementation level. It parallels all
+								of the other IDs that each have their own namespaces. This ID can be
+								whatever the GIS system supporting the data requires. Reference: IHO
+								S-121 Definition Source: IHO S-121 Similarity to Source:
+								generalization Remarks: IHO provides guidance on the structure of
+								the MRN as a Globally Unique Identifier (GUID) based on the Uniform
+								Resource Identifier (URI) for those items under the jurisdiction of
+								the IHO. The type of URI used by IHO is a Universal Resource Name
+								(URN). This attribute provides a global unique identifier to be used
+								at the implementation level. It parallel all of the other IDs that
+								each have their own namespaces. This ID can be whaever the GIS
+								system supporting the data requires.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="locationByText" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: locationByText Data Type:
+								CharacterString Definition: The attribute locationByText allows a
+								spatial attribute to be a textual description Reference: ISO 19152-1
+								Definition Source: ISO 19152-1 Similarity to Source:specialization
+								Remarks: This allows "Location", "Limit", "Zone"s and "Space" that
+								are not fully described geometrically to be included. This attribute
+								is used in IHO S-121 and is registered as an attribute in the IHO
+								register &lt;https://registry.iho.int/&gt; and as such can be
+								expanded within the IHO process.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="referenceSystem" type="rbc:RS_CartesianCRS_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: referenceSystem Data Type:
+								Definition: The attribute "ReferenceSystem" allows a
+								CoordinateReferencingSystem (CRS) to optionally be specified at the
+								"spatialAttributeTypeList" level. Remarks: In many other geographic
+								information products the CRS is only defined at the metadata level
+								and applies for the whole data set; however, in here it is necessary
+								to detail it right down to the specific instances of geometry since
+								points and lines may come from different sources such as different
+								treaties that may use different CRS. This attribute is used in IHO
+								S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="siID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+					<!-- <xs:element name="siID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1"> -->
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: siID Data Type: Oid Definition: This
+								attribute is the identifier is the identifier of the
+								MG_AbstractAdditionalSpatialInformationType class using the "Oid" (Object
+								ID) attribute. The "Oid" comprises a unique character string and a
+								namespace identifier which is also a unique character string. It is
+								an abstract group ID that is further resolved into individual IDs
+								for MG_PointAttributes, MG_CurveAttributes, MG_SurfaceAttributes,
+								and MG_VolumeAttributes (MG_Curve_Attributes, MG_Surface_Attributes,
+								and MG_Volume_Attributes) corresponding to "Location", "Limit",
+								"Zone", and "Volume". Remarks: This attribute is used in IHO S-121
+								and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process.. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing an Additional Spatial Information
+								Type.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_ArcGeometryTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_ArcGeometryTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_ArcGeometryTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_ArcGeometryTypeList" type="lam:MG_ArcGeometryTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_ArcGeometryTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Associated Attribute: arcGeometryType
+				Name: MG_ArcGeometryTypeList Code List Type: open enumeration Definition: This code
+				list describes the category of lines or arcs that can be represented on the surface
+				of the ellipsoid. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+				Source: identical Remarks:</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="geodesic" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MLB Associated Attribute:
+						arcGeometryTypeList Name: geodesic Definition: A curve which describes a
+						path of shortest distance along the surface of an ellipsoid, namely a
+						segment of a great circle. Reference: IHO S-121 Definition Source: IHO S-121
+						Similarity to Source: restructured Remarks: Registered as a code list value
+						in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="loxodrome" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						arcGeometryTypeList Name: loxodrome Definition: A curve which describes an
+						arc crossing all meridians of longitude at the same angle; a path with
+						constant bearing. Reference: IHO S-121 Definition Source: IHO S-121
+						Similarity to Source: restructured Remarks: Registered as a code list value
+						in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Curve_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Curve"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Curve" type="lam:MG_Curve_Type" substitutionGroup="lam:MG_AbstractSpatialAttribute"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Curve_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Curve Definition: A spatial attribute that takes
+				on curve spatial geometry. Reference: IHO S-121 Definition Source: IHO S-121
+				Similarity to Source: generalized Remarks: Provides curve spatial geometry for a
+				Feature Unit in a consistent coordinate reference system. Curves may only be
+				specified by a set of vertices or as a circular arc "arcByCentrePoint" and
+				"circleByCentrePoint". MG_Curve spatial attributes have a consistent geometric
+				description and coordinate reference system and may participate in a geometric
+				complex. It may be processed in a GIS system.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractSpatialAttribute_Type">
+				<xs:sequence>
+					<xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: geometry Data Type: GM_Object =
+								GM_OrientableCurve Definition: This spatial attribute identifies the
+								geometric primitive to be GM_OrientableCurve. Remarks: This spatial
+								attribute overwrites the attribute geometry in the abstract class
+								MG_AbstractSpatialAttribute with the value "GM_OrientableCurve", identifying
+								curve geometry as defined in ISO 19107 Spatial Schema. Spatial
+								primitives limited to GM_OrientableCurve, and GM_Curve
+								(arcByCentrePoint and circleByCentrePoint). This attribute is used
+								in IHO S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-100
+								Part 7 Similarity to Source: restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_CurveAttributes_PropertyType">
+		<!-- <xs:complexType name="MG_Curve_Attributes_PropertyType"> -->
+			<xs:sequence>
+			<xs:element ref="lam:MG_CurveAttributes"/>
+				<!-- <xs:element ref="lam:MG_Curve_Attributes"/> -->
+			</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_CurveAttributes" type="lam:MG_CurveAttributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/>
+	<!-- <xs:element name="MG_Curve_Attributes" type="lam:MG_Curve_Attributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_CurveAttributes_Type">
+		<!-- <xs:complexType name="MG_Curve_Attributes_Type"> -->
+			<xs:annotation>
+				<xs:documentation>Item Type: Class Domain: MG Name: MG_CurveAttributes (MG_Curve_Attributes) Definition: This
+				component describes additional Spatial Information that augments curve spatial
+				geometry. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to Source:
+				generalized Remarks: The additional information may not use the same coordinate
+				reference system or it may be a textual description and therefore may not have a
+				consistent geometric description and may not be suitable to participate in a
+				geometric complex. It may not be suitable to be processed geometrically in a GIS
+				system without transformation.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractAdditionalSpatialInformation_Type">
+				<xs:sequence>
+					<xs:element name="additionalGeometry" type="gml:GeometricPrimitivePropertyType" minOccurs="0" maxOccurs="1">
+						<!-- <xs:element name="additionalGeometry" type="gml:GM_OrientablePropertyType" minOccurs="0" maxOccurs="1">
+							<xs:annotation>
+							<xs:documentation>Domain: MG Name: additionalGeometry Data Type:
+								Interface (defined in ISO 19107) Definition: This spatial attribute
+								identifies an additional curve geometric primitive in the form of a
+								GM_OrientableCurve. This curve takes on the coordinate reference
+								system defined in the attribute referenceSystem inherited from
+								MG_AbstractAdditionalSpatialInformation. Remarks: This permits a curve to be
+								optionally defined in a coordinate reference system different than
+								that defined for other data in the data set. For example, this may
+								come from a treaty or other historical source. It also allows a
+								consistent curve geometry reference to be used, such as WGS 84, as
+								requested by the UN DOALOS. Spatial primitives limited to
+								GM_OrientableCurve, and GM_Curve (arcByCentrePoint and
+								circleByCentrePoint) This attribute is used in IHO S-121 and is
+								registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation> -->
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_AbstractFeatureUnit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_AbstractFeatureUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_AbstractFeatureUnit" type="lam:MG_AbstractFeatureUnit_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_AbstractFeatureUnit_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Item Type: Class Domain: MG Name: Feature Unit Definition: An
+				abstraction of a real world phenomena. Reference: ISO 19101 Definition Source: ISO
+				19101-1:2014 Similarity to Source: identical Remarks: Derived from ISO 19101-1 and
+				the General Feature Model of ISO 19109 and the S100 General Feature Model and takes
+				on spatial attributes through a relation to the "spatialAttributeTypeList". This is
+				an abstract class. It is implemented through its subtypes "Location", "Limit",
+				"Zone", "Space".</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="context" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG AlphaCode: Name: context Data Type:
+								CharacterString Definition: This attribute describes the
+								administrative context of the feature object. Remarks: This
+								attribute is used in IHO S-121 and is registered as an attribute in
+								the IHO register &lt;https://registry.iho.int/&gt; and as such can
+								be expanded within the IHO process. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fuID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: fuID Data Type: Oid Definition:This
+								attribute is the identifier of the Feature Unit using the "Oid"
+								(Object ID) attribute. The "Oid" comprises a unique character string
+								and a namespace identifier which is also a unique character string.
+								Example: An example might be "Limit-1" where "Limit" is the
+								namespace and "1" is the unique id within that namespace. Remarks:
+								This attribute is used in IHO S-121 and is registered as an
+								attribute in the IHO register &lt;https://registry.iho.int/&gt; and
+								as such can be expanded within the IHO process.. Reference: IHO
+								S-121 Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Reference: IHO S-121 Definition Source: IHO
+								S-121 Similarity to Source: generalization Remarks: IHO provides
+								guidance on the structure of the MRN as a Globally Unique Identifier
+								(GUID) based on the Uniform Resource Identifier (URI) for those
+								items under the jurisdiction of the IHO. The type of URI used by IHO
+								is a Universal Resource Name (URN). This attribute provides a global
+								unique identifier to be used at the implementation level. It
+								parallel all of the other IDs that each have their own namespaces.
+								This ID can be whatever the GIS system supporting the data
+								requires.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="label" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: : label Data Type: CharacterString
+								Definition: This attribute provides a short textual identifier of
+								the feature unit. Remarks: This attribute is used in IHO S-121 and
+								is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: name Data Type: CharacterString
+								Definition: The name of the feature Remarks: This attribute is used
+								in IHO S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="releasabilityType" type="lam:MG_ReleasabilityTypeList_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: releasabilityType Data Type:
+								Definition: This attribute is optionally used to differentiate
+								between releasability status for particular features using the code
+								list MG_ReleasabilityTypeList. Remarks: This attribute is used in
+								IHO S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="additionalSpatialCharacteristics" type="lam:MG_AbstractAdditionalSpatialInformation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with Additional Spatial
+								Characteristics.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="parent" type="lam:MG_AbstractFeatureUnit_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Superior Feature Unit in a Feature to Feature
+								relationship.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing a Feature Unit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="spatialCharacteristics" type="lam:MG_AbstractSpatialAttribute_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with spatial
+								characteristics.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_InterpolationTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_InterpolationTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_InterpolationTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_InterpolationTypeList" type="lam:MG_InterpolationTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_InterpolationTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Name: MG_IinterpolationTypeList Code
+				List Type: open enumeration Definition: This code list describes how apoint is used
+				in a line or curve structure. Reference: IHO S-121 Definition Source: IHO S-121
+				Similarity to Source: identical Remarks: The code list MG_InterpolationTypeList
+				plays the same role as the code list LA_InterpolationType but is different to suite
+				the Marine Space georegualtion environment especially Marine Limits and
+				Boundaries.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="deflection" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_InterpolationTypeList Name: deflection Definition: A turning point along
+						a line. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: restructured Remarks: Registered as an attribute type in the IHO
+						Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="densification" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_InterpolationTypeList Name: densification Definition: Describes a
+						location that densifies a line to ensure the geometry of a feature is
+						correctly represented. Reference: IHO S-121 Definition Source: IHO S-121
+						Similarity to Source: restructured Remarks: Registered as an attribute type
+						in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_JurisdictionDomainTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_JurisdictionDomainTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_JurisdictionDomainTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_JurisdictionDomainTypeList" type="lam:MG_JurisdictionDomainTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_JurisdictionDomainTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Associated Attribute:
+				jurisdictionDomainType Name: MG_JurisdictionDomainTypeList Code List Type: open
+				enumeration Definition: Defines the vertical juridical domain of the object
+				delimited, based on a breakdown of vertical jurisdictions used in UNCLOS. Reference:
+				IHO S-121 for &lt;MLB&gt; items Definition Source: IHO S-121 for &lt;MLB&gt; items
+				Similarity to Source: generalized Remarks: Any particular Feature Unit object may
+				span more than one jurisdiction domain. The code list is generic, but additional
+				code list values have been included based on the need to support IHO S-121. These
+				are marked with a stereotype &lt;MRN&gt;.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="airspace" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_JurisdictionDomainTypeList Name: airspace Definition: Describes a space
+						in the air above the "landSurface" or "waterSurface". Reference: IHO S-121
+						Definition Source: IHO S-121 Similarity to Source: identical Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="landsurface" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_JurisdictionDomainTypeList Name: landSurface Definition: Describe the
+						interface between "subsoil" and "airspace". Reference: IHO S-121 Definition
+						Source: IHO S-121 Similarity to Source: identical Remarks: Registered as a
+						code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="seabedSurface" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_JurisdictionDomainTypeList Name: seabedSurface Definition: Describes an
+						the interface between the "waterColumn" and the "subsoil", submerged land
+						surface found under the oceans. Reference: IHO S-121 Definition Source: IHO
+						S-121 Similarity to Source: identical Remarks: Registered as a code list
+						value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subsoil" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_JurisdictionDomainTypeList Name: subsoil Definition: Describes a space
+						below the "landSurface" and the "seabedSurface" . Reference: IHO S-121
+						Definition Source: IHO S-121 Similarity to Source: identical Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waterColumn" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_JurisdictionDomainTypeList Name: waterColumn Definition: Describes a
+						space from the "seabedSurface" up to the "waterSurface". Reference: IHO
+						S-121 Definition Source: IHO S-121 Similarity to Source: identical Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waterSurface" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_JurisdictionDomainTypeList Name: waterSurface Definition: Describe the
+						interface between the "airspace" and "waterColumn". Reference: IHO S-121
+						Definition Source: IHO S-121 Similarity to Source: identical Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Limit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Limit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Limit" type="lam:MG_Limit_Type" substitutionGroup="lam:MG_AbstractFeatureUnit"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Limit_Type">
+		<xs:annotation>
+			<xs:documentation> Domain: MG Name: MG_Limit Definition: A Feature Unit that takes on
+				curve spatial geometry. Reference: IHO S-121 Definition Source: IHO S-121 Similarity
+				to Source: generalized Remarks: May be used to define Limits or Boundaries. A limit
+				is an object that defines an curve which is logically delimited by instances of
+				"MG_Location".</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractFeatureUnit_Type">
+				<xs:sequence>
+					<xs:element name="arcGeometryType" type="lam:MG_ArcGeometryTypeList_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: MG_ArcGeometryType Data Type:
+								MG_ArcGeometryTypeList Definition: Type of computation used to
+								define an arc (line) Remarks: This attribute is used in IHO S-121
+								and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="limitObjectType" type="lam:MG_LimitTypeList_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: MG_LimitObjectType Data Type:
+								MG_LimitTypeList Definition: This attribute identifies which Feature
+								Unit LimitObject type this object refers to. Remarks: This attribute
+								is used in IHO S-121 and is registered as an attribute in the IHO
+								register &lt;https://registry.iho.int/&gt; and as such can be
+								expanded within the IHO process. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="curve" type="lam:MG_Curve_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with spatial characteristic
+								Curve.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="curAtt" type="lam:MG_CurveAttributes_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<!-- <xs:element name="curAtt" type="MG_Curve_Attributes" minOccurs="1" maxOccurs="unbounded"> -->
+							<xs:annotation>
+							<xs:documentation>Feature Unit associated with Additional Spatial
+								Characteristics Curve Attributes.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_LimitTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_LimitTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_LimitTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_LimitTypeList" type="lam:MG_LimitTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_LimitTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Proposal Type: Addition Domain: MG Name:
+				MG_LimitTypeList Code List Type: open enumeration Definition: This code list
+				describes categories of "limitType" that have a common characteristic related to the
+				legal and administrative aspects of the marine environment. Reference: IHO S-121 for
+				&lt;MLB&gt; items Definition Source: IHO S-121 for &lt;MLB&gt; items Similarity to
+				Source: generalized Remarks: The code list is generic, but additional code list
+				values have been included based on the need to support IHO S-121. These are marked
+				with a stereotype &lt;MRN&gt;. The code list may be registered in a Feature Concept
+				Dictionary as listed values and as such can be expanded to include other aspects of
+				the legal context.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="archipelagicBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: archipelagicBaseline Definition: See the
+						UNCLOS reference. Reference: UNCLOS: Article 47 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: The definition of this entity is
+						legal treaty text and is not paraphrased or restructured. The definition is
+						taken directly from the UNCLOS convention by reference. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="baseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: baseline Definition: A baseline is a line
+						from which the breadths of the territorial sea, and other maritime zones is
+						measured . Reference: UNCLOS: Articles 5, 6, 7, 9, 10, 11, 13, 14 and 47;
+						IHO-S-32: 390 Definition Source: UNCLOS Similarity to Source: by reference
+						Remarks: The definition of this entity is legal treaty text from several
+						UNCLOS Articles. The definition given is not to be taken as authoritative .
+						The authoritative information is in the referenced UNCLOS articles.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="baysBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: baysBaseline Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Article 10 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: The definition of this entity is
+						legal treaty text and is not paraphrased or restructured. The definition is
+						taken directly from the UNCLOS convention by reference. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="constructionLine" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Feature Proposal Type: Addition Domain: MLB
+						AlphaCode: CONLIN Name: Construction Line Alias: MA_ConstructionLine
+						CamelCase: ConstructionLine Use Type: Administrative Definition: A curve
+						used for constructing a Limit or Boundary typically linking to a
+						ContributingPoint. Reference: IHO S-121 Definition Source: IHO S-121
+						Similarity to Source: restructured Remarks: Registered as a code list value
+						in the IHO Geospatial Information Registry &lt;https://registry.iho.int/&gt;
+						This code list value is particular to the MLB domain and is marked with a
+						stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="internationalBoundary" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: internationalBoundary Definition: A
+						delimitation line between two or more States. Reference: IHO S-121
+						Definition Source: IHO S-121 Similarity to Source: identical Remarks: In
+						accordance with articles 74, 75, 83, and 84 of UNCLOS, information on
+						maritime boundaries, such as information about the delimitation of exclusive
+						economic zones and continental shelves between states, may be provided only
+						when an agreement is reached between relevant states. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="limit" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: limit Definition: A curve that defines a
+						boundary or extent of a zone. Reference: IHO S-121 Definition Source: IHO
+						S-121 Similarity to Source: restructured Remarks: To extend beyond the list
+						of limit types given in this code list the generic "limit" type may be used.
+						Alternatively the code list may be registered in a Feature Concept
+						Dictionary as listed values and as such can be expanded to include all limit
+						types. Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lowTideElevationsBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: lowTideElevationsBaseline Use Type:
+						Administrative Definition: See the UNCLOS reference. Reference: UNCLOS:
+						Article 13 Definition Source: UNCLOS Similarity to Source: by reference
+						Remarks: The definition of this entity is legal treaty text and is not
+						paraphrased or restructured. The definition is taken directly from the
+						UNCLOS convention by reference. Registered as a code list value in the IHO
+						Geospatial Information Registry &lt;https://registry.iho.int/&gt; This code
+						list value is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mouthsOfRiversBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: mouthsOfRiverBaseline Definition: See the
+						UNCLOS reference. Reference: UNCLOS: Article 9 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: The definition of this entity is
+						legal treaty text and is not paraphrased or restructured. The definition is
+						taken directly from the UNCLOS convention by reference. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="normalBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: normalBaseline Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Articles 5 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: The definition of this entity is
+						legal treaty text and is not paraphrased or restructured. The definition is
+						taken directly from the UNCLOS convention by reference. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="outerLimitOfTheContiguousZone" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: outerLimitOfTheContiguousZone Definition: See
+						the UNCLOS reference. Reference: UNCLOS: Article 33 Definition Source:
+						UNCLOS Similarity to Source: by reference Remarks: The definition of this
+						entity is legal treaty text and is not paraphrased or restructured. The
+						definition is taken directly from the UNCLOS convention by reference.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="outerLimitOfTheContinentalShelf" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: outerLimitOfTheContinentalShelf Definition:
+						See the UNCLOS reference. Reference: UNCLOS: Part VI, IHO Int1: N46, and IHO
+						S-4: 440.8 Definition Source: UNCLOS Similarity to Source: by reference
+						Remarks: The definition of this entity is legal treaty text and is not
+						paraphrased or restructured. The definition is taken directly from the
+						UNCLOS convention by reference. Registered as a code list value in the IHO
+						Geospatial Information Registry &lt;https://registry.iho.int/&gt; This code
+						list value is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="outerLimitOfTheExclusiveEconomicZone" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: outerLimitOfTheExclusiveEconomicZone
+						Definition: See the UNCLOS reference. Reference: UNCLOS: Articles 57 and 74
+						Definition Source: UNCLOS Similarity to Source: by reference Remarks: The
+						definition of this entity is legal treaty text and is not paraphrased or
+						restructured. The definition is taken directly from the UNCLOS convention by
+						reference. Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt; This code list value is
+						particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="outerLimitOfTheRoadstead" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG AlphaCode: RDSLIM Name: outerLimitOfTheRoadstead
+						Definition: See the UNCLOS reference. Reference: UNCLOS: Article 12
+						Definition Source: UNCLOS Similarity to Source: by reference Remarks: The
+						definition of this entity is legal treaty text and is not paraphrased or
+						restructured. The definition is taken directly from the UNCLOS convention by
+						reference. Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt; This code list value is
+						particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="outerLimitOfTheTerritorialSea" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: outerLimitOfTheTerritorialSea Definition: See
+						the UNCLOS reference. Reference: UNCLOS: Articles 3, 4 and 15 Definition
+						Source: UNCLOS Similarity to Source: by reference Remarks: The definition of
+						this entity is legal treaty text and is not paraphrased or restructured. The
+						definition is taken directly from the UNCLOS convention by reference.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="portsBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: portBaseline Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Article 11 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: The definition of this entity is
+						legal treaty text and is not paraphrased or restructured. The definition is
+						taken directly from the UNCLOS convention by reference. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="reefsBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: reefsBaseline Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Article 6 Definition Source: UNCLOS Similarity
+						to Source: by reference Remarks: The definition of this entity is legal
+						treaty text and is not paraphrased or restructured. The definition is taken
+						directly from the UNCLOS convention by reference. Registered as a code list
+						value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="straightBaseline" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: straightBaseline Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Articles 7, IHO-S32, 5th edition: 393;
+						Definition Source: UNCLOS Similarity to Source: by reference Remarks: The
+						definition of this entity is legal treaty text and is not paraphrased or
+						restructured. The definition is taken directly from the UNCLOS convention by
+						reference. Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt; This code list value is
+						particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Location_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Location"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Location" type="lam:MG_Location_Type" substitutionGroup="lam:MG_AbstractFeatureUnit"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Location_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Location Definition: A Feature Unit that takes on
+				point spatial geometry. Reference: IHO S-121 Definition Source: IHO S-121 Similarity
+				to Source: generalized Remarks: May be used to define Locations.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractFeatureUnit_Type">
+				<xs:sequence>
+					<xs:element name="interpolationRole" type="lam:MG_InterpolationTypeList_PropertyType"
+						minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: MG_ interpolationRole Data Type:
+								MG_InterpolationTypeList Definition: This attribute defines the role
+								of a point in the structure of a "Straight" line or curve. Remarks:
+								The code list MG_InterpolationTypeList plays the same role as the
+								code list LA_InterpolationType but is different to suite the Marine
+								Space georegualtion environment especially Marine Limits and
+								Boundaries. The code list may be registered in a Feature Concept
+								Dictionary as listed values and as such can be expanded to include
+								all aspects of the legal context. Remarks: This attribute is used in
+								IHO S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="locationObjectType" type="lam:MG_LocationtTypeList_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: MG_locationObjectType Data Type:
+								MG_LocationTypeList Definition: This attribute identifies which
+								Feature Unit Location Object type this object refers to, based on
+								the code list MG_LocationTypeList. This allows one to describe
+								whether a particular point is a turning point along a line or a
+								point included to densifies a line to ensure the geometry of a
+								feature is correctly represented. Remarks: The code list may be
+								registered in a Feature Concept Dictionary as listed values and as
+								such can be expanded to include all aspects of the legal context.
+								Remarks: This attribute is used in IHO S-121 and is registered as an
+								attribute in the IHO register &lt;https://registry.iho.int/&gt; and
+								as such can be expanded within the IHO process. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pointType" type="lam:MG_PointTypeList_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: MG_PointType Data Type:
+								MG_PointTypeList Definition: This attribute defines how the point
+								was created. Remarks: The code list MG_PointTypeList plays the same
+								role as the code list LA_PointType but is different to suite the
+								Marine Space georegualtion environment especially Marine Limits and
+								Boundaries. The code list may be registered in a Feature Concept
+								Dictionary as listed values and as such can be expanded to include
+								all aspects of the legal context. Remarks: This attribute is used in
+								IHO S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="limit" type="lam:MG_Limit_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Limit spatial unit related to two or more
+								locations</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="point" type="lam:MG_Point_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with spatial characteristic
+								Point.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pntAtt" type="lam:MG_PointAttributes_PropertyType" minOccurs="1"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with Additional Spatial
+								Characteristics Point Attributes.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_LocationtTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_LocationTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_LocationTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_LocationtTypeList" type="lam:MG_LocationtTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_LocationtTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Name: MG_LocationTypeList Code List
+				Type: open enumeration Definition: This code list describes categories of
+				"LocationType" that have a common characteristic related to the legal and
+				administrative aspects of the marine environment. Reference: IHO S-121 for
+				&lt;MLB&gt; items Definition Source: IHO S-121 for &lt;MLB&gt; items Similarity to
+				Source: generalization Remarks: The code list is generic, but additional code list
+				values have been included based on the need to support IHO S-121. These are marked
+				with a stereotype &lt;MRN&gt;. This code list may be registered in a Feature Concept
+				Dictionary as listed values and as such can be expanded to include all aspects of
+				the legal context.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="baselinePoint" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: baselinePoint
+						Definition: A point on a baseline. Reference: UNCLOS: Articles 5, 6, 7, 9,
+						10, 11, 13, 14 and 47; Definition Source: IHO S-32 Hydrographic Dictionary
+						item 390 Similarity to Source: generalization Remarks: A baseline is a line
+						from which the breadths of the territorial sea, and other maritime zones is
+						measured Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt; This code list value is
+						particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="boundaryPoint" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: boundaryPoint
+						Definition: A point on a boundary. Reference: IHO S-121 Definition Source:
+						IHO S-121 Similarity to Source: generalization Remarks: A point associated
+						with more than one party. Registered as a code list value in the IHO
+						Geospatial Information Registry &lt;https://registry.iho.int/&gt; This code
+						list value is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contributingPoint" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: contributingPoint
+						Definition: A point used for computation. Reference: IHO S-121 Definition
+						Source: IHO S-121 Similarity to Source: generalization Remarks: A data point
+						used in the calsulation of the shape of a curve. Registered as a code list
+						value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="limitPoint" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: limitPoint
+						Definition: A point on the outer limit of a maritime zone Reference: IHO
+						S-121 Definition Source: IHO S-121 Similarity to Source: generalization
+						Remarks: A point typically associated with only one party. Registered as a
+						code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="location" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: location
+						Definition: A generic geographic position represented by a point. Reference:
+						IHO S-121 Definition Source: IHO S-121 Similarity to Source: generalization
+						Remarks: To extend beyond the list of location types given in this code list
+						the generic "location" type may be used. Alternatively the code list may be
+						registered in a Feature Concept Dictionary as listed values and as such can
+						be expanded to include all location types. Registered as a code list value
+						in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Point_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Point"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Point" type="lam:MG_Point_Type" substitutionGroup="lam:MG_AbstractSpatialAttribute"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Point_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Point Definition: This component describes a
+				spatial attribute that takes on point spatial geometry Reference: IHO S-121
+				Definition Source: IHO S-121 Similarity to Source: generalized Remarks: Provides
+				point spatial geometry for a Feature Unit in a consistent coordinate reference
+				system. MG_Point spatial attributes have a consistent geometric description and
+				coordinate reference system and may participate in a geometric complex. It may be
+				processed in a GIS system. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractSpatialAttribute_Type">
+				<xs:sequence>
+					<xs:element name="pointGeometry" type="gml:GeometryPropertyType" minOccurs="1" maxOccurs="1">
+						<!-- <xs:element name="geometry" type="gml:GeometryPropertyTypeGeometry" minOccurs="1" maxOccurs="1"> -->
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: geometry Data Type: GM_Object =
+								GM_Point Definition: This spatial attribute identifies the geometric
+								primitive to be GM_Point. Remarks: This spatial attribute overwrites
+								the attribute geometry in the abstract class MG_AbstractSpatialAttribute
+								with the value "GM_Point", identifying point geometry as defined in
+								ISO 19107 Spatial Schema. This attribute is used in IHO S-121 and is
+								registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-100
+								Part 7 Similarity to Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_PointAttributes_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_PointAttributes"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_PointAttributes" type="lam:MG_PointAttributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_PointAttributes_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_PointAttributes Definition: This component
+				describes additional Spatial Information that augments point spatial geometry.
+				Remarks: The additional information may not use the same coordinate reference system
+				or it may be a textual description and therefore may not have a consistent geometric
+				description and may not be suitable to participate in a geometric complex. It may
+				not be suitable to participate in a geometric complex or be suitable to be processed
+				geometrically in a GIS system without transformation. This attribute is used in IHO
+				S-121 and is registered as an attribute in the IHO register
+				&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+				process. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to Source:
+				generalization</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractAdditionalSpatialInformation_Type">
+				<xs:sequence>
+					<xs:element name="commonLocation" type="lam:MG_LocationReference_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: commonLocation Data Type:
+								locationReference Definition: This optional attribute describes the
+								common reference location of a point in a datum that is defaulted to
+								the other points in the dataset. This attribute is used in IHO S-121
+								and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="officialLocation" type="lam:MG_LocationReference_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: officialLocation Data Type:
+								locationReferrence Definition: This attribute describes the official
+								reference of the point. Remarks: This is the legal description of
+								the point in a textual form, so that the exact representation of the
+								point may be maintained in terms of degrees and decimal degrees, or
+								degrees, minutes and seconds, or other description. A reference
+								system (CRS) shall be included where available. A CRS is required,
+								but it may only be included in the base legal text and therefore
+								only included by reference through a Source object. This attribute
+								is used in IHO S-121 and is registered as an attribute in the IHO
+								register &lt;https://registry.iho.int/&gt; and as such can be
+								expanded within the IHO process. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="originalLocation" type="lam:MG_LocationReference_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: MG_OriginalLocation Data Type:
+								LocationReference Definition: This optional attribute defines the
+								reference location of a point when it was first established Remarks:
+								This includes a description of the point as a textual string, so
+								that the exact representation of the point may be maintained in
+								terms of degrees and decimal degrees, or degrees, minutes and
+								seconds, or other description. In the case of the original location
+								this may be a description of meets and bounds or whatever is
+								included in the treaty or other original document. A reference
+								system (CRS) shall be included where available. Often a CRS is not
+								available for original locations derived from very old treaties.
+								This attribute is used in IHO S-121 and is registered as an
+								attribute in the IHO register &lt;https://registry.iho.int/&gt; and
+								as such can be expanded within the IHO process. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="otherLocation" type="lam:MG_LocationReference_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: otherLocation Data Type:
+								locationReference Definition:This optional attribute defines any
+								other point reference location. Remarks: There may be several other
+								locations in different reference systems. This attribute is used in
+								IHO S-121 and is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_PointTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_PointTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_PointTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="MG_PointTypeList" type="lam:MG_PointTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_PointTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Name: MG_pointTypeList Code List Type:
+				open enumeration Definition: This code list describes how the point was created.
+				Reference: IHO S-121 Definition Source: IHO S-121 Similarity to Source: identical
+				Remarks: The code list MG_PointTypeList plays the same role as the code list
+				LA_PointType but is different to suite the Marine Space georegulation environment
+				especially Marine Limits and Boundaries.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="computed" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PointTypeList Name: computed Definition: Describes a location that is
+						computed in accordance with the definition described in the source through
+						proper geodetic calculations. Reference: IHO S-121 Definition Source: IHO
+						S-121 Similarity to Source: restructured Remarks: For example, the
+						intersection of two arcs over an ellipsoidal surface. A point may be
+						established to support construction computations. Registered as an attribute
+						type in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="defined" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PointTypeList Name: defined Definition: Describes a "Location" that is
+						derived from a legislative document or other definitive sources. Reference:
+						IHO S-121 Definition Source: IHO S-121 Similarity to Source: restructured
+						Remarks: Registered as an attribute type in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Space_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Space"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Space" type="lam:MG_Space_Type" substitutionGroup="lam:MG_AbstractFeatureUnit"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Space_Type">
+		<xs:annotation>
+			<xs:documentation> Item Type: Class Domain: MG Name: MG_Space Definition: A Feature Unit
+				that takes on volume spatial geometry. Reference: IHO S-121 Definition Source: IHO
+				S-121 Similarity to Source: generalized Remarks: An object that defines a volume
+				which is logically delimited by instances of "Zone". A "Space" is an object of 2
+				dimensions with a height description located in 2 or 3 dimensional "Space". This is
+				sometimes called 2 1/2 dimensions. A "Space" has the same geometry as a "Zone" with
+				the attributes of vertical position. The vertical position may be explicit numerical
+				attributes of height above a reference or a textual description.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractFeatureUnit_Type">
+				<xs:sequence>
+					<xs:element name="jurisdictionDomainType" type="lam:MG_JurisdictionDomainTypeList_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: jurisdictionDomainType Data Type:
+								MG_JurisdictionDomainTypeList Definition: Defines the vertical
+								juridical domain of the object delimited. Remarks: This code list is
+								generic. Specific code list values related to Marine Limits and
+								Boundaries have been for conformance class 1 and identified by the
+								stereotype &lt;MRN&gt;. This attribute is used in IHO S-121 and is
+								registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 for &lt;MRN&gt; items
+								Definition Source: IHO S-121 Similarity to Source:
+								generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="referencePoint" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: Reference Point Data Type: GM_Point
+								Definition: The coordinates of a point inside the spatial unit
+								Remarks: The point must be on the 2 D surface upon which the space
+								is projected. This attribute is used in IHO S-121 and is registered
+								as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="spaceObjectType" type="lam:MG_SpaceTypeList_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Item Type: Simple Attribute Domain: MG Name:
+								spaceObjectType Data Type: MG_SpaceTypeList Definition: This
+								attribute identifies which Feature Unit Space Object type this
+								object refers to. Remarks: This attribute is used in IHO S-121 and
+								is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="volumeValue" type="lad:LA_VolumeValue_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: volumeValue Data Type: LA_VolumeValue
+								Definition: Defines the volume of the space (in case of bounded 2
+								1/2 D description) Reference: ISO 19152:2012 Definition Source: ISO
+								19152-1 Similarity to Source: subset (operations not inherited)
+								Remarks: This attribute make use of the class LA_VolumeValue from
+								ISO 19152. This attribute is used in IHO S-121 and is registered as
+								an attribute in the IHO register &lt;https://registry.iho.int/&gt;
+								and as such can be expanded within the IHO process. Reference: ISO
+								19152-1 Definition Source: ISO 19152-1 Similarity to Source: subset
+								(operations not inherited)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="volume" type="lam:MG_Volume_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with spatial characteristic
+								Volume.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="volAtt" type="lam:MG_VolumeAttributes_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<!-- <xs:element name="volAtt" type="lam:MG_Volume_Attributes_PropertyType" minOccurs="1" maxOccurs="unbounded"> -->
+							<xs:annotation>
+							<xs:documentation>Feature Unit associated with Additional Spatial
+								Characteristics Volume Attributes.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zone" type="lam:MG_Zone_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Zone spatial unit related to a
+								space</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_SpaceTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_SpaceTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_SpaceTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="MG_SpaceTypeList" type="lam:MG_SpaceTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_SpaceTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Name: MG_SpaceTypeList Code List Type:
+				open enumeration Definition: This code list describes categories of "Space Type"
+				that have a common characteristic related to the legal and administrative aspects of
+				the marine environment. Reference: IHO S-121 Definition Source: IHO S-121 Similarity
+				to Source: generalized Remarks: The code list does not contain any predefined
+				spaces, just the generic "space" type; however, the code list may be registered in a
+				Feature Concept Dictionary as listed values and as such can be expanded to include
+				all aspects of the legal context.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="space" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: space Definition: A volume which has a
+						particular characteristic which is logically delimited by instances of
+						"Volume". Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: restructured Remarks: To extend beyond the list of space types given
+						in this code list the generic "space" type may be used. Alternatively the
+						code list may be registered in a Feature Concept Dictionary as listed values
+						and as such can be expanded to include all space types. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_AbstractSpatialAttribute_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_AbstractSpatialAttribute"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_AbstractSpatialAttribute" type="lam:MG_AbstractSpatialAttribute_Type" substitutionGroup="lad:AbstractVersionedObject" abstract="true"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_AbstractSpatialAttribute_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Class Domain: MG Name: MG_AbstractSpatialAttribute Definition:
+				Provides a linkage to the spatial subtypes "Point", "Curve", "Surface", and "Volume"
+				. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to Source:
+				restructured Remarks: Geometric types are restricted to point, multi-point (only for
+				soundings), coverage (only for bathymetry and currents), curve (defined as a set of
+				vertices and circular arc "arcByCentrePoint" and "circleByCentrePoint"), surface and
+				volume in 2 ½ dimensions in order to ensure alignment with IHO S-100. This is an
+				abstract class. It is implemented through its subtypes "Point", "Curve", "Surface",
+				"Volume". This class supports a deliberate subset of the geometry types available in
+				ISO 19107 Spatial Schema in order to be compatible with IHO S-100 Universal
+				Hydrographic Model. This allows for simpler and more easily tested
+				implementations.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: name Data Type: GM_Object Definition:
+								This spatial attribute identifies the geometric primitive, as
+								defined in ISO 19107 Spatial Schema. Only the geometric primitives
+								point, curve, arcByCentrePoint and circleByCentrePoint, and surface
+								are used. Volume is constructed out of surface with a vertical
+								extent attribute. Remarks: This attribute makes a generic reference
+								to GM_Object from ISO 19107. If one is building a profile of the
+								model presented in this part (part 3) then any geometry allowed in
+								ISO 19107 may be used as subtypes to this abstract class; however,
+								only by alignment with the geometric compatibility constraint will
+								alignment with IHO S-100 be maintained. This attribute may be
+								overwritten by a particular type of spatial primitive in a subtype.
+								This attribute is used in IHO S-121 and is registered as an
+								attribute in the IHO register &lt;https://registry.iho.int/&gt; and
+								as such can be expanded within the IHO process. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. This attribute provides a global unique
+								identifier to be used at the implementation level. It parallels all
+								of the other IDs that each have their own namespaces. This ID can be
+								whatever the GIS system supporting the data requires. Reference: IHO
+								S-121 Definition Source: IHO S-121 Similarity to Source:
+								generalization Remarks: IHO provides guidance on the structure of
+								the MRN as a Globally Unique Identifier (GUID) based on the Uniform
+								Resource Identifier (URI) for those items under the jurisdiction of
+								the IHO. The type of URI used by IHO is a Universal Resource Name
+								(URN).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="saID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+					<!-- <xs:element name="saID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1"> -->
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: saID Data Type: Oid Definition: This
+								attribute is the identifier is the identifier of the
+								MG_AbstractSpatialAttributeType class using the "Oid" (Object ID) attribute.
+								The "Oid" comprises a unique character string and a namespace
+								identifier which is also a unique character string. It is an
+								abstract group ID that is further resolved into individual IDs for
+								MG_Point, MG-Curve, MG-Surface, and MG-Volume corresponding to
+								"Location", "Limit", "Zone", and "Volume". Remarks: This attribute
+								is used in IHO S-121 and is registered as an attribute in the IHO
+								register &lt;https://registry.iho.int/&gt; and as such can be
+								expanded within the IHO process.. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing a Spatial Information
+								Type.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Surface_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Surface"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Surface" type="lam:MG_Surface_Type" substitutionGroup="lam:MG_AbstractSpatialAttribute"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Surface_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Surface Definition: A spatial attribute that takes
+				on surface spatial geometry. Reference: IHO S-121 Definition Source: IHO S-121
+				Similarity to Source: generalized Remarks: Provides surface spatial geometry for a
+				Feature Unit in a consistent coordinate reference system. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractSpatialAttribute_Type">
+				<xs:sequence>
+					<xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="1" maxOccurs="1">
+						<!-- <xs:element name="geometry" type="gco:Geometry_PropertyType" minOccurs="1" maxOccurs="1"> -->
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: geometry Data Type: GM_Object =
+								GM_OrientableSurface Definition: This spatial attribute identifies
+								the geometric primitive to be GM_OrientableSurface. Remarks: This
+								spatial attribute overwrites the attribute geometry in the abstract
+								class MG_AbstractSpatialAttribute with the value "GM_OrientableSurface",
+								identifying surface geometry as defined in ISO 19107 Spatial Schema.
+								GM_OrientableSurface geometry as per IHO S100 Part 7 Spatial Schema.
+								This attribute is used in IHO S-121 and is registered as an
+								attribute in the IHO register &lt;https://registry.iho.int/&gt; and
+								as such can be expanded within the IHO process. Reference: IHO S-121
+								Definition Source: IHO S-100 Part 7 Similarity to Source:
+								restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_SurfaceAttributes_PropertyType">
+		<!-- <xs:complexType name="MG_Surface_Attributes_PropertyType"> -->
+		<xs:sequence>
+			<xs:element ref="lam:MG_SurfaceAttributes"/>
+			<!-- <xs:element ref="lam:MG_Surface_Attributes"/> -->
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_SurfaceAttributes" type="lam:MG_SurfaceAttributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/>
+	<!-- <xs:element name="MG_Surface_Attributes" type="lam:MG_Surface_Attributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_SurfaceAttributes_Type">
+		<!-- <xs:complexType name="MG_Surface_Attributes_Type"> -->
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_SurfaceAttributes (MG_SurfaceAttributes)Definition: Additional
+				attribute(s) that describe surface spatial geometry. Reference: IHO S-121 Definition
+				Source: IHO S-121 Similarity to Source: generalized Remarks: Additional spatial
+				information attributes provide information that augments surface spatial geometry.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractAdditionalSpatialInformation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Volume_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Volume"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Volume" type="lam:MG_Volume_Type" substitutionGroup="lam:MG_Surface"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Volume_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Volume Definition: This component is a subtype of
+				MG_Surface which describes a spatial attribute that takes on volume spatial
+				geometry. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to Source:
+				generalized Remarks: It provides volume spatial geometry for a Feature Unit in a
+				consistent coordinate reference system. A volume is represented in 2 1/2 dimensions
+				as a surface with a height above a reference or a textual
+				description.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_Surface_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_VolumeAttributes_PropertyType">
+		<!-- <xs:complexType name="MG_Volume_Attributes_PropertyType"> -->
+			<xs:sequence>
+			<xs:element ref="lam:MG_VolumeAttributes"/>
+				<!-- <xs:element ref="lam:MG_Volume_Attributes"/> -->
+			</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_VolumeAttributes" type="lam:MG_VolumeAttributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/>
+	<!-- <xs:element name="MG_Volume_Attributes" type="lam:MG_Volume_Attributes_Type" substitutionGroup="lam:MG_AbstractAdditionalSpatialInformation"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_VolumeAttributes_Type">
+		<!-- <xs:complexType name="MG_Volume_Attributes_Type"> -->
+			<xs:annotation>
+				<xs:documentation>Domain: MG Name: MG_VolumeAttributes (MG_Volume_Attributes)Definition: Additional
+				attribute(s) that describe volume spatial geometry. Reference: IHO S-121 Definition
+				Source: IHO S-121 Similarity to Source: generalized Remarks: Additional spatial
+				information attributes provide information that augments volume spatial geometry.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractAdditionalSpatialInformation_Type">
+				<xs:sequence>
+					<xs:element name="volumeVerticalExtent" type="gco:Distance_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: volumeVerticalExtent Data Type:
+								Distance Definition: The vertical extent of a volume established as
+								a distance measured against a vertical position reference point.
+								Remarks: Vertical extent is given in the units established through
+								units of measure. Vertical extent is given in the units established
+								through "units of measure" (uom) defined for distance. This
+								attribute is used in IHO S-121 and is registered as an attribute in
+								the IHO register &lt;https://registry.iho.int/&gt; and as such can
+								be expanded within the IHO process. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="volumeVerticalPosition" type="gml:PointPropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: volumeVerticalPosition Data Type:
+								GM_Point Definition: A reference point used to establish a bound for
+								the vertical extent of a volume. Remarks: GM_Point geometry as per
+								ISO 19107 Spatial Schema, defining a reference from which to measure
+								vertical extent. This attribute is used in IHO S-121 and is
+								registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Zone_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Zone"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Zone" type="lam:MG_Zone_Type" substitutionGroup="lam:MG_AbstractFeatureUnit"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Zone_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Zone Definition: A Feature Unit that takes on
+				surface spatial geometry. Reference: IHO S-121 Definition Source: IHO S-121
+				Similarity to Source: generalized Remarks: May be used to define areas or zones. A
+				zone is an object that defines an area which is logically delimited by instances of
+				"MG_Limit".</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractFeatureUnit_Type">
+				<xs:sequence>
+					<xs:element name="areaValue" type="lad:LA_AreaValue_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: areaValue Data Type: LA_AreaValue
+								Definition: The area value of the zone. Reference: ISO 19152-1
+								Definition Source: ISO 19152-1 Similarity to Source: subset
+								(operations not inherited) Remarks: This attribute make use of the
+								class LA_AreaValue from ISO 19152-1. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jurisdictionDomainType" type="lam:MG_JurisdictionDomainTypeList_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: jurisdictionDomainType Data Type:
+								MG_JurisdictionDomainTypeList Definition: Defines the vertical
+								juridical domain of the object delimited. Remarks: This code list is
+								generic. Specific code list values related to Marine Limits and
+								Boundaries have been for conformance class 1 and identified by the
+								stereotype &lt;MRN&gt;. This attribute is used in IHO S-121 and is
+								registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 for &lt;MRN&gt; items
+								Definition Source: IHO S-121 Similarity to Source:
+								generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="referencePoint" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: referencePoint Data Type: Point
+								(alias:GM_Point) Definition: The coordinates of a point inside the
+								zone spatial unit Remarks: This attribute is used in IHO S-121 and
+								is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="surfaceRelation" type="lad:LA_SurfaceRelationType_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: surfaceRelation Data Type:
+								LA_SurfaceRelationType Definition: Relationship to surface Remarks:
+								This attribute is used in IHO S-121 and is registered as an
+								attribute in the IHO register &lt;https://registry.iho.int/&gt; and
+								as such can be expanded within the IHO process. Reference: ISO
+								19152-1 Definition Source: ISO 19152-1 Similarity to Source:
+								identical </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zoneObjectType" type="lam:MG_ZoneTypeList_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: zoneObjectType Data Type:
+								MG_ZoneTypeList Definition: This attribute identifies which Feature
+								Unit ZoneObject type this object refers to based on the code list
+								"MG_ZoneTypeList". Remarks: This attribute is used in IHO S-121 and
+								is registered as an attribute in the IHO register
+								&lt;https://registry.iho.int/&gt; and as such can be expanded within
+								the IHO process. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zoneLimit" type="lam:MG_Limit_PropertyType" minOccurs="0" maxOccurs="unbounded">
+					<!-- <xs:element name="limit" type="lam:MG_Limit_PropertyType" minOccurs="0" maxOccurs="unbounded"> -->
+							<xs:annotation>
+							<xs:documentation>Limit spatial unit related to a
+								zone</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="limit" type="lam:MG_Limit_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Limit spatial unit related to a
+								zone</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="surface" type="lam:MG_Surface_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit associated with spatial characteristic
+								Surface.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="surAtt" type="lam:MG_SurfaceAttributes_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<!-- <xs:element name="surAtt" type="lam:MG_Surface_Attributes_PropertyType" minOccurs="1" maxOccurs="unbounded"> -->
+							<xs:annotation>
+							<xs:documentation>Feature Unit associated with Additional Spatial
+								Characteristics Surface Attrinutes.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_ZoneTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_ZoneTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_ZoneTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="MG_ZoneTypeList" type="lam:MG_ZoneTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_ZoneTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>Item Type: Code List Domain: MG Name: MG_AbstractFeatureUnitTypeList Code List
+				Type: open enumeration Definition: The code list MG_ZoneTypeList describes
+				categories that have a common characteristic related to the legal and administrative
+				aspects of the marine environment Reference: IHO S-121 for &lt;MLB&gt; items
+				Definition Source: IHO S-121 for &lt;MLB&gt; items Similarity to Source: generalized
+				Remarks: The code list is generic, but additional code list values have been
+				included based on the need to support IHO S-121. These are marked with a stereotype
+				&lt;MRN&gt;. The code list may be registered in a Feature Concept Dictionary as
+				listed values and as such can be expanded to include all aspects of the legal
+				context.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="archipelagicWaters" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: archipelagicWaters Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Article 49 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: Archipelagic waters are waters
+						enclosed by the archipelagic baselines drawn in accordance with Article 47.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contiguousZone" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: contiguousZone Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Part II, Section 4; IHO Hydrographic
+						Dictionary S-32: 993 Definition Source: UNCLOS ; IHO S-32, 5th Ed.
+						Similarity to Source: by reference Aux Reference: IHO Int1: N44, IHO S-4:
+						440.6 Remarks: Registered as a code list value in the IHO Geospatial
+						Information Registry &lt;https://registry.iho.int/&gt; This code list value
+						is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="continentalShelf" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: continentalShelf Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Part VI Definition Source: UNCLOS Similarity
+						to Source: by reference Aux Reference: IHO Int1: N 46, IHO S-4: 440.8
+						Remarks: Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt; This code list value is
+						particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exclusiveEconomicZone" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: exclusiveEconomicZone Definition: See the
+						UNCLOS reference. Reference: UNCLOS: Part V; IHO-S32:1723 Definition Source:
+						UNCLOS; IHO Hydrographic Dictionary S-32, 5th Ed. Similarity to Source: by
+						reference Aux Reference: IHO Int1: N47, IHO S-4: 440.9 Remarks: Registered
+						as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="highSeas" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: highSeas Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Part VII Definition Source: UNCLOS Similarity
+						to Source: by reference Remarks: Registered as a code list value in the IHO
+						Geospatial Information Registry &lt;https://registry.iho.int/&gt; This code
+						list value is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="internalWaters" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: internalWater Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Article 8; IHO-S32: 2484 Definition Source:
+						UNCLOS; IHO S-32, 5th Ed. Similarity to Source: by reference Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="roadsteads" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: roadsteads Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Article 12 Definition Source: UNCLOS
+						Similarity to Source: by reference Remarks: Registered as a code list value
+						in the IHO Geospatial Information Registry &lt;https://registry.iho.int/&gt;
+						This code list value is particular to the MLB domain and is marked with a
+						stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="territorialSea" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: territorialSea Definition: See the UNCLOS
+						reference. Reference: UNCLOS: Part II, Sections 1-3; IHO Hydrographic
+						Distionary S-32: 5360 Definition Source: UNCLOS IHO S-32, 5th Ed. Similarity
+						to Source: by reference Aux reference: IHO Int1: N43, S4: 440.5 Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="theArea" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: theArea Definition: See the UNCLOS reference.
+						Reference: UNCLOS: Part XI; IHO-S32: 227 Definition Source: UNCLOS; IHO
+						Hydrographic Dictionary S-32, 5th Ed. Similarity to Source: by reference
+						Remarks: Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt; This code list value is
+						particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zone" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: zone Definition: A surface (area) which has a
+						particular characteristic which is logically delimited by instances of
+						"Limit". Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: restructured Remarks: To extend beyond the list of zone types given
+						in this code list the generic "zone" type may be used. Alternatively the
+						code list may be registered in a Feature Concept Dictionary as listed values
+						and as such can be expanded to include all zone types. Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

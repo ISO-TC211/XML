@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:dqc="https://schemas.isotc211.org/19157/-1/dqc/1.0" 
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
 	targetNamespace="https://schemas.isotc211.org/19157/-1/dqc/1.0" 
 	elementFormDefault="qualified" 
-	version="1.0.1"
+	version="1.0.0"
 	>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
 	<!-- =========================================================================== -->
 	<xs:complexType name="AbstractDataQuality_PropertyType">
 		<xs:sequence minOccurs="0">
@@ -12,10 +14,14 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="AbstractDataQuality" type="dqc:AbstractDataQuality_Type" abstract="true"/>
+	<xs:element name="AbstractDataQuality" type="dqc:AbstractDataQuality_Type" substitutionGroup="gco:AbstractObject" abstract="true"/>
 	<!-- ........................................................................ -->
-	<xs:complexType name="AbstractDataQuality_Type">
-			<xs:sequence/>
+	<xs:complexType abstract="true" name="AbstractDataQuality_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="AbstractQualityElement_PropertyType">
@@ -24,10 +30,14 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="AbstractQualityElement" type="dqc:AbstractQualityElement_Type" abstract="true"/>
+	<xs:element name="AbstractQualityElement" type="dqc:AbstractQualityElement_Type" substitutionGroup="gco:AbstractObject" abstract="true"/>
 	<!-- ........................................................................ -->
-	<xs:complexType name="AbstractQualityElement_Type">
-		<xs:sequence/>
+	<xs:complexType abstract="true" name="AbstractQualityElement_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 </xs:schema>

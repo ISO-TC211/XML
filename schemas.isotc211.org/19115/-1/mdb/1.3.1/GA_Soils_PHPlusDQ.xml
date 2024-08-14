@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdb:MD_Metadata xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+    xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+    xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+    xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+    xmlns:mas="https://schemas.isotc211.org/19115/-1/mas/1.3"
+    xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+    xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3"
+    xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/1.3"
+    xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3"
+    xmlns:mex="https://schemas.isotc211.org/19115/-1/mex/1.3"
+    xmlns:mmi="https://schemas.isotc211.org/19115/-1/mmi/1.3"
+    xmlns:mpc="https://schemas.isotc211.org/19115/-1/mpc/1.3"
+    xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+    xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3"
+    xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+    xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+    xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
+    xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
+    xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/1.3"
+    xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+    xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+    xmlns:dqc="https://schemas.isotc211.org/19157/-1/dqc/1.0"
+    xmlns:dqm="https://schemas.isotc211.org/19157/-1/dqm/1.0"
+    xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0"
+    xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.2"
+    xmlns:cat="https://schemas.isotc211.org/19139/-/cat/1.2"
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+    https://schemas.isotc211.org/19103/-/gco/1.2 ../../../../19103/-/gco/1.2.0/gco.xsd
+    https://schemas.isotc211.org/19103/-/gcx/1.2 ../../../../19103/-/gcx/1.2.0/gcx.xsd
+    https://schemas.isotc211.org/19115/-1/cit/1.3 ../../../../19115/-1/cit/1.3.0/cit.xsd
+    https://schemas.isotc211.org/19115/-1/gex/1.3 ../../../../19115/-1/gex/1.3.1/gex.xsd
+    https://schemas.isotc211.org/19115/-1/lan/1.3 ../../../../19115/-1/lan/1.3.0/lan.xsd
+    https://schemas.isotc211.org/19115/-1/mas/1.3 ../../../../19115/-1/mas/1.3.0/mas.xsd
+    https://schemas.isotc211.org/19115/-1/mcc/1.3 ../../../../19115/-1/mcc/1.3.0/mcc.xsd
+    https://schemas.isotc211.org/19115/-1/mco/1.3 ../../../../19115/-1/mco/1.3.0/mco.xsd
+    https://schemas.isotc211.org/19115/-1/mda/1.3 ../../../../19115/-1/mda/1.3.1/mda.xsd
+    https://schemas.isotc211.org/19115/-1/mdb/1.3 ../../../../19115/-1/mdb/1.3.1/mdb.xsd
+    https://schemas.isotc211.org/19115/-1/mex/1.3 ../../../../19115/-1/mex/1.3.0/mex.xsd
+    https://schemas.isotc211.org/19115/-1/mmi/1.3 ../../../../19115/-1/mmi/1.3.0/mmi.xsd
+    https://schemas.isotc211.org/19115/-1/mpc/1.3 ../../../../19115/-1/mpc/1.3.0/mpc.xsd
+    https://schemas.isotc211.org/19115/-1/mrc/1.3 ../../../../19115/-1/mrc/1.3.0/mrc.xsd
+    https://schemas.isotc211.org/19115/-1/mrc/1.3 ../../../../19115/-2/mrc/2.2.0/contentInformationImagery.xsd
+    https://schemas.isotc211.org/19115/-1/mrd/1.3 ../../../../19115/-1/mrd/1.3.0/mrd.xsd
+    https://schemas.isotc211.org/19115/-1/mri/1.3 ../../../../19115/-1/mri/1.3.0/mri.xsd
+    https://schemas.isotc211.org/19115/-1/mrl/1.3 ../../../../19115/-1/mrl/1.3.0/mrl.xsd
+    https://schemas.isotc211.org/19115/-1/mrl/1.3 ../../../../19115/-2/mrl/2.2.0/lineageImagery.xsd
+    https://schemas.isotc211.org/19115/-1/mrs/1.3 ../../../../19115/-1/mrs/1.3.1/mrs.xsd
+    https://schemas.isotc211.org/19115/-1/msr/1.3 ../../../../19115/-1/msr/1.3.1/msr.xsd
+    https://schemas.isotc211.org/19115/-1/msr/1.3 ../../../../19115/-2/msr/2.2.1/spatialRepresentationImagery.xsd
+    https://schemas.isotc211.org/19115/-1/srv/1.3 ../../../../19115/-1/srv/1.3.0/srv.xsd
+    https://schemas.isotc211.org/19115/-2/mac/2.2 ../../../../19115/-2/mac/2.2.1/mac.xsd
+    https://schemas.isotc211.org/19111/-/rbc/3.1 ../../../../19111/-/rbc/3.1.1/rbc.xsd
+    https://schemas.isotc211.org/19157/-1/dqc/1.0 ../../../../19157/-1/dqc/1.0.1/dqc.xsd
+    https://schemas.isotc211.org/19157/-1/dqm/1.0 ../../../../19157/-1/dqm/1.0.0/dqm.xsd
+    https://schemas.isotc211.org/19157/-1/mdq/1.0 ../../../../19157/-1/mdq/1.0.1/mdq.xsd
+    https://schemas.isotc211.org/19110/-/gfc/2.2  ../../../../19110/-/gfc/2.2.0/gfc.xsd
+    https://schemas.isotc211.org/19139/-/cat/1.2  ../../../../19139/-/cat/1.2.0/cat.xsd
+    ">
+    <mdb:metadataIdentifier>
+        <mcc:MD_Identifier>
+            <mcc:authority>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>GeoNetwork UUID</gco:CharacterString>
+                    </cit:title>
+                </cit:CI_Citation>
+            </mcc:authority>
+            <mcc:code>
+                <gco:CharacterString>a05f7892-efb9-7506-e044-00144fdd4fa6</gco:CharacterString>
+            </mcc:code>
+            <mcc:codeSpace>
+                <gco:CharacterString>urn:uuid</gco:CharacterString>
+            </mcc:codeSpace>
+        </mcc:MD_Identifier>
+    </mdb:metadataIdentifier>
+    <mdb:defaultLocale>
+        <lan:PT_Locale id="EN">
+            <lan:language>
+                <lan:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+            </lan:language>
+            <lan:characterEncoding>
+                <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="utf8"/>
+            </lan:characterEncoding>
+        </lan:PT_Locale>
+    </mdb:defaultLocale>
+     <mdb:contact>
+        <cit:CI_Responsibility>
+            <cit:role>
+                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="pointOfContact"/>
+            </cit:role>
+            <cit:party>
+                <cit:CI_Organisation>
+                    <cit:name>
+                        <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+                    </cit:name>
+                    <cit:contactInfo>
+                        <cit:CI_Contact>
+                            <cit:phone>
+                                <cit:CI_Telephone>
+                                    <cit:number>
+                                        <gco:CharacterString>1800 800 173</gco:CharacterString>
+                                    </cit:number>
+                                    <cit:numberType>
+                                        <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                    </cit:numberType>
+                                </cit:CI_Telephone>
+                            </cit:phone>
+                            <cit:address>
+                                <cit:CI_Address>
+                                    <cit:deliveryPoint>
+                                        <gco:CharacterString>Cnr Jerrabomberra Ave and Hindmarsh Dr</gco:CharacterString>
+                                    </cit:deliveryPoint>
+                                    <cit:deliveryPoint>
+                                        <gco:CharacterString>GPO Box 378</gco:CharacterString>
+                                    </cit:deliveryPoint>
+                                    <cit:city>
+                                        <gco:CharacterString>Canberra</gco:CharacterString>
+                                    </cit:city>
+                                    <cit:administrativeArea>
+                                        <gco:CharacterString>ACT</gco:CharacterString>
+                                    </cit:administrativeArea>
+                                    <cit:postalCode>
+                                        <gco:CharacterString>2601</gco:CharacterString>
+                                    </cit:postalCode>
+                                    <cit:country>
+                                        <gco:CharacterString>Australia</gco:CharacterString>
+                                    </cit:country>
+                                    <cit:electronicMailAddress>
+                                        <gco:CharacterString>clientservices@ga.gov.au</gco:CharacterString>
+                                    </cit:electronicMailAddress>
+                                </cit:CI_Address>
+                            </cit:address>
+                        </cit:CI_Contact>
+                    </cit:contactInfo>
+                </cit:CI_Organisation>
+            </cit:party>
+        </cit:CI_Responsibility>
+    </mdb:contact>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date>
+                <gco:DateTime>2018-04-20T06:19:51</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="revision"/>
+            </cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date>
+                <gco:DateTime>2010-02-04T00:00:00</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation"/>
+            </cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+    <mdb:metadataStandard>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>AU/NZS ISO 19115-1:2014</gco:CharacterString>
+            </cit:title>
+        </cit:CI_Citation>
+    </mdb:metadataStandard>
+    <mdb:metadataStandard>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>ISO 19115-1:2014</gco:CharacterString>
+            </cit:title>
+        </cit:CI_Citation>
+    </mdb:metadataStandard>
+    <mdb:metadataStandard>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>ISO 19115-3</gco:CharacterString>
+            </cit:title>
+        </cit:CI_Citation>
+    </mdb:metadataStandard>
+    <mdb:metadataProfile>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>
+Geoscience Australia Community Metadata Profile of ISO 19115-1:2014
+</gco:CharacterString>
+            </cit:title>
+            <cit:edition>
+                <gco:CharacterString>Version 2.0, September 2018</gco:CharacterString>
+            </cit:edition>
+            <cit:identifier>
+                <mcc:MD_Identifier>
+                    <mcc:code>
+                        <gco:CharacterString>https://pid.geoscience.gov.au/dataset/ga/122551</gco:CharacterString>
+                    </mcc:code>
+                </mcc:MD_Identifier>
+            </cit:identifier>
+        </cit:CI_Citation>
+    </mdb:metadataProfile>
+    <mdb:alternativeMetadataReference>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>
+Geoscience Australia Products Catalogue (eCat) – Short identifier for metadata record.
+</gco:CharacterString>
+            </cit:title>
+            <cit:identifier>
+                <mcc:MD_Identifier>
+                    <mcc:code>
+                        <gco:CharacterString>70105</gco:CharacterString>
+                    </mcc:code>
+                    <mcc:codeSpace>
+                        <gco:CharacterString>eCatId</gco:CharacterString>
+                    </mcc:codeSpace>
+                </mcc:MD_Identifier>
+            </cit:identifier>
+        </cit:CI_Citation>
+    </mdb:alternativeMetadataReference>
+    <mdb:metadataLinkage
+        
+       >
+        <cit:CI_OnlineResource>
+            <cit:linkage>
+                <gco:CharacterString>
+https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9-7506-e044-00144fdd4fa6
+</gco:CharacterString>
+            </cit:linkage>
+            <cit:protocol gco:nilReason="missing">
+                <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode"/>
+            </cit:protocol>
+            <cit:function>
+                <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="completeMetadata"/>
+            </cit:function>
+        </cit:CI_OnlineResource>
+    </mdb:metadataLinkage>
+    <mdb:referenceSystemInfo><mrs:MD_ReferenceSystem>
+        <mrs:referenceSystemIdentifier><mcc:MD_Identifier>
+            <mcc:authority><cit:CI_Citation>
+                <cit:title><gco:CharacterString>International Association of Oil and Gas Producers</gco:CharacterString></cit:title>
+            </cit:CI_Citation></mcc:authority>
+            <mcc:code><gco:CharacterString>EPSG::3112</gco:CharacterString></mcc:code>
+            <mcc:description><gco:CharacterString>Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: m</gco:CharacterString></mcc:description>
+        </mcc:MD_Identifier></mrs:referenceSystemIdentifier>
+        <mrs:referenceSystemType></mrs:referenceSystemType>
+    </mrs:MD_ReferenceSystem></mdb:referenceSystemInfo>
+    <mdb:identificationInfo>
+        <mri:MD_DataIdentification>
+            <mri:citation>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>Preliminary Soil pH map of Australia</gco:CharacterString>
+                    </cit:title>
+                    <cit:date>
+                        <cit:CI_Date>
+                            <cit:date>
+                                <gco:DateTime>2010-01-01T00:00:00</gco:DateTime>
+                            </cit:date>
+                            <cit:dateType>
+                                <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication"/>
+                            </cit:dateType>
+                        </cit:CI_Date>
+                    </cit:date>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gco:CharacterString>https://pid.geoscience.gov.au/dataset/ga/70105</gco:CharacterString>
+                            </mcc:code>
+                            <mcc:codeSpace>
+                                <gco:CharacterString>Geoscience Australia Persistent Identifier</gco:CharacterString>
+                            </mcc:codeSpace>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                    <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                            <cit:role>
+                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author"/>
+                            </cit:role>
+                            <cit:party>
+                                <cit:CI_Individual>
+                                    <cit:name>
+                                        <gco:CharacterString>de Caritat, P.</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:contactInfo>
+                                        <cit:CI_Contact>
+                                            <cit:contactInstructions>
+                                                <gco:CharacterString>1st contact</gco:CharacterString>
+                                            </cit:contactInstructions>
+                                        </cit:CI_Contact>
+                                    </cit:contactInfo>
+                                </cit:CI_Individual>
+                            </cit:party>
+                        </cit:CI_Responsibility>
+                    </cit:citedResponsibleParty>
+                    <cit:citedResponsibleParty>
+                        <cit:CI_Responsibility>
+                            <cit:role>
+                                <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="author"/>
+                            </cit:role>
+                            <cit:party>
+                                <cit:CI_Individual>
+                                    <cit:name>
+                                        <gco:CharacterString>Cooper, M.</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:contactInfo>
+                                        <cit:CI_Contact>
+                                            <cit:contactInstructions>
+                                                <gco:CharacterString>2nd contact</gco:CharacterString>
+                                            </cit:contactInstructions>
+                                        </cit:CI_Contact>
+                                    </cit:contactInfo>
+                                </cit:CI_Individual>
+                            </cit:party>
+                        </cit:CI_Responsibility>
+                    </cit:citedResponsibleParty>
+                    <cit:series>
+                        <cit:CI_Series>
+                            <cit:issueIdentification>
+                                <gco:CharacterString>2010</gco:CharacterString>
+                            </cit:issueIdentification>
+                        </cit:CI_Series>
+                    </cit:series>
+                    <cit:ISBN>
+                        <gco:CharacterString>9781921672620</gco:CharacterString>
+                    </cit:ISBN>
+                </cit:CI_Citation>
+            </mri:citation>
+            <mri:abstract>
+                <gco:CharacterString>
+                    Data gathered in the field during the sample collection phase of the National Geochemical Survey of Australia (NGSA) has been used to compile the Preliminary Soil pH map of Australia. 
+                    The map, which was completed in late 2009, offers a first-order estimate of where acid or alkaline soil conditions are likely to be expected. 
+                    It provides fundamental datasets that can be used for mineral exploration and resource potential evaluation, environmental monitoring, landuse policy development, and geomedical studies into the health of humans, animals and plants.
+</gco:CharacterString>
+            </mri:abstract>
+            <mri:pointOfContact>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian"/>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Organisation>
+                            <cit:name>
+                                <gco:CharacterString>Geoscience Australia: MNHD</gco:CharacterString>
+                            </cit:name>
+                            <cit:individual>
+                                <cit:CI_Individual>
+                                    <cit:name>
+                                        <gco:CharacterString>DE CARITAT, P</gco:CharacterString>
+                                    </cit:name>
+                                </cit:CI_Individual>
+                            </cit:individual>
+                        </cit:CI_Organisation>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </mri:pointOfContact>
+            <mri:pointOfContact>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="owner"/>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Organisation>
+                            <cit:name>
+                                <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+                            </cit:name>
+                        </cit:CI_Organisation>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </mri:pointOfContact>
+            <mri:pointOfContact>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="custodian"/>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Organisation>
+                            <cit:name>
+                                <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+                            </cit:name>
+                            <cit:contactInfo>
+                                <cit:CI_Contact>
+                                    <cit:phone>
+                                        <cit:CI_Telephone>
+                                            <cit:number>
+                                                <gco:CharacterString>1800 800 173</gco:CharacterString>
+                                            </cit:number>
+                                            <cit:numberType>
+                                                <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                            </cit:numberType>
+                                        </cit:CI_Telephone>
+                                    </cit:phone>
+                                    <cit:address>
+                                        <cit:CI_Address>
+                                            <cit:deliveryPoint>
+                                                <gco:CharacterString>Cnr Jerrabomberra Ave and Hindmarsh Dr GPO Box 378</gco:CharacterString>
+                                            </cit:deliveryPoint>
+                                            <cit:city>
+                                                <gco:CharacterString>Canberra</gco:CharacterString>
+                                            </cit:city>
+                                            <cit:administrativeArea>
+                                                <gco:CharacterString>ACT</gco:CharacterString>
+                                            </cit:administrativeArea>
+                                            <cit:postalCode>
+                                                <gco:CharacterString>2601</gco:CharacterString>
+                                            </cit:postalCode>
+                                            <cit:country>
+                                                <gco:CharacterString>Australia</gco:CharacterString>
+                                            </cit:country>
+                                            <cit:electronicMailAddress>
+                                                <gco:CharacterString>clientservices@ga.gov.au</gco:CharacterString>
+                                            </cit:electronicMailAddress>
+                                        </cit:CI_Address>
+                                    </cit:address>
+                                </cit:CI_Contact>
+                            </cit:contactInfo>
+                            <cit:individual>
+                                <cit:CI_Individual>
+                                    <cit:positionName>
+                                        <gco:CharacterString>Manager Client Services</gco:CharacterString>
+                                    </cit:positionName>
+                                </cit:CI_Individual>
+                            </cit:individual>
+                        </cit:CI_Organisation>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </mri:pointOfContact>
+            <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="textTable">textTable</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
+            <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
+            <mri:spatialResolution><mri:MD_Resolution>
+                <mri:distance><gco:Distance uom="metre">250</gco:Distance></mri:distance>
+            </mri:MD_Resolution></mri:spatialResolution>
+            <mri:topicCategory>
+                <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
+            </mri:topicCategory>
+            <mri:extent>
+                <gex:EX_Extent>
+                    <gex:description><gco:CharacterString>Australia</gco:CharacterString></gex:description>
+                    <gex:geographicElement><gex:EX_GeographicDescription>
+                        <gex:geographicIdentifier><mcc:MD_Identifier>
+                            <mcc:code><gco:CharacterString>Australia excluding external territories</gco:CharacterString></mcc:code>
+                        </mcc:MD_Identifier></gex:geographicIdentifier>
+                    </gex:EX_GeographicDescription></gex:geographicElement>
+                    <gex:geographicElement>
+                        <gex:EX_GeographicBoundingBox>
+                            <gex:westBoundLongitude>
+                                <gco:Decimal>112.0</gco:Decimal>
+                            </gex:westBoundLongitude>
+                            <gex:eastBoundLongitude>
+                                <gco:Decimal>156.0</gco:Decimal>
+                            </gex:eastBoundLongitude>
+                            <gex:southBoundLatitude>
+                                <gco:Decimal>-44.0</gco:Decimal>
+                            </gex:southBoundLatitude>
+                            <gex:northBoundLatitude>
+                                <gco:Decimal>-10.0</gco:Decimal>
+                            </gex:northBoundLatitude>
+                        </gex:EX_GeographicBoundingBox>
+                    </gex:geographicElement>
+                </gex:EX_Extent>
+            </mri:extent>
+            <mri:resourceMaintenance>
+                <mmi:MD_MaintenanceInformation>
+                    <mmi:maintenanceAndUpdateFrequency>
+                        <mmi:MD_MaintenanceFrequencyCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mmi.MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/>
+                    </mmi:maintenanceAndUpdateFrequency>
+                </mmi:MD_MaintenanceInformation>
+            </mri:resourceMaintenance>
+            <mri:resourceFormat><mrd:MD_Format>
+                <mrd:formatSpecificationCitation><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Portable Document Format (PDF)</gco:CharacterString></cit:title>
+                    <cit:edition><gco:CharacterString>1.6</gco:CharacterString></cit:edition>
+                    <cit:citedResponsibleParty><cit:CI_Responsibility>
+                        <cit:role><cit:CI_RoleCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_RoleCode" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                        <cit:party><cit:CI_Organisation>
+                            <cit:name><gco:CharacterString>ADOBE Inc</gco:CharacterString></cit:name>
+                        </cit:CI_Organisation></cit:party>
+                    </cit:CI_Responsibility></cit:citedResponsibleParty>
+                </cit:CI_Citation></mrd:formatSpecificationCitation>
+                <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
+                </mrd:MD_Format></mri:resourceFormat>
+                <mri:resourceFormat><mrd:MD_Format>
+                    <mrd:formatSpecificationCitation><cit:CI_Citation>
+                        <cit:title><gco:CharacterString>Comma Delimitted Format (CSV)</gco:CharacterString></cit:title>
+                        <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
+                    </cit:CI_Citation></mrd:formatSpecificationCitation>
+                    <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
+                </mrd:MD_Format></mri:resourceFormat>
+                <mri:resourceFormat><mrd:MD_Format>
+                    <mrd:formatSpecificationCitation><cit:CI_Citation>
+                        <cit:title><gco:CharacterString>ASCII text (TXT)</gco:CharacterString></cit:title>
+                        <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
+                    </cit:CI_Citation></mrd:formatSpecificationCitation>
+                    <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
+                </mrd:MD_Format></mri:resourceFormat>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>Data Package</gco:CharacterString>
+                    </mri:keyword>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>soils</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>mapping</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>environmental</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>mineral exploration</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:type>
+                        <mri:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mri.MD_KeywordTypeCode" codeListValue="theme"/>
+                    </mri:type>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>AU</gco:CharacterString>
+                    </mri:keyword>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>Earth Sciences</gco:CharacterString>
+                    </mri:keyword>
+                    <mri:thesaurusName>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>
+Australian and New Zealand Standard Research Classification (ANZSRC)
+</gco:CharacterString>
+                            </cit:title>
+                            <cit:date>
+                                <cit:CI_Date>
+                                    <cit:date>
+                                        <gco:DateTime>2008-03-31T00:00:00+11:00</gco:DateTime>
+                                    </cit:date>
+                                    <cit:dateType>
+                                        <cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication"/>
+                                    </cit:dateType>
+                                </cit:CI_Date>
+                            </cit:date>
+                            <cit:citedResponsibleParty>
+                                <cit:CI_Responsibility>
+                                    <cit:role>
+                                        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="owner"/>
+                                    </cit:role>
+                                    <cit:party>
+                                        <cit:CI_Organisation>
+                                            <cit:name>
+                                                <gco:CharacterString>Australian Bureau of Statistics (ABS)</gco:CharacterString>
+                                            </cit:name>
+                                            <cit:contactInfo>
+                                                <cit:CI_Contact>
+                                                  <cit:onlineResource>
+                                                  <cit:CI_OnlineResource>
+                                                  <cit:linkage>
+                                                  <gco:CharacterString>
+                                                      http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&amp;tabname=Summary&amp;prodno=1297.0&amp;issue=2008</gco:CharacterString>
+                                                  </cit:linkage>
+                                                  <cit:protocol gco:nilReason="missing">
+                                                  <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode"/>
+                                                  </cit:protocol>
+                                                  </cit:CI_OnlineResource>
+                                                  </cit:onlineResource>
+                                                </cit:CI_Contact>
+                                            </cit:contactInfo>
+                                        </cit:CI_Organisation>
+                                    </cit:party>
+                                </cit:CI_Responsibility>
+                            </cit:citedResponsibleParty>
+                            <cit:ISBN>
+                                <gco:CharacterString>9780642483584</gco:CharacterString>
+                            </cit:ISBN>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>
+                                            http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&amp;tabname=Summary&amp;prodno=1297.0&amp;issue=2008</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol gco:nilReason="missing">
+                                        <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode"/>
+                                    </cit:protocol>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mri:thesaurusName>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:descriptiveKeywords>
+                <mri:MD_Keywords>
+                    <mri:keyword>
+                        <gco:CharacterString>Published_External</gco:CharacterString>
+                    </mri:keyword>
+                </mri:MD_Keywords>
+            </mri:descriptiveKeywords>
+            <mri:resourceConstraints>
+                <mco:MD_LegalConstraints uuid="urn:ga-licences:232">
+                    <mco:reference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>
+Creative Commons Attribution 4.0 International Licence
+</gco:CharacterString>
+                            </cit:title>
+                            <cit:alternateTitle>
+                                <gco:CharacterString>CC-BY</gco:CharacterString>
+                            </cit:alternateTitle>
+                            <cit:edition>
+                                <gco:CharacterString>4.0</gco:CharacterString>
+                            </cit:edition>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>http://creativecommons.org/licenses/</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode">WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mco:reference>
+                    <mco:accessConstraints>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="license"/>
+                    </mco:accessConstraints>
+                    <mco:useConstraints>
+                        <mco:MD_RestrictionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_RestrictionCode" codeListValue="license"/>
+                    </mco:useConstraints>
+                </mco:MD_LegalConstraints>
+            </mri:resourceConstraints>
+            <mri:resourceConstraints>
+                <mco:MD_SecurityConstraints>
+                    <mco:reference>
+                        <cit:CI_Citation>
+                            <cit:title>
+                                <gco:CharacterString>
+Australian Government Security ClassificationSystem
+</gco:CharacterString>
+                            </cit:title>
+                            <cit:editionDate>
+                                <gco:DateTime>2018-11-01T00:00:00</gco:DateTime>
+                            </cit:editionDate>
+                            <cit:onlineResource>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>
+https://www.protectivesecurity.gov.au/Pages/default.aspx
+</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode">WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mco:reference>
+                    <mco:classification>
+                        <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="unclassified"/>
+                    </mco:classification>
+                </mco:MD_SecurityConstraints>
+            </mri:resourceConstraints>
+            <mri:defaultLocale>
+                <lan:PT_Locale id="ENG">
+                    <lan:language>
+                        <lan:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+                    </lan:language>
+                    <lan:characterEncoding>
+                        <lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="utf8"/>
+                    </lan:characterEncoding>
+                </lan:PT_Locale>
+            </mri:defaultLocale>
+        </mri:MD_DataIdentification>
+    </mdb:identificationInfo>
+    <mdb:distributionInfo>
+        <mrd:MD_Distribution>
+            <mrd:distributor>
+                <mrd:MD_Distributor>
+                    <mrd:distributorContact>
+                        <cit:CI_Responsibility>
+                            <cit:role>
+                                <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="distributor"/>
+                            </cit:role>
+                            <cit:party>
+                                <cit:CI_Organisation>
+                                    <cit:name>
+                                        <gco:CharacterString>Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:contactInfo>
+                                        <cit:CI_Contact>
+                                            <cit:phone>
+                                                <cit:CI_Telephone>
+                                                  <cit:number>
+                                                  <gco:CharacterString>1800 800 173</gco:CharacterString>
+                                                  </cit:number>
+                                                  <cit:numberType>
+                                                      <cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                                  </cit:numberType>
+                                                </cit:CI_Telephone>
+                                            </cit:phone>
+                                            <cit:address>
+                                                <cit:CI_Address>
+                                                  <cit:deliveryPoint>
+                                                  <gco:CharacterString>Cnr Jerrabomberra Ave and Hindmarsh Dr</gco:CharacterString>
+                                                  </cit:deliveryPoint>
+                                                  <cit:deliveryPoint>
+                                                  <gco:CharacterString>GPO Box 378</gco:CharacterString>
+                                                  </cit:deliveryPoint>
+                                                  <cit:city>
+                                                  <gco:CharacterString>Canberra</gco:CharacterString>
+                                                  </cit:city>
+                                                  <cit:administrativeArea>
+                                                  <gco:CharacterString>ACT</gco:CharacterString>
+                                                  </cit:administrativeArea>
+                                                  <cit:postalCode>
+                                                  <gco:CharacterString>2601</gco:CharacterString>
+                                                  </cit:postalCode>
+                                                  <cit:country>
+                                                  <gco:CharacterString>Australia</gco:CharacterString>
+                                                  </cit:country>
+                                                  <cit:electronicMailAddress>
+                                                  <gco:CharacterString>clientservices@ga.gov.au</gco:CharacterString>
+                                                  </cit:electronicMailAddress>
+                                                </cit:CI_Address>
+                                            </cit:address>
+                                        </cit:CI_Contact>
+                                    </cit:contactInfo>
+                                </cit:CI_Organisation>
+                            </cit:party>
+                        </cit:CI_Responsibility>
+                    </mrd:distributorContact>
+                </mrd:MD_Distributor></mrd:distributor>
+            <mrd:transferOptions><mrd:MD_DigitalTransferOptions>
+                            <mrd:onLine>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>https://d28rz98at9flks.cloudfront.net/70105/70105_NGSA.zip</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode">WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                    <cit:name>
+                                        <gco:CharacterString>Preliminary Soil pH map of Australia ZIPPED multiple files</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:description>
+                                        <gco:CharacterString>Zipped collection of maps (PDF) tabular data (CSV) and text files (TXT)</gco:CharacterString>
+                                    </cit:description>
+                                    <cit:function>
+                                        <cit:CI_OnLineFunctionCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="information"/>
+                                    </cit:function>
+                                </cit:CI_OnlineResource>
+                            </mrd:onLine>
+                <mrd:distributionFormat><mrd:MD_Format>
+                    <mrd:formatSpecificationCitation><cit:CI_Citation>
+                        <cit:title><gco:CharacterString>Portable Document Format (PDF)</gco:CharacterString></cit:title>
+                        <cit:edition><gco:CharacterString>1.6</gco:CharacterString></cit:edition>
+                        <cit:citedResponsibleParty><cit:CI_Responsibility>
+                            <cit:role><cit:CI_RoleCode codeList="" codeListValue="rightsHolder">rightsHolder</cit:CI_RoleCode></cit:role>
+                            <cit:party><cit:CI_Organisation>
+                                <cit:name><gco:CharacterString>ADOBE Inc</gco:CharacterString></cit:name>
+                            </cit:CI_Organisation></cit:party>
+                        </cit:CI_Responsibility></cit:citedResponsibleParty>
+                    </cit:CI_Citation></mrd:formatSpecificationCitation>
+                    <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
+                </mrd:MD_Format></mrd:distributionFormat>
+                <mrd:distributionFormat><mrd:MD_Format>
+                    <mrd:formatSpecificationCitation><cit:CI_Citation>
+                        <cit:title><gco:CharacterString>Comma Delimitted Format (CSV)</gco:CharacterString></cit:title>
+                        <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
+                     </cit:CI_Citation></mrd:formatSpecificationCitation>
+                    <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
+                </mrd:MD_Format></mrd:distributionFormat>
+                <mrd:distributionFormat><mrd:MD_Format>
+                    <mrd:formatSpecificationCitation><cit:CI_Citation>
+                        <cit:title><gco:CharacterString>ASCII text (TXT)</gco:CharacterString></cit:title>
+                        <cit:edition><gco:CharacterString>1.0</gco:CharacterString></cit:edition>
+                    </cit:CI_Citation></mrd:formatSpecificationCitation>
+                    <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
+                </mrd:MD_Format></mrd:distributionFormat>
+            </mrd:MD_DigitalTransferOptions>
+            </mrd:transferOptions>
+        </mrd:MD_Distribution>
+    </mdb:distributionInfo>
+      <!-- Data quality - BEGIN -->
+    <!-- OPTIONAL [0..*] useful if a formal data quality assessment has been made -->
+    <!-- MD_DataQuality examples provided in Annex D of ISO 19157-1 -->
+    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.12
+    It presents an example of how to report the quantitative results, derived conformance result and aggregated conformance result 
+    for the transport network feature types.-->
+    <mdb:dataQualityInfo><mdq:DataQuality>
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+        </mcc:MD_Scope></mdq:scope>
+        <mdq:report><mdq:Commission id="quantitative_commission">
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:measureIdentification><mcc:MD_Identifier>
+                    <mcc:code><gco:CharacterString>2</gco:CharacterString></mcc:code>
+                </mcc:MD_Identifier></mdq:measureIdentification>
+                <mdq:nameOfMeasure><gco:CharacterString>number of excess items</gco:CharacterString></mdq:nameOfMeasure>
+                <mdq:measureDescription><gco:CharacterString>Number of items within the dataset that should not have been in the dataset</gco:CharacterString></mdq:measureDescription>
+            </mdq:MeasureReference></mdq:measure>
+            <mdq:evaluationMethod><mdq:FullInspection>
+                <mdq:evaluationMethodDescription><gco:CharacterString>Compare count of items in the dataset against count of items in universe of discourse.</gco:CharacterString></mdq:evaluationMethodDescription>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+            </mdq:FullInspection></mdq:evaluationMethod>
+            <mdq:result><mdq:QuantitativeResult>
+                <mdq:resultScope><mcc:MD_Scope>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:levelDescription><mcc:MD_ScopeDescription>
+                        <mcc:features><gco:CharacterString>path</gco:CharacterString></mcc:features>
+                    </mcc:MD_ScopeDescription></mcc:levelDescription>
+                </mcc:MD_Scope></mdq:resultScope>
+                <mdq:value><gco:Record>
+                    <gco:field><gco:Field>
+                        <gco:value><gco:CharacterString>2</gco:CharacterString></gco:value>
+                    </gco:Field></gco:field>
+                </gco:Record></mdq:value>
+                <mdq:valueUnit><gco:UomScale>none</gco:UomScale></mdq:valueUnit>
+            </mdq:QuantitativeResult></mdq:result>
+        </mdq:Commission></mdq:report>
+        <mdq:report><mdq:Commission id="conformance_commission">
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:measureIdentification><mcc:MD_Identifier>
+                    <mcc:code><gco:CharacterString>1</gco:CharacterString></mcc:code>
+                </mcc:MD_Identifier></mdq:measureIdentification>
+                <mdq:nameOfMeasure><gco:CharacterString>number of excess items</gco:CharacterString></mdq:nameOfMeasure>
+                <mdq:measureDescription><gco:CharacterString>indication that an item is incorrectly present in the data</gco:CharacterString></mdq:measureDescription>
+            </mdq:MeasureReference></mdq:measure>
+            <mdq:evaluationMethod><mdq:AggregationDerivation>
+                <mdq:evaluationMethodDescription><gco:CharacterString>derivation from quantitatve result</gco:CharacterString></mdq:evaluationMethodDescription>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+            </mdq:AggregationDerivation></mdq:evaluationMethod>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:resultScope><mcc:MD_Scope>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="feature">feature</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:levelDescription><mcc:MD_ScopeDescription>
+                        <mcc:features><gco:CharacterString>path</gco:CharacterString></mcc:features>
+                    </mcc:MD_ScopeDescription></mcc:levelDescription>
+                </mcc:MD_Scope></mdq:resultScope>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
+                <cit:date><cit:CI_Date>
+                    <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:resultScope><mcc:MD_Scope>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:levelDescription><mcc:MD_ScopeDescription>
+                        <mcc:features><gco:CharacterString>road</gco:CharacterString></mcc:features>
+                    </mcc:MD_ScopeDescription></mcc:levelDescription>
+                </mcc:MD_Scope></mdq:resultScope>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
+                <cit:date><cit:CI_Date>
+                    <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+            <mdq:derivedElement xlink:href="#conformance_commission"></mdq:derivedElement>
+        </mdq:Commission></mdq:report>
+        <mdq:qualityEvaluationReport><mdq:QualityEvaluationReportInformation>
+            <mdq:reportReference><cit:CI_Citation>
+                <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.12</gco:CharacterString></cit:title>
+                <cit:date><cit:CI_Date>
+                    <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                </cit:CI_Date></cit:date>
+            </cit:CI_Citation></mdq:reportReference>
+            <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing more details on the derivation and aggregation method.</gco:CharacterString></mdq:abstract>
+        </mdq:QualityEvaluationReportInformation></mdq:qualityEvaluationReport>
+    </mdq:DataQuality></mdb:dataQualityInfo>
+    <mdb:dataQualityInfo><mdq:DataQuality id="agg_commission1">
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+            <mcc:levelDescription><mcc:MD_ScopeDescription>
+                <mcc:features><gco:CharacterString>transportNetwork (road and path)</gco:CharacterString></mcc:features>
+            </mcc:MD_ScopeDescription></mcc:levelDescription>
+        </mcc:MD_Scope></mdq:scope>
+        <mdq:report><mdq:Commission>
+            <!-- measure concept missing --><mdq:measure/>
+             <mdq:evaluationMethod><mdq:AggregationDerivation>
+                <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass  fail aggregation of the conformance commission result for roads and paths</gco:CharacterString></mdq:evaluationMethodDescription>
+                 <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationProcedure><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:evaluationProcedure>
+            </mdq:AggregationDerivation></mdq:evaluationMethod>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be missing from each feature type.</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+            <mdq:derivedElement xlink:href="#conformance_commission"/>
+        </mdq:Commission></mdq:report>
+    </mdq:DataQuality></mdb:dataQualityInfo>
+    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.13
+    It presents an example of how to report the derived conformance results and aggregated conformance result 
+    for the buildings feature types.-->
+    <mdb:dataQualityInfo><mdq:DataQuality>
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+        </mcc:MD_Scope></mdq:scope>
+        <mdq:report><mdq:ThematicClassificationCorrectness id="conformance_classification">
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:measureIdentification><mcc:MD_Identifier>
+                    <mcc:code><gco:CharacterString>60</gco:CharacterString></mcc:code>
+                </mcc:MD_Identifier></mdq:measureIdentification>
+                <mdq:nameOfMeasure><gco:CharacterString>number of incorrectly classified features</gco:CharacterString></mdq:nameOfMeasure>
+             </mdq:MeasureReference></mdq:measure>
+            <mdq:evaluationMethod><mdq:AggregationDerivation>
+                <mdq:evaluationMethodDescription><gco:CharacterString>Derivation from quantitative results reported in qyuality evaluation report.</gco:CharacterString></mdq:evaluationMethodDescription>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+            </mdq:AggregationDerivation></mdq:evaluationMethod>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:resultScope><mcc:MD_Scope>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:levelDescription><mcc:MD_ScopeDescription>
+                        <mcc:features><gco:CharacterString>industrial building</gco:CharacterString></mcc:features>
+                    </mcc:MD_ScopeDescription></mcc:levelDescription>
+                </mcc:MD_Scope></mdq:resultScope>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:explanation><gco:CharacterString>The original quantitative result is provided in ... of the quality evaluation report</gco:CharacterString></mdq:explanation>
+                <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:resultScope><mcc:MD_Scope>
+                    <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+                    <mcc:levelDescription><mcc:MD_ScopeDescription>
+                        <mcc:features><gco:CharacterString>house</gco:CharacterString></mcc:features>
+                    </mcc:MD_ScopeDescription></mcc:levelDescription>
+                </mcc:MD_Scope></mdq:resultScope>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:explanation><gco:CharacterString>The original quantitative result is provided in the quality evaluation report</gco:CharacterString></mdq:explanation>
+                <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+        </mdq:ThematicClassificationCorrectness></mdq:report>
+         <mdq:qualityEvaluationReport><mdq:QualityEvaluationReportInformation>
+            <mdq:reportReference><cit:CI_Citation>
+                <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.13</gco:CharacterString></cit:title>
+                <cit:date><cit:CI_Date>
+                    <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                </cit:CI_Date></cit:date>
+            </cit:CI_Citation></mdq:reportReference>
+            <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing all the quantitative results 
+                which are not provided in the metadata, 
+                and more details on the derivation and aggregation method.</gco:CharacterString></mdq:abstract>
+        </mdq:QualityEvaluationReportInformation></mdq:qualityEvaluationReport>
+    </mdq:DataQuality></mdb:dataQualityInfo>
+    <mdb:dataQualityInfo><mdq:DataQuality id="agg_commission2">
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="featureType">featureType</mcc:MD_ScopeCode></mcc:level>
+            <mcc:levelDescription><mcc:MD_ScopeDescription>
+                <mcc:features><gco:CharacterString>buildings (industrial and house)</gco:CharacterString></mcc:features>
+            </mcc:MD_ScopeDescription></mcc:levelDescription>
+        </mcc:MD_Scope></mdq:scope>
+        <mdq:report><mdq:Commission>
+            <!-- "measure" missing from D.13 in standard -->
+            <mdq:measure></mdq:measure>
+            <mdq:evaluationMethod><mdq:AggregationDerivation>
+                <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregation of the conformance classification correctness result for inductrial buildings and houses</gco:CharacterString></mdq:evaluationMethodDescription>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationProcedure><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:evaluationProcedure>
+            </mdq:AggregationDerivation></mdq:evaluationMethod>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification. Maximum of two items can be miss-classified.</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:pass><gco:Boolean>true</gco:Boolean></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+            <mdq:derivedElement xlink:href="#conformance_classification"/>
+        </mdq:Commission></mdq:report>
+    </mdq:DataQuality></mdb:dataQualityInfo>
+    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.14
+    It presents an example of how to express conformance to the data product specification 
+    by aggregating the results for the different requirements.-->
+    <mdb:dataQualityInfo><mdq:DataQuality>
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+        </mcc:MD_Scope></mdq:scope>
+        <!-- have substituted "Confidence" in for incorrect class name in example -->
+        <mdq:report><mdq:Confidence id="aggregate">
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:measureIdentification><mcc:MD_Identifier>
+                    <mcc:code><gco:CharacterString>101</gco:CharacterString></mcc:code>
+                </mcc:MD_Identifier></mdq:measureIdentification>
+                <mdq:nameOfMeasure><gco:CharacterString>data product specification passed</gco:CharacterString></mdq:nameOfMeasure>
+                <mdq:measureDescription><gco:CharacterString>Indication that all requirements in the referrence data product specification are fulfilled.</gco:CharacterString></mdq:measureDescription>
+            </mdq:MeasureReference></mdq:measure>
+            <mdq:evaluationMethod><mdq:AggregationDerivation>
+                <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregate of each conformance result for the requirement expressed in the data product specification.</gco:CharacterString></mdq:evaluationMethodDescription>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationProcedure><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Aggregation of data quality results</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:evaluationProcedure>
+            </mdq:AggregationDerivation></mdq:evaluationMethod>
+            <mdq:result><mdq:ConformanceResult>
+                <mdq:specification><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Data product specification.</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2010-07-10</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:specification>
+                <mdq:explanation><gco:CharacterString>3 requirements out of 11 are not fulfilled: the dataset is not conformant</gco:CharacterString></mdq:explanation>
+                <mdq:pass></mdq:pass>
+            </mdq:ConformanceResult></mdq:result>
+            <mdq:derivedElement xlink:href="#agg_commission1"/>
+            <mdq:derivedElement xlink:href="#agg_commission2"/>
+            <mdq:derivedElement xlink:href="#agg_commission3"/>
+            <mdq:derivedElement xlink:href="#agg_commission4"/>
+            <mdq:derivedElement xlink:href="#agg_commission5"/>
+            <mdq:derivedElement xlink:href="#agg_commission6"/>
+            <mdq:derivedElement xlink:href="#agg_commissionN"/>
+            <mdq:derivedElement xlink:href="#agg_classification1"/>
+            <mdq:derivedElement xlink:href="#agg_classification2"/>
+            <mdq:derivedElement xlink:href="#agg_classification3"/>
+            <mdq:derivedElement xlink:href="#agg_classification4"/>
+            <mdq:derivedElement xlink:href="#agg_classification5"/>
+            <mdq:derivedElement xlink:href="#agg_classification6"/>
+            <mdq:derivedElement xlink:href="#agg_classificationN"/>
+            <!-- relatedQualityElement missing from SO 19157-1 Annex D/D4.1.2/Table D.14 -->
+            <mdq:relatedQualityElement></mdq:relatedQualityElement>
+        </mdq:Confidence></mdq:report>
+        <mdq:qualityEvaluationReport><mdq:QualityEvaluationReportInformation>
+            <mdq:reportReference><cit:CI_Citation>
+                <cit:title><gco:CharacterString>Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.14.
+                Reporting as quality evaluation report </gco:CharacterString></cit:title>
+                <cit:date><cit:CI_Date>
+                    <cit:date><gco:Date>2010-07-05</gco:Date></cit:date>
+                    <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                </cit:CI_Date></cit:date>
+            </cit:CI_Citation></mdq:reportReference>
+            <mdq:abstract><gco:CharacterString>The quality evaluation report attached to this quality evauation is providing fully-detailed information 
+                about the evaluation applied and results obtained.</gco:CharacterString></mdq:abstract>
+        </mdq:QualityEvaluationReportInformation></mdq:qualityEvaluationReport>
+    </mdq:DataQuality></mdb:dataQualityInfo>
+    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.15
+    It presents an example of how to report descriptive result, metaquality and sampling procedures.-->
+    <mdb:dataQualityInfo><mdq:DataQuality>
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+        </mcc:MD_Scope></mdq:scope>
+        <mdq:report><mdq:RelativePositionalAccuracy>
+            <!-- measure/MeasureReference missing from Table D.15 -->
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:nameOfMeasure><gco:CharacterString>Comparison of absolute positional accuracy</gco:CharacterString></mdq:nameOfMeasure>
+                <mdq:measureDescription><gco:CharacterString>Comparison of absolute positional accuracy using known positional accuracy of the two or more independent objects</gco:CharacterString></mdq:measureDescription>
+            </mdq:MeasureReference></mdq:measure>
+            <mdq:evaluationMethod><mdq:IndirectEvaluation>
+                <mdq:evaluationMethodDescription><gco:CharacterString>Compares absolute possitional accuracy of the archaeological object and
+                    the absolute positional accuracy of the river.</gco:CharacterString></mdq:evaluationMethodDescription>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:deductiveSource><gco:CharacterString>Positional accuracy of the rivers nearby the archaeological camp.</gco:CharacterString></mdq:deductiveSource>
+            </mdq:IndirectEvaluation></mdq:evaluationMethod>
+            <mdq:result><mdq:DescriptiveResult>
+                <mdq:statement><gco:CharacterString>Relative positional accuracy between the archaeological objects and rivers is higher 
+                    than the absolute positional accuracy of the archaeological objects (5m)</gco:CharacterString></mdq:statement>
+            </mdq:DescriptiveResult></mdq:result>
+        </mdq:RelativePositionalAccuracy></mdq:report>
+     </mdq:DataQuality></mdb:dataQualityInfo>
+    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.16
+    The absolute positional accuracy of the topological survey on an archaeological site is evaluated: The result is 5 m accuracy.
+    An evaluation of the quality of the evaluation is then provided using the confidence metaquality element, 
+    for which a measure called “Safety Factor” is used.
+    Table D.16 describes how to report metaquality as metadata.
+.-->
+    <mdb:dataQualityInfo><mdq:DataQuality>
+        <mdq:scope><mcc:MD_Scope>
+            <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
+        </mcc:MD_Scope></mdq:scope>
+        <mdq:report><mdq:AbsolutePositionalAccuracy>
+            <mdq:measure></mdq:measure>
+            <mdq:evaluationMethod></mdq:evaluationMethod>
+            <mdq:result></mdq:result>
+        </mdq:AbsolutePositionalAccuracy></mdq:report>
+        <mdq:report><mdq:AbsolutePositionalAccuracy id="positional_accuracy1">
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:measureIdentification><mcc:MD_Identifier>
+                    <mcc:code><gco:CharacterString>47</gco:CharacterString></mcc:code>
+                </mcc:MD_Identifier></mdq:measureIdentification>
+                <mdq:nameOfMeasure><gco:CharacterString>Root mean square error planimetry</gco:CharacterString></mdq:nameOfMeasure>
+                <mdq:measureDescription><gco:CharacterString>Standard deviation where the true value is not estimated from the observations but known a prioriStandard deviation
+                    where the true value is not estimated from the observations but known a priori</gco:CharacterString></mdq:measureDescription>
+            </mdq:MeasureReference></mdq:measure>
+            <mdq:evaluationMethod><mdq:FullInspection>
+                <mdq:evaluationProcedure><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>IGN data quality evaluation procedure</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>1995-02-09</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:evaluationProcedure>
+            </mdq:FullInspection></mdq:evaluationMethod>
+            <mdq:evaluationMethod><mdq:AggregationDerivation>
+                <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+            </mdq:AggregationDerivation></mdq:evaluationMethod>
+            <mdq:result><mdq:QuantitativeResult>
+                <mdq:value><gco:Record>
+                    <gco:field><gco:Field>
+                        <gco:value></gco:value>
+                        <gco:type><gco:FieldType>
+                            <gco:fieldName><gco:CharacterString>metre</gco:CharacterString></gco:fieldName>
+                            <gco:fieldType><gco:TypeName>
+                                <gco:aName><gco:CharacterString>distance</gco:CharacterString></gco:aName>
+                            </gco:TypeName></gco:fieldType>
+                        </gco:FieldType></gco:type>
+                    </gco:Field></gco:field>
+                </gco:Record></mdq:value>
+             </mdq:QuantitativeResult></mdq:result>
+        </mdq:AbsolutePositionalAccuracy></mdq:report>
+        <mdq:report><mdq:Confidence>
+            <mdq:measure><mdq:MeasureReference>
+                <mdq:measureIdentification><mcc:MD_Identifier>
+                    <mcc:authority><cit:CI_Citation>
+                        <cit:title><gco:CharacterString>IGN Measures</gco:CharacterString></cit:title>
+                        <cit:date><cit:CI_Date>
+                            <cit:date><gco:Date>1995-01-01</gco:Date></cit:date>
+                            <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode></cit:dateType>
+                        </cit:CI_Date></cit:date>
+                    </cit:CI_Citation></mcc:authority>
+                    <mcc:code><gco:CharacterString>1</gco:CharacterString></mcc:code>
+                </mcc:MD_Identifier></mdq:measureIdentification>
+                <mdq:nameOfMeasure><gco:CharacterString>Safety Factor</gco:CharacterString></mdq:nameOfMeasure>
+                <mdq:measureDescription><gco:CharacterString>The ratio between the accuracy class of the evaluation elements and the accuracy class that has to be obtained in the dataset.</gco:CharacterString></mdq:measureDescription>
+            </mdq:MeasureReference></mdq:measure>
+           <mdq:evaluationMethod><mdq:FullInspection>
+               <mdq:evaluationMethodDescription><gco:CharacterString>The bigger the "Safety Factor" is the more trustful is the evaluation.
+                   The "Safety Factor" has to be bigger than 2 to validate the evaluation.</gco:CharacterString></mdq:evaluationMethodDescription>
+               <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="directExternal">directExternal</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
+                <mdq:evaluationProcedure><cit:CI_Citation>
+                    <cit:title><gco:CharacterString>Arr&#226;t&#233; 2003 (French legislation)</gco:CharacterString></cit:title>
+                    <cit:date><cit:CI_Date>
+                        <cit:date><gco:Date>2003</gco:Date></cit:date>
+                        <cit:dateType><cit:CI_DateTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_DateTypeCode" codeListValue="publication">publication</cit:CI_DateTypeCode></cit:dateType>
+                    </cit:CI_Date></cit:date>
+                </cit:CI_Citation></mdq:evaluationProcedure>
+           </mdq:FullInspection></mdq:evaluationMethod>
+            <mdq:result><mdq:QuantitativeResult>
+                <mdq:value><gco:Record>
+                    <gco:field><gco:Field>
+                        <gco:value><gco:CharacterString>2.4</gco:CharacterString></gco:value>
+                    </gco:Field></gco:field>
+                </gco:Record></mdq:value>
+            </mdq:QuantitativeResult></mdq:result>
+            <!-- Missing relatedQualityElement (as a reslut of choosing "Confidence" as specialisation of <<abstract>> "Metaquality"-->
+            <mdq:relatedQualityElement></mdq:relatedQualityElement>
+        </mdq:Confidence></mdq:report>
+    </mdq:DataQuality></mdb:dataQualityInfo>
+   <mdb:metadataConstraints>
+        <mco:MD_SecurityConstraints>
+            <mco:reference>
+                <cit:CI_Citation>
+                    <cit:title>
+                        <gco:CharacterString>
+                            Australian Government Security ClassificationSystem
+                        </gco:CharacterString>
+                    </cit:title>
+                    <cit:editionDate>
+                        <gco:DateTime>2018-11-01T00:00:00</gco:DateTime>
+                    </cit:editionDate>
+                    <cit:onlineResource>
+                        <cit:CI_OnlineResource>
+                            <cit:linkage>
+                                <gco:CharacterString>
+                                    https://www.protectivesecurity.gov.au/Pages/default.aspx
+                                </gco:CharacterString>
+                            </cit:linkage>
+                            <cit:protocol gco:nilReason="missing">
+                                <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode"/>
+                            </cit:protocol>
+                        </cit:CI_OnlineResource>
+                    </cit:onlineResource>
+                </cit:CI_Citation>
+            </mco:reference>
+            <mco:classification>
+                <mco:MD_ClassificationCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mco.MD_ClassificationCode" codeListValue="unclassified"/>
+            </mco:classification>
+        </mco:MD_SecurityConstraints>
+    </mdb:metadataConstraints>
+    <mdb:resourceLineage>
+        <mrl:LI_Lineage>
+            <mrl:statement>
+                <gco:CharacterString>
+Data was collected in the field during the sample collection phase of the National Geochemical Survey of Australia project
+</gco:CharacterString>
+            </mrl:statement>
+            <mrl:scope>
+                <mcc:MD_Scope>
+                    <mcc:level>
+                        <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset"/>
+                    </mcc:level>
+                </mcc:MD_Scope>
+            </mrl:scope>
+            <mrl:source>
+                <mrl:LI_Source>
+                    <mrl:description>
+                        <gco:CharacterString>Source data not available.</gco:CharacterString>
+                    </mrl:description>
+                </mrl:LI_Source>
+            </mrl:source>
+        </mrl:LI_Lineage>
+    </mdb:resourceLineage>
+    <mdb:metadataScope>
+        <mdb:MD_MetadataScope id="dataset">
+            <mdb:resourceScope>
+                <mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset"/>
+            </mdb:resourceScope>
+            <mdb:name>
+                <gco:CharacterString>dataset</gco:CharacterString>
+            </mdb:name>
+        </mdb:MD_MetadataScope>
+    </mdb:metadataScope>
+    
+</mdb:MD_Metadata>

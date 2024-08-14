@@ -14,9 +14,7 @@
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MD_PortrayalCatalogueReference" substitutionGroup="mcc:Abstract_PortrayalCatalogueInformation" type="mpc:MD_PortrayalCatalogueReference_Type" id="ISO19115-1.235">
-    <annotation>
-      <documentation>information identifying the portrayal catalogue used</documentation>
-    </annotation>
+    <annotation><documentation>information identifying the portrayal catalogue used</documentation></annotation>
   </element>
   <!-- ........................................................................ -->
   <complexType name="MD_PortrayalCatalogueReference_Type">
@@ -24,10 +22,7 @@
       <extension base="mcc:Abstract_PortrayalCatalogueInformation_Type">
         <sequence>
           <element maxOccurs="unbounded" name="portrayalCatalogueCitation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.236_ISO19115-1.361">
-            <annotation>
-              <documentation>bibliographic reference to the portrayal catalogue
-                cited</documentation>
-            </annotation>
+            <annotation><documentation>bibliographic reference to the portrayal catalogue cited</documentation></annotation>
           </element>
         </sequence>
       </extension>

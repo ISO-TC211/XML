@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lam="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2" 
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-3/lam/1.0" elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>This package contains the classes defined as part of the MG_Source
+			section. One class is defined: MG_Source. Sourcing is done by reference. No distinction
+			is made between spatial and other sources because many sources, such as treaties, or
+			laws define both spatial and other information.</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="https://schemas.isotc211.org/19152/-1/lad/1.0" schemaLocation="../../../../19152/-1/lad/1.0.0/lad.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Source_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Source"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Source" type="lam:MG_Source_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Source_Type">
+		<xs:annotation>
+			<xs:documentation>Domain: MG Name: MG_Source Definition: Descriptive documentation that
+				supports, complement or describes the associated object. Reference: ISO 19152-1
+				Definition Source: ISO 19152-1 Similarity to Source: restructured Remarks: Realized
+				from ISO 19152-1 LADM "LA_Source". The "MG_Source" objects are shared attributes by
+				reference.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: gID Data Type: CharacterString Definition:
+						The Marine Resource Name (MRN) is an optional identifier in the marine space
+						that is a permanent global identifier, allowing marine space management.
+						Reference: IHO S-121 Definition Source: IHO S-121 Similarity to Source:
+						generalization Remarks: IHO provides guidance on the structure of the MRN as
+						a Globally Unique Identifier (GUID) based on the Uniform Resource Identifier
+						(URI) for those items undeer the jurisdiction of the IHO. The type of URI
+						used by IHO is a Universal Resource Name (URN).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sID Alias: sID per LA_Source Data Type: Oid
+						Definition: This attribute is the identifier of the source. Reference: ISO
+						19152-1 Definition Source: ISO 19152-1 Similarity to Source: restructured
+						Remarks: This allows reference to "Source" information objects using the
+						“Oid” (Object ID) attribute type. The “Oid” comprises a unique character
+						string and a namespace identifier which is also a unique character string.
+						An example might be "Source-9" where "Source" is the namespace identifier,
+						"-" is a delimiter and "9" is the unique id within that namespace. This
+						attribute is used in IHO S-121 and is registered as an attribute in the IHO
+						register &lt;https://registry.iho.int/&gt; and as such can be expanded
+						within the IHO process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceAdministrativeDateStamp" type="gco:DateTime_PropertyType" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceAdministrativeDateStamp Alias:
+						LA_Source: lifeSpanStamp Data Type: DateTime Definition: This attribute
+						defines the moment that the event represented by the instance of "Source" is
+						further processed. Reference: ISO 19152-1 Similarity to Source:
+						specialization, restructured and renamed Remarks: This is the moment of
+						"endLifespan" of old instances, and the moment of "startLifespan" of new
+						instances. This attribute has been renamed to fit the context of the marine
+						space. This attribute is used in IHO S-121 and is registered as an attribute
+						in the IHO register &lt;https://registry.iho.int/&gt; and as such can be
+						expanded within the IHO process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceAuthoritativeDate" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceAuthoritiveDate Alias: LA_Source:
+						acceptance Data Type: DateTime Definition: This attribute defines the date
+						of force of law of the "Source" by an authority. Reference: ISO 19152-1
+						Similarity to Source: specialization restructured, renamed Remarks: This
+						attribute has been renamed to fit the context of the marine space. This
+						attribute is used in IHO S-121 and is registered as an attribute in the IHO
+						register &lt;https://registry.iho.int/&gt; and as such can be expanded
+						within the IHO process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceAvailabilityStatus" type="lad:LA_AvailabilityStatusType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceAvailabilityStatus Alias:
+						availabilityStatus per LA_Source Data Type: LA_AvailabilityStatusType
+						Definition: This attribute defines the reference to the availability status
+						of source document. Reference: ISO 19152-1 Similarity to Source:
+						restructured and renamed Remarks: This attribute has been renamed to fit the
+						context of the marine space. This attribute is used in IHO S-121 and is
+						registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceDocumentName" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceDocumentName Alias: LA_Source: source
+						Data Type: CharacterString Definition: Name of the document that defines the
+						object - for example the document (legislation, treaty, title) Reference:
+						IHO S-121 Definition Source: IHO S-121 Similarity to Source: restructured
+						Remarks: For simplicity the metadata CI_ResponsibilityParty structure
+						referenced in LA_Source has been restructured to be a source reference in
+						the style used in the legislative, treaty or other marine space environment
+						represented as a character string. This attribute is used in IHO S-121 and
+						is registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceDocumentType" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceDocumentType Alias: LA_Source: maintype
+						Data Type: CharacterString Definition: This attribute defines the type of
+						source document Reference: ISO 19152-1; ISO 19115-1 Similarity to Source:
+						generalized and renamed Remarks: This attribute has been renamed and
+						generalized to fit the context of the marine space. The equivalent attribute
+						from LA_Source takes its value from ISO 19115-1 metadata from the class
+						CI_PresentationFormCode. This part of the ISO metadata standard is not
+						included in IHO S_100 part 4 metadata. Therefore a free form character
+						string is provided as the data type. This attribute is used in IHO S-121 and
+						is registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceExternalArchiveIdentifier" type="lad:ExtArchive_PropertyType" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: Source External Archive Identifier Alias:
+						LA_Source: extArchiveID Data Type: ExtArchive Definition: The identifier of
+						a "Source" in an external registration, as per the description given in the
+						class ExtArchive. Reference: ISO 19152-1 Similarity to Source: restyled
+						Remarks: The code list is taken directly for ISO 19152-1. This attribute is
+						used in IHO S-121 and is registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceOnlineResource" type="cit:CI_OnlineResource_PropertyType" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceOnlineResource Alias: Data Type:
+						onlineResource Definition: URL - this is official the URL (or equivalent
+						online resource) where the document is distributed. Reference: ISO 19115-1
+						Definition Source: IHO S-121 Similarity to Source: restructured Remarks:
+						This attribute is used in IHO S-121 and is registered as an attribute in the
+						IHO register &lt;https://registry.iho.int/&gt; and as such can be expanded
+						within the IHO process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceQuality" type="mdq:AbstractDQ_Element_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceQuality Alias: LA_Source: quality Data
+						Type: DQ_Element Definition: The quality of the "Source". Reference: ISO
+						19152-1 Definition Source: ISO 19157 Similarity to Source:restyled Remarks:
+						This attribute is inherited from LA_Source in part 1 of this document. The
+						treatment of quality is now addressed in ISO 19157 as a "Quality Report" in
+						a simpler manner to the set of quality attributes that previously were part
+						of metadata. This approach is used because it is more general than the
+						previous approach used in ISO 19115 and IHO S-100. The attribute values
+						previously is inherited directly from ISO 19115 Metadata and IHO document.
+						S-100 are given below for backward compatibility. The DQ_Element attributes
+						are: "nameOfMeasure", "measureIdentification", "measureDescription",
+						"evaluationMethodType", "evaluationMethodDescription",
+						"evaluationProcedure", "dateTime", "result". This attribute is used in IHO
+						S-121 and is registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceRecordation" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceRecordation Alias: LA_Source:
+						recordation CamelCase: sourceRecordation Data Type: DateTime Definition: The
+						date of registration (recordation) of the "Source" by registering authority
+						Reference: ISO 19152-1 Definition Source: ISO 19152-1 Similarity to Source:
+						restructured Remarks: This attribute is used in IHO S-121 and is registered
+						as an attribute in the IHO register &lt;https://registry.iho.int/&gt; and as
+						such can be expanded within the IHO process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceRegistryNumber" type="gco:CharacterString_PropertyType" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceRegistryNumber Data Type:
+						CharacterString Definition: Unique official identifier of the record in a
+						registry. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: restructured Remarks: For example, the identifier may follow the
+						methodology in states with registers of legislative instruments. Document
+						level versioning is controlled by the registry ID. This attribute is used in
+						IHO S-121 and is registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceSubmissionDate" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: sourceSubmissionDate Alias: LA_Source:
+						submission Data Type: DateTime Definition: This attribute defines the date
+						of submission of the "Source" by a party. Reference: ISO 19152-1 Similarity
+						to Source: restructured and renamed Remarks: This attribute has been renamed
+						to fit the context of the marine space. This attribute is used in IHO S-121
+						and is registered as an attribute in the IHO register
+						&lt;https://registry.iho.int/&gt; and as such can be expanded within the IHO
+						process.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

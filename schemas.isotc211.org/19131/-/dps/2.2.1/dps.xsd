@@ -6,7 +6,7 @@
 	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
 	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
 	xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3"
-	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+	xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0"
 	xmlns:mas="https://schemas.isotc211.org/19115/-1/mas/1.3"
 	xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
 	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
@@ -22,12 +22,12 @@
 	<import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.0/citation.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="../../../../19115/-1/mrl/1.3.0/lineage.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mco/1.3" schemaLocation="../../../../19115/-1/mco/1.3.0/constraints.xsd"/>
-	<import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="../../../../19157/-/mdq/1.2.0/dataQualityElement.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" schemaLocation="../../../../19157/-1/mdq/1.0.1/dataQualityElement.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mas/1.3" schemaLocation="../../../../19115/-1/mas/1.3.0/applicationSchema.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="../../../../19115/-1/mrc/1.3.0/content.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3" schemaLocation="../../../../19115/-1/mri/1.3.0/identification.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/commonClasses.xsd"/>
-	<import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.0/extent.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.1/extent.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/language.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mmi/1.3" schemaLocation="../../../../19115/-1/mmi/1.3.0/maintenance.xsd"/>
 	<import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="../../../../19115/-1/mrs/1.3.1/referenceSystem.xsd"/>
@@ -82,8 +82,7 @@
 							<documentation>narrative description of one aspect</documentation>
 						</annotation>
 					</element>
-					<element name="additionalInformationScope"
-						type="dps:SpecificationScope_PropertyType">
+					<element name="additionalInformationScope" type="dps:SpecificationScope_PropertyType">
 						<annotation>
 							<documentation>scope for the additional information</documentation>
 						</annotation>
@@ -110,8 +109,7 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="additionalInformation"
-						type="dps:AdditionalInformation_PropertyType" minOccurs="0"
+					<element name="additionalInformation" type="dps:AdditionalInformation_PropertyType" minOccurs="0"
 						maxOccurs="unbounded">
 						<annotation>
 							<documentation>additional information for the data
@@ -144,15 +142,15 @@
 						minOccurs="0">
 						<annotation>
 							<documentation>identity of the requirement, to be referred to from
-								metadata by an object of DQ_ConformanceResult class</documentation>
+								metadata by an object of ConformanceResult class</documentation>
 						</annotation>
 					</element>
-					<element name="element" type="mdq:AbstractDQ_Element_PropertyType">
+					<element name="element" type="mdq:Abstract_Element_PropertyType">
 						<annotation>
 							<documentation>specifies a data quality element that, in turn, specifies
 								a data quality measure and a threshold value for conformance (using
-								DQ_QuantitativeResult) or, alternatively, specifies a descriptive
-								statement (using DQ_DescriptiveResult)</documentation>
+								QuantitativeResult) or, alternatively, specifies a descriptive
+								statement (using DescriptiveResult)</documentation>
 						</annotation>
 					</element>
 				</sequence>
@@ -233,8 +231,7 @@
 								attributes are to be included in the data</documentation>
 						</annotation>
 					</element>
-					<element name="dataAcquisitionAndProcessing"
-						type="dps:DataAcquisitionAndProcessing_PropertyType" maxOccurs="unbounded">
+					<element name="dataAcquisitionAndProcessing" type="dps:DataAcquisitionAndProcessing_PropertyType" maxOccurs="unbounded">
 						<annotation>
 							<documentation>source and/or production process used in producing a data
 								product</documentation>
@@ -302,15 +299,13 @@
 								feature catalogue for a specified scope</documentation>
 						</annotation>
 					</element>
-					<element name="applicationSchema"
-						type="mas:MD_ApplicationSchemaInformation_PropertyType" minOccurs="0">
+					<element name="applicationSchema" type="mas:MD_ApplicationSchemaInformation_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>information on how to find resources that represents the
 								application schema</documentation>
 						</annotation>
 					</element>
-					<element name="featureCatalogue"
-						type="mrc:AbstractMD_ContentInformation_PropertyType" minOccurs="0">
+					<element name="featureCatalogue" type="mrc:AbstractMD_ContentInformation_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>coverage description or feature catalogue, either by
 								listing each feature type according to ISO 19110 (subclass
@@ -380,8 +375,7 @@
 								product specification</documentation>
 						</annotation>
 					</element>
-					<element name="specificationDescription"
-						type="dps:SpecificationDescription_PropertyType" minOccurs="0">
+					<element name="specificationDescription" type="dps:SpecificationDescription_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>metadata about the data product specification NOTE This
 								information is not to be confused with what is specified in the
@@ -394,15 +388,13 @@
 							<documentation>data portrayal section</documentation>
 						</annotation>
 					</element>
-					<element name="identificationSection"
-						type="dps:IdentificationSection_PropertyType">
+					<element name="identificationSection" type="dps:IdentificationSection_PropertyType">
 						<annotation>
 							<documentation>identification section which identifies the data
 								product</documentation>
 						</annotation>
 					</element>
-					<element name="contentAndStructureSection"
-						type="dps:DataContentAndStructureSection_PropertyType">
+					<element name="contentAndStructureSection" type="dps:DataContentAndStructureSection_PropertyType">
 						<annotation>
 							<documentation>data content and structure section</documentation>
 						</annotation>
@@ -427,8 +419,7 @@
 							<documentation>metadata section</documentation>
 						</annotation>
 					</element>
-					<element name="additionalInformationSection"
-						type="dps:AdditionalInformationSection_PropertyType">
+					<element name="additionalInformationSection" type="dps:AdditionalInformationSection_PropertyType">
 						<annotation>
 							<documentation>additional information section</documentation>
 						</annotation>
@@ -443,8 +434,7 @@
 							<documentation>data capture and production section</documentation>
 						</annotation>
 					</element>
-					<element name="referenceSystemSection"
-						type="dps:ReferenceSystemSection_PropertyType">
+					<element name="referenceSystemSection" type="dps:ReferenceSystemSection_PropertyType">
 						<annotation>
 							<documentation>reference system section</documentation>
 						</annotation>
@@ -742,8 +732,7 @@
 							<documentation>theme applicable to the data product</documentation>
 						</annotation>
 					</element>
-					<element name="spatialRepresentationType"
-						type="mcc:MD_SpatialRepresentationTypeCode_PropertyType" minOccurs="0"
+					<element name="spatialRepresentationType" type="mcc:MD_SpatialRepresentationTypeCode_PropertyType" minOccurs="0"
 						maxOccurs="unbounded">
 						<annotation>
 							<documentation>form of spatial representation in the data product NOTE
@@ -812,15 +801,13 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="maintenanceAndUpdateStatement"
-						type="gco:CharacterString_PropertyType" maxOccurs="unbounded">
+					<element name="maintenanceAndUpdateStatement" type="gco:CharacterString_PropertyType" maxOccurs="unbounded">
 						<annotation>
 							<documentation>narrative, free text descriptions of the process for the
 								maintenance of the data</documentation>
 						</annotation>
 					</element>
-					<element name="maintenanceAndUpdateFrequency"
-						type="dps:MaintenanceAndUpdateFrequency_PropertyType" minOccurs="0">
+					<element name="maintenanceAndUpdateFrequency" type="dps:MaintenanceAndUpdateFrequency_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>frequency with which changes and additions are made to
 								the data product</documentation>
@@ -850,8 +837,7 @@
 	</element>
 	<complexType name="MaintenanceAndUpdateFrequency_Type">
 		<choice>
-			<element name="maintenanceAndUpdateFrequency"
-				type="mmi:MD_MaintenanceFrequencyCode_PropertyType" minOccurs="0">
+			<element name="maintenanceAndUpdateFrequency" type="mmi:MD_MaintenanceFrequencyCode_PropertyType" minOccurs="0">
 				<annotation>
 					<documentation>code that specifies the frequency with which changes and
 						additions are made to the data product NOTE If none of the predefined codes
@@ -860,8 +846,7 @@
 						used.</documentation>
 				</annotation>
 			</element>
-			<element name="userDefinedMaintenanceAndUpdateFrequency"
-				type="gco:TM_PeriodDuration_PropertyType" minOccurs="0">
+			<element name="userDefinedMaintenanceAndUpdateFrequency" type="gco:TM_PeriodDuration_PropertyType" minOccurs="0">
 				<annotation>
 					<documentation>period of time with which changes and additions are made to the
 						data product NOTE This attribute should only be used if none of the
@@ -1118,15 +1103,13 @@
 		<complexContent>
 			<extension base="gco:AbstractObject_Type">
 				<sequence>
-					<element name="spatialReferenceSystem"
-						type="mrs:MD_ReferenceSystem_PropertyType">
+					<element name="spatialReferenceSystem" type="mrs:MD_ReferenceSystem_PropertyType">
 						<annotation>
 							<documentation>identifier of a spatial reference system used for the
 								specified specification scope</documentation>
 						</annotation>
 					</element>
-					<element name="temporalReferenceSystem"
-						type="mrs:MD_ReferenceSystem_PropertyType" minOccurs="0">
+					<element name="temporalReferenceSystem" type="mrs:MD_ReferenceSystem_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>identifier of a temporal reference system used for the
 								specified specification scope</documentation>
@@ -1306,8 +1289,7 @@
 								provided</documentation>
 						</annotation>
 					</element>
-					<element name="handlingRestriction"
-						type="mco:MD_ClassificationCode_PropertyType" minOccurs="0">
+					<element name="handlingRestriction" type="mco:MD_ClassificationCode_PropertyType" minOccurs="0">
 						<annotation>
 							<documentation>classification code specifying limitations on handling
 								the data product specification</documentation>

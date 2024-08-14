@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://standards.iso.org/iso/19115/-3/gcx/1.0" elementFormDefault="qualified" version="20140711" 
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0">
+<xs:schema targetNamespace="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+  elementFormDefault="qualified"
+  version="20140711" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+  xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 03-14-2005 12:00:20 ====== Handcrafted

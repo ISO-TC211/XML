@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" 
   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
   xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0" 
   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" 
   xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0" 
-  elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/msr/1.0" version="1.0">
-  <annotation>
-    <documentation>Name: SpatialRepresentation
-Position: 3</documentation>
-  </annotation>
+  elementFormDefault="qualified"
+  targetNamespace="http://standards.iso.org/iso/19115/-3/msr/1.0"
+  version="1.0">
+  <annotation><documentation>Name: SpatialRepresentation Position: 3</documentation></annotation>
   <include schemaLocation="msr.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd"/>
@@ -72,10 +72,7 @@ Position: 3</documentation>
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="MI_Georectified" substitutionGroup="msr:MD_Georectified" type="msr:MI_Georectified_Type">
-    <annotation>
-      <documentation>Description: extends georectified grid description to include associated checkpoints
-shortName: IGeorect</documentation>
-    </annotation>
+    <annotation><documentation>Description: extends georectified grid description to include associated checkpoints shortName: IGeorect</documentation></annotation>
   </element>
   <complexType name="MI_Georectified_Type">
     <complexContent>
@@ -94,11 +91,7 @@ shortName: IGeorect</documentation>
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="MI_Georeferenceable" substitutionGroup="msr:MD_Georeferenceable" type="msr:MI_Georeferenceable_Type">
-    <annotation>
-      <documentation>Description: Description of information provided in metadata that allows the geographic or map location raster points to be located
-FGDC: Georeferencing_Description
-shortName: IGeoref</documentation>
-    </annotation>
+    <annotation><documentation>Description: Description of information provided in metadata that allows the geographic or map location raster points to be located FGDC: Georeferencing_Description shortName: IGeoref</documentation></annotation>
   </element>
   <complexType name="MI_Georeferenceable_Type">
     <complexContent>

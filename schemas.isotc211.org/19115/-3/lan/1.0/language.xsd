@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
-  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" elementFormDefault="qualified"
-  targetNamespace="http://standards.iso.org/iso/19115/-3/lan/1.0" version="1.0">
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+  elementFormDefault="qualified"
+  targetNamespace="http://standards.iso.org/iso/19115/-3/lan/1.0"
+  version="1.0">
   <include schemaLocation="lan.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0"
-    schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0"
-    schemaLocation="https://schemas.isotc211.org/19115/-3/cit/1.0/cit.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cit/1.0/cit.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- hand-craft adjustments starting at line 29 and 71. ShapeChange does not have rules for 
   implementing language localisation according to ISO19139  -->
@@ -60,7 +61,8 @@
   
   <!-- ........................................................................ -->
   
-  <element name="MD_CharacterSetCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+  <element name="MD_CharacterSetCode" substitutionGroup="gco:CharacterString"
+ type="gco:CodeListValue_Type"/>
   <complexType name="MD_CharacterSetCode_PropertyType">
     <sequence minOccurs="0">
       <element ref="lan:MD_CharacterSetCode"/>
@@ -74,7 +76,8 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element maxOccurs="unbounded" name="textGroup" type="lan:LocalisedCharacterString_PropertyType"/>
+          <element maxOccurs="unbounded" name="textGroup"
+ type="lan:LocalisedCharacterString_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -111,7 +114,8 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="PT_LocaleContainer" substitutionGroup="lan:PT_Locale" type="lan:PT_LocaleContainer_Type"/>
+  <element name="PT_LocaleContainer" substitutionGroup="lan:PT_Locale"
+ type="lan:PT_LocaleContainer_Type"/>
   <complexType name="PT_LocaleContainer_Type">
     <complexContent>
       <extension base="lan:PT_Locale_Type">
@@ -119,8 +123,10 @@
           <element name="description" type="gco:CharacterString_PropertyType"/>
           <element name="locale" type="lan:PT_Locale_PropertyType"/>
           <element maxOccurs="unbounded" name="date" type="cit:CI_Date_PropertyType"/>
-          <element maxOccurs="unbounded" name="responsibleParty" type="cit:CI_Responsibility_PropertyType"/>
-          <element maxOccurs="unbounded" name="localisedString" type="lan:LocalisedCharacterString_PropertyType"/>
+          <element maxOccurs="unbounded" name="responsibleParty"
+ type="cit:CI_Responsibility_PropertyType"/>
+          <element maxOccurs="unbounded" name="localisedString"
+ type="lan:LocalisedCharacterString_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>

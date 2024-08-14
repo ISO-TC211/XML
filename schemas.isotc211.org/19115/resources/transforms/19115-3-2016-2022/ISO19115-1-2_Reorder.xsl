@@ -19,7 +19,7 @@
     xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
     xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/1.3"
     xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
-    xmlns:cat="https://schemas.isotc211.org/19115/-3/cat/1.0"
+    xmlns:cat="https://schemas.isotc211.org/19139/-/cat/1.2"
     xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
     xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
     xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.2"

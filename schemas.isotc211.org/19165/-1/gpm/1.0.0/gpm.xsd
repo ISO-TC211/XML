@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gpm="https://schemas.isotc211.org/19165/-1/gpm/1.0" 
+  elementFormDefault="qualified" 
+  targetNamespace="https://schemas.isotc211.org/19165/-1/gpm/1.0" 
+  version="1.0.0">
+  <annotation>
+    <documentation>Namespace for XML elements for geospatial preservation metadata (ISO 19165).</documentation>
+  </annotation>
+  <include schemaLocation="../../../../19165/-1/gpm/1.0.0/geospatialPreservationMetadata.xsd"/>
+</schema>

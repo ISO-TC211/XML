@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-2/gmi/1.0"
+<xs:schema elementFormDefault="qualified"
+  targetNamespace="http://standards.iso.org/iso/19115/-2/gmi/1.0"
 xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0" 
 xmlns:gmx="http://www.isotc211.org/2005/gmx"
-xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" version="0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gco="http://www.isotc211.org/2005/gco"
+  version="0.1"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 04-04-2008 17:12:48 ====== Name: Lineage - Position: 2</xs:documentation>

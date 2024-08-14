@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2" 
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>fundamentals package of LADM Part 1</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="external.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/dqc/1.2.0/dqc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="Fraction_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:Fraction"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Fraction" type="lad:Fraction_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Fraction_Type">
+		<xs:annotation>
+			<xs:documentation>fraction is written as a pair of numbers, the top number called the numerator and the bottom number called the denominator. A line usually separates the numerator and denominator.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="denominator" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the bottom number in the notation of the fraction</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numerator" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the top number in the notation of the fraction</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_AvailabilityStatusType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_AvailabilityStatusType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_AvailabilityStatusType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_AvailabilityStatusType" type="lad:LA_AvailabilityStatusType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_AvailabilityStatusType_Type">
+		<xs:annotation>
+			<xs:documentation>the type of availability status</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="archiveDocumentConverted" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Archive document is converted and quality checked: the document has been converted correctly. E.g. analogue to digital conversion or digital to digital conversion or analogue to digital conversion by scanning and optical character recognition (ocr). The converted digital version is classified as the legally valid original.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="archiveDocumentDestroyed" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The existence of the archive document is known, but the archive document is destroyed. E.g., fire or water damage (and all kind of disaster)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="archiveDocumentIncomplete" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Archive document is converted and quality checked: the document has not been converted correctly.Archive document is incomplete. E.g., part of the document disappeared without backup</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="archiveDocumentUnknown" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The existence of the archive document is known, but the archive its existence is known. In this case the document cannot be classified</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentAvailable" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Archive document is available  (default value)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_Source_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_Source"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_Source" type="lad:LA_Source_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_Source_Type">
+		<xs:annotation>
+			<xs:documentation>concrete class LA_Source is introduced to provide support for sources, document providing facts</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="acceptance" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the date of force of law of the source by an authority</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="availabilityStatus" type="lad:LA_AvailabilityStatusType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the type of availability status</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="extArchiveID" type="lad:ExtArchive_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the identifier of a source in an external registration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lifeSpanStamp" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the moment that the event represented by the instance of LA_Source is further processed in the LA system</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maintype" type="cit:CI_PresentationFormCode_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the type of document</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="quality" type="dqc:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>quality of a specific instance version (ISO/CD 19157-1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="recordation" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the date of registration (recordation) of the source by registering authority</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the identifier of the source</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="source" type="cit:CI_Responsibility_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>the responsible party of the source</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="submission" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the date of submission of the source by a party</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="Oid_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:Oid"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Oid" type="lad:Oid_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Oid_Type">
+		<xs:annotation>
+			<xs:documentation>the object identifier</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="localId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Local identifier, assigned by the data provider. The local identifier should be unique
+within the namespace, i.e. no other spatial object should carry the same identifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="namespace" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>identifier for the data source of the spatial object</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="AbstractVersionedObject_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:AbstractVersionedObject"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="AbstractVersionedObject" type="lad:AbstractVersionedObject_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="AbstractVersionedObject_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>the abstract class AbstractVersionedObject is introduced in the LADM to manage and maintain historical data in the database</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="beginLifespanVersion" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>start time of a specific instance version</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="beginRealWorldLifespanVersion" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>start real world time of a specific instance version</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endLifespanVersion" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>end time of a specific instance version</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endRealWorldLifespanVersion" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>end real world time of a specific instance version</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="quality" type="dqc:Abstract_QualityElement_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>quality of a specific instance version (ISO/CD 19157-1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sourceParty" type="cit:CI_Responsibility_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>responsible organization of a specific instance version</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="event" type="lad:LA_Source_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="event" type="lad:LA_Source_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

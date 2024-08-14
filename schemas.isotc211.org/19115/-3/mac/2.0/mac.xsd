@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
   xmlns:gmw="http://standards.iso.org/iso/19115/-3/gmw/1.0"
   xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"

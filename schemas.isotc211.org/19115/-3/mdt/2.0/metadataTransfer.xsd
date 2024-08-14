@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
-  xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
-  xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/2.0" 
-  xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0" elementFormDefault="qualified" 
-  targetNamespace="http://standards.iso.org/iso/19115/-3/mdt/2.0" version="1.0">
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" 
+  xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+  xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/2.0" 
+  xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+  elementFormDefault="qualified" 
+  targetNamespace="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+  version="1.0">
   <include schemaLocation="mdt.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/cat/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cat/1.0/cat.xsd"/>

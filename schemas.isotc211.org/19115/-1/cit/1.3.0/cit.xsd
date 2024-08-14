@@ -6,9 +6,7 @@
   elementFormDefault="qualified"
   version="1.3.0"
   >
-  <annotation>
-    <documentation>Namespace for XML elements for constructing citations to resources.</documentation>
-  </annotation>
+  <annotation><documentation>Namespace for XML elements for constructing citations to resources.</documentation></annotation>
   <include schemaLocation="citation.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

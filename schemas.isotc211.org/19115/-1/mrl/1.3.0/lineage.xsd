@@ -18,9 +18,7 @@
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="LI_Lineage" substitutionGroup="mcc:Abstract_LineageInformation" type="mrl:LI_Lineage_Type" id="ISO19115-1.118">
-    <annotation>
-      <documentation>information about the events or source data used in constructing the data specified by the scope or lack of knowledge about lineage</documentation>
-    </annotation>
+    <annotation><documentation>information about the events or source data used in constructing the data specified by the scope or lack of knowledge about lineage</documentation></annotation>
   </element>
   <!-- ........................................................................ -->
   <complexType name="LI_Lineage_Type">
@@ -28,14 +26,10 @@
       <extension base="mcc:Abstract_LineageInformation_Type">
         <sequence>
           <element minOccurs="0" name="statement" type="gco:CharacterString_PropertyType" id="ISO19115-1.119_ISO19103.CharacterString">
-            <annotation>
-              <documentation>general explanation of the data producer's knowledge about the lineage of a resource</documentation>
-            </annotation>
+            <annotation><documentation>general explanation of the data producer's knowledge about the lineage of a resource</documentation></annotation>
           </element>
           <element minOccurs="0" name="scope" type="mcc:MD_Scope_PropertyType" id="ISO19115-1.120_ISO19115-1.420">
-            <annotation>
-              <documentation>type of resource and/or extent to which the lineage information applies</documentation>
-            </annotation>
+            <annotation><documentation>type of resource and/or extent to which the lineage information applies</documentation></annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.121_ISO19115-1.361"/>
           <element maxOccurs="unbounded" minOccurs="0" name="source" type="mrl:LI_Source_PropertyType" id="ISO19115-1.122_ISO19115-1.132"/>
@@ -54,9 +48,7 @@
   </complexType>
   <!-- =========================================================================== -->
   <element name="LI_ProcessStep" substitutionGroup="gco:AbstractObject" type="mrl:LI_ProcessStep_Type" id="ISO19115-1.124">
-    <annotation>
-      <documentation>information about an event or transformation in the life of a resource including the process used to maintain the resource</documentation>
-    </annotation>
+    <annotation><documentation>information about an event or transformation in the life of a resource including the process used to maintain the resource</documentation></annotation>
   </element>
   <!-- ........................................................................ -->
   <complexType name="LI_ProcessStep_Type">
@@ -64,34 +56,22 @@
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <element name="description" type="gco:CharacterString_PropertyType" id="ISO19115-1.125_ISO19103.CharacterString">
-            <annotation>
-              <documentation>description of the event, including related parameters or tolerances</documentation>
-            </annotation>
+            <annotation><documentation>description of the event, including related parameters or tolerances</documentation></annotation>
           </element>
           <element minOccurs="0" name="rationale" type="gco:CharacterString_PropertyType" id="ISO19115-1.126_ISO19103.CharacterString">
-            <annotation>
-              <documentation>requirement or purpose for the process step</documentation>
-            </annotation>
+            <annotation><documentation>requirement or purpose for the process step</documentation></annotation>
           </element>
           <element minOccurs="0" name="stepDateTime" type="gml:TimePrimitivePropertyType" id="ISO19115-1.127_TM_TimePrimitive">
-            <annotation>
-              <documentation>date, time, range or period of process step</documentation>
-            </annotation>
+            <annotation><documentation>date, time, range or period of process step</documentation></annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="processor" type="mcc:Abstract_Responsibility_PropertyType" id="ISO19115-1.128_ISO19115-1.376">
-            <annotation>
-              <documentation>identification of, and means of communication with, person(s) and organisation(s) associated with the process step</documentation>
-            </annotation>
+            <annotation><documentation>identification of, and means of communication with, person(s) and organisation(s) associated with the process step</documentation></annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="reference" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.129_ISO19115-1.361">
-            <annotation>
-              <documentation>process step documentation</documentation>
-            </annotation>
+            <annotation><documentation>process step documentation</documentation></annotation>
           </element>
           <element minOccurs="0" name="scope" type="mcc:MD_Scope_PropertyType" id="ISO19115-1.130_ISO19115-1.420">
-            <annotation>
-              <documentation>type of resource and/or extent to which the process step applies</documentation>
-            </annotation>
+            <annotation><documentation>type of resource and/or extent to which the process step applies</documentation></annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="source" type="mrl:LI_Source_PropertyType" id="ISO19115-1.131_ISO19115-1.132"/>
         </sequence>
@@ -108,9 +88,7 @@
   </complexType>
   <!-- =========================================================================== -->
   <element name="LI_Source" substitutionGroup="gco:AbstractObject" type="mrl:LI_Source_Type" id="ISO19115-1.132">
-    <annotation>
-      <documentation>information about the source resource used in creating the data specified by the scope</documentation>
-    </annotation>
+    <annotation><documentation>information about the source resource used in creating the data specified by the scope</documentation></annotation>
   </element>
   <!-- ........................................................................ -->
   <complexType name="LI_Source_Type">
@@ -118,34 +96,22 @@
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType" id="ISO19115-1.133_ISO19103.CharacterString">
-            <annotation>
-              <documentation>detailed description of the level of the source resource</documentation>
-            </annotation>
+            <annotation><documentation>detailed description of the level of the source resource</documentation></annotation>
           </element>
           <element minOccurs="0" name="sourceSpatialResolution" type="mcc:Abstract_SpatialResolution_PropertyType" id="ISO19115-1.134_ISO19115-1.079">
-            <annotation>
-              <documentation>level of detail expressed as a scale factor, a distance or an angle</documentation>
-            </annotation>
+            <annotation><documentation>level of detail expressed as a scale factor, a distance or an angle</documentation></annotation>
           </element>
           <element minOccurs="0" name="sourceReferenceSystem" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-1.135_ISO19115-1.179">
-            <annotation>
-              <documentation>spatial reference system used by the source resource</documentation>
-            </annotation>
+            <annotation><documentation>spatial reference system used by the source resource</documentation></annotation>
           </element>
           <element minOccurs="0" name="sourceCitation" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.136_ISO19115-1.361">
-            <annotation>
-              <documentation>recommended reference to be used for the source resource</documentation>
-            </annotation>
+            <annotation><documentation>recommended reference to be used for the source resource</documentation></annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sourceMetadata" type="mcc:Abstract_Citation_PropertyType" id="ISO19115-1.137_ISO19115-1.361">
-            <annotation>
-              <documentation>identifier and link to source metadata</documentation>
-            </annotation>
+            <annotation><documentation>identifier and link to source metadata</documentation></annotation>
           </element>
           <element minOccurs="0" name="scope" type="mcc:MD_Scope_PropertyType" id="ISO19115-1.138_ISO19115-1.420">
-            <annotation>
-              <documentation>type of resource and/or extent of the source</documentation>
-            </annotation>
+            <annotation><documentation>type of resource and/or extent of the source</documentation></annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sourceStep" type="mrl:LI_ProcessStep_PropertyType" id="ISO19115-1.139_ISO19115-1.124"/>
         </sequence>

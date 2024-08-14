@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><schema 
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
   xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:fcc="https://schemas.isotc211.org/19110/-/fcc/2.1" 
   xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.1" 
@@ -20,9 +21,7 @@
   elementFormDefault="qualified" 
   targetNamespace="http://standards.iso.org/iso/19115/-3/mds/2.0" 
   version="2.0">
-  <annotation>
-    <documentation>Namespace &lt;font color="#1f497d"&gt;that imports all necessary namespaces to implement a complete metadata record for a dataset or service, not including extended data types or user-defined extensions. &lt;/font&gt;Wrapper namespace to support Catalog Service implementations.</documentation>
-  </annotation>
+  <annotation><documentation>Namespace &lt;font color="#1f497d"&gt;that imports all necessary namespaces to implement a complete metadata record for a dataset or service, not including extended data types or user-defined extensions. &lt;/font&gt;Wrapper namespace to support Catalog Service implementations.</documentation></annotation>
   <include schemaLocation="metadataDataServices.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
   <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="../../../../19110/-/gfc/2.1.0/gfc.xsd"/>
