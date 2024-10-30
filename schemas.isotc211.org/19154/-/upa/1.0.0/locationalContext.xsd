@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:upa="https://schemas.isotc211.org/19154/-/upa/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19154/-/upa/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_InferredLocationBySensorNetworks_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_InferredLocationBySensorNetworks"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_InferredLocationBySensorNetworks" type="upa:UPA_InferredLocationBySensorNetworks_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_InferredLocationBySensorNetworks_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationalContext_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationalContext"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationalContext" type="upa:UPA_LocationalContext_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationalContext_Type">
+		<xs:sequence>
+			<xs:element name="locationalContextElement" type="upa:UPA_LocationalContextElement_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="locationalContextRule" type="upa:UPA_LocationalContextRule_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationalContextElement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationalContextElement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationalContextElement" type="upa:UPA_LocationalContextElement_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationalContextElement_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationalContextRule_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationalContextRule"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationalContextRule" type="upa:UPA_LocationalContextRule_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationalContextRule_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationByGeomaticsServices_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationByGeomaticsServices"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationByGeomaticsServices" type="upa:UPA_LocationByGeomaticsServices_Type" substitutionGroup="upa:UPA_LocationalContextElement"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationByGeomaticsServices_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContextElement_Type">
+				<xs:sequence>
+					<!--
+					<xs:element name="LBS_Location" type="upa:LBS_Location_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="LR_PositionExpression" type="upa:LR_PositionExpression_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="TN_TransferNode" type="upa:TN_TransferNode_PropertyType" minOccurs="0" maxOccurs="1"/>
+					-->
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationByIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationByIdentifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationByIdentifier" type="upa:UPA_LocationByIdentifier_Type" substitutionGroup="upa:UPA_LocationalContextElement"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationByIdentifier_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContextElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationBySensingServices_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationBySensingServices"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationBySensingServices" type="upa:UPA_LocationBySensingServices_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationBySensingServices_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContextElement_Type">
+				<xs:sequence>
+					<!-- 
+					<xs:element name="sd_PositionAndOrientation" type="upa:SD_PositionAndOrientation_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="inferredLocationBySensorNetworks" type="upa:UPA_InferredLocationBySensorNetworks_PropertyType" minOccurs="0" maxOccurs="1"/>
+					-->
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+</xs:schema>

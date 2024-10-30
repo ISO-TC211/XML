@@ -10,7 +10,7 @@
     <sch:ns prefix="srv" uri="https://schemas.isotc211.org/19115/-1/srv/1.3"/>
     <sch:ns prefix="gex" uri="https://schemas.isotc211.org/19115/-1/gex/1.3"/>
     <sch:ns prefix="mrc" uri="https://schemas.isotc211.org/19115/-1/mrc/1.3"/>
-    <sch:ns prefix="mac" uri="http://standards.iso.org/iso/19115/-2/mac/2.2"/>
+    <sch:ns prefix="mac" uri="https://schemas.isotc211.org/19115/-2/mac/2.2"/>
     <sch:ns prefix="mco" uri="https://schemas.isotc211.org/19115/-1/mco/1.3"/>
     <sch:ns prefix="mex" uri="https://schemas.isotc211.org/19115/-1/mex/1.3"/>
     <sch:ns prefix="mmi" uri="https://schemas.isotc211.org/19115/-1/mmi/1.3"/>

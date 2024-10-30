@@ -6,7 +6,7 @@
   targetNamespace="https://schemas.isotc211.org/19139/-/cat/1.2" 
   version="1.2.0">
   <include schemaLocation="../../../../19139/-/cat/1.2.0/cat.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- ______________________________________________________________ -->
   <element name="CT_CodelistCatalogue" substitutionGroup="cat:AbstractCT_Catalogue" type="cat:CT_CodelistCatalogue_Type" id="ISO19139.065"/>

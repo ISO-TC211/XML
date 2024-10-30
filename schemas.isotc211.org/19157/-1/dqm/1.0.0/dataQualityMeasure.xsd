@@ -199,6 +199,8 @@
 		<xs:annotation>
 			<xs:documentation>data quality measure description</xs:documentation>
 		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
 		<xs:sequence>
 			<xs:element name="textDescription" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.103_ISO19103.1.CharacterString">
 				<xs:annotation>
@@ -216,6 +218,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="SourceReference_PropertyType">
@@ -232,6 +236,8 @@
 		<xs:annotation>
 			<xs:documentation>reference to the source of the data quality measure</xs:documentation>
 		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">	
 		<xs:sequence>
 			<xs:element name="citation" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1"  id="ISO19157-1.1.107_ISO19115-1.1.361">
 				<xs:annotation>
@@ -239,6 +245,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="FormulaType_PropertyType">
@@ -255,7 +263,9 @@
 		<xs:annotation>
 			<xs:documentation>description of the formula</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="gco:AbstractObject_Type">
+				<xs:sequence>
 			<xs:element name="key" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19157-1.1.109_ISO19103.1.CharacterString">
 				<xs:annotation>
 					<xs:documentation>explanation of the formula</xs:documentation>
@@ -277,6 +287,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!-- =========================================================================== -->
 	<!-- =========================================================================== -->

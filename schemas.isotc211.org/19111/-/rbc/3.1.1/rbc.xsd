@@ -7,7 +7,6 @@
   elementFormDefault="qualified" 
   targetNamespace="https://schemas.isotc211.org/19111/-/rbc/3.1"
   version="3.1.0">
-  <xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/AbstractCommonClasses.xsd"/>
   <xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/coordinates.xsd"/>
   <xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/commonClasses.xsd"/>
   <xs:include schemaLocation="../../../../19111/-/rbc/3.1.1/coordRefSys.xsd"/>

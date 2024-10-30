@@ -15,8 +15,8 @@
   <include schemaLocation="mrc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gmw/1.0/gmw.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="../../../../19110/-/gfc/2.1.0/gfc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="https://schemas.isotc211.org/19110/-/fcc/2.1.0/fcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="https://schemas.isotc211.org/19110/-/gfc/2.1.0/gfc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/lan/1.0/lan.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mcc/1.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->

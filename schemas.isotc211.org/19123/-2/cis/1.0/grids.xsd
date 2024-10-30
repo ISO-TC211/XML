@@ -16,7 +16,7 @@
     <!-- Includes and imports                                           -->
     <!-- ============================================================== -->
     <include schemaLocation="gmlcovAll.xsd"/>
-    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 
     <!-- ============================================================== -->
     <!-- Elements and types                                             -->

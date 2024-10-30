@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mac:MI_AcquisitionInformation xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
-    xmlns:sml="http://www.opengis.net/sensorml/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<mac:MI_AcquisitionInformation xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+    xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+    xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+    xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+    xmlns:sml="http://www.opengis.net/sensorml/2.0"
+    xmlns:swe="http://www.opengis.net/swe/2.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mac/2.0 mac.xsd 
     http://standards.iso.org/iso/19115/-3/mdt/2.0 ../../mdt/2.0/mdt.xsd
     http://standards.iso.org/iso/19115/-3/mrc/2.0 ../../mrc/2.0/mrc.xsd
@@ -34,12 +42,12 @@
             <mac:mountedOn xlink:href="#platformIdentifier"/>
             <mac:otherPropertyType/>
             <mac:otherProperty/>
-            <mac:content xlink:href="#contentInformationTarget">
+            <!-- <mac:content xlink:href="#contentInformationTarget">
                 <mrc:MD_CoverageDescription>
                     <mrc:attributeDescription/>
                     <mrc:attributeGroup xlink:href="#MD_AttributeGroupTarget"/>
                 </mrc:MD_CoverageDescription>
-            </mac:content>
+            </mac:content> -->
             <mac:sensor xlink:href="#sensorIdentifier"/>
             <mac:history>
                 <mac:MI_InstrumentationEventList>
@@ -87,7 +95,7 @@
                     </sml:ParameterList>
                 </gco:Record>
             </mac:otherProperty>
-            <mac:content xlink:href="#contentInformationTarget"/>
+            <!-- <mac:content xlink:href="#contentInformationTarget"/> -->
             <mac:history>
                 <mac:MI_InstrumentationEventList>
                     <mac:citation/>

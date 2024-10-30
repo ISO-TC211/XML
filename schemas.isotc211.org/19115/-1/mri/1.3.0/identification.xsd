@@ -14,13 +14,13 @@
     version="1.3.0"
     >
 <!--  <include schemaLocation="mri.xsd"/>-->
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="../../../../19136/-1/gmw/1.1.0/gmw.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="../../../../19115/-1/lan/1.3.0/lan.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="../../../../19115/-1/mrc/1.3.0/mrc.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gcx/1.2.0/gcx.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element abstract="true" name="AbstractMD_Identification" substitutionGroup="mcc:Abstract_ResourceDescription" type="mri:AbstractMD_Identification_Type" id="ISO19115-1.042">

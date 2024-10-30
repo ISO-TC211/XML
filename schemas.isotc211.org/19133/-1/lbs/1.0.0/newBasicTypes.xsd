@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="BinaryData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:BinaryData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="BinaryData" type="lbs:BinaryData_Type" substitutionGroup="lbs:Sequence"/>
+	<!-- .......................................... -->
+	<xs:complexType name="BinaryData_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:Sequence_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="Image_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:Image"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Image" type="lbs:Image_Type" substitutionGroup="lbs:BinaryData"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Image_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;UsedBy&gt;
+&lt;NameSpace&gt;ISO 19133 Tracking and Navigation&lt;/NameSpace&gt;
+&lt;Class&gt;NS_Instruction&lt;/Class&gt;
+&lt;Operation&gt;renderAsGoundLevelView&lt;/Operation&gt;
+&lt;Parameter&gt;Return&lt;/Parameter&gt;
+&lt;Type&gt;Image&lt;/Type&gt;
+&lt;UsedBy&gt;</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lbs:BinaryData_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="Map_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:Map"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Map" type="lbs:Map_Type" substitutionGroup="lbs:BinaryData"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Map_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;UsedBy&gt;
+&lt;NameSpace&gt;ISO 19133 Tracking and Navigation&lt;/NameSpace&gt;
+&lt;Class&gt;NS_Instruction&lt;/Class&gt;
+&lt;Operation&gt;renderAsMap&lt;/Operation&gt;
+&lt;Parameter&gt;Return&lt;/Parameter&gt;
+&lt;Type&gt;Map&lt;/Type&gt;
+&lt;UsedBy&gt;</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lbs:BinaryData_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="Sequence_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:Sequence"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Sequence" type="lbs:Sequence_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Sequence_Type">
+		<xs:sequence>
+			<xs:element name="bit" type="gco:Binary_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="VoiceStream_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:VoiceStream"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="VoiceStream" type="lbs:VoiceStream_Type" substitutionGroup="lbs:BinaryData"/>
+	<!-- .......................................... -->
+	<xs:complexType name="VoiceStream_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;UsedBy&gt;
+&lt;NameSpace&gt;ISO 19133 Tracking and Navigation&lt;/NameSpace&gt;
+&lt;Class&gt;NS_Instruction&lt;/Class&gt;
+&lt;Operation&gt;renderAsVoice&lt;/Operation&gt;
+&lt;Parameter&gt;Return&lt;/Parameter&gt;
+&lt;Type&gt;VoiceStream&lt;/Type&gt;
+&lt;UsedBy&gt;</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lbs:BinaryData_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

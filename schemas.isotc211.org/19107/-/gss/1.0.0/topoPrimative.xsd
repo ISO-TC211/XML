@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topoComplex.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Boundary_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:TP_Boundary"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TP_Boundary" type="gss:TP_Boundary_Type" substitutionGroup="gss:TP_Expression"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Boundary_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_Expression_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_ComplexBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_ComplexBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_ComplexBoundary" type="gss:TP_ComplexBoundary_Type" substitutionGroup="gss:TP_Boundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_ComplexBoundary_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_Boundary_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_DirectedEdge_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_DirectedEdge"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_DirectedEdge" type="gss:TP_DirectedEdge_Type" substitutionGroup="gss:TP_DirectedTopo"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_DirectedEdge_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>oriented edge
+edge with a sign indicating whether the edge is to be used in its natural orientation (+) or in the reverse orientation (-)
+
+NOTE: In a boundary of a face, the orientation of an edge with the face on its left side is positive (+) and the orientation of an edge with the face on its right side is negative (-).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:TP_DirectedTopo_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_DirectedFace_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_DirectedFace"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_DirectedFace" type="gss:TP_DirectedFace_Type" substitutionGroup="gss:TP_DirectedTopo"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_DirectedFace_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>oriented face
+face with a vector on and orthogonal to the surface , indicating which side of the surface is to be considered its "top"
+NOTE: The orientation of the face's exterior boundary will appear counterclockwise from the direction of this vector; the orientation of a solid's boundary will point away from the solid.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:TP_DirectedTopo_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_DirectedNode_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_DirectedNode"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_DirectedNode" type="gss:TP_DirectedNode_Type" substitutionGroup="gss:TP_DirectedTopo"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_DirectedNode_Type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_DirectedTopo_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_DirectedSolid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_DirectedSolid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_DirectedSolid" type="gss:TP_DirectedSolid_Type" substitutionGroup="gss:TP_DirectedTopo"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_DirectedSolid_Type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_DirectedTopo_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_DirectedTopo_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_DirectedTopo"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_DirectedTopo" type="gss:TP_DirectedTopo_Type" substitutionGroup="gss:TP_Primitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_DirectedTopo_Type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_Primitive_Type">
+				<xs:sequence>
+					<xs:element name="orientation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/><!-- type="Sign" -->
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Edge_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Edge"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_Edge" type="gss:TP_Edge_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Edge_Type">
+		<xs:annotation>
+			<xs:documentation>TP_Face-&gt;exits(f :TP_Face | f.boundary()-&gt;.contains(self) = containingSolid-&gt;isEmpty</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="proxy" type="gss:TP_DirectedTopo_PropertyType" minOccurs="2" maxOccurs="2"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="orientation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/><!-- type="Sign" -->
+			<xs:element name="spoke" type="gss:TP_DirectedFace_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="boundary" type="gss:TP_DirectedNode_PropertyType" minOccurs="2" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_EdgeBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_EdgeBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_EdgeBoundary" type="gss:TP_EdgeBoundary_Type" substitutionGroup="gss:TP_PrimitiveBoundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_EdgeBoundary_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_PrimitiveBoundary_Type">
+				<xs:sequence>
+					<xs:element name="endNode" type="gss:TP_DirectedNode_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="startNode" type="gss:TP_DirectedNode_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Expression_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Expression"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_Expression" type="gss:TP_Expression_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Expression_Type">
+		<xs:annotation>
+			<xs:documentation>topological expression
+collection of oriented topological primitives which is operated upon like multivariate polynomials, used for many calculation in computational topology</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="term" type="gss:TP_ExpressionTerm_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_ExpressionTerm_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_ExpressionTerm"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_ExpressionTerm" type="gss:TP_ExpressionTerm_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_ExpressionTerm_Type">
+		<xs:sequence>
+			<xs:element name="coefficient" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="variable" type="gss:TP_DirectedTopo_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Face_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Face"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_Face" type="gss:TP_Face_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Face_Type">
+		<xs:annotation>
+			<xs:documentation>A face is a 2-dimensional topological primitive that is bounded by one or more edges.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="proxy" type="gss:TP_DirectedTopo_PropertyType" minOccurs="2" maxOccurs="2"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="orientation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/><!-- type="Sign" -->
+			<xs:element name="boundary" type="gss:TP_DirectedEdge_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="spoke" type="gss:TP_DirectedSolid_PropertyType" minOccurs="0" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_FaceBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_FaceBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_FaceBoundary" type="gss:TP_FaceBoundary_Type" substitutionGroup="gss:TP_PrimitiveBoundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_FaceBoundary_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_PrimitiveBoundary_Type">
+				<xs:sequence>
+					<xs:element name="exterior" type="gss:TP_Ring_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="interior" type="gss:TP_Ring_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Node_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Node"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_Node" type="gss:TP_Node_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Node_Type">
+		<xs:annotation>
+			<xs:documentation>topological node
+0-dimensional topological primitive, its boundary being empty</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="proxy" type="gss:TP_DirectedTopo_PropertyType" minOccurs="2" maxOccurs="2"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="orientation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/><!-- type="Sign" -->
+			<xs:element name="spoke" type="gss:TP_DirectedEdge_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Primitive_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Primitive"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_Primitive" type="gss:TP_Primitive_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Primitive_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>topological primitive
+object representing a single item of a topological complex, and its relations to other elements within the topological complex, which in a geometric realization of a topological complex, corresponds to the interior of a geometric primitive of the same dimension</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="proxy" type="gss:TP_DirectedTopo_PropertyType" minOccurs="2" maxOccurs="2"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_PrimitiveBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_PrimitiveBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_PrimitiveBoundary" type="gss:TP_PrimitiveBoundary_Type" substitutionGroup="gss:TP_Boundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_PrimitiveBoundary_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_Boundary_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Ring_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Ring"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_Ring" type="gss:TP_Ring_Type" substitutionGroup="gss:TP_Expression"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Ring_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_Expression_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Shell_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Shell"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_Shell" type="gss:TP_Shell_Type" substitutionGroup="gss:TP_Expression"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Shell_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_Expression_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Solid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_Solid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="TP_Solid" type="gss:TP_Solid_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Solid_Type">
+		<xs:annotation>
+			<xs:documentation>TP_Object::dimension() = 3
+TP_Object::position.type = GM_Solid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="proxy" type="gss:TP_DirectedTopo_PropertyType" minOccurs="2" maxOccurs="2"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="isolated" type="gss:TP_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="orientation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/> <!-- type="Sign" -->
+			<xs:element name="boundary" type="gss:TP_DirectedFace_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_SolidBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:TP_SolidBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="TP_SolidBoundary" type="gss:TP_SolidBoundary_Type" substitutionGroup="gss:TP_PrimitiveBoundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_SolidBoundary_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:TP_PrimitiveBoundary_Type">
+				<xs:sequence>
+					<xs:element name="exterior" type="gss:TP_Shell_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="interior" type="gss:TP_Shell_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:sri="https://schemas.isotc211.org/19112/-/sri/2.0"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:pir="https://schemas.isotc211.org/19135/-1/pir/1.1"
+	xmlns:rsz="https://schemas.isotc211.org/19170/-1/rsz/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:swe="http://www.opengis.net/swe/2.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19112/-/sri/2.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19107/-/gss/1.0" schemaLocation="../../../../19107/-/gss/1.0.0/gss.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="../../../../19115/-1/cit/1.3.1/cit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.1/gex.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.1/mcc.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19135/-1/pir/1.1" schemaLocation="../../../../19135/-1/pir/1.1.0/pir.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19170/-1/rsz/1.0" schemaLocation="../../../../19170/-1/rsz/1.0.0/rsz.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="Gazetteer_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:Gazetteer"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Gazetteer" type="sri:Gazetteer_Type" substitutionGroup="pir:Register"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Gazetteer_Type">
+		<xs:complexContent>
+			<xs:extension base="pir:Register_Type">
+				<xs:sequence>
+					<xs:element name="coordinateReferenceSystem" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="domainOfValidity" type="gex:EX_Extent_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="identifier" type="mcc:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="scope" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="aggregationOf" type="sri:Location_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GeographicIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:GeographicIdentifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GeographicIdentifier" type="sri:GeographicIdentifier_Type" substitutionGroup="rsz:ZonalIdentifierPrimitive"/>
+	<!-- .......................................... -->
+	<xs:complexType name="GeographicIdentifier_Type">
+		<xs:complexContent>
+			<xs:extension base="rsz:ZonalIdentifierPrimitive_Type">
+				<xs:sequence>
+					<xs:element name="identifier" type="mccMD_Identifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="locale" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="nativeness" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="source" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="status" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="Location_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:Location"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Location" type="sri:Location_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="Location_Type">
+		<xs:complexContent>
+			<xs:extension base="sri:RegisterItem_Type">
+				<xs:sequence>
+					<xs:element name="extent" type="gex:EX_Extent_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="identifier" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="owner" type="cit:CI_Responsibility_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="representativePosition" type="gss:GM_Point_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="parentOf" type="sri:Location_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LocationClass_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:LocationClass"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LocationClass" type="sri:LocationClass_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LocationClass_Type">
+		<xs:complexContent>
+			<xs:extension base="sri:ZoneClassPrimitive_Type">
+				<xs:sequence>
+					<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="identifier" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="owner" type="cit:CI_Responsibility_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="parentOf" type="sri:LocationClass_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="locationS" type="sri:LocationS_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NativenessValue_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:NativenessValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NativenessValue" type="sri:NativenessValue_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NativenessValue_Type">
+		<xs:sequence>
+			<xs:element name="endonym" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="exonym" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="SpatialReferenceSystemUsingGeographicIdentifiers_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:SpatialReferenceSystemUsingGeographicIdentifiers"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="SpatialReferenceSystemUsingGeographicIdentifiers" type="sri:SpatialReferenceSystemUsingGeographicIdentifiers_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="SpatialReferenceSystemUsingGeographicIdentifiers_Type">
+		<xs:complexContent>
+			<xs:extension base="RSUsingZonalIdentifiersPrimitive_Type">
+				<xs:sequence>
+					<xs:element name="domainOfValidity" type="gex:EX_Extent_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="identifier" type="mcc:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="owner" type="cit:CI_Responsibility_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="theme" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="comprises" type="sri:LocationClass_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="locationS" type="sri:LocationS_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="StatusValue_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="sri:StatusValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="StatusValue" type="sri:StatusValue_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="StatusValue_Type">
+		<xs:sequence>
+			<xs:element name="alias" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="historical" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="official" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="other" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="preferred" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="short" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="standardized" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

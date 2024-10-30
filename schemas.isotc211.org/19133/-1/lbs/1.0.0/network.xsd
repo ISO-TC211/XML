@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+    xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+    xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+    xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+    xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+    elementFormDefault="qualified"
+    version="1.0.0">
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.1/gex.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19107/-/gss/1.0" schemaLocation="../../../../19107/-/gss/1.0.0/gss.xsd"/>
+    <xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/tracking.xsd"/>
+    
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Advisory_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Advisory"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Advisory" type="lbs:NT_Advisory_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Advisory_Type">
+        <xs:sequence>
+            <xs:element name="category" type="lbs:NT_AdvisoryCategory_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="element" type="lbs:NT_AdvisoryElement_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_AdvisoryCategory_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_AdvisoryCategory"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_AdvisoryCategory" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <!-- <xs:element name="NT_AdvisoryCategory" type="lbs:NT_AdvisoryCategory_Type"/> -->
+    <!-- .......................................... -->
+    <xs:complexType name="NT_AdvisoryCategory_Type">
+        <xs:sequence>
+            <xs:element name="byPass" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="crossRoad" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="endLocation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="enterPlace" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="exitPlace" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="highwayMerge" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="landmark" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="rampMerge" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="roadMerge" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="startLocation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="streetNameChange" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tollBooth" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="viaLocation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_AdvisoryDirection_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_AdvisoryDirection"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_AdvisoryDirection" type="lbs:NT_AdvisoryDirection_Type" substitutionGroup="lbs:NT_AdvisoryElement"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_AdvisoryDirection_Type">
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_AdvisoryElement_Type">
+                <xs:sequence>
+                    <xs:element name="direction" type="lbs:NT_TurnDirection_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_AdvisoryDistance_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_AdvisoryDistance"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_AdvisoryDistance" type="lbs:NT_AdvisoryDistance_Type" substitutionGroup="lbs:NT_AdvisoryElement"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_AdvisoryDistance_Type">
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_AdvisoryElement_Type">
+                <xs:sequence>
+                    <xs:element name="distance" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="2"/>
+                    <xs:element name="from" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_AdvisoryElement_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_AdvisoryElement"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_AdvisoryElement" type="lbs:NT_AdvisoryElement_Type" abstract="true"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_AdvisoryElement_Type">
+        <xs:sequence/>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_AdvisorySpatialRelation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_AdvisorySpatialRelation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_AdvisorySpatialRelation" type="lbs:NT_AdvisorySpatialRelation_Type" substitutionGroup="lbs:NT_AdvisoryElement"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_AdvisorySpatialRelation_Type">
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_AdvisoryElement_Type">
+                <xs:sequence>
+                    <xs:element name="spatialRelationship" type="lbs:NT_SpatialRelation_PropertyType" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Constraint_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Constraint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Constraint" type="lbs:NT_Constraint_Type" abstract="true"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Constraint_Type">
+        <xs:annotation>
+            <xs:documentation>This class is  an abstract class whose subtypes specify turn and link restrictions.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>This is a natural language description of the constraint, and may contain additional advisory information to be used in creatng instructions that this constraint plays a role in. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="temporalValidity" type="gml:TimePrimitivePropertyType" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The attribute "temporalValidity" specifies the times at which this constraint is valid. In a temproal constraint, the temporalValidity may be used to indicate a larter time frame within which the temporal constaint is valid. For example, the temporalValidity may be "April-September" while the temproal constraint  list "Monday-Friday, 8AM to 10AM" meaing that the constaint is active only during those months, those days and between those times. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="coConstraint" type="lbs:NT_Constraint_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_ExitAssociation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_ExitAssociation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_ExitAssociation" type="lbs:NT_ExitAssociation_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_ExitAssociation_Type">
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_AdvisoryElement_Type">
+                <xs:sequence>
+                    <xs:element name="exit1" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="exit2" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_LaneConstraint_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_LaneConstraint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_LaneConstraint" type="lbs:NT_LaneConstraint_Type" substitutionGroup="lbs:NT_Constraint"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_LaneConstraint_Type">
+        <xs:annotation>
+            <xs:documentation>This class is used to list lane restrictions. Lane numbers are counted from the normal outside edge of allowable travel (rightmost in the US
+                the Americas
+                and most of Europe; leftmost in the UK
+                Australia
+                and Japan).
+                
+                Allowed Lanes are ones from which the turn can be made both legally or physically if the vehicle has a large turning radius). The turning radii
+                if given
+                are ordered in the same manner as the allowed lanes
+                and are the minimum turning radius required of a vehicle making this turn from this lane.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Constraint_Type">
+                <xs:sequence>
+                    <xs:element name="allowedLanes" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>The allowed lanes from which the turn can be made. "+1" is the left most lane. Positive numbers count from the left. 
+                                "-1" is the right most lane. Negative numbers count from the right.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="applicableVehicleTypes" type="lbs:NT_Vehicle_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="disallowedLanes" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>The disallowed lanes from which the turn cannot be made. "+1" is the left most lane. Positive numbers count from the left. 
+                                "-1" is the right most lane. Negative numbers count from the right.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="turningRadius" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_SpatialRelation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Advisory"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_SpatialRelation" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <!--    <xs:element name="NT_SpatialRelation" type="lbs:NT_SpatialRelation_Type"/> -->
+    <!-- .......................................... -->
+    <xs:complexType name="NT_SpatialRelation_Type">
+        <xs:sequence>
+            <xs:element name="leftOfRoute" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="overRoute" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="rightOfRoute" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_TemporalConstraint_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_TemporalConstraint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_TemporalConstraint" type="lbs:NT_TemporalConstraint_Type"  substitutionGroup="lbs:NT_Constraint"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_TemporalConstraint_Type">
+        <xs:annotation>
+            <xs:documentation>This class specifies when a network entity may be traversed. The constraint may be listed in two distinct manner
+                when the network entity is close to traffic
+                or when it is opened. Co-constraints on this entity may further specify vehicles types.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Constraint_Type">
+                <xs:sequence>
+                    <xs:element name="allowedTime" type="gml:TimePrimitivePropertyType" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Time when the entity is open for use. If NULL, the value is assumed to be the complement of the "forbiddenTime."</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="forbiddenTime" type="gml:TimePrimitivePropertyType" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Time when the entity is closed for use. If NULL, the value is assumed to be the complement of the "allowedTime."</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Vehicle_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Vehicle"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Vehicle" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <!-- <xs:element name="NT_Vehicle" type="lbs:NT_Vehicle_Type"/> -->
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Vehicle_Type">
+        <xs:annotation>
+            <xs:documentation>This is a mechanism for traversing a route.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="fourWheelDrive" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="allVehicles" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="bicycle" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="carWithTrailer" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="dangerousCargo" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="deliveryTruck" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="disableOccupant" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="emergency" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="employee" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="explosiveCargo" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="facility" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="farm" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="hov" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="lightRail" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="mailDelivery" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="military" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="moped" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="motorcycle" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="passengerCars" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="pedestrian" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="pollutingToWaterCargo" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="privateBus" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="publicBus" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="residential" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="schoolBus" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="snowChains" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tanker" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="taxi" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="transportTruck" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="trolleyBus" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="truck" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="userDefined" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_VehicleConstraint_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_VehicleConstraint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_VehicleConstraint" type="lbs:NT_VehicleConstraint_Type" substitutionGroup="lbs:NT_Constraint"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_VehicleConstraint_Type">
+        <xs:annotation>
+            <xs:documentation>This is a constraint on the type or size of a vehicle that is allowed to traverse a link or a turn.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Constraint_Type">
+                <xs:sequence>
+                    <xs:element name="allowedVehicle" type="lbs:NT_Vehicle_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="disallowedVehicle" type="lbs:NT_Vehicle_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="grade" type="gco:Angle_PropertyType" minOccurs="0" maxOccurs="2"/>
+                    <xs:element name="maxClearance" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="maxWeight" type="gco:Weight_PropertyType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="turnRadius" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Link_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Link"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Link" type="lbs:NT_Link_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Link_Type">
+        <xs:annotation>
+            <xs:documentation>Links are the basic curve elements of a network topology. They are always associated to a topological complex, via the topology:TP_DirectedEdge attribute and through it, potentially to a geometric complex (topology.geometry:GM_Curve).               
+                -- At least one direction of the NT_Link is
+                -- traversable in the network
+                {Not(NT_Link.isTraversable) implies NT_Link.negate().isTraversable}
+                 {Not(NT_Link.negate().isTraversable) implies NT_Link.isTraversable}
+                If it has an underlying geometry
+                it is a measured curve.
+                 {topology.topo.geometry.isTypeOf(MC_Curve)}</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="isTraversable" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>This indicates whether this link is navigable in this direction. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isUturnPossible" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>This indicates whether this link is navigable in this direction. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="routeSegmentCategory" type="lbs:NT_RouteSegmentCategory_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_RouteSegmentCategory_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_RouteSegmentCategory"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_RouteSegmentCategory" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <!-- <xs:element name="NT_RouteSegmentCategory" type="lbs:NT_RouteSegmentCategory_Type"/> -->
+    <!-- .......................................... -->
+    <xs:complexType name="NT_RouteSegmentCategory_Type">
+        <xs:sequence>
+            <xs:element name="airRoute" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="airway" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="bikepath" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="bridge" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="bus" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="endway" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ferry" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="lightRail" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="rail" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="road" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="subway" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="toll" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="tunnel" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="walkway" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_LinkPosition_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_LinkPosition"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_LinkPosition" type="lbs:NT_LinkPosition_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType  name="NT_LinkPosition_Type">
+        <xs:sequence>
+            <xs:element name="linkMeasure" type="gco:MemberName_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="marker" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="link" type="lbs:NT_Link_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+     </xs:complexType>
+  <!-- ==========================================  -->
+    <xs:complexType name="NT_NetworkPosition_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_NetworkPosition"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_NetworkPosition" type="lbs:NT_NetworkPosition_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType  name="NT_NetworkPosition_Type">
+        <xs:annotation>
+            <xs:documentation>This is a representation of a position with respect to a network.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="linkPosition" type="lbs:NT_LinkPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="node" type="lbs:NT_Junction_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+     </xs:complexType>
+  <!-- ==========================================  -->
+    <xs:complexType name="NT_Network_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Network"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Network" type="lbs:NT_Network_Type" substitutionGroup="gss:TP_Complex"/>
+    <!-- .......................................... -->
+    <xs:complexType  name="NT_Network_Type">
+        <xs:annotation>
+            <xs:documentation>A NT_Network is essentially two separate topologies. It geometric topology is the value of the association "complex." The second topology is the graph of the NT_Link and NT_Turn entities that comprise it.
+                
+                Although the links and turns have the underlying geometry of the TP_Complex
+                they have their own connectivity based on usable "vehicle" routes. If a link comes to a cross-roads
+                and U-turns are allowed
+                the there are up to 4 turns which exit that link and enter into one of the likes associated to a directed edge leaving that node
+                including the one that reversed the incoming link. This micro topology does not have a different geometric existence from the "road" network
+                but represents the potential traffic patterns through each of the "intersections" represented by the TP_Nodes of the associated TP_Complex.
+                
+                {  complex.dimension() = 1  }</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gss:TP_Complex_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+     </xs:complexType>
+  <!-- ==========================================  -->
+    <xs:complexType name="NT_WayPoint_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_WayPoint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_WayPoint" type="lbs:NT_WayPoint_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType  name="NT_WayPoint_Type">
+        <xs:annotation>
+            <xs:documentation>Targets are used in route Request to indicate features or positions that must be either traversed or avoided. The link attribute "avoid" determines which.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="avoid" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Whether or not the targets are to be visited or avoided. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="position" type="lbs:TK_Position_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="restriction" type="lbs:NT_Constraint_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+     </xs:complexType>
+  <!-- ==========================================  -->
+    <xs:complexType name="NT_WayPointList_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_WayPointList"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_WayPointList" type="lbs:NT_WayPointList_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType  name="NT_WayPointList_Type">
+        <xs:annotation>
+            <xs:documentation>This class is a list of descriptions of targets for a route that it must either pass through or avoid. The route satisfies the target list if it passes through each location so indicated and avoids each target so indicated. The types of description may vary
+                although most common descriptions are either coordinate positions or street-level addresses.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="endPoint" type="lbs:NT_WayPoint_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="isOrdered" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Whether or not the order of the via point list is part of the route requirements. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="startPoint" type="lbs:NT_WayPoint_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="viaPoint" type="lbs:NT_WayPoint_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Maneuver_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Maneuver"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Maneuver" type="lbs:NT_Maneuver_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Maneuver_Type">
+        <xs:annotation>
+            <xs:documentation>A maneuver is a legal sequence of actions, given by a sequence of turns, each of which terminates on the link that is the start of the next turn. Most maneuvers are single turns, but some turn's traversability are dependent on route history (as a ending turn in a U-turn across a divided highway). Since in this case, the turn's traversability cannot be decided by a single link's history, the maneuver extends that history to a sufficient  length to determine traversability. The total length of most maneuvers is quite short.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="isTraversable" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="link" type="lbs:NT_Link_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Route_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Route"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Route" type="lbs:NT_Route_Type" substitutionGroup="lbs:NT_Network"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Route_Type">
+        <xs:annotation>
+            <xs:documentation>This class is used for routes defined by a geometry (a composite curve) and start and stop positions on that geometry. A route is calculated from and optimizes a cost function from the set of possible routes that traverse a set of target positions. The recalculate function determines a new route that optimizes the new cost function from the passed target position to the end of the route. If the cost function has not changed the new route should coincide with old one.
+                
+                The two canonical representations of a route are 1) an ordered list of directed links to be traversed
+                and 2) an ordered list of maneuver to be made. Each maneuver advisory or route instruction is associated to either a link, a maneuver or a turn of the route.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Network_Type">
+                <xs:sequence>
+                    <!-- <xs:element name="geometry" type="gml:CompositeCurve" minOccurs="1" maxOccurs="1"/> -->
+                    <xs:element name="summary" type="lbs:NT_RouteSummary_PropertyType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="maneuver" type="lbs:NT_Maneuver_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_RouteSummary_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_RouteSummary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_RouteSummary" type="lbs:NT_RouteSummary_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_RouteSummary_Type">
+        <xs:sequence>
+            <xs:element name="begin" type="lbs:NT_NetworkPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="distance" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="end" type="lbs:NT_NetworkPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="extent" type="gex:AbstractEX_GeographicExtent_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="stops" type="lbs:NT_WayPointList_PropertyType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="time" type="gco:TM_PeriodDuration_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_CombinedNetwork_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_CombinedNetwork"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_CombinedNetwork" type="lbs:NT_CombinedNetwork_Type" substitutionGroup="lbs:NT_Network"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_CombinedNetwork_Type">
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Network_Type">
+                <xs:sequence>
+                    <xs:element name="componentNetworks" type="lbs:NT_Network_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="transferLlink" type="lbs:NT_TransferLink_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="transferNode" type="lbs:NT_TransferNode_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Transfer_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Transfer"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Transfer" type="lbs:NT_Transfer_Type" substitutionGroup="lbs:NT_Turn"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Transfer_Type">
+        <xs:annotation>
+            <xs:documentation>A transfer is a turn that occurs at a transfer node and which has entry and exit links connected to separate component junctions</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Turn_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_TransferLink_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_TransferLink"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_TransferLink" type="lbs:NT_TransferLink_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_TransferLink_Type">
+        <xs:annotation>
+            <xs:documentation>A transfer link is a link in a combined network whose boundary nodes are in different component networks. </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Link_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_TransferNode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_TransferNode"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_TransferNode" type="lbs:NT_TransferNode_Type" substitutionGroup="lbs:NT_Junction"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_TransferNode_Type">
+        <xs:annotation>
+            <xs:documentation>A transfer Node is a node in a combined network that is the union of several component  junctions. Its links and turns contain all the links and turns of the component junctions plus  transfers that move from a link in one component network to a link in one of the other component networks. The combined network can be recast (alternately represented) by a single network in which all component junctions of a single transfer node have been unioned into a single node (of type junction), whose links consist of all the component links and whose turns consist of all the component turns combined with the transfers.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="lbs:NT_Junction_Type">
+                <xs:sequence>
+                    <xs:element name="componentJunction" type="lbs:NT_Junction_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="turnTransfer" type="lbs:NT_Transfer_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_AngularDirection_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_AngularDirection"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_AngularDirection" type="lbs:NT_AngularDirection_Type"/>
+    <!-- .......................................... -->
+    <xs:simpleType name="NT_AngularDirection_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="clockwise"/>
+            <xs:enumeration value="counterclockwise"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Junction_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Junction"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Junction" type="lbs:NT_Junction_Type" substitutionGroup="gss:TP_Node"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Junction_Type">
+        <xs:complexContent>
+            <xs:extension base="gss:TP_Node_Type">
+                <xs:sequence>
+                    <xs:element name="junctionType" type="lbs:NT_JunctionType_PropertyType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="spoke" type="lbs:NT_Link_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="maximalComplex" type="lbs:NT_Network_PropertyType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="turn" type="lbs:NT_Turn_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_JunctionType_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_JunctionType"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_JunctionType" type="lbs:NT_JunctionType_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_JunctionType_Type">
+        <xs:sequence>
+            <xs:element name="boardingRamp" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="changOver" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="enclosedTrafficArea" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="entranceRamp" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="exitRamp" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="intersection" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="roundabout" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="station" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="transfer" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_Turn_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_Turn"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_Turn" type="lbs:NT_Turn_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="NT_Turn_Type">
+        <xs:annotation>
+            <xs:documentation>The NT_Turn object represents a mechanism for traversing from one link to another. Each turn will be located at a node of the underlying topology
+                and will form the bridge for a link entering the node and a link exiting the node. The use of turns allows a restricted network (one with constraints) to be represented by an unrestricted one.
+                The use of the word "turn" does not necessarily reflect a change of direction. Going straight through an intersection is one such viable option and would be represented by a "NT_Turn." In public transport
+                such as a rail system
+                the "NT_Turns" are routes through "stations" connecting one incoming "train" with one outgoing "train."  NT_Turns are thus called "connections" when speaking of airport
+                and have temporal constraints based on the availability of the "links" that is
+                on flight times.
+                
+                
+                {fromLink.endNode = toLink.startNode = topology}
+                (isTraversable} implies {fromLink.isTraversable}
+                (isTraversable} implies {toLink.isTraversable</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="entryCount" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="exitCount" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The exitCount indicates how far around the intersection the exit link occurs relative to entrance link. In right-hand lane systems the count is counter-clockwise. In left-hand lande systems the count is clockwise. In non-road systems, the number can usually be ignored. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isManuever" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="isTraversable" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="turnDirection" type="lbs:NT_TurnDirection_PropertyType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="constraint" type="lbs:NT_Constraint_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="fromLink" type="lbs:NT_Link_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="toLink" type="lbs:NT_Link_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+    <xs:complexType name="NT_TurnDirection_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="lbs:NT_TurnDirection"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element name="NT_TurnDirection" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <!-- <xs:element name="NT_TurnDirection" type="lbs:NT_TurnDirection_Type"/> -->
+    <!-- .......................................... -->
+    <xs:complexType name="NT_TurnDirection_Type">
+        <xs:sequence>
+            <xs:element name="keepLeft" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="keepRight" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="left" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="right" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="sharpLeft" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="sharpRight" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="slightLeft" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="slightRight" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="straight" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="uTurn" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==========================================  -->
+</xs:schema>

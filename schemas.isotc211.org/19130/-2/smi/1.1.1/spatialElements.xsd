@@ -7,21 +7,16 @@
   xmlns:sml="http://www.opengis.net/sensorml/2.0" 
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
-  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
-  xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
   xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   version="1.1.0"
     >
-    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.1/rbcStubs.xsd"/>
-    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="http://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
-    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="../../../../19115/-2/mac/2.2.1/mac.xsd"/>
-    <import namespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" schemaLocation="../../../../19157/-1/mdq/1.0.1/mdq.xsd"/> 
+    <import namespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-1/mdq/1.0.1/mdq.xsd"/> 
     
     <include schemaLocation="../../../../19130/-1/smi/1.1.1/codeList.xsd"/> 
     <include schemaLocation="../../../../19130/-2/smi/1.1.1/codeList.xsd"/>

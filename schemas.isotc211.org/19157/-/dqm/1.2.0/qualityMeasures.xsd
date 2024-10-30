@@ -12,14 +12,14 @@
     version="1.2.0"
    >
   <include schemaLocation="dqm.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.2" schemaLocation="../../../../19110/-/fcc/2.2.0/fcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.2" schemaLocation="../../../../19110/-/gfc/2.2.0/gfc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19135/-2/pre/1.2" schemaLocation="../../../../19135/-2/pre/1.2.0/pre.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.2" schemaLocation="https://schemas.isotc211.org/19110/-/fcc/2.2.0/fcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.2" schemaLocation="https://schemas.isotc211.org/19110/-/gfc/2.2.0/gfc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19135/-2/pre/1.2" schemaLocation="https://schemas.isotc211.org/19135/-2/pre/1.2.0/pre.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DQM_BasicMeasure" substitutionGroup="gco:AbstractObject"
-    type="dqm:DQM_BasicMeasure_Type">
+ type="dqm:DQM_BasicMeasure_Type">
     <annotation>
       <documentation>data quality basic measure</documentation>
     </annotation>
@@ -62,7 +62,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQM_Description" substitutionGroup="gco:AbstractObject"
-    type="dqm:DQM_Description_Type">
+ type="dqm:DQM_Description_Type">
     <annotation>
       <documentation>data quality measure description</documentation>
     </annotation>
@@ -113,7 +113,7 @@
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="alias"
-            type="gco:CharacterString_PropertyType">
+ type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>another recognized name, an abbreviation or a short name for the same
                 data quality measure</documentation>
@@ -149,16 +149,16 @@
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="example"
-            type="dqm:DQM_Description_PropertyType">
+ type="dqm:DQM_Description_PropertyType">
             <annotation>
               <documentation>illustration of the use of a data quality measure</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="sourceReference"
-            type="dqm:DQM_SourceReference_PropertyType"/>
+ type="dqm:DQM_SourceReference_PropertyType"/>
           <element minOccurs="0" name="basicMeasure" type="dqm:DQM_BasicMeasure_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="parameter"
-            type="dqm:DQM_Parameter_PropertyType"/>
+ type="dqm:DQM_Parameter_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -171,18 +171,18 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQM_MeasureCatalogue" substitutionGroup="gfc:FC_FeatureCatalogue"
-    type="dqm:DQM_MeasureCatalogue_Type"/>
+ type="dqm:DQM_MeasureCatalogue_Type"/>
   <complexType name="DQM_MeasureCatalogue_Type">
     <complexContent>
       <extension base="gfc:FC_FeatureCatalogue_Type">
         <sequence>
           <element maxOccurs="unbounded" minOccurs="0" name="definitionSource"
-            type="dqm:DQM_SourceReference_PropertyType"/>
+ type="dqm:DQM_SourceReference_PropertyType"/>
           <element maxOccurs="unbounded" name="qualityMeasure" type="dqm:DQM_Measure_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="basicMeasure"
-            type="dqm:DQM_BasicMeasure_PropertyType"/>
+ type="dqm:DQM_BasicMeasure_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="parameter"
-            type="dqm:DQM_Parameter_PropertyType"/>
+ type="dqm:DQM_Parameter_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -242,7 +242,7 @@
   </complexType>
   <element name="DQM_RegisteredDataQualityBasicMeasure"
     substitutionGroup="pre:Abstract_RegisterItem"
-    type="dqm:DQM_RegisteredDataQualityBasicMeasure_Type"/>
+ type="dqm:DQM_RegisteredDataQualityBasicMeasure_Type"/>
   <complexType name="DQM_RegisteredDataQualityBasicMeasure_Type">
     <complexContent>
       <extension base="pre:Abstract_RegisterItem_Type">
@@ -260,7 +260,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQM_RegisteredDataQualityMeasure" substitutionGroup="pre:Abstract_RegisterItem"
-    type="dqm:DQM_RegisteredDataQualityMeasure_Type"/>
+ type="dqm:DQM_RegisteredDataQualityMeasure_Type"/>
   <complexType name="DQM_RegisteredDataQualityMeasure_Type">
     <complexContent>
       <extension base="pre:Abstract_RegisterItem_Type">
@@ -278,7 +278,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQM_RegisteredDataQualityParameter" substitutionGroup="pre:Abstract_RegisterItem"
-    type="dqm:DQM_RegisteredDataQualityParameter_Type"/>
+ type="dqm:DQM_RegisteredDataQualityParameter_Type"/>
   <complexType name="DQM_RegisteredDataQualityParameter_Type">
     <complexContent>
       <extension base="pre:Abstract_RegisterItem_Type">
@@ -296,7 +296,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQM_SourceReference" substitutionGroup="gco:AbstractObject"
-    type="dqm:DQM_SourceReference_Type">
+ type="dqm:DQM_SourceReference_Type">
     <annotation>
       <documentation>reference to the source of the data quality measure</documentation>
     </annotation>
@@ -322,7 +322,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQM_ValueStructure" substitutionGroup="gco:CharacterString"
-    type="gco:CodeListValue_Type"/>
+ type="gco:CodeListValue_Type"/>
   <complexType name="DQM_ValueStructure_PropertyType">
     <sequence minOccurs="0">
       <element ref="dqm:DQM_ValueStructure"/>

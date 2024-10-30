@@ -7,6 +7,6 @@
   targetNamespace="https://schemas.isotc211.org/19110/-/fcc/2.1" 
   version="2.1.0">
   <include schemaLocation="abstract.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="../../../../19110/-/gfc/2.1.0/gfc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="https://schemas.isotc211.org/19110/-/gfc/2.1.0/gfc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

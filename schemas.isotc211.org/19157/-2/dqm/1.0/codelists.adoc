@@ -1,0 +1,38 @@
+﻿= Codelists from the metadata for Data Quality Measures (dqm) Namespace
+:revdate: 2015-04-17
+
+== ISO 19115-3 Codelist Report
+
+=== Codelists from the metadata for Data Quality Measures (dqm) Namespace
+
+[%unnumbered]
+[options=header,cols=2]
+|===
+| *Scope* | Codelists from the metadata for Data Quality Measures (dqm) Namespace
+
+| *Field of Application* | ISO TC211 Metadata Standards
+| *Version (Date)* | 1.0 ()
+|===
+
+=== DQM_ValueStructure ( DQM_ValueStructure )
+
+Description:: structure for reporting a complex data quality result
+
+[%unnumbered]
+[options=header,cols=2]
+|===
+| Entry | Definition
+
+| DQM_ValueStructure_bag | finite, unordered collection of related items (objects or
+values) that may be repeated (ISO 19107:2003)
+| DQM_ValueStructure_set | unordered collection of related items (objects or values)
+with no repetition (ISO 19107:2003)
+| DQM_ValueStructure_sequence | finite, ordered collection of related items (objects or
+values) that may be repeated (ISO 19107:2003)
+| DQM_ValueStructure_table | an arrangement of data in which each item may be
+identified by means of arguments or keys (ISO/IEC 2382-4:1999)
+| DQM_ValueStructure_matrix | rectangular array of numbers (ISO/TS 19129:2009)
+| DQM_ValueStructure_coverage | feature that acts as a function to return values from
+its range for any direct position within its spatial, temporal or spatiotemporal domain
+(ISO 19123:2005)
+|===

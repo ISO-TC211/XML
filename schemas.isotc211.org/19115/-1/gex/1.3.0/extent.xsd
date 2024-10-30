@@ -14,14 +14,13 @@
   <!-- deprecated namespaces:
   xmlns:gts="http://www.isotc211.org/2005/gts"
   xmlns:rce="https://schemas.isotc211.org/19111/rce/1.0" -->
-  <include schemaLocation="gex.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/temporal.xsd"/>
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="../../../../19136/-1/gmw/1.1.0/gmw.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
-  <!--  <import namespace="https://schemas.isotc211.org/19111/rce/1.0" schemaLocation="../../../../19111/rce/1.0.0/rce.xsd"/>-->
+   <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/temporal.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+   <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <!--  <import namespace="https://schemas.isotc211.org/19111/rce/1.0" schemaLocation="https://schemas.isotc211.org/19111/rce/1.0.0/rce.xsd"/>-->
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="EX_Extent" substitutionGroup="mcc:Abstract_Extent" type="gex:EX_Extent_Type" id="ISO19115-1.335">
@@ -225,7 +224,7 @@
           <!-- moved to 359 -->
           <!-- <element minOccurs="0" name="verticalCRS" type="gml:CRSPropertyType" id="ISO19115-1.359_CRS"/> -->
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
-          <element minOccurs="0" name="verticalCRS" type="rbc:VerticalCRS_PropertyType" id="ISO19115-1.359_ISO19111.Table12"/>
+          <element minOccurs="0" name="verticalCRS" type="rbc:RS_CRS_PropertyType" id="ISO19115-1.359_ISO19111.Table12"/>
           <!-- Moved to align with ISO 19115-1:2014 data dictionary-->
           <element minOccurs="0" name="verticalCRSId" type="mcc:Abstract_ReferenceSystem_PropertyType" id="ISO19115-1.360_ISO19115-1.179"/>
          </sequence>

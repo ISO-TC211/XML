@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometryRoot.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Aggregate_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_Aggregate"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_Aggregate" type="gss:GM_Aggregate_Type" substitutionGroup="gss:GM_Object" abstract="true"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_Aggregate_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Object_Type">
+				<xs:sequence>
+					<xs:element name="element" type="gss:GM_Object_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_MultiCurve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_MultiCurve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_MultiCurve" type="gss:GM_MultiCurve_Type" substitutionGroup="gss:GM_MultiPrimitive"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_MultiCurve_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_MultiPrimitive_Type">
+				<xs:sequence>
+					<xs:element name="length" type="gco:Length_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_MultiPoint_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_MultiPoint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_MultiPoint" type="gss:GM_MultiPoint_Type" substitutionGroup="gss:GM_MultiPrimitive"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_MultiPoint_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_MultiPrimitive_Type">
+				<xs:sequence>
+					<!-- <xs:element name="position" type="Set&lt;DirectPosition&gt;" minOccurs="1" maxOccurs="1"/> -->
+					<xs:element name="position" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="directPosition" minOccurs="1" maxOccurs="unbounded" type="gml:PointPropertyType"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_MultiPrimitive_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_MultiPrimitive"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_MultiPrimitive" type="gss:GM_MultiPrimitive_Type" substitutionGroup="gss:GM_Aggregate"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_MultiPrimitive_Type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Aggregate_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_MultiSolid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_MultiSolid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_MultiSolid" type="gss:GM_MultiSolid_Type" substitutionGroup="gss:GM_MultiPrimitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_MultiSolid_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_MultiPrimitive_Type">
+				<xs:sequence>
+					<xs:element name="area" type="gco:Area_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="volume" type="gco:Volume_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_MultiSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_MultiSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_MultiSurface" type="gss:GM_MultiSurface_Type" substitutionGroup="gss:GM_MultiPrimitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_MultiSurface_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_MultiPrimitive_Type">
+				<xs:sequence>
+					<xs:element name="area" type="gco:Area_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="perimeter" type="gco:Length_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

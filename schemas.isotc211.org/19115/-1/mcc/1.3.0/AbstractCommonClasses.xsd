@@ -7,8 +7,7 @@
   elementFormDefault="qualified"
    version="1.3.0"
   >
-  <include schemaLocation="mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_AcquisitionInformation" substitutionGroup="gco:AbstractObject" type="mcc:Abstract_AcquisitionInformation_Type"/>
   <complexType abstract="true" name="Abstract_AcquisitionInformation_Type">

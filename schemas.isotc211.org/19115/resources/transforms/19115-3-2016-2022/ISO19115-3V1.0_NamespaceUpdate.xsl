@@ -143,11 +143,11 @@
           https://schemas.isotc211.org/19115/-1/msr/1.3 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19115/-1/msr/1.3.0/msr.xsd
           https://schemas.isotc211.org/19115/-1/srv/1.3 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19115/-1/srv/1.3.0/srv.xsd
           https://schemas.isotc211.org/19115/-2/mac/2.2 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19115/-2/mac/2.2.0/mac.xsd
-          https://schemas.isotc211.org/19115/-3/cat/1.0 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19115/-3/cit/1.0/cat.xsd
-          https://schemas.isotc211.org/19103/-/gco/1.1 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19103/-/gco/1.1.0/gco.xsd
-          https://schemas.isotc211.org/19103/-/gcx/1.1 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19103/-/gcx/1.1.0/gcx.xsd
-          https://schemas.isotc211.org/19110/-/gfc/1.0 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19110/-/gfc/1.1.0/gfc.xsd
-          https://schemas.isotc211.org/19110/-/fcc/1.0 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19110/-/fcc/1.0.0/fcc.xsd
+          https://schemas.isotc211.org/19139/-/cat/1.2 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19139/-/cit/1.2/cat.xsd
+          https://schemas.isotc211.org/19103/-/gco/1.2 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19103/-/gco/1.2.0/gco.xsd
+          https://schemas.isotc211.org/19103/-/gcx/1.2 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19103/-/gcx/1.2.0/gcx.xsd
+          https://schemas.isotc211.org/19110/-/gfc/2.2 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19110/-/gfc/2.2.0/gfc.xsd
+          https://schemas.isotc211.org/19110/-/fcc/2.2 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19110/-/fcc/2.2.0/fcc.xsd
           https://schemas.isotc211.org/19157/-2/mdq/1.1 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19157/-3/mdq/1.1.0/mdq.xsd
           https://schemas.isotc211.org/19136/-/gwm/1.1 https://raw.githubusercontent.com/ISO-TC211/XML/master/schemas.isotc211.org/19115Restructure/19136/-/gwm/1.1.0/gwm.xsd
           http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd 
@@ -195,7 +195,7 @@
   </xsl:template>
   
   <xsl:template match="gco:*">
-    <xsl:element name="gco:{local-name()}" namespace="https://schemas.isotc211.org/19103/-/gco/1.1" >
+    <xsl:element name="gco:{local-name()}" namespace="https://schemas.isotc211.org/19103/-/gco/1.2" >
       <xsl:apply-templates select="node()|@*"/>
     </xsl:element>
   </xsl:template>

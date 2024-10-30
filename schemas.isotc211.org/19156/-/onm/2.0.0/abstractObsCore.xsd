@@ -10,7 +10,7 @@
 			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:Deployment intended as a parent class for all Deployment realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="deploymentReason" type="CharacterString" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="deploymentReason" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>a human readable description of the reason for the Deployment.
 

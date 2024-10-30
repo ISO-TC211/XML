@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:upa="https://schemas.isotc211.org/19154/-/upa/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19154/-/upa/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	
+	<xs:include schemaLocation="locationalContext.xsd"/>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_ContextBrokerageService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_ContextBrokerageService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_ContextBrokerageService " type="upa:UPA_ContextBrokerageService_Type "/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_ContextBrokerageService_Type">
+		<xs:sequence>
+			<xs:element name="producer" type="upa:UPA_ContextProducingService_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_ContextProducingService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_ContextProducingService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_ContextProducingService" type="upa:UPA_ContextProducingService_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_ContextProducingService_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_ContextTrigger_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_ContextTrigger"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_ContextTrigger" type="upa:UPA_ContextTrigger_Type" substitutionGroup="upa:UPA_LocationalContextElement"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_ContextTrigger_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContextElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeoSemanticContextProducingService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeoSemanticContextProducingService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeoSemanticContextProducingService" type="upa:UPA_GeoSemanticContextProducingService_Type" substitutionGroup="upa:UPA_ContextProducingService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeoSemanticContextProducingService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_ContextProducingService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeospatialContextProducingService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeospatialContextProducingService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeospatialContextProducingService" type="upa:UPA_GeospatialContextProducingService_Type" substitutionGroup="upa:UPA_ContextProducingService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeospatialContextProducingService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_ContextProducingService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LGD_RDFElement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LGD_RDFElement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LGD_RDFElement" type="upa:UPA_LGD_RDFElement_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LGD_RDFElement_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LGDCatalogueService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LGDCatalogueService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LGDCatalogueService" type="upa:UPA_LGDCatalogueService_Type" substitutionGroup="upa:UPA_LGDService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LGDCatalogueService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LGDService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LGDQualityControlService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LGDQualityControlService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LGDQualityControlService" type="upa:UPA_LGDQualityControlService_Type" substitutionGroup="upa:UPA_LGDService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LGDQualityControlService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LGDService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LGDRegisterService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LGDRegisterService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LGDRegisterService" type="upa:UPA_LGDRegisterService_Type" substitutionGroup="upa:UPA_LGDService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LGDRegisterService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LGDService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LGDService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LGDService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LGDService" type="upa:UPA_LGDService_Type" substitutionGroup="upa:UPA_LGD_RDFElement"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LGDService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LGD_RDFElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_LocationalContextProducingService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_LocationalContextProducingService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_LocationalContextProducingService" type="upa:UPA_LocationalContextProducingService_Type" substitutionGroup="upa:UPA_ContextProducingService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_LocationalContextProducingService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_ContextProducingService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_toRDFService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_toRDFService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_toRDFService" type="upa:UPA_toRDFService_Type" substitutionGroup="upa:UPA_LGDService"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_toRDFService_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LGDService_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+</xs:schema>

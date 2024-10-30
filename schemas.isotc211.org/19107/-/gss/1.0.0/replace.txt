@@ -1,0 +1,5 @@
+"/>\n\s+<!-- .......................................... -->\n\s+<xs:complexType name="
+_Type"/>\n    <!-- .......................................... -->\n    <xs:complexType name="	
+xmlns:swe="http://www.opengis.net/swe/2.0"
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>

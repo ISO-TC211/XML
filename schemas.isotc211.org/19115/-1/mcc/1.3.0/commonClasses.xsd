@@ -8,11 +8,11 @@
   elementFormDefault="qualified"
    version="1.3.0"
   >
-  <include schemaLocation="mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <xs:include schemaLocation="../../../../19115/-1/mcc/1.3.0/AbstractCommonClasses.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
-  <element name="MD_Scope" substitutionGroup="gco:AbstractObject" type="mcc:MD_Scope_Type" id="ISO19115-1.420">
+  <element name="MD_Scope" substitutionGroup="gco:AbstractObject" type="mcc:MD_Scope_Type" id="ISO19115-2.420">
     <annotation><documentation>new: information about the scope of the resource</documentation></annotation>
   </element>
   <!-- ........................................................................ -->

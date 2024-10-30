@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="EG_PointEstimate_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:EG_PointEstimate"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EG_PointEstimate" type="lbs:EG_PointEstimate_Type" abstract="true"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EG_PointEstimate_Type">
+		<xs:complexContent>
+			<xs:extension base="gml:PointPropertyType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="EG_PointEstimateArc_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:EG_PointEstimateArc"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EG_PointEstimateArc" type="lbs:EG_PointEstimateArc_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EG_PointEstimateArc_Type">
+		<xs:annotation>
+			<xs:documentation>The point arc is the same as a point circle
+except that the error is given by an pair of arcs between two given radii and two given bearing angles. .</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="endBearing" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="innerRadius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="outerRadius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="startBearing" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="EG_PointEstimateCircle_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:EG_PointEstimateCircle"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EG_PointEstimateCircle" type="lbs:EG_PointEstimateCircle_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EG_PointEstimateCircle_Type">
+		<xs:annotation>
+			<xs:documentation>A point circle is a point with an error estimate that is a metric circle of a given radius. It should be noted that this circle is not a circle in the coordinate reference system of the point
+unless the reference system is a local engineering one.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="radius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="EG_PointEstimateEllipse_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:EG_PointEstimateEllipse"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EG_PointEstimateEllipse" type="lbs:EG_PointEstimateEllipse_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EG_PointEstimateEllipse_Type">
+		<xs:annotation>
+			<xs:documentation>The point ellipse is the same as a point circle
+except that the error is given by an ellipse defined by the parameters given.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="majorAxisBearing" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="majorAxisRadius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="minorAxisRadius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="EG_PointEstimateEllipsoid_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:EG_PointEstimateEllipsoid"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EG_PointEstimateEllipsoid" type="lbs:EG_PointEstimateEllipsoid_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EG_PointEstimateEllipsoid_Type">
+		<xs:sequence>
+			<xs:element name="majorAxisBearing" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="2"/>
+			<xs:element name="majorAxisRadius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="minorAxisBearing" type="gco:Angle_PropertyType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="minorAxisRadius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="EG_PointEstimateSphere_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:EG_PointEstimateSphere"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="EG_PointEstimateSphere" type="lbs:EG_PointEstimateSphere_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="EG_PointEstimateSphere_Type">
+		<xs:sequence>
+			<xs:element name="radius" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="GenderValue" type="GenderValue"/>
+	<xs:complexType name="GenderValue">
+		<xs:annotation>
+			<xs:documentation>Hypothetical class for recording a gender valued result of an Observation. Created for OMS instance diagram examples only</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gender" type="xs:string" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>either of the two sexes (male and female), especially when considered with reference to social and cultural differences rather than biological ones</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

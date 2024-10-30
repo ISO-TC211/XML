@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="../../../../19115/-1/gex/1.3.1/gex.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_AbstractAddress_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_AbstractAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_AbstractAddress" type="lbs:AD_AbstractAddress_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_AbstractAddress_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>This empty abstract class is the root of the address specification tree. The design strategy is to define "address elements" commonly used across multiple cultures and countries, and to allow any country to define an address type of its own by combinations of these elements. New elements are allowed if they have character string representations. The printed address for any country would be a template of the strings specified in  its subtype of address. Note that any viable instance for any subtype of abstract address would also be a viable AD_Address, as long as all of its address elements are defined. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_Address_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_Address"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_Address" type="lbs:AD_Address_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_Address_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AbstractAddress_Type">
+				<xs:sequence>
+					<xs:element name="addressee" type="lbs:AD_Addressee_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="addressElement" type="lbs:AD_AddressElement_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="phoneNumber" type="lbs:AD_PhoneNumber_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_USAddress_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_USAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_USAddress" type="lbs:AD_USAddress_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_USAddress_Type">
+		<xs:annotation>
+			<xs:documentation>This is a "street" address (as opposed to postal boxes which are not normally associated to street locations)
+which is the most common way of specifying a location on a street map. It should eventually be compliant with an ISO standard.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AbstractAddress_Type">
+				<xs:sequence>
+					<xs:element name="addressee" type="lbs:AD_Addressee_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="city" type="lbs:AD_NamedPlace_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="phoneNumber" type="lbs:AD_PhoneNumber_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="postalCode" type="lbs:AD_PostalCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="state" type="lbs:AD_NamedPlace_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="street" type="lbs:AD_StreetAddress_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_Addressee_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_Addressee"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_Addressee" type="lbs:AD_Addressee_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_Addressee_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="postfix" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="prefix" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_AddressElement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_AddressElement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_AddressElement" type="lbs:AD_AddressElement_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_AddressElement_Type" abstract="true">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_Building_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_Building"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_Building" type="lbs:AD_Building_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_Building_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_StreetLocation_Type">
+				<xs:sequence>
+					<xs:element name="buildingName" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="number" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="subdivision" type="lbs:AD_NamedPlace_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_ListNamedPlaces_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_ListNamedPlaces"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_ListNamedPlaces" type="lbs:AD_ListNamedPlaces_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_ListNamedPlaces_Type">
+		<xs:sequence>
+			<xs:element name="name" type="lbs:AD_NamedPlace_PropertyType" minOccurs="0" maxOccurs="9"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_MuniQuadrant_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_MuniQuadrant"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_MuniQuadrant" type="lbs:AD_MuniQuadrant_Type"/>
+	<!-- .......................................... -->
+	<xs:simpleType name="AD_MuniQuadrant_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NW"/>
+			<xs:enumeration value="NE"/>
+			<xs:enumeration value="SE"/>
+			<xs:enumeration value="SW"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_NamedPlace_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_NamedPlace"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_NamedPlace" type="lbs:AD_NamedPlace_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_NamedPlace_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="level" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="regionOrCountry" type="lbs:AD_RegionCode_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="type" type="lbs:AD_NamedPlaceClassification_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_NamedPlaceClassification_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_NamedPlaceClassification"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_NamedPlaceClassification" type="lbs:AD_NamedPlaceClassification_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_NamedPlaceClassification_Type">
+		<xs:sequence>
+			<xs:element name="country" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="countrySecondarySubdivision" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="countrySubdividsion" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="municipality" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="municipalitySubdivision" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_NumberRange_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_NumberRange"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_NumberRange" type="lbs:AD_NumberRange_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_NumberRange_Type">
+		<xs:sequence>
+			<xs:element name="first" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="last" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_PhoneNumber_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_PhoneNumber"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_PhoneNumber" type="lbs:AD_PhoneNumber_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_PhoneNumber_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="number" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_PostalCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_PostalCode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_PostalCode" type="lbs:AD_PostalCode_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_PostalCode_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="addonCode" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="code" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_RegionCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_RegionCode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_RegionCode" type="lbs:AD_RegionCode_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_RegionCode_Type">
+		<xs:sequence>
+			<xs:element name="XXX" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AT" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="BE" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CA" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CA-NB" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CA-NT" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CA-NU" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ES" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="GB" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="US" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="US-VA" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="VA" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_Street_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_Street"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_Street" type="lbs:AD_Street_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_Street_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="directionalPrefix" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="directionalSuffix" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="muniQuadrant" type="lbs:AD_MuniQuadrant_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="officialName" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="postalCode" type="lbs:AD_PostalCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="trailingSpaces" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="typePrefix" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="typeSuffix" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_StreetAddress_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_StreetAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_StreetAddress" type="lbs:AD_StreetAddress_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_StreetAddress_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="location" type="lbs:AD_StreetLocation_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="street" type="lbs:AD_Street_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_StreetIntersection_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_StreetIntersection"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_StreetIntersection" type="lbs:AD_StreetIntersection_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_StreetIntersection_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence>
+					<xs:element name="streets" type="lbs:AD_Street_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="AD_StreetLocation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:AD_StreetLocation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="AD_StreetLocation" type="lbs:AD_StreetLocation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="AD_StreetLocation_Type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="lbs:AD_AddressElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

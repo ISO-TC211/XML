@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+		xmlns:swe="http://www.opengis.net/swe/2.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/record_components.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometricPrimative.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="DirectPosition_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:DirectPosition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DirectPosition" type="gss:DirectPosition_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="DirectPosition_Type">
+		<xs:annotation>
+			<xs:documentation>DirectPosition object data types (Figure 14) hold the coordinates for a position within some coordinate reference system. The coordinate reference system is described in ISO 19111. Since DirectPositions, as data types, will often be included in larger objects (such as GM_Objects) that have references to ISO19111::SC_CRS, the DirectPosition::cordinateReferenceSystem may be left NULL if this particular DirectPosition is included in a larger object with such a reference to a SC_CRS. In this case, the DirectPosition::cordinateReferenceSystem is implicitly assumed to take on the value of the containing object's SC_CRS. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- <xs:element name="coordinate" type="Sequence&lt;Number&gt;" minOccurs="1" maxOccurs="1"/> -->
+			<xs:element name="coordinate" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="coord" type="gco:Number_PropertyType" minOccurs="1" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CRS" type="rbc:RS_CRS_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="SC_CRS" type="rbc:RS_CRS_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_AffinePlacement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_AffinePlacement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_AffinePlacement" type="gss:GM_AffinePlacement_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_AffinePlacement_Type">
+		<xs:sequence>
+			<xs:element name="location" type="gss:GM_Position_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="refDirection" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"><!-- type="Vector" -->
+				<xs:annotation>
+					<xs:documentation>{size = outDimension}</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Arc_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_Arc"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_Arc" type="gss:GM_Arc_Type" substitutionGroup="gss:GM_ArcString"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Arc_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Arc is defined by 3 points, and consists of the arc of the circle determined by the 3 points, starting at the first, passing through the second and terminating at the third. If the 3 points are co-linear, then the arc shall be a 3-point line string, and will not be able to return values for center, radius, start angle and end angle. 
+NOTE In the model, a GM_Arc is a subclass of GM_ArcString, being a trivial arc string consisting of only one arc. This may be counter-intuitive in the sense that subclasses are often thought of as more complex than their superclass (with additional methods and attributes). A GM_Arc is simpler than a GM_ArcString in that it has less data, but it is more complex in that it can return geometric information such as "center", "start angle", and "end angle". This additional computational complexity forces the subclassing to be the way it is. In addition the "is type of" semantics works this way and not the other. 
+In its simplest representation, the three points in the controlPoint sequence for an GM_Arc shall consist of, in order, the initial point on the arc, some point on the arc neither at the start or end, and the end point of the GM_Arc. 
+GM_Arc::controlPoint : GM_PointArray = &lt; startPoint : GM_Position, 
+             midPoint : GM_Position, 
+             endPoint : GM_Position&gt;
+
+If additional points are given, then all points must lie on the circle defined by any 3 non-colinear points in the control point array. All points shall lie on the same circle, and shall be given in the controlPoint array in the order in which they occur on the arc. 
+
+NOTE The use of the term "midPoint" for the center GM_Position of the controlPoint sequence is not meant to require that the GM_Position be the geometric midpoint of the arc. This is the best choice for this GM_Position from a computational stability perspective, but it is not absolutely necessary for the mathematics to work.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_ArcString_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_ArcByBulge_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_ArcByBulge"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_ArcByBulge" type="gss:GM_ArcByBulge_Type" substitutionGroup="gss:GM_ArcStringByBulge"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_ArcByBulge_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_ArcStringByBulge_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_ArcString_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_ArcString"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_ArcString" type="gss:GM_ArcString_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_ArcString_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_ArcString (Figure 17) is similar to a GM_LineString except that the interpolation is by circular arcs. Since it requires 3 points to determine a circular arc, the controlPoints are treated as a sequence of overlapping sets of 3 GM_Positions, the start of each arc, some point between the start and end, and the end of each arc. Since the end of each arc is the start of the next, this GM_Position is not repeated in the controlPoint sequence.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="controlPoints" type="gss:GM_PointArray_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="numArc" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_ArcStringByBulge_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_ArcStringByBulge"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_ArcStringByBulge" type="gss:GM_ArcStringByBulge_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_ArcStringByBulge_Type">
+		<xs:annotation>
+			<xs:documentation>This variant of the arc simply stores the parameters of the second constructor of the component GM_Arcs and recalculates the other attributes of the standard arc. The controlPoint sequence is similar to that in GM_ArcString, but the midPoint GM_Position is not needed since it is to be calculated. The control point sequence shall consist of the start and end points of each arc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="bulge" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="bulgeReal" type="gco:Real_PropertyType"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="normal" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="normalVector" type="swe:VectorType"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="numArc" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Bezier_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Bezier"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Bezier" type="gss:GM_Bezier_Type" substitutionGroup="gss:GM_BSplineCurve"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Bezier_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Bezier are polynomial splines that use Bézier or Bernstein polynomials for interpolation purposes. An n-long control point array shall create a polynomial curve of degree n that defines the entire curve segment. These curves are defined in terms of a set of basis functions called the Bézier or Bernstein polynomials.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_BSplineCurve_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_BicubicGrid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_BicubicGrid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_BicubicGrid" type="gss:GM_BicubicGrid_Type" substitutionGroup="gss:GM_GriddedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_BicubicGrid_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GriddedSurface_Type">
+				<xs:sequence>
+					<xs:element name="horiVectorAtEnd" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="horiVectorAtEndVector" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="horiVectorAtStart" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="horiVectorAtStartVector" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="vertVectorAtEnd" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="vertVectorAtEndVector" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="vertVectorAtStart" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="vertVectorAtStartVector" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_BilinearGrid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_BilinearGrid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_BilinearGrid" type="gss:GM_BilinearGrid_Type" substitutionGroup="gss:GM_GriddedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_BilinearGrid_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GriddedSurface_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_BSplineCurve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_BSplineCurve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_BSplineCurve" type="gss:GM_BSplineCurve_Type" substitutionGroup="gss:GM_SplineCurve"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_BSplineCurve_Type">
+		<xs:annotation>
+			<xs:documentation>A B-spline (Figure 19) is a piecewise parametric polynomial or rational curve described in terms of control points and basis functions. If the weights in the knots are equal then it is a polynomial spline. If not, then it is a rational function spline. If the Boolean "isPolynomial" is set to TRUE then the weights shall all be set to 1. A B-spline curve is a piecewise Bézier curve if it is quasi-uniform except that the interior knots have multiplicity "degree" rather than having multiplicity one. In this subtype the knot spacing shall be 1.0, starting at 0.0. A piecewise Bézier curve that has only two knots, 0.0, and 1.0, each of multiplicity (degree+1), is equivalent to a simple Bézier curve.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_SplineCurve_Type">
+				<xs:sequence>
+					<xs:element name="curveForm" type="gss:GM_SplineCurveForm_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="isPolynomial" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="knotSpec" type="gss:GM_KnotType_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_BSplineSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_BSplineSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_BSplineSurface" type="gss:GM_BSplineSurface_Type" substitutionGroup="gss:GM_GriddedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_BSplineSurface_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GriddedSurface_Type">
+				<xs:sequence>
+					<xs:element name="degree" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="2"/>
+					<xs:element name="isPolynomial" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="knot" minOccurs="2" maxOccurs="2">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="knotGM_Knot" type="gss:GM_Knot_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="knotSpec" type="gss:GM_KnotType_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="surfaceForm" type="gss:GM_BSplineSurfaceForm_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_BSplineSurfaceForm_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_BSplineSurfaceForm"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_BSplineSurfaceForm"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element  name="GM_BSplineSurfaceForm" type="gss:GM_BSplineSurfaceForm_Type"/> -->
+    <!-- .......................................... -->
+	<xs:complexType name="GM_BSplineSurfaceForm_Type">
+		<xs:sequence>
+			<xs:element name="conical" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="cylindrical" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="planar" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="spherical" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="toroidal" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="unspecified" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Circle_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Circle"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Circle" type="gss:GM_Circle_Type" substitutionGroup="gss:GM_Arc"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Circle_Type">
+		<xs:annotation>
+			<xs:documentation>Same as GM_Arc, but closed to form a full circle. The "start" and "end" bearing are equal and shall be the bearing for the first controlPoint listed. 
+NOTE This still requires at least 3 distinct non-co-linear points to be unambiguously defined. The arc is simply extended until the first point is encountered.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Arc_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Clothoid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Clothoid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Clothoid" type="gss:GM_Clothoid_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Clothoid_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Clothoid (Figure 19) implements the clothoid (or Cornu's spiral), which is a plane curve whose curvature is a fixed function of its length. 
+This geometry is mainly used as a transition curve between curves of type straight line/circular arc or circular arc/circular arc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="endParameter" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="refLocation" type="gss:GM_AffinePlacement_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="scaleFactor" type="gco:Number_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="startParameter" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Cone_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Cone"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Cone" type="gss:GM_Cone_Type" substitutionGroup="gss:GM_GriddedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Cone_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GriddedSurface_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Conic_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Conic"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Conic" type="gss:GM_Conic_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Conic_Type">
+		<xs:annotation>
+			<xs:documentation>The type GM_Conic (Figure 18) represents any general conic curve. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="eccentricity" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="endConstrParam" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="position" type="gss:GM_AffinePlacement_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="semiLatusRectum" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="shifted" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="startConstrParam" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CubicSpline_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CubicSpline"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_CubicSpline" type="gss:GM_CubicSpline_Type" substitutionGroup="gss:GM_PolynomialSpline"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_CubicSpline_Type">
+		<xs:annotation>
+			<xs:documentation>Cubic splines are similar to line strings in that they are a sequence of segments each with its own defining function. A cubic spline uses the control points and a set of derivative parameters to define a piecewise 3rd degree polynomial interpolation. Unlike line-strings, the parameterization by arc length is not necessarily still a polynomial. Splines have two parameterizations that are used in this standard, the defining one (constructive parameter) and the one that has been reparameterized by arc length to satisfy the requirements in GM_GenericCurve. 
+The function describing the curve must be C2, that is, have a continuous 1st and 2nd derivative at all points, and pass through the controlPoints in the order given. Between the control points, the curve segment is defined by a cubic polynomial. At each control point, the polynomial changes in such a manner that the 1st and 2nd derivative vectors are the same from either side. The control parameters record must contain vectorAtStart, and vectorAtEnd which are the unit tangent vectors at controlPoint[1] and controlPoint[n] where n = controlPoint.count. 
+The restriction on "vectorAtStart" and "vectorAtEnd" reduce these sequences to a single tangent vector each. 
+GM_CubicSpline::vectorAtStart : Vector \\ "degree - 2" is 1
+GM_CubicSpline::vectorAtEnd : Vector \\ "degree - 2" is 1
+
+NOTE The actual implementation of the cubic polynomials varies, but the curve so generated is guaranteed to be unique. See [2], [10], [12], [18], and [19] in the bibliography for examples of implementations. 
+The interpolation mechanism for a GM_CubicSpline is "cubicSpline".
+GM_CubicSpline::interpolation : GM_InterpolationMethod = "cubicSpline" 
+
+The degree for a GM_CubicSpline is "3".
+GM_CubicSpline::degree : Integer = "3"</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_PolynomialSpline_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Cylinder_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Cylinder"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Cylinder" type="gss:GM_Cylinder_Type" substitutionGroup="gss:GM_GriddedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Cylinder_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GriddedSurface_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Envelope_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Envelope"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Envelope" type="gss:GM_Envelope_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Envelope_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Envelope is often referred to as a minimum bounding box or rectangle. Regardless of dimension, a GM_Envelope can be represented without ambiguity as two direct positions (coordinate points). To encode a GM_Envelope, it is sufficient to encode these two points. This is consistent with all of the data types in this standard, their state is represented by their publicly accessible attributes. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lowerCorner" type="gss:DirectPosition_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A coordinate consisting of all minimal values of the ordinates of all points within the GM_Envelope.
+The "lowerCorner" of a GM_Envelope is a coordinate position consisting of all the minimal ordinates for each dimension for all points within the GM_Envelope.
+GM_Envelope::lowerCorner : DirectPosition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="upperCorner" type="gss:DirectPosition_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A coordinate consisting of all maximal values of the ordinates of all points within the GM_Envelope.
+The "upperCorner" of a GM_Envelope is a coordinate position consisting of all the maximal ordinates for each dimension for all points within the GM_Envelope.
+GM_Envelope::upperCorner : DirectPosition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Geodesic_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Geodesic"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Geodesic" type="gss:GM_Geodesic_Type" substitutionGroup="gss:GM_GeodesicString"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Geodesic_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Geodesic consists of two distinct positions joined by a geodesic curve. The control points of a GM_Geodesic shall all lie on the geodesic between its start point and end point. Between these two points, a geodesic curve defined from the ellipsoid or geoid model used by the coordinate reference system may be used to interpolate other positions. Any other point in the controlPoint array must fall on this geodesic.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GeodesicString_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_GeodesicString_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_GeodesicString"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_GeodesicString" type="gss:GM_GeodesicString_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_GeodesicString_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_GeodesicString consists of sequence of geodesic segments. The class essentially combines a Sequence&lt;GM_Geodesic&gt; into a single object, with the obvious savings of storage space. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="controlPoint" type="gss:GM_PointArray_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_GriddedSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_GriddedSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_GriddedSurface" type="gss:GM_GriddedSurface_Type" substitutionGroup="gss:GM_ParametricCurveSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_GriddedSurface_Type">
+		<xs:annotation>
+			<xs:documentation>The GM_GriddedSurface (Figure 23) is a GM_ParametricCurveSurface defined from a rectangular grid in the parameter space. The rows from this grid are control points for horizontal surface curves; the columns are control points for vertical surface curves. The working assumption is that for a pair of parametric coordinates (s, t), that the horizontal curves for each integer offset are calculated and evaluated at "s". This defines a sequence of control points:
+&lt;cn(s) : s = 1 ? columns&gt; 
+
+From this sequence, a vertical curve is calculated for "s," and evaluated at "t". In most cases, the order of calculation (horizontal-vertical versus vertical-horizontal) does not make a difference. Where it does, the horizontal-vertical order shall be the one used.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_ParametricCurveSurface_Type">
+				<xs:sequence>
+					<xs:element name="columns" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="controlPoint" type="gss:GM_PointGrid_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="rows" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Knot_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Knot"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Knot" type="gss:GM_Knot_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Knot_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Knot is used to control the constructive parameter space for spline curves and surfaces. Each knot sequence is used for a dimension of the spline's parameter space. Thus, in a surface spline, there will be two knot sequences, one for each parameter (u, v). The ith, jth would be (ui, vj), where the original knot sequences were (ui) and (vj). Each knot of a spline curve or surface is described using a GM_Knot. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="multiplicity" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="value" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="weight" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_KnotType_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_KnotType"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_KnotType" type="gss:GM_KnotType_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_KnotType_Type">
+		<xs:annotation>
+			<xs:documentation>A B-spline is uniform if and only if all knots are of multiplicity 1 and they differ by a positive constant from the preceding knot. A B-spline is quasi-uniform if and only if the knots are of multiplicity (degree+1) at the ends, of multiplicity 1 elsewhere, and they differ by a positive constant from the preceding knot. This code list is used to describe the distribution of knots in the parameter space of various splines. The possible values are:
+¾ uniform: the form of knots is appropriate for a uniform B-spline.
+¾ quasiUniform: the form of knots is appropriate for a quasi-uniform B-spline.
+¾ piecewiseBezier : the form of knots is appropriate for a piecewise Bezier curve.
+GM_KnotType::
+uniform : CharacterString
+quasiUniform : CharacterString
+piecewiseBezier : CharacterString</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="piecewiseBezier" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="quasiUniform" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="uniform" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_LineSegment_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_LineSegment"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_LineSegment" type="gss:GM_LineSegment_Type" substitutionGroup="gss:GM_LineString"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_LineSegment_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_LineSegment consists of two distinct DirectPositions (the startPoint and endPoint) joined by a straight line. Thus its interpolation attribute shall be "linear". The default GM_GenericCurve::parameterization = c(s) is:
+(L : Distance) = endParam - startParam
+c(s) = ControlPoint[1]+((s-startParam)/L)*(ControlPoint[2]-ControlPoint[1])
+
+Any other point in the controlPoint array must fall on this line. The control points of a GM_LineSegment shall all lie on the straight line between its start point and end point. Between these two points, other positions may be interpolated linearly. 
+NOTE The linear interpolation, given using a constructive parameter t, 0 £ t £ 1.0, where c(o) = c.startPoint() and c(1)=c.endPoint(), is:
+ 
+c(t) = t c(1)  + (1-t) c(0)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_LineString_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_LineString_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_LineString"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_LineString" type="gss:GM_LineString_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_LineString_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_LineString (Figure 16) consists of sequence of line segments, each having a parameterization like the one for GM_LineSegment (See 6.4.11). The class essentially combines a Sequence&lt;GM_LineSegments&gt; into a single object, with the obvious savings of storage space. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="controlPoint" type="gss:GM_PointArray_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_OffsetCurve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_OffsetCurve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_OffsetCurve" type="gss:GM_OffsetCurve_Type" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_OffsetCurve_Type">
+		<xs:annotation>
+			<xs:documentation>An offset curve is a curve at a constant distance from the basis curve. They can be useful as a cheap and simple alternative to constructing curves that are offsets by definition. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="distance" type="gco:Length_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="refDirection" type="swe:VectorType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="baseCurve" type="gss:GM_CurveSegment_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_ParametricCurveSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_ParametricCurveSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_ParametricCurveSurface" type="gss:GM_ParametricCurveSurface_Type" abstract="true" substitutionGroup="gss:GM_SurfacePatch"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_ParametricCurveSurface_Type">
+		<xs:annotation>
+			<xs:documentation>The surface patches that make up the parametric curve surfaces, GM_ParametricCurveSurface (Figure 23), are all continuous families of curves, given by a constructive function of the form:
+surface(s,t): [a,b]´[c,d] ®DirectPosition
+
+By fixing the value of either parameter, we have a one-parameter family of curves.
+ct(s) = cs(t) = surface(s,t)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_SurfacePatch_Type">
+				<xs:sequence>
+					<xs:element name="horizontalCurveType" type="gss:GM_CurveInterpolation_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="verticalCurveType" type="gss:GM_CurveInterpolation_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_PointArray_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_PointArray"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_PointArray" type="gss:GM_PointArray_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_PointArray_Type">
+		<xs:annotation>
+			<xs:documentation>Many of the geometric constructs in this International Standard require the use of reference points which are organized into sequences or grids (sequences of equal length sequences). 
+GM_PointArray::column[21..*n] : GM_Position;
+GM_PointGrid::row[21..*n] : GM_PointArray;</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="column" type="gss:GM_Position_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_PointGrid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_PointGrid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_PointGrid" type="gss:GM_PointGrid_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_PointGrid_Type">
+		<xs:annotation>
+			<xs:documentation>Many of the geometric constructs in this International Standard require the use of reference points which are organized into sequences or grids (sequences of equal length sequences). 
+GM_PointArray::column[21..*n] : GM_Position;
+GM_PointGrid::row[21..*n] : GM_PointArray;</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="row" type="gss:GM_PointArray_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_PointRef_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_PointRef"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_PointRef" type="gss:GM_PointRef_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_PointRef_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_PointRef is used to reference an existing point. It is an instantiation of the template class Reference&lt;GM_Point&gt;.
+GM_PointRef::point :: Reference&lt;GM_Point&gt;</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="point" type="gss:GM_Point_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Polygon_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Polygon"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Polygon" type="gss:GM_Polygon_Type" substitutionGroup="gss:GM_SurfacePatch"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Polygon_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Polygon (Figure 21) is a surface patch that is defined by a set of boundary curves and an underlying surface to which these curves adhere. The default is that the curves are coplanar and the polygon uses planar interpolation in its interior. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_SurfacePatch_Type">
+				<xs:sequence>
+					<xs:element name="boundary" type="gss:GM_SurfaceBoundary_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="spanningSurface" type="gss:GM_Surface_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_PolyhedralSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_PolyhedralSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_PolyhedralSurface" type="gss:GM_PolyhedralSurface_Type" substitutionGroup="gss:GM_OrientableSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_PolyhedralSurface_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_PolyhedralSurface (Figure 21) is a GM_Surface composed of polygon surfaces (GM_Polygon) connected along their common boundary curves.  This differs from GM_Surface only in the restriction on the types of surface patches acceptable. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_OrientableSurface_Type">
+				<xs:sequence>
+					<xs:element name="patch" type="gss:GM_Polygon_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_PolynomialSpline_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_PolynomialSpline"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_PolynomialSpline" type="gss:GM_PolynomialSpline_Type" substitutionGroup="gss:GM_SplineCurve"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_PolynomialSpline_Type">
+		<xs:annotation>
+			<xs:documentation>An "nth degree" polynomial spline shall be defined piecewise as an n-degree polynomial, with up to Cn-1 continuity at the control points where the defining polynomial changes. This level of continuity is controlled by the attribute numDerivativesInterior. Parameters shall include directions for as many as degree - 2 derivatives of the polynomial at the start and end point of the segment. GM_Linestring is equivalent to a 1st degree polynomial spline. It has simple continuity at the controlPoints (C0), but does not require derivative information (degree - 2 = -1). 
+NOTE The major difference between the polynomial splines and the b-splines (basis splines) is that polynomial splines pass through their control points, making the control point and sample point array identical.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_SplineCurve_Type">
+				<xs:sequence>
+					<xs:element name="vectorAtEnd" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="vectorAtEndVector" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="vectorAtStart" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="vectorAtStartVector" type="swe:VectorType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Position_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Position"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Position" type="gss:GM_Position_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Position_Type">
+		<xs:annotation>
+			<xs:documentation>The data type GM_Position is a union type consisting of either a DirectPosition or of a reference to a GM_Point from which a DirectPosition shall be obtained. The use of this data type allows the identification of a position either directly as a coordinate (variant direct) or indirectly as a reference to a GM_Point (variant indirect).
+GM_Position::direct [0,1] : DirectPosition; 
+GM_Position::indirect [0,1] : GM_PointRef;
+
+GM_Position:
+ {direct.isNull = indirect.isNotNull}</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="direct" type="gss:DirectPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="indirect" type="gss:GM_PointRef_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Sphere_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Sphere"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Sphere" type="gss:GM_Sphere_Type" substitutionGroup="gss:GM_GriddedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Sphere_Type">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_GriddedSurface_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_SplineCurve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_SplineCurve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_SplineCurve" type="gss:GM_SplineCurve_Type" abstract="true" substitutionGroup="gss:GM_CurveSegment"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_SplineCurve_Type">
+		<xs:annotation>
+			<xs:documentation>GM_SplineCurve (Figure 19) acts as a root for subtypes of GM_CurveSegment using some version of spline, either polynomial or rational functions. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="controlPoints" type="gss:GM_PointArray_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="degree" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="knot" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="knotGM_Knot" type="gss:GM_Knot_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_SplineCurveForm_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_SplineCurveForm"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_SplineCurveForm" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element  name="GM_SplineCurveForm" type="gss:GM_SplineCurveForm_Type"/> -->
+    <!-- .......................................... -->
+	<xs:complexType name="GM_SplineCurveForm_Type">
+		<xs:annotation>
+			<xs:documentation>This code list is used to indicate which sort of curve may be approximated by a particular B-spline. The potential values are:
+ -- polylineform: a connected sequence of line segments represented by a 1 degree B-spline (a line string).
+ -- circularArc: an arc of a circle or a complete circle.
+ -- ellipticArc: an arc of an ellipse or a complete ellipse.
+ -- parabolicArc: an arc of a finite length of a parabola.
+ -- hyperbolicArc: an arc of a finite length of one branch of a hyperbola.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="circularArc" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ellipticArc" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="hyperbolicArc" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="parabolicArc" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="polylineForm" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Tin_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Tin"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Tin" type="gss:GM_Tin_Type" substitutionGroup="gss:GM_TriangulatedSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Tin_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Tin (Figure 21) is a GM_TriangulatedSurface that uses the Delaunay algorithm or a similar algorithm complemented with consideration for breaklines, stoplines and maximum length of triangle sides (Figure 22). These networks satisfy the Delaunay criterion away from the modifications: For each triangle in the network, the circle passing through its vertexes does not contain, in its interior, the vertex of any other triangle.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_TriangulatedSurface_Type">
+				<xs:sequence>
+					<xs:element name="breakLines"  minOccurs="1" maxOccurs="1"><!-- type="Set&lt;GM_LineString&gt;"-->
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="breakLineGM_LineString" type="gss:GM_LineString_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="controlPoint" type="gss:GM_Position_PropertyType" minOccurs="3" maxOccurs="unbounded"/>
+					<xs:element name="maxLength" type="gco:Distance_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="stopLines" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="stopLineGM_LineString" type="gss:GM_LineString_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Triangle_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Triangle"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Triangle" type="gss:GM_Triangle_Type" substitutionGroup="gss:GM_Polygon"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Triangle_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Triangle is a planar GM_Polygon defined by 3 corners; that is, a GM_Triangle would be the result of a constructor of the form:
+GM_Polygon(GM_LineString(&lt;P1, P2, P3, P1&gt;))
+
+where P1, P2, and P3 are three GM_Positions. GM_Triangles have no holes. GM_Triangle shall be used to construct GM_TriangulatedSurfaces. 
+
+NOTE The points in a triangle can be located in terms of their corner points by defining a set of barycentric coordinates, three nonnegative numbers c1, c2, and c3 such that c1+ c2 + c3 = 1.0. Then, each point P in the triangle can be expressed for some set of barycentric coordinates as:</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Polygon_Type">
+				<xs:sequence>
+					<xs:element name="corners" type="gss:GM_Position_PropertyType" minOccurs="3" maxOccurs="3"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_TriangulatedSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_TriangulatedSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_TriangulatedSurface" type="gss:GM_TriangulatedSurface_Type" substitutionGroup="gss:GM_OrientableSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_TriangulatedSurface_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_TriangulatedSurface (Figure 21) is a GM_PolyhedralSurface that is composed only of triangles (GM_Triangle). There is no restriction on how the triangulation is derived. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_OrientableSurface_Type">
+				<xs:sequence>
+					<xs:element name="patch" type="gss:GM_Triangle_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

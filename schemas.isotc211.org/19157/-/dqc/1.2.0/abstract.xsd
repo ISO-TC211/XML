@@ -7,7 +7,7 @@
   targetNamespace="https://schemas.isotc211.org/19157/-/dqc/1.2" 
   version="1.2.0">
   <include schemaLocation="dqc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element abstract="true" name="Abstract_DataQuality" substitutionGroup="gco:AbstractObject" type="dqc:Abstract_DataQuality_Type"/>
   <complexType abstract="true" name="Abstract_DataQuality_Type">

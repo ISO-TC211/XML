@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:gpi="http://standards.iso.org/19155/iso/gpi/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sch="http://www.ascc.net/xml/schematron" 
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://standards.iso.org/19155/iso/gpi/1.0" elementFormDefault="qualified" version="1.0">
+<xsd:schema 
+	xmlns:gpi="http://standards.iso.org/19155/iso/gpi/1.0" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:sch="http://www.ascc.net/xml/schematron" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://standards.iso.org/19155/iso/gpi/1.0" 
+    elementFormDefault="qualified" 
+    version="1.0">
     <!-- Schema Reference -->
-    <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <xsd:element name="ReferenceSystem" type="gpi:ReferenceSystemType" substitutionGroup="gml:Definition"/>
     <xsd:complexType name="ReferenceSystemType">
         <xsd:complexContent>
@@ -67,4 +73,3 @@
         </xsd:complexContent>
     </xsd:complexType>
 </xsd:schema>
-

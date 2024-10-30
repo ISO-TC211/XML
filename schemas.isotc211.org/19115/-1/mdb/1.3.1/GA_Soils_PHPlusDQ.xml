@@ -242,7 +242,9 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
             </cit:CI_Citation></mcc:authority>
             <mcc:code><gco:CharacterString>EPSG::3112</gco:CharacterString></mcc:code>
             <mcc:description><gco:CharacterString>Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: m</gco:CharacterString></mcc:description>
-        </mcc:MD_Identifier></mrs:referenceSystemIdentifier>
+        </mcc:MD_Identifier></mrs:referenceSystemIdentifier><mrs:coordinateEpoch><rbc:DataEpoch>
+            <rbc:coordinateEpoch><gco:TimeMeasure uom="day">2024.123</gco:TimeMeasure></rbc:coordinateEpoch>
+        </rbc:DataEpoch></mrs:coordinateEpoch>
         <mrs:referenceSystemType></mrs:referenceSystemType>
     </mrs:MD_ReferenceSystem></mdb:referenceSystemInfo>
     <mdb:identificationInfo>
@@ -1073,7 +1075,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     </cit:CI_Date></cit:date>
                 </cit:CI_Citation></mdq:specification>
                 <mdq:explanation><gco:CharacterString>3 requirements out of 11 are not fulfilled: the dataset is not conformant</gco:CharacterString></mdq:explanation>
-                <mdq:pass></mdq:pass>
+                <mdq:pass><gco:Boolean>false</gco:Boolean></mdq:pass>
             </mdq:ConformanceResult></mdq:result>
             <mdq:derivedElement xlink:href="#agg_commission1"/>
             <mdq:derivedElement xlink:href="#agg_commission2"/>

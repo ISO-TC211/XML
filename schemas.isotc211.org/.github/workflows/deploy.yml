@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [ master, staging ]
+    branches: [ main, staging ]
 
 jobs:
   trigger-deploy:
@@ -18,4 +18,5 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }}
           repository: ISO-TC211/schemas.isotc211.org
-          event-type: ${{ steps.event_type.outputs.value }}
+          event-type: deploy
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

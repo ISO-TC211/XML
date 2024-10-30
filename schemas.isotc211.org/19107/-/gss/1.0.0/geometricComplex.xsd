@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topoComplex.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometryRoot.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometricPrimative.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Complex_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_Complex"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_Complex" type="gss:GM_Complex_Type" substitutionGroup="gss:GM_Object"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_Complex_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>geometric complex
+set of disjoint geometric primitives such that the boundary of each primitive can be represented as the union of other geometric primitives within the complex
+
+NOTE:  The geometric primitives in the set are mutually exclusive in the sense that no point is interior to more than one primitive.  The set is closed under boundary operations, meaning that for each element in the complex, there is a collection (also a complex) of geometric primitives that represents the boundary of that element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Object_Type">
+				<xs:sequence>
+					<xs:element name="subComplex" type="gss:GM_Complex_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="element" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_ComplexBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_ComplexBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_ComplexBoundary" type="gss:GM_ComplexBoundary_Type" substitutionGroup="gss:GM_Boundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_ComplexBoundary_Type">
+		<xs:annotation>
+			<xs:documentation>The boundary operation for GM_Complex objects shall return a GM_ComplexBoundary, which is a collection of primitives and a GM_Complex of dimension 1 less than the original object. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Boundary_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Composite_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Composite"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Composite" type="gss:GM_Composite_Type" substitutionGroup="gss:GM_Complex"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_Composite_Type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Complex_Type">
+				<xs:sequence>
+					<xs:element name="generator" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CompositeCurve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CompositeCurve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_CompositeCurve" type="gss:GM_CompositeCurve_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_CompositeCurve_Type">
+		<xs:annotation>
+			<xs:documentation>geometric composite curve, path
+list of geometric curves such that the each geometric curve in the set terminates at the start point of the subsequent curve in the list</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="subComplex" type="gss:GM_Complex_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="element" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="generator" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="orientableGenerator" type="gss:GM_OrientableCurve_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CompositePoint_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CompositePoint"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_CompositePoint" type="gss:GM_CompositePoint_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="GM_CompositePoint_Type">
+		<xs:sequence>
+			<xs:element name="position" type="gss:DirectPosition_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The attribute "position" shall be the DirectPosition of this GM_Point.
+GM_Point::position [1] : DirectPosition
+NOTE In most cases, the state of a GM_Point is fully determined by its position attribute.  The only exception to this is if the GM_Point has been subclassed to provide additional non-geometric information such as symbology.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subComplex" type="gss:GM_Complex_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="element" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="generator" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="pointGenerator" type="gss:GM_Point_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CompositeSolid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CompositeSolid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_CompositeSolid" type="gss:GM_CompositeSolid_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_CompositeSolid_Type">
+		<xs:annotation>
+			<xs:documentation>4.50 geometric composite solid
+set of geometric solids adjoining one another along common boundary geometric surfaces</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="subComplex" type="gss:GM_Complex_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="element" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="generator" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="solidGenerator" type="gss:GM_Solid_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CompositeSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CompositeSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_CompositeSurface" type="gss:GM_CompositeSurface_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_CompositeSurface_Type">
+		<xs:annotation>
+			<xs:documentation>4.51 geometric composite surface
+set of geometric surfaces adjoining one another along common boundary geometric curves</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="subComplex" type="gss:GM_Complex_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="element" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="generator" type="gss:GM_Primitive_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="orientableGenerator" type="gss:GM_OrientableSurface_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

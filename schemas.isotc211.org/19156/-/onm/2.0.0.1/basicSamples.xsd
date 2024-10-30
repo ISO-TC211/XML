@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="abstractSampleCore.xsd"/>
+	<xs:element name="MaterialSample" type="MaterialSample"/>
+	<xs:complexType name="MaterialSample">
+		<xs:annotation>
+			<xs:documentation>A MaterialSample is a physical, tangible Sample.
+
+NOTE 1 	MaterialSamples that are curated and preserved are sometimes known as 'specimens'.
+NOTE 2 	MaterialSamples can be destroyed in connexion with the observation act.
+NOTE 3	A MaterialSample is a physical Sample of a FeatureOfInterest, obtained for Observation(s) normally carried out ex-situ, sometimes in a laboratory.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Sample">
+				<xs:sequence>
+					<xs:element name="size" type="PhysicalDimension" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>a physical extent of the MaterialSample</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sourceLocation" type="Geometry" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>location from where the MaterialSample was obtained.
+
+TODO: Note text in spec</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="storageLocation" type="NamedLocation" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>location of a MaterialSample.
+
+NOTE		The storageLocation may be a location such as a shelf in a warehouse or a drawer in a museum.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="NamedLocation" type="NamedLocation"/>
+	<xs:complexType name="NamedLocation">
+		<xs:annotation>
+			<xs:documentation>A location identified by its name, address, spatial geometry or a combination of any of these three</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="address" type="Any" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An address used for identifying a NamedLocation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="GenericName" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A name used for identifying a NamedLocation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="representativeGeometry" type="Geometry" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A geometry used for providing a representative spatial location of a NamedLocation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="PhysicalDimension" type="PhysicalDimension"/>
+	<xs:complexType name="PhysicalDimension">
+		<xs:annotation>
+			<xs:documentation>A dataType for the provision of various size quantities</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dimension" type="URI" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>name of the PhysicalDimension about which a value is provided.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" type="Measure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The value of the PhysicalDimension.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="PreparationProcedure" type="PreparationProcedure"/>
+	<xs:complexType name="PreparationProcedure">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Sample Schema:PreparationProcedure interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractPreparationProcedure">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PreparationStep" type="PreparationStep"/>
+	<xs:complexType name="PreparationStep">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Sample Schema:PreparationStep interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractPreparationStep">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Sample" type="Sample"/>
+	<xs:complexType name="Sample">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Sample Schema:Sample interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractSample">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SampleCollection" type="SampleCollection"/>
+	<xs:complexType name="SampleCollection">
+		<xs:annotation>
+			<xs:documentation>A collection of Samples</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="relatedCollection" type="SampleCollection" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A SampleCollection the context SampleCollection is related to</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Sampler" type="Sampler"/>
+	<xs:complexType name="Sampler">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Sample Schema:Sampler interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractSampler">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SampleTypeByGeometryType" type="SampleTypeByGeometryType"/>
+	<xs:complexType name="SampleTypeByGeometryType">
+		<xs:annotation>
+			<xs:documentation>SpatialSample classification scheme based on the geometry type of its shape attribute</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractSampleType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Sampling" type="Sampling"/>
+	<xs:complexType name="Sampling">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Sample Schema:Sampling interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractSampling">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SamplingProcedure" type="SamplingProcedure"/>
+	<xs:complexType name="SamplingProcedure">
+		<xs:annotation>
+			<xs:documentation>Concrete class for expressing a realization of Conceptual Sample Schema:SamplingProcedure interface based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractSamplingProcedure">
+				<xs:sequence>
+					<xs:element name="link" type="URI" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Additional descriptive resources pertaining to a feature.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SpatialSample" type="SpatialSample"/>
+	<xs:complexType name="SpatialSample">
+		<xs:annotation>
+			<xs:documentation>a geospatial Sample.
+
+NOTE 		When observations are made to estimate properties of a geospatial feature, in particular where the value of a property varies within the scope of the feature, a SpatialSample is used. Depending on accessibility and on the nature of the expected property variation, the SpatialSample may be extensive in one, two or three spatial dimensions. 
+EXAMPLE
+	- Typically an Observation ‘site’ or 'station' connotes the 'world in the vicinity of the site (or station)', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.
+	- Some common names for SpatialSample used in various application domains include Borehole, Flightline, Interval, Lidar Cloud, Map Horizon, Microscope Slide, Mine Level, Mine, Observation Well, Profile, Pulp, Quadrat, Scene, Section, ShipsTrack, Spot, Station, Swath, Trajectory, Traverse, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Sample">
+				<xs:sequence>
+					<xs:element name="horizontalPositionalAccuracy" type="Any" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The positional accuracy of the horizontal component of the Geometry of the SpatialSample.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="shape" type="Geometry" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Geometry of the SpatialSample.
+
+NOTE 		The shape of the SpatialSample is the context for domain decomposition. 
+EXAMPLE 	Logs of different properties along a well or borehole might use different intervals, and sub-samples might be either spatially instantaneous, or averaged in some way over an interval. The position of the samples can be conveniently described in terms of offsets in a linear coordinate reference system that is defined by the shape of the well axis.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="verticalPositionalAccuracy" type="Any" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The positional accuracy of the vertical component of the Geometry of the SpatialSample</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatisticalClassification" type="StatisticalClassification"/>
+	<xs:complexType name="StatisticalClassification">
+		<xs:annotation>
+			<xs:documentation>a dataType for the provision of information on statistical classifications.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="classification" type="URI" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The explicit classification class pertaining to the classification concept described by the StatisticalClassification.
+
+EXAMPLE	The classification for a statistical classification could be:
+	- Age Brackets: [0-10], [10-20]
+	- Genders: Male, Female, Other
+	- Color: Red, Green, Blue</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="concept" type="URI" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The concept by which a StatisticalClassification is to be performed.
+
+EXAMPLE	The concept for a statistical classification could be age, gender, color, size etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="StatisticalSample" type="StatisticalSample"/>
+	<xs:complexType name="StatisticalSample">
+		<xs:annotation>
+			<xs:documentation>a statistical subset of a feature-of-interest, defined for the purpose of creating Observation(s).
+
+NOTE 1 	StatisticalSamples usually apply to populations or other sets, of which certain subset may be of specific interest.
+EXAMPLE	The male or female subset of a population.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Sample">
+				<xs:sequence>
+					<xs:element name="classification" type="StatisticalClassification" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>a criterion by which the subset was defined</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

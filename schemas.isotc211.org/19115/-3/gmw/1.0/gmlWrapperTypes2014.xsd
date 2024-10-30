@@ -16,10 +16,10 @@ Information Metadata documented in ISO/TS 19139:2007. GCO includes all the defin
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
 	<!-- <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19136_Schemas/gml.xsd"/> -->
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 	<!--	<xs:include schemaLocation="gco.xsd"/>-->
-	<xs:import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../gco/1.0/baseTypes2014.xsd"/>
+	<xs:import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/baseTypes2014.xsd"/>
 	<!-- ============================= Units of Measure ============================ -->
 	<!-- ........................................................................ -->
 	<xs:complexType name="UnitOfMeasure_PropertyType">

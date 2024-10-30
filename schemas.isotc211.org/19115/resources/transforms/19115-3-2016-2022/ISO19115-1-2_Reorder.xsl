@@ -87,12 +87,12 @@
             <xsl:namespace name="msr" select="'https://schemas.isotc211.org/19115/-1/msr/1.3'"/>
             <xsl:namespace name="srv" select="'https://schemas.isotc211.org/19115/-1/srv/1.3'"/>
             <xsl:namespace name="mac" select="'https://schemas.isotc211.org/19115/-2/mac/2.2'"/>
-            <xsl:namespace name="cat" select="'https://schemas.isotc211.org/19115/-3/cat/1.0'"/>
-            <xsl:namespace name="gco" select="'https://schemas.isotc211.org/19103/-/gco/1.1'"/>
-            <xsl:namespace name="gcx" select="'https://schemas.isotc211.org/19103/-/gcx/1.1'"/>
-            <xsl:namespace name="gfc" select="'https://schemas.isotc211.org/19110/-/gfc/1.0'"/>
-            <xsl:namespace name="fcc" select="'https://schemas.isotc211.org/19110/-/fcc/1.0'"/>
-            <xsl:namespace name="mdq" select="'https://schemas.isotc211.org/19157/-2/mdq/1.1'"/>
+            <xsl:namespace name="cat" select="'https://schemas.isotc211.org/19139/-/cat/1.2'"/>
+            <xsl:namespace name="gco" select="'https://schemas.isotc211.org/19103/-/gco/1.2'"/>
+            <xsl:namespace name="gcx" select="'https://schemas.isotc211.org/19103/-/gcx/1.2'"/>
+            <xsl:namespace name="gfc" select="'https://schemas.isotc211.org/19110/-/gfc/2.2'"/>
+            <xsl:namespace name="fcc" select="'https://schemas.isotc211.org/19110/-/fcc/2.2'"/>
+            <xsl:namespace name="mdq" select="'https://schemas.isotc211.org/19157/-/mdq/1.2'"/>
             <xsl:namespace name="gwm" select="'https://schemas.isotc211.org/19136/-/gwm/1.1'"/>
             <xsl:namespace name="gml" select="'https://www.opengis.net/gml/3.2'"/>
             <xsl:namespace name="xlink" select="'http://www.w3.org/1999/xlink'"/>

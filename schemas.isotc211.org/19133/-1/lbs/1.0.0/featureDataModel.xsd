@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/network.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="FD_Feature_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:FD_Feature"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="FD_Feature" type="lbs:FD_Feature_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="FD_Feature_Type">
+		<xs:annotation>
+			<xs:documentation>This is the basic feature data structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="attributes" type="gco:Record_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A record containing all the attributes of this feature. This mechanism is used to assure that any combination of attributes can be associated to a feature. This will support most type systems semantics  normally used for feature representations, including, strong, weak, dynamic, and untyped. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="id" type="lbs:FD_FeatureName_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The local name, or identity of the feature. This will usually be listed in the Name Space for the Container Feature Collection for this Feature. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="FD_FeatureCollection_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:FD_FeatureCollection"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="FD_FeatureCollection" type="lbs:FD_FeatureCollection_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="FD_FeatureCollection_Type">
+		<xs:annotation>
+			<xs:documentation>This is the basic class for feature collections.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="isOrdered" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>This Boolean-valued object indicated whether there is any meaning in the order of this collection. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="feature" type="lbs:FD_Feature_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The features in this collection. Ther ordering may or may not be of semanitc importance depending on the "ordered" attribute of the feature collection. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="FD_FeatureName_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:FD_FeatureName"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="FD_FeatureName" type="lbs:FD_FeatureName_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="FD_FeatureName_Type">
+		<xs:annotation>
+			<xs:documentation>The name of a feature collection
+for use in target lists for navigation requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="gco:GenericName_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="type" type="gco:TypeName_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="FD_QueryFeatureCollection_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:FD_QueryFeatureCollection"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="FD_QueryFeatureCollection" type="lbs:FD_QueryFeatureCollection_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="FD_QueryFeatureCollection_Type">
+		<xs:annotation>
+			<xs:documentation>This is a feature collection that is defined by a query. The association "Feature" might not be populated
+but when it is
+it represents the query results at the time the query was last executed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lbs:FD_FeatureCollection_Type">
+				<xs:sequence>
+					<xs:element name="query" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The query that defines containment in this collection.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="queryLanguage" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The query language used by the query. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

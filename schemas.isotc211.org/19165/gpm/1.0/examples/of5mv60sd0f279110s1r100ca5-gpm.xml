@@ -241,7 +241,7 @@
 			<mrs:referenceSystemIdentifier>
 				<mcc:MD_Identifier>
 					<mcc:code>
-						<gco:CharacterString>EPSG:25831 - ETRS89 / UTM zone 31N</gco:CharacterString>
+						<gco:CharacterString>EPSG::25831 - ETRS89 / UTM zone 31N</gco:CharacterString>
 					</mcc:code>
 				</mcc:MD_Identifier>
 			</mrs:referenceSystemIdentifier>

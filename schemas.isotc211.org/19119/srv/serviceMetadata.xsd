@@ -34,7 +34,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="SV_Parameter" type="srv:SV_Parameter_Type"/>
+	<xs:element name="SV_Parameter" type="srv:SV_Parameter_Type" substitutionGroup="gco:AbstractObject"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="SV_Parameter_PropertyType">
 		<xs:sequence minOccurs="0">
@@ -111,7 +111,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="SV_OperationChain" type="srv:SV_OperationChain_Type"/>
+	<xs:element name="SV_OperationChain" type="srv:SV_OperationChain_Type" substitutionGroup="gco:AbstractObject"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="SV_OperationChain_PropertyType">
 		<xs:sequence minOccurs="0">
@@ -154,7 +154,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ........................................................................ -->
-	<xs:element name="SV_CoupledResource" type="srv:SV_CoupledResource_Type"/>
+	<xs:element name="SV_CoupledResource" type="srv:SV_CoupledResource_Type" substitutionGroup="gco:AbstractObject"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="SV_CoupledResource_PropertyType">
 		<xs:sequence minOccurs="0">

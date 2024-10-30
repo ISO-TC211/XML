@@ -4,9 +4,9 @@
 	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
 	targetNamespace="https://schemas.isotc211.org/19157/-1/dqc/1.0" 
 	elementFormDefault="qualified" 
-	version="1.0.0"
+	version="1.0.1"
 	>
-	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
 	<!-- =========================================================================== -->
 	<xs:complexType name="AbstractDataQuality_PropertyType">
 		<xs:sequence minOccurs="0">

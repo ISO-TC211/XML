@@ -10,9 +10,9 @@
   version="2.2.0"
     >
   <include schemaLocation="../../../../19115/-1/mrl/1.3.0/mrl.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/srv/1.3" schemaLocation="../../../../19115/-1/srv/1.3.0/srv.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/srv/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/srv/1.3.0/srv.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="LE_Algorithm" substitutionGroup="gco:AbstractObject" type="mrl:LE_Algorithm_Type" id="ISO19115-2.109">

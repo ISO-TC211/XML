@@ -15,8 +15,8 @@
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
 	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="https://schemas.isotc211.org/19139/-/gco/1.0/gco.xsd"/>
-	<!-- <xs:import namespace="http://www.opengis.net/gml/3.2"  schemaLocation="https://schemas.isotc211.org/19136/-/gml/1.0/gml.xsd"/> -->
-	<xs:import namespace="http://www.opengis.net/gml/3.2"  schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<!-- <xs:import namespace="http://www.opengis.net/gml/3.2"  schemaLocation="../../../../19136/-/gml/1.0/gml.xsd"/> -->
+	<xs:import namespace="http://www.opengis.net/gml/3.2"  schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<xs:import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="https://schemas.isotc211.org/19139/-/gmd/1.0/gmd.xsd"/>
 	<xs:include schemaLocation="gmx.xsd"/>
 	<!-- ########################################################################### -->

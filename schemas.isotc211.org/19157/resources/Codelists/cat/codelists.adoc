@@ -1,0 +1,70 @@
+﻿= Codelist Catalog
+:edition: 1.0
+:revdate: 2017-09-10
+
+== Codelist Catalog
+
+This report describes the ISO TC211 codelist catalogs, the codelists they contain,
+and the values and definitions of the codes.
+
+Please contact mailto:rehabermann@me.com[Ted Habermann] if you have questions or
+suggestions.
+
+=== Catalog
+
+Name:: 19157-2 Codelists
+Scope:: Codelists for description of data quality metadata datasets compliant with
+ISO/TC 211 19115-1.
+Field of application:: ISO 19157-2 data quality metadata
+Version:: 1.0
+Date:: 2017-09-10
+Number of CodeLists:: 2
+Number of items:: 9
+
+=== Codelists
+
+
+=== DQM_ValueStructure
+
+Description:: structure for reporting a complex data quality result
+CodeSpace:: http://standards.iso.org/iso/19157/-2/dqm/1.0
+Number of items:: 6
+
+[%unnumbered]
+[options=header,cols=2]
+|===
+| Entry | Definition
+
+| bag | finite, unordered collection of related items (objects or values) that may be
+repeated (ISO 19107:2003)
+| set | unordered collection of related items (objects or values) with no repetition
+(ISO 19107:2003)
+| sequence | finite, ordered collection of related items (objects or values) that may
+be repeated (ISO 19107:2003)
+| table | an arrangement of data in which each item may be identified by means of
+arguments or keys (ISO/IEC 2382-4:1999)
+| matrix | rectangular array of numbers (ISO/TS 19129:2009)
+| coverage | feature that acts as a function to return values from its range for any
+direct position within its spatial, temporal or spatiotemporal domain (ISO 19123:2005)
+|===
+
+
+=== DQ_EvaluationMethodTypeCode
+
+Description:: description of the evaluation method and procedure applied
+CodeSpace:: http://standards.iso.org/iso/19157/-2/mdq/1.0
+Number of items:: 3
+
+[%unnumbered]
+[options=header,cols=2]
+|===
+| Entry | Definition
+
+| directInternal | method of evaluating the quality of a dataset based on inspection
+of items within the dataset, where all data required is internal to the dataset being
+evaluated
+| directExternal | method of evaluating the quality of a dataset based on inspection
+of items within the dataset, where reference data external to the dataset being
+evaluated is required
+| indirect | method of evaluating the quality of a dataset based on external knowledge
+|===

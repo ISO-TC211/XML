@@ -9,9 +9,8 @@
   version="1.3.0"
   >
   <annotation><documentation>Namespace for XML elements used to specify spatial and temporal extents.</documentation></annotation>
-  <include schemaLocation="extent.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3"
- schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <include schemaLocation="../../../../19115/-1/gex/1.3.0/extent.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
 
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

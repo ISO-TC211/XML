@@ -10,7 +10,6 @@
   <annotation><documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document
       user-defined metadata extensions&lt;/font&gt;.</documentation></annotation>
   <include schemaLocation="metadataExtension.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3"
- schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
 </schema>

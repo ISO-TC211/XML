@@ -2,7 +2,7 @@
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gml="http://www.opengis.net/gml/3.2" 
-  xmlns:dqc="https://schemas.isotc211.org/19157/-1/dqc/1.0" 
+  xmlns:dqc="https://schemas.isotc211.org/19157/-/dqc/1.2" 
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
   xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1" 
   xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
@@ -13,11 +13,11 @@
     >
   <annotation><documentation>Name: SpatialRepresentation Position: 3</documentation></annotation>
   <include schemaLocation="../../../../19115/-1/msr/1.3.0/msr.xsd"/>
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="../../../../19136/-1/gmw/1.1.0/gmw.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19157/-1/dqc/1.0" schemaLocation="../../../../19157/-1/dqc/1.0.1/dqc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmw.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/dqc/1.2.0/dqc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- =========================================================================== -->
   <element name="MI_Georectified" substitutionGroup="msr:MD_Georectified" type="msr:MI_Georectified_Type" id="ISO19115-2.144">
@@ -122,7 +122,7 @@
       <extension base="gco:AbstractObject_Type">
         <sequence>
           <element name="geographicCoordinates" type="gml:PointPropertyType" id="ISO19115-2.156_ISO19103.DirectPosition"/>
-          <element name="accuracyReport" maxOccurs="unbounded" minOccurs="0" type="dqc:AbstractQualityElement_PropertyType" id="ISO19115-2.157_ISO19157.005"/>
+          <element name="accuracyReport" maxOccurs="unbounded" minOccurs="0" type="dqc:Abstract_QualityElement_PropertyType" id="ISO19115-2.157_ISO19157.005"/>
         </sequence>
       </extension>
     </complexContent>

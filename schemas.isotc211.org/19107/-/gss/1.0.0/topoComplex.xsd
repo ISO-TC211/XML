@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="TP_Complex_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:TP_Complex"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TP_Complex" type="gss:TP_Complex_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="TP_Complex_Type">
+		<xs:annotation>
+			<xs:documentation>4.101 topological complex
+collection of topological primitives that is closed under the boundary operations 
+
+NOTE: Closed under the boundary operations means that if a primitive is in the complex, then its boundary objects are also in the complex.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maximalComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="superComplex" type="gss:TP_Complex_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

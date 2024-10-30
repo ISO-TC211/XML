@@ -10,13 +10,12 @@
     version="1.2.0"
    >
   <include schemaLocation="mdq.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="../../../../19157/-/dqc/1.2.0/dqc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.0/mcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19157/-/dqc/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/dqc/1.2.0/dqc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="DQ_AbsoluteExternalPositionalAccuracy"
-    substitutionGroup="mdq:AbstractDQ_PositionalAccuracy"
-    type="mdq:DQ_AbsoluteExternalPositionalAccuracy_Type">
+    substitutionGroup="mdq:AbstractDQ_PositionalAccuracy" type="mdq:DQ_AbsoluteExternalPositionalAccuracy_Type">
     <annotation>
       <documentation>closeness of reported coordinate values to values accepted as or being
         true</documentation>
@@ -36,8 +35,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_AccuracyOfATimeMeasurement" substitutionGroup="mdq:AbstractDQ_TemporalQuality"
-    type="mdq:DQ_AccuracyOfATimeMeasurement_Type">
+  <element name="DQ_AccuracyOfATimeMeasurement" substitutionGroup="mdq:AbstractDQ_TemporalQuality" type="mdq:DQ_AccuracyOfATimeMeasurement_Type">
     <annotation>
       <documentation>correctness of the temporal references of an item (reporting of error in time
         measurement)</documentation>
@@ -57,8 +55,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="AbstractDQ_Completeness" substitutionGroup="mdq:AbstractDQ_Element"
-    type="mdq:AbstractDQ_Completeness_Type">
+  <element abstract="true" name="AbstractDQ_Completeness" substitutionGroup="mdq:AbstractDQ_Element" type="mdq:AbstractDQ_Completeness_Type">
     <annotation>
       <documentation>presence and absence of features, their attributes and their
         relationships</documentation>
@@ -78,8 +75,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_CompletenessCommission" substitutionGroup="mdq:AbstractDQ_Completeness"
-    type="mdq:DQ_CompletenessCommission_Type">
+  <element name="DQ_CompletenessCommission" substitutionGroup="mdq:AbstractDQ_Completeness" type="mdq:DQ_CompletenessCommission_Type">
     <annotation>
       <documentation>excess data present in the dataset, as described by the scope</documentation>
     </annotation>
@@ -98,8 +94,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_CompletenessOmission" substitutionGroup="mdq:AbstractDQ_Completeness"
-    type="mdq:DQ_CompletenessOmission_Type">
+  <element name="DQ_CompletenessOmission" substitutionGroup="mdq:AbstractDQ_Completeness" type="mdq:DQ_CompletenessOmission_Type">
     <annotation>
       <documentation>data absent from the dataset, as described by the scope</documentation>
     </annotation>
@@ -118,8 +113,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_ConceptualConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency"
-    type="mdq:DQ_ConceptualConsistency_Type">
+  <element name="DQ_ConceptualConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency" type="mdq:DQ_ConceptualConsistency_Type">
     <annotation>
       <documentation>adherence to rules of the conceptual schema</documentation>
     </annotation>
@@ -155,8 +149,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   -->
-  <element name="DQ_DataQuality" substitutionGroup="dqc:Abstract_DataQuality"
-    type="mdq:DQ_DataQuality_Type">
+  <element name="DQ_DataQuality" substitutionGroup="dqc:Abstract_DataQuality" type="mdq:DQ_DataQuality_Type">
     <annotation>
       <documentation>quality information for the data specified by a data quality
         scope</documentation>
@@ -172,8 +165,7 @@
                 applies</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="standaloneQualityReport"
-            type="mdq:DQ_StandaloneQualityReportInformation_PropertyType"/>
+          <element minOccurs="0" name="standaloneQualityReport" type="mdq:DQ_StandaloneQualityReportInformation_PropertyType"/>
           <element maxOccurs="unbounded" name="report" type="mdq:AbstractDQ_Element_PropertyType"/>
         </sequence>
       </extension>
@@ -186,8 +178,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_DomainConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency"
-    type="mdq:DQ_DomainConsistency_Type">
+  <element name="DQ_DomainConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency" type="mdq:DQ_DomainConsistency_Type">
     <annotation>
       <documentation>adherence of values to the value domains</documentation>
     </annotation>
@@ -206,8 +197,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element abstract="true" name="AbstractDQ_Element" substitutionGroup="dqc:Abstract_QualityElement"
-    type="mdq:AbstractDQ_Element_Type">
+  <element abstract="true" name="AbstractDQ_Element" substitutionGroup="dqc:Abstract_QualityElement" type="mdq:AbstractDQ_Element_Type">
     <annotation>
       <documentation>aspect of quantitative quality information</documentation>
     </annotation>
@@ -216,8 +206,7 @@
     <complexContent>
       <extension base="dqc:Abstract_QualityElement_Type">
         <sequence>
-          <element minOccurs="0" name="standaloneQualityReportDetails"
-            type="gco:CharacterString_PropertyType">
+          <element minOccurs="0" name="standaloneQualityReportDetails" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>Clause in the standaloneQualityReport where this data quality element
                 or any related data quality element (original results in case of derivation or
@@ -228,8 +217,7 @@
           <element minOccurs="0" name="evaluationMethod" type="mdq:DQ_EvaluationMethod_PropertyType"/>
           <!-- result element moved to after evaluationMethod by Ted Habermann 2014-07-29 -->
           <element maxOccurs="unbounded" name="result" type="mdq:AbstractDQ_Result_PropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="derivedElement"
-            type="mdq:AbstractDQ_Element_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="derivedElement" type="mdq:AbstractDQ_Element_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -241,8 +229,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_FormatConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency"
-    type="mdq:DQ_FormatConsistency_Type">
+  <element name="DQ_FormatConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency" type="mdq:DQ_FormatConsistency_Type">
     <annotation>
       <documentation>degree to which data is stored in accordance with the physical structure of the
         dataset, as described by the scope</documentation>
@@ -263,8 +250,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQ_GriddedDataPositionalAccuracy"
-    substitutionGroup="mdq:AbstractDQ_PositionalAccuracy"
-    type="mdq:DQ_GriddedDataPositionalAccuracy_Type">
+    substitutionGroup="mdq:AbstractDQ_PositionalAccuracy" type="mdq:DQ_GriddedDataPositionalAccuracy_Type">
     <annotation>
       <documentation>closeness of gridded data position values to values accepted as or being
         true</documentation>
@@ -305,8 +291,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_MeasureReference" substitutionGroup="gco:AbstractObject"
-    type="mdq:DQ_MeasureReference_Type">
+  <element name="DQ_MeasureReference" substitutionGroup="gco:AbstractObject" type="mdq:DQ_MeasureReference_Type">
     <annotation>
       <documentation>reference to the measure used</documentation>
     </annotation>
@@ -321,8 +306,7 @@
                 within a namespace</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="nameOfMeasure"
-            type="gco:CharacterString_PropertyType">
+          <element maxOccurs="unbounded" minOccurs="0" name="nameOfMeasure" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>name of the test applied to the data</documentation>
             </annotation>
@@ -344,8 +328,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQ_NonQuantitativeAttributeCorrectness"
-    substitutionGroup="mdq:AbstractDQ_ThematicAccuracy"
-    type="mdq:DQ_NonQuantitativeAttributeCorrectness_Type">
+    substitutionGroup="mdq:AbstractDQ_ThematicAccuracy" type="mdq:DQ_NonQuantitativeAttributeCorrectness_Type">
     <annotation>
       <documentation>correctness of non-quantitative attributes</documentation>
     </annotation>
@@ -385,8 +368,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQ_QuantitativeAttributeAccuracy"
-    substitutionGroup="mdq:AbstractDQ_ThematicAccuracy"
-    type="mdq:DQ_QuantitativeAttributeAccuracy_Type">
+    substitutionGroup="mdq:AbstractDQ_ThematicAccuracy" type="mdq:DQ_QuantitativeAttributeAccuracy_Type">
     <annotation>
       <documentation>accuracy of quantitative attributes</documentation>
     </annotation>
@@ -406,8 +388,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQ_RelativeInternalPositionalAccuracy"
-    substitutionGroup="mdq:AbstractDQ_PositionalAccuracy"
-    type="mdq:DQ_RelativeInternalPositionalAccuracy_Type">
+    substitutionGroup="mdq:AbstractDQ_PositionalAccuracy" type="mdq:DQ_RelativeInternalPositionalAccuracy_Type">
     <annotation>
       <documentation>closeness of the relative positions of features in the scope to their
         respective relative positions accepted as or being true</documentation>
@@ -427,8 +408,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_StandaloneQualityReportInformation" substitutionGroup="gco:AbstractObject"
-    type="mdq:DQ_StandaloneQualityReportInformation_Type">
+  <element name="DQ_StandaloneQualityReportInformation" substitutionGroup="gco:AbstractObject" type="mdq:DQ_StandaloneQualityReportInformation_Type">
     <annotation>
       <documentation>reference to an external standalone quality report</documentation>
     </annotation>
@@ -447,8 +427,7 @@
               <documentation>abstract for the associated standalone quality report</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="elementReport"
-            type="mdq:AbstractDQ_Element_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="elementReport" type="mdq:AbstractDQ_Element_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -460,8 +439,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_TemporalConsistency" substitutionGroup="mdq:AbstractDQ_TemporalQuality"
-    type="mdq:DQ_TemporalConsistency_Type">
+  <element name="DQ_TemporalConsistency" substitutionGroup="mdq:AbstractDQ_TemporalQuality" type="mdq:DQ_TemporalConsistency_Type">
     <annotation>
       <documentation>correctness of ordered events or sequences, if reported</documentation>
     </annotation>
@@ -501,8 +479,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_TemporalValidity" substitutionGroup="mdq:AbstractDQ_TemporalQuality"
-    type="mdq:DQ_TemporalValidity_Type">
+  <element name="DQ_TemporalValidity" substitutionGroup="mdq:AbstractDQ_TemporalQuality" type="mdq:DQ_TemporalValidity_Type">
     <annotation>
       <documentation>validity of data specified by the scope with respect to time</documentation>
     </annotation>
@@ -543,8 +520,7 @@
     <attribute ref="gco:nilReason"/>
   </complexType>
   <element name="DQ_ThematicClassificationCorrectness"
-    substitutionGroup="mdq:AbstractDQ_ThematicAccuracy"
-    type="mdq:DQ_ThematicClassificationCorrectness_Type">
+    substitutionGroup="mdq:AbstractDQ_ThematicAccuracy" type="mdq:DQ_ThematicClassificationCorrectness_Type">
     <annotation>
       <documentation>comparison of the classes assigned to features or their attributes to a
         universe of discourse</documentation>
@@ -564,8 +540,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_TopologicalConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency"
-    type="mdq:DQ_TopologicalConsistency_Type">
+  <element name="DQ_TopologicalConsistency" substitutionGroup="mdq:AbstractDQ_LogicalConsistency" type="mdq:DQ_TopologicalConsistency_Type">
     <annotation>
       <documentation>correctness of the explicitly encoded topological characteristics of the
         dataset as described by the scope</documentation>
@@ -585,8 +560,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <element name="DQ_UsabilityElement" substitutionGroup="mdq:AbstractDQ_Element"
-    type="mdq:DQ_UsabilityElement_Type">
+  <element name="DQ_UsabilityElement" substitutionGroup="mdq:AbstractDQ_Element" type="mdq:DQ_UsabilityElement_Type">
     <annotation>
       <documentation>degree of adherence of a dataset to a specific set of
         requirements</documentation>

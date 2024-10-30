@@ -23,8 +23,8 @@
   version="2.0">
   <annotation><documentation>Namespace &lt;font color="#1f497d"&gt;that imports all necessary namespaces to implement a complete metadata record for a dataset or service, not including extended data types or user-defined extensions. &lt;/font&gt;Wrapper namespace to support Catalog Service implementations.</documentation></annotation>
   <include schemaLocation="metadataDataServices.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="../../../../19110/-/fcc/2.1.0/fcc.xsd"/>
-  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="../../../../19110/-/gfc/2.1.0/gfc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/fcc/2.1" schemaLocation="https://schemas.isotc211.org/19110/-/fcc/2.1.0/fcc.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19110/-/gfc/2.1" schemaLocation="https://schemas.isotc211.org/19110/-/gfc/2.1.0/gfc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/cat/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cat/1.0/cat.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gex/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gex/1.0/gex.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mac/2.0" schemaLocation="https://schemas.isotc211.org/19115/-3/mac/2.0/mac.xsd"/>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../..
+		/19111/-/rbc/3.1.1/AbstractCommonClasses"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="MC_CoordinateReferenceSystem_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:MC_CoordinateReferenceSystem"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="MC_CoordinateReferenceSystem" type="lbs:MC_CoordinateReferenceSystem_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="MC_CoordinateReferenceSystem_Type">
+		<xs:sequence>
+			<xs:element name="coordinateSystem" type="lbs:MC_CoordinateSystem_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="MC_CoordinateSystem_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:MC_CoordinateSystem"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="MC_CoordinateSystem" type="lbs:MC_CoordinateSystem_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="MC_CoordinateSystem_Type">
+		<xs:sequence>
+			<xs:element name="axis" type="rbc:Abstract_CoordinateSystemAxis_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="MC_MeasurePosition_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:MC_MeasurePosition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="MC_MeasurePosition" type="lbs:MC_MeasurePosition_Type" substitutionGroup="gco:DirectedMeasure"/>
+	<!-- .......................................... -->
+	<xs:complexType name="MC_MeasurePosition_Type">
+		<xs:complexContent>
+			<xs:extension base="gco:DirectedMeasure_Type">
+				<xs:sequence>
+					<xs:element name="coordinateReferenceSystem" type="lbs:MC_CoordinateReferenceSystem_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>
