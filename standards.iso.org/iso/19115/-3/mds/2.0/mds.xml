@@ -169,7 +169,7 @@
          <mac:scope>
             <mcc:MD_Scope>
                <mcc:level>
-                  <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#" codeListValue="mcc:MD_ScopeCode">mcc:MD_ScopeCode</mcc:MD_ScopeCode>
+                  <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#" codeListValue="mcc:MD_ScopeCode">mcc:MD_ScopeCode</mcc:MD_ScopeCode>
                </mcc:level>
                <mcc:extent>
                   <gex:EX_Extent>

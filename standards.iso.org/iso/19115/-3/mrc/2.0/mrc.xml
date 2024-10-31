@@ -20,7 +20,7 @@
          <mrc:attributeGroup>
             <mrc:MD_AttributeGroup id="MD_AttributeGroupTarget">
                <mrc:contentType>
-                  <mrc:MD_CoverageContentTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="physicalMeasurement">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
+                  <mrc:MD_CoverageContentTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="physicalMeasurement">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
                </mrc:contentType>
                <mrc:attribute>
                   <mrc:MD_SampleDimension>
@@ -135,7 +135,7 @@
          <mrc:attributeGroup>
             <mrc:MD_AttributeGroup>
                <mrc:contentType>
-                  <mrc:MD_CoverageContentTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="referenceInformation">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
+                  <mrc:MD_CoverageContentTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_CoverageContentTypeCode" codeListValue="referenceInformation">mrc:contentType/mrc:MD_CoverageContentTypeCode</mrc:MD_CoverageContentTypeCode>
                </mrc:contentType>
                <mrc:attribute>
                   <mrc:MD_SampleDimension>
