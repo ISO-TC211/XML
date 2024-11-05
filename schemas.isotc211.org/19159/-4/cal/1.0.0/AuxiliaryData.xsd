@@ -9,7 +9,7 @@
     <include schemaLocation="cal.xsd"/>
     <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
     <import namespace="https://schemas.isotc211.org/19130/-3/smi/1.1" schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
-    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 
     <element name="CA_AuxiliaryData" type="cal:CA_AuxiliaryData_Type" id="ISO19159-4.21"
         substitutionGroup="gco:AbstractObject">

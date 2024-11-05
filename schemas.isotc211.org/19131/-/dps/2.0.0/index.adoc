@@ -1,8 +1,8 @@
 = Data Product Specification (DPS)
-:edition: 2.2
+:edition: 2.0
 :revdate: 2010-02-26
 
-== Data Product Specification (DPS) Version: 2.2
+== Data Product Specification (DPS) Version: 2.0
 
 .Classes in the dps namespace
 image::DtaProdSpecClass.png[UML diagram of classes from Data Product Specification (DPS) in the dps namespace,750]
@@ -14,12 +14,12 @@ ISO 19131, Geographic Information - Data Product Specification Amendment 1. It
 includes elements for defining geometry and functions for coverages. The XML
 schema was encoded using the encoding rules defined in ISO 19118, ISO 19139.
 
-=== XML Namespace for Data Product Specification (DPS) Version: 2.2
+=== XML Namespace for Data Product Specification (DPS) Version: 2.0
 
-The namespace URI for Data Product Specification (DPS) Version: 2.2 is
+The namespace URI for Data Product Specification (DPS) Version: 2.0 is
 `https://schemas.isotc211.org/19131/-/dps/2.2`.
 
-=== XML Schema for Data Product Specification (DPS) Version: 2.2.0
+=== XML Schema for Data Product Specification (DPS) Version: 2.0.0
 
 https://schemas.isotc211.org/19131/-/dps/2.0.0/dps.xsd[dps.xsd] is the XML Schema document
 to be referenced by XML documents containing XML elements in the dps namespace

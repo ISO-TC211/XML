@@ -9,7 +9,7 @@
     targetNamespace="https://schemas.isotc211.org/19163/-2/igd/1.1"
     elementFormDefault="qualified"
     version="1.1.0">
-    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/2.1"
         schemaLocation="../../../../19115/-1/mrc/2.1.0/content.xsd"/>
     <xs:import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1"

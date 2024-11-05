@@ -8,7 +8,7 @@
 	elementFormDefault="qualified"
 	version="1.0.0">
 	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<xs:include schemaLocation="locationalContext.xsd"/>
 	<!-- =========================================================================== -->
 	<xs:complexType name="UPA_GeoSemanticContext_PropertyType">

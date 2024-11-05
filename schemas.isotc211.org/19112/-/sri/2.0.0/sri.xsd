@@ -16,7 +16,7 @@
 	targetNamespace="https://schemas.isotc211.org/19112/-/sri/2.0" 
 	elementFormDefault="qualified"
 	version="1.0.0">
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19107/-/gss/1.0" schemaLocation="../../../../19107/-/gss/1.0.0/gss.xsd"/>
@@ -26,8 +26,8 @@
 	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="../../../../19115/-1/mcc/1.3.1/mcc.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19135/-1/pir/1.1" schemaLocation="../../../../19135/-1/pir/1.1.0/pir.xsd"/>
 	<xs:import namespace="https://schemas.isotc211.org/19170/-1/rsz/1.0" schemaLocation="../../../../19170/-1/rsz/1.0.0/rsz.xsd"/>
-	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
-	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
 	<!-- ==========================================  -->
 	<xs:complexType name="Gazetteer_PropertyType">
 		<xs:sequence minOccurs="0">

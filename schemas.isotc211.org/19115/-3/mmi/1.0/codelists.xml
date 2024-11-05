@@ -2,8 +2,8 @@
 <cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/cat/1.0 ../../../-3/cat/1.0/cat.xsd"
    xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
-   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"    xmlns:gml="http://www.opengis.net/gml/3.2">
    <!--=====Catalogue description=====-->
    <cat:name>
       <gco:CharacterString>Codelists from the Metadata for Maintenance Information (mex) Namespace</gco:CharacterString>

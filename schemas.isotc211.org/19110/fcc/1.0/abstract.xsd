@@ -8,7 +8,7 @@
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/cat/1.0" schemaLocation="https://schemas.isotc211.org/19115/-3/cat/1.0/cat.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-   <!-- ========================================== -->
+  <!-- ========================================== -->
   <complexType name="Abstract_FeatureCatalogue_PropertyType">
     <sequence minOccurs="0">
       <element ref="fcc:Abstract_FeatureCatalogue"/>
@@ -20,7 +20,7 @@
   <element abstract="true" name="Abstract_FeatureCatalogue" substitutionGroup="cat:AbstractCT_Catalogue" type="fcc:Abstract_FeatureCatalogue_Type"/>
   <!-- .......................................... -->
   <!-- SMR 2015-06-14 hand craft to get Abstract FeatureCatalogue in substitution group for CT_Catalogue -->
-   <complexType abstract="true" name="Abstract_FeatureCatalogue_Type">
+  <complexType abstract="true" name="Abstract_FeatureCatalogue_Type">
     <complexContent>
       <extension base="cat:AbstractCT_Catalogue_Type">
         <sequence/>
@@ -45,5 +45,5 @@
       </extension>
     </complexContent>
   </complexType>
-   <!-- ========================================== -->
+  <!-- ========================================== -->
 </schema>
