@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:upa="https://schemas.isotc211.org/19154/-/upa/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19154/-/upa/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:include schemaLocation="locationalContext.xsd"/>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeospatialContext_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeospatialContext"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeospatialContext" type="upa:UPA_GeospatialContext_Type" substitutionGroup="upa:UPA_LocationalContext"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeospatialContext_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContext_Type">
+				<xs:sequence>
+					<xs:element name="UPA_GeospatialContextRule" type="upa:UPA_GeospatialContextRule_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeospatialContextRule_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeospatialContextRule"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeospatialContextRule" type="upa:UPA_GeospatialContextRule_Type" substitutionGroup="upa:UPA_LocationalContextRule"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeospatialContextRule_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContextRule_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeospatialContextType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeospatialContextType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeospatialContextType"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeospatialContextType_Type">
+		<xs:sequence>
+			<xs:element name="coordinate"/>
+			<xs:element name="geometry"/>
+			<xs:element name="locationInstance"/>
+			<xs:element name="movingFeature"/>
+			<xs:element name="staticFeature"/>
+			<xs:element name="topology"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+</xs:schema>

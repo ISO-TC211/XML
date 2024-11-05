@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>administrative package of LADM Part 1</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="party.xsd"/>
+	<xs:include schemaLocation="genericConceptualModel.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_AdministrativeSource_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_AdministrativeSource"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_AdministrativeSource" type="lad:LA_AdministrativeSource_Type" substitutionGroup="lad:LA_Source"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_AdministrativeSource_Type">
+		<xs:annotation>
+			<xs:documentation>source with the administrative description (where applicable) of the parties involved, the rights, restrictions and responsibilities created and the basic administrative units affected</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:LA_Source_Type">
+				<xs:sequence>
+					<xs:element name="text" type="lad:LA_MultiMediaType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the content of the document.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="lad:LA_AdministrativeSourceType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="administrativeSourceType" type="lad:LA_AdministrativeSourceType_PropertyType" minOccurs="1" maxOccurs="1">
+						
+						<xs:annotation>
+							<xs:documentation>the type of document</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="requiredRelationBaunit" type="lad:LA_RequiredRelationshipBAUnit_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_MultiMediaType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_MultiMediaType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_MultiMediaType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_MultiMediaType" type="lad:LA_MultiMediaType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_MultiMediaType_Type">
+		<xs:annotation>
+			<xs:documentation>type of multi media</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_AdministrativeSourceType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_AdministrativeSourceType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_AdministrativeSourceType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_AdministrativeSourceType" type="lad:LA_AdministrativeSourceType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_AdministrativeSourceType_Type">
+		<xs:annotation>
+			<xs:documentation>type of administrative source</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="agriConsent" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="agriLease" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="agriNotaryStatement" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="deed" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mortgage" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="title" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_BAUnit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_BAUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_BAUnit" type="lad:LA_BAUnit_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_BAUnit_Type">
+		<xs:annotation>
+			<xs:documentation>administrative entity, subject to registration (by law), or recordation [by informal right, or customary right, or another social tenure relationship], consisting of zero or more spatial units against which (one or more) unique and homogeneous rights [e.g. ownership right or land use right], responsibilities or restrictions are associated to the whole entity, as included in a land administration system</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the name of the basic administrative unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="lad:LA_BAUnitType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="BAUnitType" type="lad:LA_BAUnitType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the type of the basic administrative unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="uID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the identifier of the basic administrative unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lad:LA_AdministrativeSource_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="uni2" type="lad:LA_BAUnit_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="party" type="lad:LA_Party_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_BAUnitType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_BAUnitType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_BAUnitType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_BAUnitType" type="lad:LA_BAUnitType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_BAUnitType_Type">
+		<xs:annotation>
+			<xs:documentation>type of basic administrative units</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="basicPropertyUnit" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="leasedUnit" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="rightOfUseUnit" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_RequiredRelationshipBAUnit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_RequiredRelationshipBAUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_RequiredRelationshipBAUnit" type="lad:LA_RequiredRelationshipBAUnit_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_RequiredRelationshipBAUnit_Type">
+		<xs:annotation>
+			<xs:documentation>explicit association between either spatial units, or between basic administrative units</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="relationship" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the relationships between basic administrative units</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_RequiredRelationshipRRR_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_RequiredRelationshipRRR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_RequiredRelationshipRRR" type="lad:LA_RequiredRelationshipRRR_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_RequiredRelationshipRRR_Type">
+		<xs:annotation>
+			<xs:documentation>An optional relationship class to represent relationships between RRRs. To be discussed with project team.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="relationship" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>relationships in and between rights, restrictions, responsibilities</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="source" type="lad:LA_AdministrativeSource_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_Responsibility_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_Responsibility"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_Responsibility" type="lad:LA_Responsibility_Type" substitutionGroup="lad:LA_AbstractRRR"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_Responsibility_Type">
+		<xs:annotation>
+			<xs:documentation>formal or informal obligation on the land owner to allow or do something</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:LA_AbstractRRR_Type">
+				<xs:sequence>
+					<!-- <xs:element name="type" type="lad:LA_ResponsibilityType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="responsibilityType" type="lad:LA_ResponsibilityType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the type of the responsibility</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_ResponsibilityType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_ResponsibilityType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_ResponsibilityType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_ResponsibilityType" type="lad:LA_ResponsibilityType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_ResponsibilityType_Type">
+		<xs:annotation>
+			<xs:documentation>type of responsibility</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="monumentMaintenance" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="servitudeObjectMaintenance" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="waterwayMaintenance" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_Restriction_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_Restriction"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_Restriction" type="lad:LA_Restriction_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_Restriction_Type">
+		<xs:annotation>
+			<xs:documentation>formal or informal obligation on the land owner to refrain from doing something</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:LA_AbstractRRR_Type">
+				<xs:sequence>
+					<xs:element name="partyRequired" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>indicates whether a party is required for the registration of the restriction in the association to LA_Party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="lad:LA_RestrictionType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="restrictionType" type="lad:LA_RestrictionType_PropertyType" minOccurs="1" maxOccurs="1">
+							<xs:annotation>
+							<xs:documentation>the type of the restriction</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_RestrictionType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_RestrictionType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_RestrictionType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_RestrictionType" type="lad:LA_RestrictionType"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_RestrictionType">
+		<xs:annotation>
+			<xs:documentation>type of restriction</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="adminPublicServitude" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="monument" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="monumentPartly" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mortgage" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="noBuilding" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="servitude" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="servitudePartly" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_Right_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_Right"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_Right" type="lad:LA_Right_Type" substitutionGroup="lad:LA_AbstractRRR"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_Right_Type">
+		<xs:annotation>
+			<xs:documentation>formal or informal entitlement to own or do something</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:LA_AbstractRRR_Type">
+				<xs:sequence>
+					<!-- <xs:element name="type" type="lad:LA_RightType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="rightType" type="lad:LA_RightType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the type of the right</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_RightType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_RightType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_RightType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_RightType" type="lad:LA_RightType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_RightType_Type">
+		<xs:annotation>
+			<xs:documentation>type of right</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="agriActivity" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="commonOwnership" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="customaryType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="fireWood" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="fishing" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="grazing" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="hunting" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="informalOccupation" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lease" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="occupation" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ownership" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ownershipAssumed" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="superficies" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="tenancy" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="usufruct" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="waterrights" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_AbstractRRR_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_AbstractRRR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_AbstractRRR" type="lad:LA_AbstractRRR_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_AbstractRRR_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>An instance of a subclass of LA_AbstractRRR is a right (or social tenure relationship), a restriction, or a responsibility</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>description regarding the right, restriction or responsibility</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The RRR identifier</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="share" type="lad:Fraction_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>a share in an instance of a subclass of LA_AbstractRRR</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="shareCheck" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>boolean indicating whether the constraint is applicable</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="timeSpec" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>operational use of a right in time sharing.
+
+NOTE: Attribute timeSpec is capable of handling other temporal descriptions, such as recurring patterns (every weekend, every summer, etc.). This means, for example, that a party can hold a right to use an apartment each year in March, or that a group of pastoralists has the right to cross a field each summer (for fuzzy time range specifications see Annex D of  ISO 14825:2011 and ISO 8601:2004.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lad:LA_AdministrativeSource_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="unit" type="lad:LA_BAUnit_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="rrr2" type="lad:LA_AbstractRRR_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

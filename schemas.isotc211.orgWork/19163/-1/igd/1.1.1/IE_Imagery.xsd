@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:igd="https://schemas.isotc211.org/19163/-1/igd/1.1"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+	xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+	xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19163/-1/igd/1.1"
+    elementFormDefault="qualified"
+    version="1.1.1">
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/gex/1.3.1/extent.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.1/content.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.2.1/acquisitionInformationImagery.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:include schemaLocation="../../../../19163/-1/igd/1.1.1/IE_ImageryAndGriddedData.xsd"/>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_Imagery_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_Imagery"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_Imagery" substitutionGroup="igd:IE_ImageryAndGriddedData" type="igd:IE_Imagery_Type"/>
+	<xs:complexType name="IE_Imagery_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_ImageryAndGriddedData_Type">
+				<xs:sequence>
+					<xs:element name="acquisitionTime" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="imageDecription" type="mrc:MD_ImageDescription_Type" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="isMosaic" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="numberofBands" type="gco:Integer_PropertyType"/>
+					<xs:element name="processingAction" type="igd:IE_ProcessingActionCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="radiometricCorrectionType" type="igd:IE_RadiometricCalibrationTypeCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<!--					<xs:element name="sensorCalibrationValidation" type="19159-1:CA_CalibrationValidation" minOccurs="0" maxOccurs="1"/>  -->
+					<xs:element name="sensorInfo" type="mac:MI_Instrument_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="platformInfo" type="mac:MI_Platform_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="contentInformationImagery" type="mrc:MI_Band_Type" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="mosaicInfo" type="igd:IE_MosaicElement_PropertyType" minOccurs="1" maxOccurs="unbounded"/>				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SyntheticImage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SyntheticImage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SyntheticImage" substitutionGroup="igd:IE_Imagery" type="igd:IE_SyntheticImage_Type"/>
+	<xs:complexType name="IE_SyntheticImage_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_Imagery_Type">
+				<xs:sequence>
+					<xs:element name="intendedUse" type="mri:MD_Usage_Type" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_FusedImage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_FusedImage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_FusedImage" substitutionGroup="igd:IE_SyntheticImage" type="igd:IE_FusedImage_Type"/>
+	<xs:complexType name="IE_FusedImage_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_SyntheticImage_Type">
+				<xs:sequence>
+					<xs:element name="numberOfSourceImage" type="gco:Integer_PropertyType"/>
+					<xs:element name="processingSteps" type="mrl:LE_ProcessStep_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SimulatedImage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SimulatedImage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SimulatedImage" substitutionGroup="igd:IE_SyntheticImage" type="igd:IE_SimulatedImage_Type"/>
+	<xs:complexType name="IE_SimulatedImage_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_SyntheticImage_Type">
+				<xs:sequence>
+					<xs:element name="simulateMethod" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="provenance" type="mrl:LI_Lineage_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................................................ -->
+	<xs:complexType name="IE_OpticalImage_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_OpticalImage"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_OpticalImage" substitutionGroup="igd:IE_Imagery" type="igd:IE_OpticalImage_Type"/>
+	<xs:complexType name="IE_OpticalImage_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_Imagery_Type">
+				<xs:sequence>
+					<xs:element name="opticalImageType" type="igd:IE_OpticalImageTypeCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="pticalSensorType" type="igd:IE_OpticalSensorTypeCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_MicrowaveData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_MicrowaveData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_MicrowaveData" substitutionGroup="igd:IE_Imagery" type="igd:IE_MicrowaveData_Type"/>
+	<xs:complexType name="IE_MicrowaveData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_Imagery_Type"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_ActiveMWData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_ActiveMWData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_ActiveMWData" substitutionGroup="igd:IE_MicrowaveData" type="igd:IE_ActiveMWData_Type"/>
+	<xs:complexType name="IE_ActiveMWData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_MicrowaveData_Type"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARData" substitutionGroup="igd:IE_ActiveMWData" type="igd:IE_SARData_Type"/>
+	<xs:complexType name="IE_SARData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_ActiveMWData_Type">
+				<xs:sequence>
+					<xs:element name="farRangeIncidenceAngle" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="nearRangeIncidenceAngle" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="sarImagingMode" type="igd:IE_SARImagingModeCode_PropertyType"/>
+					<xs:element name="sarModeDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="waveLength" type="gco:Real_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_PassiveMWData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_PassiveMWData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_PassiveMWData" substitutionGroup="igd:IE_MicrowaveData" type="igd:IE_PassiveMWData_Type"/>
+	<xs:complexType name="IE_PassiveMWData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_MicrowaveData_Type"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARComplexData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARComplexData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARComplexData" substitutionGroup="igd:IE_SARData" type="igd:IE_SARComplexData_Type"/>
+	<xs:complexType name="IE_SARComplexData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_SARData_Type">
+				<xs:sequence>
+					<xs:element name="complexLayerTypes" type="igd:IE_SARComplexLayerCode_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="lineSpacing" type="gco:Real_PropertyType"/>
+					<xs:element name="pixelSpacing" type="gco:Real_PropertyType"/>
+					<xs:element name="sarSensor" type="igd:IE_SARSensor_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARAmplitudeData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARAmplitudeData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARAmplitudeData" substitutionGroup="igd:IE_SARData" type="igd:IE_SARAmplitudeData_Type"/>
+	<xs:complexType name="IE_SARAmplitudeData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_SARData_Type">
+				<xs:sequence>
+					<xs:element name="calibrationFactor" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="looksInAzimuth" type="gco:Integer_PropertyType"/>
+					<xs:element name="looksInRange" type="gco:Integer_PropertyType"/>
+					<xs:element name="sarSensor" type="igd:IE_SARSensor_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARSensor_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARSensor"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARSensor" type="igd:IE_SARSensor_Type"/>
+	<xs:complexType name="IE_SARSensor_Type">
+		<xs:sequence>
+			<xs:element name="azimuthBandwidth" type="gco:Real_PropertyType"/>
+			<xs:element name="dopplerCentroid" type="igd:IE_SARDopplerCentroidParameter_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="oneWayTimeToFirstRangePixel" type="gco:TimeMeasure_PropertyType"/>
+			<xs:element name="orbitParameter" type="igd:IE_OrbitParameter_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="pulseRepititionFrequency" type="gco:Real_PropertyType"/>
+			<xs:element name="rangeBandwidth" type="gco:Real_PropertyType"/>
+			<xs:element name="rangeSamplingRate" type="gco:Real_PropertyType"/>
+			<xs:element name="timeOfFirstAzimuthLine" type="gco:DateTime_PropertyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARDopplerCentroidParameter_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARDopplerCentroidParameter"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARDopplerCentroidParameter" type="igd:IE_SARDopplerCentroidParameter_Type"/>
+	<xs:complexType name="IE_SARDopplerCentroidParameter_Type">
+		<xs:sequence>
+			<xs:element name="time" type="gco:DateTime_PropertyType"/>
+			<xs:element name="polynomial_coefficient_0" type="gco:Real_PropertyType"/>
+			<xs:element name="polynomial_coefficient_1" type="gco:Real_PropertyType"/>
+			<xs:element name="polynomial_coefficient_3" type="gco:Real_PropertyType"/>
+			<xs:element name="reference_point" type="gco:Real_PropertyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_OrbitParameter_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_OrbitParameter"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_OrbitParameter" type="igd:IE_OrbitParameter_Type"/>
+	<xs:complexType name="IE_OrbitParameter_Type">
+		<xs:sequence>
+			<xs:element name="time" type="gco:DateTime_PropertyType"/>
+			<xs:element name="x" type="gco:Real_PropertyType"/>
+			<xs:element name="y" type="gco:Real_PropertyType"/>
+			<xs:element name="z" type="gco:Real_PropertyType"/>
+			<xs:element name="velocityX" type="gco:Real_PropertyType"/>
+			<xs:element name="velocityY" type="gco:Real_PropertyType"/>
+			<xs:element name="velocityZ" type="gco:Real_PropertyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_RadiometerData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_RadiometerData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_RadiometerData" substitutionGroup="igd:IE_MicrowaveData" type="igd:IE_RadiometerData_Type"/>
+	<xs:complexType name="IE_RadiometerData_Type">
+		<xs:complexContent>
+			<xs:extension base="igd:IE_MicrowaveData_Type">
+				<xs:sequence>
+					<xs:element name="scanningMode" type="igd:IE_PMWScanningModeCode_PropertyType"/>
+					<xs:element name="PMWBand" type="igd:IE_PMWBand_PropertyType"/>
+					<xs:element name="apertureType" type="igd:IE_PMWApertureTypeCode_PropertyType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_PMWBand_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_PMWBand"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_PMWBand" type="igd:IE_PMWBand_Type"/>
+	<xs:complexType name="IE_PMWBand_Type">
+		<xs:sequence>
+			<xs:element name="bandName" type="igd:IE_PMWBandNameCode_PropertyType"/>
+			<xs:element name="numberOfChannels" type="gco:Integer_PropertyType"/>
+			<xs:element name="channels" type="igd:IE_PMWChannelInfo_PropertyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_PMWChannelInfo_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_PMWChannelInfo"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_PMWChannelInfo" type="igd:IE_PMWChannelInfo_Type"/>
+	<xs:complexType name="IE_PMWChannelInfo_Type">
+		<xs:sequence>
+			<xs:element name="channelWidth" type="gco:Real_PropertyType"/>
+			<xs:element name="centreFrequency" type="gco:Real_PropertyType"/>
+			<xs:element name="channelProperty" type="igd:IE_ChannelPropertyCode_PropertyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_MosaicElement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_MosaicElement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_MosaicElement" type="igd:IE_MosaicElement_Type"/>
+	<xs:complexType name="IE_MosaicElement_Type">
+		<xs:sequence>
+			<xs:element name="elementID" type="gco:Integer_PropertyType"/>
+			<xs:element name="acquisitionTime" type="gco:TM_PeriodDuration_PropertyType"/>
+			<xs:element name="geometry" type="gex:EX_Extent_Type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--........................................................................................................
+-->
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_ProcessingActionCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_ProcessingActionCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_ProcessingActionCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_ProcessingActionCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ImageEnhancement"/>
+			<xs:enumeration value="ImageFusion"/>
+			<xs:enumeration value="ImageSmoothing"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_RadiometricCalibrationTypeCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_RadiometricCalibrationTypeCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_RadiometricCalibrationTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_RadiometricCalibrationTypeCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AbsoluteRadiometricCalibration"/>
+			<xs:enumeration value="RelativeRadiometricCalibration"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ........................................................................................................ -->
+	<xs:complexType name="IE_OpticalImageTypeCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_OpticalImageTypeCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_OpticalImageTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_OpticalImageTypeCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HyperspectialImage"/>
+			<xs:enumeration value="InfraredImage"/>
+			<xs:enumeration value="MultispectralImage"/>
+			<xs:enumeration value="PanchromaticImage"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ........................................................................................................ -->
+	<xs:complexType name="IE_OpticalSensorTypeCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_OpticalSensorTypeCode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_OpticalSensorTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_OpticalSensorTypeCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Frame"/>
+			<xs:enumeration value="Pushbroom"/>
+			<xs:enumeration value="Whiskbroom"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARImagingModeCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARImagingModeCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARImagingModeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_SARImagingModeCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SpotlightMode"/>
+			<xs:enumeration value="StripmapMode"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_SARComplexLayerCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_SARComplexLayerCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_SARComplexLayerCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_SARComplexLayerCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ComplexNumber"/>
+			<xs:enumeration value="RealNumber"/>
+			<xs:enumeration value="ImaginaryNumber"/>
+			<xs:enumeration value="Phase"/>
+			<xs:enumeration value="Magnitude"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_PMWScanningModeCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_PMWScanningModeCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_PMWScanningModeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_PMWScanningModeCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ConicalScanning"/>
+			<xs:enumeration value="CrosstrackScanning"/>
+			<xs:enumeration value="LimbScanning"/>
+			<xs:enumeration value="SpiralScanning"/>
+			<xs:enumeration value="WhiskbroomScanning"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_PMWBandNameCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_PMWBandNameCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_PMWBandNameCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_PMWBandNameCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="L-Band"/>
+			<xs:enumeration value="C-Band"/>
+			<xs:enumeration value="K-Band"/>
+			<xs:enumeration value="Ka-Band"/>
+			<xs:enumeration value="M-Band"/>
+			<xs:enumeration value="G-Band"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_PMWApertureTypeCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_PMWApertureTypeCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_PMWApertureTypeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_PMWApertureTypeCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RealAperture"/>
+			<xs:enumeration value="SyntheticAperture"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--........................................................................................................ -->
+	<xs:complexType name="IE_ChannelPropertyCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="igd:IE_ChannelPropertyCode"/>
+		</xs:sequence>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<xs:element name="IE_ChannelPropertyCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<xs:simpleType name="IE_ChannelPropertyCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OxygenAbsorptionChannel"/>
+			<xs:enumeration value="WaterVapourAbsorptionChannel"/>
+			<xs:enumeration value="OzoneAbsorptionChannel"/>
+			<xs:enumeration value="WindowChannel"/>
+			<xs:enumeration value="TraceGasAbsorptionChannel"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

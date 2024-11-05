@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  elementFormDefault="qualified" 
+  targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0" version="1.0.0">
+  <include schemaLocation="CollectionClasses.xsd"/>
+  <include schemaLocation="AntennaPatternCalibration.xsd"/>
+  <include schemaLocation="AuxiliaryData.xsd"/>
+  <include schemaLocation="GeometricPosition.xsd"/>
+  <include schemaLocation="MicrowaveRadiometerSensor.xsd"/>
+  <include schemaLocation="TACalibration.xsd"/>
+  <include schemaLocation="TBCalibrationValidation.xsd"/>
+  <include schemaLocation="TBTrueValue.xsd"/>
+  <include schemaLocation="codelists.xsd"/>
+</schema>

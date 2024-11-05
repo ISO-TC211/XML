@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+    
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    version="3.1.0"
+    >
+    <include schemaLocation="../../../../19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+ 
+
+
+    <!-- This should be defined in ISO 19123, but no schema valid. -->
+    <complexType name="CV_GridPoint_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="gmlcov:CV_GridPoint"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="CV_GridPoint" type="gmlcov:CV_GridPoint_Type"/>
+    <complexType name="CV_GridPoint_Type">
+        <sequence>
+            <element name="gridCoord" type="gmlcov:CV_GridCoordinates_PropertyType"/>
+        </sequence>
+    </complexType>
+
+     <complexType name="CV_GridCoordinates_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="gmlcov:CV_GridCoordinates"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="CV_GridCoordinates" type="gmlcov:CV_GridCoordinates_Type"/>
+    <complexType name="CV_GridCoordinates_Type">
+        <sequence>
+            <element name="coordValues" type="gml:CoordinatesType"/>
+        </sequence>
+    </complexType>
+</schema>

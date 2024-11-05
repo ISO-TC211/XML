@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:aip="https://schemas.isotc211.org/19160/-4/aip/2.8"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19160/-4/aip/2.8" 
+	version="2.8.0">
+	<xs:include schemaLocation="aip.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ======================================== -->
+	<xs:complexType name="AddressRenderedByTemplate_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:AddressRenderedByTemplate"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="AddressRenderedByTemplate" substitutionGroup="aip:RenderedAddress" type="aip:AddressRenderedByTemplate_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="AddressRenderedByTemplate_Type">
+		<xs:annotation>
+			<xs:documentation>Rendered Address that was produced according the rules specified in template.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:RenderedAddress_Type">
+				<xs:sequence>
+					<xs:element name="alignment" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies an alignment of the line in rendered address.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="styleProperties" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specify other style properties.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="specification" type="aip:Template_Type" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="lineDataType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:lineDataType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="lineDataType" type="aip:lineDataType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="lineDataType_Type">
+		<xs:annotation>
+			<xs:documentation>Defines how line candidates are constructed from the address components.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lineName" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies the name of a line candidate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lineComponent" type="aip:lineComponentType_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies the logical part of a line.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lineNumber" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines the relative position of the line in the initial rendering. 
+						The value of lineName, together with lineNumber, shall be used as a unique identifier of the line within the template.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="excludeFromMaxLines" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates whether the line should be excluded from the count of lines. Can take the value “Y” for excluding from count and “N” for including. 
+						If not populated, the line will be included in count.
+						NOTE	It will only be of significance if maxLines has been specified in userPreferences.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Directionality" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a directionality of text in the line. Can take values: “LTR” for left-to-right and “RTL” for right-to-left.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="ParameterType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:ParameterType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="ParameterType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- 		<xs:element name="ParameterType" type="aip:ParameterType_Type"/>  -->
+	<!-- ________________________________________ -->
+	<xs:complexType name="ParameterType_Type">
+		<xs:annotation>
+			<xs:documentation>Contains list of rendering parameters.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="addressType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifier of postal address type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveringCountry" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Country responsible for the delivery of a postal item to a delivery point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="despatchingCountry" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Country from which the mail is sent to the delivering country.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="inputGranularity" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifier of one of several allowed decompositions of the same postal address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="language" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Language in which address is provided.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="renderingType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifier of one of several allowed renderings of the same postal address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="script" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The writing system in which address is written.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="PATDL_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:PATDL"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="PATDL" type="aip:PATDL_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="PATDL_Type">
+		<xs:annotation>
+			<xs:documentation>The Postal Address Template Description Language (PATDL) is an XML Schema to encode postal addresses templates in computer readable way.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="PATDLTemplate_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:PATDLTemplate"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="PATDLTemplate" substitutionGroup="aip:Template" type="aip:PATDLTemplate_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="PATDLTemplate_Type">
+		<xs:annotation>
+			<xs:documentation>Template encoded in PATDL (Postal Address Template Definition Language).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:Template_Type">
+				<xs:sequence>
+					<xs:element name="templateName" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies a name that identifies the template uniquely within the document.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="templateIdentifier" type="aip:templateIdentifierType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies a set of information to identify template and provide basic metadata.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!--
+					<xs:element name="defaultDelimiter" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies a character string used as a default delimiter of component valuesin rendered address.NOTEThe usual value for the defaultDelimiter is one space.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="defaultSequencer" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies a character used to separate elements within a single argument.
+								NOTE 1 In triggerConditions functions the value of defaultSequencer has the effect of a logical “or”.
+								EXAMPLE Suppose that the value of defaultSequencer is “;” (a semi-colon). 
+									Considering that the U-codes for thoroughfare and door are U40.21.00.00 and U40.32.00.00 respectively, the trigger condition:
+									[isPopulated]U40.21.00.00;U40.32.00.00[/isPopulated](U-codes for thoroughfare and door are separated with a semi-colon) requires checking “if thoroughfare is populated or door is populated”.
+								NOTE 2 Parentheses or other means to denote complex logical expressions are not used. If defaultSeparator and defaultSequencer are both used, defaultSequencer takes precedence.
+									In other words, if defaultSeparatoris a semi-colon “;” and defaultSequencer i
+									a comma “,” then “A;B,C” means “(A,B);C”.defaultCollector</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="defaultCollector" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Defines a range within a single argument.
+								NOTEthe defaultCollector can be used to as an alternative to providing a long list of values separated by the defaultSequencer.
+								EXAMPLE If defaultCollector is "-", then the string “34–133” indicates a range of numbers from 34 to 133.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					-->
+					<xs:element name="userPreferences" type="aip:userPreferencesType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Carries information instructing to modify the rendering of postal addresses regarding selection of line candidates, line components or address components.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="triggerConditions" type="aip:triggerConditionsType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Describes conditions based on which line candidates are selected to be included in rendered address. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lineData" type="aip:lineDataType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Defines how line candidates are constructed from the address components.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="combineData" type="aip:combineGroupDataType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies how to rearrange line components in lines to meet criteria about maximum number of lines or maximum number of characters in line. 
+								It has a complex type that is further specified in 9.3.6.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="XML_Schema" type="aip:PATDL_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="RenderedAddress_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:RenderedAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="RenderedAddress" type="aip:RenderedAddress_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="RenderedAddress_Type">
+		<xs:annotation>
+			<xs:documentation>postal address (4.12) represented as an image in the form of a rectangular shape comprising text lines in which postal address components (4.13) are separated and ordered</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="renderedLine" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>line in rendered address</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="RenderingParameters_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:RenderingParameters"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="RenderingParameters" type="aip:RenderingParameters_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="RenderingParameters_Type">
+		<xs:annotation>
+			<xs:documentation>information items that define the context for postal address rendering (4.19)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="parameters" type="aip:ParameterType_PropertyType" minOccurs="0" maxOccurs="7">
+				<xs:annotation>
+					<xs:documentation>collection of rendering parameters</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Template_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Template"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Template" type="aip:Template_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Template_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;postal&gt; specification of postal address renderings (4.19) within a postal address domain (4.15)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="lineCandidate" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation><xs:documentation>
+					Describes a possible organization of postal address components in rendered address. 
+					As such, line candidate is a logical object containing set of references and rules whereas line in rendered address (rendered line) is a visual object that can be viewed in the context of preceding and succeeding lines.
+				</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="lineSelectionConditions" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation><xs:documentation>information based on which lines candidates are selected and ordered in rendered address</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="parameters" type="aip:RenderingParameters_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="triggerConditionsType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:PostalAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="triggerConditionsType" type="aip:triggerConditionsType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="triggerConditionsType_Type">
+		<xs:annotation>
+			<xs:documentation>Describes conditions based on which line candidates are selected to be included in rendered address.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="isPopulated" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation><xs:documentation>Returns “true” when all arguments are populated (have value that is not null), otherwise returns “false”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="isNotPopulated" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation><xs:documentation>Returns “true” when all arguments are not populated (have value that is null), otherwise returns “false”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="hasValue" type="gco:Boolean_PropertyType" minOccurs="2" maxOccurs="2">
+				<xs:annotation><xs:documentation>Returns “true” when the value of the first argument equals the value of the second argument, otherwise returns “false”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="hasNotValue" type="gco:Boolean_PropertyType" minOccurs="2" maxOccurs="2">
+				<xs:annotation><xs:documentation>Returns “true” when the value of the first argument equals the value of second argument, otherwise returns “false”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="containsValue" type="gco:Boolean_PropertyType" minOccurs="2" maxOccurs="2">
+				<xs:annotation><xs:documentation>Returns “true” when the string in the value of the first argument contains the value of the second argument as a substring, otherwise returns “false”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="hasPreference" type="gco:Boolean_PropertyType" minOccurs="2" maxOccurs="2">
+				<xs:annotation><xs:documentation>Returns “true” when the value of userPreference specified in the first argument matches the value specified in second argument, otherwise returns “false”.
+					EXAMPLE   Suppose that the userPreference maxCharacters (see 9.3.3) is set to 40, then 
+					[ hasPreference ] maxCharacters; 40 [ /hasPreference ] will return “true” and [ hasPreference ] maxCharacters;38 [ /hasPreference ] will return “false”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="hasResult" type="gco:Boolean_PropertyType" minOccurs="2" maxOccurs="2">
+				<xs:annotation><xs:documentation>Returns “true” when the value of userPreference specified in the first argument matches the value specified in second argument, otherwise returns “false”.
+					EXAMPLE   Suppose that the function getScript returns the ISO 15924 code of script in which address components are written. 
+					If address components are written in Latin, then the trigger condition [ hasResult ] getScript; ‘Latn’ [ /hasResult ] will return “true”.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="matchesRegex" type="gco:Boolean_PropertyType" minOccurs="2" maxOccurs="2">
+				<xs:annotation><xs:documentation>Returns true in two cases: 
+					when the string in the first argument matches the regular expression in the second argument and third argument is equal “Y”; 
+					and when the string in the second argument does not match the regular expression in the second argument and the third argument is equal “N”, otherwise returns “false”.
+					EXAMPLE   Considering that the U-code for the primary thoroughfare name is U40.21.11.41, 
+						the following trigger condition will check whether the thoroughfare represents a rural route or highway contract route [ matchesRegex ] U40.21.11.41;(^RR \d)|(^HC \d) [ /matchesRegex ]. 
+						It will return true when the primary thoroughfare name matches the regular expression “(^RR \d)|(^HC \d)”, 
+							i.e. it begins with either RR or HC followed by a single space and a digit.</xs:documentation></xs:annotation>
+			</xs:element>
+			<xs:element name="defaultCase" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="0">
+				<xs:annotation><xs:documentation>NOTE	It is used after one or more other trigger conditions to ensure that one of a set of trigger conditions is satisfied.</xs:documentation></xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="userPreferencesType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:userPreferencesType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="userPreferencesType" type="aip:userPreferencesType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="userPreferencesType_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;postal&gt; specification of postal address renderings (4.19) within a postal address domain (4.15)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="maxLines" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies the maximum number of lines in the rendered address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maxCharacters" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies the maximum number of characters in lines of the rendered address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="templateIdentifierType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:templateIdentifierType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="templateIdentifierType" type="aip:templateIdentifierType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="templateIdentifierType_Type">
+		<xs:annotation>
+			<xs:documentation>&lt;postal&gt; specification of postal address renderings (4.19) within a postal address domain (4.15)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="templateType" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies the specific purpose for which template is expected to serve.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="countryCode" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>ISO 3166 1 of which addresses template describes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="userId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies the owner or designer of the template.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="templateSeqNum" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies one of templates within a country.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="templateVersion" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies the version of the template.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="lineComponentType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:lineComponentType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="lineComponentType" type="aip:lineComponentType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="lineComponentType_Type">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="componentId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies a component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="priority" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates the relative importance of the lineComponent for inclusion in the rendered address..</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="alignment" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an alignment of the line in the rendered address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requiredIfSelected" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates that the component is required to be included in the rendered address together with other components being indicated with this element.
+						NOTE    It is mutually exclusive with requiredIfSelected.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="renditionCommand" type="aip:renderCommandType_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies a rendition instruction that can be invoked in order to resolve constraints upon available space.
+						It has a complex type that is further specified in 9.3.5.3.1.
+						NOTE   renditionCommand can appear at the component level or at the element level.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="renditionOperator" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Refers to a rendition instruction that can be invoked to render space between components specified in elementData.
+						It has a complex type that is further specified in 9.3.5.3.2.
+						EXAMPLE   renditionOperator can specify punctuations between elementData.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="elementData" type="aip:elementDataType_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies an address component and its rendering.
+						It has a complex type that is further specified in 9.3.5.3.3.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="renderCommandType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:renderCommandType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="renderCommandType" type="aip:renderCommandType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="renderCommandType_Type">
+		<xs:annotation>
+			<xs:documentation>Specifies a rendition instruction that can be invoked in order to resolve constraints upon available space.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cmdId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies the name of the rendition instruction.
+						EXAMPLE   “ABBREV”, a name of rendition instruction used to 
+						abbreviate the values of address components.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cmdPriority" type="gco:Decimal_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates the positon number in the order of execution.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="elementDataType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:elementDataType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="elementDataType" type="aip:elementDataType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="elementDataType_Type">
+		<xs:annotation>
+			<xs:documentation>Specifies an address component and its rendering.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="elementId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier of postal address component that is also used by the input data. 
+						If a template uses components defined in this document, then it should use U-codes in elementId.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="elementDef" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an alternative identifier of postal address component such as component name.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="elementDesc" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an alternative identifier of postal address component such as component name in local language.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requiredIfSelected" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates that the component specified is required to be included in the rendered address.
+						NOTE   It is mutually exclusive with requiredIfSelected.
+						</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="groupRequiredIfSelected" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates that the component specified is required to be included in the rendered address.
+						NOTE   It is mutually exclusive with requiredIfSelected.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="migrationPrecedence" type="gco:Decimal_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a number that prioritizes position of the specified component in rendered address in case it can appear in multiple positions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="canPunctuateAfter" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Enables blocking of punctuations inserted by rendition instructions after the component specified.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="renditionCommand" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies a rendition instruction to execute advanced rendering of the component specified such as those specified in 8.3.
+						It has a complex type that is further specified in 9.3.5.3.2.
+						NOTE   renditionCommand can appear at the component level or at 
+						the element level.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="combineGroupDataType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:combineGroupDataType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="combineGroupDataType" type="aip:combineGroupDataType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="combineGroupDataType_Type">
+		<xs:annotation>
+			<xs:documentation>Specifies an address component and its rendering.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="combineGroup" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier of the group data.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="combineLocationId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier of a lineComponent which will hold the entire group when assembled.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="combineLimit" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies the maximum number of components that can be combined at combineLocationId.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="combinePriorityData" type="aip:combinePriorityDataType_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specification of what and how line components should be moved to the location specified in combineLocationId.
+						It has a complex type that is further specified in 9.3.6.3.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="combinePriorityDataType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:combinePriorityDataType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="combinePriorityDataType" type="aip:combineGroupDataType_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="combinePriorityDataType_Type">
+		<xs:annotation>
+			<xs:documentation>Specifies an address component and its rendering.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="combinePriority" type="gco:Decimal_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a number which determines the relative order within the combine group in which the results of combining will be placed in the designated location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="combineComponentId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier of a lineComponent, the contents of which will be put in to the location designated in combineLocationId.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="combineOperatorId" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies a name of rendition instruction operating on elements of the re-combined line.
+						NOTE	Rendition instructions referred by combineOperatorId are of the same type as those referred by renditionOperator in the lineData.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="combineFldText" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Specifies an argument of rendition instruction identified by combineOperatorId.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+</xs:schema>

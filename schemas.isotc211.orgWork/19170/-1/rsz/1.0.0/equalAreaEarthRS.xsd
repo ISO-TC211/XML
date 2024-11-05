@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="equalAreaTessellation.xsd"/>
+	<xs:include schemaLocation="coreRSZonalId.xsd"/>
+	<xs:include/>
+	<xs:element name="EA_DGG_ReferenceSystem" type="EA_DGG_ReferenceSystem"/>
+	<xs:complexType name="EA_DGG_ReferenceSystem" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Defining characteristics of an Equal Area Earth Reference system using zonal identifiers with structured geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DGGS_Grids" type="DGG_GridConstraint" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of characteristics that constraint the grid cells in this DGGS in decreasing order of priority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_Refinement" type="DGG_RefinementStrategy" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of topological relationships between parent and child cells in this DGGS.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_RefinementRatio" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of refinement ratios of parent cell size to child cell size, in the order that they are used in constructing child cells in the DGGS.  If the list is shorter than the number of discrete global grids in the DGGS, then it is used as a recurring sequence.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_RefSys" type="DGG_ReferenceSystemType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference system metadata.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_Grids" type="DGG_GridConstraint" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of characteristics that constrain the grid cells in this DGGS in decreasing order of priority. cellEquiSized shall be the first value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_RefSys" type="EA_ReferenceSystemType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference system metadata,</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EA_GlobeGeometry" type="EA_GlobeGeometry"/>
+	<xs:complexType name="EA_GlobeGeometry" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Parent geometry specifying the geometry, dimensionality and domain of the globe for this DGGS.
+Geometry of the surface of an Earth reference model</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="GlobeGeometry">
+				<xs:sequence>
+					<xs:element name="spatialDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>EA_GlobeGeometry shall have a spatialDimension of 3</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="topologicalDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>EA_GlobeGeometry shall have a topologicalDimension of 2, corresponding to the surface of the Earth.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="grid" type="EA_DiscreteGlobalGrid" minOccurs="2" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EA_ReferenceSystemType" type="EA_ReferenceSystemType"/>
+	<xs:complexType name="EA_ReferenceSystemType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Defining metadata elements of the base CRS for a DGGS Equal Area Earth RS.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DGG_ReferenceSystemType">
+				<xs:sequence>
+					<xs:element name="CRS" type="DerivedGeodeticCRS" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Metadata required to reference coordinates, Includes CRS ID and coordinate Epoch for dynamic CRS</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="GLOBE" type="SurfaceData" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>SurfaceData for the chosen EA_GlobeGeometry that specifies geometry, spatial, and topological dimensionality and domain of the globe for this DGGS.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="MDRS" type="MD_ReferenceSystem" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Reference system information describing this whole DGGS.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ZIRS" type="MD_Identifier" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Identifier for the spatial RSUsingZonalIdentifiers used by the DGGS.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

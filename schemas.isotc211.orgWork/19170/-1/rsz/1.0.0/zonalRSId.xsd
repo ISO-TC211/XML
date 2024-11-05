@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="RSUsingZonalIdentifiers" type="RSUsingZonalIdentifiers"/>
+	<xs:complexType name="RSUsingZonalIdentifiers" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A reference system using zonal identifiers is either a reference system using zonal identifiers primitive or  a compound of one spatial reference system using zonal identifiers and one temporal reference system using period identifiers primitives.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="comprises" type="Zone" minOccurs="2" maxOccurs="unbounded"/>
+			<xs:element name="comprises" type="ZoneClass" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="RSUsingZonalIdentifiersCompound" type="RSUsingZonalIdentifiersCompound"/>
+	<xs:complexType name="RSUsingZonalIdentifiersCompound" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A reference system using zonal identifiers compound is a compound of one spatial reference system using zonal identifiers and one temporal reference system using zonal identifiers primitives.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="RSUsingZonalIdentifiers">
+				<xs:sequence>
+					<xs:element name="element" type="RSUsingZonalIdentifiersPrimitive" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RSUsingZonalIdentifiersPrimitive" type="RSUsingZonalIdentifiersPrimitive"/>
+	<xs:complexType name="RSUsingZonalIdentifiersPrimitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A reference system using zonal identifiers primitive is either a spatial reference system using geographic identifiers or a temporal reference system using period Identifiers.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="RSUsingZonalIdentifiers">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZonalIdentifierComplex" type="ZonalIdentifierComplex"/>
+	<xs:complexType name="ZonalIdentifierComplex" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Zonal identifier complex is a complex of two zonal identifier primitives, one geographic identifier and one period identifier.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="element" type="ZonalIdentifierPrimitive" minOccurs="2" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ZonalIdentifierPrimitive" type="ZonalIdentifierPrimitive"/>
+	<xs:complexType name="ZonalIdentifierPrimitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Zonal identifier primitive is either a geographic identifier or a period identifier.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="Zone" type="Zone"/>
+	<xs:complexType name="Zone" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A zone is a particular spatial, temporal or spatio-temporal place.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="extent" type="EX_Extent" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>extent of the zone</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identifier" type="ZonalIdentifier" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name or label for the Zone.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="representativePosition" type="DirectPosition" minOccurs="1" maxOccurs="4">
+				<xs:annotation>
+					<xs:documentation>Interior position for the Zone.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="childOf" type="Zone" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ZoneClass" type="ZoneClass"/>
+	<xs:complexType name="ZoneClass" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Categorisation of zones.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="refinementLevel" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Refinement level used to define the zone class.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zone" type="Zone" minOccurs="2" maxOccurs="unbounded"/>
+			<xs:element name="parentOf" type="ZoneClass" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ZoneClassComplex" type="ZoneClassComplex"/>
+	<xs:complexType name="ZoneClassComplex" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Zone class complex is a complex of two zone class primitives, one location class and one period class.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneClass">
+				<xs:sequence>
+					<xs:element name="element" type="ZoneClassPrimitive" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZoneClassPrimitive" type="ZoneClassPrimitive"/>
+	<xs:complexType name="ZoneClassPrimitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Zone class primitive is either a location class or a period class.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneClass">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZoneCompound" type="ZoneCompound"/>
+	<xs:complexType name="ZoneCompound" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A zone compound is a compound of two zone primitives, one spatial location and one temporal period.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Zone">
+				<xs:sequence>
+					<xs:element name="element" type="ZonePrimitive" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZonePrimitive" type="ZonePrimitive"/>
+	<xs:complexType name="ZonePrimitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A zonal primitive is either a spatial location or a temporal period.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Zone">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="RegisterItemRelationshipType">
+		<xs:annotation>
+			<xs:documentation>Enumeration values for relationship types.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="superseded">
+				<xs:annotation>
+					<xs:documentation>This register item has been superseded by another specified item.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RegisterItemStatusPublicationType">
+		<xs:annotation>
+			<xs:documentation>Enumeration values for publication status types.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current">
+				<xs:annotation>
+					<xs:documentation>The register item is current.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="retired">
+				<xs:annotation>
+					<xs:documentation>The register item is retired.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RegisterItemStatusRedactionType">
+		<xs:annotation>
+			<xs:documentation>Enumeration values for redaction status types.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="not-redacted">
+				<xs:annotation>
+					<xs:documentation>The register item is not redacted.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="redacted">
+				<xs:annotation>
+					<xs:documentation>The register item is redacted.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RegisterItemStatusValidityType">
+		<xs:annotation>
+			<xs:documentation>Enumeration values for validity status types.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="invalid">
+				<xs:annotation>
+					<xs:documentation>The register item is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="valid">
+				<xs:annotation>
+					<xs:documentation>The register item is valid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

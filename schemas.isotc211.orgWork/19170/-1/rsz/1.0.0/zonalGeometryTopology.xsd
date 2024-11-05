@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:element name="ZoneCompoundGeometry" type="ZoneCompoundGeometry"/>
+	<xs:complexType name="ZoneCompoundGeometry" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneCompoundGeometry is a Compound of two ZoneSimpleGeometry elements, comprising one one-, two- or three-dimensional spatial geometry and one one-dimensional temporal geometry. 
+*NOTE* This is analogous to an ISO 19111 Compound set of orthogonal space time axes comprising a set of orthogonal spatial axes and one temporal axis orthogonal to the spatial axes. ZoneCompoundGeometry has ZoneCompoundTopology.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneGeometry">
+				<xs:sequence>
+					<xs:element name="componentPrimitive" type="ZoneSimpleGeometry" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZoneCompoundTopology" type="ZoneCompoundTopology"/>
+	<xs:complexType name="ZoneCompoundTopology" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneCompoundTopology exhibits both spatial topology with respect to the spatial component of its geometry and temporal topology with respect to the temporal component of its geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneTopology">
+				<xs:sequence>
+					<xs:element name="geometry" type="ZoneCompoundGeometry" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="componentPrimitive" type="ZoneSimpleTopology" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZoneGeometry" type="ZoneGeometry"/>
+	<xs:complexType name="ZoneGeometry" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneGeometry is a ZoneSimpleGeometry or a ZoneCompoundGeometry. It is the root geometry for all spatio-temporal geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="spatialDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Topological dimension of the spatial geometry component.
+*NOTE* For geometries on the surface of ellipsoids, the spatial dimension is 3, and the topological dimension is 2.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="temporalDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Topological dimension of the temporal geometry component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="topologicalDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Sum of dimensions of topological primitives.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ZoneSimpleGeometry" type="ZoneSimpleGeometry"/>
+	<xs:complexType name="ZoneSimpleGeometry" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneSimpleGeometry is a one-, two- or three-dimensional spatial geometry that is invariant over all time, OR a one-dimensional temporal geometry invariant over all space. A ZoneSimpleGeometry has topology appropriate for its geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneGeometry">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZoneSimpleTopology" type="ZoneSimpleTopology"/>
+	<xs:complexType name="ZoneSimpleTopology" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneSimpleTopology is a one-, two- or three-dimensional spatial topology that is invariant over all time, OR a one-dimensional temporal topology that is invariant over all space.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneTopology">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ZoneTopology" type="ZoneTopology"/>
+	<xs:complexType name="ZoneTopology" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneTopology is a ZoneSimpleTopology or a ZoneCompoundTopology </xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+</xs:schema>

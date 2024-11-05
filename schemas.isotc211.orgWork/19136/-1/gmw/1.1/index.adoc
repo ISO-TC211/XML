@@ -1,0 +1,64 @@
+﻿= Geographic Markup Wrapper (GMW)
+:edition: 1.1.0
+:revdate: 2010-02-26
+
+== Geographic Markup Wrapper (GMW) Version 1.1.0
+
+.Classes in the gmw namespace
+image::gmwBasePackage.png[UML diagram of packages from Geographic Markup Wrapper (GMW) in the gmw namespace,750]
+
+=== Description
+
+Geographic Markup Wrapper (GMW) is an XML Schema implementation of ISO 19136,
+Geographic Markup Language - Extended schemas. It includes elements for defining
+geometry and functions for coverages. The XML schema was encoded using the encoding
+rules defined in ISO 19118, ISO 19139.
+
+=== XML Namespace for Geographic Markup Wrapper (GMW) Version: 1.1
+
+The namespace URI for Geographic Markup Wrapper (GMW) Version 1.1.0 is
+`https://schemas.isotc211.org/19136/-/gmw/1.1`.
+
+=== XML Schema for Geographic Markup Wrapper (GMW) Version 1.1.0
+
+https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmw.xsd[gmw.xsd] is the XML Schema document to
+be referenced by XML documents containing XML elements in the gmw namespace or by XML
+Schema documents importing the gmw 1.1 namespace. This XML schema includes
+(indirectly) all the implemented concepts of the gmw namespace, but it does not
+contain the declaration of any types.
+
+=== Related XML Schema for gmw 1.1
+
+https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmlWrapperTypes.xsd
+implements the UML conceptual schema defined in ISO 19136, Geographic Information -
+Geographic Markup Language Part 2: Extended schemas and encoding rules. It was
+created using the encoding rules defined in ISO 19118, ISO 19139.
+
+https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmlWrapperTypes.xsd contains the following classes:
+
+* MimeFileType
+* Anchor
+* FileName
+* MediaType
+* URI
+* LanguageString
+
+=== Related XML Namespaces for ISO 19136 GMW 1.1
+
+The GMW 1.1.0 imports these other namespaces:
+
+[%unnumbered]
+[options=header,cols=4]
+|===
+| Name | Standard Prefix | Namespace Location | Schema Location
+
+| Geographic Common Objects | gco |
+`https://schemas.isotc211.org/19103/-/gco/1.2.0` | https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd[gco.xsd]
+| Geographic Common objects Extended | gcx |
+`https://schemas.isotc211.org/19103/-/gcx/1.2.0` | https://schemas.isotc211.org/19103/-/gcx/1.2.0/gcx.xsd[gcx.xsd]
+|===
+
+=== Working Versions
+
+When revisions to these schema become necessary, they will be managed in the
+https://github.com/ISO-TC211/XML[ISO TC211 Git Repository].

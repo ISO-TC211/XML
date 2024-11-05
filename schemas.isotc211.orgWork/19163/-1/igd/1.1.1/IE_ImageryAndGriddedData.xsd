@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:igd="https://schemas.isotc211.org/19163/-1/igd/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" 
+    targetNamespace="https://schemas.isotc211.org/19163/-1/igd/1.1" 
+    elementFormDefault="qualified"
+    version="1.1.1" 
+    >
+    <!-- 
+          xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+    <xs:import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/gex/1.3.1/extent.xsd"/>
+
+-->
+    <xs:import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/msr/1.3.1/msr.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19130/-3/smi/1.1" schemaLocation="https://schemas.isotc211.org/19130/-1/smi/1.1.1/sensorModel.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-2/cis/1.1.0/coverage.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-/cis/1.1.0/codeLists.xsd"/>
+    <!--   ............................................................................. -->
+    <xs:complexType name="IE_ImageryAndGriddedData_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_ImageryAndGriddedData"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_ImageryAndGriddedData" substitutionGroup="gmlcov:AbstractCoverage" type="igd:IE_ImageryAndGriddedData_Type"/>
+    <xs:complexType name="IE_ImageryAndGriddedData_Type">
+        <xs:complexContent>
+            <xs:extension base="gmlcov:AbstractCoverageType">
+                <xs:sequence>
+                    <xs:element name="interpolationType" minOccurs="0" maxOccurs="1" type="gmlcov:CV_InterpolationMethod_PropertyType"/>
+                    <xs:choice>
+                        <xs:element name="georectifiedSpatialInfo" maxOccurs="1" type="igd:IE_Georectified_PropertyType"/>
+                        <xs:element name="georeferencableSpatialInfo" maxOccurs="1" type="igd:IE_Georeferenceable_PropertyType"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--   .............................................................................                                                            -->
+    <xs:complexType name="IE_Georectified_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_Georectified"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_Georectified" substitutionGroup="msr:MD_Georectified" type="igd:IE_Georectified_Type"/>
+    <xs:complexType name="IE_Georectified_Type">
+        <xs:complexContent>
+            <xs:extension base="msr:MD_Georectified_Type">
+                <xs:sequence>
+                    <xs:element name="geolocationSource" minOccurs="1" maxOccurs="unbounded" type="igd:IE_GeolocationSourceCode_PropertyType"/>
+                    <xs:element name="correctionModel" minOccurs="1" maxOccurs="unbounded" type="igd:IE_GeometricCorrectionModelCode_PropertyType"/>
+                    <xs:element name="checkPoints" minOccurs="1" maxOccurs="unbounded" type="igd:IE_LocationGCP_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--   ............................................................................. -->
+    <xs:complexType name="IE_Georeferenceable_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_Georeferenceable"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_Georeferenceable"  substitutionGroup="msr:MD_Georeferenceable" type="igd:IE_Georeferenceable_Type"/>
+    <xs:complexType name="IE_Georeferenceable_Type">
+        <xs:complexContent>
+            <xs:extension base="msr:MD_Georeferenceable_Type">
+                <xs:sequence>
+                    <xs:element name="geolocationInfo" minOccurs="1"  maxOccurs="unbounded" type="smi:SD_SensorModel_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--   ............................................................................. -->
+    <xs:complexType name="IE_LocationGCP_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_LocationGCP"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_LocationGCP" type="igd:IE_LocationGCP_Type"/>
+    <xs:complexType name="IE_LocationGCP_Type">
+        <xs:choice>
+            <xs:element name="locationGCP" type="smi:SD_LocationGCP_PropertyType"/>
+            <xs:element name="GCPRepository" type="smi:SD_GCPRepository_PropertyType"/>
+            <xs:element name="imageIdentifiableGCP" type="smi:SD_ImageIdentifiableGCP_PropertyType"/>
+         </xs:choice>
+    </xs:complexType>
+    <!--   ............................................................................. -->
+    <xs:complexType name="IE_GeometricCorrectionModelCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_GeometricCorrectionModelCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_GeometricCorrectionModelCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <xs:simpleType name="IE_GeometricCorrectionModelCode_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CorrespondenceModel"/>
+            <xs:enumeration value="PhysicalSensorModel"/>
+            <xs:enumeration value="TrueReplacementModel"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--   ............................................................................. -->
+        <xs:complexType name="IE_GeolocationSourceCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_GeolocationSourceCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_GeolocationSourceCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <xs:simpleType name="IE_GeolocationSourceCode_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DEM"/>
+            <xs:enumeration value="GCP"/>
+            <xs:enumeration value="SystemParameters"/>
+            <xs:enumeration value="SystemParameters+DEM"/>
+            <xs:enumeration value="SystemParameters+GCP"/>
+            <xs:enumeration value="SystemParameters+GCP+DEM"/>
+            <xs:enumeration value="GCP+DEM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--  .......................................................................... -->
+  <!--  
+      <xs:element name="CoverageCore" type="gmlcov:AbstractCoverageType"/>
+    <xs:complexType name="CV_AbstractCoverageType">
+        <xs:sequence>
+            <xs:element name="domainExtent" type="gex:EX_Extent_PropertyType"/>
+            <xs:element name="rangeType" type="gco:RecordType_PropertyType"/>
+            <xs:element ref="igd:commonPointRule"/>
+            <xs:element ref="igd:CoordinateReferenceSystem_PropertyType"/>
+        </xs:sequence>
+    </xs:complexType> -->
+    <!--   .........................................................................    -->
+<!--    <xs:element name="commonPointRule" type="igd:CV_CommonPointRule_Type"/>
+    <xs:simpleType name="CV_CommonPointRule_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="average"/>
+            <xs:enumeration value="low"/>
+            <xs:enumeration value="high"/>
+            <xs:enumeration value="all"/>
+            <xs:enumeration value="start"/>
+            <xs:enumeration value="end"/>
+        </xs:restriction>
+    </xs:simpleType>
+    -->
+    <!-- ...........................................................................                                                             -->
+    <!--
+    <xs:complexType name="CoordinateReferenceSystem_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:CoordinateReferenceSystem"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="CoordinateReferenceSystem" type="igd:SC_CRS_Type"/>
+    <xs:complexType name="SC_CRS_Type">
+        <xs:sequence>
+            <xs:element name="scope" type="gco:CharacterString_PropertyType"/>
+        </xs:sequence>
+    </xs:complexType>
+    -->
+    <!--   ............................................................................. -->
+    <!--  ................................................................................... -->
+    <!--
+    <xs:element name="interpolationType" type="igd:CV_InterpolationMethod"/>
+    <xs:simpleType name="CV_InterpolationMethod">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="nearestneighbor"/>
+            <xs:enumeration value="linear"/>
+            <xs:enumeration value="quadratic"/>
+            <xs:enumeration value="cubic"/>
+            <xs:enumeration value="bilinear"/>
+            <xs:enumeration value="biquadratic"/>
+            <xs:enumeration value="bicubic"/>
+            <xs:enumeration value="lostarea"/>
+            <xs:enumeration value="barycentric"/>
+        </xs:restriction>
+    </xs:simpleType>
+    -->
+    <!--   .............................................................................                                                            -->
+   <!--   .............................................................................                                                        -->
+    <!--   .............................................................................                                                        -->
+<!--    <xs:element name="geolocationInfo" type="igd:SD_SensorModel"/>
+    <xs:complexType name="SD_SensorModel">
+        <xs:complexContent>
+            <xs:extension base="msr:AbstractMI_GeolocationInformation_Type">
+                <xs:sequence>
+                    <xs:element name="forImageID" type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    -->
+    <!--   .............................................................................                                                        
+    -->
+     <!--   .............................................................................                                                        
+    -->
+   <!--   .............................................................................                                                        
+    -->
+    <!--   .............................................................................                                                        
+    -->
+</xs:schema>

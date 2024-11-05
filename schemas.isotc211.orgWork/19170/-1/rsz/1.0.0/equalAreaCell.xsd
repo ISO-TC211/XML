@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="coreRSZonalId.xsd"/>
+	<xs:include schemaLocation="spatialLocation.xsd"/>
+	<xs:include/>
+	<xs:element name="EA_BoundaryData" type="EA_BoundaryData"/>
+	<xs:complexType name="EA_BoundaryData" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Curve data for the permitted boundary types. greatCircle and greatEllipse boundary types use the same data types as smallCircle and smallEllipse respectively.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="geodesic" type="GeodesicData" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Curve data for a geodesic boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="projectedLine" type="PolynomialArcData" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Curve data for a projected line boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="smallCircle" type="CircleData" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Curve data for a small circle boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="smallEllipse" type="EllipticArcData" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Curve data for a small ellipse boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EA_Cell" type="EA_Cell"/>
+	<xs:complexType name="EA_Cell" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Reference system unit of geometry associated with an EA_Zone. As part of EA_GlobeGeometry, it has the same spatial, temporal and topological dimensionality as GlobeGeometry.
+*NOTE* As an EA_Cell on the surface of the Earth, its topologicalDimension is 2.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="positionalAccuracy" type="DQ_PositionalAccuracy" minOccurs="0" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation>Positioning metadata is commonly associated with sampling features defined in the context of field surveys. If present, positionalAccuracy:DQ_PositionalAccuracy shall describe the accuracy of the positioning of the sampling feature. Up to two instances of the attribute support the independent description of horizontal and vertical accuracy. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="area" type="Area" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Area of the cell's surface.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="boundaryData" type="EA_BoundaryData" minOccurs="3" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of EA_BoundaryDara that make up the cells' boundary, starting with the curve connecting node_0 to node_1, and continuing in a clockwise sequence.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="boundaryTypes" type="EA_BoundaryType" minOccurs="3" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of EA_CurveTypes that make up the cells' boundary, starting with the curve connecting node_0 to node_1, and continuing in clockwise sequence.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="errorBudget" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>For DGGSs referencing a dynamic datum, cellEqualAreaPrecision will typically be a single value for each tessellation, and therefore most efficiently realised as an attribute of each RefinedDiscreteGlobalGrid. 
+For DGGS referencing a static datum, cellAreaPrecision will have different values in different locations, primarily dependent on whether the location is on the static tectonic plate or not. Under these circumstances the cellEqualAreaPrecision may be realised as an attribute of a parent cell one or more refinement levels above the cell.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maxLevel" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>For DGGSs referencing a dynamic datum, cellMaxLevel will typically be a single value for each tessellation, and therefore most efficiently realised as an attribute of each RefinedDiscreteGlobalGrid.
+For DGGSs referencing a static datum, cellMaxLevel will have different values in different locations, primarily dependent on whether the location is on or off the tectonic plate the datum is tied to. Under these circumstances the cellMaxLevel may be realised as an attribute of a parent cell one or more refinement levels above the cell.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nodes" type="Node" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Ordered sequence of vertices, clockwise round the cell's boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numEdges" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Number of edges that make up the cell's boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="perimeter" type="Length" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Length of the cell's boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EA_Zone" type="EA_Zone"/>
+	<xs:complexType name="EA_Zone" abstract="true">
+		<xs:annotation>
+			<xs:documentation>An EA_Cell's location is an EA_Zone.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="LocationS">
+				<xs:sequence>
+					<xs:element name="centroid" type="DirectPosition" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Cell's representative position calculated as the cell's geodesic centre of surface area, held by the cell's LocationS.
+An EA_Zone's centroid is:
+a) The representativePosition from LocationS, and
+b) The controlPoint of ISO19111 Surface.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="identifier" type="GeographicIdentifier" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>EA_Zone's unique GeographicIdentifier. Commonly known as the CellID.
+*NOTE* A zone's position along the path of the dggsAxis is represented by it's identifier, which is analogous to ISO 19107 coordinates. Zone identifiers are typically a single structured string or binary value constructed from a concatenated sequence of alpha-numeric or binary digits, corresponding to the sequence of tessellations which formed the associated cell. Each tessellation provides one digit representing the relative location of the child cell to its parent in the tessellation. Thus CellIDs carry resolution, area, position, and topology information in their structure. CellIDs are derived from cell's ordered position along the path of the dggsAxis, which in turn is a function of the refinementlevel of the EA_Cell's EA_DiscreteGlobalGrid.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

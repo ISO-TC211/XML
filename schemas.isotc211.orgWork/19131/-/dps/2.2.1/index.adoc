@@ -1,0 +1,105 @@
+﻿= Data Product Specification (DPS)
+:edition: 2.2
+:revdate: 2010-02-26
+
+== Data Product Specification (DPS) Version: 2.2
+
+.Classes in the dps namespace
+image::DtaProdSpecClass.png[UML diagram of classes from Data Product Specification (DPS) in the dps namespace,750]
+
+=== Description
+
+Data Product Specification (DPS) is an XML Schema implementation derived from
+ISO 19131, Geographic Information - Data Product Specification Amendment 1. It
+includes elements for defining geometry and functions for coverages. The XML
+schema was encoded using the encoding rules defined in ISO 19118, ISO 19139.
+
+=== XML Namespace for Data Product Specification (DPS) Version: 2.2
+
+The namespace URI for Data Product Specification (DPS) Version: 2.2 is
+`https://schemas.isotc211.org/19131/-/dps/2.2`.
+
+=== XML Schema for Data Product Specification (DPS) Version: 2.2.0
+
+https://schemas.isotc211.org/19131/-/dps/2.2.0/dps.xsd[dps.xsd] is the XML Schema document
+to be referenced by XML documents containing XML elements in the dps namespace
+or by XML Schema documents importing the dps 2.2 namespace. This XML schema
+includes (indirectly) all the implemented concepts of the dps namespace.
+
+https://schemas.isotc211.org/19131/-/dps/2.2.0/dps.xsd
+contains the following classes:
+
+* PortrayalSection
+* Purpose
+* ReferenceSystem
+* ReferenceSystemSection
+* ScopeSection
+* ServiceProperty
+* SpecificationDescription
+* SpecificationScope
+* TermEntry
+* UseCase
+* AbbreviationEntry
+* AdditionalInformation
+* AdditionalInformationSection
+* ConformanceQualityLevel
+* DataAcquisitionAndProcessing
+* DataCapture
+* DataCaptureSection
+* DataContentAndStructure
+* DataContentAndStructureSection
+* DataProductSpecification
+* DataQuality
+* DataQualitySection
+* Delivery
+* DeliveryFormat
+* DeliveryMedium
+* DeliverySection
+* IdentificationSection
+* Maintenance
+* MaintenanceAndUpdateFrequency
+* MaintenanceAndUpdateFrequency
+* MaintenanceSection
+* Metadata
+* MetadataElement
+* MetadataSection
+* Portrayal
+
+=== Related XML Namespaces for ISO 19131 DPS 2.2
+
+The DPS 2.2.0 imports these other namespaces:
+
+[%unnumbered]
+[options=header,cols=4]
+|===
+| Name | Standard Prefix | Namespace Location | Schema Location
+
+| CITation and Responsibility | cit |
+https://schemas.isotc211.org/19115/-1/cit/1.3 | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
+| LANguage and localization | lan |
+https://schemas.isotc211.org/19115/-1/lan/1.3 | https://schemas.isotc211.org/19115/-1/lan/1.3.0/lan.xsd[lan.xsd]
+| Metadata for Resource Identification | mri |
+https://schemas.isotc211.org/19115/-1/mri/1.3 | https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.xsd[mri.xsd]
+| Metadata for Reference System | mrs |
+https://schemas.isotc211.org/19115/-1/mrs/1.3 | https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd[mrs.xsd]
+| Metadata for COnstraints | mco |
+https://schemas.isotc211.org/19115/-1/mco/1.3 | https://schemas.isotc211.org/19115/-1/mco/1.3.0/mco.xsd[mco.xsd]
+| Metadata for Common Classes | mco |
+https://schemas.isotc211.org/19115/-1/mcc/1.3 | https://schemas.isotc211.org/19115/-1/mco/1.3.0/mcc.xsd[mcc.xsd]
+| Metadata for Maintenance Information | mmi |
+https://schemas.isotc211.org/19115/-1/mcc/1.3 | https://schemas.isotc211.org/19115/-1/mmi/1.3.0/mmi.xsd[mmi.xsd]
+| Metadata for Application Systems | mas |
+https://schemas.isotc211.org/19115/-1/mas/1.3 | https://schemas.isotc211.org/19115/-1/mas/1.3.0/mas.xsd[mas.xsd]
+| Metadata for Resource Content | mrc |
+https://schemas.isotc211.org/19115/-1/mrc/1.3 | https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd[mrc.xsd]
+| Metadata for Resource Lineage | mrl |
+https://schemas.isotc211.org/19115/-1/mrl/1.3 | https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.xsd[mrl.xsd]
+| Metadata for Data Quality | mdq |
+https://schemas.isotc211.org/19157/-/mdq/1.2 | https://schemas.isotc211.org/19157/-/mdq/1.2.0/mrl.xsd[mrl.xsd]
+
+|===
+
+=== Working Versions
+
+When revisions to these schema become necessary, they will be managed in the
+https://github.com/ISO-TC211/XML[ISO TC211 Git Repository].

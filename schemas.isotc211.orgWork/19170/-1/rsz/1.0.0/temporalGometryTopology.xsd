@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="zonalGeometryTopology.xsd"/>
+	<xs:include/>
+	<xs:element name="Duration" type="Duration"/>
+	<xs:complexType name="Duration" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Duration implements Length on a Temporal Coordinate System.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="durationLengthDT" type="DateTime" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Length of time for Duration of type DateTime.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="durationLengthI" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Length of time for Duration of type Integer count.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="durationLengthM" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Length of time for Duration of type Real measure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="durationType" type="CoordinateDataType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of unit of measure for time.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EdgeT" type="EdgeT"/>
+	<xs:complexType name="EdgeT" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Topological temporal edge,
+one-dimensional topological primitive.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalTopologicalPrimitive">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Instant" type="Instant"/>
+	<xs:complexType name="Instant" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Instant implements Point geometry on a Temporal Coordinate System.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalGeometricPrimitive">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Interval" type="Interval"/>
+	<xs:complexType name="Interval" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Interval implements Line geometry on a Temporal Coordinate System.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalGeometricPrimitive">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="NodeT" type="NodeT"/>
+	<xs:complexType name="NodeT" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Topological temporal node,
+zero-dimensional topological primitive, its boundary being empty.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalTopologicalPrimitive">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalGeometricCollection" type="TemporalGeometricCollection"/>
+	<xs:complexType name="TemporalGeometricCollection" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Geometric Collection implements geometric Collection for Temporal Geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalGeometry">
+				<xs:sequence>
+					<xs:element name="element" type="TemporalGeometry" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalGeometricComplex" type="TemporalGeometricComplex"/>
+	<xs:complexType name="TemporalGeometricComplex" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Geometric Complex implements geometric Complex for Temporal Geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalGeometricCollection">
+				<xs:sequence>
+					<xs:element name="element" type="TemporalGeometricPrimitive" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="element" type="TM_GeometricPrimitive" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalGeometricPrimitive" type="TemporalGeometricPrimitive"/>
+	<xs:complexType name="TemporalGeometricPrimitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Geometric Primitive implements geometric Primitive for Temporal Geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalGeometry">
+				<xs:sequence>
+					<xs:element name="spatialDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Dimension of its spatial geometry component.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="temporalDimension" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Dimension of its temporal geometry component.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalGeometry" type="TemporalGeometry"/>
+	<xs:complexType name="TemporalGeometry" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Geometry implements 1D Geometry on a Temporal Coordinate System.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneSimpleGeometry">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalTopologicalComplex" type="TemporalTopologicalComplex"/>
+	<xs:complexType name="TemporalTopologicalComplex" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Topological Complex implements topological Complex for Temporal Topology.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalTopology">
+				<xs:sequence>
+					<xs:element name="geometry" type="TemporalGeometricComplex" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="element" type="TemporalTopologicalPrimitive" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalTopologicalPrimitive" type="TemporalTopologicalPrimitive"/>
+	<xs:complexType name="TemporalTopologicalPrimitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Topological Primitive implements topological Primitive for Temporal Topology.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TemporalTopology">
+				<xs:sequence>
+					<xs:element name="geometry" type="TemporalGeometricPrimitive" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalTopology" type="TemporalTopology"/>
+	<xs:complexType name="TemporalTopology" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal Topology implements 1D Topology for Temporal Geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneSimpleTopology">
+				<xs:sequence>
+					<xs:element name="geometry" type="TemporalGeometry" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="time" type="TemporalGeometry" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

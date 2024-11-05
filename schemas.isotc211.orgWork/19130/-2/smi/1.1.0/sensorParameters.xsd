@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0"
+  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+  xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3" 
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.0"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>   
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/mrc.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/nonPhysicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/spatialElements.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/spatialElements.xsd"/>
+    
+    <!-- ======================== 19130-2 ======================= -->
+    <!-- ========================   SAR   =======================-->
+       <complexType name="SE_SAROperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SAROperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_SAROperation" type="smi:SE_SAROperation_Type" substitutionGroup="smi:SD_SAROperation">
+        <annotation>
+            <documentation>collection properties of SAR system</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SAROperation_Type">
+        <complexContent>
+            <extension base="smi:SD_SAROperation_Type">
+                <sequence>
+                    <element name="collectionMode" type="smi:SE_SARCollectionMode_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_InSARTime_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_InSARTime"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_InSARTime" type="smi:SE_InSARTime_Type">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SE_InSARTime_Type">
+        <sequence>
+            <element name="timeFunction" type="gco:CharacterString_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>time function for InSAR operation</documentation>
+                </annotation>
+            </element>
+            <element name="timeTable" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>time table for InSAR operation</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="DateTime" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+    
+
+    <!-- ========================   InSAR   =======================-->
+    <complexType name="SE_InSAROperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_InSAROperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType> 
+    <element name="SE_InSAROperation" type="smi:SE_InSAROperation_Type" substitutionGroup="smi:SD_SAROperation">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SE_InSAROperation_Type">
+        <complexContent>
+            <extension base="smi:SD_SAROperation_Type">
+                <sequence>
+                    <element name="collectionMode" type="smi:SE_InSARCollectionModeType_PropertyType">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                    <element name="receiveTime" type="smi:SE_InSARTime_PropertyType" minOccurs="1"
+                        maxOccurs="1">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                    <element name="transmitterReceiver" type="smi:SE_InSARTransmitReceiveType_PropertyType"
+                        minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                    <element name="transmitTime" type="smi:SE_InSARTime_PropertyType" minOccurs="1"
+                        maxOccurs="1">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_InSARDualAntennaPosition_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_InSARDualAntennaPosition"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType> 
+    <element name="SE_InSARDualAntennaPosition" type="smi:SE_InSARDualAntennaPosition_Type">
+        <annotation>
+            <documentation>description of the position of InSAR dual antennas</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_InSARDualAntennaPosition_Type">
+        <sequence>
+            <element name="firstAntennaPosition" type="smi:SD_PositionAndOrientation_PropertyType"
+                minOccurs="0">
+                <annotation>
+                    <documentation>position of the first antenna</documentation>
+                </annotation>
+            </element>
+            <element name="secondAntennaPosition" type="smi:SD_PositionAndOrientation_PropertyType"
+                minOccurs="0">
+                <annotation>
+                    <documentation>position of the second antenna</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <!-- ========================   LIDAR   =======================-->
+    <complexType name="SE_LIDAROperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_LIDAROperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType> 
+    <element name="SE_LIDAROperation" type="smi:SE_LIDAROperation_Type" substitutionGroup="smi:SD_OpticsOperation">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SE_LIDAROperation_Type">
+        <complexContent>
+            <extension base="smi:SD_OpticsOperation_Type">
+                <sequence>
+                    <element name="numberOfPulse" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>pulse repetition rate expressed as the number of pulses
+                                per second. The value >= 0</documentation>
+                        </annotation>
+                    </element>
+                    <element name="pulseIntensityValue" type="gco:Real_PropertyType" maxOccurs="unbounded"/>
+                    <element name="pulseIntensityTimeDirection" type="smi:SE_LIDARPulse_PropertyType"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <documentation>where and when laser pulse is sent</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_LIDARPulse_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_LIDARPulse"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_LIDARPulse" type="smi:SE_LIDARPulse_Type">
+        <annotation>
+            <documentation>spatial and temporal information about laser pulse</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_LIDARPulse_Type">
+        <sequence>
+            <element name="pulsePointing" type="swe:VectorPropertyType">
+                <annotation>
+                    <documentation>direction of laser pulse</documentation>
+                </annotation>
+            </element>
+            <element name="pulseEmissionTime" type="gco:DateTime_PropertyType">
+                <annotation>
+                    <documentation>date and time original laser pulse is sent</documentation>
+                </annotation>
+            </element>
+            <element name="pulseReturntime" type="gco:DateTime_PropertyType" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>date and time return laser pulse is received</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+
+    <!-- ========================   Sonar   =======================-->
+    <complexType name="SE_SonarOperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SonarOperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_SonarOperation" type="smi:SE_SonarOperation_Type" substitutionGroup="smi:SD_SensorSystemAndOperation">
+        <annotation>
+            <documentation>properties and working method of SONAR system</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SonarOperation_Type">
+        <complexContent>
+            <extension base="smi:SD_SensorSystemAndOperation_Type">
+                <sequence>
+                    <element name="deployment" type="smi:SE_SonarDeploymentType_PropertyType">
+                        <annotation>
+                            <documentation>location of SONAR relative to ship</documentation>
+                        </annotation>
+                    </element>
+                    <element name="type" type="smi:SE_SonarType_PropertyType">
+                        <annotation>
+                            <documentation>whether SONAR system emits sound waves</documentation>
+                        </annotation>
+                    </element>
+                    <choice>
+                        <element name="mode" type="smi:SE_SonarOperationMode_PropertyType">
+                            <annotation>
+                                <documentation>component that provides the operation mode of the
+                                    sonar sensor</documentation>
+                            </annotation>
+                        </element>
+                        <element name="transducer" type="smi:SE_Transducer_PropertyType" maxOccurs="unbounded">
+                            <annotation>
+                                <documentation>component which defines the parameters of the
+                                    transducer</documentation>
+                            </annotation>
+                        </element>
+                        <element name="calibration" type="smi:SE_SonarCalibration_PropertyType" maxOccurs="unbounded">
+                            <annotation>
+                                <documentation>component that provides the calibration parameters
+                                    for all auxillary systems and environmental
+                                    factors</documentation>
+                            </annotation>
+                        </element>
+                        <element name="tidalAdjustment" type="smi:SE_TidalAdjustment_PropertyType" minOccurs="0">
+                            <annotation>
+                                <documentation>component that provides information about the values
+                                    in a tidal model</documentation>
+                            </annotation>
+                        </element>
+                        <element name="draft" type="smi:SE_DraftOffset_PropertyType" minOccurs="0">
+                            <annotation>
+                                <documentation>component that provides the draft
+                                    value</documentation>
+                            </annotation>
+                        </element>
+                    </choice>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_SonarOperationMode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SonarOperationMode"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_SonarOperationMode" type="smi:SE_SonarOperationMode_Type"/>
+    <complexType name="SE_SonarOperationMode_Type">
+        <sequence>
+            <element name="beamAngle" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>angle between beam and vertical as measured from vertical (value
+                        >= 0)</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="Angle" type="gco:Angle_PropertyType" maxOccurs="unbounded"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="beamSpacing">
+                <annotation>
+                    <documentation>(ordered)</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="Distance" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="mode" type="smi:SE_SonarMode_PropertyType">
+                <annotation>
+                    <documentation>type of SONAR system</documentation>
+                </annotation>
+            </element>
+            <element name="numberOfBeams" type="gco:Integer_PropertyType">
+                <annotation>
+                    <documentation>number of sounder-transducer combinations (value >=
+                        0)</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_Transducer_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_Transducer"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_Transducer" type="smi:SE_TransducerType">
+        <annotation>
+            <documentation>positioning of transducer</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_TransducerType">
+        <sequence>
+            <element name="operationChannels" type="gco:Length_PropertyType" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>wavelength of the SONAR</documentation>
+                </annotation>
+            </element>
+            <element name="operationFrequencies" type="swe:QuantityPropertyType" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>frequencies at which sound waves are sent out by
+                        transmitter</documentation>
+                </annotation>
+            </element>
+            <choice>
+                <element name="receiverInformation" type="smi:SE_Receiver_PropertyType" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>position and attitude of receiver</documentation>
+                    </annotation>
+                </element>
+                <element name="transmitterInformation" type="smi:SE_Transmitter_PropertyType"
+                    minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>position and attitude of transmitter</documentation>
+                    </annotation>
+                </element>
+            </choice>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_Receiver_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_Receiver"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_Receiver" type="smi:SE_Receiver_Type">
+        <annotation>
+            <documentation>configuration of receiver</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_Receiver_Type">
+        <sequence>
+            <element name="position" type="smi:SD_Position_PropertyType">
+                <annotation>
+                    <documentation>location of receiver</documentation>
+                </annotation>
+            </element>
+            <element name="orientation" type="smi:SD_Attitude_PropertyType">
+                <annotation>
+                    <documentation>mounting direction of receiver</documentation>
+                </annotation>
+            </element>    
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_Transmitter_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_Transmitter"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_Transmitter" type="smi:SE_Transmitter_Type">
+        <annotation>
+            <documentation>configuration of transmitter</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_Transmitter_Type">
+        <sequence>
+            <element name="orientation" type="smi:SD_Attitude_PropertyType">
+                <annotation>
+                    <documentation>mounting direction of transmitter</documentation>
+                </annotation>
+            </element>
+            <element name="position" type="smi:SD_Position_PropertyType">
+                <annotation>
+                    <documentation>location of transmitter</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_SonarCalibration_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SonarCalibration"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_SonarCalibration" type="smi:SE_SonarCalibration_Type">
+        <annotation>
+            <documentation>information required to determine configuration of SONAR
+                system</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SonarCalibration_Type">
+        <!-- This class doesn't have any properties.  --> 
+    </complexType>
+
+    <complexType name="SE_BarCheck_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_BarCheck"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_BarCheck" type="smi:SE_BarCheck_Type" substitutionGroup="smi:SE_SonarCalibration">
+        <annotation>
+            <documentation>information to check for sound velocity adjustments</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_BarCheck_Type">
+        <complexContent>
+            <extension base="smi:SE_SonarCalibration_Type">
+                <sequence>
+                    <element name="depthOffset">
+                        <annotation>
+                            <documentation>depths at which sound speed is measured</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Distance"  type="gco:Distance_PropertyType" maxOccurs="unbounded"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="numberOfDepth" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>depth read from the sonar display to the calibration
+                                bar</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_PatchTest_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_PatchTest"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_PatchTest" type="smi:SE_PatchTest_Type" substitutionGroup="smi:SE_SonarCalibration">
+        <annotation>
+            <documentation>information needed to determine quantified accuracy, precision, and
+                alignment of the SONAR system.</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_PatchTest_Type">
+        <complexContent>
+            <extension base="smi:SE_SonarCalibration_Type">
+                <sequence>
+                    <element name="azimuthalOffset" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle between center of sensor and ship in the azimuthal
+                                direction</documentation>
+                        </annotation>
+                    </element>
+                    <element name="pitchOffset" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle between center of sensor and ship in the pitch
+                                direction</documentation>
+                        </annotation>
+                    </element>
+                    <element name="positioningTimeDelay" type="gco:TM_PeriodDuration_PropertyType">
+                        <annotation>
+                            <documentation>time interval between initial receipt of time positioning
+                                data and the time the computed position reaches the logging
+                                module</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rollOffset" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle between center of sensor and ship in the roll
+                                direction</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_SoundVelocityProfile_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SoundVelocityProfile"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_SoundVelocityProfile" type="smi:SE_SoundVelocityProfile_Type" substitutionGroup="smi:SE_SonarCalibration">
+        <annotation>
+            <documentation>record of the sound velocities vertically through the water
+                column</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SoundVelocityProfile_Type">
+        <complexContent>
+            <extension base="smi:SE_SonarCalibration_Type">
+                <sequence>
+                    <!-- The type should be Frequency from 19103. -->
+                    <element name="frequency" type="swe:QuantityPropertyType">
+                        <annotation>
+                            <documentation>frequency at which osund wave is emitted and
+                                received</documentation>
+                        </annotation>
+                    </element>
+                    <element name="numberOfMeasure" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of sound velocity profiles observed (value >=
+                                0)</documentation>
+                        </annotation>
+                    </element>
+                    <element name="soundSpeed" type="swe:QuantityPropertyType">
+                        <annotation>
+                            <documentation>speed of sound in medium where SONAR is operating (value
+                                >= 0)</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_NavCheck_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_NavCheck"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_NavCheck" type="smi:SE_NavCheck_Type">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SE_NavCheck_Type">
+        <complexContent>
+            <extension base="smi:SE_SonarCalibration_Type">
+                <sequence>
+                    <element name="positionValidationOnIndependentNavSys" type="gco:Boolean_PropertyType"
+                        minOccurs="0"/>
+                    <element name="positionValidationOnKnownMark" type="gco:Boolean_PropertyType" minOccurs="0"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_DraftOffset_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_DraftOffset"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_DraftOffset" type="smi:SE_DraftOffset_Type" substitutionGroup="smi:SE_SonarCalibration">
+        <annotation>
+            <documentation>draft of the transudcer</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_DraftOffset_Type">
+        <complexContent>
+            <extension base="smi:SE_SonarCalibration_Type">
+                <sequence>
+                    <element name="draft">
+                        <annotation>
+                            <documentation>depth of transducer head below waterline of
+                                vessel</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Distance" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="unbounded"></element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="draftMeasureTime" type="swe:TimePropertyType" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                            <documentation>time at which depth of transducer is
+                                measured</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_TidalAdjustment_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_TidalAdjustment"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_TidalAdjustment" type="smi:SE_TidalAdjustment_Type">
+        <annotation>
+            <documentation>the vertical adjustment for tidal observations referred to a local
+                datum</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_TidalAdjustment_Type">
+        <sequence>
+            <element name="time">
+                <annotation>
+                    <documentation>reference time for the tidal adjustment (ordered)</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="Time" type="swe:TimePropertyType" maxOccurs="unbounded"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="type" type="smi:SE_TideAdjustType_PropertyType">
+                <annotation>
+                    <documentation>prediction or observed tide</documentation>
+                </annotation>
+            </element>
+            <element name="value">
+                <annotation>
+                    <documentation>tide adjustment value (ordered)</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="Distance" type="gco:Distance_PropertyType" maxOccurs="unbounded"></element>
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+</schema>

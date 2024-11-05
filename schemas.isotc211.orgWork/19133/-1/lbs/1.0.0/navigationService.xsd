@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/network.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/newBasicTypes.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostedLink_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostedLink"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostedLink" type="lbs:NS_CostedLink_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_CostedLink_Type">
+		<xs:sequence>
+			<xs:element name="totalCost" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostedTurn_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostedTurn"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostedTurn" type="lbs:NS_CostedTurn_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_CostedTurn_Type">
+		<xs:annotation>
+			<xs:documentation>A turn for which the cost has been calculated according to the indicated cost function.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cost" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The cost calculated for this turn. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostFunctionCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostFunctionCode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostFunctionCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="NS_CostFunctionCode" type="lbs:NS_CostFunctionCode_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_CostFunctionCode_Type">
+		<xs:sequence>
+			<xs:element name="distance" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numberTurns" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="time" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_Instruction_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_Instruction"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_Instruction" type="lbs:NS_Instruction_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_Instruction_Type">
+		<xs:annotation>
+			<xs:documentation>Defines a single route instruction or advisory. An instruction can cover multiple maneuvers as in "turn right and then immediately left." Most such examples involve maneuvers that are not separated by "long" liniks. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="action" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="advisory" type="lbs:NT_Advisory_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="cost" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The cost calculated for this turn, and the following link. For example, the intruction migth say "turn right and go 40km" in which case the value for a distance-based cost function is "40km."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_InstructionList_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_InstructionList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_InstructionList" type="lbs:NS_InstructionList_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_InstructionList_Type">
+		<xs:sequence>
+			<xs:element name="route" type="lbs:NT_Route_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="instruction" type="lbs:NS_Instruction_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RenderingRequest_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RenderingRequest"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RenderingRequest" type="lbs:NS_RenderingRequest_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_RenderingRequest_Type">
+		<xs:sequence>
+			<xs:element name="route" type="lbs:NT_Route_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="type" type="lbs:NS_RenderingType_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RenderingResponse_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RenderingResponse"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RenderingResponse" type="lbs:NS_RenderingResponse_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_RenderingResponse_Type">
+		<xs:sequence>
+			<xs:element name="groundLevelView" type="lbs:Sequence_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="instructionList" type="lbs:NS_InstructionList_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="map" type="lbs:Sequence_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="text" type="lbs:Sequence_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="voice" type="lbs:Sequence_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RenderingType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RenderingType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RenderingType"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="NS_RenderingType" type="lbs:NS_RenderingType_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_RenderingType_Type">
+		<xs:sequence>
+			<xs:element name="groundLevelView" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="maneuverInstructions" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="map" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="text" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="voice" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RouteRequest_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RouteRequest"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RouteRequest" type="lbs:NS_RouteRequest_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_RouteRequest_Type">
+		<xs:annotation>
+			<xs:documentation>Basic navigation request specifying only the source (starting point) and destination (ending point) of the requested route. Cost function used are based on general criteria.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="advisories" type="lbs:NT_AdvisoryCategory_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="arrivalTime" type="gco:Date_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="avoidList" type="lbs:NS_AvoidList_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="costFunctionCode" type="lbs:NS_CostFunctionCode_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="departureTime" type="gco:Date_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="isDynamic" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="preferences" type="lbs:NS_RoutePreferences_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="refreshInterval" type="gco:TM_PeriodDuration_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="returnRouteGeometry" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="returnRouteInstructions" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="returnRouteMaps" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="routeRequestType" type="lbs:NS_RouteRequestType_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="vehicle" type="lbs:NT_Vehicle_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="wayPointList" type="lbs:NT_WayPointList_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="costFunction" type="lbs:NS_CostFunction_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RouteRequestType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RouteRequestType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RouteRequestType"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="NS_RouteRequestType"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type" type="lbs:NS_RouteRequestType_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_RouteRequestType_Type">
+		<xs:sequence>
+			<xs:element name="basic" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="complex" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dynamic" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="predictive" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RouteResponse_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RouteResponse"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RouteResponse" type="lbs:NS_RouteResponse_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType  name="NS_RouteResponse_Type">
+		<xs:sequence>
+			<xs:element name="request" type="lbs:NS_RouteRequest_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="route" type="lbs:NT_Route_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="rendering" type="lbs:NS_RenderingResponse_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostElement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostElement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostElement" type="lbs:NS_CostElement_Type" abstract="true"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_CostElement_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostElementType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostElementType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostElementType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="NS_CostElementType" type="lbs:NS_CostElementType_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType name="NS_CostElementType_Type">
+		<xs:sequence>
+			<xs:element name="counts" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="currency" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="distance" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="fares" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="manuevers" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="time" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="tolls" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="transfers" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="travelTime" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="turns" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="waitingTime" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostFunction_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostFunction"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostFunction" type="lbs:NS_CostFunction_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_CostFunction_Type">
+		<xs:annotation>
+			<xs:documentation>This class is used to represent functions for the calculation of a costs associated to the traversal of the various parts of a network.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A general description of the cost function. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="formula" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>An algebraic formulae describing this cost. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="link" type="lbs:NS_CostedLink_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A costed link for this cost function</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="turn" type="lbs:NS_CostedTurn_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A costed turn for this cost function. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_CostFunctionTerm_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_CostFunctionTerm"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_CostFunctionTerm" type="lbs:NS_CostFunctionTerm_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_CostFunctionTerm_Type">
+		<xs:sequence>
+			<xs:element name="type" type="lbs:NS_CostElementType_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="unit" type="gco:UomIdentifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="weight" type="gco:Number_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_Counts_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_Counts"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_Counts" type="lbs:NS_Counts_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_Counts_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_CostElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_Distance_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_Distance"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_Distance" type="lbs:NS_Distance_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_Distance_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_CostElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_Fares_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_Fares"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_Fares" type="lbs:NS_Fares_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_Fares_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_MonetaryCost_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_MonetaryCost_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_MonetaryCost"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_MonetaryCost" type="lbs:NS_MonetaryCost_Type" abstract="true"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_MonetaryCost_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_CostElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_NumberManuevers_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_NumberManuevers"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_NumberManuevers" type="lbs:NS_NumberManuevers_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_NumberManuevers_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_Counts_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_NumberTransfers_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_NumberTransfers"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_NumberTransfers" type="lbs:NS_NumberTransfers_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_NumberTransfers_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_Counts_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_NumberTurns_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_NumberTurns"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_NumberTurns" type="lbs:NS_NumberTurns_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_NumberTurns_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_Counts_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_Time_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_Time"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_Time" type="lbs:NS_Time_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_Time_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_CostElement_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_Tolls_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_Tolls"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_Tolls" type="lbs:NS_Tolls_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_Tolls_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_MonetaryCost_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_TravelTime_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_TravelTime"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_TravelTime" type="lbs:NS_TravelTime_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_TravelTime_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_Time_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_WaitingTime_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_WaitingTime"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_WaitingTime" type="lbs:NS_WaitingTime_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_WaitingTime_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_Time_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_WeightedCost_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_WeightedCost"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_WeightedCost" type="lbs:NS_WeightedCost_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_WeightedCost_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:NS_CostFunction_Type">
+				<xs:sequence>
+					<xs:element name="targetUnit" type="gco:UomIdentifier_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="term" type="lbs:NS_CostFunctionTerm_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_AvoidList_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_AvoidList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_AvoidList" type="lbs:NS_AvoidList_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="NS_AvoidList_Type">
+		<xs:sequence>
+			<xs:element name="mode" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="pointElement" type="lbs:NT_WayPoint_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="NS_RoutePreferences_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:NS_RoutePreferences"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="NS_RoutePreferences" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="NS_RoutePreferences" type="lbs:NS_RoutePreferences_Type" abstract="true"/> -->
+	<!-- .......................................... -->
+	<xs:complexType name="NS_RoutePreferences_Type">
+		<xs:sequence>
+			<xs:element name="avoidMajorHighways" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="easiest" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="majorRoadsOnly" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="scenic" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

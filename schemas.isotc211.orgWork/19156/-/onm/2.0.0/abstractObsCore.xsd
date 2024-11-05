@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="AbstractDeployment" type="AbstractDeployment"/>
+	<xs:complexType name="AbstractDeployment" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:Deployment intended as a parent class for all Deployment realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="deploymentReason" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>a human readable description of the reason for the Deployment.
+
+EXAMPLES
+	- A researcher involved in a biodiversity survey campaign assessing the distribution of selected alien species. The deploymentReason describes the fact that this individual was involved in this campaign for the reason of identifying alien species.
+	- A sensor is mounted on a building to monitor seismic activities
+A new sensor type is rolled out within a regional or thematic network due to new legal reporting requirements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deploymentTime" type="TM_Object" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>time that the Deployment pertains to.
+
+EXAMPLES
+	- A researcher involved in a biodiversity survey campaign assessing the distribution of selected alien species. The deploymentTime provides the time period(s) during which this person carried out this activity in the framework of the campaign.
+A sensor is mounted on a building to monitor seismic activities. The deploymentTime provides the time period(s) during which this sensor is mounted or active.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractHost" type="AbstractHost"/>
+	<xs:complexType name="AbstractHost" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:Host</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractObservableProperty" type="AbstractObservableProperty"/>
+	<xs:complexType name="AbstractObservableProperty" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:ObservableProperty intended as a parent class for all ObservableProperty realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractObservation" type="AbstractObservation"/>
+	<xs:complexType name="AbstractObservation" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:Observation intended as a parent class for all Observation realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="AbstractObservationCharacteristics">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="AbstractObservationCharacteristics" type="AbstractObservationCharacteristics"/>
+	<xs:complexType name="AbstractObservationCharacteristics" abstract="true">
+		<xs:annotation>
+			<xs:documentation>set of common characteristics used for describing an Observation or a collection of Observations.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="observationType" type="AbstractObservationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information providing further detail on the type of Observations being described.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parameter" type="NamedValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>arbitrary event-specific parameter relevant to one or more Observations.
+
+NOTE		This might be an environmental parameter, an instrument setting or input, or an event-specific sampling parameter that is not tightly bound to either the feature-of-interest or to the observation procedure.
+NOTE		Parameters that are tightly bound to the procedure can be recorded as part of the procedure description.
+The AbstractObservingProcedure is a generic or standard procedure, rather than an event-specific process. In this context, parameters bound to the observation act, such as instrument settings, calibrations or inputs, local position, detection limits, asset identifier, operator, may augment the description of a standard procedure.
+EXAMPLE	A time sequence of observations of water quality in a well might be made at variable depths within the well. While these can be associated with specimens taken from the well at this depth as the features-of-interest, a more common approach is to identify the well itself as the feature-of-interest, and add a “samplingDepth” parameter to the observation. The sampling depth is of secondary interest compared to the temporal variation of water quality at the site.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="phenomenonTime" type="TM_Object" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>time that the Result applies to the characteristic of the FeatureOfInterest being observed.
+
+NOTE 1	The phenomenonTime is often the time the Sample has been taken.
+NOTE 2	This is often the time of interaction by a sampling Procedure or observation Procedure with a real-world feature.
+NOTE 3	If the result is the average of multiple samples taken at different times, then the phenomenonTime is the time interval over which these measurements were taken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultQuality" type="Any" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information pertaining to the data quality of the result</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resultTime" type="TM_Object" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>instant of time when the result of the Observation became available.
+
+EXAMPLE 1	The resultTime typically corresponds to when the Procedure associated with the Observation was completed. For some observations this is identical to the phenomenonTime. However, there are important cases where they differ.
+EXAMPLE 2	Where a measurement is made on a specimen in a laboratory, the phenomenonTime is the time the specimen was retrieved from its host, while the resultTime is the time the laboratory procedure was applied.
+EXAMPLE 3	The resultTime also supports disambiguation of repeat measurements made of the same property of a feature using the same procedure.
+EXAMPLE 4	Where sensor observation results are post-processed, the resultTime is the post-processing time, while the phenomenonTime is the time of initial interaction with the world.
+EXAMPLE 5	Simulations may be used to estimate the values for phenomena in the future or past. The phenomenonTime is the time that the result applies to, while the resultTime is the time that the simulation was executed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validTime" type="TM_Period" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The time interval during which the result is assumed to be applicable for use.
+
+NOTE		This attribute is commonly required in forecasting applications.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractObservationType" type="AbstractObservationType"/>
+	<xs:complexType name="AbstractObservationType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>an empty codelist parent class for Observation classification schemes. All codelists used for classifying Observations SHALL be specialized from this class.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractObserver" type="AbstractObserver"/>
+	<xs:complexType name="AbstractObserver" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:Observer intended as a parent class for all Observer realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractObservingProcedure" type="AbstractObservingProcedure"/>
+	<xs:complexType name="AbstractObservingProcedure" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Observation Schema:ObservingProcedure intended as a parent class for all :ObservingProcedure realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="NamedValue" type="NamedValue"/>
+	<xs:complexType name="NamedValue">
+		<xs:annotation>
+			<xs:documentation>The class NamedValue provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="GenericName" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the meaning of the named value. Value should be taken from a well-governed source if possible.
+
+EXAMPLES	When used as the value of an Observation:;parameter, the name might take values like ‘procedureOperator’, ‘detectionLimit’, ‘amplifierGain’, ‘samplingDepth’. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" type="Any" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the value of the parameter. The type Any should be substituted by a suitable concrete type, such as CI_ResponsibleParty or Measure. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

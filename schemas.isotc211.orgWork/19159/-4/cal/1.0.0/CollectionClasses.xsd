@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+    elementFormDefault="qualified" targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    version="1.0.0">
+    <include schemaLocation="cal.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19130/-3/smi/1.1" schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+ 
+    <element name="NonlinearityTerms" type="cal:NonlinearityTerms_Type"
+        substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Collection of non-linear terms at specified sensor operating temperatures.</documentation>
+        </annotation>
+    </element>
+    
+    <complexType name="NonlinearityTerms_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="receiverTemperature" type="cal:OrderedReal_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.145"/>
+                    <!--<element name="sensorChannel" type="cal:OrderedInteger_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.146"/>-->
+                    <element name="nonlinearTerm" type="cal:OrderedReal_PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.147"/>
+                    <!--<element name="uncertainty" type="cal:OrderedReal_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.148"/>-->
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="NonlinearityTerms_PropertyType">
+        <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="cal:NonlinearityTerms"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <!--<element name="OrdereAntennaPattern" type="cal:OrdereAntennaPattern_Type"
+        substitutionGroup="gco:AbstractObject">
+        <annotation><documentation>Collection containing multiple antenna pattern values.</documentation></annotation>
+    </element>
+    <complexType name="OrdereAntennaPattern_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="pattern" minOccurs="0" maxOccurs="unbounded">
+                        <complexType>
+                            <sequence>
+                                <element name="amplitude" type="cal:OrderedReal_PropertyType"
+                                    minOccurs="1" maxOccurs="1"/>
+                                <element name="phase" type="cal:OrderedReal_PropertyType" minOccurs="1"
+                                    maxOccurs="1"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrdereAntennaPattern_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:OrdereAntennaPattern"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>-->
+        
+    <element name="OrderedReal" type="cal:OrderedReal_Type" substitutionGroup="gco:AbstractObject" id="ISO19159-4.144">
+        <annotation><documentation>Collection containing multiple gco:Real values.</documentation></annotation>
+    </element>
+    
+    <complexType name="OrderedReal_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="real" minOccurs="0" maxOccurs="unbounded" type="gco:Real_PropertyType" id="ISO19159-4.144_ISO19103.Real"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderedReal_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:OrderedReal"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="OrderedDateTime" type="cal:OrderedDateTime_Type" substitutionGroup="gco:AbstractObject">
+        <annotation><documentation>Collection containing multiple gco:DateTime values.</documentation></annotation>
+    </element>
+    <complexType name="OrderedDateTime_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="dateTime" minOccurs="0" maxOccurs="unbounded" type="gco:DateTime_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderedDateTime_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:OrderedDateTime"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="OrderedAngle" type="cal:OrderedAngle_Type" substitutionGroup="gco:AbstractObject">
+        <annotation><documentation>Collection containing multiple gco:Angle values.</documentation></annotation>
+    </element>
+    <complexType name="OrderedAngle_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="angle" minOccurs="0" maxOccurs="unbounded" type="gco:Angle_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderedAngle_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:OrderedAngle"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    
+    <element name="OrderedInteger" type="cal:OrderedInteger_Type"
+        substitutionGroup="gco:AbstractObject">
+        <annotation><documentation>Collection containing multiple gco:Integer values.</documentation></annotation>
+    </element>
+    <complexType name="OrderedInteger_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="integer" minOccurs="0" maxOccurs="unbounded" type="gco:Integer_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderedInteger_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:OrderedInteger"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+ 
+   <!-- <element name="OrderedDirectPosition" type="cal:OrderedDirectPosition_Type"
+        substitutionGroup="gco:AbstractObject">
+        <annotation><documentation>Collection containing multiple gml:DirectPosition values.</documentation></annotation>
+    </element>
+    <complexType name="OrderedDirectPosition_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="directPosition" minOccurs="0" maxOccurs="unbounded" type="gml:DirectPositionType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderedDirectPosition_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:OrderedDirectPosition"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>-->
+</schema>

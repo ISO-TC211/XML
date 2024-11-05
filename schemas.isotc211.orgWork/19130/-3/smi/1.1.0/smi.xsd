@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+  version="1.1.0"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/nonPhysicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/physicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/sensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/sensorParameters.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/spatialElements.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/sensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/sensorParameters.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/spatialElements.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-/cis/1.1.0/codeLists.xsd"/>
+    
+    <!-- ...................... -->
+    
+    <element abstract="true" name="Abstract_SMI" substitutionGroup="gco:AbstractObject" type="smi:Abstract_SMI_Type"/>
+    <complexType abstract="true" name="Abstract_SMI_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence/>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Abstract_SMI_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:Abstract_SMI"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+</schema>

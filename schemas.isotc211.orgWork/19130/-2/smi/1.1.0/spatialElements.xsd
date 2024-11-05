@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+  xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+  xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.0"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbcStubs.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.2.0/mac.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd"/> 
+    
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/codeList.xsd"/> 
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/spatialElements.xsd"/>
+     
+    <!-- ================== 19130-2  ==================== -->
+    <!-- ================== dynamics ==================== -->
+    <complexType name="SE_Dynamics_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_Dynamics"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_Dynamics" type="smi:SE_Dynamics_Type">
+        <annotation>
+            <documentation>uncertainty in motion of a body</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_Dynamics_Type">
+        <complexContent>
+            <extension base="smi:SD_Dynamics_Type">
+                <sequence>
+                    <element name="navigationalConfidence" type="mdq:DQ_QuantitativeAttributeAccuracy_PropertyType">
+                        <annotation>
+                            <documentation>error matrix for motion of a body</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_PlatformDynamics_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_PlatformDynamics"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_PlatformDynamics" type="smi:SE_PlatformDynamics_Type" substitutionGroup="smi:SD_PlatformDynamics">
+        <annotation>
+            <documentation>additional parameters describing platform motion and pointing for SONAR
+                and LIDAR sensors</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_PlatformDynamics_Type">
+        <complexContent>
+            <extension base="smi:SD_PlatformDynamics_Type">
+                <sequence>
+                    <!-- The type should be 'velocity' -->
+                    <element name="groundSpeed" type="swe:QuantityPropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>motion of platform relative to ground</documentation>
+                        </annotation>
+                    </element>
+                    <element name="heave" type="gco:Angle_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>oscillatory rise and fall of a ship due to the entire
+                                hull being lifted by the force of the sea [9]</documentation>
+                        </annotation>
+                    </element>
+                    <element name="settlement" type="gco:Angle_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                    <element name="squat" type="gco:Length_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>increase in a vessel's draught arising from its motion
+                                through the water</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <!-- ==================== platform parameters ===================== -->
+    <complexType name="SE_AerialTriangulation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_AerialTriangulation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_AerialTriangulation" type="smi:SE_AerialTriangulation_Type" substitutionGroup="smi:SD_PlatformParameters">
+        <annotation>
+            <documentation>method for determining the exterior orientation of more than two images
+                in one calculation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_AerialTriangulation_Type">
+        <complexContent>
+            <extension base="smi:SD_PlatformParameters_Type">
+        <sequence>
+            <element name="additionalParameter" type="double" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>additional parameters used to control adjustment, from ISO/TS
+                        19159</documentation>
+                </annotation>
+            </element>
+            <element name="atName" type="gco:CharacterString_PropertyType">
+                <annotation>
+                    <documentation>sequence of alphanumerical characters describing the aerial
+                        triangulation project</documentation>
+                </annotation>
+            </element>
+            <element name="gcpReference" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>name of the registry for Ground Control Points</documentation>
+                </annotation>
+            </element>
+            <element name="terrainHeight" type="gco:Distance_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>average terrain height in the project area used for various
+                        reasons e.g. to support image matching</documentation>
+                </annotation>
+            </element>
+            <!-- =========== Classes aggregated to SE_AeriaTriangualtion ================= -->
+            <element name="SE_ATImage" type="smi:SE_ATImage_PropertyType">
+                <annotation>
+                    <documentation>characteristics of a single image of the aerial triangulation
+                        block</documentation>
+                </annotation>
+            </element>
+            <element name="SE_ATStrip" type="smi:SE_ATStrip_PropertyType">
+                <annotation>
+                    <documentation>Characteristics of a single strip of the aerial triangulation
+                        block</documentation>
+                </annotation>
+            </element>
+            <element name="SE_ATBlock" type="smi:SE_ATBlock_PropertyType">
+                <annotation>
+                    <documentation>Characteristics of the aerial triangulation block</documentation>
+                </annotation>
+            </element>
+            <element name="SE_ATObservations" type="smi:SE_ATObservations_PropertyType">
+                <annotation>
+                    <documentation>observations of the aerial triangulation</documentation>
+                </annotation>
+            </element>
+            <element name="SE_ATUnknowns" type="smi:SE_ATUnknowns_PropertyType">
+                <annotation>
+                    <documentation>information about the unknowns of the
+                        triangulation</documentation>
+                </annotation>
+            </element>
+            <element name="SE_ATOtherResults" type="smi:SE_ATOtherResults_PropertyType">
+                <annotation>
+                    <documentation>other results of the adjustment process</documentation>
+                </annotation>
+            </element>
+        </sequence>
+            </extension>
+         </complexContent>
+    </complexType>
+
+    <complexType name="SE_ATImage_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATImage"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATImage" type="smi:SE_ATImage_Type">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SE_ATImage_Type">
+        <sequence>
+            <element name="blockID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>alphanumerical identifier of the adjustment block</documentation>
+                </annotation>
+            </element>
+            <element name="imageID" type="gco:CharacterString_PropertyType" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>alphanumerical identifier of an aerial image</documentation>
+                </annotation>
+            </element>
+            <element name="stripID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>alphanumerical identifier of a photo-flight strip</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_ATStrip_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATStrip"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATStrip" type="smi:SE_ATStrip_Type"/>
+    <complexType name="SE_ATStrip_Type">
+        <sequence>
+            <element name="stripID" type="gco:CharacterString_PropertyType">
+                <annotation>
+                    <documentation>alphanumerical identifier of a photo-flight strip</documentation>
+                </annotation>
+            </element>
+            <element name="blockID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>alphanumerical identifier of the adjustment block</documentation>
+                </annotation>
+            </element>
+            <element name="numberOfImages" type="gco:Integer_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>number of images that from the strip</documentation>
+                </annotation>
+            </element>
+            <element name="imageID" type="gco:CharacterString_PropertyType" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>alphanumerical identifier of aerial images</documentation>
+                </annotation>
+            </element>
+            <element name="stripAzimuth" type="gco:Angle_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>average direction of the plane’s flight track when the images of
+                        the strip were taken</documentation>
+                </annotation>
+            </element>
+            <element name="crabAngle" type="gco:Angle_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>angle between the strip azimuth and the pointing direction of the
+                        plane’s fuselage</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_ATBlock_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATBlock"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATBlock" type="smi:SE_ATBlock_Type"/>
+    <complexType name="SE_ATBlock_Type">
+        <sequence>
+            <element name="blockID" type="gco:CharacterString_PropertyType">
+                <annotation>
+                    <documentation>alphanumerical identifier of the adjustment block</documentation>
+                </annotation>
+            </element>
+            <element name="numberOfStrips" type="gco:Integer_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>number of strips that form the block</documentation>
+                </annotation>
+            </element>
+            <element name="stripID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>alphanumerical identifier of a photo-flight
+                        strips</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_ATObservations_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATObservations"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATObservations" type="smi:SE_ATObservations_Type"/>
+    <complexType name="SE_ATObservations_Type">
+        <sequence>
+            <element name="errorType" type="smi:SE_ATErrorType_Type" minOccurs="0">
+                <annotation>
+                    <documentation>definition of the formula that is applied to compute the error
+                        such as sigma or rmsr</documentation>
+                </annotation>
+            </element>
+            <element name="errorAutomaticAPriori" type="gco:Distance_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>known geometric quality of the automatically measured tie points
+                        as set before the adjustment (a priori)</documentation>
+                </annotation>
+            </element>
+            <element name="errorManualAPriori" type="gco:Distance_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>known geometric quality of the manually measured tie points as
+                        set before the adjustment (a priori)</documentation>
+                </annotation>
+            </element>
+            <element name="eliminateFlag" type="gco:Boolean_PropertyType" minOccurs="0">
+                <annotation>
+                    <documentation>flag that indicates whether an observation is activated or
+                        deactivated before the adjustment</documentation>
+                </annotation>
+            </element>
+            <!--======== Class aggregated to SE_AtObservations ======-->
+            <element name="SE_ATImageMeasurements" type="smi:SE_ATImageMeasurements_PropertyType">
+                <annotation>
+                    <documentation>observations of image coordinates</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <!-- This is an empty class -->
+    <complexType name="SE_ATUnknowns_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATUnknowns"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATUnknowns" type="smi:SE_ATUnknowns_Type" abstract="true"/>
+    <complexType name="SE_ATUnknowns_Type"/>
+
+    <complexType name="SE_ATOtherResults_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATOtherResults"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATOtherResults" type="smi:SE_ATOtherResults_Type"/>
+    <complexType name="SE_ATOtherResults_Type">
+        <sequence>
+            <element name="numberCheckPoints" type="gco:Integer_PropertyType">
+                <annotation>
+                    <documentation>number of Check Points applied</documentation>
+                </annotation>
+            </element>
+            <element name="numberGcp" type="gco:Integer_PropertyType">
+                <annotation>
+                    <documentation>number of Ground Control Points applied</documentation>
+                </annotation>
+            </element>
+            <element name="numberTiePoints" type="gco:Integer_PropertyType">
+                <annotation>
+                    <documentation>number of tie points applied</documentation>
+                </annotation>
+            </element>
+            <element name="SE_ATAdjustedPointPosition" type="smi:SE_ATAdjustedPointPosition_Type">
+                <annotation>
+                    <documentation/>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_ATAdjustedPointPosition_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATAdjustedPointPosition"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATAdjustedPointPosition" type="smi:SE_ATAdjustedPointPosition_Type"/>
+    <complexType name="SE_ATAdjustedPointPosition_Type">
+        <sequence>
+            <element name="pointID" type="gco:CharacterString_PropertyType"/>
+            <element name="pointType" type="smi:SE_ATPointType_PropertyType"/>
+            <element name="horizontalPosition" type="gml:DirectPositionType"/>
+            <element name="verticalPosition" type="gco:Distance_PropertyType"/>
+        </sequence>
+    </complexType>
+    
+    <complexType name="SE_ATImageMeasurements_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATImageMeasurements"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATImageMeasurements" type="smi:SE_ATImageMeasurements_Type"/>
+    <complexType name="SE_ATImageMeasurements_Type">
+        <sequence>
+            <element name="imageID" type="gco:CharacterString_PropertyType">
+                <annotation>
+                    <documentation>alphanumerical identifier of the aerial image</documentation>
+                </annotation>
+            </element>
+            <element name="imagePointID" type="gco:CharacterString_PropertyType">
+                <annotation>
+                    <documentation>alphanumerical identifier of an image point</documentation>
+                </annotation>
+            </element>
+            <element name="imagePointPosition" type="gml:DirectPositionType">
+                <annotation>
+                    <documentation>2-dimensional coordinates that describe the geometric position of
+                        the image point</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SE_ATTiePoints_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATTiePoints"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATTiePoints" type="smi:SE_ATTiePoints_Type" substitutionGroup="smi:SE_ATObservations">
+        <annotation>
+            <documentation>points with a location on an image that are used to link two of more
+                neighboring images</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATTiePoints_Type">
+        <complexContent>
+            <extension base="smi:SE_ATObservations_Type">
+                <sequence>
+                    <element name="tiePointID" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>alphanumerical identifier of the tie
+                                point</documentation>
+                        </annotation>
+                    </element>
+                    <element name="measurementType" type="smi:SE_ATMeasType_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>flag that indicates whether a tie point is manually or
+                                automatically determined</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_ATGCP_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATGCP"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATGCP" type="smi:SE_ATGCP_Type" substitutionGroup="smi:SE_ATObservations">
+        <annotation>
+            <documentation>Ground Control Point that is prepared and eventually used within the
+                aerial triangulation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATGCP_Type">
+        <complexContent>
+            <extension base="smi:SE_ATObservations_Type">
+                <sequence>
+                    <element name="gcpID" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>alphanumerical identifier of the Ground Control
+                                Point</documentation>
+                        </annotation>
+                    </element>
+                    <element name="dimensionType" type="smi:SE_ATDimensionType_PropertyType">
+                        <annotation>
+                            <documentation>dimensionality of the GCP such as horizontal and
+                                vertical</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorGcpAPriori" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric quality as known
+                                before the adjustment is computed</documentation>
+                        </annotation>
+                    </element>
+                    
+                    <!-- It conflicts with its base type SE_ATObservations. SE_ATObservations alreay have a property of errorType -->
+                    <!--<element name="errorType" type="smi:SE_ATError_PropertyType">
+                        <annotation>
+                            <documentation>specification of the formula that shall be applied for
+                                calculating the error-value</documentation>
+                        </annotation>
+                    </element>-->
+                    
+                    <element name="gcpPosition" type="gml:DirectPositionType">
+                        <annotation>
+                            <documentation>planar 2-dimensional coordinates of the
+                                gcp</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gcpElevation" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>vertical 1-dimensional coordinate of the
+                                gcp</documentation>
+                        </annotation>
+                    </element>
+                    <element name="pointType" type="smi:SE_ATPointType_PropertyType">
+                        <annotation>
+                            <documentation>whether a point is a Ground Control Point, Check Point or
+                                something else, if a priori known</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_ATGNSSMeasurements_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATGNSSMeasurements"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATGNSSMeasurements" type="smi:SE_ATGNSSMeasurements_Type" substitutionGroup="smi:SE_ATObservations">
+        <annotation>
+            <documentation>information on the GNSS- measurement involved in the aerial
+                triangulation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATGNSSMeasurements_Type">
+        <complexContent>
+            <extension base="smi:SE_ATObservations_Type">
+                <sequence>
+                    <element name="dimensionType" type="smi:SE_ATDimensionType_PropertyType">
+                        <annotation>
+                            <documentation>dimensionality of the GNSS- measured point such as
+                                horizontal and vertica</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorGnss" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric quality of the
+                                GNSS-position</documentation>
+                        </annotation>
+                    </element>
+               
+                    <element name="gnssCameraID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>alphanumerical identifier of a camera related to the
+                                GNSS- positions</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gnssImageID" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>alphanumerical identifier of an image related to the
+                                GNSS- positions</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gnssPosition" type="gml:DirectPositionType">
+                        <annotation>
+                            <documentation>position provided by a GNSS</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gnssElevation" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>elevation provided by a GNSS</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gnssStripID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>alphanumerical identifier of a photo-flight strip related
+                                to the GNSS-positions</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gnssTime" type="gco:DateTime_PropertyType">
+                        <annotation>
+                            <documentation>time at which the position measurement was
+                                made</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_ATIMUMeasurements_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATIMUMeasurements"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATIMUMeasurements" type="smi:SE_ATIMUMeasurements_Type" substitutionGroup="smi:SE_ATObservations">
+        <annotation>
+            <documentation>information on the Inertial Measurement Unit (IMU)- measurement involved
+                in the aerial triangulation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATIMUMeasurements_Type">
+        <complexContent>
+            <extension base="smi:SE_ATObservations_Type">
+                <sequence>
+                    <element name="dimensionType" type="smi:SE_ATDimensionType_PropertyType">
+                        <annotation>
+                            <documentation>dimensionality of the IMU- measured point such as
+                                horizontal and vertical</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorImuKappa" type="gco:Angle_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric quality of the
+                                kappa- value of the IMU- position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorImuOmega" type="gco:Angle_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric quality of the
+                                omega-value of the IMU- position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorImuPhi" type="gco:Angle_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric quality of the
+                                phi- value of the IMU- position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imuCameraID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>alphanumerical identifier of a camera related to the IMU-
+                                positions</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imuImageID" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>alphanumerical identifier of an image related to the IMU-
+                                positions</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imuKappa" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>kappa value of the IMU- position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imuOmega" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>omega value of the IMU- position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imuPhi" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>phi value of the IMU-position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imuStripID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>alphanumerical identifier of a photo-flight strip related
+                                to the IMU-positions</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SE_ATAdjustedTiePoint_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATAdjustedTiePoint"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATAdjustedTiePoint" type="smi:SE_ATAdjustedTiePoint_Type" substitutionGroup="smi:SE_ATOtherResults">
+        <annotation>
+            <documentation>information about sensor model for sensor collecting the
+                image</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATAdjustedTiePoint_Type">
+        <complexContent>
+            <extension base="smi:SE_ATOtherResults_Type">
+                <sequence>
+                    <element name="eliminateFlag" type="gco:Boolean_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>flag that indicates whether a tie point is activated or
+                                deactivated during the adjustment</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorAdjustedTiePoint" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric
+                                error</documentation>
+                        </annotation>
+                    </element>
+                    <element name="imageID" type="gco:CharacterString_PropertyType" maxOccurs="unbounded">
+                        <annotation>
+                            <documentation>image in which the tie point was found</documentation>
+                        </annotation>
+                    </element>
+                    <element name="numberOfRays" type="gco:Integer_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>number of images in which the point is located
+                                (ordered)</documentation>
+                        </annotation>
+                    </element>
+                    <element name="pointID" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>alphanumerical identifier of the point that is located in
+                                the image</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_ATAdjustmentStatistics_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATAdjustmentStatistics"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATAdjustmentStatistics" type="smi:SE_ATAdjustmentStatistics_Type" substitutionGroup="smi:SE_ATOtherResults">
+        <annotation>
+            <documentation>statistical values describing the geometric quality of the
+                adjustment</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATAdjustmentStatistics_Type">
+        <complexContent>
+            <extension base="smi:SE_ATOtherResults_Type">
+                <sequence>
+                    <element name="dimensionType" type="smi:SE_ATDimensionType_PropertyType">
+                        <annotation>
+                            <documentation>dimension in which the error is valid</documentation>
+                        </annotation>
+                    </element>
+                    <element name="type" type="smi:SE_ATStatisticType_PropertyType">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                    <element name="errorTieAdjustedMax" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>maximum geometric error</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorTieAdjustedMin" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>minimum geometric error</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorType" type="smi:SE_ATErrorType_PropertyType">
+                        <annotation>
+                            <documentation>definition of formula that is applied to compute the
+                                error such as sigma or rm</documentation>
+                        </annotation>
+                    </element>
+                    <element name="sigmaZero" type="gco:Distance_PropertyType">
+                        <annotation>
+                            <documentation>value that characterizes the geometric quality of the
+                                aerial triangulation block</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_ATAdjustedGCP_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATAdjustedGCP"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATAdjustedGCP" type="smi:SE_ATAdjustedGCP_Type" substitutionGroup="smi:SE_ATOtherResults">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SE_ATAdjustedGCP_Type">
+        <complexContent>
+            <extension base="smi:SE_ATOtherResults_Type">
+                <sequence>
+                    <element name="dimensionType" type="smi:SE_ATDimensionType_PropertyType">
+                        <annotation>
+                            <documentation>dimension in which the error is valid</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorAdjustedGcp" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>accuracy in one dimension</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorType" type="smi:SE_ATErrorType_PropertyType">
+                        <annotation>
+                            <documentation>definition of formula that is applied to compute the
+                                error such as sigma or rm</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gcpID" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>alphanumerical identifier of the Ground Control
+                                Point</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_ATCheckPoint_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATCheckPoint"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATCheckPoint" type="smi:SE_ATCheckPoint_Type" substitutionGroup="smi:SE_ATOtherResults">
+        <annotation>
+            <documentation>check point that is prepared and eventually used within the aerial
+                triangulation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATCheckPoint_Type">
+        <complexContent>
+            <extension base="smi:SE_ATOtherResults_Type">
+                <sequence>
+                    <element name="checkPointID" type="gco:CharacterString_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>position of the Check Point as a result of the adjustment
+                                process</documentation>
+                        </annotation>
+                    </element>
+                    <element name="dimensionType" type="smi:SE_ATDimensionType_PropertyType">
+                        <annotation>
+                            <documentation>dimension in which the error is valid</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorCp" type="gco:Distance_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>value that characterizes the geometric
+                                quality</documentation>
+                        </annotation>
+                    </element>
+                    <element name="errorType" type="smi:SE_ATErrorType_PropertyType">
+                        <annotation>
+                            <documentation>definition of formula that is applied to compute the
+                                error such as sigma or rm</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SE_ATExteriorOrientation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATCheckPoint"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_ATExteriorOrientation" type="smi:SE_ATExteriorOrientation_Type"/>
+    <complexType name="SE_ATExteriorOrientation_Type">
+        <complexContent>
+            <extension base="smi:SE_ATUnknowns_Type">
+                <sequence>
+                    <element name="approximateAttitude" type="smi:SD_Attitude_PropertyType">
+                        <annotation>
+                            <documentation>approximate values necessary for the aerial triangulation calculation</documentation>
+                        </annotation>
+                    </element>
+                    <element name="approximatePosition" type="smi:SD_Position_PropertyType">
+                        <annotation>
+                            <documentation>approximate values necessary for the aerial triangulation calculation</documentation>
+                        </annotation>
+                    </element>
+                    <element name="attitude" type="smi:SD_Attitude_PropertyType">
+                        <annotation>
+                            <documentation>attitude of the adjusted image</documentation>
+                        </annotation>
+                    </element>
+                    <element name="position" type="smi:SD_Position_PropertyType">
+                        <annotation>
+                            <documentation>position of the adjusted image</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent> 
+    </complexType>
+
+ </schema>

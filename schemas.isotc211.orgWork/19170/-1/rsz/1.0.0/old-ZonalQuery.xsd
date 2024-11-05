@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:element name="old: ZoneQuery" type="old: ZoneQuery"/>
+	<xs:complexType name="old: ZoneQuery" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ZoneQuery redefines the DE9IM operations in Query2D, Query3D and provides relativePosition and relatePosition operations for the topology of zones.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="boundary" type="Geometry" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>boundary of the combined spatial geometries of the zones in the query </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="boundaryType" type="BoundaryType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>boundary type of the combined spatial geometries of the zones in the query </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="convexHull" type="Geometry" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>convex hull of the combined spatial geometries of the zones in the query </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.0"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>   
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd"/>
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    
+    <!-- =============== 19130-2 ==================== -->
+    <element name="SE_ATDimensionType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATDimensionType" substitutionGroup="gco:CharacterString" type="smi:SE_ATDimensionType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATDimensionType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATDimensionType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_ATDimensionType_Type">
+        <restriction base="string">
+            <enumeration value="x"/>
+            <enumeration value="xy"/>
+            <enumeration value="y"/>
+            <enumeration value="z"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_ATMeasType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATMeasType" substitutionGroup="gco:CharacterString" type="smi:SE_ATMeasType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATMeasType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATMeasType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_ATMeasType_Type">
+        <restriction base="string">
+            <enumeration value="Automatic">
+                <annotation>
+                    <documentation>Point positions are determined by an automatic
+                        process</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Manual">
+                <annotation>
+                    <documentation>Point positions are measured manually.</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_ATPointType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATPointType" substitutionGroup="gco:CharacterString" type="smi:SE_ATPointType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATPointType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATPointType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_ATPointType_Type">
+        <restriction base="string">
+            <enumeration value="checkPoint">
+                <annotation>
+                    <documentation>Ground Control Point applied as Check Point</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="controlPoint">
+                <annotation>
+                    <documentation>Ground Control Point applied as Ground Control
+                        Point</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="shadedimage">
+                <annotation>
+                    <documentation>Ground Control Point applied as a shaded part of the
+                        image</documentation>
+                </annotation>
+            </enumeration>           
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_ATStatisticType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATStatisticType" substitutionGroup="gco:CharacterString" type="smi:SE_ATStatisticType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATStatisticType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATStatisticType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_ATStatisticType_Type">
+        <restriction base="string">
+            <enumeration value="image">
+                <annotation>
+                    <documentation>Statistical attributes valid for a single image</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="strip">
+                <annotation>
+                    <documentation>Statistical attributes valid for a single strip</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="block">
+                <annotation>
+                    <documentation>Statistical attributes valid for the block</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    
+    <element name="SE_DataModelingMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_DataModelingMethod" substitutionGroup="gco:CharacterString" type="smi:SE_DataModelingMethod_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_DataModelingMethod_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_DataModelingMethod"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_DataModelingMethod_Type">
+        <restriction base="string">
+            <enumeration value="absoluteValue"/>
+            <enumeration value="basicSequentialModeling"/>
+            <enumeration value="collectionPlane"/>
+            <enumeration value="rectifiedImage"/>
+            <enumeration value="reserved"/>
+            <enumeration value="vectorModeling"/>
+            <enumeration value="notApplicable"/>
+        </restriction>
+    </simpleType>
+
+
+    <element name="SE_SARCollectionMode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SARCollectionMode" substitutionGroup="gco:CharacterString" type="smi:SE_SARCollectionMode_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SARCollectionMode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SARCollectionMode"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_SARCollectionMode_Type">
+        <restriction base="string">
+            <enumeration value="spotlight"/>
+            <enumeration value="stripmap"/>
+            <enumeration value="scan"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_SonarDeploymentType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SonarDeploymentType" substitutionGroup="gco:CharacterString" type="smi:SE_SonarDeploymentType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SonarDeploymentType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SonarDeploymentType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_SonarDeploymentType_Type">
+        <restriction base="string">
+            <enumeration value="hullMounted"/>
+            <enumeration value="poleMounted"/>
+            <enumeration value="Towed"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_SonarMode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SonarMode" substitutionGroup="gco:CharacterString" type="smi:SE_SonarMode_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SonarMode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SonarMode"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_SonarMode_Type">
+        <restriction base="string">
+            <enumeration value="SD_MultiBeam"/>
+            <enumeration value="SD_SideScan"/>
+            <enumeration value="SD_SingleBeam"/>
+            <enumeration value="SD_Sweep"/>
+            <enumeration value="SD_ScanningProfiler"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_SonarType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_SonarType" substitutionGroup="gco:CharacterString" type="smi:SE_SonarMode_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_SonarType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SonarType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_SonarType_Type">
+        <restriction base="string">
+            <enumeration value="Active"/>
+            <enumeration value="Passive"/>
+        </restriction>
+    </simpleType>
+    
+
+    <element name="SE_TideAdjustType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_TideAdjustType" substitutionGroup="gco:CharacterString" type="smi:SE_TideAdjustType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_TideAdjustType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_TideAdjustType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_TideAdjustType_Type">
+        <restriction base="string">
+            <enumeration value="Prediction"/>
+            <enumeration value="Realtime"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_InSARCollectionModeType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_InSARCollectionModeType" substitutionGroup="gco:CharacterString" type="smi:SE_InSARCollectionModeType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_InSARCollectionModeType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_InSARCollectionModeType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_InSARCollectionModeType_Type">
+        <restriction base="string">
+            <enumeration value="pinPongMode"/>
+            <enumeration value="standardMode"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SE_InSARTransmitReceiveType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_InSARTransmitReceiveType" substitutionGroup="gco:CharacterString" type="smi:SE_InSARTransmitReceiveType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_InSARTransmitReceiveType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_InSARTransmitReceiveType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_InSARTransmitReceiveType_Type">
+        <restriction base="string">
+            <enumeration value="firstAntennaTransmit"/>
+            <enumeration value="secondAntennaTransmit"/>
+        </restriction>
+    </simpleType> 
+
+
+    <element name="SE_ATErrorType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATErrorType" substitutionGroup="gco:CharacterString" type="smi:SE_ATErrorType_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATErrorType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATErrorType"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_ATErrorType_Type">
+        <restriction base="string">
+            <enumeration value="rms"/>
+            <enumeration value="sigma"/>
+        </restriction>
+    </simpleType>
+
+
+    <element name="SE_ATPeripheralDevice" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"> 
+        <!--    <element name="SE_ATPeripheralDevice" substitutionGroup="gco:CharacterString" type="smi:SE_ATPeripheralDevice_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SE_ATPeripheralDevice_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_ATPeripheralDevice"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SE_ATPeripheralDevice_Type">
+        <restriction base="string">
+            <enumeration value="gnss"/>
+            <enumeration value="imu"/>
+        </restriction>
+    </simpleType>
+
+
+</schema>

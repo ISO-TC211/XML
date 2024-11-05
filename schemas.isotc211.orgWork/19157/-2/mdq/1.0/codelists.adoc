@@ -1,0 +1,34 @@
+﻿= Codelists from the Metadata for Data Quality (mdq) Namespace
+:revdate: 2015-04-17
+
+== ISO 19115-3 Codelist Report
+
+=== Codelists from the Metadata for Data Quality (mdq) Namespace
+
+[%unnumered]
+[options=header,cols=2]
+|===
+| *Scope* | Codelists from the Metadata for Data Quality (mdq) Namespace
+
+| *Field of Application* | ISO TC211 Metadata Standards
+| *Version (Date)* | 1.0 ()
+|===
+
+=== DQ_EvaluationMethodTypeCode ( DQ_EvaluationMethodTypeCode )
+
+Description:: description of the evaluation method and procedure applied
+
+[%unnumered]
+[options=header,cols=2]
+|===
+| Entry | Definition
+
+| DQ_EvaluationMethodTypeCode_directInternal | method of evaluating the quality of a
+dataset based on inspection of items within the dataset, where all data required is
+internal to the dataset being evaluated
+| DQ_EvaluationMethodTypeCode_directExternal | method of evaluating the quality of a
+dataset based on inspection of items within the dataset, where reference data external
+to the dataset being evaluated is required
+| DQ_EvaluationMethodTypeCode_indirect | method of evaluating the quality of a dataset
+based on external knowledge
+|===

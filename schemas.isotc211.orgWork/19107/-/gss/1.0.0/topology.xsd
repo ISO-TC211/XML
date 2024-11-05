@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>computational topology,
+combinatorial topology,
+algebraic topology
+
+topological concepts, structures and algebra that aid, enhance or define operations usually performed in computational geometry</xs:documentation>
+	</xs:annotation>
+</xs:schema>

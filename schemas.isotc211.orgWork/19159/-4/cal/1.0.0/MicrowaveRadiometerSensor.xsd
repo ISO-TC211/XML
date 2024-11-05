@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    elementFormDefault="qualified" 
+    targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    version="1.0.0">
+    <include schemaLocation="cal.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+ 
+    <element name="CA_CalibrationValidation" type="cal:CA_CalibrationValidation_Type"
+        id="ISO19159-4.1" substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Root entity that defines information about calibration.</documentation>
+        </annotation>
+    </element>
+
+    <complexType name="CA_CalibrationValidation_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+                <sequence>
+                    <element name="calibrationType" type="cal:CA_CalibrationType_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.2_ISO19159-4.CA_CalibrationType">
+                        <annotation>
+                            <documentation>Characterization of the calibration coded with the data
+                                type CA_CalibrationType.</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="CA_CalibrationValidation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_CalibrationValidation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+
+    <element name="CA_MicrowaveRadiometerSensor" substitutionGroup="cal:CA_CalibrationValidation"
+        type="cal:CA_MicrowaveRadiometerSensor_Type" id="ISO19159-4.3">
+        <annotation>
+            <documentation>Top-level class for all calibration information of microwave radiometer
+                sensors.</documentation>
+        </annotation>
+    </element>
+
+    <complexType name="CA_MicrowaveRadiometerSensor_Type">
+        <complexContent>
+            <extension base="cal:CA_CalibrationValidation_Type">
+                <sequence>
+                    <element name="observationType" type="cal:CA_ObservationType_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.4_ISO19159-4.CA_ObservationType">
+                        <annotation>
+                            <documentation>Observation type of the microwave radiometer
+                                sensor.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="receiverType" type="cal:CA_ReceiverType_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.5_ISO19159-4.CA_ReceiverType">
+                        <annotation>
+                            <documentation>Type of the microwave radiometer
+                                receiver.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="TACalibration" type="cal:CA_TACalibration_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.6_ISO19159-4.53">
+                        <annotation>
+                            <documentation>TA calibration.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="antennaPatternCalibration"
+                        type="cal:CA_AntennaPatternCalibration_PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.7_ISO19159-4.11">
+                        <annotation>
+                            <documentation>Antenna pattern calibration.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="geometricPosition" type="cal:CA_GeometricPosition_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.8_ISO19159-4.47">
+                        <annotation>
+                            <documentation>Geometric positioning.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="auxiliaryData" type="cal:CA_AuxiliaryData_PropertyType"
+                        minOccurs="1" maxOccurs="1" id="ISO19159-4.9_ISO19159-4.21">
+                        <annotation>
+                            <documentation>Auxiliary Data including SCF and satellite attachment
+                                information.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="TBCalibrationValidation"
+                        type="cal:CA_TBCalibrationValidation_PropertyType" minOccurs="1"
+                        maxOccurs="1" id="ISO19159-4.10_ISO19159-4.70">
+                        <annotation>
+                            <documentation>TB calibration and validation.</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="CA_MicrowaveRadiometerSensor_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_MicrowaveRadiometerSensor"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+</schema>

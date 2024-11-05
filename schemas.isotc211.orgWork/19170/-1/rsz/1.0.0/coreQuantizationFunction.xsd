@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/2.0"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:rsz="https://schemas.isotc211.org/19170/-1/rsz/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	targetNamespace="https://schemas.isotc211.org/19170/-1/rsz/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19107/-/gss/2.0" schemaLocation="../../../../19107/-/gss/2.0.0/gss.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:include schemaLocation="zonalRSId.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="DataAssignmentProcess_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rsz:DataAssignmentProcess"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DataAssignmentProcess" type="rsz:DataAssignmentProcess_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DataAssignmentProcess_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The class DataAssignmentProcess is a  generalization of OM_Process, which in turn is an instance of the «metaclass» GF_FeatureType  (ISO 19109:2007), which therefore represents a feature type. DataAssignmentProcess is abstract, and has no attributes, operations or associations. It serves as the base class for DataAssignment processes. The purpose of a data assignment process is to generate an assignment result. An instance of DataAssignmentProcess is often a data import function to import data from a pre-existing spatial dataset, but as in OM_Process "it may also be an instrument or sensor, a human observer, a simulator, or a process or algorithm applied to more primitive results used as inputs".[Source ISO 19156:2011, clause 7.2.3]</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gml:ProcedureType">
+				<xs:sequence>
+					<xs:element name="cellContext" type="QuantizationContext" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Roll that cell provides in this DataAssignmentProcess.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="QuantizationFunctions" type="QuantizationFunctions" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="DataAssignmentProcess_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rsz:DataAssignmentProcess"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="DGG_Observation" type="rsz:DGG_Observation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="DGG_Observation_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>DGG_Observation is an abstract class holding ZonalIdentifier, OM_Observation tuples.
+In the context of Quantization, DGG_Observation holds records of Observations made with DataAssignmentProcess in assigning values to cells.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="field" type="OM_Observation_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>values that were observed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identifier" type="ZonalIdentifier_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>cells that were observed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="data" type="OM_Observation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="QuantizationContext_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rsz:QuantizationContext"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="QuantizationContext" type="rsz:QuantizationContext_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="QuantizationContext_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>ObservationContext for this DataAssignmentProcess.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ObservationContext">
+				<xs:sequence>
+					<xs:element name="role" type="Quantization_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Defines the role or roles that cells play in the quantization.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="QuantizationFunctions_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="rsz:QuantizationFunctions"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="QuantizationFunctions" type="rsz:QuantizationFunctions_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="QuantizationFunctions_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Process for quantizing external data by using a cell's geometry to sample external data and assign the results to zonal identifiers.
+The quantization code list identifies different potential roles for the cell geometry in the quantization process.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cellContext" type="Quantization_PropertyType" minOccurs="1" maxOccurs="6">
+				<xs:annotation>
+					<xs:documentation>List of roles that cell geometry is to be used in associated DataAssignmentProcesses.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

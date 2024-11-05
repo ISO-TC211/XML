@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+  xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+  xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.1"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.1/rbc.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.2.1/mac.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-1/mdq/1.0.1/mdq.xsd"/>
+    <include schemaLocation="../../../../19130/-3/smi/1.1.1/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.1/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.1/spatialElements.xsd"/>
+
+    <!-- ==================== 19130-1  ==================== -->
+    <!-- ==================== Position ==================== -->
+    <complexType name="SD_Position_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Position"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Position" type="smi:SD_Position_Type" substitutionGroup="sml:PhysicalComponent"/>
+    <complexType name="SD_Position_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentType">
+                <sequence>
+                    <element name="navigationalConfidence" type="mdq:Abstract_PositionalAccuracy_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>accuracy of position</documentation>
+                        </annotation>
+                    </element>
+                    <element name="timeOfMeasurement" type="gco:DateTime_PropertyType">
+                        <annotation>
+                            <documentation>time when the position is measured</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_EarthMeasuredLocation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_EarthMeasuredLocation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_EarthMeasuredLocation" type="smi:SD_EarthMeasuredLocation_Type" substitutionGroup="smi:SD_Position">
+        <annotation>
+            <documentation>location relative to the Earth</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_EarthMeasuredLocation_Type">
+        <complexContent>
+            <extension base="smi:SD_Position_Type">
+                <sequence>
+                    <element name="position" type="gml:DirectPositionType">
+                        <annotation>
+                            <documentation>position of the sensor or platform in Earth coordinates</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_OrbitMeasuredLocation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_OrbitMeasuredLocation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_OrbitMeasuredLocation" type="smi:SD_EarthMeasuredLocation_Type" substitutionGroup="smi:SD_Position">
+        <annotation>
+            <documentation>location given by position in orbit</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_OrbitMeasuredLocation_Type">
+        <complexContent>
+            <extension base="smi:SD_Position_Type">
+                <sequence>
+                    <element name="argumentOfPerigee" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle in the orbital plane from the ascending node to the
+                                point of perigee, in the direction of spacecraft
+                                motion</documentation>
+                        </annotation>
+                    </element>
+                    <element name="bStarDrag" type="gco:Real_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>rate of change of the mean motion</documentation>
+                        </annotation>
+                    </element>
+                    <element name="eccentricity" type="gco:Real_PropertyType">
+                        <annotation>
+                            <documentation>eccentricity of the spacecraft orbit</documentation>
+                        </annotation>
+                    </element>
+                    <element name="epoch" type="gco:DateTime_PropertyType">
+                        <annotation>
+                            <documentation>time for which the values provided for other orbital
+                                elements are true</documentation>
+                        </annotation>
+                    </element>
+                    <element name="inclination" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle at which the orbit plane crosses the equatorial
+                                plane</documentation>
+                        </annotation>
+                    </element>
+                    <element name="meanAnomaly" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle between prigee and the position of a hypothetical
+                                body that has the same orbital period as the real satellite but
+                                travles at a constant anguar speed</documentation>
+                        </annotation>
+                    </element>
+                    <element name="meanMotion" type="gco:Real_PropertyType">
+                        <annotation>
+                            <documentation>angle between perigee and the position of a hypothetical
+                                body that has the same orbital period as the real satellite but
+                                travels at a constant angular speed</documentation>
+                        </annotation>
+                    </element>
+                    <element name="perigeePassageTime" type="gco:DateTime_PropertyType">
+                        <annotation>
+                            <documentation>any one date and time at which the spacecraft passes
+                                perigee</documentation>
+                        </annotation>
+                    </element>
+                    <!-- The type should reference TM_Duration in ISO 19108 -->
+                    <element name="period" type="gco:TM_PeriodDuration_PropertyType">
+                        <annotation>
+                            <documentation>spacecraft orbital period</documentation>
+                        </annotation>
+                    </element>
+                    <element name="referenceCRS" type="rbc:CRS_PropertyType" minOccurs="0"/>
+                    <element name="revNumber" type="gco:Integer_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>ordinal number of the satellite revolution at the time
+                                given by epoch</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rightAscensionAscendingNode" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle eastward on the equatorial plane from the vernal
+                                equinox to the orbit ascending node</documentation>
+                        </annotation>
+                    </element>
+                    <element name="semiMajorAxis" type="gco:Length_PropertyType">
+                        <annotation>
+                            <documentation>length of the semimajor axis of the spacecraft
+                                orbit</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <!-- ==================== Attitude ==================== -->
+    <complexType name="SD_Attitude_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Attitude"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Attitude" type="smi:SD_Attitude_Type" substitutionGroup="sml:PhysicalComponent" >
+        <annotation>
+            <documentation>attitude information</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Attitude_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_AngleAttitude_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_AngleAttitude"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_AngleAttitude" type="smi:SD_AngleAttitude_Type" substitutionGroup="smi:SD_Attitude">
+        <annotation>
+            <documentation>attitude information as three angles of rotation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_AngleAttitude_Type">
+        <complexContent>
+            <extension base="smi:SD_Attitude_Type">
+                <sequence>
+                    <element name="rotatedAxes" type="gco:Boolean_PropertyType">
+                        <annotation>
+                            <documentation>indication whether or not the axes are rotated. True
+                                equals to rotated</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rotationAngleX" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle of the rotation around the external x axis, often
+                                called roll or abbreviated as “ω”.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rotationAngleY" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle of the rotation around the external y axis often
+                                called pitch or abbreviated as “φ”.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rotationAngleZ" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>angle of the rotation around the external y axis often
+                                called pitch or abbreviated as “κ”.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rotationSequence" type="smi:SD_RotationSequence_PropertyType">
+                        <annotation>
+                            <documentation>sequence of rotations about the axes</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_MatrixAttitude_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_MatrixAttitude"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_MatrixAttitude" type="smi:SD_MatrixAttitude_Type" substitutionGroup="smi:SD_Attitude">
+        <annotation>
+            <documentation>rotation matrix that describes attitude</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_MatrixAttitude_Type">
+        <complexContent>
+            <extension base="smi:SD_Attitude_Type">
+                <sequence>
+                    <element ref="smi:matrixElements"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="matrixElements" type="smi:attitudeMatrix_Type"/>
+    <complexType name="attitudeMatrix_Type">
+        <sequence>
+            <element name="r1c1" type="gco:Real_PropertyType">
+                <annotation>
+                    <documentation>r means row and c means column</documentation>
+                </annotation>
+            </element>
+            <element name="r1c2" type="gco:Real_PropertyType"/>
+            <element name="r1c3" type="gco:Real_PropertyType"/>
+            <element name="r2c1" type="gco:Real_PropertyType"/>
+            <element name="r2c2" type="gco:Real_PropertyType"/>
+            <element name="r2c3" type="gco:Real_PropertyType"/>
+            <element name="r3c1" type="gco:Real_PropertyType"/>
+            <element name="r3c2" type="gco:Real_PropertyType"/>
+            <element name="r3c3" type="gco:Real_PropertyType"/>
+        </sequence>
+    </complexType>
+
+    <!-- ==================== Dynamics ==================== -->
+    <complexType name="SD_Dynamics_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Dynamics"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Dynamics" type="smi:SD_Dynamics_Type" substitutionGroup="sml:PhysicalComponent">
+        <annotation>
+            <documentation>motion of a body</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Dynamics_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentType">
+                <sequence>
+                    <element name="acceleration" minOccurs="0" type="swe:QualityPropertyType">
+                        <annotation>
+                            <documentation>rate of change of velocity of the body</documentation>
+                        </annotation>
+                    </element>
+                    <element name="angularAcceleration" minOccurs="0" type="swe:QualityPropertyType">
+                        <annotation>
+                            <documentation>rate of change of the angular velocity of the
+                                body</documentation>
+                        </annotation>
+                    </element>                  
+                    <element name="angularVelocity" minOccurs="0" type="swe:QuantityPropertyType">
+                        <annotation>
+                            <documentation>angular velocity of the body</documentation>
+                        </annotation>
+                    </element>
+                    <element name="attitude" type="smi:SD_Attitude_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>orientation of the body</documentation>
+                        </annotation>
+                    </element>   
+                    <element name="dateTime" type="gco:DateTime_PropertyType">
+                        <annotation>
+                            <documentation>date and time at which attitude and motion information are valid</documentation>
+                        </annotation>
+                    </element>
+                    <element name="velocity" minOccurs="0" type="swe:QuantityPropertyType">
+                        <annotation>
+                            <documentation>linear velocity of the body</documentation>
+                        </annotation>
+                    </element>                          
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_PlatformDynamics_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_PlatformDynamics"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_PlatformDynamics" type="smi:SD_PlatformDynamics_Type" substitutionGroup="smi:SD_Dynamics">
+        <annotation>
+            <documentation>directions of platform travel and pointing</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_PlatformDynamics_Type">
+        <complexContent>
+            <extension base="smi:SD_Dynamics_Type">
+                <sequence>
+                    <element name="trueHeading" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>actual direction in which the platform is travelling
+                                relative to North</documentation>
+                        </annotation>
+                    </element>
+                    <element name="yaw" type="gco:Angle_PropertyType">
+                        <annotation>
+                            <documentation>offset between the true heading and the direction of the
+                                platform positive x-axis</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <!-- ==================== Position and Orientation ==================== -->
+    <complexType name="SD_PositionAndOrientation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_PositionAndOrientation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_PositionAndOrientation" type="smi:SD_PositionAndOrientation_Type" substitutionGroup="sml:PhysicalSystem">
+        <annotation>
+            <documentation>position and orientation of axes of a coordinate system of a body
+                relative to an external coordinate system</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_PositionAndOrientation_Type">
+        <complexContent>
+            <extension base="sml:PhysicalSystemType">
+                <sequence>
+                    <element name="CRS" type="rbc:CRS_PropertyType">
+                        <annotation>
+                            <documentation>coordinate reference system on which the measures are taken</documentation>
+                        </annotation>
+                    </element>
+                    <element name="dynamics" type="smi:SD_Dynamics_PropertyType">
+                        <annotation>
+                            <documentation>position and orientation of axes of a coordinate system
+                                of a body relative to an external coordinate system</documentation>
+                        </annotation>
+                    </element>
+                    <element name="offset" type="swe:VectorPropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>displacement between origin of the coordinate system of a body and origin of external coordinate system</documentation>
+                        </annotation>
+                    </element>
+                    <element name="position" type="smi:SD_Position_PropertyType">
+                        <annotation>
+                            <documentation>position of a body</documentation>
+                        </annotation>
+                    </element>
+                    <!--<choice minOccurs="0">
+                        <element name="position_earth" type="smi:SD_EarthMeasuredLocation_PropertyType">
+                            <annotation>
+                                <documentation>position of a body using EarthMeasuredLocation
+                                    type</documentation>
+                            </annotation>
+                        </element>
+                        <element name="position_orbit" type="smi:SD_OrbitMeasuredLocation_PropertyType">
+                            <annotation>
+                                <documentation>position of a body using orbitMeasuredLocation
+                                    type</documentation>
+                            </annotation>
+                        </element>
+                    </choice>-->
+                    <element name="mountingObject" type="smi:SD_PositionAndOrientation_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>description of relative spatial relationship between a body and another body upon which the latter is mounted</documentation>
+                        </annotation>
+                    </element>
+                    <element name="platform" type="smi:SD_PlatformParameters_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation> 
+                                description of the platform on which an object is mounted</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_PlatformParameters_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_PlatformParameters"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_PlatformParameters" type="smi:SD_PlatformParameters_Type">
+        <annotation>
+            <documentation>information about motion and configuration of platform</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_PlatformParameters_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentPropertyType">
+                <sequence>
+                    <element name="dynamics" type="smi:SD_PlatformDynamics_PropertyType" maxOccurs="unbounded">
+                        <annotation>
+                            <documentation>parameters describing the dynamic behaviour of the platform</documentation>
+                        </annotation>
+                    </element>
+                    <element name="observedPosition" type="smi:SD_Position_PropertyType">
+                        <annotation>
+                            <documentation>position of the platform at the location of the position
+                                measurement instrument on the platform</documentation>
+                        </annotation>
+                    </element>
+                    <element name="offsetOfINS" type="swe:VectorPropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>vector from GNSS to INS. If platform geolocation is provided by INS, this lever arm is unnecessary</documentation>
+                        </annotation>
+                    </element>
+                    <element name="positionObservationOffset" type="swe:VectorPropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>offset from the origin of the platform CRS to the position where the position measurement instrument is mounted</documentation>
+                        </annotation>
+                    </element>                                        
+                    <element name="platformIdentification" type="mac:MI_Platform_PropertyType">
+                        <annotation>
+                            <documentation>identification information of the platform</documentation>
+                        </annotation>
+                    </element>
+                    <!-- ============ 19130-2 ============= -->
+                    <choice>
+                        <element name="aerialTriangulation" minOccurs="0" maxOccurs="unbounded" type="smi:SE_AerialTriangulation_PropertyType"/>
+                    </choice>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    
+ </schema>

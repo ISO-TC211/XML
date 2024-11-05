@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="LT_LocationTransformationService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LT_LocationTransformationService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LT_LocationTransformationService" type="lbs:LT_LocationTransformationService_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LT_LocationTransformationService_Type">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="old-ZonalQuery.xsd"/>
+	<xs:element name="old: CellQuery" type="old: CellQuery"/>
+	<xs:complexType name="old: CellQuery" abstract="true">
+		<xs:annotation>
+			<xs:documentation>cellQuery implements zoneQuery in the context of a DGGS.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="old: ZoneQuery">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

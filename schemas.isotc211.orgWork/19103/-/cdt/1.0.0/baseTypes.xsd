@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:swe="http://www.opengis.net/swe/2.0"
+	xmlns:cdt="https://schemas.isotc211.org/19103/-/cdt/1.0" 
+	targetNamespace="https://schemas.isotc211.org/19103/-/cdt/1.0" 
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="1.2.0">
+	<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+	</xs:annotation>
+	<!-- ================================== Imports ================================== -->
+	<xs:import namespace="http://www.w3.org/1999/xlink"
+		schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0"
+		schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0"
+		schemaLocation="http://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
+
+	<!-- ########################################################################### -->
+	<!-- =========================================================================== -->
+	<!-- ========================= IM_Object: abstract Root ============================= -->
+	<xs:simpleType name="Boolean">
+		<xs:restriction base="xs:boolean"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="String">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Integer">
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="NegativeInteger">
+		<xs:restriction base="xs:integer">
+		<xs:pattern value="-[0-9]+|[0-9]+..[0-9\*]"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PosativeInteger">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="-[0-9]+|[0-9]+..[0-9\*]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Date">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Datetime">
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Natural_Range">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]+|[0-9]+..[0-9\*]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Phone_Number">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--================= Type ===================-->
+	<xs:complexType name="AbstractObject_Type" abstract="true">
+		<xs:sequence/>
+		<xs:attributeGroup ref="cdt:ObjectIdentification"/>
+	</xs:complexType>
+	<!--================= Element =================-->
+	<xs:element name="AbstractObject" type="cdt:AbstractObject_Type" abstract="true"/>
+	<!-- ========================================================================== -->
+	<!-- ====================== Reference of a resource =============================== -->
+	<!--The following attributeGroup 'extends' the GML  gml:AssociationAttributeGroup-->
+	<xs:attributeGroup name="ObjectReference">
+		<xs:attributeGroup ref="xlink:simpleAttrs"/>
+		<xs:attribute name="uuidref" type="xs:string"/>
+	</xs:attributeGroup>
+	<!--================== NULL ====================-->
+	<xs:attribute name="nilReason" type="cdt:NilReasonType"/>
+
+	<xs:simpleType name="NilReasonType">
+		<xs:annotation>
+			<xs:documentation>copied from gml32:NilReasonType. This Type defines a content model that allows recording of an 
+				explanation for a void value or other exception.
+				gml:NilReasonType is a union of the following enumerated values:
+				-	inapplicable- there is no value
+				-	missing- the correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist
+				-	template- the value will be available later
+				-	unknown- the correct value is not known to, and not computable by, the sender of this data. However, a correct value probably exists
+				-	withheld- the value is not divulged
+				-	other:text - other brief explanation, where text is a string of two or more characters with no included spaces
+				and
+				-	xs:anyURI which should refer to a resource which describes the reason for the exception
+				A particular community may choose to assign more detailed semantics to the standard values provided. Alternatively, the URI method enables a specific or more complete explanation for the absence of a value to be provided elsewhere and indicated by-reference in an instance document.
+				gml:NilReasonType is used as a member of a union in a number of simple content types where it is necessary to permit a value from the NilReasonType union as an alternative to the primary type.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="cdt:NilReasonEnumeration xs:anyURI"/>
+	</xs:simpleType>
+	<xs:simpleType name="NilReasonEnumeration">
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="inapplicable"/>
+					<xs:enumeration value="missing"/>
+					<xs:enumeration value="template"/>
+					<xs:enumeration value="unknown"/>
+					<xs:enumeration value="withheld"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="other:\w{2,}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!--=============== PropertyType =================-->
+	<xs:complexType name="ObjectReference_PropertyType">
+		<xs:sequence/>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================================================================== -->
+	<!-- ====================== Identification of a resource ============================== -->
+	<xs:attributeGroup name="ObjectIdentification">
+		<xs:attribute name="id" type="xs:ID"/>
+		<xs:attribute name="uuid" type="xs:string"/>
+	</xs:attributeGroup>
+	<!-- ========================================================================== -->
+
+	<!-- ====================== The CodeList prototype ================================= -->
+	<!--It is used to refer to a specific codeListValue in a register-->
+	<!--================= Type ==================-->
+	<xs:complexType name="CodeListValue_Type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="codeList" type="xs:anyURI" use="required"/>
+				<xs:attribute name="codeListValue" type="xs:anyURI" use="required"/>
+				<xs:attribute name="codeSpace" type="xs:anyURI"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ========================================================================== -->
+	<!-- ========================== The isoType attribute ============================== -->
+	<xs:attribute name="isoType" type="xs:string"/>
+
+	<!-- moved from 19139 basicTypes.xsd -->
+	<!-- ########################################################################### -->
+	<!-- ########################################################################### -->
+	<!-- ================================== Classes ================================= -->
+	<!-- =========================================================================== -->
+	<xs:complexType name="String_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:String"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="String" type="xs:string"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="String_Type">
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="NameSpace_Type">
+		<xs:annotation>
+			<xs:documentation>A TypeName is a LocalName that references either a recordType or object type in some form of schema. The stored value "aName" is the returned value for the "aName()" operation. This is the types name.  - For parsing from types (or objects) the parsible name normally uses a "." navigation separator, so that it is of the form  [class].[member].[memberOfMember]. ...)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type">
+				<xs:attribute name="isGlobal" type="xs:boolean" use="optional"/>
+				<xs:attribute name="acceptableClasssList" type="xs:anySimpleType" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="NameSpace" type="cdt:NameSpace_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="NameSpace_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:NameSpace"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="TypeName_Type">
+		<xs:annotation>
+			<xs:documentation>A TypeName is a LocalName that references either a recordType or object type in some form of schema. The stored value "aName" is the returned value for the "aName()" operation. This is the types name.  - For parsing from types (or objects) the parsible name normally uses a "." navigation separator, so that it is of the form  [class].[member].[memberOfMember]. ...)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="TypeName" type="cdt:TypeName_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="TypeName_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:TypeName"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MemberName_Type">
+		<xs:annotation>
+			<xs:documentation>A MemberName is a LocalName that references either an attribute slot in a record or  recordType or an attribute, operation, or association role in an object instance or  type description in some form of schema. The stored value "aName" is the returned value for the "aName()" operation.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MemberName" type="cdt:MemberName_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MemberName_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:MemberName"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="Multiplicity_Type">
+		<xs:annotation>
+			<xs:documentation>Use to represent the possible cardinality of a relation. Represented by a set of simple multiplicity ranges.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Multiplicity" type="cdt:Multiplicity_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Multiplicity_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Multiplicity"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="MultiplicityRange_Type">
+		<xs:annotation>
+			<xs:documentation>A component of a multiplicity, consisting of an non-negative lower bound, and a potentially infinite upper bound.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MultiplicityRange" type="cdt:MultiplicityRange_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MultiplicityRange_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:MultiplicityRange"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+		<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="Boolean" type="xs:boolean"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Boolean_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Boolean"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+
+	<!-- =========================== Date & DateTime ================================= -->
+	<!--=============================================-->
+	<xs:element name="DateTime" type="xs:dateTime"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="DateTime_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:DateTime"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:simpleType name="Date_Type">
+		<xs:union memberTypes="xs:date xs:gYearMonth xs:gYear"/>
+	</xs:simpleType>
+	<!-- ........................................................................ -->
+	<xs:element name="Date" type="cdt:Date_Type" nillable="true"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Date_PropertyType">
+		<xs:choice minOccurs="0">
+			<xs:element ref="cdt:Date"/>
+			<xs:element ref="cdt:DateTime"/>
+		</xs:choice>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================================================================== -->
+	<!-- =========================== Number basic type =============================== -->
+	<!--=======================================================-->
+	<xs:complexType name="Number_PropertyType">
+		<xs:choice minOccurs="0">
+			<xs:element ref="cdt:Real"/>
+			<xs:element ref="cdt:Decimal"/>
+			<xs:element ref="cdt:Integer"/>
+		</xs:choice>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="Decimal" type="xs:decimal"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Decimal_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Decimal"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="Real" type="xs:double"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Real_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Real"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="Integer" type="xs:integer"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Integer_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Integer"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================================================================== -->
+	<!-- ============================= UnlimitedInteger ================================ -->
+	<!--NB: The encoding mechanism below is based on the use of XCPT (see the usage of xsi:nil in XML instance).-->
+	<!--================= Type ==================-->
+	<xs:complexType name="UnlimitedInteger_Type">
+		<xs:simpleContent>
+			<xs:extension base="xs:nonNegativeInteger">
+				<xs:attribute name="isInfinite" type="xs:boolean"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="UnlimitedInteger" type="cdt:UnlimitedInteger_Type" nillable="true"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="UnlimitedInteger_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:UnlimitedInteger"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================================================================== -->
+	<!-- ========================= Record & RecordType ============================== -->
+	<!--================= Record ==================-->
+	<xs:element name="Record" type="cdt:Record_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Record_Type">
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Record_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Record"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================= Field ============================== -->
+	<xs:element name="Field" type="cdt:Field_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Field_Type">
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Field_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Field"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================= RecordType ============================== -->
+	<xs:element name="RecordType" type="cdt:RecordType_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="RecordType_Type">
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="RecordType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:RecordType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================= FieldType ============================== -->
+	<xs:element name="FieldType" type="cdt:FieldType_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="FieldType_Type">
+		<xs:complexContent>
+			<xs:extension base="cdt:AbstractObject_Type"> </xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="FieldType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:FieldType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="cdt:ObjectReference"/>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ========================================================================== -->
+	<!-- =========================== Binary basic type ================================ -->
+	<!--NB: this type is not declared in 19103 but used in 19115. -->
+	<!--================= Type ==================-->
+	<xs:complexType name="Binary_Type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="src" type="xs:anyURI"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Binary" type="cdt:Binary_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Binary_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Binary"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!--================================================-->
+	<!--================================================-->
+	<!-- ================== Measure and the Measure substitution group===================== -->
+	<!-- ........................................................................ -->
+	<!--================= Type ===================-->
+	<xs:complexType name="MeasureType">
+		<xs:annotation>
+			<xs:documentation>Copied from gml32:MeasureType, which supports recording an amount encoded as a value of XML Schema double, together with a units of measure indicated by an attribute uom, short for "units Of measure". The value of the uom attribute identifies a reference system for the amount, usually a ratio or interval scale. Namespace changed to gco</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:double">
+				<xs:attribute name="uom" type="cdt:UomIdentifierType" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- SMR handcraft UomIdentifier to implement 19103:2015 interface; this will allow
+	reducing dependencies on GML for elements using measures with a separate unit of measurement element-->
+	<!--================= Element =================-->
+	<xs:element name="UomIdentifier" type="cdt:UomIdentifierType"/>
+	<!--================= Type ===================-->
+	<xs:simpleType name="UomSymbol">
+		<xs:annotation>
+			<xs:documentation>This type specifies a character string of length at least one, and restricted such that it must not contain any of the following characters: ":" (colon), " " (space), (newline), (carriage return), (tab). This allows values corresponding to familiar abbreviations, such as "kg", "m/s", etc. 
+				It is recommended that the symbol be an identifier for a unit of measure as specified in the "Unified Code of Units of Measure" (UCUM) (http://aurora.regenstrief.org/UCUM). This provides a set of symbols and a grammar for constructing identifiers for units of measure that are unique, and may be easily entered with a keyboard supporting the limited character set known as 7-bit ASCII. ISO 2955 formerly provided a specification with this scope, but was withdrawn in 2001. UCUM largely follows ISO 2955 with modifications to remove ambiguities and other problems.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^: \n\r\t]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UomURI">
+		<xs:annotation>
+			<xs:documentation>This type specifies a URI, restricted such that it must start with one of the following sequences: "#", "./", "../", or a string of characters followed by a ":". These patterns ensure that the most common URI forms are supported, including absolute and relative URIs and URIs that are simple fragment identifiers, but prohibits certain forms of relative URI that could be mistaken for unit of measure symbol . 
+				NOTE	It is possible to re-write such a relative URI to conform to the restriction (e.g. "./m/s").
+				In an instance document, on elements of type gml:MeasureType the mandatory uom attribute shall carry a value corresponding to either 
+				-	a conventional unit of measure symbol,
+				-	a link to a definition of a unit of measure that does not have a conventional symbol, or when it is desired to indicate a precise or variant definition.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="([a-zA-Z][a-zA-Z0-9\-\+\.]*:|\.\./|\./|#).*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UomIdentifierType">
+		<xs:annotation>
+			<xs:documentation>The simple type gml:UomIdentifer defines the syntax and value space of the unit of measure identifier.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="cdt:UomSymbol cdt:UomURI"/>
+	</xs:simpleType>
+	<!-- ........................................................................ -->
+	<xs:element name="UomArea" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomAngle" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomAngularAcceleration" type="cdt:UomIdentifierType"
+		substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomSpeed" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomVolume" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomScale" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomVelocity" type="cdt:UomIdentifierType"
+		substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="Uomlength" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomAcceleration" type="cdt:UomIdentifierType"
+		substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomAngularSpeed" type="cdt:UomIdentifierType"
+		substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomCurrency" type="cdt:UomIdentifierType"
+		substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomTime" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<xs:element name="UomWeight" type="cdt:UomIdentifierType" substitutionGroup="cdt:UomIdentifier"/>
+	<!-- ============ UomIdentifier Property =================== -->
+	<!-- implementing interface defined in ISO19103:2015 -->
+	<xs:complexType name="UomIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:UomIdentifier"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+
+
+	<!--================= Element =================-->
+	<xs:element name="Measure" type="cdt:MeasureType"/>
+	<!-- ============ Property =================== -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="Measure_PropertyType">
+		<!-- used in spatialRepresentation.xsd, msr:resolution -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Measure"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ============Substitutions for measure ==================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="Length" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Length_PropertyType">
+		<!-- not used in schema 19115-3; 
+			Distance, in substitution group for length, is used (see below) -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Length"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- Substitution for Measure.Length ================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="Distance" type="cdt:MeasureType" substitutionGroup="cdt:Length"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Distance_PropertyType">
+		<!-- used in identification.xsd mri:distance and mri:vertical properties
+			used in lineageImagery.xsd mrl:scanningResolution and mrl:groundResolution -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Distance"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Angle" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Angle_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Angle"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<!-- ........................................................................ -->
+	<xs:element name="TimeMeasure" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="TimeMeasure_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:TimeMeasure"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Volume" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Volume_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Volume"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Weight" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Weight_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Weight"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Area" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Area_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Area"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="Currency" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Currency_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Currency"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="AngularSpeed" type="cdt:MeasureType" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="AngularSpeed_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:AngularSpeed"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<!-- ........................................................................ -->
+	<xs:element name="Speed" type="cdt:Speed_Type" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Speed_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Speed"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Speed_Type">
+		<xs:simpleContent>
+			<xs:extension base="cdt:MeasureType">
+				<xs:attribute name="time" type="cdt:UomIdentifierType" use="required"/>
+				<xs:attribute name="distance" type="cdt:UomIdentifierType" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. -->
+	<xs:element name="Scale" type="cdt:Scale_Type" substitutionGroup="cdt:Measure"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Scale_PropertyType">
+		<!-- used in identification.xsd mri:angularDistance-->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:Scale"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:complexType name="Scale_Type">
+		<xs:simpleContent>
+			<xs:extension base="cdt:MeasureType">
+				<xs:attribute name="sourceUnits" type="cdt:UomIdentifierType" use="required"/>
+				<xs:attribute name="targetUnits" type="cdt:UomIdentifierType" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. -->
+
+	<xs:element name="DirectedMeasure" type="cdt:DirectedMeasure_Type"/>
+	<xs:complexType name="DirectedMeasure_Type">
+		<xs:sequence>
+			<xs:element name="value" type="swe:VectorType"/>
+		</xs:sequence>
+		<xs:attribute name="uom" type="cdt:UomIdentifierType" use="required"/>
+	</xs:complexType>
+
+	<xs:element name="Velocity" type="cdt:DirectedMeasure_Type"
+		substitutionGroup="cdt:DirectedMeasure"/>
+	<xs:element name="AngularVelocity" type="cdt:DirectedMeasure_Type"
+		substitutionGroup="cdt:DirectedMeasure"/>
+	<xs:element name="Acceleration" type="cdt:DirectedMeasure_Type"
+		substitutionGroup="cdt:DirectedMeasure"/>
+	<xs:element name="AngularAcceleration" type="cdt:DirectedMeasure_Type"
+		substitutionGroup="cdt:DirectedMeasure"/>
+
+	<!-- =========================================================================== -->
+	<!-- ........................................................................ -->
+	<xs:element name="AbstractGenericName" type="cdt:CodeType" abstract="true"/>
+	<!-- defines substitution group for elements that have a gco:codeSpace attribute -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="CodeType">
+		<xs:annotation>
+			<xs:documentation>gml:CodeType is a generalized type to be used for a term, keyword or name. It adds a XML attribute codeSpace to a term, where the value of the codeSpace attribute (if present) shall indicate a dictionary, thesaurus, classification scheme, authority, or pattern for the term.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="codeSpace" type="xs:anyURI"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="GenericName_PropertyType">
+		<!-- used in catalogues.xsd cat:identifier
+			used in metadataTransfer.xsd mdt:featureTypes
+			used in content.xsd mrc:featureTypeName
+			used in serviceInformation.xsd srv:serviceType -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:AbstractGenericName"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="ScopedName" type="cdt:CodeType" substitutionGroup="cdt:AbstractGenericName"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="ScopedName_PropertyType">
+		<!-- used in serviceInformation.xsd srv:scopedName property -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:ScopedName"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+
+	<!-- =========================================================================== -->
+	<!-- ......move from gmw because it has no dependency on gml ................... -->
+	<xs:element name="TM_PeriodDuration" type="xs:duration"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="TM_PeriodDuration_PropertyType">
+		<!-- used in maintenance.xsd mmi:userDefinedMaintenanceFrequency
+			used in distribution.xsd mrd:transferFrequency
+			used in identification.xsd mri:temporalResolution.  all of these properties
+			are optional. -->
+		<xs:sequence minOccurs="0">
+			<xs:element ref="cdt:TM_PeriodDuration"/>
+		</xs:sequence>
+		<xs:attribute ref="cdt:nilReason"/>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+
+	<!--==============End================-->
+</xs:schema>

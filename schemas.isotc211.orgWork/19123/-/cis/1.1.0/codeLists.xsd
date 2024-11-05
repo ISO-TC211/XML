@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  targetNamespace="http://www.opengis.net/gmlcov/1.0" 
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" 
+    version="3.1.0" 
+    xml:lang="en"
+    >
+    <!-- ============================================================== -->
+    <!-- Includes and imports                                           -->
+    <!-- ============================================================== -->
+     <include schemaLocation="../../../../19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
+     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    
+    <!-- ============================================================== -->
+    <!-- Elements and types                                             -->
+    <!-- ============================================================== -->
+    <complexType name="CV_CommonPointRuleType_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="gmlcov:CV_CommonPointRule"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="CV_CommonPointRule" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+        <element name="commonPointRule" type="gmlcov:CV_CommonPointRuleType"/>
+        <simpleType name="CV_CommonPointRuleType">
+            <restriction base="string">
+                <enumeration value="average"/>
+                <enumeration value="low"/>
+                <enumeration value="high"/>
+                <enumeration value="all"/>
+                <enumeration value="start"/>
+                <enumeration value="end"/>
+            </restriction>
+        </simpleType>
+        <!--  ...................................................................................
+   -->
+        <complexType name="CV_InterpolationMethod_PropertyType">
+            <sequence minOccurs="0">
+                <element ref="gmlcov:CV_InterpolationMethod"/>
+            </sequence>
+            <attribute ref="gco:nilReason"/>
+        </complexType>
+        <element name="CV_InterpolationMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+            <element name="interpolationType" type="gmlcov:CV_InterpolationMethod_Type"/>
+            <simpleType name="CV_InterpolationMethod_Type">
+                <restriction base="string">
+                    <enumeration value="nearestneighbor"/>
+                    <enumeration value="linear"/>
+                    <enumeration value="quadratic"/>
+                    <enumeration value="cubic"/>
+                    <enumeration value="bilinear"/>
+                    <enumeration value="biquadratic"/>
+                    <enumeration value="bicubic"/>
+                    <enumeration value="lostarea"/>
+                    <enumeration value="barycentric"/>
+                </restriction>
+            </simpleType>
+            <!-- =========================================================== -->
+       <!-- =========================================================== -->
+    <!-- =========================================================== -->
+    <!-- =========================================================== -->
+</schema>

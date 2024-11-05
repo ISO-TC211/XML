@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+  xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3" 
+  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3" 
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2" 
+  xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0" 
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.1"
+    >
+    <import namespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-1/mdq/1.0.1/mdq.xsd"/>   
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrs/1.3.1/mrs.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.2.1/mac.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.1/mrc.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+
+    <include schemaLocation="../../../../19130/-3/smi/1.1.1/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/groundControlPoints.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/nonPhysicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/spatialElements.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.1/codeList.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.1/spatialElements.xsd"/>
+    <!-- ======================== 19130=1 ======================= -->
+    <complexType name="SD_SensorParameters_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_SensorParameters"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_SensorParameters" type="smi:SD_SensorParameters_Type" substitutionGroup="sml:PhysicalComponent">
+        <annotation>
+            <documentation>information about sensor properties</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_SensorParameters_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentType">
+                <sequence>
+                    <element name="offsetAndOrientation" maxOccurs="unbounded" type="smi:SD_PositionAndOrientation_PropertyType">
+                        <annotation>
+                            <documentation>orientation and offset relative to the object on which
+                                the sensor is mounted</documentation>
+                        </annotation>
+                    </element>
+                    <element name="operationalMode" type="gco:CharacterString_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>description of the opertional mode of
+                                sensor</documentation>
+                        </annotation>
+                    </element>
+                    <element name="detector" type="smi:SD_DetectorArray_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>properties of sensor detector array</documentation>
+                        </annotation>
+                    </element>
+                    <element name="gsdProperties" minOccurs="0" type="smi:SD_GSD_PropertyType">
+                        <annotation>
+                            <documentation>properties of ground sample distance</documentation>
+                        </annotation>
+                    </element>
+                    <element name="identification" type="smi:SD_Sensor_PropertyType">
+                        <annotation>
+                            <documentation>provides identification information for
+                                sensor</documentation>
+                        </annotation>
+                    </element>
+                    <element name="systemAndOperation"
+                        type="smi:SD_SensorSystemAndOperation_PropertyType">
+                        <annotation>
+                            <documentation>information describing the sensor specific properties and
+                                operations</documentation>
+                        </annotation>
+                    </element>
+                    <!-- ======= 19130-2 =========== -->
+                    <element name="InSARAntennaPosition" minOccurs="0"
+                        type="smi:SE_InSARDualAntennaPosition_PropertyType">
+                        <annotation>
+                            <documentation>information about the position of InSAR dual
+                                antennas</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <!-- =================== Sensor System and Operation ===================== -->
+    <!-- ===================== identification ===================  -->
+    <complexType name="SD_Sensor_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Sensor"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Sensor" type="smi:SD_Sensor_Type" substitutionGroup="mac:MI_Instrument">
+        <annotation>
+            <documentation>characteristics of the sensor</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Sensor_Type">
+        <complexContent>
+            <extension base="mac:MI_Instrument_Type">
+                <sequence>
+                    <element name="calibration" minOccurs="0" type="smi:SD_Calibration_PropertyType">
+                        <annotation>
+                            <documentation>information about determination of relation between
+                                instrument readings and physical parameters</documentation>
+                        </annotation>
+                    </element>
+                    <element name="mode" minOccurs="0" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation> 
+                                type of observation being made by sensor</documentation>
+                        </annotation>
+                    </element>
+                    <element name="operationalBand" minOccurs="0" maxOccurs="unbounded" type="mrc:MI_Band_PropertyType">
+                        <annotation>
+                            <documentation>wavelengths of the electromagnetic spectrum being
+                                observed by the sensor</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_Calibration_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Calibration"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Calibration" type="smi:SD_Calibration_Type" substitutionGroup="sml:DescribedObject">
+        <annotation>
+            <documentation>circumstances of determination of relation between instrument readings
+                and physical parameters</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Calibration_Type">
+        <complexContent>
+            <extension base="sml:DescribedObjectType">
+                <sequence>
+                    <element name="calibrationAgency" type="cit:CI_Responsibility_PropertyType"/>
+                    <element name="calibrationDate" type="gco:Date_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <!-- ====================== gsdProperties =================== -->
+    <complexType name="SD_GSD_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_GSD"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_GSD" type="smi:SD_GSD_Type" substitutionGroup="sml:PhysicalComponent">
+        <annotation>
+            <documentation>properties of ground space distance between neighbouring pixels of the
+                image</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_GSD_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentType">
+                <sequence>
+                    <element name="azimuthIPR" minOccurs="0" type="smi:SD_AzimuthMeasure_PropertyType">
+                        <annotation>
+                            <documentation>impulse response width in the azimuth direction relative
+                                to the reference plane</documentation>
+                        </annotation>
+                    </element>
+                    <element name="columnSpacing" type="gco:Distance_PropertyType">
+                        <annotation>
+                            <documentation>ground distance between neighbouring columns in
+                                image</documentation>
+                        </annotation>
+                    </element>
+                    <!-- Definition of CRS is slightly different from localReferenceFrame -->
+                    <element name="gsdCRS" type="mrs:MD_ReferenceSystem_PropertyType">
+                        <annotation>
+                            <documentation>coordinate system used in the reference surface onto
+                                which the image is projected</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rangeIPR" minOccurs="0" type="gco:Distance_PropertyType">
+                        <annotation>
+                            <documentation/>
+                        </annotation>
+                    </element>
+                    <element name="referenceSurface" type="smi:SD_SurfaceCode_PropertyType">
+                        <annotation>
+                            <documentation>surface on which image is projected</documentation>
+                        </annotation>
+                    </element>
+                    <element name="rowSpacing" type="gco:Distance_PropertyType">
+                        <annotation>
+                            <documentation>ground distance between neighbouring rows in
+                                image</documentation>
+                        </annotation>
+                    </element>                
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_AzimuthMeasure_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_AzimuthMeasure"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_AzimuthMeasure" type="smi:SD_AzimuthMeasure_Type">
+        <annotation>
+            <documentation>information about the measurement of azimuth properties</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_AzimuthMeasure_Type">
+        <sequence>
+            <element name="azimuth" type="gco:Angle_PropertyType">
+                <annotation>
+                    <documentation>smallest difference in azimuth angle between two point reflectors
+                        that can be distinguished as two objects</documentation>
+                </annotation>
+            </element>
+            <element name="distance" type="gco:Distance_PropertyType">
+                <annotation>
+                    <documentation>smallest distance between two point reflectors that can be
+                        distinguished as two objects</documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    <!-- ============================ detector ============================ -->
+    <complexType name="SD_DetectorArray_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_DetectorArray"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_DetectorArray" type="smi:SD_DetectorArray_Type" substitutionGroup="sml:PhysicalComponent">
+        <annotation>
+            <documentation>dimensions and shapes of detector array</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_DetectorArray_Type">
+        <complexContent>
+            <extension base="sml:PhysicalComponentType">
+                <sequence>
+                    <element name="arrayDimensions">
+                        <annotation>
+                            <documentation>names and sizes of the dimensions of the detector
+                                array</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="SD_ArrayDimension" type="smi:SD_ArrayDimension_Type" minOccurs="1" maxOccurs="2"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="arrayOrigin" type="gml:DirectPositionType">
+                        <annotation>
+                            <documentation>position of the origin of the detector array coordinate system in external coordinate system</documentation>
+                        </annotation>
+                    </element>
+                    <element name="detectorShape" type="smi:SD_ShapeCode_PropertyType">
+                        <annotation>
+                            <documentation>shape of a detector</documentation>
+                        </annotation>
+                    </element>
+                    <element name="detectorSize" maxOccurs="2">
+                        <annotation>
+                            <documentation>size of a detector in a detector array dimension specified by detectorDimensionName</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Length" minOccurs="1" maxOccurs="2" type="gco:Length_PropertyType"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="distortion" type="smi:SD_Distortion_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>distortion of detector array</documentation>
+                        </annotation>
+                    </element>
+                    <element name="numberOfDimensions" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of dimensions of the detector array</documentation>
+                        </annotation>
+                    </element>  
+                    <element name="offsetVectors">
+                        <annotation>
+                            <documentation>displacement between origin of the detector array coordinate system and the location of the first detector in the detector array</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Vector" minOccurs="1" maxOccurs="2" type="swe:VectorType"/>
+                            </sequence>
+                        </complexType>
+                    </element>             
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_ArrayDimension_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ArrayDimension"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_ArrayDimension" type="smi:SD_ArrayDimension_Type">
+        <annotation>
+            <documentation>information about one dimension of a detector array</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ArrayDimension_Type">
+        <sequence>
+            <element name="name" type="gco:CharacterString_PropertyType"/>
+            <element name="size" type="gco:Integer_PropertyType"/>
+        </sequence>
+    </complexType>
+
+    <!-- =================== sensorSystemAndOperation ================== -->
+    <complexType name="SD_SensorSystemAndOperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_SensorSystemAndOperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_SensorSystemAndOperation" type="smi:SD_SensorSystemAndOperation_Type" substitutionGroup="sml:PhysicalSystem">
+        <annotation>
+            <documentation/>
+        </annotation>
+    </element>
+    <complexType name="SD_SensorSystemAndOperation_Type">
+        <complexContent>
+            <extension base="sml:PhysicalSystemType">
+                <sequence>
+                    <element name="collectionStartTime" type="gco:DateTime_PropertyType">
+                        <annotation>
+                            <documentation>rune data collection starts</documentation>
+                        </annotation>
+                    </element>
+                    <element name="collectionEndTime" type="gco:DateTime_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>time data collection ends</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_Microwave_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Microwave"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Microwave" abstract="true" type="smi:SD_Microwave_Type" substitutionGroup="smi:SD_SensorSystemAndOperation">
+        <annotation>
+            <documentation>specific properties of microwave sensor and its opertaion</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Microwave_Type">
+        <complexContent>
+            <extension base="smi:SD_SensorSystemAndOperation_Type"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_Optics_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Optics"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Optics" type="smi:SD_Optics_Type" substitutionGroup="smi:SD_SensorSystemAndOperation">
+        <annotation>
+            <documentation>specific properties of optical sensor and its operation</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Optics_Type">
+        <complexContent>
+            <extension base="smi:SD_SensorSystemAndOperation_Type">
+                <choice>
+                    <element name="opticsOperation" type="smi:SD_OpticsOperation_PropertyType">
+                        <annotation>
+                            <documentation>information describing the operation of sensor
+                                optics</documentation>
+                        </annotation>
+                    </element>
+                    <element name="opticalSystem" type="smi:SD_OpticalSystem_PropertyType">
+                        <annotation>
+                            <documentation>properties of the sensor optical system</documentation>
+                        </annotation>
+                    </element>
+                    <element name="opticalDistortion" type="smi:SD_Distortion_PropertyType">
+                        <annotation>
+                            <documentation>information describing the distortion of the sensor
+                                optical system</documentation>
+                        </annotation>
+                    </element>
+                </choice>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_OpticalSystem_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_OpticalSystem"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_OpticalSystem" type="smi:SD_OpticalSystem_Type" substitutionGroup="sml:PhysicalSystem">
+        <annotation>
+            <documentation>information about the geometry of the sensor's optical
+                system</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_OpticalSystem_Type">
+        <complexContent>
+            <extension base="sml:PhysicalSystemType">
+                <sequence>
+                    <element name="calibratedFocalLength" type="gco:Length_PropertyType"/>
+                    <element name="covPrincPtAutocoll" minOccurs="0" type="mdq:Abstract_PositionalAccuracy_PropertyType"/>
+                    <element name="princPointAutocoll" type="gml:DirectPositionType"/>
+                    <element name="qualityOfFocalLength" minOccurs="0" type="mdq:QuantitativeAttributeAccuracy_PropertyType"/>     
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_SAROperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_SAROperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_SAROperation" type="smi:SD_SAROperation_Type" substitutionGroup="smi:SD_Microwave">
+        <annotation>
+            <documentation>operation properties of SAR system</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_SAROperation_Type">
+        <complexContent>
+            <extension base="smi:SD_Microwave_Type">
+                <sequence>
+                    <element name="grpPosition" type="gml:DirectPositionType"/>
+                    <element name="orientation" type="smi:SD_SAROrientationCode_PropertyType">
+                        <annotation>
+                            <documentation>SAR antenna orientation</documentation>
+                        </annotation>
+                    </element>            
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_OpticsOperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_OpticsOperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_OpticsOperation" type="smi:SD_OpticsOperation_Type" substitutionGroup="sml:SimpleProcess">
+        <annotation>
+            <documentation>configuration and operation of sensor optics</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_OpticsOperation_Type">
+        <complexContent>
+            <extension base="sml:SimpleProcessType">
+                <sequence>
+                    <element name="instFiedlOfView" type="gco:Angle_PropertyType"/>
+                    <element name="swathFieldOfView" type="gco:Angle_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_WhiskbroomOperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_WhiskbroomOperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_WhiskbroomOperation" type="smi:SD_WhiskbroomOperation_Type" substitutionGroup="smi:SD_OpticsOperation">
+        <annotation>
+            <documentation>configuration and operation of whiskbroom optics</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_WhiskbroomOperation_Type">
+        <complexContent>
+            <extension base="smi:SD_OpticsOperation_Type">
+                <sequence>
+                    <element name="pixelcanDuration" type="gco:TM_PeriodDuration_PropertyType"/>
+                    <element name="scanDuration" type="gco:TM_PeriodDuration_PropertyType"/> 
+                    <element name="scanAngleFunction" type="smi:SD_ScanAngleFunction_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_PushbroomOperation_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_PushbroomOperation"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_PushbroomOperation" type="smi:SD_PushbroomOperation_Type" substitutionGroup="smi:SD_OpticsOperation">
+        <annotation>
+            <documentation>configuration and operation of Pushbroom optics</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_PushbroomOperation_Type">
+        <complexContent>
+            <extension base="smi:SD_OpticsOperation_Type">
+                <sequence>
+                    <element name="groundSamplingTime" type="gco:TM_PeriodDuration_PropertyType"/>
+                    <element name="forwardLookingAngle" type="gco:Angle_PropertyType"/>
+                    <element name="sideLookingAngle" type="gco:Angle_PropertyType"/>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_ScanAngleFunction_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ScanAngleFunction"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_ScanAngleFunction" type="smi:SD_ScanAngleFunction_Type">
+        <annotation>
+            <documentation>alternative ways to provide the scan rate</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ScanAngleFunction_Type">
+        <sequence>
+            <element name="angleEquation" type="gco:CharacterString_PropertyType">
+                <annotation>
+                    <documentation>formula to calculate scan angle given time</documentation>
+                </annotation>
+            </element>
+            <element name="angleTable" type="smi:SD_ScanAngleTime_PropertyType">
+                <annotation>
+                    <documentation>table containing scanning angle and time pairs</documentation>
+                </annotation>
+            </element>
+            <element name="rate" type="swe:QuantityPropertyType">
+                <annotation>
+                    <documentation>angular velocity of the scan</documentation>
+                </annotation>
+            </element>
+            
+        </sequence>
+    </complexType>
+    
+    <complexType name="SD_ScanAngleTime_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ScanAngleTime"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_ScanAngleTime" type="smi:SD_ScanAngleTime_Type">
+        <annotation>
+            <documentation>table of times and corresponding scan angles</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ScanAngleTime_Type">
+        <sequence>
+            <element name="angle">
+                <annotation>
+                    <documentation>list of scan angles corresponding to the elapsed times</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="Angle" maxOccurs="unbounded" type="gco:Angle_PropertyType"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="time">
+                <annotation>
+                    <documentation>list of times elapsed since start of scan</documentation>
+                </annotation>
+                <complexType>
+                    <sequence>
+                        <element name="TM_IntervalLength" maxOccurs="unbounded" type="gco:TM_PeriodDuration_PropertyType"/>
+                    </sequence>
+                </complexType>
+            </element>
+            
+        </sequence>
+    </complexType>
+
+    <complexType name="SD_Distortion_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Distortion"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Distortion" type="smi:SD_Distortion_Type" substitutionGroup="sml:SimpleProcess">
+        <annotation>
+            <documentation>information on distortions relevant to remotely sensed
+                imagery</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Distortion_Type">
+        <complexContent>
+            <extension base="sml:SimpleProcessType">
+                <sequence>
+                <element name="princPointOfSymmetry" type="gml:DirectPositionType">
+                    <annotation>
+                        <documentation>principal point of best symmetry, the centre of the circles of equal distortions of the lens</documentation>
+                    </annotation>
+                </element>
+                <element name="qualityOfPrincPointOfsymmetry" type="mdq:QuantitativeAttributeAccuracy_PropertyType">
+                    <annotation>
+                        <documentation>accuracy of the principal point of symmetry</documentation>
+                    </annotation>
+                </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_DistortionPolynomial_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_DistortionPolynomial"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_DistortionPolynomial" type="smi:SD_DistortionPolynomial_Type" substitutionGroup="smi:SD_Distortion">
+        <annotation>
+            <documentation>distortion described using a polynomial</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_DistortionPolynomial_Type">
+        <complexContent>
+            <extension base="smi:SD_Distortion_Type">
+                <sequence>
+                    <element name="polynomialDecentering" minOccurs="0" type="smi:SD_Polynomial_PropertyType">
+                        <annotation>
+                            <documentation>polynomial that describes decentring distortion</documentation>
+                        </annotation>
+                    </element>
+                    <element name="polynomialRadial" minOccurs="0" type="smi:SD_Polynomial_PropertyType">
+                        <annotation>
+                            <documentation>polynomial that describes radially symmetrical distortion</documentation>
+                        </annotation>
+                    </element>
+                    <element name="qualityOfPolynomialDecentering" minOccurs="0" type="mdq:Abstract_PositionalAccuracy_PropertyType">
+                        <annotation>
+                            <documentation> 
+                                covariance of the polynomial coefficients for decentring distortion</documentation>
+                        </annotation>
+                    </element>
+                    <element name="qualityOfPolynomialRadial" minOccurs="0" type="mdq:Abstract_PositionalAccuracy_PropertyType">
+                        <annotation>
+                            <documentation>covariance of the polynomial coefficients for radial distortion</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_DistortionTable_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_DistortionTable"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_DistortionTable" type="smi:SD_DistortionTable_Type" substitutionGroup="smi:SD_Distortion">
+        <annotation>
+            <documentation>distortion described using table</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_DistortionTable_Type">
+        <complexContent>
+            <extension base="smi:SD_Distortion_Type">
+                <sequence>
+                    <element name="columns" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of columns in the table</documentation>
+                        </annotation>
+                    </element>
+                    <element name="distortionValues">
+                        <annotation>
+                            <documentation>array of values describing image distortion</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Real" maxOccurs="unbounded" type="gco:Real_PropertyType"></element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="rows" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of rows in the table</documentation>
+                        </annotation>
+                    </element>                    
+                    <element name="xOffset" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>image column number corresponding to the first cell in the table</documentation>
+                        </annotation>
+                    </element>
+                    <element name="xSpacing" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of columns in the image corresponding to an interval of one table column</documentation>
+                        </annotation>
+                    </element>
+                    <element name="yOffset" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>image row number corresponding to the first cell in the table</documentation>
+                        </annotation>
+                    </element>  
+                    <element name="ySpacing" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of rows in the image corresponding to an interval of one table row</documentation>
+                        </annotation>
+                    </element> 
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+</schema>

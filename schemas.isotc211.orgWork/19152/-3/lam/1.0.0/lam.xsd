@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lam="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:include schemaLocation="./administarative.xsd"/>
+	<xs:include schemaLocation="./sourceGroup.xsd"/>
+	<xs:include schemaLocation="./partyGroup.xsd"/>
+	<xs:include schemaLocation="./spatialUnit.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19152/-1/lad/1.0" schemaLocation="../../../../19152/-1/lad/1.0.0/lad.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Scope: This part of ISO 19152 provides the concepts and structure for standardization for georegulation in the marine space. This standard addresses the information structures related to management of legal spaces in the marine environment, such as the establishment of maritime limits and boundaries, marine fishery and resource management and rights and associated restrictions and responsibilities in the marine environment including the sea bottom, the surface and the water column.
+This part of 19152 establishes the common elements and basic schema that address the marine space. It builds upon the common components defined in 19152 Part 1 – Fundamentals, of obligations (rights, restrictions, responsibilities) with the specificity of having a geographical component (spatial unit) and related to a party or parties.</xs:documentation>
+	</xs:annotation>
+</xs:schema>

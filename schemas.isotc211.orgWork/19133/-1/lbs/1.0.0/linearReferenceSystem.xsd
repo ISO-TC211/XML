@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/featureDataModel.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_Element_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_Element"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_Element" type="lbs:LR_Element_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LR_Element_Type">
+		<xs:sequence>
+			<xs:element name="datumMarkers" type="lbs:LR_ReferenceMarker_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_Feature_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_Feature"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_Feature" type="lbs:LR_Feature_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LR_Feature_Type">
+		<xs:sequence>
+			<xs:element name="attributes" type="gco:Record_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A record containing all the attributes of this feature. This mechanism is used to assure that any combination of attributes can be associated to a feature. This will support most type systems semantics  normally used for feature representations, including, strong, weak, dynamic, and untyped. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="id" type="lbs:FD_FeatureName_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The local name, or identity of the feature. This will usually be listed in the Name Space for the Container Feature Collection for this Feature. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="datumMarkers" type="lbs:LR_ReferenceMarker_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_LinearReferenceMethod_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_LinearReferenceMethod"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_LinearReferenceMethod" type="lbs:LR_LinearReferenceMethod_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LR_LinearReferenceMethod_Type">
+		<xs:sequence>
+			<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="offsetUnits" type="gco:UomIdentifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="positiveOffsetDirection" type="lbs:LR_OffsetDirection_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="units" type="gco:UomIdentifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="referenceElement" type="lbs:LR_Element_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="marker" type="lbs:LR_ReferenceMarker_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_OffsetDirection_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_OffsetDirection"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_OffsetDirection" type="lbs:LR_OffsetDirection_Type"/>
+	<!-- .......................................... -->
+	<xs:simpleType name="LR_OffsetDirection_Type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="right"/>
+			<xs:enumeration value="above"/>
+			<xs:enumeration value="below"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_OffsetExpression_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_OffsetExpression"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_OffsetExpression" type="lbs:LR_OffsetExpression_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LR_OffsetExpression_Type">
+		<xs:sequence>
+			<xs:element name="offset" type="gco:Measure_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="offsetReference" type="lbs:LR_OffsetReference_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_OffsetReference_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_OffsetReference"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_OffsetReference"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="LR_OffsetReference" type="lbs:LR_OffsetReference_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType name="LR_OffsetReference_Type">
+		<xs:sequence>
+			<xs:element name="centerline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="curbBack" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="curbFace" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="edgeOfBerm" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="edgeOfShoulder" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="edgeOfTravel" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="rightOfWay" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="walkwayInside" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="walkwayOutside" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_PositionExpression_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_PositionExpression"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_PositionExpression" type="lbs:LR_PositionExpression_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LR_PositionExpression_Type">
+		<xs:sequence>
+			<xs:element name="measure" type="gco:Measure_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="referenceDomain" type="lbs:LR_Element_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="LRM" type="lbs:LR_LinearReferenceMethod_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="offset" type="lbs:LR_OffsetExpression_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="referent" type="lbs:LR_ReferenceMarker_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="LR_ReferenceMarker_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:LR_ReferenceMarker"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="LR_ReferenceMarker" type="lbs:LR_ReferenceMarker_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="LR_ReferenceMarker_Type">
+		<xs:sequence>
+			<xs:element name="location" type="lbs:LR_PositionExpression_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="position" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

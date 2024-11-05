@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+   elementFormDefault="qualified"
+  targetNamespace="https://schemas.isotc211.org/19115/-2/mac/2.2"
+  version="2.2.0"> 
+  <include schemaLocation="../../../../19115/-2/mac/2.2.1/acquisitionInformationImagery.xsd"/> 
+</schema>

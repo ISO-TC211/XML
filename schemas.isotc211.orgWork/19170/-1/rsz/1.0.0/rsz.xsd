@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:rsz="https://schemas.isotc211.org/19170/-1/rsz/1.0"
+     targetNamespace="https://schemas.isotc211.org/19170/-1/rsz/1.0" 
+    elementFormDefault="qualified"
+    version="1.0.0">
+    <xs:annotation>
+		<xs:documentation>Version History:
+2019-04-11: knjetl imported model into the HM in github
+2019-04-12: Robert Gibb downloaded model from github
+     .. created this Version History 
+     .. restored missing items temporarily marked red for discussion
+     .. removed redundant 19125-1 Ed 2 package element from Fig 7
+     .. removed temporary 19125-1 from DGGS package
+     .. restored 19170 package element to Fig 7
+     .. set author to Robert Gibb (was Gibbr, Robert, or PC)
+     .. provided a Description for QuantisationProcess
+2019-06-03: Robert Gibb
+     .. split Fig 8 into 8a, 8b, 8c
+     .. aligned Function, Process, &amp; Operation names with document
+2019-07: Robert Gibb
+      .. recognised Discrete Global Grid as a GM_Surface, and Cell as ISO 19107 GM_SurfacePatch
+      .. aligned structure of Cell ID Operations, to operations on GM_SurfacePatch
+      .. recognised Cell as an ISO 19112 Ed 2 Location and as a consequent a DiscreteGlobalGrid as 
+            an ISO19112 Ed 2 Spatial ReferenceSystemUsingGeographicIdentifiers
+      .. added ISO19112 Ed 2 as a package dependency in the package diagram
+2019-08-07: Robert Gibb
+     .. added DGGS Core Operations package as a parent for Quantisation Functions,  
+                  Algebra Functions, &amp; Interoperability Functions packages
+      .. renamed Reference Frame Package to Equal Area Earth Reference System
+2019-10-20: Robert Gibb
+       .. aligned nomenclature of some objects with the updated text.
+       .. renamed to ISO19170 - preDIS &amp; 
+       .. copied and pasted it into ISOTC211_HM.aep freshly downloaded from github
+              .. deleted remaining artifacts from OGC Topic 21 (Ed1), 
+              .. checked for any updates in other packages since 2019-04-12
+               .. updated link for RS_ReferenceSystems in 19115 Ed1, 
+                        to MD_ReferenceSystem in 19115-1 Ed1 which is supercedes it
+               .. in Fig: Equal Area Reference System - Reference System
+                         restored generalisation arrow from CRS::DerivedCRS to CC::IdentifiedObject
+                         restored generalisation arrow from CRS::DerivedCRS to MD_ReferenceSystem
+                         restored generalisation arrow from CRS::GeodeticCRS to MD_ReferenceSystem
+                         restored association arrow from CRS::DerivedCRS to CRS::GeodeticCRS
+2019-10-22: knjetl
+         .. in Fig: Equal Area Reference System - Reference System
+              .. added CoordinateReferenceSystem::CRS, SingleCRS, DerivedCRS, DerivedGeodeticCRS, 
+                       and CommonClasses::ObjectUsage to more completely represent the relationships between 
+                       DiscreteGlobalGrid and CommonClasses::IdentifedObject
+2019-10-23: Robert Gibb
+         .. in Fig: Core - Quantisation Functions
+             .. added Cell attribute cellEqualAreaPrecision, in line with document
+             .. added QuantisationContext as a specialisation of ObservationContext, to allow role to explicitly be a member of QuantisationType
+             .. rearranged diagram with inheritance down the page
+             .. renamed Data Assignment and Data Retrieval from operation/function to Processs, in line with OM_Process
+             .. added operation dataAssiignment, to Quantisation Functions, so both dataAssignment and dataRetrieval are included
+         .. in Fig: Core - Interoperation Functions
+             .. added Cell attribute cellEqualAreaPrecision, in line with document requirements and supporting dynamic &amp; static DGGS
+             .. for clarity added Quantisationcontext, and Observationcontext to diagram
+2019-10-24: Robert Gibb
+         .. in Fig: Core - Algebra Functions
+              .. deleted cellQueryTopology as redundant with functionality in cellQuery2D
+         .. in Equal Area Earth Reference System - Cell
+               .. added cellMaxLevel as Cell attribute    
+        .. in Equal Area Earth Reference System - Tessellation
+               .. added cellMaxLevel as maximum value of refinementLevel attribute in RefinedDiscreteGlobalGridCell
+               .. added domainOfValidity, type EX_Extent attribute to RefinedDiscreteGlobalGridCell
+2019-10-24: Knut Jetlund
+        ..set public visibility and "Redefines" for QuantisationContext.role
+2019-11-08: Robert Gibb
+          .. created Core Reference System, and Fig: Core - Reference System
+         .. renamed and redefined elements in Equal Area Reference System - Reference System, as specialisations of their equivalents in Core Reference System. Used EA_ prefix in their names
+        .. introduced cellErrorBudget and cellMaxLevel as attributes of EA_Cell 
+        .. documented the notes for each diagram with a summary of all the normative requirements, recommendations and conformance tests defined wrt to that diagram. The text is asciidoc fragments copied directly from the asciidoc master document suite. This includes the unique static URI for each requirement but not its sequential number, which can change.
+
+2019-10-30: Robert Gibb
+         .. created DGG_GridConstraint and DGG_RefinementStrategy codelists in Core Reference system, and attributes to hold them in DGGS_ReferenceSystem 
+         .. rearranged Fig: Core - InteroperationFunctions for better clarity
+         .. renamed ellipsoidal to elliptical to align with 19107 Ed 2 usage
+         .. created DGG_CellID as a specialisation of ISO 19112 Ed 2 GraphicIdentifier
+         .. created cellQuery3D as specialisation of Query3D in Core Algebra Functions and changed both to explicitly use DGG_CellID instead of the old CellID, which wasnt properly declared.
+
+2020-11-04: Robert Gibb downloaded model from github
+2020-12-16: Changes:
+    Implemented a new diagram Key style to align with ISO Directive Part 2
+   Made the following interfaces abstract, so now ALL elements are abstract
+     - Temporal Geometry and Topology::Duration, 
+     - Core RS using Zonal Identifiers with Structured Geometry::DGG_ReferenceSystem
+     - Interoperation Broadcast::TranslationType, BroadcastType, added toJSON-LD to BroadcastType
+   Renamed packages and diagrams, so names follow a more consistent pattern and capitalisation that is more usable in the published document, no change to package hierarchy.
+   Edited definitions to be more consistent in use of capitalisation at the start and '.' at the end. Changed 'Note:' to '*NOTE*' to comply with ISOCS editing
+   Changed 'quantisation' to 'quantizattion' in interface names, to ensure only one form is used. This was the only change to an intrerface name.</xs:documentation>
+	</xs:annotation>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/coreQuantizationFunction.xsd"/>
+     <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/coreRSZonalId.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/coreTopologicalQueryFunction.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/equalAreaCell.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/equalAreaEarthRS.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/equalAreaTessellation.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/interoperation.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/interoperationBroadcast.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/interoperationQuery.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/old-ZonalQuery.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/spatialLocation.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/temporalGometryTopology.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/temporalRSId.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/zonalGeometryTopology.xsd"/>
+    <xs:include schemaLocation="../../../../19170/-1/rsz/1.0.0/zonalRSId.xsd"/>
+ </xs:schema>

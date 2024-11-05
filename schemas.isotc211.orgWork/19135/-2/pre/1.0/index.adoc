@@ -1,0 +1,75 @@
+﻿= Procedures for Item registration Part 2
+:revdate: 2012
+
+== Procedures for Item registration Part 2 2012 [WITHDRAWN]
+
+=== Description
+
+Procedures for Item registration Part 2 2012 has been withdrawn
+
+Please refer to Procedures for Item registration Part 1 2021
+https://schemas.isotc211.org/19135/-1/pir/1.0
+
+Procedures for Item registration Part 2 2012 consists of two namespaces pre and reg.
+
+XML schemas were created using encoding rules defined in ISO 19118, ISO 19139
+
+==== PRE 1.0 Namespace
+
+Namespace URI:
+https://schemas.isotc211.org/19135/-2/pre/1.0/[http://standards.iso.org/iso19135/-2/pre/1.0/]
+
+This namespace contains the abstract classes instanciated in the REG 1.0 namespace.
+
+Contained schemas:
+
+* https://schemas.isotc211.org/19135/-2/pre/1.0/pre.xsd[*pre.xsd*] Primary XML schema
+that to be referenced by XML documents when using elements in this namespace.
+* https://schemas.isotc211.org/19135/-2/pre/1.0/abstract.xsd[*abstract.xsd*]
+Implements the UML conceptual schema defined in ISO 19135-1, Geographic Information -
+Metadata Procedures for item registration - Part 1: Fundamentals.
+
+Contained classes:
+
+** Abstract_Register
+** Abstract_RegisterItem
+
+==== REG 1.0 Namespace
+
+Namespace URI:
+https://schemas.isotc211.org/19135/-2/reg/1.0/[http://standards.iso.org/iso/19135/-2/reg/1.0/]
+
+This namespace contains the non-abstract classes.
+
+Contained schemas:
+
+* https://schemas.isotc211.org/19135/-2/reg/1.0/reg.xsd[*reg.xsd*] Primary XML schema
+that to be referenced by XML documents when using elements in this namespace.
+* https://schemas.isotc211.org/19135/-2/reg/1.0/registration.xsd[*registration.xsd*]
+Implements the UML conceptual schema defined in ISO 19135-1, Geographic Information -
+Metadata Procedures for item registration - Part 1: Fundamentals.
+
+Contained classes:
+
+** AdditionInformation
+** RE_AlternativeExpression
+** RE_AlternativeExpression
+** RE_AmendmentInformation
+** RE_AmendmentType
+** RE_ClarificationInformation
+** RE_DecisionStatus
+** RE_Disposition
+** RE_FieldOfApplication
+** RE_ItemClass
+** RE_ItemStatus
+** RE_Locale
+** RE_Reference
+** RE_ReferenceSource
+** RE_Register
+** RE_RegisterItem
+** RE_RegisterManager
+** RE_RegisterOwner
+** RE_SimilarityToSource
+** RE_SubmittingOrganisation
+** RE_SubregisterDescription
+** RE_Version

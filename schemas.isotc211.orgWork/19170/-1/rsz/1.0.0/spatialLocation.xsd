@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="zonalRSId.xsd"/>
+	<xs:include/>
+	<xs:element name="LocationS" type="LocationS"/>
+	<xs:complexType name="LocationS" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Particular place or position.
+*NOTE* unlike a Location as specified in (&lt;&lt;ISO19112&gt;&gt;), all LocationS are owned and defined by their ReferenceSystem and not by an independent authority. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="extent" type="EX_Extent" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="identifier" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="owner" type="CI_Responsibility" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="representativePosition" type="GM_Point" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="coordinateTuple" type="DirectPosition" minOccurs="2" maxOccurs="3">
+				<xs:annotation>
+					<xs:documentation>Point within the extent of the spatial location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="extent" type="EX_Extent" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Spatial extent of the location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identifier" type="GeographicIdentifier" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifier of the spatial location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentOf" type="LocationS" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

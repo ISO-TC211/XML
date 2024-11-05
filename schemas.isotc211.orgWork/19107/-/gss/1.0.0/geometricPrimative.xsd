@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:swe="http://www.opengis.net/swe/2.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/record_components.xsd"/>	
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topoPrimative.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometryRoot.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometricComplex.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/coordinateGeometry.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="Bearing_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:Bearing"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="Bearing" type="gss:Bearing_Type"/>
+    <!-- .......................................... -->
+    <xs:complexType name="Bearing_Type">
+		<xs:annotation>
+			<xs:documentation>Bearing is a data type used to represent direction in the coordinate reference system. In a 2D coordinate reference system, this can be accomplished using a "angle measured from true north" or a 2D vector point in that direction.  In a 3D coordinate reference system, two angles or any 3D vector is possible.  If both a set of angles and a vector are given, then they shall be consistent with one another. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="angle" type="gco:Angle_PropertyType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="direction" type="swe:VectorType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Curve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Curve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Curve" type="gss:GM_Curve_Type" substitutionGroup="gss:GM_OrientableCurve"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Curve_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Curve (Figure 11) is a descendent subtype of GM_Primitive through GM_OrientablePrimitive. It is the basis for 1-dimensional geometry. A curve is a continuous image of an open interval and so could be written as a parameterized function such as c(t):(a, b)®En where "t" is a real parameter and En is Euclidean space of dimension n (usually 2 or 3, as determined by the coordinate reference system). Any other parameterization that results in the same image curve, traced in the same direction, such as any linear shifts and positive scales such as e(t) = c(a + t(b-a)):(0,1) ®En, is an equivalent representation of the same curve. For the sake of simplicity, GM_Curves should be parameterized by arc length, so that the parameterization operation inherited from GM_GenericCurve (see 6.4.7) will be valid for parameters between 0 and the length of the curve. 
+Curves are continuous, connected, and have a measurable length in terms of the coordinate system. The orientation of the curve is determined by this parameterization, and is consistent with the tangent function, which approximates the derivative function of the parameterization and shall always point in the "forward" direction. The parameterization of the reversal of the curve defined by c(t):(a, b)®En would be defined by a function of the form s(t) = c(a + b - t):(a, b)®En.
+A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different interpolation method. The curve segments are connected to one another, with the end point of each segment except the last being the start point of the next segment in the segment list.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_OrientableCurve_Type">
+				<xs:sequence>
+					<xs:element name="segment" type="gss:GM_CurveSegment_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CurveBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CurveBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_CurveBoundary" type="gss:GM_CurveBoundary_Type" substitutionGroup="gss:GM_PrimitiveBoundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_CurveBoundary_Type">
+		<xs:annotation>
+			<xs:documentation>The boundary of GM_Curves shall be represented as GM_CurveBoundary.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_PrimitiveBoundary_Type">
+				<xs:sequence>
+					<xs:element name="startPoint" type="gss:GM_Point_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="endPoint" type="gss:GM_Point_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CurveInterpolation_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CurveInterpolation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_CurveInterpolation"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element  name="GM_CurveInterpolation" type="gss:GM_CurveInterpolation_Type"/> -->
+    <!-- .......................................... -->
+	<xs:complexType name="GM_CurveInterpolation_Type">
+		<xs:annotation>
+			<xs:documentation>GM_CurveInterpolation is a list of codes that may be used to identify the interpolation mechanisms specified by an application schema. As a code list, there is no intention of limiting the potential values of GM_CurveInterpolation. Subtypes of GM_CurveSegment can be spawned directly through subclassing, or indirectly by specifying an interpolation method and an associated controlParameters record to support it. Valid meanings for "interpolation" include, but are not limited, to the following:
+a) Linear (linear) - the interpolation mechanism shall return DirectPositions on a straight line between each consecutive pair of controlPoints.
+b) Geodesic (geodesic) - the interpolation mechanism shall return DirectPositions on a geodesic curve between each consecutive pair of controlPoints. A geodesic curve is a curve of shortest length. The geodesic shall be determined in the coordinate reference system of the GM_Curve in which the GM_CurveSegment is used.
+c) Circular arc by 3 points (circularArc3Points) - for each set of three consecutive controlPoints, the middle one being an even offset from the beginning of the sequence of control points, the interpolation mechanism shall return DirectPositions on a circular arc passing from the first point through the middle point to the third point. The sequence of control points shall have an odd number of elements. Note: if the 3 points are co-linear, the circular arc becomes a straight line. 
+d) Circular arc by 2 points and bulge factor (circularArc2PointWithBulge) - for each consecutive pair of controlPoints, the interpolation mechanism shall return DirectPositions on a circular arc passing from the first controlPoint to the second controlPoint, such that the associated control parameter determines the offset of the center of the arc from the center point of the chord, positive for leftward and negative for rightward. This form shall only be used in 2 dimensions because of the restricted nature of the definition technique.
+e) Elliptical arc (elliptical) - for each set of four consecutive controlPoints, the interpolation mechanism shall return DirectPositions on an elliptical arc passing from the first controlPoint through the middle controlPoints in order to the fourth controlPoint. Note: if the 4 controlPoints are co-linear, the arc becomes a straight line. If the 4 controlPoints are on the same circle, the arc becomes a circular one.
+f) Clothoid (clothoid) - uses a Cornu's spiral or clothoid interpolation.
+g) Conic arc (conic) - same as elliptical arc but using 5 consecutive controlPoints to determine a conic section.
+h) Polynomial Spline (polynomialSpline) - the controlPoints are ordered as in a line-string, but they are spanned by a polynomial spline function. Normally, the degree of continuity is determined by the degree of the polynomials chosen. 
+i) Cubic spline (cubicSpline) - the control points are interpolated using initial tangents and cubic polynomials, a form of degree 3 polynomial spline.
+j) Rational Spline (rationalSpline) - the controlPoints are ordered as in a line string, but they are spanned by a rational (quotient of polynomials) spline function. Normally, the degree of continuity is determined by the degree of the polynomials chosen. 
+This list shall be implemented by a code list, and may vary in actual values from the above strings.
+GM_CurveInterpolation::
+linear  
+geodesic  
+circularArc3Points  
+circularArc2PointWithBulge  
+elliptical  
+clothoid 
+conic  
+polynomialSpline  
+cubicSpline
+rationalSpline</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="circularArc2PointWithBulge" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="circularArc3Points" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="clothoid" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="conic" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="cubicSpline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="elliptical" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="geodesic" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="linear" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="polynomialSpline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="rationalSpline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_CurveSegment_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_CurveSegment"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_CurveSegment" type="gss:GM_CurveSegment_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_CurveSegment_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>GM_CurveSegment defines a homogeneous segment of a GM_Curve. Each GM_CurveSegment shall be in, at most, one GM_Curve.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="interpolation" type="gss:GM_CurveInterpolation_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numDerivativeInterior" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="numDerivativesAtEnd" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="numDerivativesAtStart" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_OrientableCurve_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_OrientableCurve"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_OrientableCurve" type="gss:GM_OrientableCurve_Type" substitutionGroup="gss:GM_OrientablePrimitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_OrientableCurve_Type">
+		<xs:annotation>
+			<xs:documentation>GM_OrientableCurve consists of a curve and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableCurve is a GM_Curve. If the orientation is "-", then the GM_OrientableCurve is related to another GM_Curve with a parameterization that reverses the sense of the curve traversal.
+GM_OrientableCurve:
+{Orientation = "+" implies primitive = self};
+{Orientation = "-" implies 
+primitive.parameterization(length()-s) = parameterization(s)};</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_OrientablePrimitive_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_OrientablePrimitive_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_OrientablePrimitive"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_OrientablePrimitive" type="gss:GM_OrientablePrimitive_Type" substitutionGroup="gss:GM_Primitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_OrientablePrimitive_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>An orientable primitives (Figure 10) are those that can be mirrored into new geometric objects in terms of their internal local coordinate systems (manifold charts). For curves, the orientation reflects the direction in which the curve is traversed, that is, the sense of its parameterization. When used as boundary curves, the surface being bounded is to the "left" of the oriented curve. For surfaces, the orientation reflects from which direction the local coordinate system can be viewed as right handed, the "top" or the surface being the direction of a completing z-axis that would form a right-handed system. When used as a boundary surface, the bounded solid is "below" the surface. The orientation of points and solids has no immediate geometric interpretation in 3-dimensional space.
+GM_OrientablePrimitive objects are essentially references to geometric primitives that carry an "orientation" reversal flag (either "+" or "-") that determines whether this primitive agrees or disagrees with the orientation of the referenced object. 
+NOTE There are several reasons for subclassing the "positive" primitives under the orientable primitives. First is a matter of the semantics of subclassing. Subclassing is assumed to be a "is type of" hierarchy. In the view used, the "positive" primitive is simply the orientable one with the positive orientation. If the opposite view were taken, and orientable primitives were subclassed under the "positive" primitive, then by subclassing logic, the "negative" primitive would have to hold the same sort of geometric description that the "positive" primitive does. The only viable solution would be to separate "negative" primitives under the geometric root as being some sort of reference to their opposite. This adds a great deal of complexity to the subclassing tree.  To minimize the number of objects and to bypass this logical complexity, positively oriented primitives are self-referential (are instances of the corresponding primitive subtype) while negatively oriented primitives are not. 
+Orientable primitives are often denoted by a sign (for the orientation) and a base geometry (curve or surface). The sign datatype is defined in ISO 19103. If "c" is a curve, then "&lt;+, c&gt;" is its positive orientable curve and "&lt;-, c&gt;" is its negative orientable curve. In most cases, leaving out the syntax for record "&lt; , &gt;" does not lead to confusion, so "&lt;+, c&gt;" may be written as "+c" or simply "c", and "&lt;-, c&gt;" as "-c". Curve space arithmetic can be performed if the curves align properly, so that:
+For c, d : GM_OrientableCurves such that c.endPoint = d.startPoint then
+( c + d ) ==: GM_CompositeCurve = &lt; c, d &gt;</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Primitive_Type">
+				<xs:sequence>
+					<xs:element name="orientation" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/> <!-- type="Sign" -->
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_OrientableSurface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_OrientableSurface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_OrientableSurface" type="gss:GM_OrientableSurface_Type" substitutionGroup="gss:GM_OrientablePrimitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_OrientableSurface_Type">
+		<xs:annotation>
+			<xs:documentation>GM_OrientableSurface consists of a surface and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableSurface is a GM_Surface. If the orientation is "-", then the GM_OrientableSurface is a reference to a GM_Surface with an upNormal that reverses the direction for this GM_OrientableSurface, the sense of "the top of the surface" (see 6.4.33.2).
+GM_OrientableSurface:
+{Orientation = "+" implies primitive = self};
+{(Orientation = "-" and TransfiniteSet::contains(p : DirectPosition)) 
+  implies (primitive.upNormal(p) = - self.upNormal(p))};</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_OrientablePrimitive_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Point_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Point"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Point" type="gss:GM_Point_Type" substitutionGroup="gss:GM_Primitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Point_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Point (Figure 9) is the basic data type for a geometric object consisting of one and only one point. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Primitive_Type">
+				<xs:sequence>
+					<xs:element name="position" type="gss:DirectPosition_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The attribute "position" shall be the DirectPosition of this GM_Point.
+GM_Point::position [1] : DirectPosition
+NOTE In most cases, the state of a GM_Point is fully determined by its position attribute.  The only exception to this is if the GM_Point has been subclassed to provide additional non-geometric information such as symbology.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Primitive_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Primitive"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Primitive" type="gss:GM_Primitive_Type" substitutionGroup="gss:GM_Object"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Primitive_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>GM_Primitive (Figure 8) is the abstract root class of the geometric primitives. Its main purpose is to define the basic "boundary" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.
+NOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as "non-decomposable" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.
+Any geometric object that is used to describe a feature is a collection of geometric primitives. A collection of geometric primitives may or may not be a geometric complex. Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.
+GM_Primitive and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Object_Type">
+				<xs:sequence>
+					<xs:element name="proxy" type="gss:GM_OrientablePrimitive_PropertyType" minOccurs="0" maxOccurs="2"/>
+					<xs:element name="containingPrimitive" type="gss:GM_Primitive_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_PrimitiveBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_PrimitiveBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_PrimitiveBoundary" type="gss:GM_PrimitiveBoundary_Type" substitutionGroup="gss:GM_Boundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_PrimitiveBoundary_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The abstract class GM_Primitive boundary is the root for the various return types of the boundary operator for subtypes of GM_Primitive. Since points have no boundary, no special subclass is needed for their boundary.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Boundary_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Ring_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Ring"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_Ring" type="gss:GM_Ring_Type" substitutionGroup="gss:GM_CompositeCurve"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Ring_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Ring is used to represent a single connected component of a GM_SurfaceBoundary. It consists of a number of references to GM_OrientableCurves connected in a cycle (an object whose boundary is empty). 
+A GM_Ring is structurally similar to a GM_CompositeCurve in that the endPoint of each GM_OrientedCurve OrientableCurve in the sequence is the startPoint of the next GM_ OrientableCurve in the Sequence. Since the sequence is circular, there is no exception to this rule. Each ring, like all boundaries is a cycle and each ring is simple.
+GM_Ring:
+{isSimple() = TRUE}
+{isCycle() = TRUE}
+
+NOTE Even though each GM_Ring is simple, the boundary need not be simple. The easiest case of this is where one of the interior rings of a surface is tangent to its exterior ring. Implementations may enforce stronger restrictions on the interaction of boundary elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CompositeCurve_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Shell_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Shell"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_Shell" type="gss:GM_Shell_Type" substitutionGroup="gss:GM_CompositeSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Shell_Type">
+		<xs:annotation>
+			<xs:documentation>A GM_Shell is used to represent a single connected component of a GM_SolidBoundary. It consists of a number of references to GM_OrientableSurfaces connected in a topological cycle (an object whose boundary is empty). Unlike a GM_Ring, a GM_Shell's elements have no natural sort order. Like GM_Rings, GM_Shells are simple.
+GM_Shell:
+{isSimple() = TRUE}</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_CompositeSurface_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Solid_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Solid"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_Solid" type="gss:GM_Solid_Type" substitutionGroup="gss:GM_Primitive"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Solid_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Solid (Figure 13), a subclass of GM_Primitive, is the basis for 3-dimensional geometry. The extent of a solid is defined by the boundary surfaces.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_Primitive_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_SolidBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_SolidBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_SolidBoundary" type="gss:GM_SolidBoundary_Type" substitutionGroup="gss:GM_PrimitiveBoundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_SolidBoundary_Type">
+		<xs:annotation>
+			<xs:documentation>The boundary of GM_Solids shall be represented as GM_SolidBoundary.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_PrimitiveBoundary_Type">
+				<xs:sequence>
+					<xs:element name="exterior" type="gss:GM_Shell_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="interior" type="gss:GM_Shell_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Surface_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Surface"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_Surface" type="gss:GM_Surface_Type" substitutionGroup="gss:GM_OrientableSurface"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Surface_Type">
+		<xs:annotation>
+			<xs:documentation>GM_Surface (Figure 12) a subclass of GM_Primitive and is the basis for 2-dimensional geometry. Unorientable surfaces such as the Möbius band are not allowed. The orientation of a surface chooses an "up" direction through the choice of the upward normal, which, if the surface is not a cycle, is the side of the surface from which the exterior boundary appears counterclockwise. Reversal of the surface orientation reverses the curve orientation of each boundary component, and interchanges the conceptual "up" and "down" direction of the surface. If the surface is the boundary of a solid, the "up" direction is usually outward. For closed surfaces, which have no boundary, the up direction is that of the surface patches, which must be consistent with one another. Its included GM_SurfacePatches describe the interior structure of a GM_Surface.
+NOTE Other than the restriction on orientability, no other "validity" condition is required for GM_Surface.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_OrientableSurface_Type">
+				<xs:sequence>
+					<xs:element name="patch" type="gss:GM_SurfacePatch_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_SurfaceBoundary_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_SurfaceBoundary"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_SurfaceBoundary" type="gss:GM_SurfaceBoundary_Type" substitutionGroup="gss:GM_PrimitiveBoundary"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_SurfaceBoundary_Type">
+		<xs:annotation>
+			<xs:documentation>The boundary of GM_Surfaces shall be represented as GM_SurfaceBoundary.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gss:GM_PrimitiveBoundary_Type">
+				<xs:sequence>
+					<xs:element name="exterior" type="gss:GM_Ring_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="interior" type="gss:GM_Ring_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_SurfaceInterpolation_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_SurfaceInterpolation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+	<xs:element  name="GM_SurfaceInterpolation"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element  name="GM_SurfaceInterpolation" type="gss:GM_SurfaceInterpolation_Type"/> -->
+    <!-- .......................................... -->
+	<xs:complexType name="GM_SurfaceInterpolation_Type">
+		<xs:annotation>
+			<xs:documentation>GM_SurfaceInterpolation (Figure 20) is a list of codes that may be used to identify the interpolation mechanisms specified by an application schema. Valid values for "interpolation" include, but are not limited, to the following:
+a) None (none) - the interior of the surface is not specified. The assumption is that the surface follows the reference surface defined by the coordinate reference system.
+b) Planar (planar) - the interpolation method shall return points on a single plane. The boundary in this case shall be contained within that plane.
+c) Spherical (spherical), Elliptical (elliptical), Conic (conic) - the surface is a section of a spherical, elliptical or conic surface.
+d) TIN (tin) - the control points are organized into adjoining triangles, which form small planar segments.
+e) Parametric Curve (parametricCurve)  - the control points are organized into a 2-dimensional grid and each cell within the grid is spanned by a surface which shall be defined by a family of curves.
+f) Polynomial Spline (polynomialSpline) - the control points are organized into an irregular 2-dimensional grid and each cell within this grid is spanned by a polynomial spline function.
+g) Rational Spline (rationalSpline) - the control points are organized into an irregular 2-dimensional grid and each cell within this grid is spanned by a rational (quotient of polynomials) spline function.
+h) Triangulated Spline (triangulatedSpline) - the control points are organized into adjoining triangles, each of which is spanned by a polynomial spline function.
+If more than one interpolation description fits the method used, then the most restrictive one will be used. 
+GM_SurfaceInterpolation::
+none 
+planar 
+spherical 
+elliptical 
+conic 
+tin 
+parametricCurve 
+polynomialSpline 
+rationalSpline 
+triangualtedSpline</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="conic" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="elliptical" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="none" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="parametricCurve" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="planar" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="polynomialSpline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="rationalSpline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="spherical" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="tin" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="triangulatedSpline" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_SurfacePatch_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_SurfacePatch"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_SurfacePatch" type="gss:GM_SurfacePatch_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_SurfacePatch_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>GM_SurfacePatch (Figure 20) defines a homogeneous portion of a GM_Surface. The multiplicity of the association "Segmentation" (Figure 12) specifies that each GM_SurfacePatch shall be in at most one GM_Surface.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="interpolation" type="gss:GM_SurfaceInterpolation_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="numDerivativesOnBoundary" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

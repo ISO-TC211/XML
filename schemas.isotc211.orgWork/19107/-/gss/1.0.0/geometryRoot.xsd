@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbc.xsd"/>
+	
+	<xs:annotation>
+		<xs:documentation>A geometric object shall be a combination of a coordinate geometry and a coordinate reference system. In all of the operations, all geometric calculations shall be done in the coordinate reference system of the first geometric object accessed, which is normally the object whose operation is being invoked. Returned objects shall be in the coordinate reference system in which the calculations are done unless explicitly stated otherwise. The interface protocols defined in this section are basically those of set theory. In general a geometric object is a set of geometric points, represented by DirectPosition (see 6.4.1). Object instantiations of geometric objects are GM_Objects. Object instantiations of geometric points, when used as values, are DirectPositions. General set theory operations defined at GM_Object differentiate further down the class hierarchy depending on whether or not the boundary DirectPositions are included as set elements. Subtypes of GM_Primitive do not contain boundary points, while subtypes of GM_Complex do.
+GM_Object and GM_Primitive are purely abstract in the sense that no object or data structure from an application schema can instantiate them directly. Instances of these classes must be instances of one of their non-abstract subtypes, such as GM_Point, GM_Curve, or GM_Surface.  This is not the case for GM_Complex, which can be directly instantiated by an application schema, and need not be an instance of one of the non-abstract subclasses of GM_Composite. Although GM_Complex is not explicitly implemented by this International Standard, it would be valid for an application schema to include a concrete class called "GM_Complex" in a class library conformant to this International Standard. Recall that the name space of the application schema is different form that of the standard and such seemingly logical abuses of name are valid. This is not the case for the abstract classes within this standard. These classes are logically incapable of supporting an implementation directly. Constructors on these classes result in instances of concrete subclasses of these types, not in direct logical instances of the abstract type. 
+This is a stricter interpretation of "abstract" than is commonly used in UML, but it is appropriate here as a guide to application schema developers.</xs:documentation>
+	</xs:annotation>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Boundary_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="gss:GM_Boundary"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="GM_Boundary" type="gss:GM_Boundary_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Boundary_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The abstract root data type for all the data types used to represent the boundary of geometric objects is GM_Boundary (Figure 7). Any subclass of GM_Object will use a subclass of GM_Boundary to represent its boundary through the operation GM_Object::boundary. By the nature of geometry, boundary objects are cycles. 
+GM_Boundary:
+{isCycle() = TRUE}</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="GM_Object_PropertyType">
+        <xs:sequence minOccurs="0">
+        	<xs:element ref="gss:GM_Object"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- .......................................... -->
+    <xs:element  name="GM_Object" type="gss:GM_Object_Type"/>
+    <!-- .......................................... -->
+	<xs:complexType name="GM_Object_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>GM_Object (Figure 6) is the root class of the geometric object taxonomy and supports interfaces common to all geographically referenced geometric objects. GM_Object instances are sets of direct positions in a particular coordinate reference system. A GM_Object can be regarded as an infinite set of points that satisfies the set operation interfaces for a set of direct positions, TransfiniteSet&lt;DirectPosition&gt;. Since an infinite collection class cannot be implemented directly, a Boolean test for inclusion shall be provided by the GM_Object interface. This international standard concentrates on vector geometry classes, but future work may use GM_Object as a root class without modification.
+NOTE As a type, GM_Object does not have a well-defined default state or value representation as a data type. Instantiated subclasses of GM_Object will.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CRS" type="rbc:RS_CRS_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sc_CRS" type="rbc:RS_CRS_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+</xs:schema>

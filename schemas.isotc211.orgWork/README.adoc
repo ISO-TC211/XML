@@ -1,0 +1,36 @@
+= ISO/TC 211 XML Schemas
+
+image:https://github.com/ISO-TC211/schemas/workflows/build/badge.svg["XSD documentation build status", link="https://github.com/ISO-TC211/schemas/actions?workflow=build"]
+
+image:https://github.com/ISO-TC211/schemas/workflows/deploy/badge.svg["Deploy status", link="https://github.com/ISO-TC211/schemas/actions?workflow=deploy"]
+
+== Introduction
+
+This is the official repository of ISO/TC 211 XML Schemas.
+
+Jointly managed by ISO/TC 211/XMG and Ribose.
+
+
+== XSD documentation pages
+
+XSD documentation pages are generated using the `build` workflow.
+
+The `schemas.yml` file controls which schemas (identified by path)
+should generate XSD documentation.
+
+The resulting documentation per schema will be generated in the path:
+
+* HTML page: `_site/{schema-path}/{xsd-name}/index.html`
+* Diagrams: `_site/{schema-path}/{xsd-name}/diagrams/*.svg`
+
+
+== Building documentation
+
+[source,sh]
+----
+# removes generated artifacts
+make clean
+
+# makes _site
+make all
+----

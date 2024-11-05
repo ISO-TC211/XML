@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/2.0" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/2.0"
+	version="0.1.0">
+	<xs:include schemaLocation="../../../../19107/-/gss/2.0.0/gss.xsd"/>
+		<xs:annotation>
+		<xs:documentation></xs:documentation>
+	</xs:annotation>
+	<!-- ========================================== -->
+
+	<!-- ========================================== -->
+</xs:schema>

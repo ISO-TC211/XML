@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="zonalGeometryTopology.xsd"/>
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="Cell" type="Cell"/>
+	<xs:complexType name="Cell" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Reference system unit of geometry associated with a Zone. As part of GlobeGeometry, it has the same spatial, temporal and topological dimensionality as GlobeGeometry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="DGG_GridConstraint" type="DGG_GridConstraint"/>
+	<xs:complexType name="DGG_GridConstraint" abstract="true">
+		<xs:annotation>
+			<xs:documentation>CodeList for constraints that are used to define different categories of DGGS. Each constraint is a constraint on the shape, size, or orientation of cells in a DiscreteGlobalGrid.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cellAxisAligned" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cell edges are parallel to the base CRS's coordinate system axes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cellConformal" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Variation in shape between all the cells in each DiscreteGlobalGrid is minimized.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cellEquiAngular" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Variation in bearing from one cell's representative position to the next neighboring cell's representative positions in each DiscreteGlobalGrid is minimized.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cellEquiDistant" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Variation in distance from a cell's representative position to all of it's neighboring cell's representative positions in each DiscreteGlobalGrid is minimized.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cellEquiSized" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Variation in interior size between all cells in each DiscreteGlobalGrid is minimized.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DGG_ReferenceSystem" type="DGG_ReferenceSystem"/>
+	<xs:complexType name="DGG_ReferenceSystem" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Defining characteristics of a Reference system using zonal identifiers with structured geometry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DGGS_Grids" type="DGG_GridConstraint" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of characteristics that constraint the grid cells in this DGGS in decreasing order of priority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_Refinement" type="DGG_RefinementStrategy" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of topological relationships between parent and child cells in this DGGS.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_RefinementRatio" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of refinement ratios of parent cell size to child cell size, in the order that they are used in constructing child cells in the DGGS.  If the list is shorter than the number of discrete global grids in the DGGS, then it is used as a recurring sequence.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DGGS_RefSys" type="DGG_ReferenceSystemType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference system metadata.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DGG_ReferenceSystemType" type="DGG_ReferenceSystemType"/>
+	<xs:complexType name="DGG_ReferenceSystemType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Defining metadata elements of the base CRS for this DGGS.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CRS" type="CoordinateMetadata" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Metadata required to reference coordinates.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GLOBE" type="GeometryData" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>GeometryData for the chosen GlobeGeometry that specifies geometry, spatial, temporal and topological dimensionality and domain of the globe for this DGGS.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MDRS" type="MD_ReferenceSystem" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>RS information describing this whole DGGS.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ZIRS" type="MD_Identifier" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifier for the RSUsingZonalIdentifiers used by this DGGS.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DGG_RefinementStrategy" type="DGG_RefinementStrategy"/>
+	<xs:complexType name="DGG_RefinementStrategy" abstract="true">
+		<xs:annotation>
+			<xs:documentation>CodeList for strategies that are used to define different categories of DGGS. Each strategy defines the topological relationship of one or more elements of cell geometry belonging to a child cell with one or more elements of geometry of its parent cell.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="centredChildCell" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Each parent cell shares a cell&lt;-zone.representativePosition with one of its child cells.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="edgeCentredChildCell" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Each parent cell of dimension greater than 1 has a child cell who's cell&lt;-zone.representativePosition lies on each of the parent's edges  (one-dimensional topological boundary element).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="faceCentredChildCell" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Each parent cell of dimension greater than 2 has a child cell who's cell&lt;-zone.representativePosition lies on each of the parent's faces (two-dimensional topological boundary element).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nestedChildCell" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The boundary of the set of child cells for a parent is identical to the parent's boundary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nodeCentredChildCell" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Each parent cell has a child cell who's cell&lt;-zone.representativePosition is coincident with each of the parent's nodes (zero-dimensional topological boundary element).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="solidCentredChildCell" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Each parent cell of dimension greater than 3 has a child cell who's cell&lt;-zone.representativePosition lies on each of the parent's solids (three-dimensional topological boundary element).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DiscreteGlobalGrid" type="DiscreteGlobalGrid"/>
+	<xs:complexType name="DiscreteGlobalGrid" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Set of Cells at the same refinement level.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="refinementRatio" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Ratio of the number of cells in the parent DiscreteGlobalGrid to the number in this DiscreteGlobalGrid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cell" type="Cell" minOccurs="2" maxOccurs="unbounded"/>
+			<xs:element name="MD_ReferenceSystem" type="MD_ReferenceSystem" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="GlobeGeometry" type="GlobeGeometry"/>
+	<xs:complexType name="GlobeGeometry" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Parent geometry specifying the geometry, dimensionality and domain of the globe for this DGGS.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneGeometry">
+				<xs:sequence>
+					<xs:element name="comprises" type="Cell" minOccurs="2" maxOccurs="unbounded"/>
+					<xs:element name="tessellation" type="DiscreteGlobalGrid" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

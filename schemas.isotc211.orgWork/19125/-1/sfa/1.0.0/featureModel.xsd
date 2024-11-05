@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="AssociationType" type="AssociationType"/>
+	<xs:complexType name="AssociationType">
+		<xs:complexContent>
+			<xs:extension base="Definition">
+				<xs:sequence>
+					<xs:element name="role" type="RoleType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Definition" type="Definition"/>
+	<xs:complexType name="Definition">
+		<xs:sequence>
+			<xs:element name="definition" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="ScopedName" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="subTypeOf" type="ScopedName" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="FeatureIntance" type="FeatureIntance"/>
+	<xs:complexType name="FeatureIntance">
+		<xs:sequence>
+			<xs:element name="featureID" type="ScopedName" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="featureType" type="ScopedName" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="property" type="PropertyInstance" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="FeatureType" type="FeatureType"/>
+	<xs:complexType name="FeatureType">
+		<xs:complexContent>
+			<xs:extension base="Definition">
+				<xs:sequence>
+					<xs:element name="instances" type="FeatureIntance" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Ontology" type="Ontology"/>
+	<xs:complexType name="Ontology">
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="PropertyInstance" type="PropertyInstance"/>
+	<xs:complexType name="PropertyInstance">
+		<xs:sequence>
+			<xs:element name="propertyType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="properyID" type="ScopedName" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="PropertyType" type="PropertyType"/>
+	<xs:complexType name="PropertyType">
+		<xs:complexContent>
+			<xs:extension base="Definition">
+				<xs:sequence>
+					<xs:element name="valueType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="property" type="PropertyInstance" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RoleType" type="RoleType"/>
+	<xs:complexType name="RoleType">
+		<xs:sequence>
+			<xs:element name="definition" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="ScopedName" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="subTypeOf" type="ScopedName" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="valueType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="property" type="PropertyInstance" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="definition" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="name" type="ScopedName" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="subTypeOf" type="ScopedName" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="valueType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Taxonomy" type="Taxonomy"/>
+	<xs:complexType name="Taxonomy">
+		<xs:sequence>
+			<xs:element name="nameSpace" type="NameSpace" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Definition" type="Definition" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

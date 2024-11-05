@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:igd="https://schemas.isotc211.org/19163/-1/igd/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+  xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0"
+  version="1.1.1"
+    >
+    <include schemaLocation="../../../../19130/-3/smi/1.1.1/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/groundControlPoints.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19163/-1/igd/1.1" schemaLocation="https://schemas.isotc211.org/19163/-1/igd/1.1.1/IE_ImageryAndGriddedData.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19157/-1/mdq/1.0" schemaLocation="https://schemas.isotc211.org/19157/-1/mdq/1.0.1/mdq.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/msr/1.3.1/msr.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-/cis/1.1.0/codeLists.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
+<!-- ================== Fitting Function ================= -->
+    <complexType name="SD_FittingFunction_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_FittingFunction"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_FittingFunction" type="smi:SD_FittingFunction_Type">
+        <annotation>
+            <documentation>function relating image and ground coordinates</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_FittingFunction_Type">
+        <complexContent>
+            <extension base="sml:SimpleProcessType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_Polynomial_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Polynomial"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Polynomial" type="smi:SD_Polynomial_Type" substitutionGroup="smi:SD_FittingFunction">
+        <annotation>
+            <documentation>polynomial used in the fitting function</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Polynomial_Type">
+        <complexContent>
+            <extension base="smi:SD_FittingFunction_Type">
+                <sequence>
+                    <element name="resultDimension" type="msr:MD_DimensionNameTypeCode_PropertyType">
+                        <annotation>
+                            <documentation>name of the dependent variable derived from the
+                                functional fit</documentation>
+                        </annotation>
+                    </element>
+                    <element name="coefficient" type="smi:SD_PolynomialCoefficient_PropertyType"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <documentation>coefficient of a term in the polynomial
+                                function</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_RationalPolynomial_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_RationalPolynomial"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_RationalPolynomial" type="smi:SD_RationalPolynomial_Type" substitutionGroup="smi:SD_FittingFunction">
+        <annotation>
+            <documentation>rational polynomial used as fitting function</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_RationalPolynomial_Type">
+        <complexContent>
+            <extension base="smi:SD_FittingFunction_Type">
+                <sequence>
+                    <element name="numerator" type="smi:SD_Polynomial_PropertyType">
+                        <annotation>
+                            <documentation>numerator of the rational polynomial</documentation>
+                        </annotation>
+                    </element>
+                    <element name="denominator" type="smi:SD_Polynomial_PropertyType">
+                        <annotation>
+                            <documentation>denominator of rational polynomial</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_PolynomialCoefficient_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_PolynomialCoefficient"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_PolynomialCoefficient" type="smi:SD_PolynomialCoefficient_Type">
+        <annotation>
+            <documentation>coefficient of one term of a polynomial function</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_PolynomialCoefficient_Type">
+        <sequence>
+            <element name="value" type="gco:Real_PropertyType"/>
+            <element name="variable" type="smi:SD_Variable_PropertyType" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <documentation>set of variables to which the coefficient applies</documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="SD_Variable_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_Variable"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_Variable" type="smi:SD_Variable_Type" substitutionGroup="smi:Abstract_SMI">
+        <annotation>
+            <documentation>independent variable used in polynomial function</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_Variable_Type">
+        <complexContent>
+            <extension base="smi:Abstract_SMI_Type">
+                <sequence>
+                    <element name="dimension" type="msr:MD_DimensionNameTypeCode_PropertyType"></element>
+                    <element name="power" type="gco:Integer_PropertyType"/>
+                    <element name="scaleFactor" type="gco:Real_PropertyType" minOccurs="0"/>
+                    <element name="translationValue" type="gco:Real_PropertyType" minOccurs="0"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <!-- ==========True Replacement Model ================= -->
+    <complexType name="SD_TrueReplacementModel_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_TrueReplacementModel"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_TrueReplacementModel" type="smi:SD_TrueReplacementModel_Type">
+        <annotation>
+            <documentation>information describing the Ture Replacement Model</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_TrueReplacementModel_Type">
+        <complexContent>
+            <extension base="sml:SimpleProcessType">
+                <sequence>
+                    <element name="accuracy" type="mdq:Abstract_PositionalAccuracy_PropertyType">
+                        <annotation>
+                            <documentation>accuracy of the result produced by the fitting function</documentation>
+                        </annotation>
+                    </element>
+                    <element name="regionOfValidity">
+                        <annotation>
+                            <documentation>region of the image to which the fitting function
+                                applies</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="CV_GridPoint" type="gmlcov:CV_GridPoint_Type" minOccurs="3" maxOccurs="unbounded"></element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <choice>
+                        <element name="fitAsFunction" type="smi:SD_FittingFunction_PropertyType">
+                            <annotation>
+                                <documentation>using fitting function to relate image and ground
+                                    coordinates</documentation>
+                            </annotation>
+                        </element>
+                        <element name="fitAsGrid" type="smi:SD_TRMAsGrid_PropertyType">
+                            <annotation>
+                                <documentation>use of gridded GCP to relate image and ground
+                                    coordinates</documentation>
+                            </annotation>
+                        </element>
+                    </choice>
+                    <choice>
+                        <element name="controlPoints" type="msr:MI_GCPCollection_PropertyType">
+                            <annotation>
+                                <documentation>ground control points used to check or refine the
+                                    True Replacement Model</documentation>
+                            </annotation>
+                        </element>
+                        <element name="controlPointRepository" type="smi:SD_GCPRepository_PropertyType">
+                            <annotation>
+                                <documentation>information about repository from which the
+                                    collection of GCP used for checking or refining the True
+                                    Replacement Model may be obtained</documentation>
+                            </annotation>
+                        </element>
+                    </choice>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_TRMAsGrid_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_TRMAsGrid"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_TRMAsGrid" type="smi:SD_TRMAsGrid_Type" substitutionGroup="smi:SD_GriddedGCPCollection">
+        <annotation>
+            <documentation>True replacement Model as gridded GCPs</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_TRMAsGrid_Type">
+        <complexContent>
+            <extension base="smi:SD_GriddedGCPCollection_Type">
+                <sequence>
+                    <element name="interpolation" type="gmlcov:CV_InterpolationMethod_PropertyType">
+                        <annotation>
+                            <documentation>method to interpolate the location between
+                                GCPs</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+  <!-- 
+      <complexType name="CV_InterpolationMethod_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:CV_InterpolationMethod"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="CV_InterpolationMethod" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    -->
+  <!-- ============= Correspondence Model ============== -->
+    <complexType name="SD_CorrespondenceModel_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_CorrespondenceModel"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_CorrespondenceModel" type="smi:SD_CorrespondenceModel_Type">
+        <annotation>
+            <documentation>information abouut the Correspondence Model</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_CorrespondenceModel_Type">
+        <complexContent>
+            <extension base="sml:SimpleProcessType">
+                <sequence>
+                    <element name="fittingFunction" type="smi:SD_FittingFunction_Type">
+                        <annotation>
+                            <documentation>function relating image and ground
+                                coordinates</documentation>
+                        </annotation>
+                    </element>
+                    <element name="regionOfValidity">
+                        <annotation>
+                            <documentation>region of the image to which the fitting function
+                                applies</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="regionOfValidity" type="gmlcov:CV_GridPoint_PropertyType" minOccurs="3"
+                                    maxOccurs="unbounded"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <choice>
+                        <element name="controlPoints" type="msr:MI_GCPCollection_PropertyType">
+                            <annotation>
+                                <documentation>collection of control points used to derive the
+                                    fitting functions</documentation>
+                            </annotation>
+                        </element>
+                        <element name="repositoryGCP" type="smi:SD_GCPRepository_PropertyType">
+                            <annotation>
+                                <documentation>information about repository from which the
+                                    collection of GCP used for deriving the fitting function may be
+                                    obtained</documentation>
+                            </annotation>
+                        </element>
+                    </choice>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>

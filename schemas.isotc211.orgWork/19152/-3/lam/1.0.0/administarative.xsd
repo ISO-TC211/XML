@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lam="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>This package contains the classes defined as part of the MG_Administrative
+			section. Six classes and two code lists are defined. This section corresponds to the
+			administrative package inherited from LADM part 1. In addition, the MG_Goverance class
+			has been included to allow for the description of the context information from a
+			proclamation, law or treaty document.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="./lam.xsd"/>
+<!-- 	<xs:import namespace="https://schemas.isotc211.org/19152/-1/lad/1.0" schemaLocation="../../19152/-1/lad.xsd"/> -->
+	<xs:import namespace="https://schemas.isotc211.org/19152/-1/lad/1.0" schemaLocation="../../../../19152/-1/lad/1.0.0/lad.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_BAUnit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_BAUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_BAUnit" type="lam:MG_BAUnit_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_BAUnit_Type">
+		<xs:annotation>
+			<xs:documentation>MG_BAUnit represents an administrative entity consisting of zero or
+				more spatial units against which (one or more) unique and homogeneous rights (e.g.
+				state sovereign right or innocent passage right), responsibilities or restrictions
+				are associated to the whole entity, as included in a georegulation administration
+				system. A BAUnit administrative entity is an information object since it does not
+				directly take on spatial attributes. An information object is a structure defined in
+				IHO S-100.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Remarks: IHO provides guidance on the
+								structure of the MRN as a Globally Unique Identifier (GUID) based on
+								the Uniform Resource Identifier (URI) for those items under the
+								jurisdiction of the IHO. The type of URI used by IHO is a Universal
+								Resource Name (URN). This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: name Data Type: Character String
+								Definition: This optional attribute specifies the name of the Basic
+								Administrative Unit. Reference: ISO 19152-1 Similarity to Source:
+								identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="MG_BAUnitTypeList" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="BA_UnitType" type="lam:MG_BAUnitTypeList_PropertyType" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+							<xs:documentation>Domain: MG Name: type Data Type: MG_BAUnitTypeList
+								Definition: This attribute specifies the type of the Basic
+								Administrative Unit from the code list MG_BAUnitTypeList. The code
+								list is generic, but additional code list values have been included
+								based on the need to support IHO S-121. These are marked with a
+								stereotype &lt;MRN&gt;. Reference: ISO 19152-1 Similarity to Source:
+								additional code list items identified as &lt;MRN&gt; are unique to
+								Marine Georegulation domain.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="uID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: uID Data Type: Oid Definition: This
+								attribute is the identifier of the Basic Administrative Unit which
+								allows reference to "MG_BAUnit" information objects using the “Oid”
+								(Object ID) attribute type. The “Oid” comprises a unique character
+								string and a namespace identifier which is also a unique character
+								string. Reference: ISO 19152-1 Similarity to Source:
+								specialization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="unit1" type="lam:MG_BAUnit_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Basic Administrative Unit which acts as target of
+								BAUnit to BAUnit relationship.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fu" type="lam:MG_AbstractFeatureUnit_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Feature Unit or units associated with one or more
+								Basic Administrative Units.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="party" type="lam:MG_Party_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Party established by a Basic Administrative
+								Unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing a Basic Administrative
+								Unit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_BAUnitTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_BAUnitTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_BAUnitTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_BAUnitTypeList" type="lam:MG_BAUnitTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_BAUnitTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>This code list describes categories of MG_BAUnitTypeList Code List
+				Type: open enumeration Definition: Categories of "BAUnitType". Reference: IHO S-121
+				for &lt;MLB&gt; entries This code list describes the types of BAUnits that may be
+				established in the Marine Space Georegulation (MG) domain. The code list is generic,
+				but additional code list values have been included based on the need to support IHO
+				S-121. These are marked with a stereotype &lt;MRN&gt;. The code list may be
+				registered in a Feature Concept Dictionary as listed values and as such can be
+				expanded to include other releasability types. For those types related to the IHO
+				this code list is registered in the IHO Feature Concept Dictionary as listed values
+				and as such can be expanded within the IHO process.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fishingAdminUnits" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Associated Attribute: BAUnitTypeList Name:
+						maritimeLimitsAndBoundaries Definition: Administrative Unit related to
+						fishing Reference: Definition Source: Similarity to Source: Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maritimeLimitsAndBoundaries" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Associated Attribute: BAUnitTypeList Name:
+						maritimeLimitsAndBoundaries Definition: Administrative Unit related to
+						"Maritime Limits and Boundaries" Reference: IHO S-121 Definition Source: IHO
+						S-121 Similarity to Source: identical Remarks: Registered as a code list
+						value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="otherAdminUnits" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Associated Attribute: BAUnitTypeList Name:
+						maritimeLimitsAndBoundaries Definition: Other Administrative Unit Reference:
+						Definition Source: Similarity to Source: Remarks: Registered as a code list
+						value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resourceAdminUnits" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Associated Attribute: BAUnitTypeList Name:
+						resourceAdminUnits Definition: Administrative Unit relates to resource
+						management Reference: Definition Source: Similarity to Source: Remarks:
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Governance_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Governance"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Governance" type="lam:MG_Governance_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Governance_Type">
+		<xs:annotation>
+			<xs:documentation>MG_Governance is a description of the context information from a
+				proclamation, law or treaty document. Reference: IHO S-121 Governance information
+				defines title, reference number, date and other associated information linked to the
+				particular proclamation, law and treaty documents to support the provision of
+				specific description or interpretation that is applicable to the selected set of
+				features. MG_Governance contains the direct text from a proclamation, law or treaty
+				document. This is different from MG_Source which is a reference. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="dateApproved" type="gco:DateTime_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: dateApproved Data Type: DateTime
+								Definition: This attribute provides the date at which the statement
+								or document was approved by the appropriate governing body. Remarks:
+								This attribute is used in IHO S-121 and is registered as an
+								attribute type in the IHO Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dateConsidered" type="gco:DateTime_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: dateConsidered Data Type: DateTime
+								Definition: This attribute provides the date at which the statement
+								or document was considered by the appropriate governing body.
+								Remarks: This attribute is used in IHO S-121 and is registered as an
+								attribute type in the IHO Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source:
+								restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dateIntroduced" type="gco:DateTime_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: dateIntroduced Data Type: DateTime
+								Definition: This attribute provides the date at which the statement
+								or document was introduced. Remarks: This attribute is used in IHO
+								S-121 and is registered as an attribute type in the IHO Geospatial
+								Information Registry &lt;https://registry.iho.int/&gt;. Reference:
+								IHO S-121 Definition Source: IHO S-121 Similarity to Source:
+								restructured</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Remarks: IHO provides guidance on the
+								structure of the MRN as a Globally Unique Identifier (GUID) based on
+								the Uniform Resource Identifier (URI) for those items under the
+								jurisdiction of the IHO. The type of URI used by IHO is a Universal
+								Resource Name (URN). This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="governanceDescription" type="gco:CharacterString_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: governanceDescription Data Type:
+								CharacterString Definition: This attribute provides supporting
+								information describing the governance statement. Remarks: This
+								attribute is used in IHO S-121 and is registered as an attribute
+								type in the IHO Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;. Reference: IHO S-121 Definition
+								Source: IHO S-121 Similarity to Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="governanceTitle" type="gco:CharacterString_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: governanceTitle Data Type:
+								CharacterString Definition: This attribute provides the title of the
+								governance object. Remarks: This attribute is used in IHO S-121 and
+								is registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="govID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<!-- <xs:element name="govID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1"> -->
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: govID Data Type: Oid Definition:This
+								attribute is the identifier of the MG_Governance class using the
+								“Oid” (Object ID) attribute type. Remarks: The "Oid" comprises a
+								unique character string and a namespace identifier which is also a
+								unique character string. An example might be "Governance-1" where
+								"Governance" is the namespace and "1" is the unique id within that
+								namespace. This attribute is used in IHO S-121 and is registered in
+								the IHO register. Reference: IHO S-121 Definition Source: IHO S-121
+								Similarity to Source: generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="label" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: Label Data Type: CharacterString
+								Definition: This optional attribute provides a short textual
+								identifier of the governance object. Remarks: This attribute is used
+								in IHO S-121 and is registered as an attribute type in the IHO
+								Geospatial Information Registry &lt;https://registry.iho.int/&gt;.
+								Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+								Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: name Data Type: CharacterString
+								Definition: This optional attribute provides the name of the
+								governance object. Remarks: This attribute is used in IHO S-121 and
+								is registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="referenceNumber" type="gco:CharacterString_PropertyType" minOccurs="1"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: referenceNumber Data Type:
+								CharacterString Definition: This attribute describes the reference
+								number of the governance reference. Remarks: This attribute is used
+								in IHO S-121 and is registered as an attribute type in the IHO
+								Geospatial Information Registry &lt;https://registry.iho.int/&gt;.
+								Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+								Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="releasabilityType" type="lam:MG_ReleasabilityTypeList_PropertyType"
+						minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: releasabilityType Data Type:
+								MG_ReleasabilityTypeList Definition: This attribute is used to
+								differentiate between releasability status for governance
+								information. Remarks: This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalized</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="administrativeContext" type="lam:MG_BAUnit_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Basic Administrative Unit in which context is
+								described by one or more Governance objects.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing a Governance
+								object</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_ReleasabilityTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_ReleasabilityTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_ReleasabilityTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="MG_ReleasabilityTypeList" type="lam:MG_ReleasabilityTypeList_Type"/>-->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_ReleasabilityTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>This code list describes categories of MG_ReleasabilityTypeList Code
+				List Type: Open Enumeration Definition: A list of value providing a releasability
+				status. Different releasability regimes may exist in various organizations or
+				countries. This code list may be subtyped, extended or replaced in different
+				implementations. The code list may be registered in a Feature Concept Dictionary as
+				listed values and as such can be expanded to include other releasability types. For
+				those BAUnits related to the IHO this code list is registered in the IHO Feature
+				Concept Dictionary &lt;https://registry.iho.int/&gt; as listed values and as such
+				can be expanded within the IHO process.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="controlled" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: controlled
+						Definition: Describes an information element that can only be through
+						released through a defined process. Reference: IHO S-121 Definition Source:
+						IHO S-121 Similarity to Source: identical Remarks: The exact meaning of the
+						releasability status depends upon the regime in place in various
+						organizations or countries. Registered as a code list value in the IHO
+						Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="internal" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: : internal
+						Definition: Describes a information element that can only be released
+						internally Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: identical Remarks: The exact meaning of the releasability status
+						depends upon the regime in place in various organizations or countries.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="official" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: official
+						Definition: Describes an information element that can be officially
+						released. Reference: IHO S-121 Definition Source: IHO S-121 Similarity to
+						Source: identical Remarks: The exact meaning of the releasability status
+						depends upon the regime in place in various organizations or countries.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="other" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Name: other Definition:
+						Describes an information element which has a releasibility status other than
+						that described in the code list. Reference: none Definition Source:
+						Similarity to Source: Remarks: The exact meaning of the releasability status
+						depends upon the regime in place in various organizations or countries.
+						Registered as a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Responsibility_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Responsibility"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Responsibility" type="lam:MG_Responsibility_Type" substitutionGroup="lam:MG_AbstractRRR"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Responsibility_Type">
+		<xs:annotation>
+			<xs:documentation>MG_Responsibility represents aformal or informal obligation to do
+				something. Realized from ISO 19152-1 LADM "LA_Responsibility". The MG_Responsibility
+				object is an information object that carries an object identifier "Oid". A
+				"Responsibility" may be re-used by several Feature objects. This object is realized
+				from ISO 19152-1 because it takes on a character string type rather than a code list
+				as an attribute. This is an information object since it does not directly take on
+				spatial attributes.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractRRR_Type">
+				<xs:sequence>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Remarks: IHO provides guidance on the
+								structure of the MRN as a Globally Unique Identifier (GUID) based on
+								the Uniform Resource Identifier (URI) for those items under the
+								jurisdiction of the IHO. The type of URI used by IHO is a Universal
+								Resource Name (URN). This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="responsibilityType" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+							<xs:annotation>
+							<xs:documentation>Domain: MG Name: type Data Type: CharacterString
+								Definition: This attribute specifies the type of the responsibility.
+								Reference: ISO 19152-1 Similarity to Source: generalization.
+								Remarks: Any type of responsibility may be specified consistent with
+								the class of feature and the associated legal instrument. For
+								example, a responsibility may exist to maintain an undersea cable
+								over which a party has an ownership right.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Restriction_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Restriction"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Restriction" type="lam:MG_Restriction_Type" substitutionGroup="lam:MG_AbstractRRR"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Restriction_Type">
+		<xs:annotation>
+			<xs:documentation>MG_Restriction describes a formal or informal entitlement to refrain
+				from doing something. Realized from ISO 19152-1 LADM "LA_Restriction". The
+				MG_Restriction object is an information object that carries an object identifier
+				"Oid". A "Restriction" may be re-used by several Feature objects. This object is
+				realized from ISO 19152-1 because it takes on a character string type rather than a
+				code list as an attribute. This is an information object since it does not directly
+				take on spatial attributes.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractRRR_Type">
+				<xs:sequence>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Remarks: IHO provides guidance on the
+								structure of the MRN as a Globally Unique Identifier (GUID) based on
+								the Uniform Resource Identifier (URI) for those items under the
+								jurisdiction of the IHO. The type of URI used by IHO is a Universal
+								Resource Name (URN). This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="partyRequired" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: partyRequired Data Type: Boolean
+								Definition: This optional attribute specifies a boolean flag
+								indicating whether a party is required for the registration of the
+								restriction in the association to LA_Party. Reference: ISO 19152-1
+								Similarity to Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="restrictionType" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+							<xs:annotation>
+							<xs:documentation>Domain: MG Name: type Data Type: CharacterString
+								Definition: This attribute specifies the type of the restriction.
+								Reference: ISO 19152-1 Similarity to Source: generalization.
+								Remarks: Any type of restriction may be specified consistent with
+								the class of feature and the associated legal instrument. For
+								example, a restriction on navigation may exist in certain
+								waters.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Right_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Right"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Right" type="lam:MG_Right_Type" substitutionGroup="lam:MG_AbstractRRR"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Right_Type">
+		<xs:annotation>
+			<xs:documentation>MG_Right represents a "Right" (or social tenure relationship), An
+				action, activity or class of actions that a system participant may perform on or
+				using an associated resource. Realized from ISO 19152-1 LADM "LA_Right". The
+				MG_Right object is an information object that carries an object identifier "Oid". A
+				"Right" may be re-used by several Feature objects. This object is realized from ISO
+				19152-1 because it takes on a character string type rather than a code list as an
+				attribute. This is an information object since it does not directly take on spatial
+				attributes. An information object is a structure defined in IHO
+				S-100.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lam:MG_AbstractRRR_Type">
+				<xs:sequence>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: gID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Remarks: IHO provides guidance on the
+								structure of the MRN as a Globally Unique Identifier (GUID) based on
+								the Uniform Resource Identifier (URI) for those items under the
+								jurisdiction of the IHO. The type of URI used by IHO is a Universal
+								Resource Name (URN). This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;. Reference: IHO S-121
+								Definition Source: IHO S-121 Similarity to Source:
+								generalization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="RightType" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: type Data Type: CharacterString
+								Definition: This attribute specifies the type of the right.
+								Reference: ISO 19152-1 Similarity to Source: generalization Remarks:
+								Any type of right may be specified consistent with the class of
+								feature and the associated legal instrument. For example, a
+								sovereign right may be established on territorial waters as defined
+								under the UNCLOS convention.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_AbstractRRR_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_AbstractRRR"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_AbstractRRR" type="lam:MG_AbstractRRR_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_AbstractRRR_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The MG_AbstractRRR class is an abstract collection class allowing for the
+				definition of Rights, Restrictions and/or Responsibilities. A subclass of LA_AbstractRRR is
+				a "Right" (or social tenure relationship), a "Restriction", or a "Responsibility".
+				This class and its subtypes are realized from LA_AbstractRRR as defined in 19152 -1. The RRR
+				objects are information objects that carry an object identifier "Oid". They can be
+				referenced as objects from the attributes associated with a Feature Object. This
+				allows "Right", "Responsibility" and "Restrictions" to be re-used by several
+				objects. That is, several objects may reference the same RRR objects. MG_AbstractRRR is an
+				information object since it does not directly take on spatial attributes. An
+				information object is a structure defined in IHO S-100.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: description Data Type: Character
+								String Definition: This optional attribute provides a description
+								regarding the Rights, Restrictions and Responsibilities. Reference:
+								ISO 19152-1 Similarity to Source: identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<!-- <xs:element name="rID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1"> -->
+						<xs:annotation>
+							<xs:documentation>The RRR identifier Domain: MG Name: rID Data Type: Oid
+								Definition: This attribute is the identifier of the RRR Unit which
+								allows reference to "MG_BAUnit" information objects using the “Oid”
+								(Object ID) attribute type. The “Oid” comprises a unique character
+								string and a namespace identifier which is also a unique character
+								string. Reference: ISO 19152-1 Similarity to Source:
+								specialization</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="share" type="lad:Fraction_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: share Data Type: Character String
+								Definition: This optional attribute specifies a share in an instance
+								of a subclass of MG_AbstractRRR. This takes on the data type fraction.
+								Reference: ISO 19152-1 Similarity to Source:
+								identical</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="shareCheck" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: share Data Type: Boolean Definition:
+								This optional attribute specifies a boolean flag indicating whether
+								the constraint is applicable. Reference: ISO 19152-1 Similarity to
+								Source: identical Remarks: The constraint applies to the relation of
+								MG_AbstractRRR elements to the MG_BAUnit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="timeSpec" type="gco:DateTime_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: share Data Type: DateTime Definition:
+								This optional attribute specifies the operational use of a right
+								with respect to time. Reference: ISO 19152-1 Similarity to Source:
+								generalization Remarks: This may be used to express a fishing season
+								or other time sensitive rights.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="unit" type="lam:MG_BAUnit_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A Basic Administrative Unit associated to a Right,
+								Restriction or Responsibility .</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dependance" type="lam:MG_AbstractRRR_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>A Right, Restriction or Responsibility that is
+								optionally related from one or more other Rights, Restrictions or
+								Responsibilities.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing a Right, Restriction or
+								Responsibility as represented by MG_AbstractRRR.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

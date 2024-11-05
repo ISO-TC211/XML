@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="CV_Coordinate" type="CV_Coordinate"/>
+	<xs:complexType name="CV_Coordinate">
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="CV_Coverage" type="CV_Coverage"/>
+	<xs:complexType name="CV_Coverage" abstract="true">
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="CV_Extent" type="CV_Extent"/>
+	<xs:complexType name="CV_Extent">
+		<xs:sequence>
+			<xs:element name="crs" type="CRS" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lowerBounds" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="upperBounds" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CV_ValueSet" type="CV_ValueSet"/>
+	<xs:complexType name="CV_ValueSet">
+		<xs:sequence>
+			<xs:element name="value" type="Record" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ImageCRS" type="ImageCRS"/>
+	<xs:complexType name="ImageCRS">
+		<xs:complexContent>
+			<xs:extension base="IndexCRS">
+				<xs:sequence>
+					<xs:element name="ImageCS" type="ImageCS" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="ImageDatum" type="ImageDatum" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ImageCS" type="ImageCS"/>
+	<xs:complexType name="ImageCS">
+		<xs:complexContent>
+			<xs:extension base="IndexCS">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ImageDatum" type="ImageDatum"/>
+	<xs:complexType name="ImageDatum">
+		<xs:annotation>
+			<xs:documentation>This is a dummy class to achieve structural coherence with 19111 CRS modelling. The datum of an Image CRS always is (0.0).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="IndexDatum">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IndexCRS" type="IndexCRS"/>
+	<xs:complexType name="IndexCRS">
+		<xs:complexContent>
+			<xs:extension base="EngineeringCRS">
+				<xs:sequence>
+					<xs:element name="IndexCS" type="IndexCS" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="IndexDatum" type="IndexDatum" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IndexCS" type="IndexCS"/>
+	<xs:complexType name="IndexCS">
+		<xs:complexContent>
+			<xs:extension base="CartesianCS">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IndexDatum" type="IndexDatum"/>
+	<xs:complexType name="IndexDatum">
+		<xs:annotation>
+			<xs:documentation>This is a dummy class to achieve structural coherence with 19111 CRS modelling. The datum of an Index CRS always is (0,...,0).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="EngineeringDatum">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

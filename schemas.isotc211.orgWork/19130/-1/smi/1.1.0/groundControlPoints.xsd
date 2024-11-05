@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0"
+  xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
+  xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
+  xmlns:igd="https://schemas.isotc211.org/19163/-1/igd/1.1"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+    version="1.1.0"
+    >
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19163/-1/igd/1.1" schemaLocation="https://schemas.isotc211.org/19163/-1/igd/1.1.0/igd.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19163/-1/igd/1.1" schemaLocation="https://schemas.isotc211.org/19163/-1/igd/1.1.0/IE_ImageryAndGriddedData.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+     <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrs/1.3.0/mrs.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="https://schemas.isotc211.org/19115/-2/msr/2.2.0/spatialRepresentationImagery.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
+
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/sensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/spatialElements.xsd"/>
+    
+    <!-- ============= Ground control points ==============-->
+    <complexType name="SD_GCPRepository_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_GCPRepository"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_GCPRepository" type="smi:SD_GCPRepository_Type">
+        <annotation>
+            <documentation>information required to obtain ground control point information from a
+                repository of ground control points</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_GCPRepository_Type">
+        <complexContent>
+            <extension base="sml:SimpleProcessType">
+                <sequence>
+                    <element name="accessInformation" type="cit:CI_Contact_PropertyType">
+                        <annotation>
+                            <documentation>if accessRestricted is true, point of contact who may
+                                authorize access to th data; if accessRestricted false, mechanism
+                                for obtaining the ground control point data.</documentation>
+                        </annotation>
+                    </element>
+                    <element name="accessRestricted" type="gco:Boolean_PropertyType">
+                        <annotation>
+                            <documentation>whether image provider is limiting access to ground
+                                control point information</documentation>
+                        </annotation>
+                    </element>
+                    <element name="controlPoints" type="msr:MI_GCPCollection_PropertyType" minOccurs="0">
+                        <annotation>
+                            <documentation>
+                                information about a control point collection
+                            </documentation>
+                        </annotation>
+                    </element>
+                </sequence>  
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SD_LocationGCP_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_LocationGCP"/>
+        </sequence>   
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_LocationGCP" type="smi:SD_LocationGCP_Type" substitutionGroup="msr:MI_GCP">
+        <annotation>
+            <documentation>ground control point for which image coordinates have been
+                determined</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_LocationGCP_Type">
+        <complexContent>
+            <extension base="msr:MI_GCP_Type">
+                <sequence>
+                    <element name="gridCoordinates" type="gmlcov:CV_GridCoordinates_PropertyType"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="SD_ImageIdentifiableGCP_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ImageIdentifiableGCP"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_ImageIdentifiableGCP" type="smi:SD_ImageIdentifiableGCP_Type" substitutionGroup="msr:MI_GCP">
+        <annotation>
+            <documentation>ground control point that is either marked in the image or described so
+                that the user can find it in the image.</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ImageIdentifiableGCP_Type">
+        <complexContent>
+            <extension base="msr:MI_GCP_Type">
+                <sequence>
+                    <element name="description" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>description of the ground control point sufficient to
+                                enable the user to find the image of the ground control point in the
+                                larger image</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+ 
+    <complexType name="SD_GriddedGCPCollection_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_GriddedGCPCollection"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_GriddedGCPCollection" type="smi:SD_GriddedGCPCollection_Type" substitutionGroup="msr:MI_GCPCollection">
+        <annotation>
+            <documentation>ground control points regularly spaced in either image coordinates or
+                ground coordinates and given as a grid</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_GriddedGCPCollection_Type">
+        <complexContent>
+            <extension base="msr:MI_GCPCollection_Type">
+                <sequence>
+                    <element name="dimension" type="gco:Integer_PropertyType">
+                        <annotation>
+                            <documentation>number of dimensions in the GCP grid</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+ 
+    <complexType name="SD_ImageGridGCPCollection_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ImageGridGCPCollection"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_ImageGridGCPCollection" type="smi:SD_ImageGridGCPCollection_Type" substitutionGroup="smi:SD_GriddedGCPCollection">
+        <annotation>
+            <documentation>ground control points regularly spaced in either image coordinates or
+                ground coordinates and given as a grid</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ImageGridGCPCollection_Type">
+        <complexContent>
+            <extension base="smi:SD_GriddedGCPCollection_Type">
+                <sequence>
+                    <element name="origin" type="gmlcov:CV_GridCoordinates_PropertyType">
+                        <annotation>
+                            <documentation>position of the first grid cell with coordinate
+                                [0,0,(0)]</documentation>
+                        </annotation>
+                    </element>
+                    <!--  -->
+                    <element name="spacing">
+                        <annotation>
+                            <documentation>size of the step in the number of pixels for each
+                                dimension in image coordinates</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Integer" type="gco:Integer_PropertyType" minOccurs="2" maxOccurs="3"></element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+   
+    <complexType name="SD_ObjectGridGCPCollection_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ObjectGridGCPCollection"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_ObjectGridGCPCollection" type="smi:SD_ObjectGridGCPCollection_Type" substitutionGroup="smi:SD_GriddedGCPCollection">
+        <annotation>
+            <documentation>ground control points regularly spaced in object coordinates and given as
+                a grid</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ObjectGridGCPCollection_Type">
+        <complexContent>
+            <extension base="smi:SD_GriddedGCPCollection_Type">
+                <sequence>
+                    <element name="offsets">
+                        <annotation>
+                            <documentation>size of the steps in the object coordinates for each
+                                dimension in object coordinates</documentation>
+                        </annotation>
+                        <complexType>
+                            <sequence>
+                                <element name="Vector" type="swe:VectorType" minOccurs="2" maxOccurs="3"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="origin" type="gml:DirectPositionType">
+                        <annotation>
+                            <documentation>position of the first grid cell, with coordinate
+                                [0,0,(0)], of the GCP grid in object coordinates</documentation>
+                        </annotation>
+                    </element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+</schema>

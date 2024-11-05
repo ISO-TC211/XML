@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:igd="https://schemas.isotc211.org/19163/-1/igd/1.1"
+  xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+  xmlns:gmw="https://schemas.isotc211.org/19136/-1/gmw/1.1"
+  xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+    targetNamespace="https://schemas.isotc211.org/19163/-1/igd/1.1"
+    elementFormDefault="qualified"
+    version="1.1.0">
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/content.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19136/-1/gmw/1.1" schemaLocation="https://schemas.isotc211.org/19136/-1/gmw/1.1.0/gmlWrapperTypes.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="https://schemas.isotc211.org/19115/-2/mrl/2.2.0/lineageImagery.xsd"/>
+    <xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <xs:include schemaLocation="../../../../19163/-1/igd/1.1.0/igd.xsd"/>
+    <!--........................................................................................................
+-->
+    <xs:complexType name="IE_ThematicGriddedData_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_ThematicGriddedData"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_ThematicGriddedData" substitutionGroup="igd:IE_ImageryAndGriddedData" type="igd:IE_ThematicGriddedData_Type"/>
+    <xs:complexType name="IE_ThematicGriddedData_Type">
+        <xs:complexContent>
+            <xs:extension base="igd:IE_ImageryAndGriddedData_Type">
+                <xs:sequence>
+                    <xs:element name="dataInfo" type="mrc:MD_CoverageDescription_Type"/>
+                    <xs:element name="annotation" type="gml:GeometryPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="geographicFeature" type="gml:GeometryPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="retrievalProcessingInfo" type="mrl:LE_Processing_Type" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="sourceInfo" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--........................................................................................................
+-->
+    <xs:complexType name="IE_CategoricalGriddedData_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_CategoricalGriddedData"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_CategoricalGriddedData" substitutionGroup="igd:IE_ThematicGriddedData" type="igd:IE_CategoricalGriddedData_Type"/>
+    <xs:complexType name="IE_CategoricalGriddedData_Type">
+        <xs:complexContent>
+            <xs:extension base="igd:IE_ThematicGriddedData_Type">
+                <xs:sequence>
+                    <xs:element name="classficationDescription" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="numberOfCatagories" type="gco:Integer_PropertyType"/>
+                    <xs:element name="bitsPerValue" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="lookupTable" minOccurs="0" maxOccurs="unbounded" type="igd:IE_CategoricalValueAndColour_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--........................................................................................................
+-->
+    <xs:complexType name="IE_NumericalGriddedData_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_NumericalGriddedData"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_NumericalGriddedData" substitutionGroup="igd:IE_ThematicGriddedData" type="igd:IE_NumericalGriddedData_Type"/>
+    <xs:complexType name="IE_NumericalGriddedData_Type">
+        <xs:complexContent>
+            <xs:extension base="igd:IE_ThematicGriddedData_Type">
+                <xs:sequence>
+                    <xs:element name="valueDescription" type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!--........................................................................................................
+-->
+    <xs:complexType name="IE_CategoricalValueAndColour_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_CategoricalValueAndColour"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_CategoricalValueAndColour" type="igd:IE_CategoricalValueAndColour_Type"/>
+    <xs:complexType name="IE_CategoricalValueAndColour_Type">
+        <xs:sequence>
+            <xs:element name="categoryName" type="gco:CharacterString_PropertyType"/>
+            <xs:element name="value" type="gco:Integer_PropertyType"/>
+            <xs:element name="colourPallette" type="igd:IE_ColourPalette_PropertyType" minOccurs="0" maxOccurs="1"/>
+            <!-- <xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1"/> -->
+        </xs:sequence>
+    </xs:complexType>
+    <!--........................................................................................................
+-->
+    <xs:complexType name="IE_ColourPalette_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="igd:IE_ColourPalette"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <xs:element name="IE_ColourPalette" type="igd:IE_ColourPalette_Type"/>
+    <xs:complexType name="IE_ColourPalette_Type">
+        <xs:sequence>
+            <xs:element name="red" type="gco:Integer_PropertyType"/>
+            <xs:element name="green" type="gco:Integer_PropertyType"/>
+            <xs:element name="blue" type="gco:Integer_PropertyType"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,104 @@
+= Geospatial Common Objects (GCO)
+:edition: 1.2
+:revdate: 2022-09-16
+
+== Geospatial Common Objects (GCO) Version: 1.2
+
+=== Description
+
+GCO 1.2 is an XML Schema implementation derived from ISO 19103:2015, Geographic
+Information - Conceptual schema language. It includes utility elements for Geographic
+Common Objects. The XML schema was encoded using the rules described in ISO/TS
+19139:2007.
+
+=== XML Namespace for gco 1.2
+
+The namespace URI for gco 1.2 is `https://schemas.isotc211.org/19103/-/gco/1.2`.
+
+=== XML Schema for gco 1.2
+
+https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd[gco.xsd] is the XML Schema document to
+be referenced by XML documents containing XML elements in the gco 1.2 namespace or by
+XML Schema documents importing the gco 1.2 namespace. This XML schema includes
+(indirectly) all the implemented concepts of the gco namespace, but it does not
+contain the declaration of any types.
+
+=== Related XML Schema for gco 1.2
+
+https://schemas.isotc211.org/19103/-/gco/1.2.0/baseTypes.xsd[baseTypes.xsd] implements the
+UML conceptual schema defined in ISO 19103:2015, Geographic Information - Conceptual
+schema language. It was created using the encoding rules defined in ISO 19118, ISO
+19139.
+
+https://schemas.isotc211.org/19103/-/gco/1.2.0/baseTypes.xsd
+contains the following classes:
+
+* AbstractObject
+* TypeName
+* MemberName
+* Multiplicity
+* MultiplicityRange
+* CharacterString
+* Boolean
+* DateTime
+* Date
+* Decimal
+* Real
+* Integer
+* UnlimitedInteger
+* Record
+* Field
+* RecordType
+* FieldType
+* Binary
+* UomIdentifier
+* UomSymbol
+* UomURI
+* UomIdentifierType
+* UomArea
+* UomAngle
+* UomAngularAcceleration
+* UomSpeed
+* UomVolume
+* UomScale
+* UomVelocity
+* UomLength
+* UomAcceleration
+* UomAngularSpeed
+* UomCurrency
+* UomTime
+* UomWeight
+* Measure
+* Length
+* Distance
+* Angle
+* TimeMeasure
+* Volume
+* Weight
+* Area
+* Currency
+* Angular
+* Speed
+* Scale
+* DirectMeasurement
+* ScopeName
+* TM_PeriodDuration
+
+=== Related XML Namespaces for cit 1.3
+
+The cit 1.3 namespace imports these other namespaces:
+
+[%unnumbered]
+[options=header,cols=4]
+|===
+| Name | Standard Prefix | Namespace Location | Schema Location
+
+| Sensor Web Enablement | swe |
+http://www.opengis.net/swe/2.0[http://www.opengis.net/swe/2.0] |
+http://schemas.opengis.net/sweCommon/2.0/swe.xsd
+|===
+
+=== Working Versions
+
+When revisions to these schema become necessary, they will be managed in the
+https://github.com/ISO-TC211/XML[ISO TC211 Git Repository].

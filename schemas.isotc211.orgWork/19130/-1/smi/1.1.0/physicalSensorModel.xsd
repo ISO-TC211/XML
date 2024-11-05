@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"    
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+    version="1.1.0"
+    >
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/simple_components.xsd"/>
+
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/groundControlPoints.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/sensorParameters.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/sensorParameters.xsd"/>
+
+    <!-- ______________________________ -->
+    
+    <complexType name="SD_PhysicalSensorModel_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_PhysicalSensorModel"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_PhysicalSensorModel" type="smi:SD_PhysicalSensorModel_Type" substitutionGroup="sml:AggregateProcess"/>
+    <complexType name="SD_PhysicalSensorModel_Type">
+        <annotation>
+            <documentation>Information describing the Physical Sensor Model</documentation>
+        </annotation>
+        <complexContent>
+            <extension base="sml:AggregateProcessType">
+                <sequence>
+                    <element name="regionOfValidity" maxOccurs="unbounded">
+                        <complexType>
+                            <sequence>
+                                <element name="CV_GridPoint" type="gmlcov:CV_GridPoint_Type" minOccurs="3" maxOccurs="unbounded"></element>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    <element name="sensorInformation" type="smi:SD_SensorParameters_PropertyType" minOccurs="1" maxOccurs="1"/>
+                    <!-- v== groundControlPoints Information ==v -->
+                    <choice>
+                        <element name="controlPointRespository" type="smi:SD_GCPRepository_PropertyType" minOccurs="0"/>
+                        <element name="controlPoints" type="msr:MI_GCPCollection_PropertyType" minOccurs="0" />
+                    </choice>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+</schema>

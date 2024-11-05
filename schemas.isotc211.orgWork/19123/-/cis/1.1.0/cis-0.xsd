@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+  targetNamespace="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.0"
+  >
+  <include schemaLocation="../../../../19123/-/cis/1.1.0/gridPoint.xsd"/>
+  <include schemaLocation="../../../../19123/-/cis/1.1.0/codeLists.xsd"/>
+  <include schemaLocation="../../../../19123/-2/cis/1.1.0/gmlcovAll.xsd"/>
+  <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+   </schema>

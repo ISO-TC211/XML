@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:sri="https://schemas.isotc211.org/19112/-/sri/2.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19107/-/gss/1.0" schemaLocation="../../../../19107/-/gss/1.0.0/gss.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19112/-/sri/2.0" schemaLocation="../../../../19112/-/sri/2.0.0/sri.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/network.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/linearReferenceSystem.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/featureDataModel.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/address.xsd"/>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_Accuracy_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_Accuracy"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_Accuracy" type="lbs:TK_Accuracy_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_Accuracy_Type">
+		<xs:sequence>
+			<xs:element name="accuracyType" type="lbs:TK_AccuracyType_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sigma" type="gco:Number_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="sigmaLevel" type="gco:Number_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="units" type="gco:UomIdentifier_PropertyType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_AccuracyStatement_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_AccuracyStatement"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_AccuracyStatement" type="lbs:TK_AccuracyStatement_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_AccuracyStatement_Type">
+		<xs:sequence>
+			<xs:element name="accuracy" type="lbs:TK_Accuracy_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="axis" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_AccuracyType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_AccuracyType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_AccuracyType" type="lbs:TK_AccuracyType_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_AccuracyType_Type">
+		<xs:sequence>
+			<xs:element name="circularRMS" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ellipticalRMS" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="linear" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_MobileSubscriber_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_MobileSubscriber"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_MobileSubscriber" type="lbs:TK_MobileSubscriber_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_MobileSubscriber_Type">
+		<xs:sequence>
+			<xs:element name="id" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="location" type="lbs:TK_TrackingLocation_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_PeriodicTrigger_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_PeriodicTrigger"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_PeriodicTrigger" type="lbs:TK_PeriodicTrigger_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_PeriodicTrigger_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:TK_Trigger_Type">
+				<xs:sequence>
+					<xs:element name="maxTime" type="gml:TimePrimitivePropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="minTime" type="gml:TimePrimitivePropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_Position_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_Position"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_Position" type="lbs:TK_Position_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_Position_Type">
+		<xs:annotation>
+			<xs:documentation>This class locates a position or place within the network. It should always be interpretable as a direct position (coordinate in a reference system)
+an address or as a network position.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="address" type="lbs:AD_AbstractAddress_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="directPosition" type="gss:DirectPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="featureID" type="lbs:FD_FeatureName_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="linearReference" type="lbs:LR_PositionExpression_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="networkPosition" type="lbs:NT_NetworkPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="phone" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="placeName" type="sri:Location_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_PositionType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_PositionType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_PositionType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="TK_PositionType" type="lbs:TK_PositionType_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType name="TK_PositionType_Type">
+		<xs:sequence>
+			<xs:element name="address" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="coordinate" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="feature" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="linearReference" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="network" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="phone" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="placeName" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_QualityOfPosition_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_QualityOfPosition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_QualityOfPosition" type="lbs:TK_QualityOfPosition_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_QualityOfPosition_Type">
+		<xs:sequence>
+			<xs:element name="accuracyStatement" type="lbs:TK_AccuracyStatement_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_TrackingLocation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_TrackingLocation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_TrackingLocation" type="lbs:TK_TrackingLocation_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_TrackingLocation_Type">
+		<xs:sequence>
+			<xs:element name="direction" type="gco:Angle_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="position" type="lbs:TK_Position_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="speed" type="gco:Speed_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="time" type="gml:TimePrimitivePropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="metadata" type="lbs:TK_TrackingLocationMetadata_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_TrackingLocationMetadata_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_TrackingLocationMetadata"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_TrackingLocationMetadata" type="lbs:TK_TrackingLocationMetadata_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_TrackingLocationMetadata_Type">
+		<xs:sequence>
+			<xs:element name="clientID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ms" type="lbs:TK_MobileSubscriber_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="quality" type="lbs:TK_QualityOfPosition_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="time" type="gml:TimePrimitivePropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="trigger" type="lbs:TK_Transition_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_TrackingLocationSequence_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_TrackingLocationSequence"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_TrackingLocationSequence" type="lbs:TK_TrackingLocationSequence_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_TrackingLocationSequence_Type">
+		<xs:sequence>
+			<xs:element name="ms" type="lbs:TK_MobileSubscriber_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sequenceID" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_TrackingService_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_TrackingService"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_TrackingService" type="lbs:TK_TrackingService_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_TrackingService_Type">
+		<xs:sequence>
+			<xs:element name="mobileSubscriber" type="lbs:TK_MobileSubscriber_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_Transition_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_Transition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_Transition" type="lbs:TK_Transition_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_Transition_Type">
+		<xs:sequence>
+			<xs:element name="availability" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="deltaDirection" type="gco:Angle_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="deltaPosition" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="time" type="gml:TimePrimitivePropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="type" type="lbs:TK_TransitionType_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_TransitionTrigger_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_TransitionTrigger"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_TransitionTrigger" type="lbs:TK_TransitionTrigger_Type"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_TransitionTrigger_Type">
+		<xs:complexContent>
+			<xs:extension base="lbs:TK_Trigger_Type">
+				<xs:sequence>
+					<xs:element name="deltaDirection" type="gco:Angle_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="deltaPosition" type="gco:Distance_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="type" type="lbs:TK_TransitionType_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_TransitionType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_TransitionType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_TransitionType"  substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="TK_TransitionType" type="lbs:TK_TransitionType_Type"/> -->
+	<!-- .......................................... -->
+	<xs:complexType name="TK_TransitionType_Type">
+		<xs:sequence>
+			<xs:element name="changeAvailability" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="changeContacts" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="changeDirection" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="changePosition" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="enterCell" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="leaveCell" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ==========================================  -->
+	<xs:complexType name="TK_Trigger_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="lbs:TK_Trigger"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- .......................................... -->
+	<xs:element name="TK_Trigger" type="lbs:TK_Trigger_Type" abstract="true"/>
+	<!-- .......................................... -->
+	<xs:complexType name="TK_Trigger_Type">
+		<xs:sequence/>
+	</xs:complexType>
+</xs:schema>

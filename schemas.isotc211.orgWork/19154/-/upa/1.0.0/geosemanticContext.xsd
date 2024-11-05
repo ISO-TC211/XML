@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:upa="https://schemas.isotc211.org/19154/-/upa/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19154/-/upa/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:include schemaLocation="locationalContext.xsd"/>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeoSemanticContext_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeoSemanticContext"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeoSemanticContext" type="upa:UPA_GeoSemanticContext_Type" substitutionGroup="upa:UPA_LocationalContext"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeoSemanticContext_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContext_Type">
+				<xs:sequence>
+					<xs:element name="UPA_GeoSemanticContextRule" type="upa:UPA_GeoSemanticContextRule_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeoSemanticContextRule_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeoSemanticContextRule"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeoSemanticContextRule" type="upa:UPA_GeoSemanticContextRule_Type" substitutionGroup="upa:UPA_LocationalContextRule"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeoSemanticContextRule_Type">
+		<xs:complexContent>
+			<xs:extension base="upa:UPA_LocationalContextRule_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="UPA_GeoSemanticsType_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="upa:UPA_GeoSemanticsType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="UPA_GeoSemanticsType" type="upa:UPA_GeoSemanticsType_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="UPA_GeoSemanticsType_Type">
+		<xs:sequence>
+			<xs:element name="semanticExpressions" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+</xs:schema>

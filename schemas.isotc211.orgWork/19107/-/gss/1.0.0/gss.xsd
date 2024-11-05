@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gss="https://schemas.isotc211.org/19107/-/gss/1.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19107/-/gss/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/coordinateGeometry.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometricAggregates.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometricComplex.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometricPrimative.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometryRoot.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topoComplex.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topoPrimative.xsd"/>
+	<!-- Empty schemas 
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/geometry.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topoRoot.xsd"/>
+	<xs:include schemaLocation="../../../../19107/-/gss/1.0.0/topology.xsd"/>
+	-->
+	<xs:annotation>
+		<xs:documentation>This package contains the normative (Geometry and Topology) parts of the model for ISO 19107. This document should be referred to as the official description of the Model. If there are any differences, then ISO 19107 takes precedence. 
+
+This packages also contains example (informative) of applications of 19107.</xs:documentation>
+	</xs:annotation>
+</xs:schema>

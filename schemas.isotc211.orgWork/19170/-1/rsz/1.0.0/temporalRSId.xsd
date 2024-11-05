@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="zonalRSId.xsd"/>
+	<xs:element name="Period" type="Period"/>
+	<xs:complexType name="Period" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Particular time span or era between two instants.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZonePrimitive">
+				<xs:sequence>
+					<xs:element name="begin" type="DirectPosition" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Instant at the beginning of the period.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="coordinateTuple" type="DirectPosition" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Position within the extent of the period.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="end" type="DirectPosition" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Instant at the end of the period.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="extent" type="EX_TemporalExtent" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Temporal extent of the period.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="identifier" type="PeriodIdentifier" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Identifier of the period.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="childOf" type="Period" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PeriodClass" type="PeriodClass"/>
+	<xs:complexType name="PeriodClass" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Categorization of Periods.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZoneClassPrimitive">
+				<xs:sequence>
+					<xs:element name="Period" type="Period" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="childOf" type="PeriodClass" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PeriodIdentifier" type="PeriodIdentifier"/>
+	<xs:complexType name="PeriodIdentifier" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Temporal reference in the form of a label or code that identifies a period.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ZonalIdentifierPrimitive">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TemporalReferenceSystemUsingPeriodIdentifiers" type="TemporalReferenceSystemUsingPeriodIdentifiers"/>
+	<xs:complexType name="TemporalReferenceSystemUsingPeriodIdentifiers" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A temporal RS based on period identifiers.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="RSUsingZonalIdentifiersPrimitive">
+				<xs:sequence>
+					<xs:element name="component" type="Period" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

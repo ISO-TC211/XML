@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>party package of LADM Part 1</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="administrative.xsd"/>
+	<xs:include schemaLocation="genericConceptualModel.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_CivilStatusType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_CivilStatusType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_CivilStatusType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_CivilStatusType" type="lad:LA_CivilStatusType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_CivilStatusType_Type">
+		<xs:sequence>
+			<xs:element name="divorced" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="married" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="unmarried" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_GenderType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_GenderType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_GenderType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_GenderType" type="lad:LA_GenderType_Type"/> -->
+	<!-- ........................................................................ -->
+<!-- 	<xs:complexType name="LA_GenderType_Type">
+		<xs:annotation>
+			<xs:documentation>type of gender</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="0 - unknown" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="1 - Male" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="2 - Female" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="9 - doesNotApply" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	-->
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_GroupParty_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_GroupParty"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_GroupParty" type="lad:LA_GroupParty_Type" substitutionGroup="lad:LA_Party"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_GroupParty_Type">
+		<xs:annotation>
+			<xs:documentation>any number of parties, together forming a distinct entity, with each party registered</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:LA_Party_Type">
+				<xs:sequence>
+					<xs:element name="groupID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the identifier of a group party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="lad:LA_GroupPartyType_ProperyType" minOccurs="1" maxOccurs="1"> -->
+					<xs:element name="groupPartyType" type="lad:LA_GroupPartyType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the type of the group party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="parties" type="lad:LA_Party_PropertyType" minOccurs="2" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_GroupPartyType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_GroupPartyType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_GroupPartyType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_GroupPartyType" type="lad:LA_GroupPartyType"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_GroupPartyType_Type">
+		<xs:annotation>
+			<xs:documentation>type of group party</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="association" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="baunitGroup" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="family" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="tribe" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_Party_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_Party"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_Party" type="lad:LA_Party_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_Party_Type">
+		<xs:annotation>
+			<xs:documentation>person or organization that plays a role in a rights, responsibilities or restrictions transaction</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="civilStatus" type="lad:LA_CivilStatusType_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="extPID" type="lad:Oid_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>the identifier of the party in an external registration</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fingerPrint" type="lad:LA_MultiMediaType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the finger print of the party.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gender" type="lad:LA_GenderType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the gender of the party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the name of the party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="photo" type="lad:LA_MultiMediaType_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>the photo of the party.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the identifier of the party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="role" type="lad:LA_PartyRoleType_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>the role of a party in the data update and maintenance process</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="signature" type="lad:LA_MultiMediaType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the signature of the party.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="partyType" type="lad:LA_PartyType_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the type of the party</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lad:LA_AdministrativeSource_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="rrr" type="lad:LA_AbstractRRR_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_PartyMember_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_PartyMember"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_PartyMember" type="lad:LA_PartyMember_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_PartyMember_Type">
+		<xs:annotation>
+			<xs:documentation>party registered and identified as a constituent of a group party</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="share" type="lad:Fraction_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the fraction of the whole</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_PartyRoleType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_PartyRoleType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_PartyRoleType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_PartyRoleType" type="lad:LA_PartyRoleType"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_PartyRoleType">
+		<xs:annotation>
+			<xs:documentation>type of party role</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="citizen" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="employee" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="employer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="farmer" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="proxy" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_PartyType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_PartyType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_PartyType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_PartyType" type="lad:LA_PartyType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_PartyType_Type">
+		<xs:annotation>
+			<xs:documentation>type of party</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="baunit" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="group" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="naturalPerson" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nonNaturalPerson" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

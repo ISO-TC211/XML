@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+     targetNamespace="https://schemas.isotc211.org/19152/-1/lad/1.0"
+    elementFormDefault="qualified"
+    version="1.0.0">
+    <xs:include schemaLocation="./party.xsd"/>
+    <xs:include schemaLocation="./genericConceptualModel.xsd"/>
+    <xs:include schemaLocation="./administrative.xsd"/>
+    <xs:include schemaLocation="./spatialUnit.xsd"/>
+    <xs:include schemaLocation="./external.xsd"/>
+ </xs:schema>

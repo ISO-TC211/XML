@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:psc="https://schemas.isotc211.org/19137/-/psc/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19137/-/psc/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19111/-/rbc/3.1" schemaLocation="../../../../19111/-/rbc/3.1.1/rbc.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<!-- =========================================================================== -->
+	<xs:complexType name="SP_CurveSegment_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="psc:SP_CurveSegment"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="SP_CurveSegment" type="psc:SP_CurveSegment_Type" abstract="true"/>
+	<!-- <xs:element name="SP_CurveSegment" type="psc:SP_CurveSegment_Type" abstract="true" substitutionGroup="gml:_CurveSegment"/> -->
+	<!-- ........................................................................ -->	
+	<xs:complexType name="SP_CurveSegment_Type">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractCurveSegmentType">
+				<xs:sequence>
+					<xs:element name="interpolation" type="gml:CurveInterpolationType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="numDerivativeInterior" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="numDerivativesAtEnd" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="numDerivativesAtStart" type="gco:Integer_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="SP_LineString_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="psc:SP_LineString"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="SP_LineString" type="psc:SP_LineString_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="SP_LineString_Type">
+		<xs:complexContent>
+			<xs:extension base="psc:SP_CurveSegment_Type">
+				<xs:sequence>
+					<xs:element name="controlPoint" type="gml:PointArrayPropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+	<xs:complexType name="SP_Object_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="psc:SP_Object"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->	
+	<xs:element name="SP_Object" type="psc:SP_Object_Type"/>
+	<!-- ........................................................................ -->	
+	<xs:complexType name="SP_Object_Type" abstract="true">
+		<xs:sequence>
+			<xs:element name="theCRS" type="rbc:CRS_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="theSC_CRS" type="rbc:CRS_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================================== -->
+</xs:schema>

@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+    branches: [ main, staging ]
+  pull_request:
+
+jobs:
+  build:
+    name: Generate XSD documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl make libxml2-dev libxslt-dev libnode-dev node-gyp libssl-dev npm openssl xsltproc
+      - name: Setup snaps
+        run: |
+          sudo snap install yq
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+      - name: Build XSD documentation
+        run: |
+          make _xsddoc

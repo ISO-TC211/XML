@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    version="1.1.0"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/msr/1.3.1/msr.xsd"/>
+ 
+    <include schemaLocation="../../../../19130/-3/smi/1.1.1/smi.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/nonPhysicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.1/physicalSensorModel.xsd"/>
+    
+    <!-- =====================19130-1 ============================= -->
+    <complexType name="SD_SensorModel_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_SensorModel"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SD_SensorModel" type="smi:SD_SensorModel_Type" substitutionGroup="msr:AbstractMI_GeolocationInformation">
+        <annotation>
+            <documentation>Information on sensor Model for sensor collecting the image.</documentation>
+        </annotation>
+    </element>
+      <complexType name="SD_SensorModel_Type">
+        <complexContent>
+            <extension base="msr:AbstractMI_GeolocationInformation_Type">
+                <sequence>
+                    <element name="forImageID" type="sml:IdentifierListType">
+                        <annotation>
+                            <documentation>identification for image to which the sensor model
+                                applies</documentation>
+                        </annotation>
+                    </element>
+                    <choice>
+                        <element name="physicalSensorModel" maxOccurs="unbounded" type="smi:SD_PhysicalSensorModel_PropertyType">
+                            <annotation>
+                                <documentation>Physical Sensor Model for geopositioning of the image</documentation>
+                            </annotation>
+                        </element>
+                        <element name="trueReplacementModel" maxOccurs="unbounded" type="smi:SD_TrueReplacementModel_PropertyType">
+                            <annotation>
+                                <documentation>True replacement Model for geopositioning of the image</documentation>
+                            </annotation>
+                        </element>
+                        <element name="correspondenceModel" maxOccurs="unbounded" type="smi:SD_CorrespondenceModel_PropertyType">
+                            <annotation>
+                                <documentation>Correspondence Model for geopositioning of the image</documentation>
+                            </annotation>
+                        </element>
+                    </choice>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+ </schema>

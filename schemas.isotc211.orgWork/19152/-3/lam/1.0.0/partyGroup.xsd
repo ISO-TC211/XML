@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lam="https://schemas.isotc211.org/19152/-3/lam/1.0"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	targetNamespace="https://schemas.isotc211.org/19152/-3/lam/1.0" elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>This package contains the classes defined as part of the MG_Party section.
+			Two classes and two code lists are defined: MG_Party, MG_PartyMember, MG_PartyTypeList,
+			and MG_GroupPartyTypeList. A party is a person or organization that plays a role in
+			rights. </xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="./lam.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19152/-1/lad/1.0" schemaLocation="../../19152/-1/lad/1.0.0/lad.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_GroupPartyTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_GroupPartyTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_GroupPartyTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_GroupPartyTypeList" type="lam:MG_GroupPartyTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_GroupPartyTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>This code list describes categories of "MG_GroupPartyType". Definition
+				Source: IHO S-121 for &lt;MLB&gt; entries This code list describes the types of
+				group parties that may be formed in the Marine Space Georegualtion (MG) domain The
+				code list is generic, but additional code list values have been included based on
+				the need to support IHO S-121. These are morked with a stereotype &lt;MRN&gt;. The
+				code list may be registered in a Feature Concept Dictionary as listed values and as
+				such can be expanded to include all party types. For those Group Parties related to
+				the IHO this code list is registered in the IHO Feature Concept Dictionary as listed
+				values and as such can be expanded within the IHO process.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="agreement" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_GroupPartyTypeList Name: agreement Definition: An instrument by which
+						states and other subjects of international law, such as certain
+						international organizations, or other parties, regulate matters of concern
+						to them. Reference: Encyclopaedia Britannica, Definition Source: Britannica,
+						T. Editors of Encyclopaedia. "International agreement." Encyclopedia
+						Britannica, March 15, 2016.
+						https://www.britannica.com/topic/international-agreement. Similarity to
+						Source: generalization Remarks: The resulting group consists of parties
+						related to an agreement. An agreement between two countries is called
+						“bilateral,” while an agreement between several countries is “multilateral.”
+						The countries bound by an international agreement are generally referred to
+						as “States Parties.” Registered as a code list value in the IHO Geospatial
+						Information Registry &lt;https://registry.iho.int/&gt; This code list value
+						is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="association" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_GroupPartyTypeList Name: association Definition: A relationship between
+						states, or other parties, in which certain rights, restrictions or
+						responsibilities are delegated. Reference: Free Association - The United
+						States Experience, Chimene I. Keitner, W. Michael Reisman, Definition
+						Source: Keitner, Chimène and Reisman, W. Michael, Free Association: The
+						United States Experience. Texas International Law Journal, Vol. 1, No. 39,
+						2003, Available at SSRN: https://ssrn.com/abstract=933738 Similarity to
+						Source: extract and restructured Remarks: An association is formed when two
+						states voluntarily establish durable links where one state, the associate,
+						delegates certain rights, restrictions or responsibilities and/or
+						responsibilities to the other, the principal, while maintaining its
+						international status as a state. Registered as a code list value in the IHO
+						Geospatial Information Registry &lt;https://registry.iho.int/&gt; This code
+						list value is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="baunitGroup" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_GroupPartyTypeList Name: baUnitGroup Definition: Group of Basic
+						Administrative Units acting as a party Reference: ISO 19152-1 Definition
+						Source: Similarity to Source: identical</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="condominium" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_GroupPartyTypeList Name: Condominium Definition: An agreement in which
+						multiple sovereign powers or other parties, formally agree to share dominion
+						and exercise their rights jointly, without dividing it into "national" or
+						other zones. Reference: Oxford Public International Law Definition Source:
+						Max Planck Encyclopedia of Public International Law [MPEPIL], July 2006
+						Similarity to Source: restructured, generalized Remarks: A condominion is
+						also known as a "coimperium". A condominium of three sovereign powers is
+						sometimes called a tripartite condominium or tridominium. condominia have
+						been rare in practice because of the difficulty of ensuring co-operation
+						between the sovereign powers. Registered as a code list value in the IHO
+						Geospatial Information Registry &lt;https://registry.iho.int/&gt; This code
+						list value is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="other" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_GroupPartyTypeList Name: other Definition: Any other relationship between
+						parties. Reference: . Definition Source: Similarity to Source: Registered as
+						a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; Remarks: In Marine Space Georegulation,
+						for those items under the jurisdiction of the IHO, additional Code List
+						Values may be registered in the IHO Geospatial Information Registry &lt;
+						http://registry.iho.int/ &gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_Party_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_Party"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_Party" type="lam:MG_Party_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_Party_Type">
+		<xs:annotation>
+			<xs:documentation>A party is a person or organization or group . This class is realized
+				from ISO 19152-1 LADM Fundamentals "LA_Party" and "LA_GroupParty" This class is a
+				realization because it inherits from LA_Party, but it makes use of different code
+				lists than LA_Party suited to the Marine Space. It is also a combination of both
+				LA_Party and LA_Group Party. LA_GroupParty describes any number of parties, forming
+				together a distinct entity, with each party registered. Since LA_GroupParty is a
+				subtype of LA_Party this is described as a single class "MG_Party" that includes a
+				conditional attribute "MG_partyGroupTypeList" that defines the type of a group
+				party. This combined structure assists implementation.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="extPID" type="lad:Oid_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: extPID Data Type: Oid Definition: The
+								identifier of the party in an external registration. Reference: ISO
+								19152-1 Similarity to Source: identical Remarks: The attribute type
+								is also the “Oid” (Object ID) attribute type. This attribute is used
+								in IHO S-121 and is registered as an attribute type in the IHO
+								Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gID" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: pID Data Type: CharacterString
+								Definition: The Marine Resource Name (MRN) is an optional identifier
+								in the marine space that is a permanent global identifier, allowing
+								marine space management. Reference: IHO S-121 Similarity to Source:
+								generalization Remarks: IHO provides guidance on the structure of
+								the MRN as a Globally Unique Identifier (GUID) based on the Uniform
+								Resource Identifier (URI) for those items under the jurisdiction of
+								the IHO. The type of URI used by IHO is a Universal Resource Name
+								(URN). This attribute is used in IHO S-121 and is registered as an
+								attribute type in the IHO Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="partyGroupType" type="lam:MG_GroupPartyTypeList_PropertyType" minOccurs="0"
+						maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: partyGroupType Data Type:
+								MG_GroupPartyTypeList Definition: This optional attribute specifies
+								the type of the party group from the code list MG_GroupPartyType.
+								This code list us unique to the Marine Space georegulation domain.
+								Reference: ISO 19152-1 Similarity to Source: domain specific
+								Remarks: A constraint indicates that the partyTypeGroup attribute is
+								requires when a Party is a group. This attribute is used in IHO
+								S-121 and is registered as an attribute type in the IHO Geospatial
+								Information Registry
+								&lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="partyName" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: partyName Data Type: CharacterString
+								Definition: The name of the party Reference: ISO 19152-1 Similarity
+								to Source: identical This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="partyRole" type="gco:CharacterString_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: partyRole Data Type: CharacterString
+								Definition: This optional attribute describes the role of the party
+								or roles that the party is involved with. Reference: ISO 19152-1
+								Similarity to Source: generalization Remarks: The attribute type is
+								a character string to permit any role or roles. This attribute is
+								used in IHO S-121 and is registered as an attribute type in the IHO
+								Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="partyType" type="lam:MG_PartyTypeList_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: partyType Data Type: MG_PartTypeList
+								Definition: The type of party Reference: ISO 19152-1 Similarity to
+								Source: domain specific This attribute is used in IHO S-121 and is
+								registered as an attribute type in the IHO Geospatial Information
+								Registry &lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Domain: MG Name: pID Data Type: Oid Definition: This
+								attribute is the identifier of the party which allows reference to
+								"Party" information objects using the “Oid” (Object ID) attribute
+								type. The “Oid” comprises a unique character string and a namespace
+								identifier which is also a unique character string. An example might
+								be "Party-5" where "Party" is the namespace identifier, "-" is a
+								delimiter and "5" is the unique id within that namespace. Reference:
+								ISO 19152-1 Similarity to Source: specialization This attribute is
+								used in IHO S-121 and is registered as an attribute type in the IHO
+								Geospatial Information Registry
+								&lt;https://registry.iho.int/&gt;.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="parties" type="lam:MG_Party_PropertyType" minOccurs="2" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>composition of two or more parties to form a
+								group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rrr" type="lam:MG_AbstractRRR_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Right, Restriction or Responsibility associated with a
+								Party </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="source" type="lam:MG_Source_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Source describing a Party.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_PartyMember_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_PartyMember"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_PartyMember" type="lam:MG_PartyMember_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_PartyMember_Type">
+		<xs:annotation>
+			<xs:documentation>The class MG_Party is a relationship class, i.e. it provides an
+				attribute on a relationship, which provides an attribute on the relationship
+				members. It indicates that a party member is a fraction of a group party. Derived
+				from ISO 19152-1 LADM Fundamentals. This relationship class is equivalent to the
+				relationship class LA_PartyMember defined in 19152-1 LADM Fundamentals, except that
+				it describes the relationship from MG_Party to itself rather than LA_Party to
+				LA_GroupParty.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="partyShare" type="lad:Fraction_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Domain: MG Name: partyShare Data Type: Fraction Definition:
+						This optional attribute represents the fractional share of a group that a
+						party member represents. Reference: ISO 19152-1 Similarity to Source:
+						identical This attribute is used in IHO S-121 and is registered as an
+						attribute type in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="MG_PartyTypeList_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lam:MG_PartyTypeList"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="MG_PartyTypeList" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- <xs:element name="MG_PartyTypeList" type="lam:MG_PartyTypeList_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="MG_PartyTypeList_Type">
+		<xs:annotation>
+			<xs:documentation>This code list describes categories of "MG_PartyType". Definition
+				Source: IHO S-121 for &lt;MLB&gt; entries This code list describes the types of
+				parties that may be established in the Marine Space Georegulation (MG) domain. The
+				code list is generic, but additional code list values have been included based on
+				the need to support IHO S-121. These are marked with a stereotype &lt;MRN&gt;. The
+				code list may be registered in a Feature Concept Dictionary as listed values and as
+				such can be expanded to include all party types. For those Parties related to the
+				IHO this code list is registered in the IHO Feature Concept Dictionary as listed
+				values and as such can be expanded within the IHO process.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="baUnit" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: baUnit Definition: Basic Administrative Unit acting
+						as a party Reference: ISO 19152-1 Definition Source: Similarity to Source:
+						identical Registered as a code list value in the IHO Geospatial Information
+						Registry &lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="group" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: group Definition: Group acting as a party Reference:
+						ISO 19152-1 Definition Source: Similarity to Source:
+						identical</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="internationalOrganization" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: internationalOrganisation Definition: An
+						international organization is an organization established by a treaty or
+						other instrument governed by international law and possessing its own
+						international legal personality. Remarks: Identifies a party as being an
+						International Organization. Definition Source: Giorgio Gaja, Judge of the
+						International Court of Justice, Responsibility of International
+						Organizations, New York, 9 December 2011 Reference: UN Library of
+						International Law Similarity to Source: restructured Registered as a code
+						list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="naturalPerson" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: naturalPerson Definition: Identifies party as being a
+						natural person Reference: ISO 19152-1 Definition Source: ISO 19152-1
+						Similarity to Source: identical Registered as a code list value in the IHO
+						Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nonNaturalPerson" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: nonnaturalPerson Definition: Identifies party as
+						being a non-natural person such as a corporation. Reference: ISO 19152-1
+						Definition Source: ISO 19152-1 Similarity to Source: identical Registered as
+						a code list value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt;</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="provinceState" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: provinceState Definition: Political subdivision of a
+						State/Country Reference: Definition Source: Similarity to Source: Remarks:
+						Identifies party as being a province or state. Registered as a code list
+						value in the IHO Geospatial Information Registry
+						&lt;https://registry.iho.int/&gt; This code list value is particular to the
+						MLB domain and is marked with a stereotype &lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stateCountry" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item Type: Code List Value Domain: MG Associated Attribute:
+						MG_PartyTypeList Name: stateCountry Definition: A state/country is a
+						sovereign unit consisting of a permanent population, defined territorial
+						boundaries, a government, and an ability to enter into agreements with other
+						states. Remarks: Identifies party as being a State or Country.Reference:
+						Montevideo Convention 1933 Definition Source: Montevideo Convention on the
+						Rights and Duties of States, December, 1933 Similarity to Source:
+						restructured Registered as a code list value in the IHO Geospatial
+						Information Registry &lt;https://registry.iho.int/&gt; This code list value
+						is particular to the MLB domain and is marked with a stereotype
+						&lt;MLB&gt;.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+</xs:schema>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cal="https://schemas.isotc211.org/19159/-4/cal/1.0"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19159/-4/cal/1.0" version="1.0.0">
+    <include schemaLocation="cal.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19130/-3/smi/1.1" schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+     
+    <element name="CA_AntennaPatternCalibration" type="cal:CA_AntennaPatternCalibration_Type" id="ISO19159-4.11" substitutionGroup="gco:AbstractObject">
+        <annotation>
+            <documentation>Information related to the antenna pattern calibration of the microwave radiometer system.</documentation>
+        </annotation>    
+    </element>
+    
+    <complexType name="CA_AntennaPatternCalibration_Type">
+        <complexContent>
+            <extension base="gco:AbstractObject_Type">
+              <sequence>
+                    <element name="TA" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.12_ISO19103.Real">
+                        <annotation>
+                            <documentation>Antenna temperature.</documentation>
+                        </annotation>
+                    </element>
+                  <element name="spillover" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1" id="ISO19159-4.13_ISO19103.Real">
+                        <annotation>
+                            <documentation>Spillover</documentation>
+                        </annotation>
+                    </element>
+                  <element name="satelliteAttitude" type="smi:SD_Attitude_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.14_ISO19130-1.SD_Attitude">
+                        <annotation>
+                            <documentation>Satellite attitude expressed in the combination of the omega, phi and kappa components.</documentation>
+                        </annotation>
+                    </element>
+                  <element name="satelliteOrbitalHeight" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.15_ISO19103.Real">
+                        <annotation>
+                            <documentation>Satellite orbital height.</documentation>
+                        </annotation>
+                    </element>   
+                  <element name="beamwidth" type="gco:Angle_PropertyType" minOccurs="1" maxOccurs="1"  id="ISO19159-4.16_ISO19103.Angle">
+                        <annotation>
+                            <documentation>Antenna beamwidth.</documentation>
+                        </annotation>
+                    </element>
+                  <element name="mainBeamEfficiency" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.17_ISO19103.Real">
+                        <annotation>
+                            <documentation>Antenna main beam efficiency.</documentation>
+                        </annotation>
+                    </element>
+                  <element name="coPolAntennaPattern" type="cal:CA_AntennaPattern_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.18_ISO19159-4.43">
+                        <annotation>
+                            <documentation>Co-polarization antenna pattern.</documentation>
+                        </annotation>
+                    </element>
+                  <element name="crossPolAntennaPattern" type="cal:CA_AntennaPattern_PropertyType" minOccurs="1" maxOccurs="1" id="ISO19159-4.19_ISO19159-4.43">
+                        <annotation>
+                            <documentation>Cross-polarization antenna pattern.</documentation>
+                        </annotation>
+                    </element>
+                  <element name="TBWithinTheScene" type="gco:Real_PropertyType" minOccurs="1" maxOccurs="1"  id="ISO19159-4.20_ISO19103.Real">
+                        <annotation>
+                            <documentation>TB within the scene (output attribute).</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="CA_AntennaPatternCalibration_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="cal:CA_AntennaPatternCalibration"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType> 
+    
+</schema>

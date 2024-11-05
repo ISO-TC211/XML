@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    version="1.1.0"
+    >
+    <include schemaLocation="../../../../19130/-3/smi/1.1.0/smi.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>   
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd"/>
+
+    
+    <!-- =============== 19130-1 ==================== -->
+    
+    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+    <!--    <element name="SD_ShapeCode" substitutionGroup="gco:CharacterString" type="smi:SD_ShapeCode_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_ShapeCode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_ShapeCode"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SD_ShapeCode_Type">
+        <restriction base="string">
+            <enumeration value="circular"/>
+            <enumeration value="square"/>
+            <enumeration value="rectangular"/>
+            <enumeration value="elliptical"/>
+        </restriction>
+    </simpleType>
+    
+    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--    <element name="SD_SurfaceCode" substitutionGroup="gco:CharacterString" type="smi:SD_SurfaceCode_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_SurfaceCode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_SurfaceCode"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SD_SurfaceCode_Type">
+        <restriction base="string">
+            <enumeration value="ground"/>
+            <enumeration value="inflatedEllipsoid"/>
+            <enumeration value="ortho"/>
+            <enumeration value="slant"/>
+        </restriction>
+    </simpleType>
+    
+     
+    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--    <element name="SD_SAROrientationCode" substitutionGroup="gco:CharacterString" type="smi:SD_SAROrientationCode_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_SAROrientationCode_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_SAROrientationCode"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SD_SAROrientationCode_Type">
+        <restriction base="string">
+            <enumeration value="left"/>
+            <enumeration value="right"/>
+        </restriction>
+    </simpleType>
+    
+    
+    <element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
+        <!--<element name="SD_RotationSequence" substitutionGroup="gco:CharacterString" type="smi:SD_RotationSequence_Type"> -->
+        <annotation>
+            <documentation>function performed by the responsible party</documentation>
+        </annotation>
+    </element>
+    <complexType name="SD_RotationSequence_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SD_RotationSequence"/>
+        </sequence>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <simpleType name="SD_RotationSequence_Type">
+        <restriction base="string">
+            <enumeration value="XYZ">
+                <annotation>
+                    <documentation>rotation around X axis first, then Y, then Z</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XZY">
+                <annotation>
+                    <documentation>rotation around X axis first, then Z, then Y</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="YXZ">
+                <annotation>
+                    <documentation>rotation around Y axis first, then X, then Z</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="YZX">
+                <annotation>
+                    <documentation>rotation around Y axis first, then Z, then X</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ZXY">
+                <annotation>
+                    <documentation>rotation around Z axis first, then X, then Y</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ZYX">
+                <annotation>
+                    <documentation>rotation around Z axis first, then Y, then X</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    
+</schema>

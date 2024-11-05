@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include schemaLocation="equalAreaEarthRS.xsd"/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include schemaLocation="equalAreaCell.xsd"/>
+	<xs:include schemaLocation="coreRSZonalId.xsd"/>
+	<xs:include/>
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="EA_BaseUnitPolyhedron" type="EA_BaseUnitPolyhedron"/>
+	<xs:complexType name="EA_BaseUnitPolyhedron" abstract="true">
+		<xs:annotation>
+			<xs:documentation>EA_BaseUnitPolyhedron
+Polyhedron with circumsphere radius of one, specified by the number and faces and edges and the collection of boundary curves that make up each polygonal face.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="numEdges" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Number of edges in the EA_BaseUnitPolyhedron,</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="numFaces" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Number of faces on the EA_BaseUnitPolyhedron, corresponds to the number of EA_Cells in the EA_InitialDiscreteGlobalGrid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitPolyhedron" type="PolyhedralSurfaceData" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>PolygonData for each of the unit Polyhedron's segment Polygons, expressed in spherical coordinates (theta, phi) with unit radius.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="singleProjCRS" type="SC_ProjectedCRS" minOccurs="2" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EA_DiscreteGlobalGrid" type="EA_DiscreteGlobalGrid"/>
+	<xs:complexType name="EA_DiscreteGlobalGrid" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Super class for EA_InitialDiscreteGlobalGrid and EA_RefinedDiscreteGlobalGrid</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DiscreteGlobalGrid">
+				<xs:sequence>
+					<xs:element name="dggsAxis" type="AxisDescription" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A dggsAxis typically follows a space-filling curve designed to recursively traverse all cells in each tesselation, Cell::identifiers are ordered along the path of the dggsAxis.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dggsSurfaceInterpolation" type="EA_SurfaceInterpolation" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>EA_SurfaceInterpolation corresponding to the form of the specified EA_GlobeGeometry.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cell" type="EA_Cell" minOccurs="4" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EA_DiscreteGlobalGridTessellation" type="EA_DiscreteGlobalGridTessellation"/>
+	<xs:complexType name="EA_DiscreteGlobalGridTessellation" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The EA_DiscreteGlobalGridTessellation method implements the DGGS_Grids constraint, DGGS_Refinement strategy and DGGS_RefinementRatio, to create a child EA_RefinedDiscreteGlobalGrid from a parent EA_DiscreteGlobalGrid. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="EA_InitialDiscreteGlobalGrid" type="EA_InitialDiscreteGlobalGrid"/>
+	<xs:complexType name="EA_InitialDiscreteGlobalGrid" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The EA_InitialDiscreteGlobalGrid is formed by applying the EA_PolyhedralTessellation method to a the EA_BaseUnitPolyhedron.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="EA_DiscreteGlobalGrid">
+				<xs:sequence>
+					<xs:element name="refinementLevel" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>EA_InitialDiscreteGlobalGrid has a refinementlevel of 0.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="face" type="EA_BaseUnitPolyhedron" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="cell" type="EA_Cell" minOccurs="4" maxOccurs="unbounded"/>
+					<xs:element name="initialTessellation" type="EA_PolyhedralTessellation" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EA_PolyhedralTessellation" type="EA_PolyhedralTessellation"/>
+	<xs:complexType name="EA_PolyhedralTessellation" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The EA_PolyhedralTessellation method transforms the EA_BaseUnitPolyhedron in such a way that:
+1) the surface area of each cell belonging to the EA_InitialDiscreteGlobalGrid is the same,
+2) domain completeness is preserved by the EA_InitialDiscreteGlobalGrid, and
+3) location uniqueness is preserved by the EA_InitialDiscreteGlobalGrid.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="EA_RefinedDiscreteGlobalGrid" type="EA_RefinedDiscreteGlobalGrid"/>
+	<xs:complexType name="EA_RefinedDiscreteGlobalGrid" abstract="true">
+		<xs:annotation>
+			<xs:documentation>EA_DiscreteGlobalGrid formed by an EA_DiscreteGlobalGriodTessellation, is a EA_RefinedDiscreteGlobalGrid.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="EA_DiscreteGlobalGrid">
+				<xs:sequence>
+					<xs:element name="domainOfValidity" type="EX_Extent" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>For DGGS with a dynamic datum the domainOfValidity is always global. 
+For DGGS with a static datum, the domainOfValidity is the extent of the continent or plate that the datum refers to. 
+*NOTE* Inside the domainOfValidity each cell's representative position is guaranteed to be inside the boundary of the cell. Outside the domainOfValidity plate techtonics move the earth through cells, and there is no guarantee that cells have meaningful representative positions.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="refinementLevel" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The child EA_RefinedDiscreteGlobalGrid has a refinementLevel of one greater than its parent.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cell" type="EA_Cell" minOccurs="8" maxOccurs="unbounded"/>
+					<xs:element name="tessellation" type="EA_DiscreteGlobalGridTessellation" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="parentOf" type="EA_InitialDiscreteGlobalGrid" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="parentOf" type="EA_RefinedDiscreteGlobalGrid" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
+	xmlns:lbs="https://schemas.isotc211.org/19133/-/lbs/1.0"
+	xmlns:rbc="https://schemas.isotc211.org/19111/-/rbc/3.1" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	targetNamespace="https://schemas.isotc211.org/19133/-/lbs/1.0" 
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gcx/1.2" schemaLocation="../../../../19103/-/gcx/1.2.0/gcx.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/newBasicTypes.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/address.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/featureDataModel.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/linearReferenceSystem.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/locationTransformation.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/measuredCoordinates.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/navigationService.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/network.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/pointEstimate.xsd"/>
+	<xs:include schemaLocation="../../../../19133/-1/lbs/1.0.0/tracking.xsd"/>
+	<xs:annotation>
+		<xs:documentation>&lt;Edit&gt;
+&lt;Class&gt;NS_NavigationService&lt;/Class&gt;
+&lt;Operation&gt;route&lt;/Operation&gt;
+&lt;Parameter&gt;Return&lt;/Parameter&gt;
+&lt;Type&gt;NT_RouteResponse&lt;/Type&gt;
+&lt;NewType&gt;NT_RouteResponse&lt;/NewType&gt;
+&lt;/Edit&gt;</xs:documentation>
+	</xs:annotation>
+</xs:schema>

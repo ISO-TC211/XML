@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Maso (CREAF) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:gpm="https://schemas.isotc211.org/19165/-1/gpm/1.0" 
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3" 
+	xmlns:mas="https://schemas.isotc211.org/19115/-1/mas/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3" 
+	xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3" 
+	xmlns:mda="https://schemas.isotc211.org/19115/-1/mda/1.3"
+	xmlns:mdb="https://schemas.isotc211.org/19115/-1/mdb/1.3"
+	xmlns:mmi="https://schemas.isotc211.org/19115/-1/mmi/1.3"
+	xmlns:mpc="https://schemas.isotc211.org/19115/-1/mpc/1.3"
+	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+	xmlns:mrd="https://schemas.isotc211.org/19115/-1/mrd/1.3" 
+	xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3" 
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:srv="https://schemas.isotc211.org/19115/-1/srv/1.3" 
+	xmlns:mac="https://schemas.isotc211.org/19115/-2/mac/2.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	targetNamespace="https://schemas.isotc211.org/19165/-1/gpm/1.0" 
+	elementFormDefault="qualified" 
+	version="1.0.0">
+	<import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mas/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mas/1.3.0/mas.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/mcc.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mco/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mco/1.3.0/mco.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mda/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mda/1.3.1/mda.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mdb/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mdb/1.3.1/mdb.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mmi/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mmi/1.3.0/mmi.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mpc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mpc/1.3.0/mpc.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.1/mrc.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mrd/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrd/1.3.0/mrd.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mri/1.3.0/mri.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrl/1.3.0/mrl.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/srv/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/srv/1.3.0/srv.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-2/mac/2.2" schemaLocation="https://schemas.isotc211.org/19115/-2/mac/2.2.1/mac.xsd"/>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<!--XML Schema document initially created by ShapeChange - http://shapechange.net/
+	                        modified by hand (EJB)-->
+	<!-- This schema represents the combined information available from: 
+		ISO 19165-1:2018 data dictionary; and 
+		HMMG model ISO 19165 Preservation of digital data and metadata:ISO 19165-1 Edition 1 
+	    The modifications allow it to reference ISO 19157-1:2023 -->
+	<!-- =========================================================================== -->
+	<element name="GP_PreservationMetadata" type="gpm:GP_PreservationMetadata_Type" substitutionGroup="mdb:MD_Metadata">
+		<annotation><documentation>root entity which defines preservation metadata about a resource or resources</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PreservationMetadata_Type">
+		<complexContent>
+			<extension base="mdb:MD_Metadata_Type">
+				<sequence>
+					<element name="acquisition" type="gpm:GP_Acquisition_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>details about the archival acquisition</documentation></annotation>
+					</element>
+					<element name="associatedResource" type="gpm:GP_AssociatedResource_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>associated resource information</documentation></annotation>
+					</element>
+					<element name="archivalInfo" type="gpm:GP_PackagingInformation_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<annotation><documentation>description of the information package</documentation></annotation>
+					</element>
+					<element name="resourceUsage" type="gpm:GP_Usage_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>basic information about specific application(s) for which the resource has been or is being used by different use</documentation></annotation>
+					</element>
+					<element name="valueAndStrategy" type="gpm:GP_ValueAndPreservationStrategy_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>requirements for assessing the value of the resource and its future preservation strateg</documentation></annotation>
+					</element>
+					<element name="preservationActions" type="mrl:LI_Lineage_PropertyType" minOccurs="0">
+						<annotation><documentation>information about the provenance, source(s), and/or the production process(es) applied to the resource by the archive.</documentation></annotation>
+					</element>
+					
+					<!-- ? <element name="informationValue" type="gpm:GP_InformationValue_PropertyType" minOccurs="0" maxOccurs="unbounded"/> -->
+					<!-- name change <element name="packagingInformation" type="gpm:GP_PackagingInformation_PropertyType" maxOccurs="unbounded"/> -->
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PreservationMetadata_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_PreservationMetadata"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Usage" type="gpm:GP_Usage_Type" substitutionGroup="mri:MD_Usage">
+		<annotation><documentation>brief description of ways in which the resource(s) is/are currently or has been used</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Usage_Type">
+		<complexContent>
+			<extension base="mri:MD_Usage_Type">
+				<sequence>
+					<element name="service" type="gpm:GP_ServiceIdentification_PropertyType">
+						<annotation><documentation>services that currently or has been using this resource(s)</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Usage_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Usage"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_ValueAndPreservationStrategy" type="gpm:GP_ValueAndPreservationStrategy_Type">
+		<annotation>
+			<documentation>reason, justification and strategy for archiving and curating the resource(s)</documentation>
+		</annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ValueAndPreservationStrategy_Type">
+		<sequence>
+			<element name="preservationStrategyPolicy" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<annotation><documentation>document reference with the archive preservation strategy</documentation></annotation>
+			</element>
+			<element name="nextReview" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<annotation><documentation>information about the next foreseen review of the archived package including date and intention/reason</documentation></annotation>
+			</element>
+			<element name="informationValue" type="gpm:GP_InformationValue_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation><documentation>reason and justification of the value of the resource</documentation></annotation>
+			</element>
+			<element name="remove" type="gpm:GP_Remove_PropertyType" minOccurs="0" maxOccurs="1">
+				<annotation><documentation>foreseen date for the finalization of the preservation</documentation></annotation>
+			</element>
+			<element name="review" type="gpm:GP_Review_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation><documentation>periodicity of the foreseen reviews</documentation></annotation>
+			</element>
+			<element name="reviewPeriod" type="gpm:GP_ReviewPeriod_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ValueAndPreservationStrategy_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_ValueAndPreservationStrategy"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Acquisition" type="gpm:GP_Acquisition_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>information about the acquisition of the resource(s)</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Acquisition_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="donor" type="cit:CI_Responsibility_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<annotation><documentation>party responsible that delivered the resource(s) to the archive</documentation></annotation>
+					</element>
+					<element name="date" type="cit:CI_Date_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>date of the delivery of the resource(s) to the archive</documentation></annotation>
+					</element>
+					<element name="acquisitionEvent" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>description of the acquisition process</documentation></annotation>
+					</element>
+					<element name="acquisitionStatus" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>status of the acquisition process</documentation></annotation>
+					</element>
+					<element name="rightsClearance" type="mco:MD_Constraints_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>statement describing how and with whom the resource can be shared</documentation></annotation>
+					</element>
+					<element name="preservationCopiesAllowed" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>indication of whether or not the resource(s) has can be duplicated by the archive</documentation></annotation>
+					</element>
+					<element name="redistributionAllowed" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>indication of whether or not the resource(s) can be redistributed</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Acquisition_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Acquisition"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_AssociatedResource" type="gpm:GP_AssociatedResource_Type" substitutionGroup="mri:MD_AssociatedResource">
+		<annotation><documentation>definition</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_AssociatedResource_Type">
+		<complexContent>
+			<extension base="mri:MD_AssociatedResource_Type">
+				<sequence>
+					<element name="relationType" type="gpm:GP_RelationTypeCode_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>relation dependency</documentation></annotation>
+					</element>
+					<element name="associationProcess" type="mrl:LI_ProcessStep_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>process that made the relation between this resource and the cited resource</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_AssociatedResource_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_AssociatedResource"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Identification" type="gpm:GP_Identification_Type" substitutionGroup="mri:AbstractMD_Identification">
+		<annotation><documentation>identification of the archived resource(s)</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Identification_Type">
+		<complexContent>
+			<extension base="mri:AbstractMD_Identification_Type">
+				<sequence>
+					<element name="citationStatement" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>indication on how you have to cite or knowledge the attribution of the resource(s)</documentation></annotation>
+					</element>
+					<element name="reasonForCreation" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>reason for creating the resource. In many cases this is different from the “purpose”.
+							In the citations title one can use “legal mandate” or “data continuity of the temporal series”. If there is a legal mandate, one can be more precise by fully citing a legal document or a contract containing the reason or the mandate.</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Identification_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Identification"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Format" type="gpm:GP_Format_Type" substitutionGroup="mcc:Abstract_Format">
+		<annotation><documentation>format stored in the archive for this resource(s).</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Format_Type">
+		<complexContent>
+			<extension base="mcc:Abstract_Format_Type">
+				<sequence>
+					<element name="formatSpecificationProfile" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>cites a document explaining how the file format has been used to match the needs of the product. Sometimes this is called a “format specification profile” ('formatSpecificationCitation' links to the file format specification document (e.g the document describing the TIFF 6.0 format).</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Format_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Format"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_ReviewPeriod" type="gpm:GP_ReviewPeriod_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>information about the review policy and period of the archiving resource</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ReviewPeriod_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+			<element name="responsibility" type="cit:CI_Responsibility_PropertyType" minOccurs="0" maxOccurs="1">
+				<annotation><documentation>responsible party for the revision of this resource of the archive</documentation></annotation>
+			</element>
+			<element name="date" type="cit:CI_Date_PropertyType" minOccurs="1" maxOccurs="1">
+				<annotation><documentation>date of the next foreseen review</documentation></annotation>
+			</element>
+			<element name="retentionDocument" type="cit:CI_Citation_PropertyType" minOccurs="1" maxOccurs="1">
+				<annotation><documentation>reference to a document that describes the revision procedure</documentation></annotation>
+			</element>
+			<element name="gathering" type="mmi:MD_MaintenanceInformation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation><documentation>information about the periodicity of the revision</documentation></annotation>
+			</element>
+		</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ReviewPeriod_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_ReviewPeriod"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_InformationValue" type="gpm:GP_InformationValue_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>reason and justification for archiving the resource</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_InformationValue_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="type" type="gpm:GP_InformationValueTypeCode_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>the reason for archiving the resource and gives it value</documentation></annotation>
+					</element>
+					<element name="comments" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>additional explanation about the reason for archiving the resource</documentation></annotation>
+					</element>
+					<element name="dueDate" type="cit:CI_Date_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>expiration date of the reason for archiving the resource</documentation></annotation>
+					</element>
+					<element name="justification" type="gpm:GP_JustificationValue_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>justification of importance of the resource in context of the general reason</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_InformationValue_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_InformationValue"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Remove" type="gpm:GP_Remove_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>information about the intent of removing the resource in the future or evidence that the resource has been removed.</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Remove_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="dueDate" type="cit:CI_Date_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>finalization date for the archival period. After this period, the resource will not be longer preserved</documentation></annotation>
+					</element>
+					<element name="removed" type="gco:Boolean_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>indication of whether or not the resource(s) has been removed and is no longer archived</documentation></annotation>
+					</element>
+					<element name="removalAuthority" type="cit:CI_Responsibility_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>responsible party that has the decision on removing the resource form the archive</documentation></annotation>
+					</element>
+		</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Remove_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Remove"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Review" type="gpm:GP_Review_Type">
+		<annotation><documentation>information about a review (foreseen or done)</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Review_Type">
+		<sequence>
+			<element name="date" type="cit:CI_Date_PropertyType" minOccurs="1" maxOccurs="1">
+				<annotation><documentation>date of the review</documentation></annotation>
+			</element>
+			<element name="reason" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<annotation><documentation>reason for the review</documentation></annotation>
+			</element>
+			<element name="outcome" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<annotation><documentation>outcome of the review</documentation></annotation>
+			</element>
+			<element name="resposibility" type="cit:CI_Responsibility_PropertyType" minOccurs="0" maxOccurs="1">
+				<annotation><documentation>responsible party for the review</documentation></annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Review_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Review"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+		<!-- =========================================================================== -->
+	<element name="GP_JustificationValue" type="gpm:GP_JustificationValue_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>explicit justification why this resource is important in the general context</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_JustificationValue_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="justification" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>statement on why this resource is important</documentation></annotation>
+					</element>
+					<element name="justificationType" type="gpm:GP_JustificationValueTypeCode_PropertyType" minOccurs="0">
+						<annotation><documentation>justification why this resource is important</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_JustificationValue_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_JustificationValue"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_ServiceIdentification" type="gpm:GP_ServiceIdentification_Type" substitutionGroup="srv:SV_ServiceIdentification">
+		<annotation><documentation>estimation of the usage of the resource by registering a service and service metrics that host or hosted the resource</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ServiceIdentification_Type">
+		<complexContent>
+			<extension base="srv:SV_ServiceIdentification_Type">
+				<sequence>
+					<element name="operator" type="cit:CI_Responsibility_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>Who was (or is) the responsible party maintaining the service</documentation></annotation>
+					</element>
+					<element name="stillActive" type="gco:Boolean_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>indication of whether or not the service has been retired and is no longer active</documentation></annotation>
+					</element>
+					<element name="retirementDate" type="cit:CI_Date_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>retirement date of the service (in the past or in the future).</documentation></annotation>
+					</element>
+					<element name="usageMetrics" type="gpm:GP_ServiceUsageMetrics_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<annotation><documentation>measure of the usage of the service</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ServiceIdentification_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_ServiceIdentification"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_ServiceUsageMetrics" type="gpm:GP_ServiceUsageMetrics_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>a measure value and method to determine the service usage</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ServiceUsageMetrics_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ServiceUsageMetrics_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_ServiceUsageMetrics"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Fixity" type="gpm:GP_Fixity_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>citation of the integrity and signature methods used in the packaging information followed by the actual integrity and signature information</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Fixity_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="integrityMethod" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>citation of the integrity method specification</documentation></annotation>
+					</element>
+					<element name="integrity" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>integrity data</documentation></annotation>
+					</element>
+					<element name="signatureMethod" type="cit:CI_Citation_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>citation of the signature method specification</documentation></annotation>
+					</element>
+					<element name="signature" type="gco:Record_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>signature data</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Fixity_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Fixity"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_PackagingInformation" type="gpm:GP_PackagingInformation_Type" substitutionGroup="mrd:MD_Distribution">
+		<annotation><documentation>information about a package</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackagingInformation_Type">
+		<complexContent>
+			<extension base="mrd:MD_Distribution_Type">
+				<sequence>
+					<element name="packageIdentifier" type="mcc:MD_Identifier_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>identifier of the package</documentation></annotation>
+					</element>
+					<element name="packageType" type="gpm:GP_PackageTypeCode_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>type of the package</documentation></annotation>
+					</element>
+					<element name="fixity" type="gpm:GP_Fixity_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>fixity information for the package</documentation></annotation>
+					</element>
+					<!-- conditional -->
+					<element name="packagePart" type="gpm:GP_PackagePart_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>part in a package</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackagingInformation_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_PackagingInformation"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<!-- ISO 19165:2020 states GP_PackagePart specialisation of GP_PackageElement - not in UML and no other reference in standard -->
+	<element name="GP_PackagePart" type="gpm:GP_PackagePart_Type" substitutionGroup="gco:AbstractObject">
+		<annotation><documentation>information about a package</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackagePart_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="name" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+						<annotation><documentation>part name</documentation></annotation>
+					</element>
+					<element name="format" type="mrd:MD_Format_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>format of the part</documentation></annotation>
+					</element>
+					<element name="size" type="gco:Real_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>size of the part in bytes</documentation></annotation>
+					</element>
+					<element name="type" type="gpm:GP_PackagePartTypeCode_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>type of part</documentation></annotation>
+					</element>
+					<element name="disseminationConstraints" type="mco:MD_RestrictionCode_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation><documentation>dissemination constraints that apply to this part only</documentation></annotation>
+					</element>
+					<!-- conditional -->
+					<element name="onLine" type="cit:CI_OnlineResource_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>link to an online resource to get the part</documentation></annotation>
+					</element>
+					<!-- conditional -->
+					<element name="offLine" type="mrd:MD_Medium_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>description of the medium for the part in the p</documentation></annotation>
+					</element>
+					<element name="fixity" type="gpm:GP_Fixity_PropertyType" minOccurs="0" maxOccurs="1">
+						<annotation><documentation>fixity information for the part in the package</documentation></annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackagePart_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_PackagePart"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_Archive" type="gpm:GP_Archive_Type" substitutionGroup="mrd:MD_Distributor">
+		<annotation><documentation>Who is storing the package</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Archive_Type">
+		<complexContent>
+			<extension base="mrd:MD_Distributor_Type">
+				<sequence/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_Archive_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_Archive"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<!-- =========================================================================== -->
+	<element name="GP_BornDigital" type="gpm:GP_BornDigital_Type" substitutionGroup="gpm:AbstractGP_Digital"/>
+	<!-- ........................................................................ -->
+	<complexType name="GP_BornDigital_Type">
+		<complexContent>
+			<extension base="gpm:AbstractGP_Digital_Type">
+				<sequence>
+					<element name="dataset" type="mda:DS_DataSet_PropertyType" minOccurs="1" maxOccurs="1"/>			
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_BornDigital_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_BornDigital"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="AbstractGP_Digital" type="gpm:AbstractGP_Digital_Type" abstract="true" substitutionGroup="gco:AbstractObject"/>
+	<!-- ........................................................................ -->
+	<complexType name="AbstractGP_Digital_Type" abstract="true">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="masterFile" type="gpm:GP_MasterFile_PropertyType" minOccurs="1" maxOccurs="1"/>
+					<element name="distributionFile" type="gpm:GP_DistributionFile_PropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="AbstractGP_Digital_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:AbstractGP_Digital"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_DistributionFile" type="gpm:GP_DistributionFile_Type" substitutionGroup="gco:AbstractObject"/>
+	<!-- ........................................................................ -->
+	<complexType name="GP_DistributionFile_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_DistributionFile_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_DistributionFile"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_MasterFile" type="gpm:GP_MasterFile_Type" substitutionGroup="gco:AbstractObject"/>
+	<!-- ........................................................................ -->
+	<complexType name="GP_MasterFile_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_MasterFile_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_MasterFile"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_ScannedDigitalCopy" type="gpm:GP_ScannedDigitalCopy_Type" substitutionGroup="gpm:AbstractGP_Digital"/>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ScannedDigitalCopy_Type">
+		<complexContent>
+			<extension base="gpm:AbstractGP_Digital_Type">
+				<sequence>
+					<element name="dataset" type="mda:DS_DataSet_PropertyType" minOccurs="1" maxOccurs="1"/>			
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_ScannedDigitalCopy_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_ScannedDigitalCopy"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<!-- current codes -->
+	<!-- =========================================================================== -->
+	<element name="GP_RelationTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString">
+		<annotation><documentation>type of relation</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_RelationTypeCode_Type">
+		<sequence>
+			<element name="hasDerivate" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>the resource is an representation of another resource</documentation>
+				</annotation>
+			</element>
+			<element name="hasPart" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>the resource contains the associated resource</documentation>
+				</annotation>
+			</element>
+			<element name="hasSibling" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>the resource shares a common parent with the associated resource</documentation>
+				</annotation>
+			</element>
+			<element name="hasSource" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>the resource is derived from the associated resource as a result of a transformation</documentation>
+				</annotation>
+			</element>
+			<element name="isPartOf" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>the resource is contained by the associated resource</documentation>
+				</annotation>
+			</element>
+			<element name="isSourceOf" minOccurs="1" maxOccurs="1">
+				<annotation>
+					<documentation>the related resource is a version of this resource created by transformation</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_RelationTypeCode_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_RelationTypeCode"/>
+		</sequence>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_InformationValueTypeCode"  type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString">
+		<annotation><documentation>type of reason that makes this resource valuable</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_InformationValueTypeCode">
+		<sequence>
+			<element name="administrativeValue" minOccurs="1" maxOccurs="1"/>
+			<element name="evidentiaryValue" minOccurs="1" maxOccurs="1"/>
+			<element name="informationalAndHistoricalValue" minOccurs="1" maxOccurs="1"/>
+			<element name="legalAndFiscalValue" minOccurs="1" maxOccurs="1"/>
+			<element name="researchValue" minOccurs="1" maxOccurs="1"/>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_InformationValueTypeCode_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_InformationValueTypeCode"/>
+		</sequence>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_JustificationValueTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString">
+		<annotation><documentation>type</documentation></annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_JustificationValueTypeCode">
+		<sequence>
+			<element name="important" minOccurs="1" maxOccurs="1"/>
+			<element name="testimonial" minOccurs="1" maxOccurs="1"/>
+			<element name="unique" minOccurs="1" maxOccurs="1"/>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_JustificationValueTypeCode_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_JustificationValueTypeCode"/>
+		</sequence>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_PackagePartTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString">
+		<annotation>
+			<documentation>type of part of package</documentation>
+		</annotation>
+	</element>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackagePartTypeCode_Type">
+		<sequence>
+			<element name="browseGraphic" minOccurs="1" maxOccurs="1"/>
+			<element name="certification" minOccurs="1" maxOccurs="1"/>
+			<element name="contextMap" minOccurs="1" maxOccurs="1"/>
+			<element name="dataModel" minOccurs="1" maxOccurs="1"/>
+			<element name="formatProfile" minOccurs="1" maxOccurs="1"/>
+			<element name="formatSpecifications" minOccurs="1" maxOccurs="1"/>
+			<element name="geographicalData" minOccurs="1" maxOccurs="1"/>
+			<element name="illustration" minOccurs="1" maxOccurs="1"/>
+			<element name="metadata" minOccurs="1" maxOccurs="1"/>
+			<element name="package" minOccurs="1" maxOccurs="1"/>
+			<element name="productionProcessesManual" minOccurs="1" maxOccurs="1"/>
+			<element name="publication" minOccurs="1" maxOccurs="1"/>
+			<element name="referenceSystemDescription" minOccurs="1" maxOccurs="1"/>
+			<element name="standardDocument" minOccurs="1" maxOccurs="1"/>
+			<element name="symbolsAndStyles" minOccurs="1" maxOccurs="1"/>
+			<element name="tabularData" minOccurs="1" maxOccurs="1"/>
+			<element name="technicalSpecifications" minOccurs="1" maxOccurs="1"/>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackagePartTypeCode_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_PackagePartTypeCode"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<element name="GP_PackageTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString">
+		<annotation>
+			<documentation>type of package</documentation>
+		</annotation>
+	</element>
+	<!-- ........................................................................ -->	
+	<complexType name="GP_PackageTypeCode">
+		<sequence>
+			<element name="derivativeArchivalInformationPackage" minOccurs="1" maxOccurs="1"/>
+			<element name="distributionInformationPackage" minOccurs="1" maxOccurs="1"/>
+			<element name="masterArchivalInformationPackage" minOccurs="1" maxOccurs="1"/>
+			<element name="submissionInformationPackage" minOccurs="1" maxOccurs="1"/>
+		</sequence>
+	</complexType>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackageTypeCode_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_PackageTypeCode"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	<!-- discarded codes -->
+	<!-- =========================================================================== -->
+	<element name="GP_PackageElementTypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+	<!-- ........................................................................ -->
+	<complexType name="GP_PackageElementTypeCode_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="gpm:GP_PackageElementTypeCode"/>
+		</sequence>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<!-- =========================================================================== -->
+	
+</schema>

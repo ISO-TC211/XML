@@ -1,0 +1,1540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:dps="https://schemas.isotc211.org/19131/dps/2.2"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
+	xmlns:mrl="https://schemas.isotc211.org/19115/-1/mrl/1.3"
+	xmlns:mco="https://schemas.isotc211.org/19115/-1/mco/1.3"
+	xmlns:mdq="https://schemas.isotc211.org/19157/-/mdq/1.2"
+	xmlns:mas="https://schemas.isotc211.org/19115/-1/mas/1.3"
+	xmlns:mri="https://schemas.isotc211.org/19115/-1/mri/1.3"
+	xmlns:mcc="https://schemas.isotc211.org/19115/-1/mcc/1.3"
+	xmlns:mrc="https://schemas.isotc211.org/19115/-1/mrc/1.3"
+	xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
+	xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+	xmlns:mmi="https://schemas.isotc211.org/19115/-1/mmi/1.3"
+	xmlns:mrs="https://schemas.isotc211.org/19115/-1/mrs/1.3"
+	targetNamespace="https://schemas.isotc211.org/19131/dps/2.2"
+    elementFormDefault="qualified"
+	version="2.2.0">
+	<import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/cit/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/cit/1.3.0/citation.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mrl/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrl/1.3.0/lineage.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mco/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mco/1.3.0/constraints.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19157/-/mdq/1.2" schemaLocation="https://schemas.isotc211.org/19157/-/mdq/1.2.0/dataQualityElement.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mas/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mas/1.3.0/applicationSchema.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mrc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrc/1.3.0/content.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mri/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mri/1.3.0/identification.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mcc/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mcc/1.3.0/commonClasses.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/gex/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/gex/1.3.0/extent.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/lan/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/lan/1.3.0/language.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mmi/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mmi/1.3.0/maintenance.xsd"/>
+	<import namespace="https://schemas.isotc211.org/19115/-1/mrs/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/mrs/1.3.0/referenceSystem.xsd"/>
+	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+	<!--manual changes have been applied to the automatically generated xsd file from ShapeChange-->
+	<element name="AbbreviationEntry" type="dps:AbbreviationEntry_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>abbreviation and its full text version</documentation>
+		</annotation>
+	</element>
+	<complexType name="AbbreviationEntry_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="abbreviation" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>a shortened form of a written word or phrase used in
+								place of the whole word or phrase</documentation>
+						</annotation>
+					</element>
+					<element name="longerForm" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>full text version of an abbreviation</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AbbreviationEntry_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:AbbreviationEntry"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="AdditionalInformation" type="dps:AdditionalInformation_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>information on additional aspects for a certain specification
+				scope</documentation>
+		</annotation>
+	</element>
+	<complexType name="AdditionalInformation_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="additionalInformation" type="gco:CharacterString_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>narrative description of one aspect</documentation>
+						</annotation>
+					</element>
+					<element name="additionalInformationScope"
+						type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the additional information</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AdditionalInformation_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:AdditionalInformation"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="AdditionalInformationSection" type="dps:AdditionalInformationSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying additional information about the data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="AdditionalInformationSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="additionalInformation"
+						type="dps:AdditionalInformation_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>additional information for the data
+								product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AdditionalInformationSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:AdditionalInformationSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="ConformanceQualityLevel" type="dps:ConformanceQualityLevel_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>conformance quality level, that is, a requirement expressed as a
+				threshold value for a certain data quality measure</documentation>
+		</annotation>
+	</element>
+	<complexType name="ConformanceQualityLevel_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="requirementId" type="gco:CharacterString_PropertyType"
+						minOccurs="0">
+						<annotation>
+							<documentation>identity of the requirement, to be referred to from
+								metadata by an object of DQ_ConformanceResult class</documentation>
+						</annotation>
+					</element>
+					<element name="element" type="mdq:AbstractDQ_Element_PropertyType">
+						<annotation>
+							<documentation>specifies a data quality element that, in turn, specifies
+								a data quality measure and a threshold value for conformance (using
+								DQ_QuantitativeResult) or, alternatively, specifies a descriptive
+								statement (using DQ_DescriptiveResult)</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ConformanceQualityLevel_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:ConformanceQualityLevel"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataAcquisitionAndProcessing" type="dps:DataAcquisitionAndProcessing_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>placeholder for objects specifying sources and production steps in
+				producing the data product</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataAcquisitionAndProcessing_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="source" type="mrl:LI_Source_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>source data used in creating a data
+								product</documentation>
+						</annotation>
+					</element>
+					<element name="processStep" type="mrl:LI_ProcessStep_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>steps used in producing a data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataAcquisitionAndProcessing_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataAcquisitionAndProcessing"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataCapture" type="dps:DataCapture_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>instructions, requirements and/or descriptions of the data capture and
+				production for a certain scope</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataCapture_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="dataCaptureStatement" type="gco:CharacterString_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>narrative, free text descriptions of the process for the
+								capture and production of the data NOTE Shall contain information
+								about both capture and production of data.</documentation>
+						</annotation>
+					</element>
+					<element name="guide" type="cit:CI_Citation_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>reference to document describing the capture of features
+								and attributes from source information</documentation>
+						</annotation>
+					</element>
+					<element name="inclusionCriteria" type="gco:CharacterString_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>logical rules defining when and how features and
+								attributes are to be included in the data</documentation>
+						</annotation>
+					</element>
+					<element name="dataAcquisitionAndProcessing"
+						type="dps:DataAcquisitionAndProcessing_PropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>source and/or production process used in producing a data
+								product</documentation>
+						</annotation>
+					</element>
+					<element name="dataCaptureScope" type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the data capture information</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataCapture_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataCapture"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataCaptureSection" type="dps:DataCaptureSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying instructions, requirements and/or
+				descriptions of the data capture and processing</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataCaptureSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="dataCapture" type="dps:DataCapture_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>capture information for a data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataCaptureSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataCaptureSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataContentAndStructure" type="dps:DataContentAndStructure_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>provides a feature catalogue, a reference to a feature catalogue or a
+				coverage description and optionally an application schema of a part of, specified by
+				the specification scope, or the complete data product</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataContentAndStructure_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="narrativeDescription" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>overview description of an application schema and/or
+								feature catalogue for a specified scope</documentation>
+						</annotation>
+					</element>
+					<element name="applicationSchema"
+						type="mas:MD_ApplicationSchemaInformation_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>information on how to find resources that represents the
+								application schema</documentation>
+						</annotation>
+					</element>
+					<element name="featureCatalogue"
+						type="mrc:AbstractMD_ContentInformation_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>coverage description or feature catalogue, either by
+								listing each feature type according to ISO 19110 (subclass
+								MD_FeatureCatalogue of MD_ContentInformation) or as a reference to a
+								feature catalogue (using subclass MD_FeatureCatalogueDescription of
+								MD_ContentInformation) or, when the data is of coverage type, a
+								coverage description (using subclass MD_CoverageDescription of
+								MD_ContentInformation)</documentation>
+						</annotation>
+					</element>
+					<element name="contentScope" type="dps:SpecificationScope_PropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataContentAndStructure_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataContentAndStructure"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataContentAndStructureSection" type="dps:DataContentAndStructureSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying the data structure and content of a
+				data product</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataContentAndStructureSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="content" type="dps:DataContentAndStructure_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>content and structure of a data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataContentAndStructureSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataContentAndStructureSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataProductSpecification" type="dps:DataProductSpecification_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>represents a single instance of a data product specification. Each
+				instance of a data product specification contains a constant set of section objects.
+				Where the specification uses the scope feature, to specify different parts of the
+				product, each section object relates to exactly one scope</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataProductSpecification_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="overview" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>short human-readable, narrative description of the data
+								product specification</documentation>
+						</annotation>
+					</element>
+					<element name="specificationDescription"
+						type="dps:SpecificationDescription_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>metadata about the data product specification NOTE This
+								information is not to be confused with what is specified in the
+								identification section, which addresses the data product rather than
+								its specification.</documentation>
+						</annotation>
+					</element>
+					<element name="portrayalSection" type="dps:PortrayalSection_PropertyType">
+						<annotation>
+							<documentation>data portrayal section</documentation>
+						</annotation>
+					</element>
+					<element name="identificationSection"
+						type="dps:IdentificationSection_PropertyType">
+						<annotation>
+							<documentation>identification section which identifies the data
+								product</documentation>
+						</annotation>
+					</element>
+					<element name="contentAndStructureSection"
+						type="dps:DataContentAndStructureSection_PropertyType">
+						<annotation>
+							<documentation>data content and structure section</documentation>
+						</annotation>
+					</element>
+					<element name="deliverySection" type="dps:DeliverySection_PropertyType">
+						<annotation>
+							<documentation>data delivery section</documentation>
+						</annotation>
+					</element>
+					<element name="maintenanceSection" type="dps:MaintenanceSection_PropertyType">
+						<annotation>
+							<documentation>data maintenance section</documentation>
+						</annotation>
+					</element>
+					<element name="scopeSection" type="dps:ScopeSection_PropertyType">
+						<annotation>
+							<documentation>scope section</documentation>
+						</annotation>
+					</element>
+					<element name="metadataSection" type="dps:MetadataSection_PropertyType">
+						<annotation>
+							<documentation>metadata section</documentation>
+						</annotation>
+					</element>
+					<element name="additionalInformationSection"
+						type="dps:AdditionalInformationSection_PropertyType">
+						<annotation>
+							<documentation>additional information section</documentation>
+						</annotation>
+					</element>
+					<element name="dataQualitySection" type="dps:DataQualitySection_PropertyType">
+						<annotation>
+							<documentation>data quality section</documentation>
+						</annotation>
+					</element>
+					<element name="dataCaptureSection" type="dps:DataCaptureSection_PropertyType">
+						<annotation>
+							<documentation>data capture and production section</documentation>
+						</annotation>
+					</element>
+					<element name="referenceSystemSection"
+						type="dps:ReferenceSystemSection_PropertyType">
+						<annotation>
+							<documentation>reference system section</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataProductSpecification_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataProductSpecification"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataQuality" type="dps:DataQuality_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>specifies the conformance quality levels applicable for a certain
+				specification scope</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataQuality_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="dataQuality" type="dps:ConformanceQualityLevel_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>specifies the data quality for the specification scope,
+								that is, either a conformance quality level or a reason for not
+								specifying a certain data quality aspect</documentation>
+						</annotation>
+					</element>
+					<element name="dataQualityScope" type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the quality information</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataQuality_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataQuality"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DataQualitySection" type="dps:DataQualitySection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying conformance quality levels for a data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataQualitySection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="dataQuality" type="dps:DataQuality_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>conformance quality levels applicable for a certain
+								specification scope</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DataQualitySection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DataQualitySection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="Delivery" type="dps:Delivery_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>delivery information for a certain scope of a data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="Delivery_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="deliveryMedium" type="dps:DeliveryMedium_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>medium in which the product is delivered</documentation>
+						</annotation>
+					</element>
+					<element name="deliveryScope" type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the delivery information</documentation>
+						</annotation>
+					</element>
+					<element name="deliveryFormat" type="dps:DeliveryFormat_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>format in which the product is delivered</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="Delivery_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:Delivery"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DeliveryFormat" type="dps:DeliveryFormat_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>datatype for description of a data format</documentation>
+		</annotation>
+	</element>
+	<complexType name="DeliveryFormat_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="formatName" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>name of the data format</documentation>
+						</annotation>
+					</element>
+					<element name="version" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>version identification string for the data format
+								Example: date, number</documentation>
+						</annotation>
+					</element>
+					<element name="specification" type="gco:CharacterString_PropertyType"
+						minOccurs="0">
+						<annotation>
+							<documentation>name of a subset, profile, or product specification of
+								the format</documentation>
+						</annotation>
+					</element>
+					<element name="fileStructure" type="gco:CharacterString_PropertyType"
+						minOccurs="0">
+						<annotation>
+							<documentation>structure of a delivery file</documentation>
+						</annotation>
+					</element>
+					<element name="language" type="lan:LanguageCode_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>code for language used within the dataset NOTE The code
+								shall be according to ISO 639-2.</documentation>
+						</annotation>
+					</element>
+					<element name="characterSet" type="lan:MD_CharacterSetCode_PropertyType">
+						<annotation>
+							<documentation>full name of the character coding standard used for the
+								dataset</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DeliveryFormat_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DeliveryFormat"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DeliveryMedium" type="dps:DeliveryMedium_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>datatype for description of physical storage media and on-line services
+				for delivery of data</documentation>
+		</annotation>
+	</element>
+	<complexType name="DeliveryMedium_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="unitsOfDelivery" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>description of the units of delivery Example tiles,
+								layers, geographic areas</documentation>
+						</annotation>
+					</element>
+					<element name="transferSize" type="gco:Real_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>estimated size of a unit in the specified format,
+								expressed in Mbytes</documentation>
+						</annotation>
+					</element>
+					<element name="mediumName" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>name of the data medium</documentation>
+						</annotation>
+					</element>
+					<element name="otherDeliveryInformation" type="gco:CharacterString_PropertyType"
+						minOccurs="0">
+						<annotation>
+							<documentation>other information about the delivery
+								method</documentation>
+						</annotation>
+					</element>
+					<element name="serviceProperty" type="dps:ServiceProperty_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>delivery service as a set of key-value
+								pairs</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DeliveryMedium_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DeliveryMedium"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="DeliverySection" type="dps:DeliverySection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying how datasets are
+				delivered</documentation>
+		</annotation>
+	</element>
+	<complexType name="DeliverySection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="delivery" type="dps:Delivery_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>delivery information for a data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DeliverySection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:DeliverySection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="IdentificationSection" type="dps:IdentificationSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>for a data product there is a single object of the Identification class
+				and with a content that provides various ways of identifying, searching and
+				categorizing the data product</documentation>
+		</annotation>
+	</element>
+	<complexType name="IdentificationSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="title" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>official designation of the data product</documentation>
+						</annotation>
+					</element>
+					<element name="altTitle" type="gco:CharacterString_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>name, other than the official designation, by which the
+								data product is known</documentation>
+						</annotation>
+					</element>
+					<element name="abstract" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>brief narrative summary of the content of the data
+								product</documentation>
+						</annotation>
+					</element>
+					<element name="purpose" type="dps:Purpose_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>intentions with which the data product is
+								developed</documentation>
+						</annotation>
+					</element>
+					<element name="topicCategory" type="mri:MD_TopicCategoryCode_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>theme applicable to the data product</documentation>
+						</annotation>
+					</element>
+					<element name="spatialRepresentationType"
+						type="mcc:MD_SpatialRepresentationTypeCode_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>form of spatial representation in the data product NOTE
+								An example of form of the spatial representation is vector
+								data.</documentation>
+						</annotation>
+					</element>
+					<element name="spatialResolution" type="mri:MD_Resolution_Type" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>factor which provides a general understanding of the
+								density of spatial data</documentation>
+						</annotation>
+					</element>
+					<element name="supplementalInformation" type="gco:CharacterString_PropertyType"
+						minOccurs="0">
+						<annotation>
+							<documentation>any other descriptive information about the data
+								product</documentation>
+						</annotation>
+					</element>
+					<element name="uniqueId" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>persistent uniform resource identifier for identifying
+								the data product</documentation>
+						</annotation>
+					</element>
+					<element name="keyword" type="mri:MD_Keywords_Type" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>word, formalised word or phrase that is used to describe
+								the subject of the data product</documentation>
+						</annotation>
+					</element>
+					<element name="restriction" type="mco:MD_Constraints_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>classification code describing a handling restriction on
+								the data product</documentation>
+						</annotation>
+					</element>
+					<element name="extent" type="gex:EX_Extent_PropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>extent of geographic area and temporal extent covered by
+								the data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="IdentificationSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:IdentificationSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="Maintenance" type="dps:Maintenance_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>maintenance information for a certain specification scope of a data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="Maintenance_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="maintenanceAndUpdateStatement"
+						type="gco:CharacterString_PropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>narrative, free text descriptions of the process for the
+								maintenance of the data</documentation>
+						</annotation>
+					</element>
+					<element name="maintenanceAndUpdateFrequency"
+						type="dps:MaintenanceAndUpdateFrequency_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>frequency with which changes and additions are made to
+								the data product</documentation>
+						</annotation>
+					</element>
+					<element name="maintenanceScope" type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the maintenance information</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="Maintenance_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:Maintenance"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="MaintenanceAndUpdateFrequency" type="dps:MaintenanceAndUpdateFrequency_Type">
+		<annotation>
+			<documentation>frequency with which changes and additions are made to the data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="MaintenanceAndUpdateFrequency_Type">
+		<choice>
+			<element name="maintenanceAndUpdateFrequency"
+				type="mmi:MD_MaintenanceFrequencyCode_PropertyType" minOccurs="0">
+				<annotation>
+					<documentation>code that specifies the frequency with which changes and
+						additions are made to the data product NOTE If none of the predefined codes
+						in MD_MaintenanceFrequencyCode matches the update frequency for the data
+						product, the attribute userDefinedMaintenanceAndUpdateFrequency should be
+						used.</documentation>
+				</annotation>
+			</element>
+			<element name="userDefinedMaintenanceAndUpdateFrequency"
+				type="gco:TM_PeriodDuration_PropertyType" minOccurs="0">
+				<annotation>
+					<documentation>period of time with which changes and additions are made to the
+						data product NOTE This attribute should only be used if none of the
+						predefined codes in MD_MaintenanceFrequencyCode can be used.</documentation>
+				</annotation>
+			</element>
+		</choice>
+	</complexType>
+	<complexType name="MaintenanceAndUpdateFrequency_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:MaintenanceAndUpdateFrequency"/>
+		</sequence>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="MaintenanceSection" type="dps:MaintenanceSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying maintenance information about a data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="MaintenanceSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="maintenance" type="dps:Maintenance_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>maintenance information for the data
+								product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MaintenanceSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:MaintenanceSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="Metadata" type="dps:Metadata_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>holds an instruction of how to use a set of metadata elements and the
+				specification scope for which the instruction is applicable</documentation>
+		</annotation>
+	</element>
+	<complexType name="Metadata_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="specification" type="cit:CI_Citation_PropertyType">
+						<annotation>
+							<documentation>specifies a standard, a standard profile or other
+								specification to be used as a base for the metadata</documentation>
+						</annotation>
+					</element>
+					<element name="element" type="dps:MetadataElement_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>provides information on how to use specific metadata
+								elements defined by the selected standard, standard profile or
+								specification</documentation>
+						</annotation>
+					</element>
+					<element name="encoding" type="cit:CI_Citation_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>format and/or encoding for the metadata</documentation>
+						</annotation>
+					</element>
+					<element name="metadataScope" type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the metadata information</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="Metadata_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:Metadata"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="MetadataElement" type="dps:MetadataElement_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>datatype for specification of the application of a single metadata
+				element</documentation>
+		</annotation>
+	</element>
+	<complexType name="MetadataElement_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="name" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>identity of the metadata element</documentation>
+						</annotation>
+					</element>
+					<element name="application" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>application of the metadata element NOTE The attribute
+								may for example specify elements that are required or code lists to
+								be used.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MetadataElement_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:MetadataElement"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="MetadataSection" type="dps:MetadataSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying metadata for datasets</documentation>
+		</annotation>
+	</element>
+	<complexType name="MetadataSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="metadata" type="dps:Metadata_PropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>metadata information for the data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MetadataSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:MetadataSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="Portrayal" type="dps:Portrayal_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>portrayal information for a certain specification scope of the data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="Portrayal_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="portrayalCatalogueCitation" type="cit:CI_Citation_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>bibliographic reference to a portrayal
+								specification</documentation>
+						</annotation>
+					</element>
+					<element name="portrayalScope" type="dps:SpecificationScope_PropertyType">
+						<annotation>
+							<documentation>scope for the portrayal information</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="Portrayal_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:Portrayal"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="PortrayalSection" type="dps:PortrayalSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying portrayal information of a data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="PortrayalSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="portrayal" type="dps:Portrayal_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>portrayal information for a data product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="PortrayalSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:PortrayalSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="Purpose" type="dps:Purpose_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>information regarding the intentions with which the data product is
+				developed. Information can be provided in form of a summary. In addition use cases
+				may be added in order to provide purpose information in a more structured
+				way</documentation>
+		</annotation>
+	</element>
+	<complexType name="Purpose_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="useCase" type="dps:UseCase_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>detailed and structured description of a use case for the
+								data product</documentation>
+						</annotation>
+					</element>
+					<element name="summary" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>summary of the intentions with which the data product is
+								developed</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="Purpose_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:Purpose"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="ReferenceSystem" type="dps:ReferenceSystem_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>spatial, and optionally the temporal, reference system used for a certain
+				specification scope</documentation>
+		</annotation>
+	</element>
+	<complexType name="ReferenceSystem_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="spatialReferenceSystem"
+						type="mrs:MD_ReferenceSystem_PropertyType">
+						<annotation>
+							<documentation>identifier of a spatial reference system used for the
+								specified specification scope</documentation>
+						</annotation>
+					</element>
+					<element name="temporalReferenceSystem"
+						type="mrs:MD_ReferenceSystem_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>identifier of a temporal reference system used for the
+								specified specification scope</documentation>
+						</annotation>
+					</element>
+					<element name="referenceSystemScope" type="dps:SpecificationScope_PropertyType"
+					/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ReferenceSystem_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:ReferenceSystem"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="ReferenceSystemSection" type="dps:ReferenceSystemSection_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying the spatial and temporal reference
+				systems used in a data product</documentation>
+		</annotation>
+	</element>
+	<complexType name="ReferenceSystemSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="referenceSystem" type="dps:ReferenceSystem_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>reference system used</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ReferenceSystemSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:ReferenceSystemSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="ScopeSection" type="dps:ScopeSection_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>place holder for objects specifying the scopes of the data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="ScopeSection_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="scope" type="dps:SpecificationScope_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>scope addressing a certain part of content of a data
+								product</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ScopeSection_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:ScopeSection"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="ServiceProperty" type="dps:ServiceProperty_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>datatype describing a property of a service by providing the type of
+				property and the value of that property NOTE Interface standards like WFS, WMS and
+				WCS define a set of request parameters that may be used as service properties.
+				Examples are SERVICE, VERSION and LAYERS.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ServiceProperty_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="type" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>property that characterizes the service</documentation>
+						</annotation>
+					</element>
+					<element name="value" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>text that is the value of the property</documentation>
+						</annotation>
+					</element>
+					<element name="note" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>other information about the specific service
+								property</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ServiceProperty_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:ServiceProperty"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="SpecificationDescription" type="dps:SpecificationDescription_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>datatype for identification and description of the data product
+				specification</documentation>
+		</annotation>
+	</element>
+	<complexType name="SpecificationDescription_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="title" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>the official designation of the data product
+								specification</documentation>
+						</annotation>
+					</element>
+					<element name="versionedId" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>a persistent uniform resource identifier for identifying
+								this version of the data product specification</documentation>
+						</annotation>
+					</element>
+					<element name="id" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>a persistent uniform resource identifier for identifying
+								the latest version of the data product specification</documentation>
+						</annotation>
+					</element>
+					<element name="date" type="cit:CI_Date_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>date for a significant event in the life cycle of the
+								data product specification NOTE Such events include when the data
+								product specification was created, changed, approved and
+								published.</documentation>
+						</annotation>
+					</element>
+					<element name="language" type="lan:LanguageCode_PropertyType">
+						<annotation>
+							<documentation>language code according to ISO 639-2 for the language
+								that is used in the data product specification NOTE To provide a
+								data product specification in more than one languages, there has to
+								be a specification instance for each language.</documentation>
+						</annotation>
+					</element>
+					<element name="contact" type="cit:CI_Responsibility_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>contact information for the party that is responsible for
+								the data product specification</documentation>
+						</annotation>
+					</element>
+					<element name="webLocation" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>URL for a web site location where the data product
+								specification can be downloaded</documentation>
+						</annotation>
+					</element>
+					<element name="format" type="gco:CharacterString_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>file format in which the data product specification is
+								provided</documentation>
+						</annotation>
+					</element>
+					<element name="handlingRestriction"
+						type="mco:MD_ClassificationCode_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>classification code specifying limitations on handling
+								the data product specification</documentation>
+						</annotation>
+					</element>
+					<element name="maintenance" type="gco:CharacterString_PropertyType"
+						minOccurs="0">
+						<annotation>
+							<documentation>narrative description of the maintenance regime for the
+								data product specification</documentation>
+						</annotation>
+					</element>
+					<element name="term" type="dps:TermEntry_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>word or expression that is applicable to the data product
+								specification</documentation>
+						</annotation>
+					</element>
+					<element name="abbreviation" type="dps:AbbreviationEntry_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>shortened form of a written word or phrase that is
+								applicable to the data product specification</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpecificationDescription_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:SpecificationDescription"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="SpecificationScope" type="dps:SpecificationScope_Type"
+		substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>specification scope of a certain part of the content of the data
+				product</documentation>
+		</annotation>
+	</element>
+	<complexType name="SpecificationScope_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="scopeIdentification" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>short descriptive name for identification of the
+								specification scope of a data product specification</documentation>
+						</annotation>
+					</element>
+					<element name="level" type="mcc:MD_ScopeCode_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>hierarchical level (by code) of the data adressed by the
+								specification scope</documentation>
+						</annotation>
+					</element>
+					<element name="levelName" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>descriptive name of the hierarchical
+								level</documentation>
+						</annotation>
+					</element>
+					<element name="levelDescription" type="gco:CharacterString_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>narrative and detailed description of the level of the
+								data specified by the specification scope</documentation>
+						</annotation>
+					</element>
+					<element name="extent" type="gex:EX_Extent_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>spatial, vertical and temporal extent of the data
+								specified by the specification scope</documentation>
+						</annotation>
+					</element>
+					<element name="coverage" type="gco:CharacterString_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>coverages to which the information
+								applies</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SpecificationScope_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:SpecificationScope"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="TermEntry" type="dps:TermEntry_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>datatype for definition of a term</documentation>
+		</annotation>
+	</element>
+	<complexType name="TermEntry_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="term" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>the term to be used for a concept</documentation>
+						</annotation>
+					</element>
+					<element name="definition" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>representation of a concept by a descriptive statement
+								which serves to differentiate it from related
+								concepts</documentation>
+						</annotation>
+					</element>
+					<element name="note" type="gco:CharacterString_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>notes of the concept</documentation>
+						</annotation>
+					</element>
+					<element name="termReference" type="anyURI" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>reference to an entry in a repository</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TermEntry_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:TermEntry"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+	<element name="UseCase" type="dps:UseCase_Type" substitutionGroup="gco:AbstractObject">
+		<annotation>
+			<documentation>detailed documentation of the data product's purpose related to certain
+				user needs</documentation>
+		</annotation>
+	</element>
+	<complexType name="UseCase_Type">
+		<complexContent>
+			<extension base="gco:AbstractObject_Type">
+				<sequence>
+					<element name="name" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>name of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="version" type="gco:CharacterString_PropertyType" minOccurs="0">
+						<annotation>
+							<documentation>version number of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="summary" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>comprehensive textual description of the use
+								case</documentation>
+						</annotation>
+					</element>
+					<element name="goal" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>short description of the goal to be achieved by a
+								realization of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="diagram" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>use case diagram represented by an URL to an image of an
+								UML use case diagram NOTE It is important to have a link to a
+								diagram in form av a de-referenceable URL and not just an
+								identifier.</documentation>
+						</annotation>
+					</element>
+					<element name="actor" type="gco:CharacterString_PropertyType"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>designation of a user of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="stakeholder" type="gco:CharacterString_PropertyType"
+						minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>company, institution or interest group concerned by the
+								execution of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="mainSuccessScenario" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>numbered sequence of actions to be carried out during the
+								execution of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="trigger" type="gco:CharacterString_PropertyType" minOccurs="0"
+						maxOccurs="unbounded">
+						<annotation>
+							<documentation>event that leads to the execution of the use
+								case</documentation>
+						</annotation>
+					</element>
+					<element name="precondition" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>description of the status that is required to start the
+								execution of the use case</documentation>
+						</annotation>
+					</element>
+					<element name="postcondition" type="gco:CharacterString_PropertyType">
+						<annotation>
+							<documentation>description of the status after the successful execution
+								of the use case</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="UseCase_PropertyType">
+		<sequence minOccurs="0">
+			<element ref="dps:UseCase"/>
+		</sequence>
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+	</complexType>
+</schema>

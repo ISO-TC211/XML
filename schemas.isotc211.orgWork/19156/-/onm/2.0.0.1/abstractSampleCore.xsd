@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include/>
+	<xs:include schemaLocation="abstractConceptualCore.xsd"/>
+	<xs:include/>
+	<xs:include/>
+	<xs:element name="AbstractPreparationProcedure" type="AbstractPreparationProcedure"/>
+	<xs:complexType name="AbstractPreparationProcedure" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Sample Schema:PreparationProcedure intended as a parent class for all PreparationProcedure realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractPreparationStep" type="AbstractPreparationStep"/>
+	<xs:complexType name="AbstractPreparationStep" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Sample Schema:PreparationStep intended as a parent class for all PreparationStep realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>description of the preparationStep</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="time" type="TM_Object" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>time of the preparationStep</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractSample" type="AbstractSample"/>
+	<xs:complexType name="AbstractSample" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Sample Schema:Sample intended as a parent class for all Sample realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="parameter" type="NamedValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>arbitrary event-specific parameter relevant to the Sample</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sampleType" type="AbstractSampleType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>type of Sample according to a community agreed typology.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractSampler" type="AbstractSampler"/>
+	<xs:complexType name="AbstractSampler" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Sample Schema:Sampler intended as a parent class for all Sampler realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="samplerType" type="AbstractSamplerType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>type of Sampler according to a community agreed typology</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractSamplerType" type="AbstractSamplerType"/>
+	<xs:complexType name="AbstractSamplerType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>An empty extension point for providing various classification schemes for Samplers.
+If Sampler classification schemes are used in the implementing application schemas, a concrete realization SHALL be created for the application.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractSampleType" type="AbstractSampleType"/>
+	<xs:complexType name="AbstractSampleType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>An empty extension point for providing various classification schemes for Samples.
+If Sample classification schemes are used in the implementing application schemas, a concrete realization SHALL be created for the application.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="AbstractSampling" type="AbstractSampling"/>
+	<xs:complexType name="AbstractSampling" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Sample Schema:Sampling intended as a parent class for all Sampling realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="parameter" type="NamedValue" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>arbitrary event-specific parameter relevant to the Sampling</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="samplingLocation" type="Geometry" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>location information pertaining to the Sampling</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="time" type="TM_Object" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>time of the Sampling</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractSamplingProcedure" type="AbstractSamplingProcedure"/>
+	<xs:complexType name="AbstractSamplingProcedure" abstract="true">
+		<xs:annotation>
+			<xs:documentation>A FeatureType realization of Conceptual Sample Schema:SamplingProcedure intended as a parent class for all SamplingProcedure realizations based on General Feature Model as defined in ISO 19109</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+</xs:schema>

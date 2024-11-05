@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:lad="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	targetNamespace="https://schemas.isotc211.org/19152/-1/lad/1.0"
+	elementFormDefault="qualified"
+	version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>spatial unit package of LADM Part 1</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="external.xsd"/>
+	<xs:include schemaLocation="administrative.xsd"/>
+	<xs:include schemaLocation="genericConceptualModel.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_AreaType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_AreaType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_AreaType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_AreaType" type="lad:LA_AreaType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_AreaType_Type">
+		<xs:annotation>
+			<xs:documentation>type of  area</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="calculatedArea" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nonOfficalArea" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="officialArea" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="surveyedArea" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_AreaValue_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_AreaValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_AreaValue" type="lad:LA_AreaValue_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_AreaValue_Type">
+		<xs:annotation>
+			<xs:documentation>the area value of the spatial unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="areaSize" type="gco:Area_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the area size of the spatial unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!-- <xs:element name="type" type="lad:LA_AreaType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+			<xs:element name="areaType" type="lad:LA_AreaType_PropertyType" minOccurs="1" maxOccurs="1">
+			<xs:annotation>
+					<xs:documentation>the type of area</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_DimensionType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_DimensionType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_DimensionType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_DimensionType" type="lad:LA_DimensionType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_DimensionType_Type">
+		<xs:annotation>
+			<xs:documentation>type of dimension</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="a0D" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="a1D" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="a2D" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="a3D" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="liminal" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_Level_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_Level"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_Level" type="lad:LA_Level_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_Level_Type">
+		<xs:annotation>
+			<xs:documentation>collection of spatial units with a geometric and/or thematic coherence</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="lID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the identifier of the level</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the name of the level</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="registerType" type="lad:LA_RegisterType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the register type of the content of the level</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="structure" type="lad:LA_StructureType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the structure of the level geometry</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!-- <xs:element name="type" type="lad:LA_LevelContentType_PropertyType" minOccurs="0" maxOccurs="1"> -->
+					<xs:element name="levelType" type="lad:LA_LevelContentType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the type of the content of the level</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="su" type="lad:LA_SpatialUnit_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_LevelContentType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_LevelContentType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_LevelContentType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_LevelContentType" type="lad:LA_LevelContentType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_LevelContentType_Type">
+		<xs:annotation>
+			<xs:documentation>type of level content</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="building" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="customary" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="informal" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mixed" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="network" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="primaryRight" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="responsibility" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="restriction" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_RegisterType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_RegisterType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_RegisterType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_RegisterType" type="lad:LA_RegisterType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_RegisterType_Type">
+		<xs:annotation>
+			<xs:documentation>type of register</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="all" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="forest" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mining" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="publicSpace" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="rural" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="urban" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_RequiredRelationshipSpatialUnit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_RequiredRelationshipSpatialUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_RequiredRelationshipSpatialUnit" type="lad:LA_RequiredRelationshipSpatialUnit_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_RequiredRelationshipSpatialUnit_Type">
+		<xs:annotation>
+			<xs:documentation>explicit association between spatial units</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="relationship" type="lad:TopoRelation_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>explicit relationship between spatial units</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<!-- ========================================================================= -->
+	<xs:complexType name="TopoRelation_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:TopoRelation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="TopoRelation" type="lad:TopoRelation_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="TopoRelation_Type">
+		<xs:annotation>
+			<xs:documentation>explicit association between spatial units</xs:documentation>
+		</xs:annotation>
+				<xs:sequence>
+					<xs:element name="relationship" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>explicit relationship between spatial units</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_SpatialUnit_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_SpatialUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_SpatialUnit" type="lad:LA_SpatialUnit" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_SpatialUnit">
+		<xs:annotation>
+			<xs:documentation>feature type related to land administration/georegulation with associated spatial and thematic attributes</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="area" type="lad:LA_AreaValue_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>the area value</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dimension" type="lad:LA_DimensionType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the dimension of the spatial unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="extAddressID" type="lad:ExtAddress_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>the link to external address(es) of the spatial unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="geometry" type="gml:GeometryPropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the geometry of the spatial unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="label" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>short textual description of the spatial unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="referencePoint" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the coordinates of a point inside the spatial unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="suID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the spatial unit identifier</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="surfaceRelation" type="lad:LA_SurfaceRelationType_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the surface relation of the spatial unit</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="volume" type="lad:LA_VolumeValue_PropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>the volume value (in case of bounded 3D description)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="baunit" type="lad:LA_BAUnit_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="su1" type="lad:LA_SpatialUnit_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="su2" type="lad:LA_SpatialUnit_PropertyType" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_SpatialUnitGroup_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_SpatialUnitGroup"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_SpatialUnitGroup" type="lad:LA_SpatialUnitGroup_Type" substitutionGroup="lad:AbstractVersionedObject"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_SpatialUnitGroup_Type">
+		<xs:annotation>
+			<xs:documentation>any number of spatial units, considered as an entity</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="lad:AbstractVersionedObject_Type">
+				<xs:sequence>
+					<xs:element name="hierachyLevel" type="gco:Integer_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the level in the hierarchy of the (administrative or zoning) subdivision</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="label" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>short textual description of the spatial unit group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="lad:CharacterSetCode_PropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the name of the spatial unit group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="referencePoint" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the coordinates of a point within the spatial unit group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sugID" type="lad:Oid_PropertyType" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>the identifier of the spatial unit group</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="part" type="lad:LA_SpatialUnit_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_StructureType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_StructureType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_StructureType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_StructureType" type="lad:LA_StructureType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_StructureType_Type">
+		<xs:annotation>
+			<xs:documentation>type of structure</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="point" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="polygon" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="sketch" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="text" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="topological" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="unstructuredLine" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_SurfaceRelationType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_SurfaceRelationType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_SurfaceRelationType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_SurfaceRelationType" type="lad:LA_SurfaceRelationType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_SurfaceRelationType_Type">
+		<xs:annotation>
+			<xs:documentation>type of surface relation</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="above" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="below" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="mixed" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="onSurface" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_VolumeType_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_VolumeType"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_VolumeType" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ........................................................................ -->
+	<!-- <xs:element name="LA_VolumeType" type="lad:LA_VolumeType_Type"/> -->
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_VolumeType_Type">
+		<xs:annotation>
+			<xs:documentation>type of volume</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="calculatedVolume" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nonOfficalVolume" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="officialVolume" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="surveyedVolume" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="LA_VolumeValue_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:LA_VolumeValue"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="LA_VolumeValue" type="lad:LA_VolumeValue_Type"/>
+	<!-- ........................................................................ -->
+	<xs:complexType name="LA_VolumeValue_Type">
+		<xs:annotation>
+			<xs:documentation>the volume value of the spatial unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- <xs:element name="type" type="lad:LA_VolumeType_PropertyType" minOccurs="1" maxOccurs="1"> -->
+			<xs:element name="volumeValueType" type="lad:LA_VolumeType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the type of volume</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="volumeSize" type="gco:Volume_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>the volume size of the spatial unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================================================= -->
+	<xs:complexType name="CharacterSetCode_PropertyType">
+		<xs:sequence>
+			<xs:element ref="lad:CharacterSetCode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ........................................................................ -->
+	<xs:element name="CharacterSetCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+	<!-- ========================================================================= -->
+</xs:schema>

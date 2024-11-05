@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified"
+    targetNamespace="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:smi="https://schemas.isotc211.org/19130/-3/smi/1.1"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0" 
+  xmlns:msr="https://schemas.isotc211.org/19115/-1/msr/1.3"
+  xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+  version="1.1.0"
+    >
+    <import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <import namespace="https://schemas.isotc211.org/19115/-1/msr/1.3" schemaLocation="https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd"/>
+
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/nonPhysicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-1/smi/1.1.0/physicalSensorModel.xsd"/>
+    <include schemaLocation="../../../../19130/-2/smi/1.1.0/codeList.xsd"/>
+
+    
+    <!-- =====================19130-1 ============================= -->
+    <complexType name="SE_SensorModel_PropertyType">
+        <sequence minOccurs="0">
+            <element ref="smi:SE_SensorModel"/>
+        </sequence>
+        <attributeGroup ref="gco:ObjectReference"/>
+        <attribute ref="gco:nilReason"/>
+    </complexType>
+    <element name="SE_SensorModel" substitutionGroup="smi:SD_SensorModel" type="smi:SE_SensorModel_Type">
+        <annotation>
+            <documentation>Information on sensor Model for sensor collecting the image.</documentation>
+        </annotation>
+    </element>
+      <complexType name="SE_SensorModel_Type">
+        <complexContent>
+            <extension base="smi:SD_SensorModel_Type">
+                <sequence>
+                    <element name="sensorDataModeling" type="smi:SE_DataModelingMethod_PropertyType">
+                        <annotation>
+                            <documentation>method for modelling the sensor</documentation>
+                        </annotation>
+                    </element>
+                    <element name="sensorManufacturer" type="gco:CharacterString_PropertyType">
+                        <annotation>
+                            <documentation>maker of the sensor</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+ </schema>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cat:CT_CodelistCatalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://schemas.isotc211.org/19139/-/cat/1.2 https://schemas.isotc211.org/19139/-/cat/1.2.0/cat.xsd
+    https://schemas.isotc211.org/19103/-/gco/1.2 https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd
+    http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd"
+    xmlns:cat="https://schemas.isotc211.org/19139/-/cat/1.2"
+    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:lan="https://schemas.isotc211.org/19115/-1/lan/1.3"
+    xmlns:gml="http://www.opengis.net/gml/3.2">
+    <!--=====Catalogue description=====-->
+    <cat:name><gco:CharacterString>Codelists from the ISO / TC211 Standards</gco:CharacterString></cat:name>
+    <cat:scope><gco:CharacterString>Codelists related to ISO / TC211 Standards</gco:CharacterString></cat:scope>
+    <cat:fieldOfApplication><gco:CharacterString>ISO TC211 Standards</gco:CharacterString></cat:fieldOfApplication>
+    <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
+    <cat:versionDate><gco:Date>2021-03-05</gco:Date></cat:versionDate>
+    <cat:locale>
+        <lan:PT_Locale>
+            <lan:language>
+                <lan:LanguageCode
+                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
+                    codeListValue="eng">eng</lan:LanguageCode>
+            </lan:language>
+            <lan:characterEncoding>
+                <lan:MD_CharacterSetCode
+                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
+                    codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode>
+            </lan:characterEncoding>
+        </lan:PT_Locale>
+    </cat:locale>
+     <!--===== Sub-Catalogue description ISO 19124 group of ISO / TC211 metadata Standards=====-->
+    <cat:subCatalogue xlink:title="Codelists for ISO 19124">
+        <cat:CT_CodelistCatalogue id="ISO19124">
+            <!--=====Catalogue description=====-->
+            <cat:name><gco:CharacterString>Codelists from the ISO 19124 group of ISO / TC211 Standards</gco:CharacterString></cat:name>
+            <cat:scope><gco:CharacterString>Codelists related to ISO 19124 group of ISO / TC211 Metadata Standards</gco:CharacterString>
+            </cat:scope>
+            <cat:fieldOfApplication><gco:CharacterString>ISO TC211 Metadata Standards</gco:CharacterString>
+            </cat:fieldOfApplication>
+            <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString>
+            </cat:versionNumber>
+            <cat:versionDate>
+                <gco:Date>2021-11-26</gco:Date>
+            </cat:versionDate>
+            <cat:locale><lan:PT_Locale>
+                <lan:language><lan:LanguageCode
+                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
+                    codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                <lan:characterEncoding><lan:MD_CharacterSetCode
+                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
+                    codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+            </lan:PT_Locale></cat:locale>
+            <!--=====Sub-Sub-Catalogue description Calibration and validation of remote sensing data and derived products namespace=====-->
+            <cat:subCatalogue xlink:title="Codelists from the Calibration and validation of remote sensing data and derived products (crp) Namespace">
+                <cat:CT_CodelistCatalogue id="ISO19124-1.1.crp">
+                    <cat:name><gco:CharacterString>Codelists from the Calibration and validation of remote sensing data and derived products (crp) Namespace</gco:CharacterString></cat:name>
+                    <cat:scope><gco:CharacterString>Codelists related to Calibration and validation of remote sensing data and derived products (crp) Namespace</gco:CharacterString>
+                    </cat:scope>
+                    <cat:fieldOfApplication><gco:CharacterString>ISO TC211 Metadata Standards</gco:CharacterString>
+                    </cat:fieldOfApplication>
+                    <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString>
+                    </cat:versionNumber>
+                    <cat:versionDate>
+                        <gco:Date>2021-11-26</gco:Date>
+                    </cat:versionDate>
+                    <cat:locale><lan:PT_Locale>
+                        <lan:language><lan:LanguageCode
+                            codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
+                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                        <lan:characterEncoding><lan:MD_CharacterSetCode
+                            codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
+                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                    </lan:PT_Locale></cat:locale>
+                      <cat:codelistItem xlink:title="Code list items for Calibration Type from the Calibration and validation of remote sensing data and derived products (crp) Namespace">
+                        <cat:CT_Codelist id="ISO19124-1.1.crp.CA_CalibrationType">
+                            <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">CA_CalibrationType</gco:ScopedName></cat:identifier>
+                            <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">CA_CalibrationType</gco:ScopedName></cat:name>
+                            <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
+                            <cat:description><gco:CharacterString></gco:CharacterString></cat:description>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_cross">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_cross">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">cross</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">cross</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>calibration performed by comparing two or more successive calibrations</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>calibration performed by comparing two or more successive calibrations</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_inFlight">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_inFlight">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">inFlight</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">inFlight</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>calibration performed during the flight</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>calibration performed during the flight</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_inSitu">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_inSitu">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">inSitu</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">inSitu</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>calibration performed using targets within or close to the project region</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>calibration performed using targets within or close to the project region</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_laboratory">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_laboratory">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">laboratory</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">laboratory</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>calibration performed in a laboratory</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>calibration performed in a laboratory</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_other">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_other">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">other</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">other</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>other type of calibration</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>other type of calibration</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_testRange">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_testRange">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">testRange</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">testRange</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>calibration performed at a testfield or a test range</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>calibration performed at a testfield or a test range</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_vicarious">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_CalibrationType_vicarious">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">vicarious</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">vicarious</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>calibration performed using natural targets</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>calibration performed using natural targets</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                        </cat:CT_Codelist>
+                    </cat:codelistItem>
+                    <!-- ......................................... -->
+                    <cat:codelistItem xlink:title="Code list items for Statistic Computation from the Calibration and validation of remote sensing data and derived products (crp) Namespace">
+                        <cat:CT_Codelist id="ISO19124-1.1.crp.CA_StatisticComputation">
+                            <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">CA_StatisticComputation</gco:ScopedName></cat:identifier>
+                            <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">CA_StatisticComputation</gco:ScopedName></cat:name>
+                            <cat:definition><gco:CharacterString></gco:CharacterString></cat:definition>
+                            <cat:description><gco:CharacterString>enumeration</gco:CharacterString></cat:description>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_averagedMeasurement">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_averagedMeasurement">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.1">averagedMeasurement</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.1">averagedMeasurement</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Let us denote a continuous geophysical field in space and time Theta(t,r), where t and r denote time and space, respectively. A sampled discrete or (spatially and/or temporally) averaged measurement x of this field is then given by the random variable x.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Let us denote a continuous geophysical field in space and time Theta(t,r), where t and r denote time and space, respectively. A sampled discrete or (spatially and/or temporally) averaged measurement x of this field is then given by the random variable x.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_error">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_error">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.2">error</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.2">error</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The mapping function h relates the true geophysical field to the actual measurement. The error  is then defined as the difference between the sampled observation and the true, but unknown, state of the geophysical field.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The mapping function h relates the true geophysical field to the actual measurement. The error  is then defined as the difference between the sampled observation and the true, but unknown, state of the geophysical field.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_diffBetween2Samples">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_diffBetween2Samples">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.3">diffBetween2Samples</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.3">diffBetween2Samples</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>A reference data set containing measurements y of the same geophysical variable with spatiotemporal resolution Beta, which might be sampled in different ways at different times</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>>A reference data set containing measurements y of the same geophysical variable with spatiotemporal resolution Beta, which might be sampled in different ways at different times</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_probDensityFunction">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_probDensityFunction">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.4">probDensityFunction</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.4">probDensityFunction</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>For validation purposes, one is not primarily interested in the differences for each individual pair of observations, but the underlying probability density function (PDF)</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>For validation purposes, one is not primarily interested in the differences for each individual pair of observations, but the underlying probability density function (PDF)</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_errorModel">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_errorModel">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.5">errorModel</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.5">errorModel</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The uncertainty assessment requires detailed understanding of the individual contributions to the PDF:
+                                        - Systematic effects due to individual measurement devices and retrieval procedures (h,k), including large-scale systematic effects due to instrument calibration or harmonization
+                                        - Random measurement and retrieval errors
+                                        - Differences in the representativeness of different data sets (again including random and systematic components)
+                                        If all these different components are fully understood, one can develop an error model M that allows to predict the PDF of d as a function of the above mentioned factors.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The uncertainty assessment requires detailed understanding of the individual contributions to the PDF:
+                                        - Systematic effects due to individual measurement devices and retrieval procedures (h,k), including large-scale systematic effects due to instrument calibration or harmonization
+                                        - Random measurement and retrieval errors
+                                        - Differences in the representativeness of different data sets (again including random and systematic components)
+                                        If all these different components are fully understood, one can develop an error model M that allows to predict the PDF of d as a function of the above mentioned factors.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_variance">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_variance">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.6">variance</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.6">variance</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The statistical properties of δ, i.e., the differences between the considered data sets, are commonly expressed in terms of the corresponding zeroth and first-order moments (mean, variance and covariance), and can be used to derive uncertainty estimates for these products.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The statistical properties of δ, i.e., the differences between the considered data sets, are commonly expressed in terms of the corresponding zeroth and first-order moments (mean, variance and covariance), and can be used to derive uncertainty estimates for these products.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_covariance">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_covariance">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.7">covariance</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.2.4">covariance</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>In full analogy to the mean and variance of the difference 𝛿, one can define the corresponding properties for the two observational data sets x and y, as well as their associated error.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>In full analogy to the mean and variance of the difference 𝛿, one can define the corresponding properties for the two observational data sets x and y, as well as their associated error.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_bias">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_bias">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.1">bias</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.1">bias</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The most common metric to quantify relative systematic differences between data sets is the bias, which is defined as the difference in the mean values.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The most common metric to quantify relative systematic differences between data sets is the bias, which is defined as the difference in the mean values.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_medianDifference">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_medianDifference">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.3.2">medianDifference</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C3.2">medianDifference</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The median md is a value separating the higher half from the lower half of a data set.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The median md is a value separating the higher half from the lower half of a data set.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_rootMeanSquareDeviation">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_rootMeanSquareDeviation">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.4.1">rootMeanSquareDeviation</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.4.1">rootMeanSquareDeviation</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The root-mean-square deviation RMSD is a metric for characterizing the pairwise agreement between two data sets.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The root-mean-square deviation RMSD is a metric for characterizing the pairwise agreement between two data sets.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_decompositionOfTheRMSD">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_decompositionOfTheRMSD">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.4.2">decompositionOfTheRMSD</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.4.2">decompositionOfTheRMSD</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The RMSD can be decomposed into two bias related terms (a bias in mean and a bias in standard deviation) and a correlation-dependent term.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The RMSD can be decomposed into two bias related terms (a bias in mean and a bias in standard deviation) and a correlation-dependent term.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_correlationUnknownTruth">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_correlationUnknownTruth">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.5.2">correlationUnknownTruth</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.5.2">correlationUnknownTruth</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Correlation with respect to the unknown truth</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Correlation with respect to the unknown truth</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_correlationRMSE">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_correlationRMSE">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.5.3">correlationRMSE</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.5.3">correlationRMSE</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Correlation with respect to the root-mean-square error</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Correlation with respect to the root-mean-square error</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_correlationSNR">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_correlationSNR">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.5.4">correlationSNR</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.5.4">correlationSNR</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Correlation with respect to the logarithmic signal-to-noise ratio</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Correlation with respect to the logarithmic signal-to-noise ratio</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_correlationPearsonR">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_correlationPearsonR">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.1">correlationPearsonR</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.1">correlationPearsonR</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The correlation between two data sets is a normalized measure of statistical dependency between two variables. The linear (Pearson) product-moment correlation coefficient is a correlation metric, which describes first-order linear statistical dependency as the covariance between the data sets normalized by their respective standard deviations.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The correlation between two data sets is a normalized measure of statistical dependency between two variables. The linear (Pearson) product-moment correlation coefficient is a correlation metric, which describes first-order linear statistical dependency as the covariance between the data sets normalized by their respective standard deviations.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_correlationSpearmanRank">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_correlationSpearmanRank">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.2">correlationSpearmanRank</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.2">correlationSpearmanRank</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>The nonparametric Spearman's rank correlation coefficient is a nonlinear correlation metric. Its definition is very similar to that of the Pearson correlation coefficient with the exception that it uses the variances and covariance of the ranks (r) of the data sets rather than the values directly.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>The nonparametric Spearman's rank correlation coefficient is a nonlinear correlation metric. Its definition is very similar to that of the Pearson correlation coefficient with the exception that it uses the variances and covariance of the ranks (r) of the data sets rather than the values directly.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_kendallsTau">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_kendallsTau">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.3">kendallsTau</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.3">kendallsTau</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Kendall's t is another nonparametric, nonlinear correlation metric, which is mostly used as hypothesis test whether two variables are statistically dependent rather than for quantifying the quality of a regression.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Kendall's t is another nonparametric, nonlinear correlation metric, which is mostly used as hypothesis test whether two variables are statistically dependent rather than for quantifying the quality of a regression.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_mutualInformation">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_mutualInformation">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.4">mutualInformation</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.6.4">mutualInformation</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Mutual information takes into account only general statistical dependencies without any specific assumption of the corresponding functional form. It is defined based upon the probability distributions of the data sets.</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Mutual information takes into account only general statistical dependencies without any specific assumption of the corresponding functional form. It is defined based upon the probability distributions of the data sets.</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                            <cat:codeEntry xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19124-1.1.crp.CA_CalibrationType_timeSeries">
+                                <cat:CT_CodelistValue id="ISO19124-1.1.crp.CA_StatisticComputation_timeSeries">
+                                    <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.7.1">timeSeries</gco:ScopedName></cat:identifier>
+                                    <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19124/-1/1/clause#C.7.1">timeSeries</gco:ScopedName></cat:name>
+                                    <cat:definition><gco:CharacterString>Time series of measurements of a geophysical variable</gco:CharacterString></cat:definition>
+                                    <cat:description><gco:CharacterString>Time series of measurements of a geophysical variable</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                        </cat:CT_Codelist>
+                    </cat:codelistItem>
+                </cat:CT_CodelistCatalogue>
+            </cat:subCatalogue>           
+            <!--=====End Sub-Sub-Catalogue description Calibration and validation of remote sensing data and derived products namespace=====-->
+            <cat:codelistItem gco:nilReason="inapplicable"/>
+        </cat:CT_CodelistCatalogue>
+    </cat:subCatalogue>
+    <!--=====End Sub-Catalogue description ISO 19124 group of ISO / TC211 metadata Standards=====-->                     
+    <cat:codelistItem gco:nilReason="inapplicable"/>
+</cat:CT_CodelistCatalogue>

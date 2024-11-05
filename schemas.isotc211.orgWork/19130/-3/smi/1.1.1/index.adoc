@@ -1,0 +1,97 @@
+﻿= Sensor Model Implementation (SMI)
+:edition: 1.1
+:revdate: 2021-02-15
+
+== Sensor Model Implementation Version: 1.1
+
+=== Description
+
+The XML schema was encoded using the rules described in ISO 19108 and ISO/TS
+19139:2007.
+
+SMI 1.1 is an XML Schema implementation derived from:
+
+* ISO 19130-1, Geographic Information - Imagery Sensor Models for Geopositioning -
+Part 1: Fundamentals; and
+* ISO 19130-2, Geographic Information - Imagery Sensor Models for Geopositioning -
+Part 2: SAR, INSAR, lidar and sonar.
+
+=== XML Namespace for smi 1.1
+
+The namespace URI for smi 1.1 is `https://schemas.isotc211.org/19130/-3/smi/1.1`.
+
+=== XML Schema for smi 1.1
+
+https://schemas.isotc211.org/19130/-3/smi/1.1.0/smi.xsd
+is the XML Schema document to be referenced by XML documents containing XML elements
+in the smi 1.1 namespace or by XML Schema documents importing the smi 1.1 namespace.
+This XML schema includes (indirectly) all the implemented concepts of the smi
+namespace, but it does not contain the declaration of any types.
+
+https://schemas.isotc211.org/19130/-1/smi/1.1.0[Related XML Schema for smi 1.1
+derived from ISO 19130-1, Geographic Information - Imagery Sensor Models for
+Geopositioning - Part 1: Fundamentals]
+
+
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorModel.xsd
+implements the UML conceptual schema defined in Clause 7.2.
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/groundControlPoints.xsd
+implements the UML conceptual schema defined in Clause 7.4.
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/physicalSensorModel.xsd
+implements the UML conceptual schema defined in Clause 8.4.
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/sensorParameters.xsd
+implements the UML conceptual schema defined in Clause 8.5.
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/spatialElements.xsd
+implements the UML conceptual schema defined in Clause 8.6.
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/nonPhysicalSensorModel.xsd
+implements the UML conceptual schema defined in Clause 9.
+* https://schemas.isotc211.org/19130/-1/smi/1.1.0/codeList.xsd
+
+https://schemas.isotc211.org/19130/-2/smi/1.1.0[Related XML Schema for smi 1.1
+derived from ISO 19130-2, Geographic Information - Imagery Sensor Models for
+Geopositioning - Part 2: SAR, INSAR, lidar and sonar.]
+
+* https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorModel.xsd
+* https://schemas.isotc211.org/19130/-2/smi/1.1.0/sensorParameters.xsd
+* https://schemas.isotc211.org/19130/-2/smi/1.1.0/spatialElements.xsd
+* https://schemas.isotc211.org/19130/-2/smi/1.1.0/codeList.xsd
+
+=== Related XML Namespaces for smi 1.1
+
+The smi 1.1 namespace imports these other namespaces:
+
+[%unnumbered]
+[options=header,cols=4]
+|===
+| Name | Standard Prefix | Namespace Location | Schema Location
+
+| Geographic Common Objects | gco |
+`https://schemas.isotc211.org/19103/-/gco/1.2.0` | https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd[gco.xsd]
+| CITation and responsibility | cit |
+`https://schemas.isotc211.org/19115/-1/cit/1.3.0` | https://schemas.isotc211.org/19115/-1/cit/1.3.0/cit.xsd[cit.xsd]
+| Metadata for Spatial Represenation | mrs |
+`https://schemas.isotc211.org/19115/-1/msr/1.3.0` | https://schemas.isotc211.org/19115/-1/msr/1.3.0/msr.xsd[msr.xsd]
+| Metadata for ACquisition | mac |
+`https://schemas.isotc211.org/19115/-2/mac/2.2.0` | https://schemas.isotc211.org/19115/-2/mac/2.2.0/mac.xsd[mac.xsd]
+| Metadata for Data Quality | mdq |
+`https://schemas.isotc211.org/19157/-/mdq/1.2.0` | https://schemas.isotc211.org/19157/-/mdq/1.2.0/mdq.xsd[mdq.xsd]
+| Referencing By Coordinates | rbc |
+`https://schemas.isotc211.org/19111/-/rbc/3.1.0` | https://schemas.isotc211.org/19111/-/rbc/3.1.0/rbcStubs.xsd[rbcStubs.xsd]
+| Schemas for Coverages Geometry | gmcov |
+http://www.opengis.net/gmlcov/1.0[http://www.opengis.net/gmlcov/1.0] |
+https://schemas.isotc211.org/19123/-/cis/1.1.0/gridPoint.xsd[gridPoint.xsd]
+| Geospatial Meta-Language | gml |
+http://schemas.opengis.net/gml/3.2.1/gml.xsd |
+http://schemas.opengis.net/gml/3.2.1/gml.xsd
+| Sensor Web Enabled | swe |
+http://www.opengis.net/swe/2.0[http://www.opengis.net/swe/2.0] |
+http://schemas.opengis.net/sweCommon/2.0/swe.xsd
+| Sensor Meta-Language | sml |
+http://www.opengis.net/sensorml/2.0[http://www.opengis.net/sensorml/2.0] |
+http://schemas.opengis.net/sensorML/2.0/sensorML.xsd
+|===
+
+=== Working Versions
+
+When revisions to these schema become necessary, they will be managed in the
+https://github.com/ISO-TC211/XML[ISO TC211 Git Repository].

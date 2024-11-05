@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:aip="https://schemas.isotc211.org/19160/-4/aip/2.8"
+	xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2" 
+	elementFormDefault="qualified" 
+	targetNamespace="https://schemas.isotc211.org/19160/-4/aip/2.8" 
+	version="2.8.0">
+	<xs:include schemaLocation="aip.xsd"/>
+	<xs:import namespace="https://schemas.isotc211.org/19103/-/gco/1.2" schemaLocation="../../../../19103/-/gco/1.2.0/gco.xsd"/>
+	<xs:include schemaLocation="postalAddressProfile.xsd"/>
+	<!-- ======================================== -->
+	<xs:complexType name="AddressedObjectIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:AddressedObjectIdentifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="AddressedObjectIdentifier" substitutionGroup="aip:PostalAddressComponent" type="aip:AddressedObjectIdentifier_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="AddressedObjectIdentifier_Type">
+		<xs:annotation>
+			<xs:documentation>Construct identifying a delivery point or a group of delivery points.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence>
+					<xs:element name="AddressedObjectIdentifier" type="aip:AddressedObjectIdentifier_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Building_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Building"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Building" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:Building_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Building_Type">
+		<xs:annotation>
+			<xs:documentation>Element identifying the number or name and type of the edifice or construction in or adjacent to which a delivery point is located.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CountryCode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:CountryCode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CountryCode" substitutionGroup="aip:CountryLevelInformation" type="aip:CountryCode_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CountryCode_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the ISO 3166-1 code for the country, territory or area of geopolitical interest, in which a delivery point is located or via which the delivery point is accessed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:CountryLevelInformation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CountryLevelInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:CountryLevelInformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CountryLevelInformation" substitutionGroup="aip:PostalAddressComponent" type="aip:CountryLevelInformation_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CountryLevelInformation_Type">
+		<xs:annotation>
+			<xs:documentation>Construct encompassing the postal address elements applying to countries or groupings of countries.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CountryName_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:CountryName"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CountryName" substitutionGroup="aip:CountryLevelInformation" type="aip:CountryName_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CountryName_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the country, dependency or area of geopolitical interest, in which a delivery point is located or via which the delivery point is accessed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:CountryLevelInformation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="CustomerIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:CustomerIdentifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="CustomerIdentifier" type="aip:CustomerIdentifier_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="CustomerIdentifier_Type">
+		<xs:annotation>
+			<xs:documentation>Element identifying a customer of a delivery service provider (postal operator).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="componentValue" type="aip:ComplexName_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Value of component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="level" type="aip:LevelConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="aip:PositionConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between non-hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="segment" type="aip:SegmentType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies a segment to which an instance of component belongs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UCode" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a U-code assigned to an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrganizationIdentification" type="aip:OrganizationIdentification_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="componentValue" type="aip:ComplexName_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Value of component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="level" type="aip:LevelConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="aip:PositionConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between non-hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="segment" type="aip:SegmentType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies a segment to which an instance of component belongs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UCode" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a U-code assigned to an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IndividualIdentification" type="aip:IndividualIdentification_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="DefiningAuthority_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:DefiningAuthority"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="DefiningAuthority" substitutionGroup="aip:PostalAddressComponent" type="aip:DefiningAuthority_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="DefiningAuthority_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the postal operator or other authority responsible for the definition and maintenance of the delivery point specification concerned.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="DeliveryServiceIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:DeliveryServiceIdentifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="DeliveryServiceIdentifier" substitutionGroup="aip:PostalAddressComponent" type="aip:DeliveryServiceIdentifier_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="DeliveryServiceIdentifier_Type">
+		<xs:annotation>
+			<xs:documentation>Element which designates a delivery point, or a group of delivery points from which the postal operator may choose one, by reference to a defined identifier, rather than by reference to its physical location.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="DeliveryServiceQualifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:DeliveryServiceQualifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="DeliveryServiceQualifier" substitutionGroup="aip:Locality" type="aip:DeliveryServiceQualifier_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="DeliveryServiceQualifier_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the name of the distribution office used for delivery services.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:Locality_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="District_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:District"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="District" substitutionGroup="aip:Locality" type="aip:District_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="District_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating the name of the area within or adjacent to the town in which a delivery point is located, or via which it is accessed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:Locality_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Door_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Door"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Door" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:Door_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Door_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating the apartment, room or office in, at or adjacent to which a delivery point, situated within a building, is located.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="ExtensionDesignation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:ExtensionDesignation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="ExtensionDesignation" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:ExtensionDesignation_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="ExtensionDesignation_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the specific delivery point where this is not uniquely identified, within country and locality, by other components of addressed object identifier</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Floor_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Floor"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Floor" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:Floor_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Floor_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating the floor or level on which a delivery point is located in a multi-storey building.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="FormOfAddress_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:FormOfAddress"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="FormOfAddress" type="aip:FormOfAddress_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="FormOfAddress_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating through a word, group of words, acronyms or abbreviations, an individual or group’s civil status or condition.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="componentValue" type="aip:ComplexName_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Value of component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="level" type="aip:LevelConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="aip:PositionConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between non-hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="segment" type="aip:SegmentType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies a segment to which an instance of component belongs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UCode" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a U-code assigned to an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrganizationIdentification" type="aip:OrganizationIdentification_PropertyType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="componentValue" type="aip:ComplexName_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Value of component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="level" type="aip:LevelConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="position" type="aip:PositionConstructorType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies an identifier that allows to distinguish between non-hierarchical instances of an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="segment" type="aip:SegmentType_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifies a segment to which an instance of component belongs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UCode" type="gco:CharacterString_PropertyType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Specifies a U-code assigned to an element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IndividualIdentification" type="aip:IndividualIdentification_PropertyType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Function_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Function"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Function" substitutionGroup="aip:OrganizationIdentification" type="aip:Function_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Function_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating role or responsibility within an organization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:OrganizationIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="GivenName_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:GivenName"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="GivenName" substitutionGroup="aip:IndividualIdentification" type="aip:GivenName_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="GivenName_Type">
+		<xs:annotation>
+			<xs:documentation>Element specifying the name used to distinguish between persons having the same surname(s) and who may have access to a particular delivery point.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:IndividualIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="IndividualIdentification_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:IndividualIdentification"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="IndividualIdentification" substitutionGroup="aip:MailRecipient" type="aip:IndividualIdentification_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="IndividualIdentification_Type">
+		<xs:annotation>
+			<xs:documentation>Construct identifying either a single individual or a group of individuals, from which the postal operator may select one.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:MailRecipient_Type">
+				<xs:sequence>
+					<xs:element name="consistsOf" type="aip:IndividualIdentification_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="InternationalRoutingInformation_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:InternationalRoutingInformation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="InternationalRoutingInformation" substitutionGroup="aip:CountryLevelInformation" type="aip:InternationalRoutingInformation_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="InternationalRoutingInformation_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating how a country, territory or area of geopolitical interest may be reached.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:CountryLevelInformation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="LegalStatus_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:LegalStatus"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="LegalStatus" substitutionGroup="aip:OrganizationIdentification" type="aip:LegalStatus_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="LegalStatus_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating the formal registration of an organization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:OrganizationIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Locality_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Locality"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Locality" substitutionGroup="aip:PostalAddressComponent" type="aip:Locality_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Locality_Type">
+		<xs:annotation>
+			<xs:documentation>Construct identifying the geographical area in or adjacent to which a delivery point is located.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence>
+					<xs:element name="Locality" type="aip:Locality_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="MailRecipient_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:MailRecipient"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="MailRecipient" substitutionGroup="aip:PostalAddressComponent" type="aip:MailRecipient_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="MailRecipient_Type" abstract="true">
+		<xs:annotation>
+			<xs:documentation>individual who actually receives a postal item (4.23) at delivery (4.4), or who first accesses the postal item if it is left for collection</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="MultiCountryRegion_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:MultiCountryRegion"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="MultiCountryRegion" substitutionGroup="aip:CountryLevelInformation" type="aip:MultiCountryRegion_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="MultiCountryRegion_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating a region in which the country, territory, or area of geopolitical interest is located and by which it may be more effectively recognized.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:CountryLevelInformation_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="NameQualifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:NameQualifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="NameQualifier" substitutionGroup="aip:IndividualIdentification" type="aip:NameQualifier_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="NameQualifier_Type">
+		<xs:annotation>
+			<xs:documentation>Element used in some countries to distinguish between persons with the same surname(s) which have similar given names or initials.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:IndividualIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="OrganizationIdentification_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:OrganizationIdentification"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="OrganizationIdentification" substitutionGroup="aip:MailRecipient" type="aip:OrganizationIdentification_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="OrganizationIdentification_Type">
+		<xs:annotation>
+			<xs:documentation>Construct identifying either a single individual or a group of individuals within an organization, from which the postal operator may select one.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:MailRecipient_Type">
+				<xs:sequence>
+					<xs:element name="OrganizationIdentification" type="aip:OrganizationIdentification_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="OrganizationName_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:OrganizationName"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="OrganizationName" substitutionGroup="aip:OrganizationIdentification" type="aip:OrganizationName_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="OrganizationName_Type">
+		<xs:annotation>
+			<xs:documentation>Element giving the official name, the registered business name or other official designation of an organization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:OrganizationIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="OrganizationUnit_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:OrganizationUnit"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="OrganizationUnit" substitutionGroup="aip:OrganizationIdentification" type="aip:OrganizationUnit_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="OrganizationUnit_Type">
+		<xs:annotation>
+			<xs:documentation>Element identifying a subdivision of an organization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:OrganizationIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Postcode_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Postcode"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Postcode" substitutionGroup="aip:PostalAddressComponent" type="aip:Postcode_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Postcode_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the code used for the sorting of mail.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="PremisesIdentifier_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:PremisesIdentifier"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="PremisesIdentifier" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:PremisesIdentifier_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="PremisesIdentifier_Type">
+		<xs:annotation>
+			<xs:documentation>Element designating the area, or the object on an area, adjacent to thoroughfare, in which the delivery point or delivery point access is located.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Qualification_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Qualification"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Qualification" substitutionGroup="aip:IndividualIdentification" type="aip:Qualification_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Qualification_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating an individual’s professional or academic qualification or rank in a professional group or society.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:IndividualIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Region_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Region"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Region" substitutionGroup="aip:Locality" type="aip:Region_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Region_Type">
+		<xs:annotation>
+			<xs:documentation>Element specifying the geographic or administrative area of the country in which the town is situated.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:Locality_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="RoleDescriptor_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:RoleDescriptor"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="RoleDescriptor" substitutionGroup="aip:PostalAddressComponent" type="aip:RoleDescriptor_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="RoleDescriptor_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating the role of mailee or addressee for the identified individual or organization.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence>
+					<xs:element name="MailRecipient" type="aip:MailRecipient_PropertyType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Stairwell_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Stairwell"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Stairwell" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:Stairwell_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Stairwell_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating access to floor or door within a building.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="SupplementaryDeliveryPointData_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:SupplementaryDeliveryPointData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="SupplementaryDeliveryPointData" substitutionGroup="aip:PostalAddressComponent" type="aip:SupplementaryDeliveryPointData_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="SupplementaryDeliveryPointData_Type">
+		<xs:annotation>
+			<xs:documentation>Element providing additional data or instructions intended to facilitate access to, or designation of, a delivery point.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="SupplementaryDespatchInfo_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:SupplementaryDespatchInfo"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="SupplementaryDespatchInfo" substitutionGroup="aip:PostalAddressComponent" type="aip:SupplementaryDespatchInfo_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="SupplementaryDespatchInfo_Type">
+		<xs:annotation>
+			<xs:documentation>Element providing additional data or instructions intended to assist the mail recipient in the processing of a postal item.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Surname_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Surname"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Surname" substitutionGroup="aip:IndividualIdentification" type="aip:Surname_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Surname_Type">
+		<xs:annotation>
+			<xs:documentation>Element which identifies the family or parentage of an individual.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:IndividualIdentification_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Thoroughfare_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Thoroughfare"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Thoroughfare" substitutionGroup="aip:PostalAddressComponent" type="aip:Thoroughfare_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Thoroughfare_Type">
+		<xs:annotation>
+			<xs:documentation>Element which identifies the road or part of a road or other access route along which a delivery point can be accessed, either directly or via a secondary or tertiary road or access route.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:PostalAddressComponent_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Town_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Town"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Town" substitutionGroup="aip:Locality" type="aip:Town_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Town_Type">
+		<xs:annotation>
+			<xs:documentation>Element indicating the name of the populated place in which a delivery point is located, or near to or via which the delivery point is accessed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:Locality_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ======================================== -->
+	<xs:complexType name="Wing_PropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="aip:Wing"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gco:ObjectReference"/>
+		<xs:attribute ref="gco:nilReason"/>
+	</xs:complexType>
+	<!-- ________________________________________ -->
+	<xs:element name="Wing" substitutionGroup="aip:AddressedObjectIdentifier" type="aip:Wing_Type"/>
+	<!-- ________________________________________ -->
+	<xs:complexType name="Wing_Type">
+		<xs:annotation>
+			<xs:documentation>Element identifying, for a delivery point, the building section in which it is housed and/or the main entry door through which it is accessed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="aip:AddressedObjectIdentifier_Type">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
