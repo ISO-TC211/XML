@@ -5468,5 +5468,382 @@
       </cat:CT_CodelistCatalogue>
    </cat:subCatalogue>
    <!--=====End Sub-Catalogue description ISO 19163 group of ISO / TC211 metadata Standards=====-->
+   <!--===== Sub-Catalogue description ISO 19107 group of ISO / TC211 metadata Standards=====-->
+   <cat:subCatalogue xlink:title="Codelists for ISO 19165">
+        <cat:CT_CodelistCatalogue id="ISO19165">
+            <!--=====Catalogue description=====-->
+            <cat:name><gco:CharacterString>Codelists from the ISO 19165 group of ISO / TC211 Standards</gco:CharacterString></cat:name>
+            <cat:scope><gco:CharacterString>Codelists related to ISO 19165 group of ISO / TC211 Geographic Information - Preservation of digital data and metadata</gco:CharacterString></cat:scope>
+           <cat:fieldOfApplication><gco:CharacterString>ISO TC211 Preservation of digital data and metadata</gco:CharacterString></cat:fieldOfApplication>
+            <cat:versionNumber><gco:CharacterString>1.0</gco:CharacterString></cat:versionNumber>
+            <cat:versionDate><gco:Date>2024-11-25</gco:Date></cat:versionDate>
+            <cat:locale><lan:PT_Locale>
+                <lan:language><lan:LanguageCode
+                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
+                    codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                <lan:characterEncoding><lan:MD_CharacterSetCode
+                    codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
+                    codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+            </lan:PT_Locale></cat:locale>
+            <!--   ============================================================================== -->
+             <!-- _________________________________________________________________________ -->
+           <cat:subCatalogue xlink:title="Codelists from Preservation of digital data and metadata">
+                <cat:CT_CodelistCatalogue id="ISO19165-1.1.gpm">
+                    <cat:name><gco:CharacterString>Codelists from the Geospatial Preservation Metadata (gpm) Namespace</gco:CharacterString></cat:name>
+                    <cat:scope><gco:CharacterString>Codelists related to Spatial Schemas Namespace</gco:CharacterString></cat:scope>
+                    <cat:fieldOfApplication><gco:CharacterString>ISO TC211 Metadata Standards</gco:CharacterString></cat:fieldOfApplication>
+                    <cat:versionNumber><gco:CharacterString>1.1</gco:CharacterString></cat:versionNumber>
+                   <cat:versionDate><gco:Date>2024-11-25</gco:Date></cat:versionDate>
+                    <cat:locale><lan:PT_Locale>
+                        <lan:language><lan:LanguageCode
+                            codeList="https://standards.iso.org/19115/-1/1/clause#LanguageCode"
+                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                        <lan:characterEncoding><lan:MD_CharacterSetCode
+                            codeList="https://standards.iso.org/19115/-1/1/clause#MD_CharacterSetCode"
+                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                    </lan:PT_Locale></cat:locale>
+                    <!--   ............................................................................. -->
+                   <cat:codelistItem xlink:title="Code list items for RelationType from the Geospatial Preservation Metadata (gpm) Namespace">
+                       <cat:CT_Codelist id="ISO19165-1.1.gpm.GP_RelationTypeCode">
+                          <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">GP_RelationTypeCode</gco:ScopedName></cat:identifier>
+                          <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">GP_RelationTypeCode</gco:ScopedName></cat:name>
+                           <cat:definition><gco:CharacterString>type of relationship</gco:CharacterString></cat:definition>
+                          <cat:description><gco:CharacterString>type of relationship</gco:CharacterString></cat:description>
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_hasDerivate">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_hasDerivate">
+                                  <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasDerivate</gco:ScopedName></cat:identifier>
+                                  <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasDerivate</gco:ScopedName></cat:name>
+                                  <cat:definition><gco:CharacterString>the resource is an representation of another resource</gco:CharacterString></cat:definition>
+                                  <cat:description><gco:CharacterString>the resource is an representation of another resource</gco:CharacterString></cat:description>
+                                </cat:CT_CodelistValue>
+                            </cat:codeEntry>
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_hasPart">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_hasPart">
+                                <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasPart</gco:ScopedName></cat:identifier>
+                                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasPart</gco:ScopedName></cat:name>
+                                <cat:definition><gco:CharacterString>the resource contains the associated resource</gco:CharacterString></cat:definition>
+                                <cat:description><gco:CharacterString>the resource contains the associated resource</gco:CharacterString></cat:description>
+                             </cat:CT_CodelistValue>
+                          </cat:codeEntry>                         
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_hasSibling">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_hasSibling">
+                                <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasSibling</gco:ScopedName></cat:identifier>
+                                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasSibling</gco:ScopedName></cat:name>
+                                <cat:definition><gco:CharacterString>the resource shares a common parent with the associated resource</gco:CharacterString></cat:definition>
+                                <cat:description><gco:CharacterString>the resource shares a common parent with the associated resource</gco:CharacterString></cat:description>
+                             </cat:CT_CodelistValue>
+                          </cat:codeEntry>                         
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_hasSource">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_hasSource">
+                                <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasSource</gco:ScopedName></cat:identifier>
+                                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasSource</gco:ScopedName></cat:name>
+                                <cat:definition><gco:CharacterString>the resource is derived from the associated resource as a result of a transformation</gco:CharacterString></cat:definition>
+                                <cat:description><gco:CharacterString>the resource is derived from the associated resource as a result of a transformation</gco:CharacterString></cat:description>
+                             </cat:CT_CodelistValue>
+                          </cat:codeEntry>                         
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_isPartOf">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_isPartOf">
+                                <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">isPartOf</gco:ScopedName></cat:identifier>
+                                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">isPartOf</gco:ScopedName></cat:name>
+                                <cat:definition><gco:CharacterString>the resource is contained by the associated resource</gco:CharacterString></cat:definition>
+                                <cat:description><gco:CharacterString>the resource is contained by the associated resource</gco:CharacterString></cat:description>
+                             </cat:CT_CodelistValue>
+                          </cat:codeEntry>                         
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_isSourceOf">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_isSourceOf">
+                                <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">isSourceOf</gco:ScopedName></cat:identifier>
+                                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">isSourceOf</gco:ScopedName></cat:name>
+                                <cat:definition><gco:CharacterString>the related resource is a version of this resource created by transformation</gco:CharacterString></cat:definition>
+                                <cat:description><gco:CharacterString>the related resource is a version of this resource created by transformation</gco:CharacterString></cat:description>
+                             </cat:CT_CodelistValue>
+                          </cat:codeEntry>                        
+                          <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_RelationTypeCode_hasNoPelations">
+                             <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_RelationTypeCode_hasNoPelations">
+                                <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasNoPelations</gco:ScopedName></cat:identifier>
+                                <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.2">hasNoPelations</gco:ScopedName></cat:name>
+                                <cat:definition><gco:CharacterString>the resource(s) has no relation to other resources</gco:CharacterString></cat:definition>
+                                <cat:description><gco:CharacterString>the resource(s) has no relation to other resources</gco:CharacterString></cat:description>
+                             </cat:CT_CodelistValue>
+                          </cat:codeEntry>                        
+                       </cat:CT_Codelist>
+                    </cat:codelistItem>
+                    <!--   ............................................................................. -->
+                   <cat:codelistItem xlink:title="Code list items for RelationType from the Geospatial Preservation Metadata (gpm) Namespace">
+                      <cat:CT_Codelist id="ISO19165-1.1.gpm.GP_InformationValueTypeCode">
+                         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">GP_InformationValueTypeCode</gco:ScopedName></cat:identifier>
+                         <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">GP_InformationValueTypeCode</gco:ScopedName></cat:name>
+                         <cat:definition><gco:CharacterString>type of reason that makes this resource valuable</gco:CharacterString></cat:definition>
+                         <cat:description><gco:CharacterString>type of reason that makes this resource valuable</gco:CharacterString></cat:description>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_InformationValueTypeCode_administrativeValue">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_InformationValueTypeCode_administrativeValue">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">administrativeValue</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">administrativeValue</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>administrative value</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>administrative value</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_InformationValueTypeCode_evidentiaryValue">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_InformationValueTypeCode_evidentiaryValue">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">evidentiaryValue</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">evidentiaryValue</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>evidentiary value</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>evidentiary value</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_InformationValueTypeCode_informationalAndHistoricalValue">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_InformationValueTypeCode_informationalAndHistoricalValue">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">informationalAndHistoricalValue</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">informationalAndHistoricalValue</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>informational and historical value</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>informational and historical value</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_InformationValueTypeCode_legalAndFiscalValue">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_InformationValueTypeCode_legalAndFiscalValue">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">legalAndFiscalValue</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">legalAndFiscalValue</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>legal and/or fiscal value</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>legal and/or fiscal value</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_InformationValueTypeCode_researchValue">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_InformationValueTypeCode_researchValue">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">researchValue</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.3">researchValue</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>research value</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>research value</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                      </cat:CT_Codelist>
+                   </cat:codelistItem>
+                   <!--   ............................................................................. -->
+                   <cat:codelistItem xlink:title="Code list items for RelationType from the Geospatial Preservation Metadata (gpm) Namespace">
+                      <cat:CT_Codelist id="ISO19165-1.1.gpm.GP_JustificationValueTypeCode">
+                         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">GP_JustificationValueTypeCode</gco:ScopedName></cat:identifier>
+                         <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">GP_JustificationValueTypeCode</gco:ScopedName></cat:name>
+                         <cat:definition><gco:CharacterString>type</gco:CharacterString></cat:definition>
+                         <cat:description><gco:CharacterString>type</gco:CharacterString></cat:description>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_JustificationValueTypeCode_unique">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_JustificationValueTypeCode_unique">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">unique</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">unique</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>the resource is unique in its kind</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>the resource is unique in its kind</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_JustificationValueTypeCode_important">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_JustificationValueTypeCode_important">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">important</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">important</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>the resource is considered important in its kind</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>the resource is considered important in its kind</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_JustificationValueTypeCode_testimonial">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_JustificationValueTypeCode_testimonial">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">testimonial</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.4">testimonial</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>the resource is a testimonial of some important event</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>the resource is a testimonial of some important event</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                      </cat:CT_Codelist>
+                   </cat:codelistItem>
+                   <!--   ............................................................................. -->
+                   <cat:codelistItem xlink:title="Code list items for RelationType from the Geospatial Preservation Metadata (gpm) Namespace">
+                      <cat:CT_Codelist id="ISO19165-1.1.gpm.GP_PackageTypeCode">
+                         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">GP_PackageTypeCode</gco:ScopedName></cat:identifier>
+                         <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">GP_PackageTypeCode</gco:ScopedName></cat:name>
+                         <cat:definition><gco:CharacterString>type of package</gco:CharacterString></cat:definition>
+                         <cat:description><gco:CharacterString>type of package</gco:CharacterString></cat:description>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackageTypeCode_derivativeArchivalInformationPackage">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackageTypeCode_derivativeArchivalInformationPackage">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">derivativeArchivalInformationPackage</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">derivativeArchivalInformationPackage</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>derivative archival information package</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>derivative archival information package</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackageTypeCode_distributionInformationPackage">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackageTypeCode_distributionInformationPackage">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">distributionInformationPackage</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">distributionInformationPackage</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>distribution information package</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>distribution information package</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackageTypeCode_masterArchivalInformationPackage">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackageTypeCode_masterArchivalInformationPackage">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">masterArchivalInformationPackage</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">derivativeArchivalInformatimasterArchivalInformationPackageonPackage</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>master archival information package</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>mastere archival information package</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackageTypeCode_submissionInformationPackage">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackageTypeCode_submissionInformationPackage">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">submissionInformationPackage</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.5">submissionInformationPackage</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>submission information package</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>submission information package</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                      </cat:CT_Codelist>
+                   </cat:codelistItem>
+                   <!--   ............................................................................. -->
+                   <cat:codelistItem xlink:title="Code list items for RelationType from the Geospatial Preservation Metadata (gpm) Namespace">
+                      <cat:CT_Codelist id="ISO19165-1.1.gpm.GP_GP_PackagePartTypeCode">
+                         <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">GP_PackagePartTypeCode</gco:ScopedName></cat:identifier>
+                         <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">GP_PackagePartTypeCode</gco:ScopedName></cat:name>
+                         <cat:definition><gco:CharacterString>type of part of package</gco:CharacterString></cat:definition>
+                         <cat:description><gco:CharacterString>type of part of package</gco:CharacterString></cat:description>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_geographicalData">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_geographicalData">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">geographicalData</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">geographicalData</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>geographical data</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>geographical data</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_tabularData">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_tabularData">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">tabularData</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">tabularData</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>tabular data</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>tabular data</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_metadata">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_metadata">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">metadata</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">metadata</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>metadata</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>metadata</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_formatSpecification">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_formatSpecification">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">formatSpecification</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">formatSpecification</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>format specification</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>format specification</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_formatProfile">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_formatProfile">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">formatProfile</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">formatProfile</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>format profile</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>format profile</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_technicalSpecification">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_technicalSpecification">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">technicalSpecification</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">technicalSpecification</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>technical specification</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>technical s
+                                  pecification</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_dataModel">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_dataModel">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">dataModel</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">dataModel</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>data model</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>data model</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_productionProcessManual">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_productionProcessManual">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">productionProcessManual</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">productionProcessManual</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>production process manual</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>production process manual</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_browseGraphic">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_browseGraphic">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">browseGraphic</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">browseGraphic</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>browse graphic or quick look</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>browse graphic or quick look</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_symbolsAndStyles">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_symbolsAndStyles">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">symbolsAndStyles</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">symbolsAndStyles</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>symbols and styles</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>symbols and styles</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_contextMap">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_contextMap">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">contextMap</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">contextMap</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>context or map linking a list of data resources</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>context or map linking a list of dayta resources</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_package">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_package">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">package</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">package</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>package (in a packager)</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>package (in a packager)</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_referenceSystemDescription">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_referenceSystemDescription">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">referenceSystemDescription</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">referenceSystemDescription</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>reference system description</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>reference system description</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_standardDocument">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_standardDocument">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">standardDocument</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">standardDocument</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>standards document</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>standards document</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_certification">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_certification">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">certification</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">certification</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>certification</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>certification</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_publication">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_publication">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">publication</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">publication</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>publication</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>publication</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                         <cat:codeEntry  xlink:href="https://schemas.isotc211.org/Resources/codelists.xml#ISO19165-1.1.gpm.GP_PackagePartTypeCode_illustration">
+                            <cat:CT_CodelistValue id="ISO19165-1.1.gpm.GP_PackagePartTypeCode_illustration">
+                               <cat:identifier><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">illustration</gco:ScopedName></cat:identifier>
+                               <cat:name><gco:ScopedName codeSpace="https://standards.iso.org/19165/-1/1/#B.3.6">illustration</gco:ScopedName></cat:name>
+                               <cat:definition><gco:CharacterString>illustration</gco:CharacterString></cat:definition>
+                               <cat:description><gco:CharacterString>illustration</gco:CharacterString></cat:description>
+                            </cat:CT_CodelistValue>
+                         </cat:codeEntry>
+                      </cat:CT_Codelist>
+                   </cat:codelistItem>
+                   <!--   ............................................................................. -->
+                 </cat:CT_CodelistCatalogue>
+            </cat:subCatalogue>
+            <!-- _________________________________________________________________________ -->
+            <cat:codelistItem gco:nilReason="inapplicable"/>
+    <!--   ============================================================================== -->
+        </cat:CT_CodelistCatalogue>
+    </cat:subCatalogue>
+   <!--===== End Sub-Catalogue description ISO 19107 group of ISO / TC211 metadata Standards=====-->
    <cat:codelistItem gco:nilReason="inapplicable"/>
 </cat:CT_CodelistCatalogue>
