@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.opengis.net/cis/2.0"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:cis20="http://www.opengis.net/cis/2.0"
+    elementFormDefault="qualified"
+    version="2.0.0">
+    <annotation>
+        <appinfo>cis-annexB-All.xsd</appinfo>
+        <documentation>This is the XML Schema for the ISO 19123-2 Coverage Implementation Schema (CIS) Annex B.
+            Last updated: 2024-sep-09
+       </documentation>
+    </annotation>
+
+    <!-- ========================================================= -->
+    <!-- Includes and imports                                      -->
+    <!-- ========================================================= -->
+    <include schemaLocation="coverage-rect+ref.xsd"/>
+
+</schema>

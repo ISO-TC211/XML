@@ -54,7 +54,7 @@
     https://schemas.isotc211.org/19115/-1/mrs/1.3 ../../../../19115/-1/mrs/1.3.1/mrs.xsd
     https://schemas.isotc211.org/19115/-1/mrs/1.3 ../../../../19115/-1/mrs/1.3.1/referenceSystem.xsd
     https://schemas.isotc211.org/19115/-1/msr/1.3 ../../../../19115/-1/msr/1.3.1/msr.xsd
-     https://schemas.isotc211.org/19115/-1/srv/1.3 ../../../../19115/-1/srv/1.3.0/srv.xsd
+    https://schemas.isotc211.org/19115/-1/srv/1.3 ../../../../19115/-1/srv/1.3.0/srv.xsd
     https://schemas.isotc211.org/19115/-2/mac/2.2 ../../../../19115/-2/mac/2.2.1/mac.xsd
     https://schemas.isotc211.org/19111/-/rbc/3.1 ../../../../19111/-/rbc/3.1.1/rbc.xsd
     https://schemas.isotc211.org/19157/-1/dqc/1.0 ../../../../19157/-1/dqc/1.0.1/dqc.xsd
@@ -1126,7 +1126,138 @@
     <!-- Identification Information is the base level information about the who, what and where of the data/service (services in a different record). END -->
     <!-- .......................... -->
     <!-- .......................... -->
-   <!-- Content information. BEGIN -->
+    <mdb:contentInfo>
+        <mrc:MD_FeatureCatalogue> 
+            <mrc:featureCatalogue> 
+                <gfc:FC_FeatureCatalogue> 
+                    <!-- One entry per Feature Type -->
+                    <cat:name></cat:name>
+                    <cat:scope></cat:scope>
+                    <cat:fieldOfApplication></cat:fieldOfApplication>
+                    <cat:versionNumber></cat:versionNumber>
+                    <cat:versionDate></cat:versionDate>
+                    <gfc:producer></gfc:producer>
+                    <gfc:featureType>         
+                        <gfc:FC_FeatureType id="F1">
+                            <gfc:typeName>SA2</gfc:typeName>
+                            <gfc:definition>
+                                <gco:CharacterString>
+                                    Polygons connecting to form complete coverage of Australia at the Statistical Area 2 level of the Australian Statistical Geography Standard release edition 3
+                                </gco:CharacterString>
+                            </gfc:definition>
+                            <gfc:isAbstract><gco:Boolean>false</gco:Boolean></gfc:isAbstract>
+                            <gfc:carrierOfCharacteristics>
+                                <gfc:FC_FeatureAttribute>
+                                    <!-- Link attribute back to relevant feature type -->
+                                    <gfc:featureType xlink:href="#FT1"/>
+                                    <gfc:memberName>
+                                        <gco:LocalName>ALL_LOCATIONS_CODE_2021</gco:LocalName>
+                                    </gfc:memberName>  
+                                    <!-- Repeat for each attribute alias -->
+                                    <gfc:definition>
+                                        <!-- Include field width, precision & scale here until standards updated -->
+                                        <gco:CharacterString>
+                                            Location hierarchy apex code. Character field width is 2.
+                                        </gco:CharacterString>
+                                    </gfc:definition>
+                                    <gfc:cardinality><gco:CharacterString>[0..*]</gco:CharacterString></gfc:cardinality>
+                                    <gfc:designation xsi:type="lan:PT_FreeText_PropertyType">
+                                        <!-- Add locale to first bracket for a foreign alias -->
+                                        <gco:CharacterString>ALL_LOCATIONS_CODE_2021</gco:CharacterString>
+                                        <lan:PT_FreeText>
+                                            <lan:textGroup>                                             
+                                                <lan:LocalisedCharacterString>
+                                                    ALL_LOCATIONS_CODE
+                                                </lan:LocalisedCharacterString>
+                                            </lan:textGroup>
+                                        </lan:PT_FreeText>
+                                    </gfc:designation>                      
+                                     <gfc:definitionReference>             
+                                        <gfc:FC_DefinitionReference>                 
+                                            <gfc:definitionSource>
+                                                <gfc:FC_DefinitionSource>
+                                                    <gfc:source>
+                                                        <cit:CI_Citation>
+                                                            <cit:title>
+                                                                <gco:CharacterString>
+                                                                    Oracle Production MSD SA2 Fields
+                                                                </gco:CharacterString>
+                                                            </cit:title>
+                                                            <cit:date>
+                                                                <cit:CI_Date>
+                                                                    <cit:date>
+                                                                        <gco:Date>2024-02-28</gco:Date>
+                                                                    </cit:date>
+                                                                    <cit:dateType>
+                                                                        <!-- See codelist for code options -->
+                                                                        <cit:CI_DateTypeCode codeList=https://wiki.esipfed.org/ISO_19115-3_Codelists#CI_DateTypeCode codeListValue="lastUpdate"/>
+                                                                    </cit:dateType>
+                                                                </cit:CI_Date>
+                                                            </cit:date>
+                                                            <cit:otherCitationDetails>
+                                                                <gco:CharacterString>
+                                                                    SA2 View atribute/field details are extracted directly from the Production Oracle Master Spatial Database
+                                                                </gco:CharacterString>
+                                                            </cit:otherCitationDetails>
+                                                        </cit:CI_Citation>
+                                                    </gfc:source>
+                                                </gfc:FC_DefinitionSource>
+                                            </gfc:definitionSource>
+                                        </gfc:FC_DefinitionReference>
+                                    </gfc:definitionReference>                          
+                                    <gfc:valueType>
+                                        <gco:TypeName>
+                                            <gco:aName>
+                                                <gco:CharacterString>CharacterString</gco:CharacterString>
+                                            </gco:aName>
+                                        </gco:TypeName>
+                                    </gfc:valueType>
+                                </gfc:FC_FeatureAttribute>
+                            </gfc:carrierOfCharacteristics> 
+                            <gfc:definitionReference>             
+                                <gfc:FC_DefinitionReference>                 
+                                    <gfc:definitionSource>
+                                        <gfc:FC_DefinitionSource>
+                                            <gfc:source>
+                                                <cit:CI_Citation>
+                                                    <cit:title>
+                                                        <gco:CharacterString>
+                                                            Oracle Production MSD SA2 Layer Structure
+                                                        </gco:CharacterString>
+                                                    </cit:title>
+                                                    <cit:date>
+                                                        <cit:CI_Date>
+                                                            <cit:date>
+                                                                <!-- Sample date: 1997-06-01 -->
+                                                                <gco:Date>2024-05-12</gco:Date>
+                                                            </cit:date>
+                                                            <cit:dateType>
+                                                                <!-- See codelist for code options -->
+                                                                <cit:CI_DateTypeCode codeList="https://wiki.esipfed.org/ISO_19115-3_Codelists#CI_DateTypeCode" codeListValue="publication"/>
+                                                            </cit:dateType>
+                                                        </cit:CI_Date>
+                                                    </cit:date>
+                                                    <cit:otherCitationDetails>
+                                                        <gco:CharacterString>
+                                                            Oracle tables and Views are single layer datasets
+                                                        </gco:CharacterString>
+                                                    </cit:otherCitationDetails>                         
+                                                </cit:CI_Citation>
+                                            </gfc:source>
+                                        </gfc:FC_DefinitionSource>
+                                    </gfc:definitionSource>
+                                </gfc:FC_DefinitionReference>
+                            </gfc:definitionReference>                           
+                            <!-- One entry per Feature Attribute -->
+                            <gfc:featureCatalogue/>
+                            
+                        </gfc:FC_FeatureType>   
+                    </gfc:featureType id="FT1"> 
+                </gfc:FC_FeatureCatalogue> 
+            </mrc:featureCatalogue> 
+        </mrc:MD_FeatureCatalogue>                                               
+    </mdb:contentInfo>   
+    <!-- Content information. BEGIN -->
     <!-- too complex to fully expand -->
     <!-- OPTIONAL [0..*] - There are many branches in content information:
         Coverage descriptions, including images with: Range, Sample; Bands

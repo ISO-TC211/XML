@@ -1,0 +1,34 @@
+<MultiSolidCoverage
+  xmlns="https://schemas.isotc211.org/19123/-2/cis/2.0.0/"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://schemas.isotc211.org/19123/-2/cis/2.0.0/ cis-annexB-All.xsd">
+
+  <Envelope srsName="[EPSG:4329]" axisLabels="Lat Lon h" srsDimension="3">>
+    <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="1" upperBound="10"/>
+    <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="1" upperBound="10"/>
+    <AxisExtent axisLabel="h"   uomLabel="m"   lowerBound="1" upperBound="2"/>
+  </Envelope>
+
+  <DomainSet>
+      <gml:MultiSolid>...</gml:MultiSolid>
+  </DomainSet>
+
+  <RangeType>
+    <swe:DataRecord>
+      <swe:field name="pressure">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsigned">
+          <swe:uom code="hPa"/>
+        </swe:Quantity>
+      </swe:field>
+    </swe:DataRecord>
+  </RangeType>
+
+  <RangeSet>
+    <DataBlock>
+      <CV><V>1013</V></CV>
+    </DataBlock>
+  </RangeSet>
+
+</MultiSolidCoverage>
+

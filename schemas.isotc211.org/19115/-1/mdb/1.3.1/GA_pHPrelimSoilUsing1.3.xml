@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdb:MD_Metadata 
-    xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
+<mdb:MD_Metadata xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
     xmlns:gcx="https://schemas.isotc211.org/19103/-/gcx/1.2"
     xmlns:cit="https://schemas.isotc211.org/19115/-1/cit/1.3"
     xmlns:gex="https://schemas.isotc211.org/19115/-1/gex/1.3"
@@ -27,10 +26,8 @@
     xmlns:mdq="https://schemas.isotc211.org/19157/-1/mdq/1.0"
     xmlns:gfc="https://schemas.isotc211.org/19110/-/gfc/2.2"
     xmlns:cat="https://schemas.isotc211.org/19139/-/cat/1.2"
-    xmlns:gml="http://www.opengis.net/gml/3.2" 
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="
+    xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
     https://schemas.isotc211.org/19103/-/gco/1.2 ../../../../19103/-/gco/1.2.0/gco.xsd
     https://schemas.isotc211.org/19103/-/gcx/1.2 ../../../../19103/-/gcx/1.2.0/gcx.xsd
     https://schemas.isotc211.org/19115/-1/cit/1.3 ../../../../19115/-1/cit/1.3.0/cit.xsd
@@ -205,7 +202,8 @@ Geoscience Australia Community Metadata Profile of ISO 19115-1:2014
     <mdb:alternativeMetadataReference>
         <cit:CI_Citation>
             <cit:title>
-                <gco:CharacterString>Geoscience Australia Products Catalogue (eCat) – Short identifier for metadata record.
+                <gco:CharacterString>
+Geoscience Australia Products Catalogue (eCat) – Short identifier for metadata record.
 </gco:CharacterString>
             </cit:title>
             <cit:identifier>
@@ -220,9 +218,7 @@ Geoscience Australia Community Metadata Profile of ISO 19115-1:2014
             </cit:identifier>
         </cit:CI_Citation>
     </mdb:alternativeMetadataReference>
-    <mdb:metadataLinkage
-        
-       >
+    <mdb:metadataLinkage>
         <cit:CI_OnlineResource>
             <cit:linkage>
                 <gco:CharacterString>
@@ -237,6 +233,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
             </cit:function>
         </cit:CI_OnlineResource>
     </mdb:metadataLinkage>
+    <!-- 
     <mdb:referenceSystemInfo><mrs:MD_ReferenceSystem>
         <mrs:referenceSystemIdentifier><mcc:MD_Identifier>
             <mcc:authority><cit:CI_Citation>
@@ -249,6 +246,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
         </rbc:DataEpoch></mrs:coordinateEpoch>
         <mrs:referenceSystemType></mrs:referenceSystemType>
     </mrs:MD_ReferenceSystem></mdb:referenceSystemInfo>
+    -->
     <mdb:identificationInfo>
         <mri:MD_DataIdentification>
             <mri:citation>
@@ -429,21 +427,17 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     </cit:party>
                 </cit:CI_Responsibility>
             </mri:pointOfContact>
+            <!--            
             <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="textTable">textTable</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
             <mri:spatialRepresentationType><mcc:MD_SpatialRepresentationTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.mcc.MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</mcc:MD_SpatialRepresentationTypeCode></mri:spatialRepresentationType>
             <mri:spatialResolution><mri:MD_Resolution>
                 <mri:distance><gco:Distance uom="metre">250</gco:Distance></mri:distance>
             </mri:MD_Resolution></mri:spatialResolution>
-            <mri:topicCategory>
+
+            --><mri:topicCategory>
                 <mri:MD_TopicCategoryCode>geoscientificInformation</mri:MD_TopicCategoryCode>
             </mri:topicCategory>
             <mri:extent><gex:EX_Extent>
-                    <gex:description><gco:CharacterString>Australia</gco:CharacterString></gex:description>
-                    <gex:geographicElement><gex:EX_GeographicDescription>
-                        <gex:geographicIdentifier><mcc:MD_Identifier>
-                            <mcc:code><gco:CharacterString>Australia excluding external territories</gco:CharacterString></mcc:code>
-                        </mcc:MD_Identifier></gex:geographicIdentifier>
-                    </gex:EX_GeographicDescription></gex:geographicElement>
                     <gex:geographicElement>
                         <gex:EX_GeographicBoundingBox>
                             <gex:westBoundLongitude>
@@ -469,6 +463,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     </mmi:maintenanceAndUpdateFrequency>
                 </mmi:MD_MaintenanceInformation>
             </mri:resourceMaintenance>
+            <!--            
             <mri:resourceFormat><mrd:MD_Format>
                 <mrd:formatSpecificationCitation><cit:CI_Citation>
                     <cit:title><gco:CharacterString>Portable Document Format (PDF)</gco:CharacterString></cit:title>
@@ -496,6 +491,32 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                     </cit:CI_Citation></mrd:formatSpecificationCitation>
                     <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
                 </mrd:MD_Format></mri:resourceFormat>
+            -->
+            <mri:resourceFormat><mrd:MD_Format>
+                    <mrd:formatSpecificationCitation><cit:CI_Citation>
+                            <cit:title><gco:CharacterString>Product data repository: Various Formats</gco:CharacterString></cit:title>
+                            <cit:onlineResource><cit:CI_OnlineResource>
+                                    <cit:linkage><gco:CharacterString>file://prod.lan/active/ops/cds/geochemistry/organic/preliminary_soil_ph_map_of_australia</gco:CharacterString>
+</cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode">FILE:DATA-DIRECTORY</gco:CharacterString>
+                                    </cit:protocol>
+                                    <cit:name>
+                                        <gco:CharacterString>
+Data Store directory containing the digital product files
+</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:description>
+                                        <gco:CharacterString>
+Data Store directory containing one or more files, possibly in a variety of formats, accessible to Geoscience Australia staff only for internal purposes
+</gco:CharacterString>
+                                    </cit:description>
+                                </cit:CI_OnlineResource>
+                            </cit:onlineResource>
+                        </cit:CI_Citation>
+                    </mrd:formatSpecificationCitation>
+                </mrd:MD_Format>
+            </mri:resourceFormat>
             <mri:descriptiveKeywords>
                 <mri:MD_Keywords>
                     <mri:keyword>
@@ -601,7 +622,7 @@ https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9
                             </cit:ISBN>
                             <cit:onlineResource>
                                 <cit:CI_OnlineResource>
-                                    <cit:linkage><gco:CharacterString>http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&amp;tabname=Summary&amp;prodno=1297.0&amp;issue=2008</gco:CharacterString>                                    </cit:linkage>
+                                    <cit:linkage><gco:CharacterString>http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&amp;tabname=Summary&amp;prodno=1297.0&amp;issue=2008</gco:CharacterString></cit:linkage>
                                     <cit:protocol gco:nilReason="missing">
                                         <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode"/>
                                     </cit:protocol>
@@ -717,7 +738,8 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                                                   <cit:number>
                                                   <gco:CharacterString>1800 800 173</gco:CharacterString>
                                                   </cit:number>
-                                                  <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/></cit:numberType>
+                                                  <cit:numberType><cit:CI_TelephoneTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_TelephoneTypeCode" codeListValue="voice"/>
+                                                  </cit:numberType>
                                                 </cit:CI_Telephone>
                                             </cit:phone>
                                             <cit:address>
@@ -751,8 +773,35 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                             </cit:party>
                         </cit:CI_Responsibility>
                     </mrd:distributorContact>
-                </mrd:MD_Distributor></mrd:distributor>
-            <mrd:transferOptions><mrd:MD_DigitalTransferOptions>
+                    <mrd:distributorTransferOptions>
+                        <mrd:MD_DigitalTransferOptions>
+                            <mrd:onLine>
+                                <cit:CI_OnlineResource>
+                                    <cit:linkage>
+                                        <gco:CharacterString>
+https://d28rz98at9flks.cloudfront.net/70105/70105_NGSA.zip
+</gco:CharacterString>
+                                    </cit:linkage>
+                                    <cit:protocol>
+                                        <gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode">WWW:LINK-1.0-http--link</gco:CharacterString>
+                                    </cit:protocol>
+                                    <cit:name>
+                                        <gco:CharacterString>File download</gco:CharacterString>
+                                    </cit:name>
+                                    <cit:description>
+                                        <gco:CharacterString>Download the file (comma_delimited)</gco:CharacterString>
+                                    </cit:description>
+                                    <cit:function>
+                                        <cit:CI_OnLineFunctionCode codeList="codeListLocation#CI_OnLineFunctionCode" codeListValue="information"/>
+                                    </cit:function>
+                                </cit:CI_OnlineResource>
+                            </mrd:onLine>
+                        </mrd:MD_DigitalTransferOptions>
+                    </mrd:distributorTransferOptions>
+                </mrd:MD_Distributor>
+            </mrd:distributor>
+            <!--
+                <mrd:transferOptions><mrd:MD_DigitalTransferOptions>
                             <mrd:onLine><cit:CI_OnlineResource><cit:linkage><gco:CharacterString>https://d28rz98at9flks.cloudfront.net/70105/70105_NGSA.zip</gco:CharacterString></cit:linkage>
                                     <cit:protocol><gco:CharacterString xsi:type="gco:CodeType" codeSpace="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/codelist/ga_profile_codelists.xml#gapCI_ProtocolTypeCode">WWW:LINK-1.0-http--link</gco:CharacterString></cit:protocol>
                                     <cit:name><gco:CharacterString>Preliminary Soil pH map of Australia ZIPPED multiple files</gco:CharacterString></cit:name>
@@ -787,13 +836,9 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     <mrd:fileDecompressionTechnique><gco:CharacterString>UNZIP</gco:CharacterString></mrd:fileDecompressionTechnique>
                 </mrd:MD_Format></mrd:distributionFormat>
             </mrd:MD_DigitalTransferOptions></mrd:transferOptions>
+        -->
         </mrd:MD_Distribution></mdb:distributionInfo>
-      <!-- Data quality - BEGIN -->
-    <!-- OPTIONAL [0..*] useful if a formal data quality assessment has been made -->
-    <!-- MD_DataQuality examples provided in Annex D of ISO 19157-1 -->
-    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.12
-    It presents an example of how to report the quantitative results, derived conformance result and aggregated conformance result 
-    for the transport network feature types.-->
+    <!--
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
             <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
@@ -890,7 +935,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mcc:MD_ScopeDescription></mcc:levelDescription>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:Commission>
-            <!-- measure concept missing --><mdq:measure/>
+            <mdq:measure/>
              <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass  fail aggregation of the conformance commission result for roads and paths</gco:CharacterString></mdq:evaluationMethodDescription>
                  <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
@@ -915,10 +960,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             <mdq:derivedElement xlink:href="#conformance_commission"/>
         </mdq:Commission></mdq:report>
     </mdq:DataQuality></mdb:dataQualityInfo>
-    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.13
-    It presents an example of how to report the derived conformance results and aggregated conformance result 
-    for the buildings feature types.-->
-    <mdb:dataQualityInfo><mdq:DataQuality>
+     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
             <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
@@ -989,8 +1031,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mcc:MD_ScopeDescription></mcc:levelDescription>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:Commission>
-            <!-- "measure" missing from D.13 in standard -->
-            <mdq:measure></mdq:measure>
+             <mdq:measure></mdq:measure>
             <mdq:evaluationMethod><mdq:AggregationDerivation>
                 <mdq:evaluationMethodDescription><gco:CharacterString>100percent pass fail aggregation of the conformance classification correctness result for inductrial buildings and houses</gco:CharacterString></mdq:evaluationMethodDescription>
                 <mdq:evaluationMethodType><mdq:EvaluationMethodTypeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19157-1.1.dqm.DQ_EvaluationMethodTypeCode" codeListValue="indirect">indirect</mdq:EvaluationMethodTypeCode></mdq:evaluationMethodType>
@@ -1015,14 +1056,10 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             <mdq:derivedElement xlink:href="#conformance_classification"/>
         </mdq:Commission></mdq:report>
     </mdq:DataQuality></mdb:dataQualityInfo>
-    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.14
-    It presents an example of how to express conformance to the data product specification 
-    by aggregating the results for the different requirements.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
             <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
-        <!-- have substituted "Confidence" in for incorrect class name in example -->
         <mdq:report><mdq:Confidence id="aggregate">
             <mdq:measure><mdq:MeasureReference>
                 <mdq:measureIdentification><mcc:MD_Identifier>
@@ -1067,7 +1104,6 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             <mdq:derivedElement xlink:href="#agg_classification5"/>
             <mdq:derivedElement xlink:href="#agg_classification6"/>
             <mdq:derivedElement xlink:href="#agg_classificationN"/>
-            <!-- relatedQualityElement missing from SO 19157-1 Annex D/D4.1.2/Table D.14 -->
             <mdq:relatedQualityElement></mdq:relatedQualityElement>
         </mdq:Confidence></mdq:report>
         <mdq:qualityEvaluationReport><mdq:QualityEvaluationReportInformation>
@@ -1083,15 +1119,12 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                 about the evaluation applied and results obtained.</gco:CharacterString></mdq:abstract>
         </mdq:QualityEvaluationReportInformation></mdq:qualityEvaluationReport>
     </mdq:DataQuality></mdb:dataQualityInfo>
-    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.15
-    It presents an example of how to report descriptive result, metaquality and sampling procedures.-->
     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
             <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
         <mdq:report><mdq:RelativePositionalAccuracy>
-            <!-- measure/MeasureReference missing from Table D.15 -->
-            <mdq:measure><mdq:MeasureReference>
+             <mdq:measure><mdq:MeasureReference>
                 <mdq:nameOfMeasure><gco:CharacterString>Comparison of absolute positional accuracy</gco:CharacterString></mdq:nameOfMeasure>
                 <mdq:measureDescription><gco:CharacterString>Comparison of absolute positional accuracy using known positional accuracy of the two or more independent objects</gco:CharacterString></mdq:measureDescription>
             </mdq:MeasureReference></mdq:measure>
@@ -1107,13 +1140,7 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
             </mdq:DescriptiveResult></mdq:result>
         </mdq:RelativePositionalAccuracy></mdq:report>
      </mdq:DataQuality></mdb:dataQualityInfo>
-    <!-- example from ISO 19157-1 Annex D/D4.1.2/Table D.16
-    The absolute positional accuracy of the topological survey on an archaeological site is evaluated: The result is 5 m accuracy.
-    An evaluation of the quality of the evaluation is then provided using the confidence metaquality element, 
-    for which a measure called “Safety Factor” is used.
-    Table D.16 describes how to report metaquality as metadata.
-.-->
-    <mdb:dataQualityInfo><mdq:DataQuality>
+     <mdb:dataQualityInfo><mdq:DataQuality>
         <mdq:scope><mcc:MD_Scope>
             <mcc:level><mcc:MD_ScopeCode codeList="https://schemas.isotc211.org/Resources/codelists.xml#ISO19115-1.1.cit.CI_OnLineFunctionCode" codeListValue="dataset">dataset</mcc:MD_ScopeCode></mcc:level>
         </mcc:MD_Scope></mdq:scope>
@@ -1191,11 +1218,11 @@ https://www.protectivesecurity.gov.au/Pages/default.aspx
                     </gco:Field></gco:field>
                 </gco:Record></mdq:value>
             </mdq:QuantitativeResult></mdq:result>
-            <!-- Missing relatedQualityElement (as a reslut of choosing "Confidence" as specialisation of <<abstract>> "Metaquality"-->
-            <mdq:relatedQualityElement></mdq:relatedQualityElement>
+             <mdq:relatedQualityElement></mdq:relatedQualityElement>
         </mdq:Confidence></mdq:report>
     </mdq:DataQuality></mdb:dataQualityInfo>
-   <mdb:metadataConstraints>
+ -->
+    <mdb:metadataConstraints>
         <mco:MD_SecurityConstraints>
             <mco:reference>
                 <cit:CI_Citation>

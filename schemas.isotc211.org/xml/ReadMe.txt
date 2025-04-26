@@ -1,0 +1,1 @@
+Directory for XML schemas and related documents

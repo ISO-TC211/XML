@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example of a sensor instance (not a complete coverage)
+     using SensorML 2.0 to set parameters of a 2D electro-optical grid of a frame camera sensor,
+     as part of a sensor instance description referenced in the sensorInstance subelement of TransformationBySensorModel.
+     Last updated 2024-jul-11.
+-->
+
+<sensorInstance>
+    <sml:configuration>
+        <sml:Settings>
+            <sml:setValue ref="parameters/csm/pixelGrid/numberOfRows">
+                1080
+            </sml:setValue>
+            <sml:setValue ref="parameters/csm/pixelGrid/numberOfColumns">
+                1920
+            </sml:setValue>
+            <sml:setValue ref="parameters/csm/pixelGrid/rowSpacing">
+                0.0074
+            </sml:setValue>
+            <sml:setValue ref="parameters/csm/pixelGrid/columnSpacing">
+                0.0074
+            </sml:setValue>
+        </sml:Settings>
+    </sml:configuration>
+<sensorInstance>
+

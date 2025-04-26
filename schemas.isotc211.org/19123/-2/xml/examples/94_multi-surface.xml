@@ -1,0 +1,75 @@
+<MultiSurfaceCoverage
+  xmlns="https://schemas.isotc211.org/19123/-2/cis/2.0.0/"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://schemas.isotc211.org/19123/-2/cis/2.0.0/ cis-annexB-All.xsd">
+
+  <Envelope srsName="[EPSG:4329]" axisLabels="Lat Lon h" srsDimension="3">>
+    <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="1" upperBound="10"/>
+    <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="1" upperBound="10"/>
+    <AxisExtent axisLabel="h"   uomLabel="m"   lowerBound="1" upperBound="2"/>
+  </Envelope>
+
+  <DomainSet>
+    <gml:MultiSurface srsName="http://www.opengis.net/def/crs/EPSG/0/4329">
+      <gml:surfaceMember>
+        <gml:Polygon gml:id="p1">
+          <gml:exterior>
+            <gml:LinearRing>
+              <gml:posList dimension="3">1 1 1 1 5 1 5 5 1 5 1 1 1 1 1</gml:posList>
+            </gml:LinearRing>
+          </gml:exterior>
+        </gml:Polygon>
+      </gml:surfaceMember>
+      <gml:surfaceMember>
+        <gml:Polygon gml:id="p6">
+          <gml:exterior>
+            <gml:LinearRing>
+              <gml:posList dimension="3">10 1 2 5 1 1 5 5 1 10 5 2 10 1 2</gml:posList>
+            </gml:LinearRing>
+          </gml:exterior>
+        </gml:Polygon>
+      </gml:surfaceMember>
+      <gml:surfaceMember>
+        <gml:Polygon gml:id="p11">
+          <gml:exterior>
+            <gml:LinearRing>
+              <gml:posList dimension="3">5 5 1 1 5 1 1 10 1 5 10 1 5 5 1</gml:posList>
+            </gml:LinearRing>
+          </gml:exterior>
+        </gml:Polygon>
+      </gml:surfaceMember>
+      <gml:surfaceMember>
+        <gml:Polygon gml:id="p16">
+          <gml:exterior>
+            <gml:LinearRing>
+              <gml:posList dimension="3">10 5 2 5 5 1 5 10 1 10 10 2 10 5 2</gml:posList>
+            </gml:LinearRing>
+          </gml:exterior>
+        </gml:Polygon>
+      </gml:surfaceMember>
+    </gml:MultiSurface>
+  </DomainSet>
+
+  <RangeType>
+    <swe:DataRecord>
+      <swe:field name="dominantleaftype">
+        <swe:Category definition="https://www.opengis.net/def/dataType/OGC/0/unsigned">
+        </swe:Category>
+      </swe:field>
+      <swe:field name="soilmoisture">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsigned">
+          <swe:uom code="%"/>
+        </swe:Quantity>
+      </swe:field>
+    </swe:DataRecord>
+  </RangeType>
+
+  <RangeSet>
+    <DataBlock>
+      <CV><V>15</V><V>22</V></CV>
+    </DataBlock>
+  </RangeSet>
+
+</MultiSurfaceCoverage>
+

@@ -1,0 +1,1 @@
+Directory for JSON schemas and related documents

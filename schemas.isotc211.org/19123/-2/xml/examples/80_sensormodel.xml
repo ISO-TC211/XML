@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example of a sensor model coverage
+     modeling a frame camera sensor image as a TransformationBySensorModel.
+     as defined in the OGC Coverage Implementation Schema 1.1.
+     Last updated 2024-jul-11.
+-->
+
+<SensorModelCoverage
+    xmlns="https://schemas.isotc211.org/19123/-2/cis/2.0.0/"
+    xmlns:swe="http://www.opengis.net/swe/2.0"
+    xmlns:sml="http://www.opengis.net/sensorml/2.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="https://schemas.isotc211.org/19123/-2/cis/2.0.0/ cisAll.xsd">
+    
+    <Envelope srsName="[EPSG:4326]" axisLabels="Lat Long" srsDimension="2">
+        <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-80" upperBound="-70"/>
+        <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="0"   upperBound="10"/>  
+    </Envelope>
+    
+    <DomainSet>
+        <GeneralGrid srsName="[EPSG:4326]" axisLabels="Lat Lon">
+            <TransformationBySensorModel axisLabels="Lat Lon" uomLabels="deg deg">
+                <SensorModel xlink:href="http://www.sensorml.com/sensorML-2.0/examples/csmFrame.html"/>
+                <SensorInstance xlink:href="http://www.sensorml.com/sensorML-2.0/examples/myHDCamera.html"/>
+            </TransformationBySensorModel>
+            <GridLimits srsName="[OGC:Index2D]" axisLabels="i j">
+                <IndexAxis axisLabel="i" lowerBound="0" upperBound="1919"/>
+                <IndexAxis axisLabel="j" lowerBound="0" upperBound="1079"/>
+            </GridLimits>
+        </GeneralGrid>
+    </DomainSet>
+    
+    <RangeSet>
+        <FileReference>http://www.acme.com/cis_001.jpeg</FileReference>
+    </RangeSet>
+    
+    <RangeType>
+        <swe:DataRecord>
+            <swe:field name="panchromatic">
+                <swe:Quantity definition="http://www.opengis.net/def/dataType/OGC/0/unsignedInt">
+                    <swe:uom code="W.m-2"/>
+                </swe:Quantity>
+            </swe:field>
+        </swe:DataRecord>
+    </RangeType>
+    
+</SensorModelCoverage>

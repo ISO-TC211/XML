@@ -120,12 +120,8 @@
                         <gco:Date>2021-11-26</gco:Date>
                     </cat:versionDate>
                     <cat:locale><lan:PT_Locale>
-                        <lan:language><lan:LanguageCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11"
-                            codeListValue="eng">eng</lan:LanguageCode></lan:language>
-                        <lan:characterEncoding><lan:MD_CharacterSetCode
-                            codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14"
-                            codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
+                        <lan:language><lan:LanguageCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.11" codeListValue="eng">eng</lan:LanguageCode></lan:language>
+                        <lan:characterEncoding><lan:MD_CharacterSetCode codeList="https://standards.iso.org/19115/-1/1/clause#B.3.14" codeListValue="UTF-8">UTF-8</lan:MD_CharacterSetCode></lan:characterEncoding>
                     </lan:PT_Locale></cat:locale>
                     <cat:codelistItem xlink:title="Code list items for Value Structure from the Data Quality Measures (dqm) Namespace">
                         <cat:CT_Codelist id="ISO19157-1.1.dqm.ValueStructure">
