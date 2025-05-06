@@ -1,0 +1,79 @@
+{
+  "$comment": "edited by hand",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "conformsTo": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "required": [
+        "conformsTo"
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "$ref": "#MetadataRecords"
+        },
+        {
+          "$ref": "#MetadataRecord"
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "MetadataRecords": {
+      "$anchor": "MetadataRecords",
+      "type": "object",
+      "required": [
+        "type",
+        "features"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "FeatureCollection"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "#MetadataRecord"
+          }
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "MetadataRecord": {
+      "$anchor": "MetadataRecord",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Metadata"
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        {
+          "$ref": "https://geojson.org/schema/Feature.json"
+        }
+      ]
+    }
+  }
+}
