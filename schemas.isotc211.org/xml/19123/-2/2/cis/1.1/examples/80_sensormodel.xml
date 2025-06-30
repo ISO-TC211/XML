@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sample sensor model coverage
+     as defined in the ISO 19123-2 Coverage Implementation Schema.
+-->
+
+<SensorModelCoverage
+  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:sml="http://www.opengis.net/sensorml/2.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+  http://www.opengis.net/cis/1.1/gml ../cisAll.xsd 
+  http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd 
+  http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd 
+  http://www.opengis.net/sensorml/2.1 https://schemas.opengis.net/sensorML/2.1/sensorML.xsd"
+  gml:id="CIS_80">
+  <!-- extra quote xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance'" -->
+  
+  <Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Long" srsDimension="2">
+    <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-80" upperBound="-70"/>
+    <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="0"   upperBound="10"/>  
+  </Envelope>
+  
+  <DomainSet>
+    <GeneralGrid srsName="http://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Lon" uomLabels="degree">
+      <!-- <GeneralGrid srsName="http://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Lon"> -->
+      <TransformationBySensorModel axisLabels="Lat Lon" uomLabels="deg deg">
+        <SensorModel xlink:href="https://www.sensorml.com/sensorML-2.0/examples/csmFrame.html"/>
+        <SensorInstance xlink:href="https://www.sensorml.com/sensorML-2.0/examples/myHDCamera.html"/>
+      </TransformationBySensorModel>
+      <GridLimits srsName="https://www.opengis.net/def/crs/OGC/0/Index2D" axisLabels="i j">
+        <IndexAxis axisLabel="i" lowerBound="0" upperBound="1919"/>
+        <IndexAxis axisLabel="j" lowerBound="0" upperBound="1079"/>
+      </GridLimits>
+    </GeneralGrid>
+  </DomainSet>
+  
+  <RangeSet>
+    <FileReference>http://www.acme.com/cis_80.nc</FileReference>
+  </RangeSet>
+  
+  <RangeType>
+    <swe:DataRecord>
+      <swe:field name="panchromatic">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsignedInt">
+          <swe:uom code="W.m-2.sr-1.nm-1"/>
+        </swe:Quantity>
+      </swe:field>
+    </swe:DataRecord>
+  </RangeType>
+  
+</SensorModelCoverage>

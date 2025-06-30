@@ -1,0 +1,83 @@
+{
+  "id": "CIS_50",
+  "coverageStructure": "coverageByPartitioning",
+
+  "partitionSet": {
+    "partition": [ {
+      "envelope": {
+        "srsName": "[EPSG:4326]",
+        "axisLabels": "Lat Lon d",
+        "axisExtent": [ {
+          "axisLabel": "Lat",
+          "uomLabel": "deg",
+          "lowerBound": -80,
+          "upperBound": -70
+        },{
+          "axisLabel": "Lon",
+          "uomLabel": "deg",
+          "lowerBound": 0,
+          "upperBound": 10
+        },{
+          "axisLabel": "date",
+          "uomLabel": "d",
+          "lowerBound": "2025-06-01",
+          "upperBound": "2025-06-01"
+        } ]
+      },
+      "coverageRef": "https://www.acme.com/CIS_10.json"
+    },{
+      "envelope": {
+        "srsName": "[EPSG:4326]",
+        "axisLabels": "Lat Lon d",
+        "axisExtent": [ {
+          "axisLabel": "Lat",
+          "uomLabel": "deg",
+          "lowerBound": -80,
+          "upperBound": -70
+        },{
+          "axisLabel": "Lon",
+          "uomLabel": "deg",
+          "lowerBound": 0,
+          "upperBound": 10
+        },{
+          "axisLabel": "date",
+          "uomLabel": "d",
+          "lowerBound": "2025-06-02",
+          "upperBound": "2025-06-02"
+        } ]
+      },
+      "coverageRef": "CIS_50b"
+    },{
+      "envelope": {
+        "srsName": "[EPSG:4326]",
+        "axisLabels": "Lat Lon d",
+        "axisExtent": [ {
+          "axisLabel": "Lat",
+          "uomLabel": "deg",
+          "lowerBound": -80,
+          "upperBound": -70
+        },{
+          "axisLabel": "Lon",
+          "uomLabel": "deg",
+          "lowerBound": 0,
+          "upperBound": 10
+        },{
+          "axisLabel": "date",
+          "uomLabel": "d",
+          "lowerBound": "2025-06-03",
+          "upperBound": "2025-06-03"
+        } ]
+      },
+      "coverageRef": "http://www.acme.com/wcs?SERVICE=WCS&amp;VERSION=2.0&amp;REQUEST=GetCoverage&amp;COVERAGEID=CIS_50c"
+    } ]
+  },
+
+  "rangeType": { 
+    "field":[{ 
+      "name": "singleBand",
+      "definition": "integer",
+      "type": "Quantity",
+      "uom": "W.m-2.sr-1.nm-1"
+    }]
+  }  
+}

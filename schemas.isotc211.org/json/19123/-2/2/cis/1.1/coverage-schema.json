@@ -1,0 +1,508 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Coverage",
+    "description": "JSON encoding for the Coverage Implementation Schema (CIS) of ISO 19123-2:2025. Last updated: 2025-apr-21.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "envelope": {
+            "$ref": "#/definitions/envelope"
+        },
+        "domainSet": {
+            "$ref": "#/definitions/domainSet"
+        },
+        "partitionSet": {
+            "$ref": "#/definitions/partitionSet"
+        },
+        "rangeSet": {
+            "$ref": "#/definitions/rangeSet"
+        },
+        "rangeType": {
+            "$ref": "#/definitions/rangeType"
+        },
+        "metadata": {
+            "$ref": "#/definitions/metadata"
+        },
+        "coverageFunction": {
+            "$ref": "#/definitions/coverageFunction"
+        }
+    },
+    "definitions": {
+        "coverageFunction": {
+            "description": "Coverage function, as defined in GML, with choice GridFunction",
+            "type": "object",
+            "properties": {
+                "sequenceRule": {
+                    "type": "string"
+                },
+                "axisOrder": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "startPosition": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "envelope": {
+            "title": "envelope",
+            "description": "The optional envelope around a coverage is a convenient way to determine a coverage's extent (without drilling into the domain set), typically in a common CRS like WGS84. It does not have to be minimal.",
+            "type": "object",
+            "properties": {
+                "srsName": {
+                    "type": "string"
+                },
+                "axes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "axisLabel": {
+                                "type": "string"
+                            },
+                            "uomLabel": {
+                                "type": "string"
+                            },
+                            "lowerBound": {
+                                "type": [
+                                    "string",
+                                    "number"
+                                ]
+                            },
+                            "upperBound": {
+                                "type": [
+                                    "string",
+                                    "number"
+                                ]
+                            }
+                        }
+                    },
+                    "minItems": 1
+                }
+            }
+        },
+        "domainSet": {
+            "title": "domainSet",
+            "description": "The domainSet describes the *direct positions* of the coverage, i.e., the locations for which values are available.",
+            "type": [
+                "object",
+                "string"
+            ],
+            "properties": {
+                "srsName": {
+                    "type": "string"
+                },
+                "axisLabels": {
+                    "type": [
+                        "array",
+                        "string"
+                    ]
+                },
+                "uomLabels": {
+                    "type": [
+                        "array",
+                        "string"
+                    ]
+                },
+                "multiPoint": {
+                    "$ref": "#/definitions/multiPoint"
+                },
+                "generalGrid": {
+                    "$ref": "#/definitions/generalGrid"
+                }
+            }
+        },
+        "multiPoint": {
+            "title": "MultiPoint",
+            "description": "A domain set consisting of a MultiPoint, aka point cloud.",
+            "type": "array",
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                }
+            }
+        },
+        "generalGrid": {
+            "title": "General Grid",
+            "description": "A general n-D grid is defined through a sequence of axes, each of which can be of a particular axis type.",
+            "properties": {
+                "srsName": {
+                    "type": "string"
+                },
+                "axisLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "axes": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/indexAxis"
+                            },
+                            {
+                                "$ref": "#/definitions/regularAxis"
+                            },
+                            {
+                                "$ref": "#/definitions/irregularAxis"
+                            },
+                            {
+                                "$ref": "#/definitions/displacementAxisNest"
+                            },
+                            {
+                                "$ref": "#/definitions/transformationBySensorModel"
+                            }
+                        ],
+                        "discriminator": {
+                            "propertyName": "axisType",
+                            "mapping": {
+                                "index": "#/definitions/indexAxis",
+                                "regular": "#/definitions/regularAxis",
+                                "irregular": "#/definitions/irregularAxis",
+                                "displacement": "#/definitions/displacementAxisNest",
+                                "sensorModel": "#/definitions/transformationBySensorModel"
+                            }
+                        },
+                        "minItems": 1
+                    }
+                },
+                "gridLimits": {
+                    "title": "Grid limits",
+                    "description": "This is the boundary of the array underlying the grid, given by its diagonal corner points in integer coordinates. The grid limits can be omitted in case all axes are of type index axis, because then it repeats the grid information in a redundant way.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/indexAxis"
+                    },
+                    "minItems": 1
+                }
+            }
+        },
+        "indexAxis": {
+            "title": "Index Axis",
+            "description": "An Index Axis is a Cartesian axis with only integer positions allowed for the direct positions.",
+            "type": "object",
+            "properties": {
+                "axisLabel": {
+                    "type": "string"
+                },
+                "lowerBound": {
+                    "type": "number"
+                },
+                "upperBound": {
+                    "type": "number"
+                }
+            }
+        },
+        "regularAxis": {
+            "title": "Regular Axis",
+            "description": "A Regular Axis is an axis where the direct position coordinates are regularly spaced.",
+            "type": "object",
+            "properties": {
+                "axisLabel": {
+                    "type": "string"
+                },
+                "uomLabel": {
+                    "type": "string"
+                },
+                "lowerBound": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "upperBound": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "resolution": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                }
+            }
+        },
+        "irregularAxis": {
+            "title": "Irregular Axis",
+            "description": "An irregular axis enumerates the direct position coordinates explicitly, thereby allowing non-regular spacings.",
+            "type": "object",
+            "properties": {
+                "axisLabel": {
+                    "type": "string"
+                },
+                "uomLabel": {
+                    "type": "string"
+                },
+                "positions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                }
+            }
+        },
+        "displacementAxisNest": {
+            "title": "Displacement Axis Nest",
+            "description": "A Displacement is a warped axis nest where points on the grid all have their individual direct position coordinates. The sequenceRule element describes linearization order.",
+            "type": "object",
+            "properties": {
+                "axisLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                },
+                "sequenceRule": {
+                    "type": "string"
+                },
+                "positions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "transformationBySensorModel": {
+            "title": "Sensor model",
+            "description": "A Transformation By Sensor Model is a transformation definition which is given by a SensorML 2.x transformation specification.",
+            "type": "object",
+            "properties": {
+                "axisLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sensorModel": {
+                    "type": "string"
+                },
+                "sensorInstance": {
+                    "type": "string"
+                }
+            }
+        },
+        "partitionSet": {
+            "title": "Partition Set",
+            "description": "A partition describes how a coverage (*sub-coverage*) referenced is located within referencing coverage (*super-coverage*). The sub-coverage can be represented by referencing a coverage id or a URL pointing to a coverage.  Such sub-coverages referenced may be grouped into the super-coverage document, or reside remote, or mixed. As an additional alternative, single range values can be indicated verbatimg, together with their direct position. All values must share an identical structure and conform to the rangeType definition.",
+            "type": "object",
+            "properties": {
+                "srsName": {
+                    "type": "string"
+                },
+                "axisLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "partition": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "#"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "position": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": [
+                                                "string",
+                                                "number"
+                                            ]
+                                        }
+                                    },
+                                    "value": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": [
+                                                "string",
+                                                "number"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rangeSet": {
+            "title": "rangeSet",
+            "description": "The rangeSet lists a value for each of the coverage's direct positions. Values resemble the *payload* information of some particular direct positions. Values can be composite (with a single nesting level, i.e.: composites always consist of atomics), or atomic (emulated through single-component composites) whereby the sequence, structure, and meaning of every value is defined through the rangeType. Values can be represented in-line (array alternative) or by reference to an external file (string alternative) which may have any suitable encoding.",
+            "type": [
+                "array",
+                "string"
+            ],
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "rangeType": {
+            "title": "rangeType",
+            "description": "The rangeType element describes the structure and semantics of a coverage's range values, including (optionally) restrictions on the interpolation allowed on such values.",
+            "type": [
+                "object",
+                "string"
+            ],
+            "properties": {
+                "field": {
+                    "type": "array",
+                    "items": {
+                        "title": "SWE Common DataRecord field",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "definition": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "enum": [
+                                    "Quantity",
+                                    "Count",
+                                    "Category"
+                                ]
+                            },
+                            "uom": {
+                                "type": "string"
+                            },
+                            "codeSpace": {
+                                "type": "string"
+                            },
+                            "nilValues": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "nilVvalue": {
+                                            "type": [
+                                                "string",
+                                                "number"
+                                            ]
+                                        },
+                                        "reason": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "constraint": {
+                                "type": "object",
+                                "properties": {
+                                    "value": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": [
+                                                "string",
+                                                "number"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "minOccurs": 0
+                            },
+                            "interval": {
+                                "type": "object",
+                                "properties": {
+                                    "min": {
+                                        "type": "number"
+                                    },
+                                    "max": {
+                                        "type": "number"
+                                    }
+                                },
+                                "minOccurs": 0
+                            },
+                            "significantFigures": {
+                                "type": "integer",
+                                "minOccurs": 0
+                            }
+                        }
+                    },
+                    "interpolationRestriction": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "metadata": {
+            "title": "Metadata",
+            "description": "The metadata element is a container for any (not further specified) information which should be transported along with the coverage on hand, such as domain-specific metadata.",
+            "type": [
+                "array",
+                "string"
+            ],
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

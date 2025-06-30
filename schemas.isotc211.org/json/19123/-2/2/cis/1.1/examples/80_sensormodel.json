@@ -1,0 +1,35 @@
+{
+  "id": "CIS_80",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "srsName": "[EPSG:4326]",
+    "axisLabels": ["Lat", "Long"],
+    "uomLabels": ["deg", "deg"],
+    "axes": [{
+      "axisLabels": ["Lat", "Long"],
+      "uomLabels": ["deg", "deg"],
+      "axisType": "model",
+      "sensorModel": "https://www.sensorml.com/sensorML-2.0/examples/csmFrame.html",
+      "sensorInstance": "https://www.sensorml.com/sensorML-2.0/examples/myHDCamera.html"
+    }],
+    "gridLimits": [{ 
+      "axisLabel": "i",
+      "lowerBound": 0,
+      "upperBound": 1919
+    },{
+      "axisLabel": "j",
+      "lowerBound": 0,
+      "upperBound": 1079
+    }]
+  },
+  "rangeSet": "https://www.acme.com/cis_001.jpeg",
+  "rangeType": { 
+    "field": [{ 
+      "name": "panchromatic",
+      "definition": "integer",
+      "type": "Quantity",
+      "uom": "W.m-2.sr-1.nm-1"
+    }]
+  }  
+}

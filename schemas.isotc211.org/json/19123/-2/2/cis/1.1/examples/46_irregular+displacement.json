@@ -1,0 +1,42 @@
+{
+  "id": "CIS_46",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "srsName": "[EPSG:4979]",
+    "axisLabels": ["Lat", "Long", "h"],
+    "axes": [{ 
+      "axisLabels": ["Lat", "Long"],
+      "uomLabels": ["deg", "deg"],
+      "axisType": "displacement",
+      "positions": [[-90, 0], [-87, 1], [-82, 2], [-89, 4], [-86, 5], [-81, 6], [-88, 8], [85, 9], [80, 10], [-90, 0], [-87, 1], [-82, 2], [-89, 4], [-86, 5], [-81, 6], [-88, 8], [85, 9], [80, 10], [-90, 0], [-87, 1], [-82, 2], [-89, 4], [-86, 5], [-81, 6], [-88, 8], [85, 9], [80, 10]]
+    },{
+      "axisLabel": "h",
+      "uomLabel": "m",
+      "axisType": "irregular",
+      "positions": [10, 50, 100]
+    }],
+    "gridLimits": [{
+      "axisLabel": "i",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{ 
+      "axisLabel": "j",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{ 
+      "axisLabel": "k",
+      "lowerBound": 0,
+      "upperBound": 2
+    }]
+  },
+  "rangeSet": [1,2,3,4,5,6,7,8,9],
+  "rangeType": { 
+    "field":[{ 
+      "name": "singleBand",
+      "definition": "ogcType:unsignedInt",
+      "type": "Quantity",
+      "uom": "W.m-2.sr-1.nm-1"
+    }]
+  }  
+}

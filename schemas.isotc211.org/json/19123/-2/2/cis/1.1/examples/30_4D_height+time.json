@@ -1,0 +1,60 @@
+{
+  "id": "CIS_30",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "srsName": "[EPSG:4979],[OGC:AnsiDate]",
+    "axisLabels": ["Lat", "Long", "h", "date"],
+    "uomLabels": ["deg", "deg", "m", "d"],
+    "axes": [{ 
+      "axisLabel": "Lat",
+      "uomLabel": "deg",
+      "axisType": "regular",
+      "lowerBound": -80,
+      "upperBound": -70,
+      "resolution": 5
+    },{
+      "axisLabel": "Long",
+      "uomLabel": "deg",
+      "axisType": "regular",
+      "lowerBound": 0,
+      "upperBound": 10,
+      "resolution": 5
+    },{
+      "axisLabel": "h",
+      "uomLabel": "m",
+      "axisType": "irregular",
+      "positions": [0, 100]
+    },{
+      "axisLabel": "date",
+      "uomLabel": "d",
+      "axisType": "irregular",
+      "positions": ["2015-12-01", "2015-12-02"]
+    }],
+    "gridLimits": [ {
+      "axisLabel": "i",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{
+      "axisLabel": "j",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{
+      "axisLabel": "k",
+      "lowerBound": 0,
+      "upperBound": 1
+    },{
+      "axisLabel": "l",
+      "lowerBound": 0,
+      "upperBound": 1
+    }]
+  },
+  "rangeSet": ["01","02","03","04","05","06","07","08","09", "01","02","03","04","05","06","07","08","09", "01","02","03","04","05","06","07","08","09", "01","02","03","04","05","06","07","08","09"],
+  "rangeType": {
+    "field":[{
+      "name": "itemCount",
+      "definition": "integer",
+      "type": "Count"
+    }]
+  }
+}

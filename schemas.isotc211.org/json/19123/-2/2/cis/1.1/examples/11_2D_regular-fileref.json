@@ -1,0 +1,33 @@
+{
+  "id": "CIS_11",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "srsName": "[EPSG:4326]",
+    "axisLabels": ["Lat", "Long"],
+    "uomLabels": ["deg", "deg"],
+    "axes": [{ 
+      "axisLabel": "Lat",
+      "uomLabel": "deg",
+      "axisType": "regularAxis",
+      "lowerBound": "-80",
+      "upperBound": "-70",
+      "resolution": "5"
+    },{
+      "axisLabel": "Long",
+      "uomLabel": "deg",
+      "axisType": "regularAxis",
+      "lowerBound": "0",
+      "upperBound": "10",
+      "resolution": "5"
+    }]
+  },
+  "rangeSet": "11_2D_regular_fileref.tiff",
+  "rangeType": { 
+    "field":[{ 
+      "name": "itemCount",
+      "definition": "integer",
+      "type": "Count"
+    }]
+  }  
+}
