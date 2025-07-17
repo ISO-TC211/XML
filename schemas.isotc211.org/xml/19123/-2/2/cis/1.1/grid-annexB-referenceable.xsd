@@ -12,8 +12,8 @@
   version="1.0.1">
 
   <annotation>
-    <appinfo>coverage-rect+ref.xsd</appinfo>
-    <documentation>Legacy RectifiedGridCoverage and ReferenceableGridCoverage components of ISO 19123-2 Coverage Implementation Schema Annex B.
+    <appinfo>grid-annexB-referenceable.xsd</appinfo>
+    <documentation>Legacy ReferenceableGrid variants of ISO 19123-2 Coverage Implementation Schema Annex B.
 	It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
     </documentation>
   </annotation>
@@ -21,10 +21,10 @@
   <!-- ============================= -->
   <!-- Includes and imports      -->
   <!-- ============================= -->
-  <include schemaLocation="grid-annexB.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
   <import namespace="http://www.opengis.net/sensorml/2.1" schemaLocation="https://schemas.opengis.net/sensorML/2.1/sensorML.xsd"/>
+  <include schemaLocation="cis-annexB-All.xsd"/>
 
   <!-- ============================= -->
   <!-- Body of this schema       -->

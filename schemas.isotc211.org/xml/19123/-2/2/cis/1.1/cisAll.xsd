@@ -16,5 +16,6 @@
     <!-- Includes and imports                                      -->
     <!-- ========================================================= -->
     <include schemaLocation="coverage.xsd"/>
+    <include schemaLocation="grid.xsd"/>
 
 </schema>

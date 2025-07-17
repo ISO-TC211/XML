@@ -33,7 +33,7 @@
       <documentation>The gml:coverageFunction property is shifted "up" to this place in the inheritance hierarchy because it is included in both discrete and continuous coverages (i.e., all subtypes of AbstractCoverageType) and, hence, does not change syntax nor semantic in any way. It permits, however, coverages in the cis10:AbstractCoverage substitutionGroup to be used for either discrete and continuous coverages, in preparation for expected future elimination of this distinction. </documentation>
     </annotation>
     <complexContent>
-      <extension base="gml:AbstractFeatureType">
+      <extension base="gml:AbstractCoverageType">
         <sequence>
           <element ref="gml:coverageFunction" minOccurs="0"/>
           <element ref="cis10:rangeType"/>
@@ -76,6 +76,12 @@
     </sequence>
   </complexType>
   <!-- ============================================================= -->
+  <element name="AbstractDiscreteCoverage" type="cis10:AbstractDiscreteCoverageType" abstract="true" substitutionGroup="cis10:AbstractCoverage">
+    <annotation>
+      <documentation>A discrete coverage consists of a domain set, range set and optionally a coverage function. The domain set consists of either spatial or temporal geometry objects, finite in number. The range set is comprised of a finite number of attribute values each of which is associated to every direct position within any single spatiotemporal object in the domain. In other words, the range values are constant on each spatiotemporal object in the domain. This coverage function maps each element from the coverage domain to an element in its range. The coverageFunction element describes the mapping function.
+This element serves as the head of a substitution group which may contain any discrete coverage whose type is derived from cis10:AbstractDiscreteCoverageType.</documentation>
+    </annotation>
+  </element>
   <complexType name="AbstractDiscreteCoverageType">
     <annotation>
       <documentation>This parallels gml:DiscreteCoverageType, except that the gml:coverageFunction element has been moved "up" into cis10:AbstractCoverageType. Its name has been adjusted following the rule defined in GML 3.2.1 Subclause F.2.1.2.2.</documentation>
@@ -87,24 +93,7 @@
       </extension>
     </complexContent>
   </complexType>
-  <element name="AbstractDiscreteCoverage" type="cis10:AbstractDiscreteCoverageType" abstract="true" substitutionGroup="cis10:AbstractCoverage">
-    <annotation>
-      <documentation>A discrete coverage consists of a domain set, range set and optionally a coverage function. The domain set consists of either spatial or temporal geometry objects, finite in number. The range set is comprised of a finite number of attribute values each of which is associated to every direct position within any single spatiotemporal object in the domain. In other words, the range values are constant on each spatiotemporal object in the domain. This coverage function maps each element from the coverage domain to an element in its range. The coverageFunction element describes the mapping function.
-This element serves as the head of a substitution group which may contain any discrete coverage whose type is derived from cis10:AbstractDiscreteCoverageType.</documentation>
-    </annotation>
-  </element>
   <!-- ============================================================= -->
-  <complexType name="AbstractContinuousCoverageType" abstract="true">
-    <annotation>
-      <documentation>This parallels gml:AbstractContinuousCoverageType, except that the gml:coverageFunction element has been moved "up" into cis10:AbstractCoverageType.</documentation>
-    </annotation>
-    <complexContent>
-      <extension base="gml:AbstractCoverageType">
-        <sequence>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
   <element name="AbstractContinuousCoverage" type="cis10:AbstractContinuousCoverageType" abstract="true" substitutionGroup="gml:AbstractCoverage">
     <annotation>
       <documentation>A continuous coverage as defined in ISO 19123 is a coverage that can return different values for the same feature attribute at different direct positions within a single spatiotemporal object in its spatiotemporal domain. The base type for continuous coverages is AbstractContinuousCoverageType.
@@ -112,6 +101,17 @@ The coverageFunction element describes the mapping function.
 The abstract element cis10:AbstractContinuousCoverage serves as the head of a substitution group which may contain any continuous coverage whose type is derived from cis10:AbstractContinuousCoverageType.</documentation>
     </annotation>
   </element>
+  <complexType name="AbstractContinuousCoverageType" abstract="true">
+    <annotation>
+      <documentation>This parallels gml:AbstractContinuousCoverageType, except that the gml:coverageFunction element has been moved "up" into cis10:AbstractCoverageType.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="cis10:AbstractCoverageType">
+        <sequence>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
   <!-- ============================================================= -->
   <element name="MultiPointCoverage" type="cis10:AbstractDiscreteCoverageType" substitutionGroup="cis10:AbstractDiscreteCoverage">
     <annotation>

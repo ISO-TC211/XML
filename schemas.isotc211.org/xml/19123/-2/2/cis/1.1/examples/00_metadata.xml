@@ -10,12 +10,7 @@
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gco="https://schemas.isotc211.org/19103/-/gco/1.2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="
-  https://schemas.isotc211.org/19103/-/gco/1.2 https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd
-  http://www.opengis.net/cis/1.1/gml ../cisAll.xsd
-  http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd
-  http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd
-  http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd https://schemas.isotc211.org/19103/-/gco/1.2 https://schemas.isotc211.org/19103/-/gco/1.2.0/gco.xsd"
   gml:id="CIS_00">
 
   <DomainSet>
@@ -45,7 +40,8 @@
 
   <Metadata>
     <gco:CharacterString>
-    This is the metadata part of the coverage - no formatting requirements are imposed.
+      This is the metadata part of the coverage - no formatting requirements are imposed.
+      If you use XML here (such as GCO in this case) make sure to have the relevant namespace and import/include declarations in the root element.
     </gco:CharacterString>
   </Metadata>
 

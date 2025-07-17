@@ -19,9 +19,9 @@
     <!-- ============================================================== -->
     <!-- Includes and imports                                           -->
     <!-- ============================================================== -->
-    <include schemaLocation="coverage.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2"      schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.opengis.net/sensorml/2.0" schemaLocation="https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"/>
+    <include schemaLocation="cisAll.xsd"/>
 
     <!-- ============================================================== -->
     <!-- Body of this schema                                            -->
@@ -123,12 +123,11 @@
     <!-- ============================================================= -->
     <element name="DisplacementAxisNest" type="cis:DisplacementAxisNestType">
         <annotation>
-            <documentation>A DisplacementAxisNest is a group of warped axes where points on the grid all have their individual direct position coordinates. The sequenceRule element describes linearization order.</documentation>
+            <documentation>A DisplacementAxisNest is a group of warped axes where points on the grid all have their individual direct position coordinates. The sequenceRule element (inside the coverageFunction) describes linearization order. For efficiency reason, the often-repeating P tag is kept terse in its name.</documentation>
         </annotation>
     </element>
     <complexType name="DisplacementAxisNestType">
         <sequence>
-            <!-- <element name="P" type="cis:DirectPositionType"/> -->
             <element name="P" type="cis:DirectPositionType" maxOccurs="unbounded"/>
             <element name="coverageFunction" type="cis:CoverageFunctionType" minOccurs="0"/>
         </sequence>

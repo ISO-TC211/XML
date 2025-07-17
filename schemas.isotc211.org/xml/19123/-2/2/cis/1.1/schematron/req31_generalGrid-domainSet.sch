@@ -8,7 +8,7 @@
       <sch:assert test="count(*) = 1 and string-length(.) = 0">
         In a GeneralGridCoverage, the DomainSet shall contain exactly one node and no content.
       </sch:assert>
-      <sch:assert test="self instance of cis:GeneralGrid">
+      <sch:assert test="./cis:GeneralGrid">
         In a GeneralGridCoverage, the single DomainSet child shall be of type GeneralGrid.
       </sch:assert>
     </sch:rule>

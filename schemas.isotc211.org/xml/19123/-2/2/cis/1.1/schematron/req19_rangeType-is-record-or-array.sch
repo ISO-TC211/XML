@@ -6,7 +6,7 @@
   <sch:ns uri="http://www.w3.org/1999/xlink" prefix="xlink"/>
   <sch:pattern>
     <sch:rule context="//RangeType">
-      <sch:assert test="count(//DataRecord]|//DataArray)!=0 and count(//DataChoice|//Vector|//Matrix)=0">
+      <sch:assert test="count(//DataRecord|//DataArray)!=0 and count(//DataChoice|//Vector|//Matrix)=0">
         Wherever SWE Common allows an AbstractDataComponent in a coverage range structure the concrete instance shall be one of the subtypes DataRecord and DataArray.
       </sch:assert>
     </sch:rule>

@@ -19,7 +19,7 @@
   <!-- ============================================================= -->
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
-  <include schemaLocation="grid.xsd"/>
+  <include schemaLocation="cisAll.xsd"/>
 
   <!-- ============================================================= -->
   <!-- Abstract Coverages                                            -->
@@ -59,7 +59,6 @@
     <sequence>
       <element name="sequenceRule" type="string" minOccurs="0"/>
       <element name="axisOrder"    type="string" minOccurs="0"/>
-      <!-- <element name="startPoint"   type="integer" minOccurs="0"/> -->
       <element name="startPoint"   type="string" minOccurs="0"/>
     </sequence>
   </complexType>

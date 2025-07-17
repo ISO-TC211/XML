@@ -15,7 +15,7 @@
     <!-- Includes and imports                                      -->
     <!-- ========================================================= -->
     <include schemaLocation="coverage-annexB.xsd"/>
-    <include schemaLocation="coverage-rect+ref.xsd"/>
     <include schemaLocation="grid-annexB.xsd"/>
+    <include schemaLocation="grid-annexB-referenceable.xsd"/>
 
 </schema>
