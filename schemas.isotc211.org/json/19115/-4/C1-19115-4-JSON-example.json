@@ -1,6 +1,6 @@
 {
     "$comments": [
-        "Version 0.5, 2025-04-30",
+        "Version 0.6, 2025-10-01",
         "The 'MD_Metadata' instance has been mapped to a GeoJSON feature",
         "The metadata record has been embedded into a GeoJSON feature collection",
         "The metadata identifier code has been copied into the GeoJSON feature 'id'",
@@ -14,7 +14,8 @@
         "CharacterString values that use 'gco:CodeType' have been reduced to a string (three protocol values)",
         "a 'type' attribute has been added to objects to state the type of the object, where the object is a subtype of an abstract supertype",
         "'xlink:href' values have been resolved (an alternative approach could be to map them to '$ref' from JSON Schema and 'id' attributes could be mapped to '$anchor'); dangling references have been removed",
-        "a 'conformsTo' member has been added - with three hypothetical conformance classes: a core schema covering core packages from 19115-1, a core schema covering core packages from 19157-1, and (assuming that the core supports reference) an additional conformance class that excludes references"
+        "a 'conformsTo' member has been added - with three hypothetical conformance classes: a core schema covering core packages from 19115-1, a core schema covering core packages from 19157-1, and (assuming that the core supports reference) an additional conformance class that excludes references",
+        "two attributes have been added as a result of CD-phase commenting"
     ],
     "conformsTo": [
         "https://standards.iso.org/iso/19115/-4/0.1/core"             ,
@@ -122,7 +123,8 @@
                             },
                             "code": "EPSG::3112",
                             "description": "Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: m"
-                        }
+                        },
+                         "crs": "https://www.opengis.net/def/crs/EPSG/0/3112" 
                     }
                 ],
                 "identificationInfo": {
@@ -344,7 +346,8 @@
                     "resourceConstraints": [
                         {
                             "type": "MD_LegalConstraints",
-                            "uuid": "urn:ga-licences:232",
+                            "uuid": "fb650607-feb2-4022-8a01-e879df091a91",
+                            "useLimitation": ["Copyright: Commonwealth of Australia", "The data provided is preliminary form. All care has been take in its preparation. The data should not be used as the basis of any decisions."],
                             "reference": [
                                 {
                                     "title": "Creative Commons Attribution 4.0 International Licence",
@@ -359,7 +362,7 @@
                                 }
                             ],
                             "accessConstraints": ["license"],
-                            "useConstraints": ["license"]
+                            "useConstraints": ["license", "copyright"]
                         },
                         {
                             "type": "MD_SecurityConstraints",
