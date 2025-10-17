@@ -808,7 +808,7 @@
       "$anchor": "MD_Distributor",
       "type": "object",
       "properties": {
-        "distributionFormat": {
+        "distributorFormat": {
           "type": "array",
           "items": {
             "$ref": "#MD_Format"
