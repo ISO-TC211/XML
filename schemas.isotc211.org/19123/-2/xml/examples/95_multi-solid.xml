@@ -1,19 +1,33 @@
-<MultiSolidCoverage
-  xmlns="https://schemas.isotc211.org/19123/-2/cis/2.0.0/"
-  xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://schemas.isotc211.org/19123/-2/cis/2.0.0/ cis-annexB-All.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <Envelope srsName="[EPSG:4329]" axisLabels="Lat Lon h" srsDimension="3">>
+<!-- Sample multi-solid coverage
+     as defined in the ISO 19123-2 Coverage Implementation Schema.
+-->
+
+<MultiSolidCoverage
+  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:swe='http://www.opengis.net/swe/2.0'
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  gml:id="CIS_95">
+
+  <Envelope srsName="[EPSG:4329]" axisLabels="Lat Lon h">
     <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="1" upperBound="10"/>
     <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="1" upperBound="10"/>
     <AxisExtent axisLabel="h"   uomLabel="m"   lowerBound="1" upperBound="2"/>
   </Envelope>
 
   <DomainSet>
-      <gml:MultiSolid>...</gml:MultiSolid>
+      <gml:MultiSolid/>
   </DomainSet>
-
+  
+  <RangeSet>
+    <DataBlock>
+      <CV><V>1013</V></CV>
+    </DataBlock>
+  </RangeSet>
+  
   <RangeType>
     <swe:DataRecord>
       <swe:field name="pressure">
@@ -23,12 +37,6 @@
       </swe:field>
     </swe:DataRecord>
   </RangeType>
-
-  <RangeSet>
-    <DataBlock>
-      <CV><V>1013</V></CV>
-    </DataBlock>
-  </RangeSet>
 
 </MultiSolidCoverage>
 

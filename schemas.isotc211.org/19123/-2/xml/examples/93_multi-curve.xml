@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Example of a multi-curve coverage
-     as defined in the OGC Coverage Implementation Schema 1.
-     Last updated 2024-sep-07.
+<!-- Sample multi-curve coverage
+     as defined in the ISO 19123-2 Coverage Implementation Schema.
 -->
 
 <MultiCurveCoverage
-  xmlns="https://schemas.isotc211.org/19123/-2/cis/2.0.0/"
+  xmlns="http://www.opengis.net/cis/1.1/gml"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:swe='http://www.opengis.net/swe/2.0'
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://schemas.isotc211.org/19123/-2/cis/2.0.0/ cis-annexB-All.xsd">
+  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  gml:id="CIS_93">
 
-  <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon" srsDimension="3">>
+  <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon">
     <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="1.1" upperBound="5.5"/>
     <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="1.1" upperBound="5.5"/>
   </Envelope>
@@ -21,41 +21,26 @@
     <gml:MultiCurve>
       <gml:curveMember>
         <gml:LineString>
-          <gml:posList dimension="2">1.1 1.1 2.2 2.2</gml:posList>
+          <gml:posList>1.1 1.1 2.2 2.2</gml:posList>
         </gml:LineString>
       </gml:curveMember>
       <gml:curveMember>
         <gml:LineString>
-          <gml:posList dimension="2">2.2 2.2 3.3 3.3</gml:posList>
+          <gml:posList>2.2 2.2 3.3 3.3</gml:posList>
         </gml:LineString>
       </gml:curveMember>
       <gml:curveMember>
         <gml:LineString>
-          <gml:posList dimension="2">3.3 3.3 4.4 4.4</gml:posList>
+          <gml:posList>3.3 3.3 4.4 4.4</gml:posList>
         </gml:LineString>
       </gml:curveMember>
       <gml:curveMember>
         <gml:LineString>
-          <gml:posList dimension="2">4.4 4.4 5.5 5.5</gml:posList>
+          <gml:posList>4.4 4.4 5.5 5.5</gml:posList>
         </gml:LineString>
       </gml:curveMember>
     </gml:MultiCurve>
   </DomainSet>
-
-  <RangeType>
-    <swe:DataRecord>
-      <swe:field name="temperature">
-        <swe:Quantity definition="http://www.opengis.net/def/dataType/OGC/0/unsigned">
-          <swe:uom code="Cel"/>
-        </swe:Quantity>
-      </swe:field>
-      <swe:field name="pressure">
-        <swe:Quantity definition="http://www.opengis.net/def/dataType/OGC/0/unsigned">
-          <swe:uom code="hPa"/>
-        </swe:Quantity>
-      </swe:field>
-    </swe:DataRecord>
-  </RangeType>
 
   <RangeSet>
     <DataBlock>
@@ -65,6 +50,21 @@
       <CV><V>16</V><V>1010</V></CV>
     </DataBlock>
   </RangeSet>
+
+  <RangeType>
+    <swe:DataRecord>
+      <swe:field name="temperature">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsigned">
+          <swe:uom code="Cel"/>
+        </swe:Quantity>
+      </swe:field>
+      <swe:field name="pressure">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsigned">
+          <swe:uom code="hPa"/>
+        </swe:Quantity>
+      </swe:field>
+    </swe:DataRecord>
+  </RangeType>
+  
 </MultiCurveCoverage>
-19.3.18 MultiSurfaceCoverage
 

@@ -1,65 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Example of a partitioned coverage
-     as defined in the OGC Coverage Implementation Schema 1.1.
-     Last updated 2016-aug-11.
+<!-- Sample partitioned coverage
+     as defined in the ISO 19123-2 Coverage Implementation Schema.
 -->
 
 <GeneralGridCoverage
-    xmlns="https://schemas.isotc211.org/19123/-2/cis/2.0.0/"
-    xmlns:swe="http://www.opengis.net/swe/2.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="https://schemas.isotc211.org/19123/-2/cis/2.0.0/ cisAll.xsd"
-    gml:id="CIS_001">
+  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  gml:id="CIS_50">
 
-    <!-- partitionSet replaces domainSet; different coverage referencing mechanisms are shown. -->
-    <PartitionSet>
+  <PartitionSet>
 
-        <!-- This sub-coverage is referenced by URL, so it can sit anywhere on the Internet;
-             caveat: may or may not be accessible from a particular program evaluating CIS_001.
-             Therefore, we better enumerate all axes to indicate the position of CIS_002 within CIS_001 -->
-        <Partition> 
-            <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon d" srsDimension="3">
-                <AxisExtent axisLabel="Lat"  uomLabel="deg" lowerBound="-80"    upperBound="-70"/>
-                <AxisExtent axisLabel="Lon"  uomLabel="deg" lowerBound="0"      upperBound="10"/>
-                <AxisExtent axisLabel="date" uomLabel="d"   lowerBound="100003" upperBound="100003"/>
-            </Envelope>
-            <CoverageRef>http://www.acme.com/CIS_002</CoverageRef>
-        </Partition> 
+    <Partition> 
+      <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon d">
+        <AxisExtent axisLabel="Lat"  uomLabel="deg" lowerBound="-80"        upperBound="-70"/>
+        <AxisExtent axisLabel="Lon"  uomLabel="deg" lowerBound="0"          upperBound="10"/>
+        <AxisExtent axisLabel="date" uomLabel="d"   lowerBound="2025-06-01" upperBound="2025-06-01"/>
+      </Envelope>
+      <CoverageRef>https://www.acme.com/CIS_10.xml</CoverageRef>
+    </Partition> 
 
-        <!-- this sub-coverage is referenced by coverage id, which works well within, e.g., a WCS offering where the coverage id is unique.
-             Only the time axis is enumerated here (which CIS_003 does not know), Lat and Long are taken from the CIS_003 domain set;
-             this efficient and convenient if the sub-coverage is "close by" and easily accessible. -->
-        <Partition> 
-            <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon d" srsDimension="3">
-                <AxisExtent axisLabel="Lat"  uomLabel="deg" lowerBound="-80"    upperBound="-70"/>
-                <AxisExtent axisLabel="Lon"  uomLabel="deg" lowerBound="0"      upperBound="10"/>
-                <AxisExtent axisLabel="date" uomLabel="d"   lowerBound="100004" upperBound="100004"/>
-            </Envelope>
-            <CoverageRef>CIS_003</CoverageRef>
-        </Partition> 
+    <Partition> 
+      <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon d">
+        <AxisExtent axisLabel="Lat"  uomLabel="deg" lowerBound="-80"        upperBound="-70"/>
+        <AxisExtent axisLabel="Lon"  uomLabel="deg" lowerBound="0"          upperBound="10"/>
+        <AxisExtent axisLabel="date" uomLabel="d"   lowerBound="2025-06-02" upperBound="2025-06-02"/>
+      </Envelope>
+      <CoverageRef>CIS_50b</CoverageRef>
+    </Partition> 
 
-        <!-- in this partition, the sub-coverage is given by GetCoverage request;
-             in the partitionEnvelope, all axes are enumerated because it is costly to determine them by retrieving the sub-coverage.-->
-        <Partition> 
-            <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon d" srsDimension="3">
-                <AxisExtent axisLabel="Lat"  uomLabel="deg" lowerBound="-80"    upperBound="-70"/>
-                <AxisExtent axisLabel="Lon"  uomLabel="deg" lowerBound="0"      upperBound="10"/>
-                <AxisExtent axisLabel="date" uomLabel="d"   lowerBound="100005" upperBound="100005"/>
-            </Envelope>    
-            <CoverageRef>http://www.acme.com/wcs?SERVICE=WCS&amp;VERSION=2.0&amp;REQUEST=GetCoverage&amp;COVERAGEID=CIS_004</CoverageRef>
-        </Partition> 
-    </PartitionSet> 
+    <Partition> 
+      <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon d">
+        <AxisExtent axisLabel="Lat"  uomLabel="deg" lowerBound="-80"        upperBound="-70"/>
+        <AxisExtent axisLabel="Lon"  uomLabel="deg" lowerBound="0"          upperBound="10"/>
+        <AxisExtent axisLabel="date" uomLabel="d"   lowerBound="2025-06-03" upperBound="2025-06-03"/>
+      </Envelope>  
+      <CoverageRef>https://www.acme.com/wcs?SERVICE=WCS&amp;VERSION=2.0&amp;REQUEST=GetCoverage&amp;COVERAGEID=CIS_50c</CoverageRef>
+    </Partition> 
 
-    <RangeType>
-        <swe:DataRecord>
-            <swe:field name="singleBand">
-                <swe:Quantity definition="http://www.opengis.net/def/dataType/OGC/0/unsignedInt">
-                    <swe:uom code="W.m-2"/>
-                </swe:Quantity>
-            </swe:field>
-        </swe:DataRecord>
-    </RangeType>
+  </PartitionSet> 
+
+  <RangeType>
+    <swe:DataRecord>
+      <swe:field name="singleBand">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsignedInt">
+          <swe:uom code="W.m-2.sr-1.nm-1"/>
+        </swe:Quantity>
+      </swe:field>
+    </swe:DataRecord>
+  </RangeType>
 
 </GeneralGridCoverage>
 
