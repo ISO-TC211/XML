@@ -12,6 +12,6 @@
     <!-- Includes and imports                                      -->
     <!-- ========================================================= -->
     <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/coverage.xsd"/>
-    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/grid.xsd"/>
 
 </schema>
