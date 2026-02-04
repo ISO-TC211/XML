@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.opengis.net/cis/2.0"
+    xmlns:cis20="http://www.opengis.net/cis/2.0"
+    xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:sml="http://www.opengis.net/sensorml/2.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:swe="http://www.opengis.net/swe/2.0"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" version="2.0.0">
+    <annotation>
+        <appinfo>coverage-rect+ref.xsd</appinfo>
+        <documentation>Legacy RectifiedGridCoverage and ReferenceableGridCoverage components of ISO 19123-2 Coverage Impementation Schema Annex B.
+	It is recommended for new applications to use GeneralGidCoverage instead which is simplified in structure and covers more cases.
+        Last updated: 2024-Nov-18
+        </documentation>
+    </annotation>
+
+    <!-- ============================= -->
+    <!-- Includes and imports          -->
+    <!-- ============================= -->
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="https://schemas.opengis.net/cis/1.0/gmlcovAll.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+    <import namespace="http://www.opengis.net/sensorml/2.1" schemaLocation="http://schemas.opengis.net/sensorML/2.1/sensorML.xsd"/>
+
+    <!-- ============================= -->
+    <!-- Body of this schema           -->
+    <!-- ============================= -->
+    <element name="AbstractCoverage" type="cis20:AbstractCoverageType" abstract="true" substitutionGroup="gml:AbstractFeature">
+        <annotation>
+            <documentation>Like its role model gml:AbstractCoverageType in GML 3.2.1, this element serves as the head of a substitution group which may contain any coverage whose type is derived, however, from gmlcov:AbstractCoverageType (rather than gml:AbstractCoverageType).  It may act as a variable in the definition of content models where it is required to permit any coverage to be valid.</documentation>
+        </annotation>
+    </element>
+    <complexType name="AbstractCoverageType">
+        <annotation>
+            <documentation>The gml:coverageFunction property is shifted "up" to this place in the inheritance hierarchy because it is included in both discrete and continuous coverages (i.e., all subtypes of AbstractCoverageType) and, hence, does not change syntax nor semantic in any way. It permits, however, coverages in the gmlcov:AbstractCoverage substitutionGroup to be used for either discrete and continuous coverages, in preparation for expected future elimination of this distinction. </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gml:AbstractCoverageType">
+                <sequence>
+                    <element ref="gml:coverageFunction" minOccurs="0"/>
+                    <element ref="gmlcov:rangeType"/>
+                    <element ref="gmlcov:metadata" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <!-- ============================================================= -->
+    <element name="rangeType" type="swe:DataRecordPropertyType">
+        <annotation>
+            <documentation>The rangeType element describes the structure of a coverage's range values, introduced for coverage definitions used, e.g., by WCS 2.0. </documentation>
+        </annotation>
+    </element>
+    <!-- ============================================================= -->
+    <element name="metadata">
+        <annotation>
+            <documentation>This is a hook for adding any further information to a coverage, such as domain-specific metadata. Recommended use is to use the XML extension mechanism, such as in a WCS extension or Application Profile, to define the desired metadata structure.</documentation>
+        </annotation>
+        <complexType>
+            <complexContent>
+                <extension base="gml:AbstractMetadataPropertyType">
+                    <sequence>
+                        <element ref="gmlcov:Extension" minOccurs="0"/>
+                    </sequence>
+                    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+            </complexContent>
+        </complexType>
+    </element>
+    <!-- =========================================================== -->
+    <element name="Extension" type="cis20:ExtensionType">
+        <annotation>
+            <documentation>Extension element used to hook in additional content e.g. in extensions or application profiles.</documentation>
+        </annotation>
+    </element>
+    <complexType name="ExtensionType">
+        <sequence>
+            <any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+        </sequence>
+    </complexType>
+    <!-- ============================================================= -->
+    <complexType name="AbstractDiscreteCoverageType">
+        <annotation>
+            <documentation>This parallels gml:DiscreteCoverageType, except that the gml:coverageFunction element has been moved "up" into gmlcov:AbstractCoverageType. Its name has been adjusted following the rule defined in GML 3.2.1 Subclause F.2.1.2.2.</documentation>
+        </annotation>
+        <complexContent>
+            <extension base="cis20:AbstractCoverageType">
+                <sequence>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <element name="AbstractDiscreteCoverage" type="cis20:AbstractDiscreteCoverageType" abstract="true" substitutionGroup="cis20:AbstractCoverage">
+        <annotation>
+            <documentation>A discrete coverage consists of a domain set, range set and optionally a coverage function. The domain set consists of either spatial or temporal geometry objects, finite in number. The range set is comprised of a finite number of attribute values each of which is associated to every direct position within any single spatiotemporal object in the domain. In other words, the range values are constant on each spatiotemporal object in the domain. This coverage function maps each element from the coverage domain to an element in its range. The coverageFunction element describes the mapping function.
+This element serves as the head of a substitution group which may contain any discrete coverage whose type is derived from gmlcov:AbstractDiscreteCoverageType.</documentation>
+        </annotation>
+    </element>
+    <!-- ============================================================= -->
+    <complexType name="AbstractContinuousCoverageType" abstract="true">
+        <annotation>
+            <documentation>This parallels gml:AbstractContinuousCoverageType, except that the gml:coverageFunction element has been moved "up" into gmlcov:AbstractCoverageType.</documentation>
+        </annotation>
+        <complexContent>
+            <extension base="cis20:AbstractCoverageType">
+                <sequence>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <element name="AbstractContinuousCoverage" type="cis20:AbstractContinuousCoverageType" abstract="true" substitutionGroup="gml:AbstractCoverage">
+        <annotation>
+            <documentation>A continuous coverage as defined in ISO 19123 is a coverage that can return different values for the same feature attribute at different direct positions within a single spatiotemporal object in its spatiotemporal domain. The base type for continuous coverages is AbstractContinuousCoverageType.
+The coverageFunction element describes the mapping function. 
+The abstract element gmlcov:AbstractContinuousCoverage serves as the head of a substitution group which may contain any continuous coverage whose type is derived from gmlcov:AbstractContinuousCoverageType.</documentation>
+        </annotation>
+    </element>
+    <!-- ============================================================= -->
+    <element name="RectifiedGridCoverage" type="gmlcov:AbstractDiscreteCoverageType" substitutionGroup="gmlcov:AbstractCoverage">
+        <annotation>
+            <documentation>A RectifiedGridCoverage is a geographically referenced discrete point coverage based on a rectified grid. The rectified grid coverage has a domain that is a gml:RectifiedGrid geometry. </documentation>
+        </annotation>
+    </element>
+    <!-- ============================================================= -->
+    <element name="ReferenceableGridCoverage" type="gmlcov:AbstractDiscreteCoverageType" substitutionGroup="gmlcov:AbstractCoverage">
+        <annotation>
+            <documentation>A ReferenceableGridCoverage is an implementation of GML 3.2.1 as 3.3 by approved OGC Change Request 07-112r3. It is a coverage based on a referenceable grid and has a domain geometry that is in the substitution group of AbstractReferenceableGrid.</documentation>
+        </annotation>
+    </element>
+
+    <!-- ============================================================== -->
+    <!-- Grids                                                          -->
+    <!-- ============================================================== -->
+    <element name="AbstractReferenceableGrid" type="cis20:AbstractReferenceableGridType" abstract="true" substitutionGroup="gml:Grid">
+        <annotation>
+            <documentation>AbstractReferenceableGrid is the head of a substitution group that may include multiple concrete implementations.
+A referenceable grid is a grid associated with a transformation that can be used to convert grid coordinate values to values of coordinates referenced to an external coordinate reference system. The transformation between grid coordinates and 'external' coordinates is usually non-affine, and may take different forms.
+The inherited attribute group gml:SRSReferenceGroup shall link the referenceable grid to the external coordinate reference system to which it is referenceable.
+            </documentation>
+            <documentation>This element and its type are copied from approved OGC Change Request 07-112r3, which adds them to GML 3.2.1. </documentation>
+        </annotation>
+    </element>
+    <!-- =========================================================== -->
+    <complexType name="AbstractReferenceableGridType" abstract="true">
+        <complexContent>
+            <extension base="gml:GridType"/>
+        </complexContent>
+    </complexType>
+    <!-- =========================================================== -->
+    <element name="referenceableGridProperty" type="gmlcov:ReferenceableGridPropertyType">
+        <annotation>
+            <documentation>This element and its type are copied from approved OGC Change Request 07-112r3, which adds them to GML 3.2.1. </documentation>
+        </annotation>
+    </element>
+    <!-- =========================================================== -->
+    <complexType name="ReferenceableGridPropertyType">
+        <sequence>
+            <element ref="gmlcov:AbstractReferenceableGrid"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </complexType>
+
+    <!-- =========================================================== -->
+    <element name="gridCRS" type="cis20:GridCRSPropertyType" />
+    <complexType name="GridCRSPropertyType">
+      <sequence maxOccurs="unbounded">
+        <element ref="gml:AbstractCRS" minOccurs="0"/>
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup" />
+    </complexType>
+    <!-- =========================================================== -->
+    <element name="ReferenceableGridBySensorModel" type="cis20:ReferenceableGridBySensorModelType" substitutionGroup="cis20:AbstractReferenceableGrid"/>
+    <complexType name="ReferenceableGridBySensorModelType">
+      <complexContent>
+        <extension base="cis20:AbstractReferenceableGridType">
+          <sequence>
+            <element ref="cis20:gridCRS" minOccurs="0" />
+            <element name="sensorModel" type="sml:AbstractProcessPropertyType" maxOccurs="unbounded"/>
+            <element name="sensorInstance" type="sml:AbstractProcessPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+    <!-- =========================================================== -->
+    <element name="ReferenceableGridByArray" type="cis20:ReferenceableGridByArrayType" substitutionGroup="cis20:AbstractReferenceableGrid" />
+    <complexType name="ReferenceableGridByArrayType">
+      <complexContent>
+        <extension base="cis20:AbstractReferenceableGridType">
+          <sequence>
+            <group ref="gml:geometricPositionListGroup" />
+            <element name="sequenceRule" type="gml:SequenceRuleType" />
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+    <!-- =========================================================== -->
+    <element name="ReferenceableGridByVectors" type="cis20:ReferenceableGridByVectorsType" substitutionGroup="cis20:AbstractReferenceableGrid" />
+    <complexType name="ReferenceableGridByVectorsType">
+      <complexContent>
+        <extension base="cis20:AbstractReferenceableGridType">
+          <sequence>
+            <element name="origin" type="gml:PointPropertyType" />
+            <element name="generalGridAxis" type="cis20:GeneralGridAxisPropertyType" maxOccurs="unbounded"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+     <element name="GeneralGridAxis" type="cis20:GeneralGridAxisType" />
+    <complexType name="GeneralGridAxisType">
+      <sequence>
+        <element name="offsetVector"    type="gml:VectorType" />
+        <element name="coefficients"    type="gml:doubleList" />
+        <element name="gridAxesSpanned" type="gml:NCNameList" />
+        <element name="sequenceRule"    type="gml:SequenceRuleType" />
+      </sequence>
+    </complexType>
+    <complexType name="GeneralGridAxisPropertyType">
+      <sequence minOccurs="0">
+        <element ref="cis20:GeneralGridAxis" />
+      </sequence>
+      <attributeGroup ref="gml:AssociationAttributeGroup" />
+      <attributeGroup ref="gml:OwnershipAttributeGroup" />
+    </complexType>
+    <!-- =========================================================== -->
+    <element name="ReferenceableGridByTransformation" type="cis20:ReferenceableGridByTransformationType" substitutionGroup="cis20:AbstractReferenceableGrid" />
+    <complexType name="ReferenceableGridByTransformationType">
+      <complexContent>
+        <extension base="cis20:AbstractReferenceableGridType">
+          <sequence>
+            <element ref="cis20:gridCRS" minOccurs="0" />
+            <choice>
+              <element name="transformation"        type="gml:TransformationPropertyType" />
+              <element name="concatenatedOperation" type="gml:ConcatenatedOperationPropertyType" />
+            </choice>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+
+</schema>

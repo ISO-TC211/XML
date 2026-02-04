@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example of a sensor model (not a complete coverage)
+     using SensorML 2.0 to define parameters of a 2D electro-optical grid of a frame camera sensor,
+     as part of a sensor model description referenced in the SensorModel subelement. 
+     Last updated 2024-jul-11.
+-->
+
+<SensorModel>
+    <swe:field name="pixelGrid">
+        <swe:DataRecord>
+            <swe:label>Pixel Grid Characteristics</swe:label>
+            <swe:field name="numberOfRows">
+                <swe:Count definition=
+                      "http://sensorml.com/ont/csm/property/NROWS">
+                    <swe:label>Number of Rows</swe:label>
+                </swe:Count>
+            </swe:field>
+            <swe:field name="numberOfColumns">
+                <swe:Count definition=
+                      "http://sensorml.com/ont/csm/property/NCOLS">
+                    <swe:label>Number of Columns</swe:label>
+                </swe:Count>
+            </swe:field>
+            <swe:field name="rowSpacing">
+                <swe:Quantity definition=
+                     "http://sensorml.com/ont/csm/property/ROW_SPACING">
+                    <swe:label>Row Spacing</swe:label>
+                    <swe:uom code="mm"/>
+                </swe:Quantity>
+            </swe:field>
+            <swe:field name="columnSpacing">
+                <swe:Quantity definition=
+                     "http://sensorml.com/ont/csm/property/COL_SPACING">
+                    <swe:label>Column Spacing</swe:label>
+                    <swe:uom code="mm"/>
+                </swe:Quantity>
+            </swe:field>
+        </swe:DataRecord>
+    </swe:field>
+</sensorModel>
+
+

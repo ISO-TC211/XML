@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sample multi-solid coverage
+     as defined in the ISO 19123-2 Coverage Implementation Schema.
+-->
+
+<MultiSolidCoverage
+  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:swe='http://www.opengis.net/swe/2.0'
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  gml:id="CIS_95">
+
+  <Envelope srsName="[EPSG:4329]" axisLabels="Lat Lon h">
+    <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="1" upperBound="10"/>
+    <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="1" upperBound="10"/>
+    <AxisExtent axisLabel="h"   uomLabel="m"   lowerBound="1" upperBound="2"/>
+  </Envelope>
+
+  <DomainSet>
+      <gml:MultiSolid/>
+  </DomainSet>
+  
+  <RangeSet>
+    <DataBlock>
+      <CV><V>1013</V></CV>
+    </DataBlock>
+  </RangeSet>
+  
+  <RangeType>
+    <swe:DataRecord>
+      <swe:field name="pressure">
+        <swe:Quantity definition="https://www.opengis.net/def/dataType/OGC/0/unsigned">
+          <swe:uom code="hPa"/>
+        </swe:Quantity>
+      </swe:field>
+    </swe:DataRecord>
+  </RangeType>
+
+</MultiSolidCoverage>
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sample RectifiedGridCoverage instance encoding an RGB image
+     as defined in ISO 19123-2 Coverage Implementation Schema.
+-->
+
+<cis10:RectifiedGridCoverage
+  xmlns:cis10="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/gmlcov/1.0 ../cis-annexB-All.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  gml:id="CIS10_rectified">
+
+  <gml:boundedBy>
+    <gml:Envelope srsName="EPSG:4326" axisLabels="Lat Lon" uomLabels="deg deg" srsDimension="2">
+      <gml:lowerCorner>1 1</gml:lowerCorner>
+      <gml:upperCorner>3 10</gml:upperCorner>
+    </gml:Envelope>
+  </gml:boundedBy>
+
+  <gml:domainSet>
+    <gml:Grid dimension="2">
+      <gml:limits>
+        <gml:GridEnvelope>
+          <gml:low>200 250</gml:low>
+          <gml:high>202 259</gml:high>
+        </gml:GridEnvelope>
+      </gml:limits>
+      <gml:axisLabels>x y</gml:axisLabels>
+    </gml:Grid>
+  </gml:domainSet>
+
+  <gml:rangeSet>
+    <gml:DataBlock>
+      <gml:rangeParameters/>
+      <gml:tupleList>
+        119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 34,32,29 0,174,78 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 34,32,29 0,174,78 0,174,78 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 119,208,248 34,32,29 0,174,78 34,32,29 70,187,8 
+      </gml:tupleList>
+    </gml:DataBlock>
+  </gml:rangeSet>
+
+  <cis10:rangeType>
+    <swe:DataRecord>
+      <swe:field name="red">
+        <swe:Quantity definition="https://opengis.net/def/property/OGC/0/Radiance">
+          <swe:description>Red Channel</swe:description>
+          <swe:nilValues>
+            <swe:NilValues>
+              <swe:nilValue reason="https://www.opengis.net/def/nil/OGC/0/BelowDetectionRange">0</swe:nilValue>
+              <swe:nilValue reason="https://www.opengis.net/def/nil/OGC/0/AboveDetectionRange">255</swe:nilValue>
+            </swe:NilValues>
+          </swe:nilValues>
+          <swe:uom code="W.m-2"/>
+          <swe:constraint>
+            <swe:AllowedValues>
+              <swe:interval>0 255</swe:interval>
+              <swe:significantFigures>3</swe:significantFigures>
+            </swe:AllowedValues>
+          </swe:constraint>
+        </swe:Quantity>
+      </swe:field>
+      <swe:field name="green">
+         <swe:Quantity definition="https://opengis.net/def/property/OGC/0/Radiance">
+          <swe:description>Green Channel</swe:description>
+          <swe:nilValues>
+            <swe:NilValues>
+              <swe:nilValue reason="https://www.opengis.net/def/nil/OGC/0/BelowDetectionRange">0</swe:nilValue>
+              <swe:nilValue reason="https://www.opengis.net/def/nil/OGC/0/AboveDetectionRange">255</swe:nilValue>
+            </swe:NilValues>
+          </swe:nilValues>
+          <swe:uom code="W.m-2"/>
+          <swe:constraint>
+            <swe:AllowedValues>
+              <swe:interval>0 255</swe:interval>
+              <swe:significantFigures>3</swe:significantFigures>
+            </swe:AllowedValues>
+          </swe:constraint>
+         </swe:Quantity>
+       </swe:field>
+      <swe:field name="blue">
+        <swe:Quantity definition="https://opengis.net/def/property/OGC/0/Radiance">
+          <swe:description>Blue Channel</swe:description>
+          <swe:nilValues>
+            <swe:NilValues>
+              <swe:nilValue reason="https://www.opengis.net/def/nil/OGC/0/BelowDetectionRange">0</swe:nilValue>
+              <swe:nilValue reason="https://www.opengis.net/def/nil/OGC/0/AboveDetectionRange">255</swe:nilValue>
+            </swe:NilValues>
+          </swe:nilValues>
+          <swe:uom code="W.m-2"/>
+          <swe:constraint>
+            <swe:AllowedValues>
+              <swe:interval>0 255</swe:interval>
+              <swe:significantFigures>3</swe:significantFigures>
+            </swe:AllowedValues>
+          </swe:constraint>
+        </swe:Quantity>
+      </swe:field>  
+    </swe:DataRecord>
+  </cis10:rangeType>
+
+</cis10:RectifiedGridCoverage>
