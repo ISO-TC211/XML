@@ -1,0 +1,1200 @@
+{
+    "$comments": [
+        "Version 0.6, 2025-10-01",
+        "The 'MD_Metadata' instance has been mapped to a GeoJSON feature",
+        "The metadata record has been embedded into a GeoJSON feature collection",
+        "The metadata identifier code has been copied into the GeoJSON feature 'id'",
+        "The bounding box extent has been copied into the GeoJSON feature 'geometry' and 'bbox'",
+        "nil and empty values (e.g., <mdq:pass></mdq:pass>) have been removed",
+        "'gco:Record' instances have been mapped to a JSON value",
+        "'CI_Date' values have been mapped to an object with the 'dateType' as the key",
+        "'CI_Telephone' values have been mapped to an object with the 'numberType' as the key",
+        "'MD_Metadata.identificationInfo' has been reduced to a single value, not an array",
+        "codelist values have been reduced to a string using the code",
+        "CharacterString values that use 'gco:CodeType' have been reduced to a string (three protocol values)",
+        "a 'type' attribute has been added to objects to state the type of the object, where the object is a subtype of an abstract supertype",
+        "'xlink:href' values have been resolved (an alternative approach could be to map them to '$ref' from JSON Schema and 'id' attributes could be mapped to '$anchor'); dangling references have been removed",
+        "a 'conformsTo' member has been added - with three hypothetical conformance classes: a core schema covering core packages from 19115-1, a core schema covering core packages from 19157-1, and (assuming that the core supports reference) an additional conformance class that excludes references",
+        "two attributes have been added as a result of CD-phase commenting"
+    ],
+    "conformsTo": [
+        "https://standards.iso.org/iso/19115/-4/0.1/core"             ,
+        "https://standards.iso.org/iso/19115/-4/0.1/data-quality-core",
+        "https://standards.iso.org/iso/19115/-4/0.1/no-ref"
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": "a05f7892-efb9-7506-e044-00144fdd4fa6",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [112, -44],
+                        [156, -44],
+                        [156, -10],
+                        [112, -10],
+                        [112, -44]
+                    ]
+                ]
+            },
+            "bbox": [112, -44, 156, -10],
+            "properties": {
+                "metadataIdentifier": {
+                    "authority": {"title": "GeoNetwork UUID"},
+                    "code": "a05f7892-efb9-7506-e044-00144fdd4fa6",
+                    "codeSpace": "urn:uuid:"
+                },
+                "defaultLocale": {
+                    "language"         : "eng" ,
+                    "characterEncoding": "utf8"
+                },
+                "contact": [
+                    {
+                        "role": "pointOfContact",
+                        "party": [
+                            {
+                                "type": "CI_Organisation",
+                                "name": "Commonwealth of Australia (Geoscience Australia)",
+                                "contactInfo": [
+                                    {
+                                        "phone": {"voice": "1800 800 173"},
+                                        "address": [
+                                            {
+                                                "deliveryPoint": [
+                                                    "Cnr Jerrabomberra Ave and Hindmarsh Dr",
+                                                    "GPO Box 378"
+                                                ],
+                                                "city": "Canberra",
+                                                "administrativeArea": "ACT",
+                                                "postalCode": "2601",
+                                                "country": "Australia",
+                                                "electronicMailAddress": [
+                                                    "clientservices@ga.gov.au"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dateInfo": {
+                    "revision": "2018-04-20T06:19:51Z",
+                    "creation": "2010-02-04T00:00:00Z"
+                },
+                "metadataStandard": [
+                    {"title": "AU/NZS ISO 19115-1:2014"},
+                    {"title": "ISO 19115-1:2014"       },
+                    {"title": "ISO 19115-3"            }
+                ],
+                "metadataProfile": [
+                    {
+                        "title": "Geoscience Australia Community Metadata Profile of ISO 19115-1:2014",
+                        "edition": "Version 2.0, September 2018",
+                        "identifier": [
+                            {
+                                "code": "https://pid.geoscience.gov.au/dataset/ga/122551"
+                            }
+                        ]
+                    }
+                ],
+                "alternativeMetadataReference": [
+                    {
+                        "title": "Geoscience Australia Products Catalogue (eCat) – Short identifier for metadata record.",
+                        "identifier": [
+                            {"code": "70105", "codeSpace": "eCatId"}
+                        ]
+                    }
+                ],
+                "metadataLinkage": [
+                    {
+                        "linkage": "https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/a05f7892-efb9-7506-e044-00144fdd4fa6",
+                        "function": "completeMetadata"
+                    }
+                ],
+                "referenceSystemInfo": [
+                    {
+                        "referenceSystemIdentifier": {
+                            "authority": {
+                                "title": "International Association of Oil and Gas Producers"
+                            },
+                            "code": "EPSG::3112",
+                            "description": "Cartesian 2D CS. Axes: easting, northing (E,N). Orientations: east, north. UoM: m"
+                        },
+                         "crs": "https://www.opengis.net/def/crs/EPSG/0/3112" 
+                    }
+                ],
+                "identificationInfo": {
+                    "abstract": "Data gathered in the field during the sample collection phase of the National Geochemical Survey of Australia (NGSA) has been used to compile the Preliminary Soil pH map of Australia. \n                    The map, which was completed in late 2009, offers a first-order estimate of where acid or alkaline soil conditions are likely to be expected. \n                    It provides fundamental datasets that can be used for mineral exploration and resource potential evaluation, environmental monitoring, landuse policy development, and geomedical studies into the health of humans, animals and plants.",
+                    "pointOfContact": [
+                        {
+                            "role": "custodian",
+                            "party": [
+                                {
+                                    "type": "CI_Organisation",
+                                    "name": "Commonwealth of Australia (Geoscience Australia)",
+                                    "contactInfo": [
+                                        {
+                                            "phone": {"voice": "1800 800 173"},
+                                            "address": [
+                                                {
+                                                    "deliveryPoint": [
+                                                        "Cnr Jerrabomberra Ave and Hindmarsh Dr GPO Box 378"
+                                                    ],
+                                                    "city": "Canberra",
+                                                    "administrativeArea": "ACT",
+                                                    "postalCode": "2601",
+                                                    "country": "Australia",
+                                                    "electronicMailAddress": [
+                                                        "clientservices@ga.gov.au"
+                                                    ]
+                                                }
+                                            ],
+                                            "individual": [
+                                                {
+                                                    "positionName": "Manager Client Services"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "role": "custodian",
+                            "party": [
+                                {
+                                    "type": "CI_Organisation",
+                                    "name": "Geoscience Australia: MNHD",
+                                    "individual": [
+                                        {
+                                            "type": "CI_Individual",
+                                            "name": "DE CARITAT, P"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "role": "owner",
+                            "party": [
+                                {
+                                    "type": "CI_Organisation",
+                                    "name": "Commonwealth of Australia (Geoscience Australia)"
+                                }
+                            ]
+                        }
+                    ],
+                    "citation": {
+                        "title": "Preliminary Soil pH map of Australia",
+                        "date": {"publication": "2010-01-01T00:00:00Z"},
+                        "identifier": [
+                            {
+                                "code": "https://pid.geoscience.gov.au/dataset/ga/70105",
+                                "codeSpace": "Geoscience Australia Persistent Identifier"
+                            }
+                        ],
+                        "citedResponsibleParty": [
+                            {
+                                "role": "author",
+                                "party": [
+                                    {
+                                        "type": "CI_Individual",
+                                        "name": "de Caritat, P.",
+                                        "contactInfo": [
+                                            {
+                                                "contactInstructions": "1st contact"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "role": "author",
+                                "party": [
+                                    {
+                                        "type": "CI_Individual",
+                                        "name": "Cooper, M.",
+                                        "contactInfo": [
+                                            {
+                                                "contactInstructions": "2nd contact"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "series": {"issueIdentification": "2010"},
+                        "ISBN": "9781921672620"
+                    },
+                    "defaultLocale": {
+                        "language"         : "eng" ,
+                        "characterEncoding": "utf8"
+                    },
+                    "spatialRepresentationType": ["textTable", "vector"],
+                    "spatialResolution": {
+                        "distance": { "uom": "metre", "value": [250] }
+                    },
+                    "topicCategory": ["geoscientificInformation"],
+                    "extent": [
+                        {
+                            "description": "Australia",
+                            "geographicElement": [
+                                {
+                                    "type": "EX_GeographicDescription",
+                                    "geographicIdentifier": {
+                                        "code": "Australia excluding external territories"
+                                    }
+                                },
+                                {
+                                    "type": "EX_GeographicBoundingBox",
+                                    "westBoundLongitude": 112,
+                                    "eastBoundLongitude": 156,
+                                    "southBoundLatitude": -44,
+                                    "northBoundLatitude": -10
+                                }
+                            ]
+                        }
+                    ],
+                    "resourceMaintenance": [
+                        {"maintenanceAndUpdateFrequency": "asNeeded"}
+                    ],
+                    "resourceFormat": [
+                        {
+                            "formatSpecificationCitation": {
+                                "title": "Portable Document Format (PDF)",
+                                "edition": "1.6",
+                                "citedResponsibleParty": [
+                                    {
+                                        "role": "rightsHolder",
+                                        "party": [
+                                            {
+                                                "type": "CI_Organisation",
+                                                "name": "ADOBE Inc"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "fileDecompressionTechnique": "UNZIP"
+                            }
+                        },
+                        {
+                            "formatSpecificationCitation": {
+                                "title": "Comma Delimitted Format (CSV)",
+                                "edition": "1.0",
+                                "fileDecompressionTechnique": "UNZIP"
+                            }
+                        },
+                        {
+                            "formatSpecificationCitation": {
+                                "title": "ASCII text (TXT)",
+                                "edition": "1.0",
+                                "fileDecompressionTechnique": "UNZIP"
+                            }
+                        }
+                    ],
+                    "descriptiveKeywords": [
+                        { "keyword": ["Data Package"] },
+                        { "keyword": ["soils"], "type": "theme" },
+                        { "keyword": ["mapping"], "type": "theme" },
+                        { "keyword": ["environmental"], "type": "theme" },
+                        {
+                            "keyword": ["mineral exploration"],
+                            "type": "theme"
+                        },
+                        { "keyword": ["AU"] },
+                        {
+                            "keyword": ["Earth Sciences"],
+                            "thesaurusName": {
+                                "title": "Australian and New Zealand Standard Research Classification (ANZSRC)",
+                                "date": {
+                                    "publication": "2008-03-31T00:00:00+11:00"
+                                },
+                                "citedResponsibleParty": [
+                                    {
+                                        "role": "owner",
+                                        "party": [
+                                            {
+                                                "type": "CI_Organisation",
+                                                "name": "Australian Bureau of Statistics (ABS)",
+                                                "contactInfo": [
+                                                    {
+                                                        "onlineResource": [
+                                                            {
+                                                                "linkage": "http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&tabname=Summary&prodno=1297.0&issue=2008"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "ISBN": "9780642483584",
+                                "onlineResource": [
+                                    {
+                                        "linkage": "http://www.abs.gov.au/ausstats/abs@.nsf/Latestproducts/1297.0Main%20Features32008?opendocument&tabname=Summary&prodno=1297.0&issue=2008"
+                                    }
+                                ]
+                            }
+                        },
+                        { "keyword": ["Published_External"] }
+                    ],
+                    "resourceConstraints": [
+                        {
+                            "type": "MD_LegalConstraints",
+                            "uuid": "fb650607-feb2-4022-8a01-e879df091a91",
+                            "useLimitation": ["Copyright: Commonwealth of Australia", "The data provided is preliminary form. All care has been take in its preparation. The data should not be used as the basis of any decisions."],
+                            "reference": [
+                                {
+                                    "title": "Creative Commons Attribution 4.0 International Licence",
+                                    "alternateTitle": ["CC-BY"],
+                                    "edition": "4.0",
+                                    "onlineResource": [
+                                        {
+                                            "linkage": "http://creativecommons.org/licenses/",
+                                            "protocol": "WWW:LINK-1.0-http--link"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "accessConstraints": ["license"],
+                            "useConstraints": ["license", "copyright"]
+                        },
+                        {
+                            "type": "MD_SecurityConstraints",
+                            "reference": [
+                                {
+                                    "title": "Australian Government Security ClassificationSystem",
+                                    "editionDate": "2018-11-01T00:00:00Z",
+                                    "onlineResource": [
+                                        {
+                                            "linkage": "https://www.protectivesecurity.gov.au/Pages/default.aspx",
+                                            "protocol": "WWW:LINK-1.0-http--link"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "classification": "unclassified"
+                        }
+                    ]
+                },
+                "distributionInfo": [
+                    {
+                        "distributor": [
+                            {
+                                "distributorContact": {
+                                    "role": "distributor",
+                                    "party": [
+                                        {
+                                            "type": "CI_Organisation",
+                                            "name": "Commonwealth of Australia (Geoscience Australia)",
+                                            "contactInfo": [
+                                                {
+                                                    "phone": {
+                                                        "voice": "1800 800 173"
+                                                    },
+                                                    "address": [
+                                                        {
+                                                            "deliveryPoint": [
+                                                                "Cnr Jerrabomberra Ave and Hindmarsh Dr",
+                                                                "GPO Box 378"
+                                                            ],
+                                                            "city": "Canberra",
+                                                            "administrativeArea": "ACT",
+                                                            "postalCode": "2601",
+                                                            "country": "Australia",
+                                                            "electronicMailAddress": [
+                                                                "clientservices@ga.gov.au"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "transferOptions": [
+                            {
+                                "onLine": [
+                                    {
+                                        "linkage": "https://d28rz98at9flks.cloudfront.net/70105/70105_NGSA.zip",
+                                        "protocol": "WWW:LINK-1.0-http--link",
+                                        "name": "Preliminary Soil pH map of Australia ZIPPED multiple files",
+                                        "description": "Zipped collection of maps (PDF) tabular data (CSV) and text files (TXT)",
+                                        "function": "information"
+                                    }
+                                ],
+                                "distributionFormat": [
+                                    {
+                                        "formatSpecificationCitation": {
+                                            "title": "Portable Document Format (PDF)",
+                                            "edition": "1.6",
+                                            "citedResponsibleParty": [
+                                                {
+                                                    "role": "rightsHolder",
+                                                    "party": [
+                                                        {
+                                                            "type": "CI_Organisation",
+                                                            "name": "ADOBE Inc"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "fileDecompressionTechnique": "UNZIP"
+                                    },
+                                    {
+                                        "formatSpecificationCitation": {
+                                            "title": "Comma Delimitted Format (CSV)",
+                                            "edition": "1.0"
+                                        },
+                                        "fileDecompressionTechnique": "UNZIP"
+                                    },
+                                    {
+                                        "formatSpecificationCitation": {
+                                            "title"  : "ASCII text (TXT)",
+                                            "edition": "1.0"
+                                        },
+                                        "fileDecompressionTechnique": "UNZIP"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dataQualityInfo": [
+                    {
+                        "scope": {"level": "dataset"},
+                        "report": [
+                            {
+                                "type": "Commission",
+                                "measure": {
+                                    "measureIdentification": {"code": "2"},
+                                    "nameOfMeasure": [
+                                        "number of excess items"
+                                    ],
+                                    "measureDescription": "Number of items within the dataset that should not have been in the dataset"
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "FullInspection",
+                                        "evaluationMethodDescription": "Compare count of items in the dataset against count of items in universe of discourse.",
+                                        "evaluationMethodType": "directExternal"
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "QuantitativeResult",
+                                        "resultScope": {
+                                            "level": "featureType",
+                                            "levelDescription": [
+                                                { "features": ["path"] }
+                                            ]
+                                        },
+                                        "value": [2],
+                                        "pass": false
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Commission",
+                                "measure": {
+                                    "measureIdentification": {"code": "1"},
+                                    "nameOfMeasure": [
+                                        "number of excess items"
+                                    ],
+                                    "measureDescription": "indication that an item is incorrectly present in the data"
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "AggregationDerivation",
+                                        "evaluationMethodDescription": "derivation from quantitatve result",
+                                        "evaluationMethodType": "indirect"
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "ConformanceResult",
+                                        "resultScope": {
+                                            "level": "feature",
+                                            "levelDescription": [
+                                                { "features": ["path"] }
+                                            ]
+                                        },
+                                        "specification": {
+                                            "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "pass": true
+                                    },
+                                    {
+                                        "type": "ConformanceResult",
+                                        "resultScope": {
+                                            "level": "featureType",
+                                            "levelDescription": [
+                                                { "features": ["road"] }
+                                            ]
+                                        },
+                                        "specification": {
+                                            "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "pass": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "qualityEvaluationReport": {
+                            "reportReference": {
+                                "title": "Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.12",
+                                "date": {"creation": "2010-07-05"}
+                            },
+                            "abstract": "The quality evaluation report attached to this quality evauation is providing more details on the derivation and aggregation method."
+                        }
+                    },
+                    {
+                        "scope": {
+                            "level": "featureType",
+                            "levelDescription": [
+                                {
+                                    "features": [
+                                        "transportNetwork (road and path)"
+                                    ]
+                                }
+                            ]
+                        },
+                        "report": [
+                            {
+                                "type": "Commission",
+                                "measure": {
+                                    "$comment": "required, but no values were provided"
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "AggregationDerivation",
+                                        "evaluationMethodDescription": "100percent pass  fail aggregation of the conformance commission result for roads and paths",
+                                        "evaluationMethodType": "indirect",
+                                        "evaluationProcedure": {
+                                            "title": "Aggregation of data quality results",
+                                            "date": {"creation": "2010-07-05"}
+                                        }
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "ConformanceResult",
+                                        "specification": {
+                                            "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "pass": true
+                                    }
+                                ],
+                                "derivedElement": [
+                                    {
+                                        "type": "Commission",
+                                        "measure": {
+                                            "measureIdentification": {
+                                                "code": "1"
+                                            },
+                                            "nameOfMeasure": [
+                                                "number of excess items"
+                                            ],
+                                            "measureDescription": "indication that an item is incorrectly present in the data"
+                                        },
+                                        "evaluationMethod": [
+                                            {
+                                                "type": "AggregationDerivation",
+                                                "evaluationMethodDescription": "derivation from quantitatve result",
+                                                "evaluationMethodType": "indirect"
+                                            }
+                                        ],
+                                        "result": [
+                                            {
+                                                "type": "ConformanceResult",
+                                                "resultScope": {
+                                                    "level": "feature",
+                                                    "levelDescription": [
+                                                        { "features": ["path"] }
+                                                    ]
+                                                },
+                                                "specification": {
+                                                    "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                },
+                                                "pass": true
+                                            },
+                                            {
+                                                "type": "ConformanceResult",
+                                                "resultScope": {
+                                                    "level": "featureType",
+                                                    "levelDescription": [
+                                                        { "features": ["road"] }
+                                                    ]
+                                                },
+                                                "specification": {
+                                                    "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                },
+                                                "pass": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "scope": {"level": "dataset"},
+                        "report": [
+                            {
+                                "type": "ThematicClassificationCorrectness",
+                                "measure": {
+                                    "measureIdentification": {"code": "60"},
+                                    "nameOfMeasure": [
+                                        "number of incorrectly classified features"
+                                    ]
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "AggregationDerivation",
+                                        "evaluationMethodDescription": "Derivation from quantitative results reported in qyuality evaluation report.",
+                                        "evaluationMethodType": "indirect"
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "ConformanceResult",
+                                        "resultScope": {
+                                            "level": "featureType",
+                                            "levelDescription": [
+                                                {
+                                                    "features": [
+                                                        "industrial building"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "specification": {
+                                            "title": "Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "explanation": "The original quantitative result is provided in ... of the quality evaluation report",
+                                        "pass": true
+                                    },
+                                    {
+                                        "type": "ConformanceResult",
+                                        "resultScope": {
+                                            "level": "featureType",
+                                            "levelDescription": [
+                                                { "features": ["house"] }
+                                            ]
+                                        },
+                                        "specification": {
+                                            "title": "Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "explanation": "The original quantitative result is provided in the quality evaluation report",
+                                        "pass": true
+                                    }
+                                ],
+                                "qualityEvaluationReport": {
+                                    "reportReference": {
+                                        "title": "Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.13",
+                                        "date": {"creation": "2010-07-05"}
+                                    },
+                                    "abstract": "The quality evaluation report attached to this quality evauation is providing all the quantitative results \n                which are not provided in the metadata, \n                and more details on the derivation and aggregation method."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "scope": {
+                            "level": "featureType",
+                            "levelDescription": [
+                                {
+                                    "features": [
+                                        "buildings (industrial and house)"
+                                    ]
+                                }
+                            ]
+                        },
+                        "report": [
+                            {
+                                "type": "Commission",
+                                "measure": {
+                                    "$comment": "required, but no values were provided"
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "AggregationDerivation",
+                                        "evaluationMethodDescription": "100percent pass fail aggregation of the conformance classification correctness result for inductrial buildings and houses",
+                                        "evaluationMethodType": "indirect",
+                                        "evaluationProcedure": {
+                                            "title": "Aggregation of data quality results",
+                                            "date": {"creation": "2010-07-05"}
+                                        }
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "ConformanceResult",
+                                        "specification": {
+                                            "title": "Data product specification. Maximum of two items can be miss-classified.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "pass": true
+                                    }
+                                ],
+                                "derivedElement": [
+                                    {
+                                        "type": "ThematicClassificationCorrectness",
+                                        "measure": {
+                                            "measureIdentification": {
+                                                "code": "60"
+                                            },
+                                            "nameOfMeasure": [
+                                                "number of incorrectly classified features"
+                                            ]
+                                        },
+                                        "evaluationMethod": [
+                                            {
+                                                "type": "AggregationDerivation",
+                                                "evaluationMethodDescription": "Derivation from quantitative results reported in qyuality evaluation report.",
+                                                "evaluationMethodType": "indirect"
+                                            }
+                                        ],
+                                        "result": [
+                                            {
+                                                "type": "ConformanceResult",
+                                                "resultScope": {
+                                                    "level": "featureType",
+                                                    "levelDescription": [
+                                                        {
+                                                            "features": [
+                                                                "industrial building"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "specification": {
+                                                    "title": "Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                },
+                                                "explanation": "The original quantitative result is provided in ... of the quality evaluation report",
+                                                "pass": true
+                                            },
+                                            {
+                                                "type": "ConformanceResult",
+                                                "resultScope": {
+                                                    "level": "featureType",
+                                                    "levelDescription": [
+                                                        {
+                                                            "features": [
+                                                                "house"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "specification": {
+                                                    "title": "Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                },
+                                                "explanation": "The original quantitative result is provided in the quality evaluation report",
+                                                "pass": true
+                                            }
+                                        ],
+                                        "qualityEvaluationReport": {
+                                            "reportReference": {
+                                                "title": "Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.13",
+                                                "date": {
+                                                    "creation": "2010-07-05"
+                                                }
+                                            },
+                                            "abstract": "The quality evaluation report attached to this quality evauation is providing all the quantitative results \n                which are not provided in the metadata, \n                and more details on the derivation and aggregation method."
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "scope": {"level": "dataset"},
+                        "report": [
+                            {
+                                "type": "Confidence",
+                                "measure": {
+                                    "measureIdentification": {"code": "101"},
+                                    "nameOfMeasure": [
+                                        "data product specification passed"
+                                    ],
+                                    "measureDescription": "Indication that all requirements in the referrence data product specification are fulfilled."
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "AggregationDerivation",
+                                        "evaluationMethodDescription": "100percent pass fail aggregate of each conformance result for the requirement expressed in the data product specification.",
+                                        "evaluationMethodType": "indirect",
+                                        "evaluationProcedure": {
+                                            "title": "Aggregation of data quality results",
+                                            "date": {"creation": "2010-07-05"}
+                                        }
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "ConformanceResult",
+                                        "specification": {
+                                            "title": "Data product specification.",
+                                            "date": {"creation": "2010-07-05"}
+                                        },
+                                        "explanation": "3 requirements out of 11 are not fulfilled: the dataset is not conformant",
+                                        "pass": false
+                                    }
+                                ],
+                                "derivedElement": [
+                                    {
+                                        "type": "Commission",
+                                        "measure": {
+                                            "$comment": "required, but no values were provided"
+                                        },
+                                        "evaluationMethod": [
+                                            {
+                                                "type": "AggregationDerivation",
+                                                "evaluationMethodDescription": "100percent pass  fail aggregation of the conformance commission result for roads and paths",
+                                                "evaluationMethodType": "indirect",
+                                                "evaluationProcedure": {
+                                                    "title": "Aggregation of data quality results",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "result": [
+                                            {
+                                                "type": "ConformanceResult",
+                                                "specification": {
+                                                    "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                },
+                                                "pass": true
+                                            }
+                                        ],
+                                        "derivedElement": [
+                                            {
+                                                "type": "Commission",
+                                                "measure": {
+                                                    "measureIdentification": {
+                                                        "code": "1"
+                                                    },
+                                                    "nameOfMeasure": [
+                                                        "number of excess items"
+                                                    ],
+                                                    "measureDescription": "indication that an item is incorrectly present in the data"
+                                                },
+                                                "evaluationMethod": [
+                                                    {
+                                                        "type": "AggregationDerivation",
+                                                        "evaluationMethodDescription": "derivation from quantitatve result",
+                                                        "evaluationMethodType": "indirect"
+                                                    }
+                                                ],
+                                                "result": [
+                                                    {
+                                                        "type": "ConformanceResult",
+                                                        "resultScope": {
+                                                            "level": "feature",
+                                                            "levelDescription": [
+                                                                {
+                                                                    "features": [
+                                                                        "path"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "specification": {
+                                                            "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                                            "date": {
+                                                                "creation": "2010-07-05"
+                                                            }
+                                                        },
+                                                        "pass": true
+                                                    },
+                                                    {
+                                                        "type": "ConformanceResult",
+                                                        "resultScope": {
+                                                            "level": "featureType",
+                                                            "levelDescription": [
+                                                                {
+                                                                    "features": [
+                                                                        "road"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "specification": {
+                                                            "title": "Data product specification. Maximum of two items can be missing from each feature type.",
+                                                            "date": {
+                                                                "creation": "2010-07-05"
+                                                            }
+                                                        },
+                                                        "pass": true
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Commission",
+                                        "measure": {
+                                            "$comment": "required, but no values were provided"
+                                        },
+                                        "evaluationMethod": [
+                                            {
+                                                "type": "AggregationDerivation",
+                                                "evaluationMethodDescription": "100percent pass fail aggregation of the conformance classification correctness result for inductrial buildings and houses",
+                                                "evaluationMethodType": "indirect",
+                                                "evaluationProcedure": {
+                                                    "title": "Aggregation of data quality results",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "result": [
+                                            {
+                                                "type": "ConformanceResult",
+                                                "specification": {
+                                                    "title": "Data product specification. Maximum of two items can be miss-classified.",
+                                                    "date": {
+                                                        "creation": "2010-07-05"
+                                                    }
+                                                },
+                                                "pass": true
+                                            }
+                                        ],
+                                        "derivedElement": [
+                                            {
+                                                "type": "ThematicClassificationCorrectness",
+                                                "measure": {
+                                                    "measureIdentification": {
+                                                        "code": "60"
+                                                    },
+                                                    "nameOfMeasure": [
+                                                        "number of incorrectly classified features"
+                                                    ]
+                                                },
+                                                "evaluationMethod": [
+                                                    {
+                                                        "type": "AggregationDerivation",
+                                                        "evaluationMethodDescription": "Derivation from quantitative results reported in qyuality evaluation report.",
+                                                        "evaluationMethodType": "indirect"
+                                                    }
+                                                ],
+                                                "result": [
+                                                    {
+                                                        "type": "ConformanceResult",
+                                                        "resultScope": {
+                                                            "level": "featureType",
+                                                            "levelDescription": [
+                                                                {
+                                                                    "features": [
+                                                                        "industrial building"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "specification": {
+                                                            "title": "Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.",
+                                                            "date": {
+                                                                "creation": "2010-07-05"
+                                                            }
+                                                        },
+                                                        "explanation": "The original quantitative result is provided in ... of the quality evaluation report",
+                                                        "pass": true
+                                                    },
+                                                    {
+                                                        "type": "ConformanceResult",
+                                                        "resultScope": {
+                                                            "level": "featureType",
+                                                            "levelDescription": [
+                                                                {
+                                                                    "features": [
+                                                                        "house"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "specification": {
+                                                            "title": "Data product specification. Maximum of two feature instances can be misclassified as another of the building feature types and zero as other feature types.",
+                                                            "date": {
+                                                                "creation": "2010-07-05"
+                                                            }
+                                                        },
+                                                        "explanation": "The original quantitative result is provided in the quality evaluation report",
+                                                        "pass": true
+                                                    }
+                                                ],
+                                                "qualityEvaluationReport": {
+                                                    "reportReference": {
+                                                        "title": "Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.13",
+                                                        "date": {
+                                                            "creation": "2010-07-05"
+                                                        }
+                                                    },
+                                                    "abstract": "The quality evaluation report attached to this quality evauation is providing all the quantitative results \n                which are not provided in the metadata, \n                and more details on the derivation and aggregation method."
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "qualityEvaluationReport": {
+                            "reportReference": {
+                                "title": "Data Quality Report ISO 19157-1 Annex D/D4.1.2/Table D.14.\n                Reporting as quality evaluation report",
+                                "date": {"creation": "2010-07-05"}
+                            },
+                            "abstract": "The quality evaluation report attached to this quality evauation is providing fully-detailed information \n                about the evaluation applied and results obtained."
+                        }
+                    },
+                    {
+                        "scope": {"level": "dataset"},
+                        "report": [
+                            {
+                                "type": "RelativePositionalAccuracy",
+                                "measure": {
+                                    "nameOfMeasure": [
+                                        "Comparison of absolute positional accuracy"
+                                    ],
+                                    "measureDescription": "Comparison of absolute positional accuracy using known positional accuracy of the two or more independent objects"
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "IndirectEvaluation",
+                                        "evaluationMethodDescription": "Compares absolute possitional accuracy of the archaeological object and\n                    the absolute positional accuracy of the river.",
+                                        "evaluationMethodType": "indirect",
+                                        "deductiveSource": "Positional accuracy of the rivers nearby the archaeological camp."
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "DescriptiveResult",
+                                        "statement": "Relative positional accuracy between the archaeological objects and rivers is higher \n                    than the absolute positional accuracy of the archaeological objects (5m)"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "scope": {"level": "dataset"},
+                        "report": [
+                            {
+                                "type": "AbsolutePositionalAccuracy",
+                                "measure": {
+                                    "measureIdentification": {"code": "47"},
+                                    "nameOfMeasure": [
+                                        "Root mean square error planimetry"
+                                    ],
+                                    "measureDescription": "Standard deviation where the true value is not estimated from the observations but known a prioriStandard deviation\n                    where the true value is not estimated from the observations but known a priori"
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "FullInspection",
+                                        "evaluationProcedure": {
+                                            "title": "IGN data quality evaluation procedure",
+                                            "date": {"creation": "1995-02-09"}
+                                        }
+                                    },
+                                    {
+                                        "type": "AggregationDerivation",
+                                        "evaluationMethodType": "directExternal"
+                                    }
+                                ],
+                                "result": []
+                            },
+                            {
+                                "type": "Confidence",
+                                "measure": {
+                                    "measureIdentification": {
+                                        "authority": {
+                                            "title": "IGN Measures",
+                                            "date": {"creation": "1995-01-01"}
+                                        },
+                                        "code": "1"
+                                    },
+                                    "nameOfMeasure": ["Safety Factor"],
+                                    "measureDescription": "The ratio between the accuracy class of the evaluation elements and the accuracy class that has to be obtained in the dataset."
+                                },
+                                "evaluationMethod": [
+                                    {
+                                        "type": "FullInspection",
+                                        "evaluationMethodDescription": "The bigger the \"Safety Factor\" is the more trustful is the evaluation.\n                   The \"Safety Factor\" has to be bigger than 2 to validate the evaluation.",
+                                        "evaluationMethodType": "directExternal",
+                                        "evaluationProcedure": {
+                                            "title": "Arrâté 2003 (French legislation)",
+                                            "date": {"publication": "2003"}
+                                        }
+                                    }
+                                ],
+                                "result": [
+                                    {
+                                        "type": "QuantitativeResult",
+                                        "value": [2.4]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metadataConstraints": [
+                    {
+                        "type": "MD_SecurityConstraints",
+                        "reference": [
+                            {
+                                "title": "Australian Government Security ClassificationSystem",
+                                "editionDate": "2018-11-01T00:00:00Z",
+                                "onlineResource": [
+                                    {
+                                        "linkage": "https://www.protectivesecurity.gov.au/Pages/default.aspx"
+                                    }
+                                ]
+                            }
+                        ],
+                        "classification": "unclassified"
+                    }
+                ],
+                "resourceLineage": [
+                    {
+                        "statement": "Data was collected in the field during the sample collection phase of the National Geochemical Survey of Australia project",
+                        "scope": {"level": "dataset"},
+                        "source": [
+                            {"description": "Source data not available."}
+                        ]
+                    }
+                ],
+                "metadataScope": [
+                    {"resourceScope": "dataset", "name": "dataset"}
+                ]
+            }
+        }
+    ]
+}

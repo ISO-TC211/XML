@@ -1,0 +1,1477 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/; edited by hand",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json",
+  "$defs": {
+    "Abstract_ConstraintUnion": {
+      "$anchor": "Abstract_ConstraintUnion",
+      "oneOf": [
+        {
+          "$ref": "#MD_Constraints"
+        },
+        {
+          "$ref": "#MD_LegalConstraints"
+        },
+        {
+          "$ref": "#MD_SecurityConstraints"
+        }
+      ]
+    },
+    "Abstract_DistributionUnion": {
+      "$anchor": "Abstract_DistributionUnion",
+      "$ref": "#MD_Distribution"
+    },
+    "Abstract_ExtentUnion": {
+      "$anchor": "Abstract_ExtentUnion",
+      "$ref": "#EX_Extent"
+    },
+    "Abstract_FormatUnion": {
+      "$anchor": "Abstract_FormatUnion",
+      "$ref": "#MD_Format"
+    },
+    "Abstract_LineageInformationUnion": {
+      "$anchor": "Abstract_LineageInformationUnion",
+      "$ref": "#LI_Lineage"
+    },
+    "Abstract_MaintenanceUnion": {
+      "$anchor": "Abstract_MaintenanceUnion",
+      "$ref": "#MD_MaintenanceInformation"
+    },
+    "Abstract_MetadataExtension": {
+      "$anchor": "Abstract_MetadataExtension",
+      "type": "object"
+    },
+    "Abstract_MetadataUnion": {
+      "$anchor": "Abstract_MetadataUnion",
+      "$ref": "#MD_Metadata"
+    },
+    "Abstract_ResourceDescriptionUnion": {
+      "$anchor": "Abstract_ResourceDescriptionUnion",
+      "$ref": "#MD_DataIdentification"
+    },
+    "Abstract_StandardOrderProcess": {
+      "$anchor": "Abstract_StandardOrderProcess",
+      "type": "object"
+    },
+    "CI_Address": {
+      "$anchor": "CI_Address",
+      "type": "object",
+      "properties": {
+        "deliveryPoint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "city": {
+          "type": "string"
+        },
+        "administrativeArea": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "electronicMailAddress": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "CI_Citation": {
+      "$anchor": "CI_Citation",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "alternateTitle": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "date": {
+          "$ref": "#CI_Date"
+        },
+        "edition": {
+          "type": "string"
+        },
+        "editionDate": {
+          "$ref": "#DateOrDateTime"
+        },
+        "identifier": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Identifier"
+          },
+          "uniqueItems": true
+        },
+        "citedResponsibleParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        },
+        "presentationForm": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_PresentationFormCode"
+          },
+          "uniqueItems": true
+        },
+        "series": {
+          "$ref": "#CI_Series"
+        },
+        "otherCitationDetails": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "ISBN": {
+          "type": "string"
+        },
+        "ISSN": {
+          "type": "string"
+        },
+        "onlineResource": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_OnlineResource"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "title"
+      ]
+    },
+    "CI_Contact": {
+      "$anchor": "CI_Contact",
+      "type": "object",
+      "properties": {
+        "phone": {
+          "$ref": "#CI_Telephone"
+        },
+        "address": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Address"
+          },
+          "uniqueItems": true
+        },
+        "onlineResource": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_OnlineResource"
+          },
+          "uniqueItems": true
+        },
+        "hoursOfService": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "contactInstructions": {
+          "type": "string"
+        },
+        "contactType": {
+          "type": "string"
+        }
+      }
+    },
+    "CI_Date": {
+      "$anchor": "CI_Date",
+      "type": "object",
+      "$comment": "Could also use patternProperties with the values from the CI_DateTypeCode codelist",
+      "additionalProperties": {
+        "$ref": "#DateOrDateTime"
+      }
+    },
+    "DateOrDateTime": {
+      "$anchor": "DateOrDateTime",
+      "oneOf": [
+          {
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "string",
+            "description": "month and year",
+            "pattern": "^[0-9]{4}-[0-1][0-9]$"
+          },
+          {
+            "type": "string",
+            "description": "year",
+            "pattern": "^[0-9]{4}$"
+          }
+        ]
+    },
+    "CI_Individual": {
+      "$anchor": "CI_Individual",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "CI_Individual"
+        },
+        "name": {
+          "type": "string"
+        },
+        "contactInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Contact"
+          },
+          "uniqueItems": true
+        },
+        "partyIdentifier": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Identifier"
+          },
+          "uniqueItems": true
+        },
+        "positionName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "CI_OnLineFunctionCode": {
+      "$anchor": "CI_OnLineFunctionCode",
+      "type": "string"
+    },
+    "CI_OnlineResource": {
+      "$anchor": "CI_OnlineResource",
+      "type": "object",
+      "properties": {
+        "linkage": {
+          "type": "string"
+        },
+        "protocol": {
+          "type": "string"
+        },
+        "applicationProfile": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "function": {
+          "$ref": "#CI_OnLineFunctionCode"
+        },
+        "protocolRequest": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "linkage"
+      ]
+    },
+    "CI_Organisation": {
+      "$anchor": "CI_Organisation",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "CI_Organisation"
+        },
+        "name": {
+          "type": "string"
+        },
+        "contactInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Contact"
+          },
+          "uniqueItems": true
+        },
+        "partyIdentifier": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Identifier"
+          },
+          "uniqueItems": true
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Individual"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "CI_PartyUnion": {
+      "$anchor": "CI_PartyUnion",
+      "oneOf": [
+        {
+          "$ref": "#CI_Individual"
+        },
+        {
+          "$ref": "#CI_Organisation"
+        }
+      ]
+    },
+    "CI_PresentationFormCode": {
+      "$anchor": "CI_PresentationFormCode",
+      "type": "string"
+    },
+    "CI_Responsibility": {
+      "$anchor": "CI_Responsibility",
+      "type": "object",
+      "properties": {
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_PartyUnion"
+          },
+          "uniqueItems": true
+        },
+        "role": {
+          "$ref": "#CI_RoleCode"
+        },
+        "extent": {
+          "type": "array",
+          "items": {
+            "$ref": "#EX_Extent"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "role"
+      ]
+    },
+    "CI_RoleCode": {
+      "$anchor": "CI_RoleCode",
+      "type": "string"
+    },
+    "CI_Series": {
+      "$anchor": "CI_Series",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "issueIdentification": {
+          "type": "string"
+        },
+        "page": {
+          "type": "string"
+        }
+      }
+    },
+    "CI_Telephone": {
+      "$anchor": "CI_Telephone",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "CI_TelephoneTypeCode": {
+      "$anchor": "CI_TelephoneTypeCode",
+      "type": "string"
+    },
+    "CountryCode": {
+      "$anchor": "CountryCode",
+      "type": "string"
+    },
+    "DCPList": {
+      "$anchor": "DCPList",
+      "type": "string"
+    },
+    "DS_AssociationTypeCode": {
+      "$anchor": "DS_AssociationTypeCode",
+      "type": "string"
+    },
+    "DS_InitiativeTypeCode": {
+      "$anchor": "DS_InitiativeTypeCode",
+      "type": "string"
+    },
+    "EX_Extent": {
+      "$anchor": "EX_Extent",
+      "type": "object",
+      "properties": {
+        "geographicElement": {
+          "type": "array",
+          "items": {
+            "$ref": "#EX_GeographicExtentUnion"
+          },
+          "minItems": 1
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "EX_GeographicBoundingBox": {
+      "$anchor": "EX_GeographicBoundingBox",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "EX_GeographicBoundingBox"
+        },
+        "extentTypeCode": {
+          "type": "boolean",
+          "default": false
+        },
+        "westBoundLongitude": {
+          "type": "number"
+        },
+        "eastBoundLongitude": {
+          "type": "number"
+        },
+        "southBoundLatitude": {
+          "type": "number"
+        },
+        "northBoundLatitude": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "eastBoundLongitude",
+        "northBoundLatitude",
+        "southBoundLatitude",
+        "westBoundLongitude"
+      ]
+    },
+    "EX_GeographicDescription": {
+      "$anchor": "EX_GeographicDescription",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "EX_GeographicDescription"
+        },
+        "extentTypeCode": {
+          "type": "boolean",
+          "default": false
+        },
+        "geographicIdentifier": {
+          "$ref": "#MD_Identifier"
+        }
+      },
+      "required": [
+        "type",
+        "geographicIdentifier"
+      ]
+    },
+    "EX_GeographicExtentUnion": {
+      "$anchor": "EX_GeographicExtentUnion",
+      "oneOf": [
+        {
+          "$ref": "#EX_GeographicBoundingBox"
+        },
+        {
+          "$ref": "#EX_GeographicDescription"
+        }
+      ]
+    },
+    "LI_Lineage": {
+      "$anchor": "LI_Lineage",
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "array",
+          "items": {
+            "$ref": "#LI_Source"
+          },
+          "uniqueItems": true
+        },
+        "statement": {
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#MD_Scope"
+        },
+        "additionalDocumentation": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "LI_Source": {
+      "$anchor": "LI_Source",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "sourceReferenceSystem": {
+          "$ref": "#MD_ReferenceSystem"
+        },
+        "sourceCitation": {
+          "$ref": "#CI_Citation"
+        },
+        "sourceMetadata": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "scope": {
+          "$ref": "#MD_Scope"
+        }
+      }
+    },
+    "LanguageCode": {
+      "$anchor": "LanguageCode",
+      "type": "string"
+    },
+    "MD_CellGeometryCode": {
+      "$anchor": "MD_CellGeometryCode",
+      "type": "string"
+    },
+    "MD_CharacterSetCode": {
+      "$anchor": "MD_CharacterSetCode",
+      "type": "string"
+    },
+    "MD_ClassificationCode": {
+      "$anchor": "MD_ClassificationCode",
+      "type": "string"
+    },
+    "MD_Constraints": {
+      "$anchor": "MD_Constraints",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "MD_Constraints"
+        },
+        "useLimitation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "constraintApplicationScope": {
+          "$ref": "#MD_Scope"
+        },
+        "reference": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "responsibleParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "MD_ConstraintsUnion": {
+      "$anchor": "MD_ConstraintsUnion",
+      "oneOf": [
+        {
+          "$ref": "#MD_Constraints"
+        },
+        {
+          "$ref": "#MD_LegalConstraints"
+        },
+        {
+          "$ref": "#MD_SecurityConstraints"
+        }
+      ]
+    },
+    "MD_CoverageContentTypeCode": {
+      "$anchor": "MD_CoverageContentTypeCode",
+      "type": "string"
+    },
+    "MD_DataIdentification": {
+      "$anchor": "MD_DataIdentification",
+      "type": "object",
+      "properties": {
+        "citation": {
+          "$ref": "#CI_Citation"
+        },
+        "abstract": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "status": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_ProgressCode"
+          },
+          "uniqueItems": true
+        },
+        "pointOfContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        },
+        "spatialRepresentationType": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_SpatialRepresentationTypeCode"
+          },
+          "uniqueItems": true
+        },
+        "temporalResolution": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "duration"
+          },
+          "uniqueItems": true
+        },
+        "topicCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_TopicCategoryCode"
+          },
+          "uniqueItems": true
+        },
+        "extent": {
+          "type": "array",
+          "items": {
+            "$ref": "#EX_Extent"
+          },
+          "uniqueItems": true
+        },
+        "additionalDocumentation": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "processingLevel": {
+          "$ref": "#MD_Identifier"
+        },
+        "descriptiveKeywords": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Keywords"
+          },
+          "uniqueItems": true
+        },
+        "defaultLocale": {
+          "$ref": "#PT_Locale"
+        },
+        "otherLocale": {
+          "type": "array",
+          "items": {
+            "$ref": "#PT_Locale"
+          },
+          "uniqueItems": true
+        },
+        "environmentDescription": {
+          "type": "string"
+        },
+        "supplementalInformation": {
+          "type": "string"
+        },
+        "resourceFormat": {
+          "type": "array",
+          "items": {"$ref": "#MD_Format"},
+          "uniqueItems": true
+        },
+        "resourceMaintenance": {
+          "type": "array",
+          "items": {"$ref": "#MD_MaintenanceInformation"},
+          "uniqueItems": true
+        },
+        "resourceConstraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#Abstract_ConstraintUnion"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "abstract",
+        "citation"
+      ]
+    },
+    "MD_DatatypeCode": {
+      "$anchor": "MD_DatatypeCode",
+      "type": "string"
+    },
+    "MD_DigitalTransferOptions": {
+      "$anchor": "MD_DigitalTransferOptions",
+      "type": "object",
+      "properties": {
+        "unitsOfDistribution": {
+          "type": "string"
+        },
+        "transferSize": {
+          "type": "number"
+        },
+        "onLine": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_OnlineResource"
+          },
+          "uniqueItems": true
+        },
+        "offLine": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Medium"
+          },
+          "uniqueItems": true
+        },
+        "transferFrequency": {},
+        "distributionFormat": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Format"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "MD_DimensionNameTypeCode": {
+      "$anchor": "MD_DimensionNameTypeCode",
+      "type": "string"
+    },
+    "MD_Distribution": {
+      "$anchor": "MD_Distribution",
+      "type": "object",
+      "properties": {
+        "distributor": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Distributor"
+          },
+          "uniqueItems": true
+        },
+        "transferOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_DigitalTransferOptions"
+          },
+          "uniqueItems": true
+        },
+        "distributionFormat": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Format"
+          },
+          "uniqueItems": true
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "MD_Distributor": {
+      "$anchor": "MD_Distributor",
+      "type": "object",
+      "properties": {
+        "distributorFormat": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Format"
+          },
+          "uniqueItems": true
+        },
+        "distributorTransferOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_DigitalTransferOptions"
+          },
+          "uniqueItems": true
+        },
+        "distributorContact": {
+          "$ref": "#CI_Responsibility"
+        }
+      },
+      "required": [
+        "distributorContact"
+      ]
+    },
+    "MD_Format": {
+      "$anchor": "MD_Format",
+      "type": "object",
+      "properties": {
+        "formatDistributor": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Distributor"
+          },
+          "uniqueItems": true
+        },
+        "formatSpecificationCitation": {
+          "$ref": "#CI_Citation"
+        },
+        "amendmentNumber": {
+          "type": "string"
+        },
+        "fileDecompressionTechnique": {
+          "type": "string"
+        },
+        "medium": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Medium"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "formatSpecificationCitation"
+      ]
+    },
+    "MD_GeometricObjectTypeCode": {
+      "$anchor": "MD_GeometricObjectTypeCode",
+      "type": "string"
+    },
+    "MD_IdentificationUnion": {
+      "$anchor": "MD_IdentificationUnion",
+      "$ref": "#MD_DataIdentification"
+    },
+    "MD_Identifier": {
+      "$anchor": "MD_Identifier",
+      "type": "object",
+      "properties": {
+        "authority": {
+          "$ref": "#CI_Citation"
+        },
+        "code": {
+          "type": "string"
+        },
+        "codeSpace": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "MD_ImagingConditionCode": {
+      "$anchor": "MD_ImagingConditionCode",
+      "type": "string"
+    },
+    "MD_KeywordTypeCode": {
+      "$anchor": "MD_KeywordTypeCode",
+      "type": "string"
+    },
+    "MD_Keywords": {
+      "$anchor": "MD_Keywords",
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "type": {
+          "$ref": "#MD_KeywordTypeCode"
+        },
+        "thesaurusName": {
+          "$ref": "#CI_Citation"
+        }
+      },
+      "required": [
+        "keyword"
+      ]
+    },
+    "MD_LegalConstraints": {
+      "$anchor": "MD_LegalConstraints",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "MD_LegalConstraints"
+        },
+        "useLimitation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "constraintApplicationScope": {
+          "$ref": "#MD_Scope"
+        },
+        "reference": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "responsibleParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        },
+        "accessConstraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_RestrictionCode"
+          },
+          "uniqueItems": true
+        },
+        "useConstraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_RestrictionCode"
+          },
+          "uniqueItems": true
+        },
+        "otherConstraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    "MD_MaintenanceFrequencyCode": {
+      "$anchor": "MD_MaintenanceFrequencyCode",
+      "type": "string"
+    },
+    "MD_MaintenanceInformation": {
+      "$anchor": "MD_MaintenanceInformation",
+      "type": "object",
+      "properties": {
+        "maintenanceAndUpdateFrequency": {
+          "$ref": "#MD_MaintenanceFrequencyCode"
+        },
+        "maintenanceDate": {
+          "$ref": "#CI_Date"
+        },
+        "userDefinedMaintenanceFrequency": {},
+        "maintenanceScope": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Scope"
+          },
+          "uniqueItems": true
+        },
+        "maintenanceNote": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "contact": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "MD_Medium": {
+      "$anchor": "MD_Medium",
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#CI_Citation"
+        },
+        "density": {
+          "type": "integer"
+        },
+        "densityUnits": {
+          "type": "string"
+        },
+        "volumes": {
+          "type": "integer"
+        },
+        "mediumFormat": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_MediumFormatCode"
+          },
+          "uniqueItems": true
+        },
+        "mediumNote": {
+          "type": "string"
+        },
+        "identifier": {
+          "$ref": "#MD_Identifier"
+        }
+      }
+    },
+    "MD_MediumFormatCode": {
+      "$anchor": "MD_MediumFormatCode",
+      "type": "string"
+    },
+    "MD_Metadata": {
+      "$anchor": "MD_Metadata",
+      "type": "object",
+      "properties": {
+        "metadataConstraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#Abstract_ConstraintUnion"
+          },
+          "uniqueItems": true
+        },
+        "resourceLineage": {
+          "type": "array",
+          "items": {
+            "$ref": "#LI_Lineage"
+          },
+          "uniqueItems": true
+        },
+        "distributionInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_Distribution"
+          },
+          "uniqueItems": true
+        },
+        "identificationInfo": {
+          "$ref": "#MD_IdentificationUnion"
+        },
+        "metadataMaintenance": {
+          "$ref": "#MD_MaintenanceInformation"
+        },
+        "metadataScope": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_MetadataScope"
+          },
+          "uniqueItems": true
+        },
+        "dataQualityInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "https://schemas.isotc211.org/json/19157/-1/dqc/1.0.0/dqc.json#DataQuality"
+          },
+          "uniqueItems": true
+        },
+        "metadataIdentifier": {
+          "$ref": "#MD_Identifier"
+        },
+        "defaultLocale": {
+          "$ref": "#PT_Locale"
+        },
+        "parentMetadata": {
+          "$ref": "#CI_Citation"
+        },
+        "contact": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        },
+        "dateInfo": {
+          "$ref": "#CI_Date"
+        },
+        "metadataStandard": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "metadataProfile": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "alternativeMetadataReference": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "otherLocale": {
+          "type": "array",
+          "items": {
+            "$ref": "#PT_Locale"
+          },
+          "uniqueItems": true
+        },
+        "metadataLinkage": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_OnlineResource"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contact",
+        "dateInfo"
+      ]
+    },
+    "MD_MetadataScope": {
+      "$anchor": "MD_MetadataScope",
+      "type": "object",
+      "properties": {
+        "resourceScope": {
+          "$ref": "#MD_ScopeCode"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceScope"
+      ]
+    },
+    "MD_ObligationCode": {
+      "$anchor": "MD_ObligationCode",
+      "type": "string",
+      "enum": [
+        "mandatory",
+        "optional",
+        "conditional"
+      ]
+    },
+    "MD_ProgressCode": {
+      "$anchor": "MD_ProgressCode",
+      "type": "string"
+    },
+    "MD_ReferenceSystem": {
+      "$anchor": "MD_ReferenceSystem",
+      "type": "object",
+      "properties": {
+        "referenceSystemIdentifier": {
+          "$ref": "#MD_Identifier"
+        },
+        "crs": {
+           "type": "string",
+           "format": "uri"
+        },
+        "coordinateEpoch": {"type": "number"},
+        "referenceSystemType": {
+          "$ref": "#MD_ReferenceSystemTypeCode"
+        }
+      }
+    },
+    "MD_ReferenceSystemTypeCode": {
+      "$anchor": "MD_ReferenceSystemTypeCode",
+      "type": "string"
+    },
+    "MD_RepresentativeFraction": {
+      "$anchor": "MD_RepresentativeFraction",
+      "type": "object",
+      "properties": {
+        "denominator": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "denominator"
+      ]
+    },
+    "MD_RestrictionCode": {
+      "$anchor": "MD_RestrictionCode",
+      "type": "string"
+    },
+    "MD_Scope": {
+      "$anchor": "MD_Scope",
+      "type": "object",
+      "properties": {
+        "level": {
+          "$ref": "#MD_ScopeCode"
+        },
+        "extent": {
+          "type": "array",
+          "items": {
+            "$ref": "#EX_Extent"
+          },
+          "uniqueItems": true
+        },
+        "levelDescription": {
+          "type": "array",
+          "items": {
+            "$ref": "#MD_ScopeDescription"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "level"
+      ]
+    },
+    "MD_ScopeCode": {
+      "$anchor": "MD_ScopeCode",
+      "type": "string"
+    },
+    "MD_ScopeDescription": {
+      "$anchor": "MD_ScopeDescription",
+      "type": "object",
+      "properties": {
+        "attributes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "featureInstances": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "attributeInstances": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "dataset": {
+          "type": "string"
+        },
+        "other": {
+          "type": "string"
+        }
+      },
+      "minProperties": 1,
+      "maxProperties": 1
+    },
+    "MD_SecurityConstraints": {
+      "$anchor": "MD_SecurityConstraints",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "MD_SecurityConstraints"
+        },
+        "useLimitation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "constraintApplicationScope": {
+          "$ref": "#MD_Scope"
+        },
+        "reference": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "responsibleParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        },
+        "classification": {
+          "$ref": "#MD_ClassificationCode"
+        },
+        "userNote": {
+          "type": "string"
+        },
+        "classificationSystem": {
+          "type": "string"
+        },
+        "handlingDescription": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "classification"
+      ]
+    },
+    "MD_SpatialRepresentationTypeCode": {
+      "$anchor": "MD_SpatialRepresentationTypeCode",
+      "type": "string"
+    },
+    "MD_TopicCategoryCode": {
+      "$anchor": "MD_TopicCategoryCode",
+      "type": "string",
+      "enum": [
+        "farming",
+        "biota",
+        "boundaries",
+        "climatologyMeteorologyAtmosphere",
+        "economy",
+        "elevation",
+        "environment",
+        "geoscientificInformation",
+        "health",
+        "imageryBaseMapsEarthCover",
+        "intelligenceMilitary",
+        "inlandWaters",
+        "location",
+        "oceans",
+        "planningCadastre",
+        "society",
+        "structure",
+        "transportation",
+        "utilitiesCommunication",
+        "extraTerrestrial",
+        "disaster"
+      ]
+    },
+    "MD_TopologyLevelCode": {
+      "$anchor": "MD_TopologyLevelCode",
+      "type": "string"
+    },
+    "MD_Usage": {
+      "$anchor": "MD_Usage",
+      "type": "object",
+      "properties": {
+        "specificUsage": {
+          "type": "string"
+        },
+        "usageDateTime": {
+          "type": "array",
+          "items": {"$ref": "#InstantOrInterval"},
+          "uniqueItems": true
+        },
+        "userDeterminedLimitations": {
+          "type": "string"
+        },
+        "userContactInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Responsibility"
+          },
+          "uniqueItems": true
+        },
+        "response": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "additionalDocumentation": {
+          "type": "array",
+          "items": {
+            "$ref": "#CI_Citation"
+          },
+          "uniqueItems": true
+        },
+        "identifiedIssues": {
+          "$ref": "#CI_Citation"
+        }
+      },
+      "required": [
+        "specificUsage"
+      ]
+    },
+    
+    "InstantOrInterval": {
+    "$anchor": "InstantOrInterval",
+    "oneOf": [ {"$ref": "#DateOrDateTime"}, {"$ref": "#Interval"} ]
+  },
+  "Interval": {
+    "$anchor": "Interval",
+    "type": "array",
+    "minItems": 2,
+    "maxItems": 2,
+    "items": {
+      "oneOf": [ {"$ref": "#DateOrDateTime"}, {"const": ".."} ]
+    }
+  },
+    
+    "PT_Locale": {
+      "$anchor": "PT_Locale",
+      "type": "object",
+      "properties": {
+        "language": {
+          "$ref": "#LanguageCode"
+        },
+        "country": {
+          "$ref": "#CountryCode"
+        },
+        "characterEncoding": {
+          "$ref": "#MD_CharacterSetCode"
+        }
+      },
+      "required": [
+        "characterEncoding",
+        "language"
+      ]
+    },
+    "SV_CouplingType": {
+      "$anchor": "SV_CouplingType",
+      "type": "string"
+    },
+    "SV_ParameterDirection": {
+      "$anchor": "SV_ParameterDirection",
+      "type": "string",
+      "enum": [
+        "in",
+        "out",
+        "in/out"
+      ]
+    }
+   }
+}

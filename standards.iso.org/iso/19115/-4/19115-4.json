@@ -1,0 +1,79 @@
+{
+  "$comment": "ISO/TR 19115-4 describes an ECMA-404 JSON implementation of ISO 19115-1 and ISO 19157-1 as a proof of concept. The resulting JSON encoding is not a formal JSON specification but is intended to demonstrate the feasibility of the approach taken and the implied encoding principles. In this version, only a subset of the content from both ISO 19115-1 and ISO 19157-1 is included. For more details, see ISO/TR 19115-4",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "conformsTo": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "required": [
+        "conformsTo"
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "$ref": "#MetadataRecords"
+        },
+        {
+          "$ref": "#MetadataRecord"
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "MetadataRecords": {
+      "$anchor": "MetadataRecords",
+      "type": "object",
+      "required": [
+        "type",
+        "features"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "FeatureCollection"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "#MetadataRecord"
+          }
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "MetadataRecord": {
+      "$anchor": "MetadataRecord",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "$ref": "https://schemas.isotc211.org/json/19115/-4/mdj/1.0.0/mdj.json#MD_Metadata"
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        {
+          "$ref": "https://geojson.org/schema/Feature.json"
+        }
+      ]
+    }
+  }
+}
