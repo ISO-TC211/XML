@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.opengis.net/cis/1.1/gml"
+    xmlns:cis="http://www.opengis.net/cis/1.2/gml" xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" version="1.2.0">
+    <annotation>
+        <appinfo>cisAll.xsd</appinfo>
+        <documentation>XML Schema for the ISO 19123-2 / OGC Coverage Implementation Schema (CIS).
+            Last updated: 2025-jun-06 </documentation>
+    </annotation>
+
+    <!-- ========================================================= -->
+    <!-- Includes and imports                                      -->
+    <!-- ========================================================= -->
+    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/coverage.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/grid.xsd"/>
+
+</schema>

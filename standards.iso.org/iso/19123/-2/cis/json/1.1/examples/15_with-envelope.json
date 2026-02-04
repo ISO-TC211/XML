@@ -1,0 +1,56 @@
+{
+  "id": "CIS_15",
+  "coverageStructure": "coverageByDomainAndRange",
+  "envelope": {
+    "srsName": "[EPSG:4326]",
+    "axes": [{ 
+      "axisLabel": "Lat",
+      "uomLabel": "deg",
+      "lowerBound": -80,
+      "upperBound": -70
+    },{
+      "axisLabel": "Long",
+      "uomLabel": "deg",
+      "lowerBound": 0,
+      "upperBound": 10
+    }]
+  },
+  "domainSet": {
+    "domainType": "generalGrid",
+    "srsName": "[EPSG:4326]",
+    "axisLabels": ["Lat", "Long"],
+    "uomLabels": ["deg", "deg"],
+    "axes": [{ 
+      "axisLabel": "Lat",
+      "uomLabel": "deg",
+      "axisType": "regularAxis",
+      "lowerBound": -80,
+      "upperBound": -70,
+      "resolution": 5
+    },{
+      "axisLabel": "Long",
+      "uomLabel": "deg",
+      "axisType": "regularAxis",
+      "lowerBound": 0,
+      "upperBound": 10,
+      "resolution": 5
+    }],
+    "gridLimits": [{ 
+      "axisLabel": "i",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{
+      "axisLabel": "j",
+      "lowerBound": 0,
+      "upperBound": 2
+    }]
+  },
+  "rangeSet": [1,2,3,4,5,6,7,8,9],  
+  "rangeType": { 
+    "field":[{ 
+      "name": "itemCount",
+      "definition": "integer",
+      "type": "Count"
+    }]
+  }  
+}

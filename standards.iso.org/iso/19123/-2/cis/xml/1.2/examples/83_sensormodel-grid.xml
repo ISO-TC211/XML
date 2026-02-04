@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example of a sensor grid (not a complete coverage)
+     using SensorML 2.0 snippet defines a 2D grid of a sensor model image through a list of inputs
+     consistent with the sensorModel and sensorInstance subelements above.
+     Last updated 2024-jul-11.
+-->
+
+<sml:inputs>
+  <sml:InputList>
+    <sml:input name="pixelGridCoordinates">
+      <swe:Vector referenceFrame="[OGC:Index2D]">
+        <swe:coordinate name="r">
+          <swe:Quantity definition="http://sensorml.com/def/property/ImageRowPosition">
+            <swe:label>Row Position</swe:label>
+              <swe:uom xlink:href="http://sensorml.com/def/property/pixel"/>
+          </swe:Quantity>
+        </swe:coordinate>
+        <swe:coordinate name="c">
+          <swe:Quantity definition="http://sensorml.com/def/property/ImageColumnPosition">
+            <swe:label>Column Position</swe:label>
+              <swe:uom xlink:href="http://sensorml.com/def/property/pixel"/>
+          </swe:Quantity>
+        </swe:coordinate>
+      </swe:Vector>
+    </sml:input>
+  </sml:InputList>
+</sml:inputs>
+

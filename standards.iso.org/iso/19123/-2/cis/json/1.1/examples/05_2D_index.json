@@ -1,0 +1,31 @@
+{
+  "id": "CIS_05",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "srsName": "[OGC:Index2D]",
+    "axisabels": [ "i", "j" ],
+    "uomLabels": [ "1", "1" ],
+    "axes": [{ 
+      "axisLabel": "i",
+      "axisType": "index",
+      "uomLabel": "1",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{
+      "axisLabel": "j",
+      "axisType": "index",
+      "uomLabel": "1",
+      "lowerBound": 0,
+      "upperBound": 2
+    }]
+  },
+  "rangeSet": [ 1,2,3,4,5,6,7,8,9 ],
+  "rangeType": { 
+    "field":[{ 
+      "name": "itemCount",
+      "definition": "integer",
+      "type": "Count"
+    }]
+  }  
+}

@@ -1,0 +1,57 @@
+{
+  "id": "CIS_25",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "type": "GeneralGridCoverageType",
+    "srsName": "[EPSG:4326],[OGC:AnsiDate]",
+    "axisLabels": ["Lat", "Long", "date"],
+    "uomLabels": ["deg", "deg", "d"],
+    "axes": [{ 
+      "axisLabel": "Lat",
+      "uomLabel": "deg",
+      "axisType": "regular",
+      "lowerBound": 40,
+      "upperBound": 60,
+      "resolution": 10
+    },{
+      "axisLabel": "Long",
+      "uomLabel": "deg",
+      "axisType": "regular",
+      "lowerBound": -10,
+      "upperBound": 10,
+      "resolution": 10
+    },{
+      "axisLabel": "date",
+      "uomLabel": "d",
+      "axisType": "regular",
+      "lowerBound": "2015-12-01",
+      "upperBound": "2015-12-03",
+      "resolution": "P1d"
+    }],
+    "gridLimits": {
+      "axisLabels": ["i", "j", "k"],
+      "axes": [{ 
+        "axisLabel": "i",
+        "lowerBound": 0,
+        "upperBound": 2
+      },{
+        "axisLabel": "j",
+        "lowerBound": 0,
+        "upperBound": 2
+      },{
+        "axisLabel": "k",
+        "lowerBound": 0,
+        "upperBound": 2
+      }]
+    }
+  },
+  "rangeSet": [1,2,3,4,5,6,7,8,9, 10,11,12,13,14,15,16,17,18, 19,20,21,22,23,24,25,26,27],
+  "rangeType": { 
+    "field":[{ 
+      "name": "itemCount",
+      "definition": "integer",
+      "type": "Count"
+    }]
+  }  
+}

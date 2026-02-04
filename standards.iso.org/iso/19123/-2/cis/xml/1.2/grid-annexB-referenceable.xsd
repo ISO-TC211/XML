@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema
+  targetNamespace="http://www.opengis.net/gmlcov/1.0"
+  xmlns:cis10="http://www.opengis.net/gmlcov/1.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:sml="http://www.opengis.net/sensorml/2.1"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+  version="1.0.1">
+
+  <annotation>
+    <appinfo>grid-annexB-referenceable.xsd</appinfo>
+    <documentation>Legacy ReferenceableGrid variants of ISO 19123-2 Coverage Implementation Schema Annex B.
+	It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
+    </documentation>
+  </annotation>
+
+  <!-- ============================= -->
+  <!-- Includes and imports      -->
+  <!-- ============================= -->
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+  <import namespace="http://www.opengis.net/sensorml/2.1" schemaLocation="https://schemas.opengis.net/sensorML/2.1/sensorML.xsd"/>
+  <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/cis-annexB-All.xsd"/>
+
+  <!-- ============================= -->
+  <!-- Body of this schema       -->
+  <!-- ============================= -->
+  <element name="gridCRS" type="cis10:GridCRSPropertyType" />
+  <complexType name="GridCRSPropertyType">
+    <sequence maxOccurs="unbounded">
+    <element ref="gml:AbstractCRS"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+  </complexType>
+  <!-- =========================================================== -->
+  <element name="ReferenceableGridBySensorModel" type="cis10:ReferenceableGridBySensorModelType" substitutionGroup="cis10:AbstractReferenceableGrid"/>
+  <complexType name="ReferenceableGridBySensorModelType">
+    <complexContent>
+    <extension base="cis10:AbstractReferenceableGridType">
+      <sequence>
+      <element ref="cis10:gridCRS" minOccurs="0" />
+      <element name="sensorModel" type="sml:AbstractProcessPropertyType" maxOccurs="unbounded"/>
+      <element name="sensorInstance" type="sml:AbstractProcessPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+      </sequence>
+    </extension>
+    </complexContent>
+  </complexType>
+  <!-- =========================================================== -->
+  <element name="ReferenceableGridByArray" type="cis10:ReferenceableGridByArrayType" substitutionGroup="cis10:AbstractReferenceableGrid" />
+  <complexType name="ReferenceableGridByArrayType">
+    <complexContent>
+    <extension base="cis10:AbstractReferenceableGridType">
+      <sequence>
+      <group ref="gml:geometricPositionListGroup" />
+      <element name="sequenceRule" type="gml:SequenceRuleType" />
+      </sequence>
+    </extension>
+    </complexContent>
+  </complexType>
+  <!-- =========================================================== -->
+  <element name="ReferenceableGridByVectors" type="cis10:ReferenceableGridByVectorsType" substitutionGroup="cis10:AbstractReferenceableGrid" />
+  <complexType name="ReferenceableGridByVectorsType">
+    <complexContent>
+    <extension base="cis10:AbstractReferenceableGridType">
+      <sequence>
+      <element name="origin" type="gml:PointPropertyType" />
+      <element name="generalGridAxis" type="cis10:GeneralGridAxisPropertyType" maxOccurs="unbounded"/>
+      </sequence>
+    </extension>
+    </complexContent>
+  </complexType>
+  <element name="GeneralGridAxis" type="cis10:GeneralGridAxisType" />
+  <complexType name="GeneralGridAxisType">
+    <sequence>
+    <element name="offsetVector"  type="gml:VectorType" />
+    <element name="coefficients"  type="gml:doubleList" />
+    <element name="gridAxesSpanned" type="gml:NCNameList" />
+    <element name="sequenceRule"  type="gml:SequenceRuleType" />
+    </sequence>
+  </complexType>
+  <complexType name="GeneralGridAxisPropertyType">
+    <sequence minOccurs="0">
+    <element ref="cis10:GeneralGridAxis" />
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup" />
+    <attributeGroup ref="gml:OwnershipAttributeGroup" />
+  </complexType>
+  <!-- =========================================================== -->
+  <element name="ReferenceableGridByTransformation" type="cis10:ReferenceableGridByTransformationType" substitutionGroup="cis10:AbstractReferenceableGrid" />
+  <complexType name="ReferenceableGridByTransformationType">
+    <complexContent>
+    <extension base="cis10:AbstractReferenceableGridType">
+      <sequence>
+      <element ref="cis10:gridCRS" minOccurs="0" />
+      <choice>
+        <element name="transformation"    type="gml:TransformationPropertyType" />
+        <element name="concatenatedOperation" type="gml:ConcatenatedOperationPropertyType" />
+      </choice>
+      </sequence>
+    </extension>
+    </complexContent>
+  </complexType>
+
+</schema>

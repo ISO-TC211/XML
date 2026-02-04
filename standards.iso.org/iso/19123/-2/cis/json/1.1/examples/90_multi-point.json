@@ -1,0 +1,55 @@
+{
+  "id": "CIS_90",
+  "coverageStructure": "coverageByDomainAndRange",
+  "envelope": {
+    "srsName": "[EPSG:4979]",
+    "axes": [{ 
+      "axisLabel": "x",
+      "uomLabel": "m",
+      "lowerBound": 456377.5,
+      "upperBound": 456377.7
+    },{
+      "axisLabel": "y",
+      "uomLabel": "m",
+      "lowerBound": 339866.8,
+      "upperBound": 339867.2
+    },{
+      "axisLabel": "h",
+      "uomLabel": "m",
+      "lowerBound": 52,
+      "upperBound": 53
+    }]
+  },
+  "domainSet":{
+    "axisType": "multiPoint",
+    "positions": [[456377.56257493998, 339867.24995001999, 53.953899579999998], [456377.50007493998, 339867.21865002002, 53.960899580000003], [456377.56257493998, 339867.21865002002, 53.958999579999997], [456377.50007493998, 339867.21865002002, 53.960899580000003]]
+  },
+  "rangeSet": [ "255,255,255", "0,0,0", "255,255,255", "0,0,0" ],
+  "rangeType": { 
+    "field": [{ 
+      "name": "red",
+      "definition": "integer",
+      "type": "Quantity",
+      "uom": "W.m-2.sr-1.nm-1",
+      "constraint": {
+        "interval": { "min": 0, "max": 255 }
+      }
+    },{ 
+      "name": "green",
+      "definition": "integer",
+      "type": "Quantity",
+      "uom": "W.m-2.sr-1.nm-1",
+      "constraint": {
+        "interval": { "min": 0, "max": 255 }
+      }
+    },{ 
+      "name": "blue",
+      "type": "Quantity",
+      "definition": "integer",
+      "uom": "W.m-2.sr-1.nm-1",
+      "constraint": {
+        "interval": { "min": 0, "max": 255 }
+      }
+    }]
+  }  
+}

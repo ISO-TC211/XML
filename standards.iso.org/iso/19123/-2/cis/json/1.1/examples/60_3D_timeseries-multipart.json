@@ -1,0 +1,52 @@
+{
+  "id": "CIS_60",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet":{
+    "domainType": "generalGrid",
+    "srsName": "[EPSG:4326],[OGC:AnsiDate]",
+    "axisLabels": ["Lat", "Long", "date"],
+    "uomLabels": ["deg", "deg", "d"],
+    "axes": [{ 
+      "axisLabel": "Lat",
+      "uomLabel": "deg",
+      "axisType": "regular",
+      "lowerBound": -80,
+      "upperBound": -70,
+      "resolution": 5
+    },{ 
+      "axisLabel": "Long",
+      "uomLabel": "deg",
+      "axisType": "regular",
+      "lowerBound": 0,
+      "upperBound": 10,
+      "resolution": 5
+    },{ 
+      "axisLabel": "date",
+      "uomLabel": "d",
+      "axisType": "irregular",
+      "positions": ["2015-12-01", "2015-12-02"]
+    }],
+    "gridLimits": [{ 
+      "axisLabel": "i",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{ 
+      "axisLabel": "j",
+      "lowerBound": 0,
+      "upperBound": 2
+    },{ 
+      "axisLabel": "k",
+      "lowerBound": 0,
+      "upperBound": 1
+    }]
+  },
+  "rangeSet": "https://www.acme.com/cis_001.nc",
+  "rangeType": { 
+    "field":[{ 
+      "name": "panchromatic",
+      "definition": "integer",
+      "type": "Quantity",
+      "uom": "W.m-2.sr-1.nm-1"
+    }]
+  }  
+}

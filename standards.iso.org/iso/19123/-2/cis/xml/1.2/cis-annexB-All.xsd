@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.opengis.net/gmlcov/1.0"
+    xmlns:cis10="http://www.opengis.net/cis/1.0" xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" version="1.0.1">
+    <annotation>
+        <appinfo>cis-annexB-All.xsd</appinfo>
+        <documentation>XML Schema for the ISO 19123-2 Coverage Implementation Schema (CIS) Annex B.
+        </documentation>
+    </annotation>
+
+    <!-- ========================================================= -->
+    <!-- Includes and imports                                      -->
+    <!-- ========================================================= -->
+    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/coverage-annexB.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/grid-annexB.xsd"/>
+    <include schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/grid-annexB-referenceable.xsd"/>
+
+</schema>
