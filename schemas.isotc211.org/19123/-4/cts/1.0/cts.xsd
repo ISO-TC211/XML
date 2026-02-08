@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://standards.iso.org/iso/19123/-4/cts/1.0"
+    xmlns:cts="http://standards.iso.org/iso/19123/-4/cts/1.0"
+    xmlns:cis="http://www.opengis.net/cis/1.1/gml" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    
+    <xs:import namespace="http://www.opengis.net/cis/1.1/gml" schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/coverage.xsd"/>
+    
+    <xs:element name="AlignedTiling">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="RegularTiling" type="cts:RegularTilingType"/>
+                <xs:element name="IrregularTiling" type="cts:IrregularTilingType"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="Non-alignedTiling">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="EnumeratedTiling" type="cts:EnumeratedTilingType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="AbstractTilingType" abstract="true">
+        <xs:sequence>
+            <xs:element name="origin">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="srsName" type="xs:anyURI" use="optional"/>
+                            <xs:attribute name="axisLabels" type="xs:string" use="optional"/>
+                            <xs:attribute name="uomLabel" type="xs:string" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="tilingBoundary" type="cis:EnvelopeByAxisType"/>
+            <xs:element name="TilingMetaData" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:any namespace="##any" processContents="lax" minOccurs="0"
+                            maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="identifier" type="xs:string" use="required"/>
+        <xs:attribute name="srsDimension" type="xs:integer" use="required"/>
+        <xs:attribute name="axisLabels" type="xs:string" use="required"/>
+        <xs:attribute name="uomLabel" type="xs:string" use="required"/>
+        <xs:attribute name="srsName" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="TilingAxisType">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="RegularTilingAxis" type="cts:RegularTilingAxisType"/>
+                <xs:element name="IrregularTilingAxis" type="cts:IrregularTilingAxisType"/>
+            </xs:choice>
+            <xs:element ref="cts:padding" minOccurs="0" maxOccurs="2"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="RegularTilingType">
+        <xs:complexContent>
+            <xs:extension base="cts:AbstractTilingType">
+                <xs:sequence>
+                    <xs:element name="TilingAxis" type="cts:TilingAxisType" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="IrregularTilingType">
+        <xs:complexContent>
+            <xs:extension base="cts:AbstractTilingType">
+                <xs:sequence>
+                    <xs:element name="TilingAxis" type="cts:TilingAxisType" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="EnumeratedTilingType">
+        <xs:sequence>
+            <xs:element name="tilingBoundary" type="cis:EnvelopeByAxisType"/>
+            <xs:element name="HyperrectangularTile" type="cts:HyperrectangularTileType"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="srsDimension" type="xs:integer" use="required"/>
+        <xs:attribute name="axisLabels" type="xs:string" use="required"/>
+        <xs:attribute name="uomLabel" type="xs:string" use="required"/>
+        <xs:attribute name="srsName" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="RegularTilingAxisType">
+        <xs:attribute name="axisLabel" type="xs:string" use="required"/>
+        <xs:attribute name="lowerBound" type="xs:string" use="required"/>
+        <xs:attribute name="upperBound" type="xs:string" use="required"/>
+        <xs:attribute name="uomLabel" type="xs:string" use="required"/>
+        <xs:attribute name="span" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="IrregularTilingAxisType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="axisLabel" type="xs:string" use="required"/>
+                <xs:attribute name="lowerBound" type="xs:string" use="required"/>
+                <xs:attribute name="upperBound" type="xs:string" use="required"/>
+                <xs:attribute name="uomLabel" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:element name="padding">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="uomLabel" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="HyperrectangularTileType">
+        <xs:sequence>
+            <xs:element name="tileBoundary" type="cis:EnvelopeByAxisType"/>
+        </xs:sequence>
+        <xs:attribute name="identifier" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+</xs:schema>

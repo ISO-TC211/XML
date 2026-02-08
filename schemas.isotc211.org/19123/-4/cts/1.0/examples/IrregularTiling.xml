@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cts:AlignedTiling 
+    xmlns:cts="http://standards.iso.org/iso/19123/-4/cts/1.0"
+    xmlns:cis="http://www.opengis.net/cis/1.1/gml">
+    
+    <cts:IrregularTiling 
+        identifier="id2" 
+        srsDimension="4" 
+        axisLabels="Lat Long h date"
+        uomLabel="deg deg m d" 
+        srsName="http://www.opengis.net/def/crs-compound?1=http://www.opengis.net/def/crs/EPSG/0/4979&amp;2=http://www.opengis.net/def/crs/OGC/0/AnsiDate">
+        
+        <cts:origin>4 72 10 2018-12-01</cts:origin>
+        
+        <cts:tilingBoundary
+            srsName="http://www.opengis.net/def/crs-compound?1=http://www.opengis.net/def/crs/EPSG/0/4979&amp;2=http://www.opengis.net/def/crs/OGC/0/AnsiDate"
+            axisLabels="Lat Long h date" 
+            srsDimension="4">
+            <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="4" upperBound="54"/>
+            <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="72" upperBound="140"/>
+            <cis:AxisExtent axisLabel="h" uomLabel="m" lowerBound="10" upperBound="100"/>
+            <cis:AxisExtent axisLabel="date" uomLabel="d" lowerBound="2018-12-01" upperBound="2018-12-30"/>
+        </cts:tilingBoundary>
+
+        <cts:TilingAxis>
+            <cts:RegularTilingAxis axisLabel="Lat" lowerBound="4" upperBound="52" uomLabel="deg" span="4"/>
+            <cts:padding uomLabel="deg">52 54</cts:padding>
+        </cts:TilingAxis>
+        
+        <cts:TilingAxis>
+            <cts:RegularTilingAxis axisLabel="Long" lowerBound="72" upperBound="138" uomLabel="deg" span="6"/>
+            <cts:padding uomLabel="deg">138 140</cts:padding>
+        </cts:TilingAxis>
+        
+        <cts:TilingAxis>
+            <cts:RegularTilingAxis axisLabel="h" lowerBound="10" upperBound="100" uomLabel="m" span="30"/>
+        </cts:TilingAxis>
+        
+        <cts:TilingAxis>
+            <cts:IrregularTilingAxis 
+                axisLabel="date" 
+                lowerBound="2018-12-01" 
+                upperBound="2018-12-30"
+                uomLabel="d">2018-12-01 2018-12-5 2018-12-22 2018-12-30</cts:IrregularTilingAxis>
+        </cts:TilingAxis>
+        
+    </cts:IrregularTiling>
+</cts:AlignedTiling>

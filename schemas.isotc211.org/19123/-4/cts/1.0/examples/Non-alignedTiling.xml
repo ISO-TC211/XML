@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cts:Non-alignedTiling xmlns:cts="http://standards.iso.org/iso/19123/-4/cts/1.0"
+    xmlns:cis="http://www.opengis.net/cis/1.1/gml">
+
+    <cts:EnumeratedTiling srsDimension="2" axisLabels="Lat Long" uomLabel="deg deg"
+        srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+
+        <cts:tilingBoundary srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326"
+            axisLabels="Lat Long" srsDimension="2">
+            <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-5" upperBound="60"/>
+            <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="40" upperBound="165"/>
+        </cts:tilingBoundary>
+
+        <cts:HyperrectangularTile identifier="1">
+            <cts:tileBoundary srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326"
+                axisLabels="Lat Long" srsDimension="2">
+                <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="40" upperBound="60"/>
+                <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="40" upperBound="115"/>
+
+            </cts:tileBoundary>
+        </cts:HyperrectangularTile>
+
+        <cts:HyperrectangularTile identifier="2">
+            <cts:tileBoundary srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326"
+                axisLabels="Lat Long" srsDimension="2">
+                <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-5" upperBound="40"/>
+                <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="40" upperBound="115"/>
+            </cts:tileBoundary>
+        </cts:HyperrectangularTile>
+
+        <cts:HyperrectangularTile identifier="3">
+            <cts:tileBoundary srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326"
+                axisLabels="Lat Long" srsDimension="2">
+                <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="15" upperBound="60"/>
+                <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="115" upperBound="140"/>
+
+            </cts:tileBoundary>
+        </cts:HyperrectangularTile>
+
+        <cts:HyperrectangularTile identifier="4">
+            <cts:tileBoundary srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326"
+                axisLabels="Lat Long" srsDimension="2">
+
+                <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-5" upperBound="15"/>
+                <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="115" upperBound="140"/>
+
+            </cts:tileBoundary>
+        </cts:HyperrectangularTile>
+
+        <cts:HyperrectangularTile identifier="5">
+            <cts:tileBoundary srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326"
+                axisLabels="Lat Long" srsDimension="2">
+
+                <cis:AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-5" upperBound="60"/>
+                <cis:AxisExtent axisLabel="Long" uomLabel="deg" lowerBound="140" upperBound="165"/>
+
+            </cts:tileBoundary>
+        </cts:HyperrectangularTile>
+
+    </cts:EnumeratedTiling>
+</cts:Non-alignedTiling>
