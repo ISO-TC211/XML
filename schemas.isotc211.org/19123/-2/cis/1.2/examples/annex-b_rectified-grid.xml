@@ -10,7 +10,7 @@
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.opengis.net/gmlcov/1.0 ../cis-annexB-All.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  xsi:schemaLocation="http://www.opengis.net/gmlcov/1.0 https://schemas.isotc211.org/schemas/19123/-2/cis/1.2/cis-annexB-All.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
   gml:id="CIS10_rectified">
 
   <gml:boundedBy>
