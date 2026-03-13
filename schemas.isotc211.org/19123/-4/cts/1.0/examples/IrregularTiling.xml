@@ -24,12 +24,12 @@
 
         <cts:TilingAxis>
             <cts:RegularTilingAxis axisLabel="Lat" lowerBound="4" upperBound="52" uomLabel="deg" span="4"/>
-            <cts:padding uomLabel="deg">52 54</cts:padding>
+            <cts:Padding uomLabel="deg">52 54</cts:Padding>
         </cts:TilingAxis>
         
         <cts:TilingAxis>
             <cts:RegularTilingAxis axisLabel="Long" lowerBound="72" upperBound="138" uomLabel="deg" span="6"/>
-            <cts:padding uomLabel="deg">138 140</cts:padding>
+            <cts:Padding uomLabel="deg">138 140</cts:Padding>
         </cts:TilingAxis>
         
         <cts:TilingAxis>

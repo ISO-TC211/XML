@@ -60,7 +60,7 @@
                 <xs:element name="RegularTilingAxis" type="cts:RegularTilingAxisType"/>
                 <xs:element name="IrregularTilingAxis" type="cts:IrregularTilingAxisType"/>
             </xs:choice>
-            <xs:element ref="cts:padding" minOccurs="0" maxOccurs="2"/>
+            <xs:element ref="cts:Padding" minOccurs="0" maxOccurs="2"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -115,7 +115,7 @@
         </xs:simpleContent>
     </xs:complexType>
     
-    <xs:element name="padding">
+    <xs:element name="Padding">
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
