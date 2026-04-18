@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Sample ReferenceableGridCoverage having a ReferenceableGridBySensorModel in its domain set.
-     The sensorModel of the referenceable grid element is set by xlink reference while the sensorInstance of the referenceable grid element is embedded SensorML 2.1. 
-     as defined in ISO 19123-2 Coverage Implementation Schema.
--->
-
 <cis10:ReferenceableGridCoverage
-  xmlns:cis10="http://www.opengis.net/gmlcov/1.0"
+  xmlns:cis10="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:swe="http://www.opengis.net/swe/2.0"    
-  xmlns:sml="http://www.opengis.net/sensorml/2.1"
   xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:sml="http://www.opengis.net/sensorml/2.1"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.opengis.net/gmlcov/1.0 ../cis-annexB-All.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd http://www.opengis.net/sensorml/2.1 https://schemas.opengis.net/sensorML/2.1/sensorML.xsd"
+  xsi:schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2 cis-annexB-All.xsd 
+                      http://www.opengis.net/swe/2.0 sweAll.xsd 
+                      http://www.opengis.net/gml/3.2 https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd 
+                      http://www.opengis.net/sensorml/2.1 http://schemas.opengis.net/sensorML/2.1/sensorML.xsd"
   gml:id="CIS_referenceable-grid-by-sensormodel_2">
-
+  
   <gml:domainSet>
     <cis10:ReferenceableGridBySensorModel gml:id="RefGrid_0" dimension="2" srsDimension="3">
       <gml:limits>
@@ -27,18 +25,18 @@
       <cis10:sensorModel xlink:href="https://www.sensorml.work/sensorML-2.1/examples/csmFrame.html"/>
       <cis10:sensorInstance> 
         <sml:SimpleProcess gml:id="myKCM-HD-camera"
-            xmlns:sml="http://www.opengis.net/sensorml/2.1"
-            xmlns:swe="http://www.opengis.net/swe/2.0"
-            xmlns:gml="http://www.opengis.net/gml/3.2"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xsi:schemaLocation="http://www.opengis.net/sensorml/2.1 https://schemas.opengis.net/sensorml/2.1/sensorML.xsd">
+          xmlns:sml="http://www.opengis.net/sensorml/2.1"
+          xmlns:swe="http://www.opengis.net/swe/2.0"
+          xmlns:gml="http://www.opengis.net/gml/3.2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xsi:schemaLocation="http://www.opengis.net/sensorml/2.1 http://schemas.opengis.net/sensorML/2.1/sensorML.xsd">
           <gml:description>
             An example of an instance of the Community Sensor Model for precise geolocation of the HD UAV-borne video KCM-HD camera
           </gml:description>
           <gml:identifier codeSpace="uid">urn:myDomain:swe:csm:KCM-HD</gml:identifier>
           <sml:typeOf xlink:title="urn:net:swe:process:csmFrameCamera2"
-                xlink:href="https://www.sensorml.work/sensorML-2.1/examples/csmFrame.html"/>
+            xlink:href="https://www.sensorml.work/sensorML-2.1/examples/csmFrame.html"/>
           <sml:configuration>
             <sml:Settings>
               <sml:setValue ref="parameters/csmParams/focalLength">51.5465</sml:setValue>
@@ -75,7 +73,7 @@
       </cis10:sensorInstance>
     </cis10:ReferenceableGridBySensorModel>
   </gml:domainSet>
-
+  
   <gml:rangeSet>
     <gml:File>
       <gml:rangeParameters/>
@@ -84,7 +82,7 @@
       <gml:mimeType>image/jp2</gml:mimeType>
     </gml:File>
   </gml:rangeSet>
-
+  
   <cis10:rangeType>
     <swe:DataRecord>
       <swe:field name="panchromatic">
@@ -95,5 +93,5 @@
       </swe:field>
     </swe:DataRecord>
   </cis10:rangeType>
-
+  
 </cis10:ReferenceableGridCoverage>

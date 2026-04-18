@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
-  targetNamespace="http://www.opengis.net/gmlcov/1.0"
-  xmlns:cis10="http://www.opengis.net/gmlcov/1.0"
+  targetNamespace="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
+  xmlns:cis10="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns="http://www.w3.org/2001/XMLSchema"
-  elementFormDefault="qualified" version="1.0.1">
+  elementFormDefault="qualified"
+  version="1.2.0">
 
   <annotation>
     <appinfo>coverage-annexB.xsd</appinfo>
-    <documentation>Coverage Implementation Schema (CIS).
+    <documentation>ISO 19123-2 Coverage Implementation Schema (CIS): RectifiedGridCoverage (as per OGC CIS 1.0.1).
+        It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
     </documentation>
   </annotation>
 
   <!-- ============================= -->
   <!-- Includes and imports      -->
   <!-- ============================= -->
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+  
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"/>
+  
+  <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="swe-record_components.xsd"/>
 
   <!-- ============================= -->
   <!-- Body of this schema       -->

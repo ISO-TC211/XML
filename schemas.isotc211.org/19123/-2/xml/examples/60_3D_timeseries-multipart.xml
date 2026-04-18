@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Sample 3D x/y/t grid coverage using a multipart reference
-     as defined in the ISO 19123-2 Coverage Implementation Schema.
--->
-
 <GeneralGridCoverage
-  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  xsi:schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2 cisAll.xsd 
+                      http://www.opengis.net/swe/2.0 sweAll.xsd 
+                      http://www.opengis.net/gml/3.2 https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"
   gml:id="CIS_60">
-
+  
   <DomainSet>
     <GeneralGrid srsName="[EPSG:4326],[OGC:AnsiDate]" axisLabels="Lat Lon date" uomLabels="deg deg d">
       <RegularAxis   axisLabel="Lat"  uomLabel="deg" lowerBound="-80" upperBound="-70" resolution="5"/>
@@ -22,9 +20,9 @@
       </IrregularAxis>
     </GeneralGrid>
   </DomainSet>
-
+  
   <RangeSet>
-      <FileReference>http://www.acme.com/cis_001.nc</FileReference>
+    <FileReference>http://www.acme.com/cis_001.nc</FileReference>
   </RangeSet>
   
   <RangeType>
@@ -36,6 +34,5 @@
       </swe:field>
     </swe:DataRecord>
   </RangeType>
-
+  
 </GeneralGridCoverage>
-

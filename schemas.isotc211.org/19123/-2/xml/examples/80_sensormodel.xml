@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Sample sensor model coverage
-     as defined in the ISO 19123-2 Coverage Implementation Schema.
--->
-
 <SensorModelCoverage
-  xmlns="http://www.opengis.net/cis/1.1/gml"
-  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:sml="http://www.opengis.net/sensorml/2.0"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd http://www.opengis.net/sensorml/2.1 https://schemas.opengis.net/sensorML/2.1/sensorML.xsd"
+  xsi:schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2 cisAll.xsd 
+                      http://www.opengis.net/swe/2.0 sweAll.xsd 
+                      http://www.opengis.net/gml/3.2 https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd 
+                      http://www.opengis.net/sensorml/2.0 https://schemas.opengis.net/sensorML/2.0/sensorML.xsd"
   gml:id="CIS_80">
   
-  <Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Long" srsDimension="2">
+  <Envelope srsName="https://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Long" srsDimension="2">
     <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-80" upperBound="-70"/>
     <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="0"   upperBound="10"/>  
   </Envelope>
   
   <DomainSet>
-    <GeneralGrid srsName="http://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Lon" uomLabels="deg deg">
+    <GeneralGrid srsName="https://www.opengis.net/def/crs/EPSG/0/4326" axisLabels="Lat Lon" uomLabels="deg deg">
       <TransformationBySensorModel axisLabels="Lat Lon" uomLabels="deg deg">
         <SensorModel xlink:href="https://www.sensorml.com/sensorML-2.0/examples/csmFrame.html"/>
         <SensorInstance xlink:href="https://www.sensorml.com/sensorML-2.0/examples/myHDCamera.html"/>
@@ -33,7 +32,7 @@
   </DomainSet>
   
   <RangeSet>
-    <FileReference>http://www.acme.com/cis_80.nc</FileReference>
+    <FileReference>http://www.acme.com/image.jp2</FileReference>
   </RangeSet>
   
   <RangeType>

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Sample general grid coverage with envelope
-     as defined in the ISO 19123-2 Coverage Implementation Schema.
--->
-
 <GeneralGridCoverage
-  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  xsi:schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2 cisAll.xsd 
+                      http://www.opengis.net/swe/2.0 sweAll.xsd 
+                      http://www.opengis.net/gml/3.2 https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"
   gml:id="CIS_15">
-
+  
   <Envelope srsName="[EPSG:4326]" axisLabels="Lat Lon">
     <AxisExtent axisLabel="Lat" uomLabel="deg" lowerBound="-80" upperBound="-70" />
     <AxisExtent axisLabel="Lon" uomLabel="deg" lowerBound="0"   upperBound="10" />  
   </Envelope>
-
+  
   <DomainSet>
     <GeneralGrid srsName="[EPSG:4326]" axisLabels="Lat Long" uomLabels="deg deg">
       <RegularAxis axisLabel="Lat" uomLabel="deg" lowerBound="-80" upperBound="-70" resolution="5"/>
       <RegularAxis axisLabel="Lon" uomLabel="deg" lowerBound="0"   upperBound="10"  resolution="5"/>
     </GeneralGrid>
   </DomainSet>
-
+  
   <RangeSet>
     <DataBlock>
       <V>1</V> <V>2</V> <V>3</V>
@@ -31,7 +29,7 @@
       <V>7</V> <V>8</V> <V>9</V>
     </DataBlock>
   </RangeSet>
-
+  
   <RangeType>
     <swe:DataRecord>
       <swe:field name="grayscale">
@@ -41,6 +39,5 @@
       </swe:field>
     </swe:DataRecord>
   </RangeType>
-
+  
 </GeneralGridCoverage>
-

@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Example using ReferenceableGridByArray
-     as defined in ISO 19123-2 Coverage Implementation Schema.
--->
-
 <cis10:ReferenceableGridCoverage
-  xmlns:cis10="http://www.opengis.net/gmlcov/1.0"
-  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:cis10="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="
-  http://www.opengis.net/gmlcov/1.0 ../cis-annexB-All.xsd 
-  http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  xsi:schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2 cis-annexB-All.xsd 
+  http://www.opengis.net/swe/2.0 sweAll.xsd 
+  http://www.opengis.net/gml/3.2 https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"
   gml:id="CISreferenceable_grid_by_array">
-
+  
   <gml:domainSet>
-    <cis10:ReferenceableGridByArray dimension="2">
+    <cis10:ReferenceableGridByArray gml:id="RefGrid_array_1" dimension="2">
       <gml:limits>
         <gml:GridEnvelope>
           <gml:low>0 0</gml:low>
@@ -35,7 +31,7 @@
       <cis10:sequenceRule axisOrder="+1 +2">Linear</cis10:sequenceRule>
     </cis10:ReferenceableGridByArray>
   </gml:domainSet>
-
+  
   <gml:rangeSet>
     <gml:File>
       <gml:rangeParameters></gml:rangeParameters>
@@ -43,7 +39,7 @@
       <gml:fileStructure>image/tiff</gml:fileStructure>
     </gml:File>
   </gml:rangeSet> 
-
+  
   <cis10:rangeType>
     <swe:DataRecord>
       <swe:field name="panchromatic">
@@ -54,5 +50,5 @@
       </swe:field>
     </swe:DataRecord>
   </cis10:rangeType>
-
+  
 </cis10:ReferenceableGridCoverage>

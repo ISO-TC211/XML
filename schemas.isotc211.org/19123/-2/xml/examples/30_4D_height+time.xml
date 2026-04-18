@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Sample general-grid coverage with 2 regular and 2 irregular axes
-     as defined in the ISO 19123-2 Coverage Implementation Schema.
--->
-
 <GeneralGridCoverage
-  xmlns="http://www.opengis.net/cis/1.1/gml"
+  xmlns="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:swe="http://www.opengis.net/swe/2.0"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/cis/1.1/gml ../cisAll.xsd http://www.opengis.net/gml/3.2 https://schemas.opengis.net/gml/3.2.1/gml.xsd http://www.opengis.net/swe/2.0 https://schemas.opengis.net/sweCommon/2.0/swe.xsd"
+  xsi:schemaLocation="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2 cisAll.xsd 
+                      http://www.opengis.net/swe/2.0 sweAll.xsd 
+                      http://www.opengis.net/gml/3.2 https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"
   gml:id="CIS_30">
-
+  
   <DomainSet>
     <GeneralGrid srsName="[EPSG:4979],[OGC:AnsiDate]" axisLabels="Lat Lon h date" uomLabels="deg deg m d">
       <RegularAxis   axisLabel="Lat" uomLabel="deg" lowerBound="40"  upperBound="60" resolution="10"/>
@@ -32,16 +30,16 @@
       </GridLimits>
     </GeneralGrid>
   </DomainSet>
-
+  
   <RangeSet>
     <DataBlock>
-         <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
-         <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
-         <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
-         <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
+      <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
+      <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
+      <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
+      <V>01</V> <V>02</V> <V>03</V> <V>04</V> <V>05</V> <V>06</V> <V>07</V> <V>08</V> <V>09</V>
     </DataBlock>
   </RangeSet>
-
+  
   <RangeType>
     <swe:DataRecord>
       <swe:field name="panchromatic">
@@ -51,6 +49,5 @@
       </swe:field>
     </swe:DataRecord>
   </RangeType>
-
+  
 </GeneralGridCoverage>
-

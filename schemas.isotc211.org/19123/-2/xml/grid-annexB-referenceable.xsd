@@ -1,107 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <schema
-  targetNamespace="http://www.opengis.net/gmlcov/1.0"
-  xmlns:cis10="http://www.opengis.net/gmlcov/1.0"
+  targetNamespace="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2" 
+  xmlns:cis10="https://schemas.isotc211.org/schemas/19123/-2/cis/1.2"
   xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:sml="http://www.opengis.net/sensorml/2.1"
-  xmlns:swe="http://www.opengis.net/swe/2.0"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
-  version="1.0.1">
+  version="1.2.0"
+  xml:lang="en">
 
   <annotation>
     <appinfo>grid-annexB-referenceable.xsd</appinfo>
-    <documentation>Legacy ReferenceableGrid variants of ISO 19123-2 Coverage Implementation Schema Annex B.
-	It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
-    </documentation>
+    <documentation>ISO 19123-2 Coverage Implementation Schema (CIS) ReferenceableGridCoverage, based on the OGC Referenceable Grid Coverage Extension 1.0.1 (schema locations have been adjusted).
+It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
+</documentation>
   </annotation>
 
-  <!-- ============================= -->
-  <!-- Includes and imports      -->
-  <!-- ============================= -->
-  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="http://www.opengis.net/swe/2.0" schemaLocation="https://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
-  <import namespace="http://www.opengis.net/sensorml/2.1" schemaLocation="https://schemas.opengis.net/sensorML/2.1/sensorML.xsd"/>
-  <include schemaLocation="cis-annexB-All.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"/>
 
-  <!-- ============================= -->
-  <!-- Body of this schema       -->
-  <!-- ============================= -->
-  <element name="gridCRS" type="cis10:GridCRSPropertyType" />
-  <complexType name="GridCRSPropertyType">
-    <sequence maxOccurs="unbounded">
-    <element ref="gml:AbstractCRS"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-  </complexType>
-  <!-- =========================================================== -->
-  <element name="ReferenceableGridBySensorModel" type="cis10:ReferenceableGridBySensorModelType" substitutionGroup="cis10:AbstractReferenceableGrid"/>
-  <complexType name="ReferenceableGridBySensorModelType">
+  <element name="AbstractReferenceableGrid" type="cis10:AbstractReferenceableGridType" abstract="true" substitutionGroup="gml:Grid">
+    <annotation>
+      <documentation>AbstractReferenceableGrid is an encoding of CV_ReferenceableGrid 
+in ISO 19123. AbstractReferenceableGrid is the head of a substitution group that may include multiple concrete implementations.
+A referenceable grid is a grid associated with a transformation that can be used to convert grid coordinate values to values of coordinates referenced to an external coordinate reference system [ISO 19123].
+The transformation between grid coordinates and 'external' coordinates is usually non-affine, and may take different forms.
+It may be described analytically (e.g., through parametrised mathematical image rectification models);
+or it may provided in a table, for instance, relating the grid points to coordinates in the external coordinate reference system [ISO 19123, §8.2.1].
+The inherited attribute group gml:SRSReferenceGroup shall link the referenceable grid to the external coordinate reference system to which it is referenceable.
+</documentation>
+      <documentation>This element and its type are copied from approved Change Request 07-112r3, which adds them to GML 3.2.1.
+</documentation>
+    </annotation>
+  </element>
+
+  <complexType name="AbstractReferenceableGridType" abstract="true">
     <complexContent>
-    <extension base="cis10:AbstractReferenceableGridType">
-      <sequence>
-      <element ref="cis10:gridCRS" minOccurs="0" />
-      <element name="sensorModel" type="sml:AbstractProcessPropertyType" maxOccurs="unbounded"/>
-      <element name="sensorInstance" type="sml:AbstractProcessPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-      </sequence>
-    </extension>
+      <extension base="gml:GridType"/>
     </complexContent>
   </complexType>
-  <!-- =========================================================== -->
-  <element name="ReferenceableGridByArray" type="cis10:ReferenceableGridByArrayType" substitutionGroup="cis10:AbstractReferenceableGrid" />
-  <complexType name="ReferenceableGridByArrayType">
-    <complexContent>
-    <extension base="cis10:AbstractReferenceableGridType">
-      <sequence>
-      <group ref="gml:geometricPositionListGroup" />
-      <element name="sequenceRule" type="gml:SequenceRuleType" />
-      </sequence>
-    </extension>
-    </complexContent>
-  </complexType>
-  <!-- =========================================================== -->
-  <element name="ReferenceableGridByVectors" type="cis10:ReferenceableGridByVectorsType" substitutionGroup="cis10:AbstractReferenceableGrid" />
-  <complexType name="ReferenceableGridByVectorsType">
-    <complexContent>
-    <extension base="cis10:AbstractReferenceableGridType">
-      <sequence>
-      <element name="origin" type="gml:PointPropertyType" />
-      <element name="generalGridAxis" type="cis10:GeneralGridAxisPropertyType" maxOccurs="unbounded"/>
-      </sequence>
-    </extension>
-    </complexContent>
-  </complexType>
-  <element name="GeneralGridAxis" type="cis10:GeneralGridAxisType" />
-  <complexType name="GeneralGridAxisType">
+
+  <element name="referenceableGridProperty" type="cis10:ReferenceableGridPropertyType">
+    <annotation>
+      <documentation>This element and its type are copied from approved Change Request 07-112r3, which adds them to GML 3.2.1.
+</documentation>
+    </annotation>
+  </element>
+
+  <complexType name="ReferenceableGridPropertyType">
     <sequence>
-    <element name="offsetVector"  type="gml:VectorType" />
-    <element name="coefficients"  type="gml:doubleList" />
-    <element name="gridAxesSpanned" type="gml:NCNameList" />
-    <element name="sequenceRule"  type="gml:SequenceRuleType" />
+      <element ref="cis10:AbstractReferenceableGrid"/>
     </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
-  <complexType name="GeneralGridAxisPropertyType">
-    <sequence minOccurs="0">
-    <element ref="cis10:GeneralGridAxis" />
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup" />
-    <attributeGroup ref="gml:OwnershipAttributeGroup" />
-  </complexType>
-  <!-- =========================================================== -->
-  <element name="ReferenceableGridByTransformation" type="cis10:ReferenceableGridByTransformationType" substitutionGroup="cis10:AbstractReferenceableGrid" />
-  <complexType name="ReferenceableGridByTransformationType">
+
+  <element name="ParameterValue" type="cis10:ParameterValueType" substitutionGroup="gml:AbstractGeneralParameterValue">
+    <annotation>
+      <documentation>Extends gml:ParameterValue to also allow values that are a gml:Geometry or a gml:vector.
+</documentation>
+      <documentation>This element and its type are copied from  Change Request 09-091r1, which adds them to GML 3.2.1.
+</documentation>
+    </annotation>
+  </element>
+
+  <complexType name="ParameterValueType">
     <complexContent>
-    <extension base="cis10:AbstractReferenceableGridType">
-      <sequence>
-      <element ref="cis10:gridCRS" minOccurs="0" />
-      <choice>
-        <element name="transformation"    type="gml:TransformationPropertyType" />
-        <element name="concatenatedOperation" type="gml:ConcatenatedOperationPropertyType" />
-      </choice>
-      </sequence>
-    </extension>
+      <extension base="gml:AbstractGeneralParameterValueType">
+        <sequence>
+          <choice>
+            <element ref="gml:value"/>
+            <element ref="gml:dmsAngleValue"/>
+            <element ref="gml:stringValue"/>
+            <element ref="gml:integerValue"/>
+            <element ref="gml:booleanValue"/>
+            <element ref="gml:valueList"/>
+            <element ref="gml:integerValueList"/>
+            <element ref="gml:valueFile"/>
+            <element ref="cis10:geometryValue"/>
+            <element ref="cis10:vectorValue"/>
+          </choice>
+          <element ref="gml:operationParameter"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="geometryValue" type="gml:GeometryPropertyType">
+    <annotation>
+      <documentation>A geometry used as a coordinate operation parameter value, which contains any type of geometry element, with a reference to its associated coordinate reference system.
+</documentation>
+      <documentation>This element and its type are copied from  Change Request 09-091r1, which adds them to GML 3.2.1.
+</documentation>
+    </annotation>
+  </element>
+
+  <element name="vectorValue" type="gml:VectorType">
+    <annotation>
+      <documentation>Vector value of a coordinate operation parameter.
+A vectorValue can represent a distance in a direction (when the magnitude of the vector is significant) or just a direction (when the magnitude of the vector is not considered significant).
+This vectorValue shall use the coordinate axes directions and units of the coordinate system in the referenced coordinate reference system.
+This coordinate reference system will often be the same as referenced by an associated geometryValue coordinate operation parameter.
+</documentation>
+    </annotation>
+  </element>
+
+  <element name="SimpleMultiPoint" type="cis10:SimpleMultiPointType" substitutionGroup="gml:AbstractGeometricAggregate">
+    <annotation>
+      <documentation>gml:SimpleMultiPoint implements, and provides a simplified encoding for, ISO 19107 GM_MultiPoint (see ISO 19107:2003, 6.5.4).
+A gml:SimpleMultiPoint consists of a list of DirectPositions. </documentation>
+    </annotation>
+  </element>
+
+  <complexType name="SimpleMultiPointType">
+    <complexContent>
+      <extension base="gml:AbstractGeometricAggregateType">
+        <sequence>
+          <element name="positions" type="gml:DirectPositionListType"/>
+        </sequence>
+      </extension>
     </complexContent>
   </complexType>
 
