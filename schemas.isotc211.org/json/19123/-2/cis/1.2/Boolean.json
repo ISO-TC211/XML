@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Scalar component used to express truth: True or False, 0 or 1",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractSimpleComponent.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Boolean"
+        },
+        "value": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "definition",
+        "label"
+      ]
+    }
+  ]
+}

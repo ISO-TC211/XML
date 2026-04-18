@@ -1,0 +1,355 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "AbstractSWE": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "description": "Base substitution groups for all SWE Common objects other than value objects",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The ID of the object, referenceable using a URI fragment",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "UnitReference": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "A human readable label for the unit",
+          "type": "string",
+          "minLength": 1
+        },
+        "symbol": {
+          "description": "The preferred unit symbol to use when presenting the data in a UI (use the UCUM code instead if no symbol is provided)",
+          "type": "string",
+          "minLength": 1
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "href": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "anyOf": [
+        {
+          "title": "UCUM Code",
+          "required": [ "code" ]
+        },
+        {
+          "title": "URI",
+          "required": [ "href" ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "AllowedTokens": {
+      "description": "Defines permitted values for the component, as an enumerated list of tokens or a regular expression pattern",
+      "type": "object",
+      "oneOf": [
+        {
+          "title": "Enum Values",
+          "properties": {
+            "type": {
+              "const": "AllowedTokens"
+            },
+            "values": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [ "values" ]
+        },
+        {
+          "title": "Regex Pattern",
+          "properties": {
+            "type": {
+              "const": "AllowedTokens"
+            },
+            "pattern": {
+              "type": "string",
+              "format": "regex",
+              "minLength": 1
+            }
+          },
+          "required": [ "pattern" ]
+        }
+      ]
+    },
+    "AllowedValues": {
+      "description": "Defines the permitted values for the component as an enumerated list and/or a list of inclusive ranges",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "AllowedValues"
+        },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/NumberOrSpecial"
+          }
+        },
+        "intervals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "$ref": "#/$defs/NumberOrSpecial"
+            }
+          }
+        },
+        "significantFigures": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        }
+      },
+      "anyOf": [
+        {
+          "title": "Enum Values",
+          "required": [ "values" ]
+        },
+        {
+          "title": "Intervals",
+          "required": [ "intervals" ]
+        }
+      ]
+    },
+    "AllowedTimes": {
+      "description": "Defines the permitted values for the component, as a time range or an enumerated list of time values",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "AllowedTimes"
+        },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/DateTimeNumberOrSpecial"
+          }
+        },
+        "intervals": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "$ref": "#/$defs/DateTimeNumberOrSpecial"
+            }
+          }
+        },
+        "significantFigures": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        }
+      },
+      "anyOf": [
+        {
+          "title": "Enum Values",
+          "required": [ "values" ]
+        },
+        {
+          "title": "Intervals",
+          "required": [ "intervals" ]
+        }
+      ]
+    },
+    "NilValuesText": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "description": "The reason for using the reserved value",
+            "type": "string",
+            "format": "uri"
+          },
+          "value": {
+            "description": "The reserved value itself",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "NilValuesInteger": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "description": "The reason for using the reserved value",
+            "type": "string",
+            "format": "uri"
+          },
+          "value": {
+            "description": "The reserved value itself",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "reason",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "NilValuesNumber": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "description": "The reason for using the reserved value",
+            "type": "string",
+            "format": "uri"
+          },
+          "value": {
+            "description": "The reserved value itself",
+            "$ref": "#/$defs/NumberOrSpecial"
+          }
+        },
+        "required": [
+          "reason",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "NilValuesTime": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "description": "The reason for using the reserved value",
+            "type": "string",
+            "format": "uri"
+          },
+          "value": {
+            "description": "The reserved value itself",
+            "$ref": "#/$defs/DateTimeNumberOrSpecial"
+          }
+        },
+        "required": [
+          "reason",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "SoftNamedProperty": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/NameToken"
+        }
+      },
+      "required": [ "name" ]
+    },
+    "NameToken": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9_\\-]*$"
+    },
+    "AssociationAttributeGroup": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "role": {
+          "type": "string",
+          "format": "uri"
+        },
+        "arcrole": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [ "href" ]
+    },
+    "NumberOrSpecial": {
+      "oneOf": [
+        {
+          "title": "Number",
+          "type": "number"
+        },
+        {
+          "title": "Special Value",
+          "type": "string",
+          "enum": ["NaN", "Infinity", "+Infinity", "-Infinity"]
+        }
+      ]
+    },
+    "DateTimeNumberOrSpecial": {
+      "oneOf": [
+        {
+          "title": "Date/Time",
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "$ref": "#/$defs/NumberOrSpecial"
+        }
+      ]
+    },
+    "ElementCount": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./AbstractSimpleComponent.json"
+        },
+        {
+          "properties": {
+            "constraint": {
+              "$ref": "basicTypes.json#/$defs/AllowedValues"
+            },
+            "value": {
+              "description": "Value is optional, to enable structure to act as a schema for values provided using other encodings",
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "EncodedValues": {
+      "oneOf": [
+        {
+          "type": "array"
+        },
+        {
+          "$ref": "#/$defs/AssociationAttributeGroup"
+        }
+      ]
+    }
+  }
+}

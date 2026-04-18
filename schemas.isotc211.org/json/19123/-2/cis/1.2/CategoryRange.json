@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Pair of categorical values used to specify a range in an ordinal reference system (specified by the code space)",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractSimpleComponent.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "CategoryRange"
+        },
+        "codeSpace": {
+          "description": "Name of the dictionary defining an ordered set of values with respect to which the range is expressed (ordinal reference system)",
+          "type": "string",
+          "format": "uri"
+        },
+        "constraint": {
+          "$ref": "basicTypes.json#/$defs/AllowedTokens"
+        },
+        "nilValues": {
+          "$ref": "basicTypes.json#/$defs/NilValuesText"
+        },
+        "value": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "definition",
+        "label"
+      ]
+    }
+  ]
+}

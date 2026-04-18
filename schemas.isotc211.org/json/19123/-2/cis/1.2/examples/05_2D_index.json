@@ -1,0 +1,37 @@
+{
+  "id": "CIS_05",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet": {
+    "generalGrid": {
+      "srsName": "[OGC:Index2D]",
+      "axisLabels": [ "i", "j" ],
+      "uomLabels": [ "1", "1" ],
+      "axes": [
+        { 
+          "axisLabel": "i",
+          "axisType": "index",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "axisLabel": "j",
+          "axisType": "index",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
+  },
+  "rangeSet": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+  "rangeType": { 
+    "type": "DataRecord",
+    "fields": [
+      { 
+        "name": "itemCount",
+        "definition": "http://www.opengis.net/def/property/OGC/0/itemCount",
+        "type": "Count",
+        "label": "Item Count"
+      }
+    ]
+  }  
+}

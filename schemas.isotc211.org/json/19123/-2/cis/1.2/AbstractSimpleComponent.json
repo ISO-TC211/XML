@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractDataComponent.json"
+    },
+    {
+      "properties": {
+        "referenceFrame": {
+          "description": "Frame of reference (usually temporal or spatial) with respect to which the value of the component is expressed. A reference frame anchors a value to a real world datum.",
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "axisID": {
+          "description": "Specifies the reference axis (refer to CRS axisID). The reference frame URI should also be specified unless it is inherited from parent Vector",
+          "type": "string",
+          "minLength": 1
+        },
+        "nilValues": {
+          "description": "Defines reserved values with special meaning (e.g., missing, out-of-range, etc.)"
+        },
+        "constraint": {
+        },
+        "value": {
+          "description": "Inline value(s) for the component. This property is optional to enable structure to act as a schema for values provided separately (e.g., in a datastream)"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Free text component used to store comments or any other type of textual statement",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractSimpleComponent.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Text"
+        },
+        "constraint": {
+          "$ref": "basicTypes.json#/$defs/AllowedTokens"
+        },
+        "nilValues": {
+          "$ref": "basicTypes.json#/$defs/NilValuesText"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "definition",
+        "label"
+      ]
+    }
+  ]
+}

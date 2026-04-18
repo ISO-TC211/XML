@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Time value pair for specifying a time range (can be a decimal or ISO 8601)",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractSimpleComponent.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "TimeRange"
+        },
+        "referenceTime": {
+          "description": "Specifies the origin of the temporal reference frame as an ISO8601 date (used to specify time after an epoch that is to say in a custom frame)",
+          "type": "string",
+          "format": "date-time"
+        },
+        "localFrame": {
+          "description": "Temporal frame of reference whose origin is located by the value of this component",
+          "type": "string",
+          "format": "uri"
+        },
+        "uom": {
+          "description": "Temporal unit of measure used to express the value of this data component",
+          "$ref": "basicTypes.json#/$defs/UnitReference"
+        },
+        "constraint": {
+          "$ref": "basicTypes.json#/$defs/AllowedTimes"
+        },
+        "nilValues": {
+          "$ref": "basicTypes.json#/$defs/NilValuesTime"
+        },
+        "value": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "$ref": "basicTypes.json#/$defs/DateTimeNumberOrSpecial"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "definition",
+        "label",
+        "uom"
+      ]
+    }
+  ]
+}

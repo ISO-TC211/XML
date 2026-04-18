@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Scalar component with integer representation used for a discrete counting value",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractSimpleComponent.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Count"
+        },
+        "constraint": {
+          "$ref": "basicTypes.json#/$defs/AllowedValues"
+        },
+        "nilValues": {
+          "$ref": "basicTypes.json#/$defs/NilValuesInteger"
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "type",
+        "definition",
+        "label"
+      ]
+    }
+  ]
+}

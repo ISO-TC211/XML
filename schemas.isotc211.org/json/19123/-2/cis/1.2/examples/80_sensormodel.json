@@ -1,0 +1,45 @@
+{
+  "id": "CIS_80",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet": {
+    "generalGrid": {
+      "srsName": "[EPSG:4326]",
+      "axisLabels": ["Lat", "Long"],
+      "uomLabels": ["deg", "deg"],
+      "axes": [
+        {
+          "axisLabels": ["Lat", "Long"],
+          "uomLabels": ["deg", "deg"],
+          "axisType": "sensorModel",
+          "sensorModel": "https://www.sensorml.com/sensorML-2.0/examples/csmFrame.html",
+          "sensorInstance": "https://www.sensorml.com/sensorML-2.0/examples/myHDCamera.html"
+        }
+      ],
+      "gridLimits": [
+        { 
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 1919
+        },
+        {
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 1079
+        }
+      ]
+    }
+  },
+  "rangeSet": "https://www.acme.com/cis_001.jpeg",
+  "rangeType": {
+    "type": "DataRecord",
+    "fields": [
+      {
+        "name": "panchromatic",
+        "definition": "http://www.opengis.net/def/property/OGC/0/panchromatic",
+        "type": "Quantity",
+        "label": "Panchromatic",
+        "uom": { "code": "W.m-2.sr-1.nm-1" }
+      }
+    ]
+  }
+}

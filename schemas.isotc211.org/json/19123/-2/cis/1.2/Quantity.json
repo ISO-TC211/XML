@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Scalar component with decimal representation and a unit of measure used to store value of a continuous quantity",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./AbstractSimpleComponent.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "const": "Quantity"
+        },
+        "uom": {
+          "description": "Unit of measure used to express the value of this data component",
+          "$ref": "basicTypes.json#/$defs/UnitReference"
+        },
+        "constraint": {
+          "$ref": "basicTypes.json#/$defs/AllowedValues"
+        },
+        "nilValues": {
+          "$ref": "basicTypes.json#/$defs/NilValuesNumber"
+        },
+        "value": {
+          "$ref": "basicTypes.json#/$defs/NumberOrSpecial"
+        }
+      },
+      "required": [
+        "type",
+        "definition",
+        "label",
+        "uom"
+      ]
+    }
+  ]
+}

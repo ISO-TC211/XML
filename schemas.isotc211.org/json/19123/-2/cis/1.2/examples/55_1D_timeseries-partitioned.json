@@ -1,0 +1,36 @@
+{
+  "id": "CIS_55",
+  "coverageStructure": "coverageByPartitioning",
+  "partitionSet": {
+    "partition": [
+      {
+        "position": ["2015-09-20"],
+        "value": [0]
+      },
+      {
+        "position": ["2015-09-21"],
+        "value": [1]
+      },
+      {
+        "position": ["2015-09-22"],
+        "value": [2]
+      },
+      {
+        "position": ["2015-09-23"],
+        "value": [3]
+      }
+    ]
+  },
+  "rangeType": {
+    "type": "DataRecord",
+    "fields": [
+      {
+        "name": "singleBand",
+        "label": "Single Band",
+        "definition": "http://www.opengis.net/def/property/OGC/0/singleBand",
+        "uom": { "code": "W.m-2.sr-1.nm-1" },
+        "type": "Quantity"
+      }
+    ]
+  }
+}

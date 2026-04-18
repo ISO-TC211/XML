@@ -1,0 +1,66 @@
+{
+  "id": "CIS_90",
+  "coverageStructure": "coverageByDomainAndRange",
+  "envelope": {
+    "srsName": "[EPSG:4979]",
+    "axes": [{ 
+      "axisLabel": "x",
+      "uomLabel": "m",
+      "lowerBound": 456377.5,
+      "upperBound": 456377.7
+    },{
+      "axisLabel": "y",
+      "uomLabel": "m",
+      "lowerBound": 339866.8,
+      "upperBound": 339867.2
+    },{
+      "axisLabel": "h",
+      "uomLabel": "m",
+      "lowerBound": 52,
+      "upperBound": 53
+    }]
+  },
+  "domainSet": {
+    "multiPoint": [
+      [456377.56257493998, 339867.24995001999, 53.953899579999998],
+      [456377.50007493998, 339867.21865002002, 53.960899580000003],
+      [456377.56257493998, 339867.21865002002, 53.958999579999997],
+      [456377.50007493998, 339867.21865002002, 53.960899580000003]
+    ]
+  },
+  "rangeSet": [ "255,255,255", "0,0,0", "255,255,255", "0,0,0" ],
+  "rangeType": { 
+    "type": "DataRecord",
+    "fields": [{ 
+      "name": "red",
+      "label": "Red Band",
+      "definition": "http://www.opengis.net/def/property/OGC/0/red",
+      "type": "Quantity",
+      "uom": { "code": "W.m-2.sr-1.nm-1" },
+      "constraint": {
+        "type": "AllowedValues",
+        "intervals": [[0, 255]]
+      }
+    },{ 
+      "name": "green",
+      "label": "Green Band",
+      "definition": "http://www.opengis.net/def/property/OGC/0/green",
+      "type": "Quantity",
+      "uom": { "code": "W.m-2.sr-1.nm-1" },
+      "constraint": {
+        "type": "AllowedValues",
+        "intervals": [[0, 255]]
+      }
+    },{ 
+      "name": "blue",
+      "label": "Blue Band",
+      "type": "Quantity",
+      "definition": "http://www.opengis.net/def/property/OGC/0/blue",
+      "uom": { "code": "W.m-2.sr-1.nm-1" },
+      "constraint": {
+        "type": "AllowedValues",
+        "intervals": [[0, 255]]
+      }
+    }]
+  }  
+}

@@ -1,0 +1,55 @@
+{
+  "id": "CIS_70",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet": {
+    "generalGrid": {
+      "srsName": "[EPSG:4326]",
+      "axisLabels": ["Lat", "Long"],
+      "uomLabels": ["deg", "deg"],
+      "axes": [
+        { 
+          "axisLabel": "Lat",
+          "uomLabel": "deg",
+          "axisType": "regular",
+          "lowerBound": -80,
+          "upperBound": -70,
+          "resolution": 5
+        },
+        {
+          "axisLabel": "Long",
+          "uomLabel": "deg",
+          "axisType": "regular",
+          "lowerBound": 0,
+          "upperBound": 10,
+          "resolution": 5
+        }
+      ],
+      "gridLimits": [
+        {
+          "axisLabel": "i",
+          "lowerBound": 0,
+          "upperBound": 2
+        },
+        {
+          "axisLabel": "j",
+          "lowerBound": 0,
+          "upperBound": 2
+        }
+      ]
+    }
+  },
+  "rangeSet": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "rangeType": { 
+    "type": "DataRecord",
+    "fields": [
+      { 
+        "name": "theOnlyBand",
+        "definition": "http://www.opengis.net/def/property/OGC/0/theOnlyBand",
+        "type": "Quantity",
+        "label": "The Only Band",
+        "uom": { "code": "W.m-2" }
+      }
+    ],
+    "interpolationRestriction": [ "ogcInterpolation:nearest-neighbor", "ogcInterpolation:linear" ]
+  }  
+}

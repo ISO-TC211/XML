@@ -1,0 +1,64 @@
+{
+  "id": "CIS_55",
+  "coverageStructure": "coverageByPartitioning",
+  "partitionSet": {
+    "partition": [
+      {
+        "envelope": {
+          "srsName": "[OGC:AnsiDate]",
+          "axes": [
+            {
+              "axisLabel": "date",
+              "uomLabel": "d",
+              "lowerBound": "2025-06-01",
+              "upperBound": "2025-06-10"
+            }
+          ]
+        },
+        "coverageRef": "https://www.acme.com/CIS_55_p1.json"
+      },
+      {
+        "envelope": {
+          "srsName": "[OGC:AnsiDate]",
+          "axes": [
+            {
+              "axisLabel": "date",
+              "uomLabel": "d",
+              "lowerBound": "2025-06-11",
+              "upperBound": "2025-06-20"
+            }
+          ]
+        },
+        "coverageRef": "https://www.acme.com/CIS_55_p2.json"
+      },
+      {
+        "envelope": {
+          "srsName": "[OGC:AnsiDate]",
+          "axes": [
+            {
+              "axisLabel": "date",
+              "uomLabel": "d",
+              "lowerBound": "2025-06-21",
+              "upperBound": "2025-06-30"
+            }
+          ]
+        },
+        "coverageRef": "https://www.acme.com/CIS_55_p3.json"
+      }
+    ]
+  },
+  "rangeType": {
+    "type": "DataRecord",
+    "fields": [
+      {
+        "name": "dailyValue",
+        "definition": "http://www.opengis.net/def/property/OGC/0/dailyValue",
+        "type": "Quantity",
+        "label": "Daily Value",
+        "uom": {
+          "code": "1"
+        }
+      }
+    ]
+  }
+}

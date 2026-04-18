@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Abstract base class for all data components",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "updatable": {
+          "description": "Specifies if the value of a data component can be updated externally (i.e., is variable)",
+          "type": "boolean",
+          "default": false
+        },
+        "optional": {
+          "description": "Specifies if the data for this component can be omitted in the datastream",
+          "type": "boolean",
+          "default": false
+        },
+        "definition": {
+          "description": "The definition of the property whose value is provided by this component (semantic link)",
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  ]
+}

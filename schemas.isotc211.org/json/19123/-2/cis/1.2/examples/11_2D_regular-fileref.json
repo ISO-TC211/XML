@@ -1,0 +1,41 @@
+{
+  "id": "CIS_11",
+  "coverageStructure": "coverageByDomainAndRange",
+  "domainSet": {
+    "generalGrid": {
+      "srsName": "[EPSG:4326]",
+      "axisLabels": ["Lat", "Long"],
+      "uomLabels": ["deg", "deg"],
+      "axes": [
+        { 
+          "axisLabel": "Lat",
+          "uomLabel": "deg",
+          "axisType": "regular",
+          "lowerBound": -80,
+          "upperBound": -70,
+          "resolution": 5
+        },
+        {
+          "axisLabel": "Long",
+          "uomLabel": "deg",
+          "axisType": "regular",
+          "lowerBound": 0,
+          "upperBound": 10,
+          "resolution": 5
+        }
+      ]
+    }
+  },
+  "rangeSet": "11_2D_regular_fileref.tiff",
+  "rangeType": { 
+    "type": "DataRecord",
+    "fields": [
+      { 
+        "name": "itemCount",
+        "definition": "http://www.opengis.net/def/property/OGC/0/itemCount",
+        "type": "Count",
+        "label": "Item Count"
+      }
+    ]
+  }  
+}

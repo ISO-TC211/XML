@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "AnyComponent": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/AnySimpleComponent"
+        },
+        {
+          "$ref": "./DataRecord.json"
+        }
+      ]
+    },
+    "AnySimpleComponent": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/AnyScalarComponent"
+        },
+        {
+          "$ref": "./CountRange.json"
+        },
+        {
+          "$ref": "./QuantityRange.json"
+        },
+        {
+          "$ref": "./TimeRange.json"
+        },
+        {
+          "$ref": "./CategoryRange.json"
+        }
+      ]
+    },
+    "AnyScalarComponent": {
+      "oneOf": [
+        {
+          "$ref": "./Boolean.json"
+        },
+        {
+          "$ref": "./Count.json"
+        },
+        {
+          "$ref": "./Quantity.json"
+        },
+        {
+          "$ref": "./Time.json"
+        },
+        {
+          "$ref": "./Category.json"
+        },
+        {
+          "$ref": "./Text.json"
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/AnyComponent"
+    }
+  ]
+}
