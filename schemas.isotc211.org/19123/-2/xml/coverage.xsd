@@ -11,8 +11,18 @@
 
   <annotation>
     <appinfo>coverage.xsd</appinfo>
-    <documentation> ISO 19123-2 Coverage Implementation Schema (CIS), based on OGC CIS 1.1 (schema locations have been adjusted).
- </documentation>
+    <documentation>
+      This is the XML Schema for ISO 19123-2:2026 Geographic information - Part 2: Coverage implementation schema.
+      This work is derived from the OGC Coverage Implementation Schema 1.1.1 (OGC 09-146r8),
+      it includes modifications for alignment with ISO/TC 211 standards and URI structures.
+      Last updated: 2026-04-01
+
+      Copyright (c) 2026 ISO/TC 211. All rights reserved.
+
+      OGC Coverage Implementation Schema 1.1.1 (OGC 09-146r8) is copyright (c) 2012, 2015, 2017, 2019 Open Geospatial Consortium.
+      Used by ISO/TC211 with permission from OGC.
+      To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/.
+    </documentation>
   </annotation>
 
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"/>

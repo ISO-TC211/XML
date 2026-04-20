@@ -11,8 +11,18 @@
 
   <annotation>
     <appinfo>coverage-annexB.xsd</appinfo>
-    <documentation>ISO 19123-2 Coverage Implementation Schema (CIS): RectifiedGridCoverage (as per OGC CIS 1.0.1).
-        It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
+    <documentation>
+      This is the XML Schema for ISO 19123-2:2026 Geographic information - Part 2: Coverage implementation schema, Annex B.
+      It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
+      This XML Schema Document is derived from OGC Coverage Implementation Schema 1.0.1 (OGC 09-146r2), 
+      it includes modifications for alignment with ISO/TC 211 standards and URI structures.
+      Last updated: 2026-04-01
+          
+      Copyright (c) 2026 ISO/TC 211. All rights reserved.
+          
+      OGC Coverage Implementation Schema 1.0.1 (OGC 09-146r2) is copyright (c) 2012, 2015, 2017, 2019 Open Geospatial Consortium.
+      Used by ISO/TC211 with permission from OGC.
+      To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/.
     </documentation>
   </annotation>
 

@@ -10,25 +10,37 @@
 
   <annotation>
     <appinfo>grid-annexB-referenceable.xsd</appinfo>
-    <documentation>ISO 19123-2 Coverage Implementation Schema (CIS) ReferenceableGridCoverage, based on the OGC Referenceable Grid Coverage Extension 1.0.1 (schema locations have been adjusted).
-It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
-</documentation>
+    <documentation>
+      This is the XML Schema for ISO 19123-2:2026 Geographic information - Part 2: Coverage implementation schema, Annex B, ReferenceableGridCoverage.
+      It is recommended for new applications to use GeneralGridCoverage instead which is simplified in structure and covers more cases.
+      This XML Schema Document is derived from OGC Coverage Implementation Schema 1.0.1 Referenceable Grid Extension (OGC 16-083r3),
+      it includes modifications for alignment with ISO/TC 211 standards and URI structures.
+      Last updated: 206-04-01
+      
+      Copyright (c) 2026 ISO/TC 211. All rights reserved.
+      
+      OGC Coverage Implementation Schema 1.0.1 Referenceable Grid Extension (OGC 16-083r3) is copyright (c) 2012, 2015, 2017, 2019 Open Geospatial Consortium.
+      Used by ISO/TC211 with permission from OGC.
+      To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/.
+    </documentation>
+
   </annotation>
 
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.isotc211.org/schemas/19136/-/gml/1.0/gml.xsd"/>
 
   <element name="AbstractReferenceableGrid" type="cis10:AbstractReferenceableGridType" abstract="true" substitutionGroup="gml:Grid">
     <annotation>
-      <documentation>AbstractReferenceableGrid is an encoding of CV_ReferenceableGrid 
-in ISO 19123. AbstractReferenceableGrid is the head of a substitution group that may include multiple concrete implementations.
-A referenceable grid is a grid associated with a transformation that can be used to convert grid coordinate values to values of coordinates referenced to an external coordinate reference system [ISO 19123].
-The transformation between grid coordinates and 'external' coordinates is usually non-affine, and may take different forms.
-It may be described analytically (e.g., through parametrised mathematical image rectification models);
-or it may provided in a table, for instance, relating the grid points to coordinates in the external coordinate reference system [ISO 19123, §8.2.1].
-The inherited attribute group gml:SRSReferenceGroup shall link the referenceable grid to the external coordinate reference system to which it is referenceable.
-</documentation>
-      <documentation>This element and its type are copied from approved Change Request 07-112r3, which adds them to GML 3.2.1.
-</documentation>
+      <documentation>
+        AbstractReferenceableGrid is an encoding of CV_ReferenceableGrid.
+	This element and its type are copied from approved Change Request 07-112r3, which adds them to GML 3.2.1.
+	AbstractReferenceableGrid is the head of a substitution group that may include multiple concrete implementations.
+        A referenceable grid is a grid associated with a transformation that can be used to convert grid coordinate values
+	to values of coordinates referenced to an external coordinate reference system [ISO 19123].
+        The transformation between grid coordinates and 'external' coordinates is usually non-affine, and may take different forms.
+        It may be described analytically (e.g., through parametrised mathematical image rectification models);
+        or it may provided in a table, for instance, relating the grid points to coordinates in the external coordinate reference system.
+        The inherited attribute group gml:SRSReferenceGroup shall link the referenceable grid to the external coordinate reference system to which it is referenceable.
+      </documentation>
     </annotation>
   </element>
 

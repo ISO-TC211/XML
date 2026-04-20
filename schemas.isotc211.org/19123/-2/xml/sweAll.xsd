@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
-    targetNamespace="http://www.opengis.net/swe/2.0"
-    xmlns="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified"
-    version="2.0.0">
-    <annotation>
-        <appinfo>cisAll.xsd</appinfo>
-        <documentation>XML Schema for the OGC SWE Common 2.0 parts used by ISO 19123-2 / OGC Coverage Implementation Schema (CIS).
-</documentation>
-    </annotation>
+  targetNamespace="http://www.opengis.net/swe/2.0"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+  version="2.0.0">
+  <annotation>
+    <appinfo>cisAll.xsd</appinfo>
+    <documentation>
+      This is the XML Schema for the OGC SWE Common 2.0.0 parts as used by ISO 19123-2 Coverage Implementation Schema (CIS).
+      This XML Schema Document is derived from OGC SWE Common Data Model Encoding Standard 2.0.0 (OGC 08-094r1),
+      it includes modifications for alignment with ISO/TC 211 standards and URI structures.
+      Last updated: 2026-04-01
 
-    <include schemaLocation="swe-record_components.xsd"/>
-    <include schemaLocation="swe-block_components.xsd"/>
+      Copyright (c) 2026 ISO/TC 211. All rights reserved.
+
+      OGC SWE Common Data Model Encoding Standard 2.0.0 (OGC 08-094r1) is copyright (c) 2011 Open Geospatial Consortium.
+      Used by ISO/TC211 with permission from OGC.
+      To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/.
+     </documentation>
+
+  </annotation>
+
+  <include schemaLocation="swe-record_components.xsd"/>
+  <include schemaLocation="swe-block_components.xsd"/>
 
 </schema>

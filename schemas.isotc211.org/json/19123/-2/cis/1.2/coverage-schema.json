@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Coverage",
-    "description": "This is the JSON encoding for ISO 19123-2:202X Geographic information — Part 2: Coverage implementation schema. This JSON encoding Document includes modifications for alignment with ISO/TC 211 standards and URI structures. Last updated: [2026-04-18] Copyright (c) [2026] ISO/TC 211. All rights reserved. This work is derived from the OGC Coverage Implementation Schema (OGC 09-146r2/OGC 09-146rx). Copyright (c) 2012, 2015, 2017, 2019 Open Geospatial Consortium. Used with permission. To obtain additional rights of use from OGC, visit http://www.opengeospatial.org/legal/.",
+    "description": "JSON encoding for the Coverage Implementation Schema (CIS) of ISO 19123-2:2025. Standardized for MultiPoint support.",
     "type": "object",
     "properties": {
         "id": { "type": "string" },
