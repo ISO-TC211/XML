@@ -103,7 +103,7 @@
             "properties": {
                 "axisLabel": { "type": "string" },
                 "uomLabel": { "type": "string" },
-                "positions": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+                "positions": { "type": "array", "minItems": 1, "items": { "type": [ "string", "number" ]} }
             }
         },
         "displacementAxisNest": {
