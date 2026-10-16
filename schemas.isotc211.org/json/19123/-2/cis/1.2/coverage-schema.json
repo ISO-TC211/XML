@@ -4,152 +4,285 @@
     "description": "JSON encoding for the Coverage Implementation Schema (CIS) of ISO 19123-2:2025. Standardized for MultiPoint support.",
     "type": "object",
     "properties": {
-        "id": { "type": "string" },
-        "envelope": { "$ref": "#/definitions/envelope" },
-        "domainSet": { "$ref": "#/definitions/domainSet" },
-        "partitionSet": { "$ref": "#/definitions/partitionSet" },
-        "rangeSet": { "$ref": "#/definitions/rangeSet" },
-        "rangeType": { "$ref": "#/definitions/rangeType" },
-        "metadata": { "$ref": "#/definitions/metadata" },
-        "coverageFunction": { "$ref": "#/definitions/coverageFunction" }
+        "id": {"type": "string"},
+        "envelope": {"$ref": "#/definitions/envelope"},
+        "domainSet": {"$ref": "#/definitions/domainSet"},
+        "partitionSet": {"$ref": "#/definitions/partitionSet"},
+        "rangeSet": {"$ref": "#/definitions/rangeSet"},
+        "rangeType": {"$ref": "#/definitions/rangeType"},
+        "metadata": {"$ref": "#/definitions/metadata"},
+        "coverageFunction": {"$ref": "#/definitions/coverageFunction"}
     },
+    "required": ["rangeType"],
+    "oneOf": [
+        {
+            "description": "Option 1: DomainSet and RangeSet are present",
+            "required": [
+                "domainSet",
+                "rangeSet"
+            ],
+            "not": {
+                "required": ["partitionSet"]
+            }
+        },
+        {
+            "description": "Option 2: PartitionSet is present",
+            "required": ["partitionSet"],
+            "not": {
+                "anyOf": [
+                    {
+                        "required": ["domainSet"]
+                    },
+                    {
+                        "required": ["rangeSet"]
+                    }
+                ]
+            }
+        }
+    ],
     "definitions": {
         "coverageFunction": {
             "type": "object",
             "properties": {
-                "sequenceRule": { "type": "string" },
-                "axisOrder": { "type": "array", "items": { "type": "string" } },
-                "startPosition": { "type": "array", "items": { "type": "number" } }
+                "sequenceRule": {"type": "string"},
+                "axisOrder": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "startPosition": {
+                    "type": "array",
+                    "items": {"type": "number"}
+                }
             }
         },
         "envelope": {
             "type": "object",
             "properties": {
-                "srsName": { "type": "string" },
+                "srsName": {"type": "string"},
                 "axes": {
                     "type": "array",
                     "minItems": 1,
                     "items": {
                         "type": "object",
                         "properties": {
-                            "axisLabel": { "type": "string" },
-                            "uomLabel": { "type": "string" },
-                            "lowerBound": { "type": ["string", "number"] },
-                            "upperBound": { "type": ["string", "number"] }
+                            "axisLabel": {"type": "string"},
+                            "uomLabel": {"type": "string"},
+                            "lowerBound": {
+                                "type": [
+                                    "string",
+                                    "number"
+                                ]
+                            },
+                            "upperBound": {
+                                "type": [
+                                    "string",
+                                    "number"
+                                ]
+                            }
                         }
                     }
                 }
             }
         },
         "domainSet": {
-            "type": ["object", "string"],
+            "type": [
+                "object",
+                "string"
+            ],
             "properties": {
-                "srsName": { "type": "string" },
-                "axisLabels": { "type": ["array", "string"] },
-                "uomLabels": { "type": ["array", "string"] },
-                "multiPoint": { "$ref": "#/definitions/multiPoint" },
-                "generalGrid": { "$ref": "#/definitions/generalGrid" }
+                "srsName": {"type": "string"},
+                "axisLabels": {
+                    "type": [
+                        "array",
+                        "string"
+                    ]
+                },
+                "uomLabels": {
+                    "type": [
+                        "array",
+                        "string"
+                    ]
+                },
+                "multiPoint": {"$ref": "#/definitions/multiPoint"},
+                "generalGrid": {"$ref": "#/definitions/generalGrid"}
             }
         },
         "multiPoint": {
             "type": "array",
-            "items": { "type": "array", "items": { "type": ["string", "number"] } }
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                }
+            }
         },
         "generalGrid": {
             "properties": {
-                "srsName": { "type": "string" },
-                "axisLabels": { "type": "array", "items": { "type": "string" } },
-                "uomLabels": { "type": "array", "items": { "type": "string" } },
+                "srsName": {"type": "string"},
+                "axisLabels": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
                 "axes": {
                     "type": "array",
                     "minItems": 1,
                     "items": {
                         "anyOf": [
-                            { "$ref": "#/definitions/indexAxis" },
-                            { "$ref": "#/definitions/regularAxis" },
-                            { "$ref": "#/definitions/irregularAxis" },
-                            { "$ref": "#/definitions/displacementAxisNest" },
-                            { "$ref": "#/definitions/transformationBySensorModel" }
+                            {"$ref": "#/definitions/indexAxis"},
+                            {"$ref": "#/definitions/regularAxis"},
+                            {"$ref": "#/definitions/irregularAxis"},
+                            {"$ref": "#/definitions/displacementAxisNest"},
+                            {"$ref": "#/definitions/transformationBySensorModel"}
                         ]
                     }
                 },
                 "gridLimits": {
                     "type": "array",
                     "minItems": 1,
-                    "items": { "$ref": "#/definitions/indexAxis" }
+                    "items": {"$ref": "#/definitions/indexAxis"}
                 }
             }
         },
         "indexAxis": {
             "type": "object",
             "properties": {
-                "axisLabel": { "type": "string" },
-                "lowerBound": { "type": "number" },
-                "upperBound": { "type": "number" }
+                "axisLabel": {"type": "string"},
+                "lowerBound": {"type": "number"},
+                "upperBound": {"type": "number"}
             }
         },
         "regularAxis": {
             "type": "object",
             "properties": {
-                "axisLabel": { "type": "string" },
-                "uomLabel": { "type": "string" },
-                "lowerBound": { "type": ["string", "number"] },
-                "upperBound": { "type": ["string", "number"] },
-                "resolution": { "type": ["string", "number"] }
+                "axisLabel": {"type": "string"},
+                "uomLabel": {"type": "string"},
+                "lowerBound": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "upperBound": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                },
+                "resolution": {
+                    "type": [
+                        "string",
+                        "number"
+                    ]
+                }
             }
         },
         "irregularAxis": {
             "type": "object",
             "properties": {
-                "axisLabel": { "type": "string" },
-                "uomLabel": { "type": "string" },
-                "positions": { "type": "array", "minItems": 1, "items": { "type": [ "string", "number" ]} }
+                "axisLabel": {"type": "string"},
+                "uomLabel": {"type": "string"},
+                "positions": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": [
+                            "string",
+                            "number"
+                        ]
+                    }
+                }
             }
         },
         "displacementAxisNest": {
             "type": "object",
             "properties": {
-                "axisLabels": { "type": "array", "minItems": 1, "items": { "type": "string" } },
-                "uomLabels": { "type": "array", "minItems": 1, "items": { "type": "string" } },
-                "sequenceRule": { "type": "string" },
-                "positions": { "type": "array", "items": { "type": "string" } }
+                "axisLabels": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {"type": "string"}
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {"type": "string"}
+                },
+                "sequenceRule": {"type": "string"},
+                "positions": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                }
             }
         },
         "transformationBySensorModel": {
             "type": "object",
             "properties": {
-                "axisLabels": { "type": "array", "items": { "type": "string" } },
-                "uomLabels": { "type": "array", "items": { "type": "string" } },
-                "axisType": { "type": "string" },
-                "sensorModel": { "type": "string" },
-                "sensorInstance": { "type": "string" }
+                "axisLabels": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "axisType": {"type": "string"},
+                "sensorModel": {"type": "string"},
+                "sensorInstance": {"type": "string"}
             }
         },
         "partitionSet": {
             "type": "object",
             "properties": {
-                "srsName": { "type": "string" },
-                "axisLabels": { "type": "array", "items": { "type": "string" } },
-                "uomLabels": { "type": "array", "items": { "type": "string" } },
+                "srsName": {"type": "string"},
+                "axisLabels": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "uomLabels": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
                 "partition": {
                     "type": "array",
                     "items": {
                         "anyOf": [
-                            { "$ref": "#" },
-                            { "type": "string" },
+                            {"$ref": "#"},
+                            {"type": "string"},
                             {
                                 "type": "object",
                                 "properties": {
-                                    "envelope": { "$ref": "#/definitions/envelope" },
-                                    "coverageRef": { "type": "string" }
+                                    "envelope": {"$ref": "#/definitions/envelope"},
+                                    "coverageRef": {"type": "string"}
                                 },
                                 "required": ["coverageRef"]
                             },
                             {
                                 "type": "object",
                                 "properties": {
-                                    "position": { "type": "array", "items": { "type": ["string", "number"] } },
-                                    "value": { "type": "array", "items": { "type": ["string", "number"] } }
+                                    "position": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": [
+                                                "string",
+                                                "number"
+                                            ]
+                                        }
+                                    },
+                                    "value": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": [
+                                                "string",
+                                                "number"
+                                            ]
+                                        }
+                                    }
                                 }
                             }
                         ]
@@ -158,21 +291,35 @@
             }
         },
         "rangeSet": {
-            "type": ["array", "string"],
+            "type": [
+                "array",
+                "string"
+            ],
             "oneOf": [
-                { "type": "array", "items": { "type": "number" } },
-                { "type": "array", "items": { "type": "string" } },
-                { "type": "string" }
+                {
+                    "type": "array",
+                    "items": {"type": "number"}
+                },
+                {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                {"type": "string"}
             ]
         },
         "rangeType": {
             "title": "rangeType",
             "type": "object",
-            "allOf": [ { "$ref": "./DataRecord.json" } ]
+            "allOf": [
+                {"$ref": "./DataRecord.json"}
+            ]
         },
         "metadata": {
-            "type": ["array", "string"],
-            "items": { "type": "string" }
+            "type": [
+                "array",
+                "string"
+            ],
+            "items": {"type": "string"}
         }
     }
 }
